@@ -9,7 +9,6 @@
   "description": "Defines the atomic CSS model used on the Redox website",
   "main": "dist/csscore/scss/core.scss",
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
