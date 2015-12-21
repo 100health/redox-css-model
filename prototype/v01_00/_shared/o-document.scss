@@ -1,0 +1,78 @@
+
+
+
+
+
+h1,h2,h3,h4,h5,h6,p,code {
+    /* Should only use these in .o-document */
+    @include a-misused;
+}
+
+.o-document {
+    /* -ctag-example: ...
+        <h1>h1 title</h1>
+        <h2>h2 title</h2>
+        { .h3 }*/
+    @include a-width-100;
+
+    h1, h2, h3, h4, h5, h6, p,code {
+        @include a-misused-off;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @include a-single-line;
+        @include a-text-color-darker;
+        @include a-width-100;
+    }
+
+    h1 {
+        @include a-text-size-larger-plus;
+        @include a-padding-bottom-row-half;
+        @include a-margin-bottom-row-half;
+        @include a-border-bottom-largest;
+    }
+    h2 {
+        @include a-text-size-larger;
+        @include a-padding-bottom-row-quarter;
+        @include a-margin-bottom-row-quarter;
+        @include a-border-bottom-larger;
+    }
+    h3 {
+        @include a-text-size-larger-minus;
+        @include a-padding-bottom-row-quarter;
+        @include a-margin-bottom-row-quarter;
+        @include a-border-bottom-large;
+    }
+    h4 {
+        @include a-text-size-large-plus;
+        @include a-padding-bottom-row-quarter;
+        @include a-margin-bottom-row-quarter;
+        @include a-border-bottom;
+    }
+    h5 {
+        @include a-text-size-larger;
+        @include a-padding-bottom-row-quarter;
+        @include a-margin-bottom-row-quarter;
+        @include a-border-bottom;
+    }
+    h6 {
+        @include a-text-size-large-minus;
+        @include a-padding-bottom-row-quarter;
+        @include a-margin-bottom-row-quarter;
+        @include a-border-bottom;
+    }
+
+    p {
+        @include a-text-size;
+        @include a-margin-bottom-row-quarter;
+    }
+
+    &__column {
+        @include a-float-left;
+        @include a-padding-right-row-half;
+
+        @include breakpoint-sm-a-width-100;
+        @include breakpoint-sm-a-padding-0;
+    }
+
+}
