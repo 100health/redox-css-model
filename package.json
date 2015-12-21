@@ -1,0 +1,26 @@
+{
+  "name": "redox-css-model",
+  "author": "Luke Turner",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/100health/redox-css-model"
+  },
+  "homepage": "https://github.com/100health/redox-css-model",
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-contrib-watch":  "0.6.1",
+    "grunt-contrib-less": "1.0.0",
+    "grunt-contrib-concat" : "0.5.1",
+    "grunt-react" : "~0.12",
+    "node-sass" : "~3.4",
+    "grunt-sass" : "~1.1",
+
+    "cssmodeling":"~0.1",
+    "jquery": "~1.11",
+    "react" : "~0.13",
+
+    "routestate":"~0.3",
+    "protodata":"~0.1"
+  }
+}

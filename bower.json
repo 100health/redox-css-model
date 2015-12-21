@@ -1,0 +1,19 @@
+{
+  "name": "redox-css-model",
+  "version": "0.0.1",
+  "homepage": "https://github.com/100health/redox-css-model",
+  "authors": [
+    "Luke Turner <lt@redoxengine.com>"
+  ],
+  "description": "Defines the atomic CSS model used on the Redox website",
+  "main": "dist/csscore/scss/core.scss",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
