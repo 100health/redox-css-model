@@ -9,6 +9,8 @@ This is the repository for prototyping and developing a set of CSS "atoms", that
 
 ## How to build
 
+First run `npm i` to install dependencies. Then run:
+
 * `grunt` to build prototyping CSS
 * `grunt full` to rebuild atoms
 * `grunt watch` to watch CSS and atoms
