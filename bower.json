@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "homepage": "https://github.com/100health/redox-css-model",
   "authors": [
-    "Luke Turner <lt@redoxengine.com>"
+    "Luke Turner",
+    "Scott Rouse"
   ],
   "description": "Defines the atomic CSS model used on the Redox website",
   "main": "dist/csscore/scss/core.scss",
