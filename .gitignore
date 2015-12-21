@@ -1,0 +1,14 @@
+# Temp files
+.sass-cache
+*.log
+
+# Editor/OS files
+.DS_STORE
+.idea
+.vscode
+*~
+*#
+
+# Dependency directories
+bower_components
+node_modules
