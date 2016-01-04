@@ -7,7 +7,7 @@
     "Scott Rouse"
   ],
   "description": "Defines the atomic CSS model used on the Redox website",
-  "main": "dist/csscore/scss/core.scss",
+  "main": "dist/csscore/scss/_core_mixins.scss",
   "license": "MIT",
   "ignore": [
     "**/.*",
