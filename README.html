@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Redox CSS/Prototyping</title>
+
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+		<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+
+        <script src='node_modules/jquery/dist/jquery.js'></script>
+        <script src='node_modules/marked/lib/marked.js'></script>
+
+		<script>
+			$(window).load( function () {
+
+                var renderer = new marked.Renderer();
+
+                var headers = [];
+                renderer.heading = function (text, level) {
+                    var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+
+                    if ( level < 3 ) {
+                        headers.push( '<h' + level + '>' +
+                            '<a href="#'+escapedText+'">' + text + '</a>' +
+                            '</h' + level + '>' );
+                    }
+
+                    return '<h' + level + '><a name="' +
+                                escapedText +
+                                 '" class="anchor" href="#' +
+                                 escapedText +
+                                 '"><span class="header-link"></span></a>' +
+                                  text + '</h' + level + '>';
+                }
+
+                // stack the relavant READMEs...
+                $.get( "README.md?" + Math.random() , function( result ) {
+                    $.get(
+                        "node_modules/cssmodeling/README.md?" + Math.random() ,
+                        function( cssmod_result ) {
+
+                        $(".readme").html(
+                            marked( result + cssmod_result , {renderer:renderer} )
+                        );
+
+                        $(".readme_nav").html(
+                            headers.join("")
+                        );
+                    });
+                });
+
+				$.get( "bower.json?" + Math.random() , function( result ) {
+					$(".npm_version").html( result.version );
+				});
+
+			});
+		</script>
+		<style>
+			body, html {
+			    background-color: #ffff;
+			    color: #555;
+			    font-size: 13px;
+			    font-family: sans-serif;
+			    height: 100%;
+			    margin: 0;
+			    overflow: hidden;
+			    padding: 0;
+			    width: 100%;
+			}
+
+			body {
+				padding: 0px;
+				box-sizing: border-box;
+			}
+
+			div {
+				box-sizing: border-box;
+			}
+
+
+
+			.shortcuts {
+                float: left;
+                position: relative;
+                z-index: 100;
+                width: 20%; height: 100%;
+                overflow: hidden;
+                padding: 20px;
+                box-shadow: 2px 0px 4px 0px rgba( 0,0,0,.05);
+            }
+                .shortcuts a.styleguide {
+                    text-decoration: none;
+                    display: block;
+                    width: 100%; height: 50px;
+                    line-height: 54px;
+                    border: 1px solid #eee;
+                    border-radius: 3px;
+                    text-align: center;
+                    color: #777 !important;
+                    margin-top: 10px;
+					font-size: 14px;
+                }
+
+					.shortcuts a.styleguide:hover {
+						background-color: #eee;
+					}
+
+                .shortcuts h1 {
+                    font-weight: normal;
+                    font-size: 20px;
+                    margin-top: 40px;
+                }
+                .shortcuts h1:first-of-type {
+                    margin-top: 0px;
+                }
+
+				.shortcuts .versions {
+					width: 100%; height: 100%;
+					position: absolute;
+					bottom: 0px; left: 0px;
+					padding: 20px;
+
+				}
+					.shortcuts .versions h1 {
+						font-weight: normal;
+						font-size: 16px;
+						color: #999;
+						border-bottom: 2px solid #eee;
+						padding-bottom: 8px;
+
+					}
+						.shortcuts .versions h1 a {
+							font-weight: normal;
+							font-size: 10px;
+							color: #aaa;
+							float: right;
+							padding-top: 6px;
+						}
+					.shortcuts .versions h2 {
+						font-weight: normal;
+						font-size: 12px;
+						color: #999;
+						margin-top: 20px;
+						border-bottom: 1px solid #eee;
+						padding-bottom: 8px;
+					}
+					.shortcuts .versions a {
+						color: #333;
+						text-decoration: none;
+					}
+						.shortcuts .versions .production {
+							font-size: 40px;
+							padding-top: 4px;
+						}
+						.shortcuts .versions .prototype {
+							font-size: 18px;
+							color: #999;
+						}
+						.shortcuts .versions .sub_prototype {
+							font-size: 12px;
+							color: #999;
+							margin-top: 4px;
+						}
+					.shortcuts .production_block {
+						position: absolute;
+						bottom: 0px; left: 0px;
+						width: 100%; padding: 20px;
+					}
+
+
+            .readme_container {
+                position: relative;
+                z-index: 50;
+                width: 80%; height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                float: right;
+            }
+            .readme {
+                width: 80%; height: 100%;
+
+                padding: 0px 100px;
+                float: right;
+            }
+
+                .readme a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: #555;
+                }
+
+                .readme h1,.readme h2, .readme h3, .readme h4, .readme h5 {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #eee;
+                    font-weight: normal;
+                }
+
+                    .readme:first
+                    {
+                        margin-top: 0px;
+                    }
+                    .readme h1,.readme h2 {
+                        margin-top: 60px;
+                    }
+
+                    .readme h3, .readme h4, .readme h5 {
+                        margin-top: 30px;
+                    }
+
+                    .readme h1 {
+                        font-size: 24px;
+                    }
+                    .readme h2 {
+                        font-size: 22px;
+                    }
+                    .readme h3 {
+                        font-size: 20px;
+                    }
+                    .readme h4 {
+                        font-size: 18px;
+                    }
+                    .readme h5 {
+                        font-size: 18px;
+                    }
+
+
+
+                .readme p {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+                .readme code {
+                    width: 100%;
+                    background-color: #eee;
+                    padding: 10px 20px;
+                    color: #000;
+                    display: block;
+                    font-size: 12px;
+                    overflow: auto;
+                }
+
+                .readme li {
+                    line-height: 20px;
+                }
+
+            /* README NAV */
+            .readme_nav {
+                position: fixed;
+                top: 10px; left: 20%;
+                background-color: #fff;
+                padding: 4px 10px;
+            }
+
+                .readme_nav a {
+                    text-decoration: none;
+                    font-weight: normal;
+                    color: #555;
+                }
+
+                .readme_nav h1,.readme_nav h2,
+                .readme_nav h3, .readme_nav h4,
+                .readme_nav h5 {
+                    padding: 5px 10px;
+                    font-weight: normal;
+                }
+
+                    .readme_nav:first
+                    {
+                        margin-top: 0px;
+                    }
+                    .readme_nav h1,.readme_nav h2 {
+                        margin-top: 0px;
+                    }
+
+                    .readme_nav h3, .readme_nav h4, .readme_nav h5 {
+                        margin-top: 0px;
+                    }
+
+                    .readme_nav h1 {
+                        font-size: 16px;
+                    }
+                    .readme_nav h2 {
+                        font-size: 12px;
+                        padding-left: 20px;
+                    }
+                    .readme_nav h3 {
+                        font-size: 12px;
+                        padding-left: 30px;
+                    }
+                    .readme_nav h4 {
+                        font-size: 10px;
+                        padding-left: 40px;
+                    }
+                    .readme_nav h5 {
+                        font-size: 10px;
+                        padding-left: 50px;
+                    }
+		</style>
+
+	</head>
+	<body>
+
+		<div class="shortcuts">
+			<div class="versions">
+				<h1>
+					Version
+				</h1>
+				<div class="production_block">
+		            <div class="production npm_version"></div>
+					<a href="dist/" class="styleguide" target="_prototype">
+						Prototype
+					</a>
+					<a href="dist/csscore/styleguide/"
+						class="styleguide right" target="_styleguide">
+						Style Guide
+					</a>
+				</div>
+			</div>
+        </div>
+
+
+        <div class="readme_container">
+            <div class="readme_nav"></div>
+            <div class="readme"></div>
+        </div>
+
+	</body>
+</html>

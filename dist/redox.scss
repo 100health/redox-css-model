@@ -176,13 +176,13 @@ $v-text-color-darker: $v-grey-3;
 $v-text-color-darkest: $v-grey-0;
 
 
-$v-redox-green: #00B588;
-$v-redox-green-light: #00B588;
-$v-redox-green-lighter: #00B588;
-$v-redox-green-lightest: #00B588;
-$v-redox-green-dark: #00B588;
-$v-redox-green-darker: #00B588;
-$v-redox-green-darkest: #00B588;
+$v-redox-green: #00b588;
+$v-redox-green-light: #00DFA7;
+$v-redox-green-lighter: #B7FFE0;
+$v-redox-green-lightest: #f9fffd;
+$v-redox-green-dark: #008262;
+$v-redox-green-darker: #008262;
+$v-redox-green-darkest: #008262;
 
 
 $v-secondaryNavBGColor: #eee;
@@ -227,42 +227,57 @@ $v-transition-bottom: bottom .3s;
 
 
 $v-border: 1px solid $v-grey-8;
-$v-border-large: 2px solid $v-grey-8;
-$v-border-larger: 4px solid $v-grey-8;
-$v-border-largest: 8px solid $v-grey-8;
-$v-border-small: 1px solid $v-grey-9;
-$v-border-smaller: 1px solid $v-grey-10;
-$v-border-smallest: 1px solid $v-grey-10;
+$v-border-strong: 2px solid $v-grey-8;
+$v-border-stronger: 4px solid $v-grey-8;
+$v-border-strongest: 8px solid $v-grey-8;
+$v-border-weak: 1px solid $v-grey-7;
+$v-border-weaker: 1px solid $v-grey-8;
+$v-border-weakest: 1px solid $v-grey-9;
 $v-border-top: 1px solid $v-grey-8;
-$v-border-top-large: 2px solid $v-grey-8;
-$v-border-top-larger: 4px solid $v-grey-8;
-$v-border-top-largest: 8px solid $v-grey-8;
-$v-border-top-small: 1px solid $v-grey-9;
-$v-border-top-smaller: 1px solid $v-grey-10;
-$v-border-top-smallest: 1px solid $v-grey-10;
+$v-border-top-strong: 2px solid $v-grey-8;
+$v-border-top-stronger: 4px solid $v-grey-8;
+$v-border-top-strongest: 8px solid $v-grey-8;
+$v-border-top-weak: 1px solid $v-grey-7;
+$v-border-top-weaker: 1px solid $v-grey-8;
+$v-border-top-weakest: 1px solid $v-grey-9;
 $v-border-bottom: 1px solid $v-grey-8;
-$v-border-bottom-large: 2px solid $v-grey-8;
-$v-border-bottom-larger: 4px solid $v-grey-8;
-$v-border-bottom-largest: 8px solid $v-grey-8;
-$v-border-bottom-small: 1px solid $v-grey-9;
-$v-border-bottom-smaller: 1px solid $v-grey-10;
-$v-border-bottom-smallest: 1px solid $v-grey-10;
+$v-border-bottom-strong: 2px solid $v-grey-8;
+$v-border-bottom-stronger: 4px solid $v-grey-8;
+$v-border-bottom-strongest: 8px solid $v-grey-8;
+$v-border-bottom-weak: 1px solid $v-grey-7;
+$v-border-bottom-weaker: 1px solid $v-grey-8;
+$v-border-bottom-weakest: 1px solid $v-grey-9;
 $v-border-left: 1px solid $v-grey-8;
-$v-border-left-large: 2px solid $v-grey-8;
-$v-border-left-larger: 4px solid $v-grey-8;
-$v-border-left-largest: 8px solid $v-grey-8;
-$v-border-left-small: 1px solid $v-grey-9;
-$v-border-left-smaller: 1px solid $v-grey-10;
-$v-border-left-smallest: 1px solid $v-grey-10;
+$v-border-left-strong: 2px solid $v-grey-8;
+$v-border-left-stronger: 4px solid $v-grey-8;
+$v-border-left-strongest: 8px solid $v-grey-8;
+$v-border-left-weak: 1px solid $v-grey-7;
+$v-border-left-weaker: 1px solid $v-grey-8;
+$v-border-left-weakest: 1px solid $v-grey-9;
 $v-border-right: 1px solid $v-grey-8;
-$v-border-right-large: 2px solid $v-grey-8;
-$v-border-right-larger: 4px solid $v-grey-8;
-$v-border-right-largest: 8px solid $v-grey-8;
-$v-border-right-small: 1px solid $v-grey-9;
-$v-border-right-smaller: 1px solid $v-grey-10;
-$v-border-right-smallest: 1px solid $v-grey-10;
+$v-border-right-strong: 2px solid $v-grey-8;
+$v-border-right-stronger: 4px solid $v-grey-8;
+$v-border-right-strongest: 8px solid $v-grey-8;
+$v-border-right-weak: 1px solid $v-grey-7;
+$v-border-right-weaker: 1px solid $v-grey-8;
+$v-border-right-weakest: 1px solid $v-grey-9;
+$v-border-v: 1px solid $v-grey-8;
+$v-border-v-strong: 2px solid $v-grey-8;
+$v-border-v-stronger: 4px solid $v-grey-8;
+$v-border-v-strongest: 8px solid $v-grey-8;
+$v-border-v-weak: 1px solid $v-grey-7;
+$v-border-v-weaker: 1px solid $v-grey-8;
+$v-border-v-weakest: 1px solid $v-grey-9;
+$v-border-h: 1px solid $v-grey-8;
+$v-border-h-strong: 2px solid $v-grey-8;
+$v-border-h-stronger: 4px solid $v-grey-8;
+$v-border-h-strongest: 8px solid $v-grey-8;
+$v-border-h-weak: 1px solid $v-grey-7;
+$v-border-h-weaker: 1px solid $v-grey-8;
+$v-border-h-weakest: 1px solid $v-grey-9;
 
 
+$v-shadow: 0 0 4px 0 rgba( 0,0,0,.1);
 $v-shadow-top-right: 3px -3px 3px 0 rgba( 0,0,0,.1);
 $v-shadow-top-left: -3px -3px 3px 0 rgba( 0,0,0,.1);
 $v-shadow-top-bottom: 0 -3px 3px 0 rgba( 0,0,0,.1), 0 3px 3px 0 rgba( 0,0,0,.1);
@@ -281,6 +296,7 @@ $v-zindex-secondaryNav: 2000;
 $v-zindex-tertiaryNav: 2500;
 $v-zindex-content: 1000;
 $v-zindex-footer: 3500;
+
 
 
 
@@ -2856,6 +2872,20 @@ $v-zindex-footer: 3500;
  color: $v-text-color-darker; }
 @mixin a-text-color-darkest ( $v-text-color-darkest : $v-text-color-darkest ) {
  color: $v-text-color-darkest; }
+@mixin a-hover-text-color ( $v-text-color : $v-text-color ) {
+ &:hover{ color: $v-text-color; } }
+@mixin a-hover-text-color-light ( $v-text-color-light : $v-text-color-light ) {
+ &:hover{ color: $v-text-color-light; } }
+@mixin a-hover-text-color-lighter ( $v-text-color-lighter : $v-text-color-lighter ) {
+ &:hover{ color: $v-text-color-lighter; } }
+@mixin a-hover-text-color-lightest ( $v-text-color-lightest : $v-text-color-lightest ) {
+ &:hover{ color: $v-text-color-lightest; } }
+@mixin a-hover-text-color-dark ( $v-text-color-dark : $v-text-color-dark ) {
+ &:hover{ color: $v-text-color-dark; } }
+@mixin a-hover-text-color-darker ( $v-text-color-darker : $v-text-color-darker ) {
+ &:hover{ color: $v-text-color-darker; } }
+@mixin a-hover-text-color-darkest ( $v-text-color-darkest : $v-text-color-darkest ) {
+ &:hover{ color: $v-text-color-darkest; } }
 @mixin a-background-redox-green ( $v-redox-green : $v-redox-green ) {
  background-color : $v-redox-green; }
 @mixin a-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
@@ -2870,19 +2900,47 @@ $v-zindex-footer: 3500;
  background-color : $v-redox-green-darker; }
 @mixin a-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
  background-color : $v-redox-green-darkest; }
-@mixin a-font-color-redox-green ( $v-redox-green : $v-redox-green ) {
+@mixin a-hover-background-redox-green ( $v-redox-green : $v-redox-green ) {
+ &:hover { background-color : $v-redox-green; } }
+@mixin a-hover-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
+ &:hover { background-color : $v-redox-green-light; } }
+@mixin a-hover-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) {
+ &:hover { background-color : $v-redox-green-lighter; } }
+@mixin a-hover-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) {
+ &:hover { background-color : $v-redox-green-lightest; } }
+@mixin a-hover-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) {
+ &:hover { background-color : $v-redox-green-dark; } }
+@mixin a-hover-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) {
+ &:hover { background-color : $v-redox-green-darker; } }
+@mixin a-hover-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
+ &:hover { background-color : $v-redox-green-darkest; } }
+@mixin a-hover-text-color-redox-green ( $v-redox-green : $v-redox-green ) {
+ &:hover { color : $v-redox-green; } }
+@mixin a-hover-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
+ &:hover { color : $v-redox-green-light; } }
+@mixin a-hover-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) {
+ &:hover { color : $v-redox-green-lighter; } }
+@mixin a-hover-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) {
+ &:hover { color : $v-redox-green-lightest; } }
+@mixin a-hover-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) {
+ &:hover { color : $v-redox-green-dark; } }
+@mixin a-hover-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) {
+ &:hover { color : $v-redox-green-darker; } }
+@mixin a-hover-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
+ &:hover { color : $v-redox-green-darkest; } }
+@mixin a-text-color-redox-green ( $v-redox-green : $v-redox-green ) {
  color : $v-redox-green; }
-@mixin a-font-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
+@mixin a-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
  color : $v-redox-green-light; }
-@mixin a-font-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) {
+@mixin a-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) {
  color : $v-redox-green-lighter; }
-@mixin a-font-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) {
+@mixin a-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) {
  color : $v-redox-green-lightest; }
-@mixin a-font-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) {
+@mixin a-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) {
  color : $v-redox-green-dark; }
-@mixin a-font-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) {
+@mixin a-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) {
  color : $v-redox-green-darker; }
-@mixin a-font-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
+@mixin a-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
  color : $v-redox-green-darkest; }
 @mixin a-background-secondaryNavBGColor ( $v-secondaryNavBGColor : $v-secondaryNavBGColor ) {
  background-color : $v-secondaryNavBGColor; }
@@ -2976,74 +3034,104 @@ $v-zindex-footer: 3500;
  transition: $v-transition-bottom; }
 @mixin a-border ( $v-border : $v-border ) {
  border: $v-border; }
-@mixin a-border-large ( $v-border-large : $v-border-large ) {
- border: $v-border-large; }
-@mixin a-border-larger ( $v-border-larger : $v-border-larger ) {
- border: $v-border-larger; }
-@mixin a-border-largest ( $v-border-largest : $v-border-largest ) {
- border: $v-border-largest; }
-@mixin a-border-small ( $v-border-small : $v-border-small ) {
- border: $v-border-small; }
-@mixin a-border-smaller ( $v-border-smaller : $v-border-smaller ) {
- border: $v-border-smaller; }
-@mixin a-border-smallest ( $v-border-smallest : $v-border-smallest ) {
- border: $v-border-smallest; }
+@mixin a-border-strong ( $v-border-strong : $v-border-strong ) {
+ border: $v-border-strong; }
+@mixin a-border-stronger ( $v-border-stronger : $v-border-stronger ) {
+ border: $v-border-stronger; }
+@mixin a-border-strongest ( $v-border-strongest : $v-border-strongest ) {
+ border: $v-border-strongest; }
+@mixin a-border-weak ( $v-border-weak : $v-border-weak ) {
+ border: $v-border-weak; }
+@mixin a-border-weaker ( $v-border-weaker : $v-border-weaker ) {
+ border: $v-border-weaker; }
+@mixin a-border-weakest ( $v-border-weakest : $v-border-weakest ) {
+ border: $v-border-weakest; }
 @mixin a-border-top ( $v-border-top : $v-border-top ) {
  border-top: $v-border-top; }
-@mixin a-border-top-large ( $v-border-top-large : $v-border-top-large ) {
- border-top: $v-border-top-large; }
-@mixin a-border-top-larger ( $v-border-top-larger : $v-border-top-larger ) {
- border-top: $v-border-top-larger; }
-@mixin a-border-top-largest ( $v-border-top-largest : $v-border-top-largest ) {
- border-top: $v-border-top-largest; }
-@mixin a-border-top-small ( $v-border-top-small : $v-border-top-small ) {
- border-top: $v-border-top-small; }
-@mixin a-border-top-smaller ( $v-border-top-smaller : $v-border-top-smaller ) {
- border-top: $v-border-top-smaller; }
-@mixin a-border-top-smallest ( $v-border-top-smallest : $v-border-top-smallest ) {
- border-top: $v-border-top-smallest; }
+@mixin a-border-top-strong ( $v-border-top-strong : $v-border-top-strong ) {
+ border-top: $v-border-top-strong; }
+@mixin a-border-top-stronger ( $v-border-top-stronger : $v-border-top-stronger ) {
+ border-top: $v-border-top-stronger; }
+@mixin a-border-top-strongest ( $v-border-top-strongest : $v-border-top-strongest ) {
+ border-top: $v-border-top-strongest; }
+@mixin a-border-top-weak ( $v-border-top-weak : $v-border-top-weak ) {
+ border-top: $v-border-top-weak; }
+@mixin a-border-top-weaker ( $v-border-top-weaker : $v-border-top-weaker ) {
+ border-top: $v-border-top-weaker; }
+@mixin a-border-top-weakest ( $v-border-top-weakest : $v-border-top-weakest ) {
+ border-top: $v-border-top-weakest; }
 @mixin a-border-bottom ( $v-border-bottom : $v-border-bottom ) {
  border-bottom: $v-border-bottom; }
-@mixin a-border-bottom-large ( $v-border-bottom-large : $v-border-bottom-large ) {
- border-bottom: $v-border-bottom-large; }
-@mixin a-border-bottom-larger ( $v-border-bottom-larger : $v-border-bottom-larger ) {
- border-bottom: $v-border-bottom-larger; }
-@mixin a-border-bottom-largest ( $v-border-bottom-largest : $v-border-bottom-largest ) {
- border-bottom: $v-border-bottom-largest; }
-@mixin a-border-bottom-small ( $v-border-bottom-small : $v-border-bottom-small ) {
- border-bottom: $v-border-bottom-small; }
-@mixin a-border-bottom-smaller ( $v-border-bottom-smaller : $v-border-bottom-smaller ) {
- border-bottom: $v-border-bottom-smaller; }
-@mixin a-border-bottom-smallest ( $v-border-bottom-smallest : $v-border-bottom-smallest ) {
- border-bottom: $v-border-bottom-smallest; }
+@mixin a-border-bottom-strong ( $v-border-bottom-strong : $v-border-bottom-strong ) {
+ border-bottom: $v-border-bottom-strong; }
+@mixin a-border-bottom-stronger ( $v-border-bottom-stronger : $v-border-bottom-stronger ) {
+ border-bottom: $v-border-bottom-stronger; }
+@mixin a-border-bottom-strongest ( $v-border-bottom-strongest : $v-border-bottom-strongest ) {
+ border-bottom: $v-border-bottom-strongest; }
+@mixin a-border-bottom-weak ( $v-border-bottom-weak : $v-border-bottom-weak ) {
+ border-bottom: $v-border-bottom-weak; }
+@mixin a-border-bottom-weaker ( $v-border-bottom-weaker : $v-border-bottom-weaker ) {
+ border-bottom: $v-border-bottom-weaker; }
+@mixin a-border-bottom-weakest ( $v-border-bottom-weakest : $v-border-bottom-weakest ) {
+ border-bottom: $v-border-bottom-weakest; }
 @mixin a-border-left ( $v-border-left : $v-border-left ) {
  border-left: $v-border-left; }
-@mixin a-border-left-large ( $v-border-left-large : $v-border-left-large ) {
- border-left: $v-border-left-large; }
-@mixin a-border-left-larger ( $v-border-left-larger : $v-border-left-larger ) {
- border-left: $v-border-left-larger; }
-@mixin a-border-left-largest ( $v-border-left-largest : $v-border-left-largest ) {
- border-left: $v-border-left-largest; }
-@mixin a-border-left-small ( $v-border-left-small : $v-border-left-small ) {
- border-left: $v-border-left-small; }
-@mixin a-border-left-smaller ( $v-border-left-smaller : $v-border-left-smaller ) {
- border-left: $v-border-left-smaller; }
-@mixin a-border-left-smallest ( $v-border-left-smallest : $v-border-left-smallest ) {
- border-left: $v-border-left-smallest; }
+@mixin a-border-left-strong ( $v-border-left-strong : $v-border-left-strong ) {
+ border-left: $v-border-left-strong; }
+@mixin a-border-left-stronger ( $v-border-left-stronger : $v-border-left-stronger ) {
+ border-left: $v-border-left-stronger; }
+@mixin a-border-left-strongest ( $v-border-left-strongest : $v-border-left-strongest ) {
+ border-left: $v-border-left-strongest; }
+@mixin a-border-left-weak ( $v-border-left-weak : $v-border-left-weak ) {
+ border-left: $v-border-left-weak; }
+@mixin a-border-left-weaker ( $v-border-left-weaker : $v-border-left-weaker ) {
+ border-left: $v-border-left-weaker; }
+@mixin a-border-left-weakest ( $v-border-left-weakest : $v-border-left-weakest ) {
+ border-left: $v-border-left-weakest; }
 @mixin a-border-right ( $v-border-right : $v-border-right ) {
  border-right: $v-border-right; }
-@mixin a-border-right-large ( $v-border-right-large : $v-border-right-large ) {
- border-right: $v-border-right-large; }
-@mixin a-border-right-larger ( $v-border-right-larger : $v-border-right-larger ) {
- border-right: $v-border-right-larger; }
-@mixin a-border-right-largest ( $v-border-right-largest : $v-border-right-largest ) {
- border-right: $v-border-right-largest; }
-@mixin a-border-right-small ( $v-border-right-small : $v-border-right-small ) {
- border-right: $v-border-right-small; }
-@mixin a-border-right-smaller ( $v-border-right-smaller : $v-border-right-smaller ) {
- border-right: $v-border-right-smaller; }
-@mixin a-border-right-smallest ( $v-border-right-smallest : $v-border-right-smallest ) {
- border-right: $v-border-right-smallest; }
+@mixin a-border-right-strong ( $v-border-right-strong : $v-border-right-strong ) {
+ border-right: $v-border-right-strong; }
+@mixin a-border-right-stronger ( $v-border-right-stronger : $v-border-right-stronger ) {
+ border-right: $v-border-right-stronger; }
+@mixin a-border-right-strongest ( $v-border-right-strongest : $v-border-right-strongest ) {
+ border-right: $v-border-right-strongest; }
+@mixin a-border-right-weak ( $v-border-right-weak : $v-border-right-weak ) {
+ border-right: $v-border-right-weak; }
+@mixin a-border-right-weaker ( $v-border-right-weaker : $v-border-right-weaker ) {
+ border-right: $v-border-right-weaker; }
+@mixin a-border-right-weakest ( $v-border-right-weakest : $v-border-right-weakest ) {
+ border-right: $v-border-right-weakest; }
+@mixin a-border-v ( $v-border-v : $v-border-v ) {
+ border-top: $v-border-v; border-bottom: $v-border-v; }
+@mixin a-border-v-strong ( $v-border-v-strong : $v-border-v-strong ) {
+ border-top: $v-border-v-strong; border-bottom: $v-border-v-strong; }
+@mixin a-border-v-stronger ( $v-border-v-stronger : $v-border-v-stronger ) {
+ border-top: $v-border-v-stronger; border-bottom: $v-border-v-stronger; }
+@mixin a-border-v-strongest ( $v-border-v-strongest : $v-border-v-strongest ) {
+ border-top: $v-border-v-strongest; border-bottom: $v-border-v-strongest; }
+@mixin a-border-v-weak ( $v-border-v-weak : $v-border-v-weak ) {
+ border-top: $v-border-v-weak; border-bottom: $v-border-v-weak; }
+@mixin a-border-v-weaker ( $v-border-v-weaker : $v-border-v-weaker ) {
+ border-top: $v-border-v-weaker; border-bottom: $v-border-v-weaker; }
+@mixin a-border-v-weakest ( $v-border-v-weakest : $v-border-v-weakest ) {
+ border-top: $v-border-v-weakest; border-bottom: $v-border-v-weakest; }
+@mixin a-border-h ( $v-border-h : $v-border-h ) {
+ border-left: $v-border-h; border-right: $v-border-h; }
+@mixin a-border-h-strong ( $v-border-h-strong : $v-border-h-strong ) {
+ border-left: $v-border-h-strong; border-right: $v-border-h-strong; }
+@mixin a-border-h-stronger ( $v-border-h-stronger : $v-border-h-stronger ) {
+ border-left: $v-border-h-stronger; border-right: $v-border-h-stronger; }
+@mixin a-border-h-strongest ( $v-border-h-strongest : $v-border-h-strongest ) {
+ border-left: $v-border-h-strongest; border-right: $v-border-h-strongest; }
+@mixin a-border-h-weak ( $v-border-h-weak : $v-border-h-weak ) {
+ border-left: $v-border-h-weak; border-right: $v-border-h-weak; }
+@mixin a-border-h-weaker ( $v-border-h-weaker : $v-border-h-weaker ) {
+ border-left: $v-border-h-weaker; border-right: $v-border-h-weaker; }
+@mixin a-border-h-weakest ( $v-border-h-weakest : $v-border-h-weakest ) {
+ border-left: $v-border-h-weakest; border-right: $v-border-h-weakest; }
+@mixin a-shadow ( $v-shadow : $v-shadow ) {
+ box-shadow : 0 0 4px 0 rgba( 0,0,0,.1); }
 @mixin a-shadow-top-right ( $v-shadow-top-right : $v-shadow-top-right ) {
  box-shadow : 3px -3px 3px 0 rgba( 0,0,0,.1); }
 @mixin a-shadow-top-left ( $v-shadow-top-left : $v-shadow-top-left ) {
@@ -3190,6 +3278,22 @@ $v-zindex-footer: 3500;
  left: 0px; }
 @mixin a-right () {
  right: 0px; }
+@mixin a-top-right-fixed () {
+ position: fixed; top: 0px; right: 0px; }
+@mixin a-top-left-fixed () {
+ position: fixed;top: 0px; left: 0px; }
+@mixin a-top-fixed () {
+ position: fixed;top: 0px; }
+@mixin a-bottom-fixed () {
+ position: fixed;bottom: 0px; }
+@mixin a-bottom-right-fixed () {
+ position: fixed;bottom: 0px; right: 0px; }
+@mixin a-bottom-left-fixed () {
+ position: fixed;bottom: 0px; left: 0px; }
+@mixin a-left-fixed () {
+ position: fixed;left: 0px; }
+@mixin a-right-fixed () {
+ position: fixed;right: 0px; }
 @mixin a-height-auto () {
  height : auto; }
 @mixin a-height-initial () {
@@ -3202,6 +3306,16 @@ $v-zindex-footer: 3500;
  width : initial; }
 @mixin a-width-inherit () {
  width : inherit; }
+@mixin a-flex-justify-content-flex-start () {
+ justify-content : flex-start; }
+@mixin a-flex-justify-content-flex-end () {
+ justify-content : flex-end; }
+@mixin a-flex-justify-content-center () {
+ justify-content : center; }
+@mixin a-flex-justify-content-space-between () {
+ justify-content : space-between; }
+@mixin a-flex-justify-content-space-around () {
+ justify-content : space-around; }
 @mixin a-single-line () {
  overflow: hidden;  white-space: nowrap;  }
 @mixin a-flex-center () {
@@ -3232,6 +3346,7 @@ $v-zindex-footer: 3500;
   @include a-position-relative;  @include a-width-100;  @include a-height-auto;  }
 @mixin a-mobile-nav-reset () {
   @include a-position-fixed;  @include a-top-left;  }
+
 
 
 
@@ -4541,6 +4656,13 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-md-a-text-color-dark ( $v-text-color-dark : $v-text-color-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-text-color-dark !important;}}
 @mixin breakpoint-md-a-text-color-darker ( $v-text-color-darker : $v-text-color-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-text-color-darker !important;}}
 @mixin breakpoint-md-a-text-color-darkest ( $v-text-color-darkest : $v-text-color-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-text-color-darkest !important;}}
+@mixin breakpoint-md-a-hover-text-color ( $v-text-color : $v-text-color ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover{ color: $v-text-color !important; }}}
+@mixin breakpoint-md-a-hover-text-color-light ( $v-text-color-light : $v-text-color-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover{ color: $v-text-color-light !important; }}}
+@mixin breakpoint-md-a-hover-text-color-lighter ( $v-text-color-lighter : $v-text-color-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover{ color: $v-text-color-lighter !important; }}}
+@mixin breakpoint-md-a-hover-text-color-lightest ( $v-text-color-lightest : $v-text-color-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover{ color: $v-text-color-lightest !important; }}}
+@mixin breakpoint-md-a-hover-text-color-dark ( $v-text-color-dark : $v-text-color-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover{ color: $v-text-color-dark !important; }}}
+@mixin breakpoint-md-a-hover-text-color-darker ( $v-text-color-darker : $v-text-color-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover{ color: $v-text-color-darker !important; }}}
+@mixin breakpoint-md-a-hover-text-color-darkest ( $v-text-color-darkest : $v-text-color-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover{ color: $v-text-color-darkest !important; }}}
 @mixin breakpoint-md-a-background-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-redox-green !important;}}
 @mixin breakpoint-md-a-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-redox-green-light !important;}}
 @mixin breakpoint-md-a-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-redox-green-lighter !important;}}
@@ -4548,13 +4670,27 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-md-a-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-redox-green-dark !important;}}
 @mixin breakpoint-md-a-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-redox-green-darker !important;}}
 @mixin breakpoint-md-a-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-redox-green-darkest !important;}}
-@mixin breakpoint-md-a-font-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green !important;}}
-@mixin breakpoint-md-a-font-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-light !important;}}
-@mixin breakpoint-md-a-font-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-lighter !important;}}
-@mixin breakpoint-md-a-font-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-lightest !important;}}
-@mixin breakpoint-md-a-font-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-dark !important;}}
-@mixin breakpoint-md-a-font-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-darker !important;}}
-@mixin breakpoint-md-a-font-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-darkest !important;}}
+@mixin breakpoint-md-a-hover-background-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-light !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-lighter !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-lightest !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-dark !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-darker !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-darkest !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-light !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-lighter !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-lightest !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-dark !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-darker !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-darkest !important; }}}
+@mixin breakpoint-md-a-text-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green !important;}}
+@mixin breakpoint-md-a-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-light !important;}}
+@mixin breakpoint-md-a-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-lighter !important;}}
+@mixin breakpoint-md-a-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-lightest !important;}}
+@mixin breakpoint-md-a-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-dark !important;}}
+@mixin breakpoint-md-a-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-darker !important;}}
+@mixin breakpoint-md-a-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-redox-green-darkest !important;}}
 @mixin breakpoint-md-a-background-secondaryNavBGColor ( $v-secondaryNavBGColor : $v-secondaryNavBGColor ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-secondaryNavBGColor !important;}}
 @mixin breakpoint-md-a-alpha ( $v-alpha : $v-alpha ) { @media ( max-width: $v-breakpoint-medium-min ) {  opacity : $v-alpha !important;}}
 @mixin breakpoint-md-a-alpha-0 ( $v-alpha-0 : $v-alpha-0 ) { @media ( max-width: $v-breakpoint-medium-min ) {  opacity : $v-alpha-0 !important;}}
@@ -4601,40 +4737,55 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-md-a-transition-top ( $v-transition-top : $v-transition-top ) { @media ( max-width: $v-breakpoint-medium-min ) {  transition: $v-transition-top !important;}}
 @mixin breakpoint-md-a-transition-bottom ( $v-transition-bottom : $v-transition-bottom ) { @media ( max-width: $v-breakpoint-medium-min ) {  transition: $v-transition-bottom !important;}}
 @mixin breakpoint-md-a-border ( $v-border : $v-border ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border !important;}}
-@mixin breakpoint-md-a-border-large ( $v-border-large : $v-border-large ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-large !important;}}
-@mixin breakpoint-md-a-border-larger ( $v-border-larger : $v-border-larger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-larger !important;}}
-@mixin breakpoint-md-a-border-largest ( $v-border-largest : $v-border-largest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-largest !important;}}
-@mixin breakpoint-md-a-border-small ( $v-border-small : $v-border-small ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-small !important;}}
-@mixin breakpoint-md-a-border-smaller ( $v-border-smaller : $v-border-smaller ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-smaller !important;}}
-@mixin breakpoint-md-a-border-smallest ( $v-border-smallest : $v-border-smallest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-smallest !important;}}
+@mixin breakpoint-md-a-border-strong ( $v-border-strong : $v-border-strong ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-strong !important;}}
+@mixin breakpoint-md-a-border-stronger ( $v-border-stronger : $v-border-stronger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-stronger !important;}}
+@mixin breakpoint-md-a-border-strongest ( $v-border-strongest : $v-border-strongest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-strongest !important;}}
+@mixin breakpoint-md-a-border-weak ( $v-border-weak : $v-border-weak ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-weak !important;}}
+@mixin breakpoint-md-a-border-weaker ( $v-border-weaker : $v-border-weaker ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-weaker !important;}}
+@mixin breakpoint-md-a-border-weakest ( $v-border-weakest : $v-border-weakest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border: $v-border-weakest !important;}}
 @mixin breakpoint-md-a-border-top ( $v-border-top : $v-border-top ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top !important;}}
-@mixin breakpoint-md-a-border-top-large ( $v-border-top-large : $v-border-top-large ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-large !important;}}
-@mixin breakpoint-md-a-border-top-larger ( $v-border-top-larger : $v-border-top-larger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-larger !important;}}
-@mixin breakpoint-md-a-border-top-largest ( $v-border-top-largest : $v-border-top-largest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-largest !important;}}
-@mixin breakpoint-md-a-border-top-small ( $v-border-top-small : $v-border-top-small ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-small !important;}}
-@mixin breakpoint-md-a-border-top-smaller ( $v-border-top-smaller : $v-border-top-smaller ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-smaller !important;}}
-@mixin breakpoint-md-a-border-top-smallest ( $v-border-top-smallest : $v-border-top-smallest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-smallest !important;}}
+@mixin breakpoint-md-a-border-top-strong ( $v-border-top-strong : $v-border-top-strong ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-strong !important;}}
+@mixin breakpoint-md-a-border-top-stronger ( $v-border-top-stronger : $v-border-top-stronger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-stronger !important;}}
+@mixin breakpoint-md-a-border-top-strongest ( $v-border-top-strongest : $v-border-top-strongest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-strongest !important;}}
+@mixin breakpoint-md-a-border-top-weak ( $v-border-top-weak : $v-border-top-weak ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-weak !important;}}
+@mixin breakpoint-md-a-border-top-weaker ( $v-border-top-weaker : $v-border-top-weaker ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-weaker !important;}}
+@mixin breakpoint-md-a-border-top-weakest ( $v-border-top-weakest : $v-border-top-weakest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-top-weakest !important;}}
 @mixin breakpoint-md-a-border-bottom ( $v-border-bottom : $v-border-bottom ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom !important;}}
-@mixin breakpoint-md-a-border-bottom-large ( $v-border-bottom-large : $v-border-bottom-large ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-large !important;}}
-@mixin breakpoint-md-a-border-bottom-larger ( $v-border-bottom-larger : $v-border-bottom-larger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-larger !important;}}
-@mixin breakpoint-md-a-border-bottom-largest ( $v-border-bottom-largest : $v-border-bottom-largest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-largest !important;}}
-@mixin breakpoint-md-a-border-bottom-small ( $v-border-bottom-small : $v-border-bottom-small ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-small !important;}}
-@mixin breakpoint-md-a-border-bottom-smaller ( $v-border-bottom-smaller : $v-border-bottom-smaller ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-smaller !important;}}
-@mixin breakpoint-md-a-border-bottom-smallest ( $v-border-bottom-smallest : $v-border-bottom-smallest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-smallest !important;}}
+@mixin breakpoint-md-a-border-bottom-strong ( $v-border-bottom-strong : $v-border-bottom-strong ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-strong !important;}}
+@mixin breakpoint-md-a-border-bottom-stronger ( $v-border-bottom-stronger : $v-border-bottom-stronger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-stronger !important;}}
+@mixin breakpoint-md-a-border-bottom-strongest ( $v-border-bottom-strongest : $v-border-bottom-strongest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-strongest !important;}}
+@mixin breakpoint-md-a-border-bottom-weak ( $v-border-bottom-weak : $v-border-bottom-weak ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-weak !important;}}
+@mixin breakpoint-md-a-border-bottom-weaker ( $v-border-bottom-weaker : $v-border-bottom-weaker ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-weaker !important;}}
+@mixin breakpoint-md-a-border-bottom-weakest ( $v-border-bottom-weakest : $v-border-bottom-weakest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-bottom: $v-border-bottom-weakest !important;}}
 @mixin breakpoint-md-a-border-left ( $v-border-left : $v-border-left ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left !important;}}
-@mixin breakpoint-md-a-border-left-large ( $v-border-left-large : $v-border-left-large ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-large !important;}}
-@mixin breakpoint-md-a-border-left-larger ( $v-border-left-larger : $v-border-left-larger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-larger !important;}}
-@mixin breakpoint-md-a-border-left-largest ( $v-border-left-largest : $v-border-left-largest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-largest !important;}}
-@mixin breakpoint-md-a-border-left-small ( $v-border-left-small : $v-border-left-small ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-small !important;}}
-@mixin breakpoint-md-a-border-left-smaller ( $v-border-left-smaller : $v-border-left-smaller ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-smaller !important;}}
-@mixin breakpoint-md-a-border-left-smallest ( $v-border-left-smallest : $v-border-left-smallest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-smallest !important;}}
+@mixin breakpoint-md-a-border-left-strong ( $v-border-left-strong : $v-border-left-strong ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-strong !important;}}
+@mixin breakpoint-md-a-border-left-stronger ( $v-border-left-stronger : $v-border-left-stronger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-stronger !important;}}
+@mixin breakpoint-md-a-border-left-strongest ( $v-border-left-strongest : $v-border-left-strongest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-strongest !important;}}
+@mixin breakpoint-md-a-border-left-weak ( $v-border-left-weak : $v-border-left-weak ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-weak !important;}}
+@mixin breakpoint-md-a-border-left-weaker ( $v-border-left-weaker : $v-border-left-weaker ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-weaker !important;}}
+@mixin breakpoint-md-a-border-left-weakest ( $v-border-left-weakest : $v-border-left-weakest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-left-weakest !important;}}
 @mixin breakpoint-md-a-border-right ( $v-border-right : $v-border-right ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right !important;}}
-@mixin breakpoint-md-a-border-right-large ( $v-border-right-large : $v-border-right-large ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-large !important;}}
-@mixin breakpoint-md-a-border-right-larger ( $v-border-right-larger : $v-border-right-larger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-larger !important;}}
-@mixin breakpoint-md-a-border-right-largest ( $v-border-right-largest : $v-border-right-largest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-largest !important;}}
-@mixin breakpoint-md-a-border-right-small ( $v-border-right-small : $v-border-right-small ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-small !important;}}
-@mixin breakpoint-md-a-border-right-smaller ( $v-border-right-smaller : $v-border-right-smaller ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-smaller !important;}}
-@mixin breakpoint-md-a-border-right-smallest ( $v-border-right-smallest : $v-border-right-smallest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-smallest !important;}}
+@mixin breakpoint-md-a-border-right-strong ( $v-border-right-strong : $v-border-right-strong ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-strong !important;}}
+@mixin breakpoint-md-a-border-right-stronger ( $v-border-right-stronger : $v-border-right-stronger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-stronger !important;}}
+@mixin breakpoint-md-a-border-right-strongest ( $v-border-right-strongest : $v-border-right-strongest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-strongest !important;}}
+@mixin breakpoint-md-a-border-right-weak ( $v-border-right-weak : $v-border-right-weak ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-weak !important;}}
+@mixin breakpoint-md-a-border-right-weaker ( $v-border-right-weaker : $v-border-right-weaker ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-weaker !important;}}
+@mixin breakpoint-md-a-border-right-weakest ( $v-border-right-weakest : $v-border-right-weakest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-right: $v-border-right-weakest !important;}}
+@mixin breakpoint-md-a-border-v ( $v-border-v : $v-border-v ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-v !important; border-bottom: $v-border-v !important;}}
+@mixin breakpoint-md-a-border-v-strong ( $v-border-v-strong : $v-border-v-strong ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-v-strong !important; border-bottom: $v-border-v-strong !important;}}
+@mixin breakpoint-md-a-border-v-stronger ( $v-border-v-stronger : $v-border-v-stronger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-v-stronger !important; border-bottom: $v-border-v-stronger !important;}}
+@mixin breakpoint-md-a-border-v-strongest ( $v-border-v-strongest : $v-border-v-strongest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-v-strongest !important; border-bottom: $v-border-v-strongest !important;}}
+@mixin breakpoint-md-a-border-v-weak ( $v-border-v-weak : $v-border-v-weak ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-v-weak !important; border-bottom: $v-border-v-weak !important;}}
+@mixin breakpoint-md-a-border-v-weaker ( $v-border-v-weaker : $v-border-v-weaker ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-v-weaker !important; border-bottom: $v-border-v-weaker !important;}}
+@mixin breakpoint-md-a-border-v-weakest ( $v-border-v-weakest : $v-border-v-weakest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-top: $v-border-v-weakest !important; border-bottom: $v-border-v-weakest !important;}}
+@mixin breakpoint-md-a-border-h ( $v-border-h : $v-border-h ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-h !important; border-right: $v-border-h !important;}}
+@mixin breakpoint-md-a-border-h-strong ( $v-border-h-strong : $v-border-h-strong ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-h-strong !important; border-right: $v-border-h-strong !important;}}
+@mixin breakpoint-md-a-border-h-stronger ( $v-border-h-stronger : $v-border-h-stronger ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-h-stronger !important; border-right: $v-border-h-stronger !important;}}
+@mixin breakpoint-md-a-border-h-strongest ( $v-border-h-strongest : $v-border-h-strongest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-h-strongest !important; border-right: $v-border-h-strongest !important;}}
+@mixin breakpoint-md-a-border-h-weak ( $v-border-h-weak : $v-border-h-weak ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-h-weak !important; border-right: $v-border-h-weak !important;}}
+@mixin breakpoint-md-a-border-h-weaker ( $v-border-h-weaker : $v-border-h-weaker ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-h-weaker !important; border-right: $v-border-h-weaker !important;}}
+@mixin breakpoint-md-a-border-h-weakest ( $v-border-h-weakest : $v-border-h-weakest ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-left: $v-border-h-weakest !important; border-right: $v-border-h-weakest !important;}}
+@mixin breakpoint-md-a-shadow ( $v-shadow : $v-shadow ) { @media ( max-width: $v-breakpoint-medium-min ) {  box-shadow : 0 0 4px 0 rgba( 0,0,0,.1) !important;}}
 @mixin breakpoint-md-a-shadow-top-right ( $v-shadow-top-right : $v-shadow-top-right ) { @media ( max-width: $v-breakpoint-medium-min ) {  box-shadow : 3px -3px 3px 0 rgba( 0,0,0,.1) !important;}}
 @mixin breakpoint-md-a-shadow-top-left ( $v-shadow-top-left : $v-shadow-top-left ) { @media ( max-width: $v-breakpoint-medium-min ) {  box-shadow : -3px -3px 3px 0 rgba( 0,0,0,.1) !important;}}
 @mixin breakpoint-md-a-shadow-top-bottom ( $v-shadow-top-bottom : $v-shadow-top-bottom ) { @media ( max-width: $v-breakpoint-medium-min ) {  box-shadow : 0 -3px 3px 0 rgba( 0,0,0,.1), 0 3px 3px 0 rgba( 0,0,0,.1) !important;}}
@@ -4708,12 +4859,25 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-md-a-bottom-left (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  bottom: 0px !important; left: 0px !important;}}
 @mixin breakpoint-md-a-left (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  left: 0px !important;}}
 @mixin breakpoint-md-a-right (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  right: 0px !important;}}
+@mixin breakpoint-md-a-top-right-fixed (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  position: fixed !important; top: 0px !important; right: 0px !important;}}
+@mixin breakpoint-md-a-top-left-fixed (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  position: fixed !important;top: 0px !important; left: 0px !important;}}
+@mixin breakpoint-md-a-top-fixed (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  position: fixed !important;top: 0px !important;}}
+@mixin breakpoint-md-a-bottom-fixed (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  position: fixed !important;bottom: 0px !important;}}
+@mixin breakpoint-md-a-bottom-right-fixed (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  position: fixed !important;bottom: 0px !important; right: 0px !important;}}
+@mixin breakpoint-md-a-bottom-left-fixed (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  position: fixed !important;bottom: 0px !important; left: 0px !important;}}
+@mixin breakpoint-md-a-left-fixed (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  position: fixed !important;left: 0px !important;}}
+@mixin breakpoint-md-a-right-fixed (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  position: fixed !important;right: 0px !important;}}
 @mixin breakpoint-md-a-height-auto (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  height : auto !important;}}
 @mixin breakpoint-md-a-height-initial (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  height : initial !important;}}
 @mixin breakpoint-md-a-height-inherit (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  height : inherit !important;}}
 @mixin breakpoint-md-a-width-auto (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width : auto !important;}}
 @mixin breakpoint-md-a-width-initial (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width : initial !important;}}
 @mixin breakpoint-md-a-width-inherit (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width : inherit !important;}}
+@mixin breakpoint-md-a-flex-justify-content-flex-start (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content : flex-start !important;}}
+@mixin breakpoint-md-a-flex-justify-content-flex-end (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content : flex-end !important;}}
+@mixin breakpoint-md-a-flex-justify-content-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content : center !important;}}
+@mixin breakpoint-md-a-flex-justify-content-space-between (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content : space-between !important;}}
+@mixin breakpoint-md-a-flex-justify-content-space-around (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content : space-around !important;}}
 @mixin breakpoint-md-a-single-line (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  overflow: hidden !important;  white-space: nowrap !important; }}
 @mixin breakpoint-md-a-flex-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content: center !important;  & > * { align-self: center !important; }  @include breakpoint-md-a-display-flex; }}
 @mixin breakpoint-md-a-flex-vcenter (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  & > * { align-self: center !important; }  @include breakpoint-md-a-display-flex; }}
@@ -4729,6 +4893,7 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-md-a-fill-container (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width: 100% !important;  height: 100% !important; }}
 @mixin breakpoint-md-a-mobile-reset (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-relative;  @include breakpoint-md-a-width-100;  @include breakpoint-md-a-height-auto; }}
 @mixin breakpoint-md-a-mobile-nav-reset (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-fixed;  @include breakpoint-md-a-top-left; }}
+
 
 
 
@@ -6038,6 +6203,13 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-sm-a-text-color-dark ( $v-text-color-dark : $v-text-color-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-text-color-dark !important;}}
 @mixin breakpoint-sm-a-text-color-darker ( $v-text-color-darker : $v-text-color-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-text-color-darker !important;}}
 @mixin breakpoint-sm-a-text-color-darkest ( $v-text-color-darkest : $v-text-color-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-text-color-darkest !important;}}
+@mixin breakpoint-sm-a-hover-text-color ( $v-text-color : $v-text-color ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover{ color: $v-text-color !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-light ( $v-text-color-light : $v-text-color-light ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover{ color: $v-text-color-light !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-lighter ( $v-text-color-lighter : $v-text-color-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover{ color: $v-text-color-lighter !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-lightest ( $v-text-color-lightest : $v-text-color-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover{ color: $v-text-color-lightest !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-dark ( $v-text-color-dark : $v-text-color-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover{ color: $v-text-color-dark !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-darker ( $v-text-color-darker : $v-text-color-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover{ color: $v-text-color-darker !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-darkest ( $v-text-color-darkest : $v-text-color-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover{ color: $v-text-color-darkest !important; }}}
 @mixin breakpoint-sm-a-background-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-redox-green !important;}}
 @mixin breakpoint-sm-a-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-redox-green-light !important;}}
 @mixin breakpoint-sm-a-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-redox-green-lighter !important;}}
@@ -6045,13 +6217,27 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-sm-a-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-redox-green-dark !important;}}
 @mixin breakpoint-sm-a-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-redox-green-darker !important;}}
 @mixin breakpoint-sm-a-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-redox-green-darkest !important;}}
-@mixin breakpoint-sm-a-font-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green !important;}}
-@mixin breakpoint-sm-a-font-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-light !important;}}
-@mixin breakpoint-sm-a-font-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-lighter !important;}}
-@mixin breakpoint-sm-a-font-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-lightest !important;}}
-@mixin breakpoint-sm-a-font-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-dark !important;}}
-@mixin breakpoint-sm-a-font-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-darker !important;}}
-@mixin breakpoint-sm-a-font-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-darkest !important;}}
+@mixin breakpoint-sm-a-hover-background-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-light !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-lighter !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-lightest !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-dark !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-darker !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-darkest !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-light !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-lighter !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-lightest !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-dark !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-darker !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-darkest !important; }}}
+@mixin breakpoint-sm-a-text-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green !important;}}
+@mixin breakpoint-sm-a-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-light !important;}}
+@mixin breakpoint-sm-a-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-lighter !important;}}
+@mixin breakpoint-sm-a-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-lightest !important;}}
+@mixin breakpoint-sm-a-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-dark !important;}}
+@mixin breakpoint-sm-a-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-darker !important;}}
+@mixin breakpoint-sm-a-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-redox-green-darkest !important;}}
 @mixin breakpoint-sm-a-background-secondaryNavBGColor ( $v-secondaryNavBGColor : $v-secondaryNavBGColor ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-secondaryNavBGColor !important;}}
 @mixin breakpoint-sm-a-alpha ( $v-alpha : $v-alpha ) { @media ( max-width: $v-breakpoint-small-min ) {  opacity : $v-alpha !important;}}
 @mixin breakpoint-sm-a-alpha-0 ( $v-alpha-0 : $v-alpha-0 ) { @media ( max-width: $v-breakpoint-small-min ) {  opacity : $v-alpha-0 !important;}}
@@ -6098,40 +6284,55 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-sm-a-transition-top ( $v-transition-top : $v-transition-top ) { @media ( max-width: $v-breakpoint-small-min ) {  transition: $v-transition-top !important;}}
 @mixin breakpoint-sm-a-transition-bottom ( $v-transition-bottom : $v-transition-bottom ) { @media ( max-width: $v-breakpoint-small-min ) {  transition: $v-transition-bottom !important;}}
 @mixin breakpoint-sm-a-border ( $v-border : $v-border ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border !important;}}
-@mixin breakpoint-sm-a-border-large ( $v-border-large : $v-border-large ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-large !important;}}
-@mixin breakpoint-sm-a-border-larger ( $v-border-larger : $v-border-larger ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-larger !important;}}
-@mixin breakpoint-sm-a-border-largest ( $v-border-largest : $v-border-largest ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-largest !important;}}
-@mixin breakpoint-sm-a-border-small ( $v-border-small : $v-border-small ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-small !important;}}
-@mixin breakpoint-sm-a-border-smaller ( $v-border-smaller : $v-border-smaller ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-smaller !important;}}
-@mixin breakpoint-sm-a-border-smallest ( $v-border-smallest : $v-border-smallest ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-smallest !important;}}
+@mixin breakpoint-sm-a-border-strong ( $v-border-strong : $v-border-strong ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-strong !important;}}
+@mixin breakpoint-sm-a-border-stronger ( $v-border-stronger : $v-border-stronger ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-stronger !important;}}
+@mixin breakpoint-sm-a-border-strongest ( $v-border-strongest : $v-border-strongest ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-strongest !important;}}
+@mixin breakpoint-sm-a-border-weak ( $v-border-weak : $v-border-weak ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-weak !important;}}
+@mixin breakpoint-sm-a-border-weaker ( $v-border-weaker : $v-border-weaker ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-weaker !important;}}
+@mixin breakpoint-sm-a-border-weakest ( $v-border-weakest : $v-border-weakest ) { @media ( max-width: $v-breakpoint-small-min ) {  border: $v-border-weakest !important;}}
 @mixin breakpoint-sm-a-border-top ( $v-border-top : $v-border-top ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top !important;}}
-@mixin breakpoint-sm-a-border-top-large ( $v-border-top-large : $v-border-top-large ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-large !important;}}
-@mixin breakpoint-sm-a-border-top-larger ( $v-border-top-larger : $v-border-top-larger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-larger !important;}}
-@mixin breakpoint-sm-a-border-top-largest ( $v-border-top-largest : $v-border-top-largest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-largest !important;}}
-@mixin breakpoint-sm-a-border-top-small ( $v-border-top-small : $v-border-top-small ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-small !important;}}
-@mixin breakpoint-sm-a-border-top-smaller ( $v-border-top-smaller : $v-border-top-smaller ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-smaller !important;}}
-@mixin breakpoint-sm-a-border-top-smallest ( $v-border-top-smallest : $v-border-top-smallest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-smallest !important;}}
+@mixin breakpoint-sm-a-border-top-strong ( $v-border-top-strong : $v-border-top-strong ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-strong !important;}}
+@mixin breakpoint-sm-a-border-top-stronger ( $v-border-top-stronger : $v-border-top-stronger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-stronger !important;}}
+@mixin breakpoint-sm-a-border-top-strongest ( $v-border-top-strongest : $v-border-top-strongest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-strongest !important;}}
+@mixin breakpoint-sm-a-border-top-weak ( $v-border-top-weak : $v-border-top-weak ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-weak !important;}}
+@mixin breakpoint-sm-a-border-top-weaker ( $v-border-top-weaker : $v-border-top-weaker ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-weaker !important;}}
+@mixin breakpoint-sm-a-border-top-weakest ( $v-border-top-weakest : $v-border-top-weakest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-top-weakest !important;}}
 @mixin breakpoint-sm-a-border-bottom ( $v-border-bottom : $v-border-bottom ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom !important;}}
-@mixin breakpoint-sm-a-border-bottom-large ( $v-border-bottom-large : $v-border-bottom-large ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-large !important;}}
-@mixin breakpoint-sm-a-border-bottom-larger ( $v-border-bottom-larger : $v-border-bottom-larger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-larger !important;}}
-@mixin breakpoint-sm-a-border-bottom-largest ( $v-border-bottom-largest : $v-border-bottom-largest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-largest !important;}}
-@mixin breakpoint-sm-a-border-bottom-small ( $v-border-bottom-small : $v-border-bottom-small ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-small !important;}}
-@mixin breakpoint-sm-a-border-bottom-smaller ( $v-border-bottom-smaller : $v-border-bottom-smaller ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-smaller !important;}}
-@mixin breakpoint-sm-a-border-bottom-smallest ( $v-border-bottom-smallest : $v-border-bottom-smallest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-smallest !important;}}
+@mixin breakpoint-sm-a-border-bottom-strong ( $v-border-bottom-strong : $v-border-bottom-strong ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-strong !important;}}
+@mixin breakpoint-sm-a-border-bottom-stronger ( $v-border-bottom-stronger : $v-border-bottom-stronger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-stronger !important;}}
+@mixin breakpoint-sm-a-border-bottom-strongest ( $v-border-bottom-strongest : $v-border-bottom-strongest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-strongest !important;}}
+@mixin breakpoint-sm-a-border-bottom-weak ( $v-border-bottom-weak : $v-border-bottom-weak ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-weak !important;}}
+@mixin breakpoint-sm-a-border-bottom-weaker ( $v-border-bottom-weaker : $v-border-bottom-weaker ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-weaker !important;}}
+@mixin breakpoint-sm-a-border-bottom-weakest ( $v-border-bottom-weakest : $v-border-bottom-weakest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-bottom: $v-border-bottom-weakest !important;}}
 @mixin breakpoint-sm-a-border-left ( $v-border-left : $v-border-left ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left !important;}}
-@mixin breakpoint-sm-a-border-left-large ( $v-border-left-large : $v-border-left-large ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-large !important;}}
-@mixin breakpoint-sm-a-border-left-larger ( $v-border-left-larger : $v-border-left-larger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-larger !important;}}
-@mixin breakpoint-sm-a-border-left-largest ( $v-border-left-largest : $v-border-left-largest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-largest !important;}}
-@mixin breakpoint-sm-a-border-left-small ( $v-border-left-small : $v-border-left-small ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-small !important;}}
-@mixin breakpoint-sm-a-border-left-smaller ( $v-border-left-smaller : $v-border-left-smaller ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-smaller !important;}}
-@mixin breakpoint-sm-a-border-left-smallest ( $v-border-left-smallest : $v-border-left-smallest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-smallest !important;}}
+@mixin breakpoint-sm-a-border-left-strong ( $v-border-left-strong : $v-border-left-strong ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-strong !important;}}
+@mixin breakpoint-sm-a-border-left-stronger ( $v-border-left-stronger : $v-border-left-stronger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-stronger !important;}}
+@mixin breakpoint-sm-a-border-left-strongest ( $v-border-left-strongest : $v-border-left-strongest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-strongest !important;}}
+@mixin breakpoint-sm-a-border-left-weak ( $v-border-left-weak : $v-border-left-weak ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-weak !important;}}
+@mixin breakpoint-sm-a-border-left-weaker ( $v-border-left-weaker : $v-border-left-weaker ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-weaker !important;}}
+@mixin breakpoint-sm-a-border-left-weakest ( $v-border-left-weakest : $v-border-left-weakest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-left-weakest !important;}}
 @mixin breakpoint-sm-a-border-right ( $v-border-right : $v-border-right ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right !important;}}
-@mixin breakpoint-sm-a-border-right-large ( $v-border-right-large : $v-border-right-large ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-large !important;}}
-@mixin breakpoint-sm-a-border-right-larger ( $v-border-right-larger : $v-border-right-larger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-larger !important;}}
-@mixin breakpoint-sm-a-border-right-largest ( $v-border-right-largest : $v-border-right-largest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-largest !important;}}
-@mixin breakpoint-sm-a-border-right-small ( $v-border-right-small : $v-border-right-small ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-small !important;}}
-@mixin breakpoint-sm-a-border-right-smaller ( $v-border-right-smaller : $v-border-right-smaller ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-smaller !important;}}
-@mixin breakpoint-sm-a-border-right-smallest ( $v-border-right-smallest : $v-border-right-smallest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-smallest !important;}}
+@mixin breakpoint-sm-a-border-right-strong ( $v-border-right-strong : $v-border-right-strong ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-strong !important;}}
+@mixin breakpoint-sm-a-border-right-stronger ( $v-border-right-stronger : $v-border-right-stronger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-stronger !important;}}
+@mixin breakpoint-sm-a-border-right-strongest ( $v-border-right-strongest : $v-border-right-strongest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-strongest !important;}}
+@mixin breakpoint-sm-a-border-right-weak ( $v-border-right-weak : $v-border-right-weak ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-weak !important;}}
+@mixin breakpoint-sm-a-border-right-weaker ( $v-border-right-weaker : $v-border-right-weaker ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-weaker !important;}}
+@mixin breakpoint-sm-a-border-right-weakest ( $v-border-right-weakest : $v-border-right-weakest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-right: $v-border-right-weakest !important;}}
+@mixin breakpoint-sm-a-border-v ( $v-border-v : $v-border-v ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-v !important; border-bottom: $v-border-v !important;}}
+@mixin breakpoint-sm-a-border-v-strong ( $v-border-v-strong : $v-border-v-strong ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-v-strong !important; border-bottom: $v-border-v-strong !important;}}
+@mixin breakpoint-sm-a-border-v-stronger ( $v-border-v-stronger : $v-border-v-stronger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-v-stronger !important; border-bottom: $v-border-v-stronger !important;}}
+@mixin breakpoint-sm-a-border-v-strongest ( $v-border-v-strongest : $v-border-v-strongest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-v-strongest !important; border-bottom: $v-border-v-strongest !important;}}
+@mixin breakpoint-sm-a-border-v-weak ( $v-border-v-weak : $v-border-v-weak ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-v-weak !important; border-bottom: $v-border-v-weak !important;}}
+@mixin breakpoint-sm-a-border-v-weaker ( $v-border-v-weaker : $v-border-v-weaker ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-v-weaker !important; border-bottom: $v-border-v-weaker !important;}}
+@mixin breakpoint-sm-a-border-v-weakest ( $v-border-v-weakest : $v-border-v-weakest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-top: $v-border-v-weakest !important; border-bottom: $v-border-v-weakest !important;}}
+@mixin breakpoint-sm-a-border-h ( $v-border-h : $v-border-h ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-h !important; border-right: $v-border-h !important;}}
+@mixin breakpoint-sm-a-border-h-strong ( $v-border-h-strong : $v-border-h-strong ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-h-strong !important; border-right: $v-border-h-strong !important;}}
+@mixin breakpoint-sm-a-border-h-stronger ( $v-border-h-stronger : $v-border-h-stronger ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-h-stronger !important; border-right: $v-border-h-stronger !important;}}
+@mixin breakpoint-sm-a-border-h-strongest ( $v-border-h-strongest : $v-border-h-strongest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-h-strongest !important; border-right: $v-border-h-strongest !important;}}
+@mixin breakpoint-sm-a-border-h-weak ( $v-border-h-weak : $v-border-h-weak ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-h-weak !important; border-right: $v-border-h-weak !important;}}
+@mixin breakpoint-sm-a-border-h-weaker ( $v-border-h-weaker : $v-border-h-weaker ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-h-weaker !important; border-right: $v-border-h-weaker !important;}}
+@mixin breakpoint-sm-a-border-h-weakest ( $v-border-h-weakest : $v-border-h-weakest ) { @media ( max-width: $v-breakpoint-small-min ) {  border-left: $v-border-h-weakest !important; border-right: $v-border-h-weakest !important;}}
+@mixin breakpoint-sm-a-shadow ( $v-shadow : $v-shadow ) { @media ( max-width: $v-breakpoint-small-min ) {  box-shadow : 0 0 4px 0 rgba( 0,0,0,.1) !important;}}
 @mixin breakpoint-sm-a-shadow-top-right ( $v-shadow-top-right : $v-shadow-top-right ) { @media ( max-width: $v-breakpoint-small-min ) {  box-shadow : 3px -3px 3px 0 rgba( 0,0,0,.1) !important;}}
 @mixin breakpoint-sm-a-shadow-top-left ( $v-shadow-top-left : $v-shadow-top-left ) { @media ( max-width: $v-breakpoint-small-min ) {  box-shadow : -3px -3px 3px 0 rgba( 0,0,0,.1) !important;}}
 @mixin breakpoint-sm-a-shadow-top-bottom ( $v-shadow-top-bottom : $v-shadow-top-bottom ) { @media ( max-width: $v-breakpoint-small-min ) {  box-shadow : 0 -3px 3px 0 rgba( 0,0,0,.1), 0 3px 3px 0 rgba( 0,0,0,.1) !important;}}
@@ -6205,12 +6406,25 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-sm-a-bottom-left (  ) { @media ( max-width: $v-breakpoint-small-min ) {  bottom: 0px !important; left: 0px !important;}}
 @mixin breakpoint-sm-a-left (  ) { @media ( max-width: $v-breakpoint-small-min ) {  left: 0px !important;}}
 @mixin breakpoint-sm-a-right (  ) { @media ( max-width: $v-breakpoint-small-min ) {  right: 0px !important;}}
+@mixin breakpoint-sm-a-top-right-fixed (  ) { @media ( max-width: $v-breakpoint-small-min ) {  position: fixed !important; top: 0px !important; right: 0px !important;}}
+@mixin breakpoint-sm-a-top-left-fixed (  ) { @media ( max-width: $v-breakpoint-small-min ) {  position: fixed !important;top: 0px !important; left: 0px !important;}}
+@mixin breakpoint-sm-a-top-fixed (  ) { @media ( max-width: $v-breakpoint-small-min ) {  position: fixed !important;top: 0px !important;}}
+@mixin breakpoint-sm-a-bottom-fixed (  ) { @media ( max-width: $v-breakpoint-small-min ) {  position: fixed !important;bottom: 0px !important;}}
+@mixin breakpoint-sm-a-bottom-right-fixed (  ) { @media ( max-width: $v-breakpoint-small-min ) {  position: fixed !important;bottom: 0px !important; right: 0px !important;}}
+@mixin breakpoint-sm-a-bottom-left-fixed (  ) { @media ( max-width: $v-breakpoint-small-min ) {  position: fixed !important;bottom: 0px !important; left: 0px !important;}}
+@mixin breakpoint-sm-a-left-fixed (  ) { @media ( max-width: $v-breakpoint-small-min ) {  position: fixed !important;left: 0px !important;}}
+@mixin breakpoint-sm-a-right-fixed (  ) { @media ( max-width: $v-breakpoint-small-min ) {  position: fixed !important;right: 0px !important;}}
 @mixin breakpoint-sm-a-height-auto (  ) { @media ( max-width: $v-breakpoint-small-min ) {  height : auto !important;}}
 @mixin breakpoint-sm-a-height-initial (  ) { @media ( max-width: $v-breakpoint-small-min ) {  height : initial !important;}}
 @mixin breakpoint-sm-a-height-inherit (  ) { @media ( max-width: $v-breakpoint-small-min ) {  height : inherit !important;}}
 @mixin breakpoint-sm-a-width-auto (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width : auto !important;}}
 @mixin breakpoint-sm-a-width-initial (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width : initial !important;}}
 @mixin breakpoint-sm-a-width-inherit (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width : inherit !important;}}
+@mixin breakpoint-sm-a-flex-justify-content-flex-start (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content : flex-start !important;}}
+@mixin breakpoint-sm-a-flex-justify-content-flex-end (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content : flex-end !important;}}
+@mixin breakpoint-sm-a-flex-justify-content-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content : center !important;}}
+@mixin breakpoint-sm-a-flex-justify-content-space-between (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content : space-between !important;}}
+@mixin breakpoint-sm-a-flex-justify-content-space-around (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content : space-around !important;}}
 @mixin breakpoint-sm-a-single-line (  ) { @media ( max-width: $v-breakpoint-small-min ) {  overflow: hidden !important;  white-space: nowrap !important; }}
 @mixin breakpoint-sm-a-flex-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content: center !important;  & > * { align-self: center !important; }  @include breakpoint-sm-a-display-flex; }}
 @mixin breakpoint-sm-a-flex-vcenter (  ) { @media ( max-width: $v-breakpoint-small-min ) {  & > * { align-self: center !important; }  @include breakpoint-sm-a-display-flex; }}
@@ -6226,6 +6440,39 @@ $v-zindex-footer: 3500;
 @mixin breakpoint-sm-a-fill-container (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width: 100% !important;  height: 100% !important; }}
 @mixin breakpoint-sm-a-mobile-reset (  ) { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-relative;  @include breakpoint-sm-a-width-100;  @include breakpoint-sm-a-height-auto; }}
 @mixin breakpoint-sm-a-mobile-nav-reset (  ) { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-fixed;  @include breakpoint-sm-a-top-left; }}
+
+
+$contentHeaderHeight: $v-row-3;
+
+
+.o-contentHeader {
+    /* -ctag-example: ...
+        { .o-contentHeader__title }
+        { .o-contentHeader__rightNav }*/
+    @include a-width-100;
+    @include a-height-row( $contentHeaderHeight );
+    @include a-background-grey-10;
+
+    &__title {
+        /* -ctag-example: ...Content Header Title*/
+        @include a-text-size-larger;
+        @include a-line-height-row( $contentHeaderHeight );
+        @include a-text-color-grey-6;
+        @include a-float-clear-left;
+
+        font-weight: 500;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+    }
+
+    &__rightNav {
+        /* -ctag-example: ...Right Nav*/
+        @include a-line-height-row( $contentHeaderHeight );
+        @include a-float-clear-right;
+    }
+
+}
+
 
 
 
@@ -6257,19 +6504,19 @@ h1,h2,h3,h4,h5,h6,p,code {
         @include a-text-size-larger-plus;
         @include a-padding-bottom-row-half;
         @include a-margin-bottom-row-half;
-        @include a-border-bottom-largest;
+        @include a-border-bottom-strongest;
     }
     h2 {
         @include a-text-size-larger;
         @include a-padding-bottom-row-quarter;
         @include a-margin-bottom-row-quarter;
-        @include a-border-bottom-larger;
+        @include a-border-bottom-stronger;
     }
     h3 {
         @include a-text-size-larger-minus;
         @include a-padding-bottom-row-quarter;
         @include a-margin-bottom-row-quarter;
-        @include a-border-bottom-large;
+        @include a-border-bottom-strong;
     }
     h4 {
         @include a-text-size-large-plus;
@@ -6324,8 +6571,293 @@ o-form {
 
 
 
+
+
+.o-list {
+    /* -ctag-example: ...
+        { .o-list__row }
+        { .o-list__row }
+        { .o-list__row }*/
+    @include a-width-100;
+
+
+    &__row {
+        /* -ctag-example: ...
+            { .o-list__row__leftCols }
+            { .o-list__row__rightCols }*/
+        @include a-width-100;
+
+        @include a-border-bottom-weak;
+        @include a-clear-fix;
+        @include a-height-row-2;
+        @include a-position-relative;
+
+        &__rightCols {
+            /* -ctag-example: ...
+                { .o-list__row__cell }
+                { .o-list__row__cell }*/
+            @include a-top-right;
+            @include a-flex-vcenter;
+            @include a-height-100;
+            @include a-background-grey-10;
+
+            @include breakpoint-sm-a-display-none;
+        }
+
+        &__leftCols {
+            /* -ctag-example: ...
+                { .o-list__row__cell }
+                { .o-list__row__cell }*/
+            @include a-width-100;
+            @include a-height-100;
+            @include a-top-left;
+            @include a-flex-vcenter;
+            @include a-background-grey-10;
+        }
+
+        &__cell {
+            /* -ctag-example: ...cell*/
+            @include a-width-col;
+            @include a-text-size;
+            @include a-text-color-grey-4;
+
+        }
+    }
+
+}
+
+
+
+
+.c-connections {
+    /* -ctag-example: ...COnnections*/
+    @include a-fill-container;
+    @include a-overflow-y;
+
+
+    &__headerContainer {
+        // @include a-block-center;
+        @include a-width-col-8;
+        @include a-margin-left-col-1;
+        @include a-margin-top-row;
+
+        @include breakpoint-sm-a-width-col-11;
+        @include breakpoint-sm-a-margin-top-row-2;
+        @include breakpoint-sm-a-margin-left-col-half;
+
+        .c-connections__newButton {
+            @include a-width-col-1-half;
+            @include a-height-100;
+            @include a-float-right;
+            @include a-interactive-hover;
+            @include a-flex-center;
+
+            @include breakpoint-sm-a-width-col-3;
+
+            &__incoming, &__outgoing {
+                background-position: center;
+                width: 36px; height: 20px;
+                @include a-float-left;
+                @include a-margin-h-row-quarter;
+            }
+
+            &__incoming {
+                background-image: url( "_assets/images/incoming_icon.png");
+            }
+
+            &__outgoing {
+                background-image: url( "_assets/images/outgoing_icon.png");
+            }
+        }
+
+    }
+
+    &__listContainer {
+        // @include a-block-center;
+        @include a-width-col-8;
+        @include a-margin-left-col-1;
+
+        @include breakpoint-sm-a-width-col-11;
+        @include breakpoint-sm-a-margin-left-col-half;
+    }
+
+    &__emptyContainer {
+        @include a-width-col-8;
+        @include a-margin-left-col-1;
+        @include a-margin-top-row;
+
+        @include breakpoint-sm-a-width-col-11;
+        @include breakpoint-sm-a-margin-left-col-half;
+    }
+
+
+    &__titleCell {
+        @include a-width-100;
+        @include a-text-size;
+        @include a-interactive;
+        @include a-hover-text-color-grey-0;
+    }
+
+    &__outgoingCell, &__incomingCell {
+        @include a-width-col-1-quarter;
+        @include a-text-size-smaller;
+        @include a-text-color-grey-7;
+
+        padding-left: 36px;
+        background-position: left center;
+    }
+
+        &__outgoingCell {
+            background-image: url( "_assets/images/outgoing_icon.png");
+        }
+
+        &__incomingCell {
+            background-image: url( "_assets/images/incoming_icon.png");
+        }
+
+    &__enpointCell {
+        @include a-width-col-3;
+        @include a-text-size-smaller;
+        @include a-single-line;
+    }
+
+    &__actionCell {
+        @include a-width-col-1;
+        @include a-text-align-right;
+        @include a-text-color-grey-5;
+        @include a-hover-text-color-grey-0;
+        @include a-interactive;
+    }
+
+}
+
+
+
+
+.c-connectionsEmptyState {
+
+    @include a-width-100;
+    @include a-height-row-7;
+    @include a-shadow;
+
+    background-image: url( "_assets/images/connections_watermark.png" );
+    background-position: $v-row-1 center;
+}
+
+
+
+
+.c-galleryNav {
+    /* -ctag-example: ...
+            { .c-galleryNav__title }
+            { .c-galleryNav__group }
+            { .c-galleryNav__group--open }
+            { .c-galleryNav__group };*/
+    /* -ctag-status: prod;*/
+    @include a-fill-container;
+    @include a-overflow-y;
+    @include a-background-secondaryNavBGColor;
+    @include a-text-color;
+
+    &__title {
+        /* -ctag-example: ...Gallery Filters;*/
+
+        @include a-width-100;
+        @include a-height-row-2;
+        @include a-padding-h-row-three-quarters;
+        @include a-text-size-larger-minus;
+        @include a-line-height-row-2;
+    }
+
+
+    &__group {
+        /* -ctag-example: ...
+                { .c-galleryNav__group__title }
+                { .c-galleryNav__group__item }
+                { .c-galleryNav__group__item }
+                <div class="
+                                c-galleryNav__group__item
+                                c-galleryNav__group__item--selected">Item Name</div>
+                { .c-galleryNav__group__item }
+                { .c-galleryNav__group__item };*/
+
+        @include a-width-100;
+
+        &__title {
+            /* -ctag-example: ...Group Title;*/
+
+            @include a-width-100;
+            @include a-single-line;
+            @include a-text-size-plus;
+            @include a-height-row-1-half;
+            @include a-line-height-row-1-half;
+            @include a-padding-h-row-three-quarters;
+            @include a-background-grey-9;
+            @include a-interactive;
+            @include a-border-bottom-weaker;
+            @include a-hover-background-grey-10;
+        }
+
+        &__item {
+            /* -ctag-example: ...Item Name;*/
+
+            @include a-width-100;
+            @include a-single-line;
+            @include a-text-size;
+            @include a-height-row-1-half;
+            @include a-line-height-row-1-half;
+            @include a-padding-h-row-1-quarter;
+            @include a-interactive;
+            @include a-hover-background-grey-10;
+            @include a-display-none;
+
+            &--selected {
+                /* some sequence issue here...this state reference doesn't work. */
+                /* -ctag-example: <div class="
+                                c-galleryNav__group__item
+                                c-galleryNav__group__item--selected">Item Name</div>;*/
+
+                @include a-background-redox-green-light;
+                @include a-text-color-grey-10;
+
+                @include a-hover-background-grey-10;
+                @include a-hover-text-color;
+            }
+        }
+
+        &--open {
+            /* -ctag-example: ...
+                    { .c-galleryNav__group__title }
+                    { .c-galleryNav__group__item }
+                    { .c-galleryNav__group__item }
+                    <div class="
+                                    c-galleryNav__group__item
+                                    c-galleryNav__group__item--selected">Item Name</div>
+                    { .c-galleryNav__group__item }
+                    { .c-galleryNav__group__item };*/
+
+            .c-galleryNav__group__item {
+                @include a-display-block;
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
 .c-profile {
-    @include a-padding-v-row-2;
+    @include a-padding-v-row-1;
+    @include a-height-100;
+    @include a-overflow-y;
+
+    &__mockup {
+        background-image: url("_assets/mockups/profile.png");
+        height: 1300px;
+    }
 
     &__document {
         @include a-width-col-7-half;
@@ -6347,51 +6879,205 @@ o-form {
 
 
 
+.c-mainNav--manyLinks {
+    /* ... */
+
+
+    .c-mainNav {
+
+
+    	&__link {
+
+            @include a-width-col-1-half;
+
+    		&__icon {
+
+    		}
+
+    		&--selected {
+
+    		}
+
+    		&--organization {
+
+    		}
+
+    		&--user {
+
+    		}
+
+    	}
+
+    }
+
+}
+
+
+
+
+.c-mainNav--open {
+    /* need comment for state to show up in style guide... */
+
+
+    .c-mainNav {
+
+    	&__logo {
+
+    	}
+
+    	&__links {
+
+            @include breakpoint-sm-a-height-auto;
+
+    	}
+
+    	&__hamburger {
+
+    	}
+
+    	&__link {
+
+            @include breakpoint-sm-a-flex-justify-content-flex-start;
+            @include breakpoint-sm-a-padding-left-col-half;
+
+    	}
+
+    }
+
+}
+
+
+
+
 
 .c-mainNav {
     /* -ctag-example: ...
             { .c-mainNav__logo }
-            { .c-mainNav__link }
-            { .c-mainNav__link };*/
+            { .c-mainNav__links }
+            { .c-mainNav__hamburger };*/
+    /* -ctag-status: prod;*/
+
     @include a-fill-container;
     @include a-background-redox-green;
 
-
     &__logo {
         /* -ctag-example: ...;*/
-        @include a-width-col-3;
-        @include a-height-100;
-        @include a-float-left;
 
-        border: 1px solid red;
+        @include a-width-100;
+        @include a-height-100;
+        @include a-float-clear-left;
+
+        background-image: url("_assets/images/redox_logo.png");
+        background-position: $v-col-quarter center;
     }
 
+    &__links {
+        /* -ctag-example: ...
+            { .c-mainNav__link }
+            { .c-mainNav__link }
+            { .c-mainNav__link };*/
+
+        @include a-position-absolute;
+        @include a-top-right;
+        @include a-height-100;
+        @include a-background-redox-green;
+        @include a-clear-fix;
+
+        @include breakpoint-sm-a-position-relative;
+        @include breakpoint-sm-a-float-clear-left;
+        @include breakpoint-sm-a-width-100;
+        @include breakpoint-sm-a-height-auto;
+        @include breakpoint-sm-a-shadow-bottom;
+        @include breakpoint-sm-a-height-0;
+        @include breakpoint-sm-a-overflow-hidden;
+    }
+
+    &__hamburger {
+        /* -ctag-example: ...;*/
+
+        @include a-position-absolute;
+        @include a-top-right;
+        @include a-height-100;
+        @include a-width-col-3;
+        @include a-interactive;
+        @include a-margin-right-col-half;
+        @include a-display-none;
+
+        background-image: url("_assets/images/hamburger.png");
+        background-position: center right;
+
+        @include breakpoint-sm-a-display-block;
+    }
+
+
     &__link {
-        /* -ctag-example: ...<div>Documents</div>;*/
+        /* -ctag-example: ...
+                { .c-mainNav__link__icon }
+                { .c-mainNav__link__label };*/
+
+
         @include a-width-col-2; // just a default
         @include a-height-100;
         @include a-float-right;
-        @include a-flex-vcenter; // requires nested div
+        @include a-flex-center; // requires nested div
         @include a-text-color-grey-10;
         @include a-interactive;
-        @include a-padding-left-col-half;
-        @include a-padding-right-col-quarter;
-        @include a-text-size;
-        @include a-hover-background-grey-10;
-        @include a-hover-text-color-grey-3;
+        //@include a-padding-left-col-half;
+        //@include a-padding-right-col-quarter;
+        @include a-text-align-center;
 
-        > * {
+        @include a-text-size;
+        // @include a-hover-background-redox-green-light;
+        @include a-hover-text-color-redox-green-lighter;
+
+        /*> * {
             @include a-width-100;
+            @include a-single-line;
+            @include a-padding-left-col-quarter;
+        }*/
+
+        &__icon {
+            /* -ctag-example: <div class="c-mainNav__link__icon ion-clipboard"></div>;*/
+
+            @include a-padding-h-row-half;
+        }
+
+        &__label {
+            /* -ctag-example: ...Nav Link;*/
+
             @include a-single-line;
         }
 
-        @include breakpoint-sm-a-text-size-minus;
+        &--selected {
+            @include a-background-redox-green-light;
+            @include a-text-color-redox-green-darkest;
+
+            @include a-hover-text-color-redox-green-darkest;
+        }
+
+        /*&--noIcon {
+            @include a-text-align-center;
+            @include a-padding-row-0;
+        }*/
+
+
+        &--organization {
+            @include a-width-col-3;
+        }
 
         &--user {
             @include a-text-align-center;
             @include a-text-size-minus;
             @include a-padding-row-quarter;
         }
+
+        @include breakpoint-sm-a-text-size-large;
+        @include breakpoint-sm-a-float-clear-left;
+        @include breakpoint-sm-a-height-row-2-half;
+        @include breakpoint-sm-a-width-100;
+        @include breakpoint-sm-a-text-align-left;
+        @include breakpoint-sm-a-padding-left-col-half;
+
     }
 
 }
@@ -6424,7 +7110,10 @@ $footerHeight : $v-row-1-half;
         { .c-redox__secondaryNavContainer }
         { .c-redox__contentContainer }
         ;*/
+    /* -ctag-status: prod;*/
+
     @include a-fill-container;
+
     @include breakpoint-sm-a-padding-top-row( $mainNavHeightBreakpointSmall );
     @include breakpoint-sm-a-height-auto;
 
@@ -6472,7 +7161,6 @@ $footerHeight : $v-row-1-half;
         @include a-background-grey-10;
         @include a-zindex-content;
         @include a-transition-width;
-
 
         @include breakpoint-sm-a-position-relative;
         @include breakpoint-sm-a-width-auto;
@@ -6526,9 +7214,14 @@ $footerHeight : $v-row-1-half;
 
 .c-secondaryNav {
     /* -ctag-example: ...
-        { .c-secondaryNav__list };*/
+        { .c-secondaryNav__list }
+        { .c-secondaryNav__tertiaryNavContainer };*/
+    /* -ctag-status: prod;*/
+
     @include a-fill-container;
     @include a-background-secondaryNavBGColor;
+
+    @include breakpoint-sm-a-display-none;
 
     &__list {
         /* -ctag-example: ...
@@ -6536,6 +7229,7 @@ $footerHeight : $v-row-1-half;
             { .c-secondaryNav__list__item }
             { .c-secondaryNav__list__item }
             { .c-secondaryNav__list__item }*/
+
         @include a-fill-container;
         @include a-overflow-y;
         @include a-transition-width;
@@ -6544,6 +7238,7 @@ $footerHeight : $v-row-1-half;
             /* -ctag-example: ...
                 { .c-secondaryNav__list__item__icon }
                 { .c-secondaryNav__list__item__label };*/
+
             @include a-width-100;
             @include a-height-row-3;
             @include a-flex-vcenter;
@@ -6552,7 +7247,8 @@ $footerHeight : $v-row-1-half;
             @include a-transition-width;
 
             &__icon {
-                /* -ctag-example: <div class="c-secondaryNav__item__icon ion-soup-can"></div>;*/
+                /* -ctag-example: <div class="c-secondaryNav__list__item__icon ion-soup-can"></div>;*/
+
                 @include a-width-col-half;
                 @include a-text-align-center;
                 @include a-transition-width;
@@ -6562,6 +7258,7 @@ $footerHeight : $v-row-1-half;
 
             &__label {
                 /* -ctag-example: ...Secondary Nav;*/
+
                 @include a-text-color;
                 @include a-width-minus-col-three-quarters;
                 @include a-text-size;
@@ -6576,6 +7273,9 @@ $footerHeight : $v-row-1-half;
     }
 
     &__tertiaryNavContainer {
+        /* -ctag-example: ...
+                { .c-tertiaryNav }*/
+
         @include a-height-100;
         @include a-width-0;
         @include a-position-absolute;
@@ -6595,6 +7295,8 @@ $footerHeight : $v-row-1-half;
         { .c-tertiaryNav__item }
         { .c-tertiaryNav__item }
         { .c-tertiaryNav__item };*/
+    /* -ctag-status: prod;*/
+
     @include a-fill-container;
     @include a-background-grey-10;
     @include a-fill-container;
@@ -6603,8 +7305,8 @@ $footerHeight : $v-row-1-half;
 
     &__item {
         /* -ctag-example: ...
-            { .c-tertiaryNav__list__item__icon }
-            { .c-tertiaryNav__list__item__label };*/
+            { .c-tertiaryNav__item__label };*/
+
         @include a-width-100;
         @include a-height-row-2;
         @include a-flex-vcenter;
@@ -6614,6 +7316,7 @@ $footerHeight : $v-row-1-half;
 
         &__label {
             /* -ctag-example: ...tertiary Nav;*/
+
             @include a-text-color;
             @include a-width-100;
             @include a-text-size;
@@ -6628,15 +7331,5 @@ $footerHeight : $v-row-1-half;
             @include a-background-grey-9;
         }
     }
-
-}
-
-
-
-.c-tertiaryNav {
-    /* -ctag-example: ...tert;*/
-    @include a-fill-container;
-    @include a-background-grey-10;
-    @include a-shadow-right;
 
 }

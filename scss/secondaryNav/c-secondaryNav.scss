@@ -1,0 +1,77 @@
+
+
+
+.c-secondaryNav {
+    /* -ctag-example: ...
+        { .c-secondaryNav__list }
+        { .c-secondaryNav__tertiaryNavContainer };*/
+    /* -ctag-status: prod;*/
+
+    @include a-fill-container;
+    @include a-background-secondaryNavBGColor;
+
+    @include breakpoint-sm-a-display-none;
+
+    &__list {
+        /* -ctag-example: ...
+            { .c-secondaryNav__list__item }
+            { .c-secondaryNav__list__item }
+            { .c-secondaryNav__list__item }
+            { .c-secondaryNav__list__item }*/
+
+        @include a-fill-container;
+        @include a-overflow-y;
+        @include a-transition-width;
+
+        &__item {
+            /* -ctag-example: ...
+                { .c-secondaryNav__list__item__icon }
+                { .c-secondaryNav__list__item__label };*/
+
+            @include a-width-100;
+            @include a-height-row-3;
+            @include a-flex-vcenter;
+            @include a-interactive;
+            @include a-hover-background-grey-10;
+            @include a-transition-width;
+
+            &__icon {
+                /* -ctag-example: <div class="c-secondaryNav__list__item__icon ion-soup-can"></div>;*/
+
+                @include a-width-col-half;
+                @include a-text-align-center;
+                @include a-transition-width;
+
+                @include breakpoint-sm-a-width-col-1-half;
+            }
+
+            &__label {
+                /* -ctag-example: ...Secondary Nav;*/
+
+                @include a-text-color;
+                @include a-width-minus-col-three-quarters;
+                @include a-text-size;
+                @include a-single-line;
+                @include a-transition-width;
+            }
+
+            &--selected {
+                @include a-background-grey-10;
+            }
+        }
+    }
+
+    &__tertiaryNavContainer {
+        /* -ctag-example: ...
+                { .c-tertiaryNav }*/
+
+        @include a-height-100;
+        @include a-width-0;
+        @include a-position-absolute;
+        @include a-top-right;
+        @include a-transition-width;
+        @include a-overflow-hidden;
+
+        @include a-shadow-right-left;
+    }
+}

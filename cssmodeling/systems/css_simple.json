@@ -312,7 +312,7 @@
 					"name":"position-placements",
                     "group":"simple",
                     "sub_group":"positioning",
-					"example":"<div ... style='position:absolute; width: 100%; height: 100%; background-color:#fff;'></div>",
+					"example":"<div ... style='position:absolute; width: 100px; height: 100px; background-color:#fff;'></div>",
 					"selector":".a@var_name",
 					"declaration_iteration_values":[
 						"top: @var_value; right: @var_value;",
@@ -323,6 +323,23 @@
 						"bottom: @var_value; left: @var_value;",
 						"left: @var_value;",
 						"right: @var_value;"
+					]
+				},
+                {
+					"name":"position-placements-fixed",
+                    "group":"simple",
+                    "sub_group":"positioning",
+					"example":"<div ... style='position:absolute; width: 100px; height: 100px; background-color:#fff;'></div>",
+					"selector":".a@var_name-fixed",
+					"declaration_iteration_values":[
+						"position: fixed; top: @var_value; right: @var_value;",
+						"position: fixed;top: @var_value; left: @var_value;",
+						"position: fixed;top: @var_value;",
+						"position: fixed;bottom: @var_value;",
+						"position: fixed;bottom: @var_value; right: @var_value;",
+						"position: fixed;bottom: @var_value; left: @var_value;",
+						"position: fixed;left: @var_value;",
+						"position: fixed;right: @var_value;"
 					]
 				}
 			]
@@ -356,6 +373,28 @@
 					"declaration_value":"width : @var_value;"
 				}
 			]
+		},
+
+        {
+			"name":"flex-justify-content",
+            "group":"simple",
+			"base":"",
+            "shortcut":"<em>@base</em>-[ flex-start, flex-end, center, space-between, space-around ]",
+    		"scheme":["@base-flex-start","@base-flex-end","@base-center","@base-space-between","@base-space-around"],
+			"values":[
+				"flex-start","flex-end","center","space-between","space-around"
+			],
+            "ignore_variable":true,
+			"atoms":[
+				{
+					"name":"flex-justify-content",
+                    "group":"simple",
+                    "sub_group":"positioning",
+					"example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+					"selector":".a-flex-justify-content@var_name",
+					"declaration_value":"justify-content : @var_value;"
+				}
+			]
 		}
 
 
@@ -374,7 +413,7 @@
 			]
 		},
 
-		{
+        {
 			"name":"flex-center",
             "group":"simple",
             "sub_group":"positioning",

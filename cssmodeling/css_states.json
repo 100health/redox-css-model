@@ -10,7 +10,7 @@
 			"name":"breakpoint-sm",
 			"wrapper":["@media ( max-width: _@_v-breakpoint-small-min ) {","}"],
 			"important":true,
-			"mixins_only":true
+			"mixins_only":false
 		}
     },
 	"states_cached":{

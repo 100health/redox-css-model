@@ -1,0 +1,18 @@
+
+
+
+.c-profile {
+    @include a-padding-v-row-1;
+    @include a-height-100;
+    @include a-overflow-y;
+
+    &__mockup {
+        background-image: url("_assets/mockups/profile.png");
+        height: 1300px;
+    }
+
+    &__document {
+        @include a-width-col-7-half;
+        @include a-block-center;
+    }
+}

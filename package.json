@@ -12,6 +12,7 @@
     "grunt-contrib-watch":  "0.6.1",
     "grunt-contrib-less": "1.0.0",
     "grunt-contrib-concat" : "0.5.1",
+    "grunt-contrib-copy": "~0.8",
     "grunt-react" : "~0.12",
     "node-sass" : "~3.4",
     "grunt-sass" : "~1.1",
@@ -21,6 +22,7 @@
     "react" : "~0.13",
 
     "routestate":"~0.3",
-    "protodata":"~0.1"
+    "protodata":"~0.1",
+    "marked": "~0.3"
   }
 }

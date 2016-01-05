@@ -1,13 +1,191 @@
 
 
 
+
+
+var Connections = React.createClass({displayName: "Connections",
+
+    /*componentWillMount: function() {
+        var me = this;
+        RouteState.addDiffListeners(
+    		["org_page"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "Connections"
+    	);
+    },
+
+    componentWillUnmount: function(){
+        RouteState.removeDiffListenersViaClusterId( "Connections" );
+    },*/
+
+    getConnectionList: function( index ){
+
+        var content_row =
+            React.createElement("div", {className: "o-list__row__rightCols"}, 
+                React.createElement("div", {className: "o-list__row__cell" + ' ' +
+                    "c-connections__outgoingCell"}, 
+                    "outgoing"
+                ), 
+                React.createElement("div", {className: "o-list__row__cell" + ' ' +
+                    "c-connections__enpointCell"}
+                ), 
+                React.createElement("div", {className: "o-list__row__cell" + ' ' +
+                    "c-connections__actionCell"}, 
+                    "Key/Secret"
+                )
+            );
+
+        if ( Math.random() > .7 ) {
+            content_row =
+                React.createElement("div", {className: "o-list__row__rightCols"}, 
+                    React.createElement("div", {className: "o-list__row__cell" + ' ' +
+                        "c-connections__incomingCell"}, 
+                        "incoming"
+                    ), 
+                    React.createElement("div", {className: "o-list__row__cell" + ' ' +
+                        "c-connections__enpointCell"}, 
+                        "http://www.yoururl.com/path/folder/.../folder/edit.php"
+                    ), 
+                    React.createElement("div", {className: "o-list__row__cell" + ' ' +
+                        "c-connections__actionCell"}, 
+                        "Verify"
+                    )
+                );
+        }
+
+        return React.createElement("div", {className: "o-list__row", key:  "service_" + index}, 
+
+            React.createElement("div", {className: "o-list__row__leftCols" + ' ' +
+                "a-hover-background-grey-9" + ' ' +
+                "a-interactive"}, 
+                React.createElement("div", {className: "o-list__row__cell" + ' ' +
+                    "c-connections__titleCell"}, 
+                    "Title of the service"
+                ), 
+                React.createElement("div", {className: 
+                    "o-list__row__cell" + ' ' +
+                    "a-width-col-3 a-text-align-right"}, 
+                    "icon"
+                )
+            ), 
+
+             content_row 
+
+        )
+    },
+
+    render: function() {
+
+        var connections_html = [];
+        for ( var i=0; i<5; i++ ) {
+            connections_html.push( this.getConnectionList( i ) );
+        }
+
+        return  React.createElement("div", {className: "c-connections"}, 
+                    React.createElement("div", {className: "c-connections__headerContainer"}, 
+                        React.createElement("div", {className: "o-contentHeader"}, 
+                            React.createElement("div", {className: "o-contentHeader__title"}, 
+                                "Connections"
+                            ), 
+                            React.createElement("div", {className: "o-contentHeader__rightNav"}, 
+                                React.createElement("div", {className: "c-connections__newButton"}, 
+                                    React.createElement("div", null, "+"), 
+                                    React.createElement("div", {className: "c-connections__newButton__outgoing"}), 
+                                    React.createElement("div", null, "outgoing")
+                                ), 
+                                React.createElement("div", {className: "c-connections__newButton"}, 
+                                    React.createElement("div", null, "+"), 
+                                    React.createElement("div", {className: "c-connections__newButton__incoming"}), 
+                                    React.createElement("div", null, "incoming")
+                                )
+                            )
+                        )
+                    ), 
+                    React.createElement("div", {className: "c-connections__listContainer"}, 
+                        React.createElement("div", {className: "o-list"}, 
+                             connections_html 
+                        )
+                    ), 
+                    React.createElement("div", {className: "c-connections__emptyContainer"}, 
+                        React.createElement("div", {className: "c-connectionsEmptyState"}
+
+                        )
+                    )
+                );
+    }
+
+});
+
+
+
+
+
+
+var GalleryNav = React.createClass({displayName: "GalleryNav",
+
+
+    /*componentWillMount: function() {
+        var me = this;
+        RouteState.addDiffListeners(
+    		["org_page"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "Profile"
+    	);
+    },
+
+    componentWillUnmount: function(){
+        RouteState.removeDiffListenersViaClusterId( "Profile" );
+    },*/
+
+    render: function() {
+
+        return  React.createElement("div", {className: "c-galleryNav"}, 
+                  React.createElement("div", {className: "c-galleryNav__title"}, "Gallery Filters"), 
+                  React.createElement("div", {className: "c-galleryNav__group"}, 
+                    React.createElement("div", {className: "c-galleryNav__group__title"}, "Group Title"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: " c-galleryNav__group__item c-galleryNav__group__item--selected"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name")
+                  ), 
+                  React.createElement("div", {className: "c-galleryNav__group--open"}, 
+                    React.createElement("div", {className: "c-galleryNav__group__title"}, "Group Title"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: " c-galleryNav__group__item c-galleryNav__group__item--selected"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name")
+                  ), 
+                  React.createElement("div", {className: "c-galleryNav__group"}, 
+                    React.createElement("div", {className: "c-galleryNav__group__title"}, "Group Title"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: " c-galleryNav__group__item c-galleryNav__group__item--selected"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name"), 
+                    React.createElement("div", {className: "c-galleryNav__group__item"}, "Item Name")
+                  )
+                );
+    }
+
+});
+
+
+
+
 var Profile = React.createClass({displayName: "Profile",
 
 
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["page"],
+    		["org_page"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -20,32 +198,10 @@ var Profile = React.createClass({displayName: "Profile",
         RouteState.removeDiffListenersViaClusterId( "Profile" );
     },
 
-
     render: function() {
 
         return  React.createElement("div", {className: "c-profile"}, 
-                    React.createElement("div", {className: 
-                        "c-profile__document" + ' ' +
-                        "o-document"}, 
-                        React.createElement("h1", null, "Overview"), 
-                        React.createElement("div", {className: 
-                                "o-document__column" + ' ' +
-                                "a-width-col-1"}, 
-
-                            React.createElement("p", null, "Image")
-                        ), 
-                        React.createElement("div", {className: 
-                                "o-document__column" + ' ' +
-                                "a-width-col-3"}, 
-                            React.createElement("h2", null, "Title"), 
-                            React.createElement("p", null, "Here is content")
-                        ), 
-                        React.createElement("div", {className: 
-                                "o-document__column" + ' ' +
-                                "a-width-col-2"}, 
-                            React.createElement("p", null, "Here is content")
-                        )
-                    )
+                    React.createElement("div", {className: "c-profile__mockup"})
                 );
     }
 
@@ -61,7 +217,7 @@ var Footer = React.createClass({displayName: "Footer",
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["page","tertiary_page"],
+    		["org_page","tertiary_page"],
     		function ( route , prev_route ) {
                 // update
                 // me.forceUpdate();
@@ -116,23 +272,75 @@ var MainNav = React.createClass({displayName: "MainNav",
         );
     },
 
+    openOrgPage: function ( page ) {
+        RS.merge({
+            page:page,
+            nav:""
+        });
+    },
+
+    toggleNavOpen: function () {
+        RS.toggle(
+            {nav:"open"},
+            {nav:""}
+        );
+    },
+
     render: function() {
-        return  React.createElement("div", {className: "c-mainNav"}, 
-                    React.createElement("div", {className: "c-mainNav__logo"}), 
+
+        // var nav_links = RedoxModel.get( RedoxModel._root.app.main_pages );
+        var nav_links = RedoxModel.get( RedoxModel._root.app.orig_main_pages );
+
+        var nav_items = [],icon_html;
+        for ( var p=nav_links.length-1; p>=0; p-- ) {
+            page = nav_links[p];
+
+            icon_html = "";
+            if ( page.icon ) {
+                icon_html =
                     React.createElement("div", {className: 
-                            "c-mainNav__link" + ' ' +
-                            "c-mainNav__link--user"}, 
-                        React.createElement("div", null, "user@username.com")
-                    ), 
-                    React.createElement("div", {className: "c-mainNav__link", 
-                        onClick:  this.toggleTertiary}, 
-                        React.createElement("div", null, "Documentation")
-                    ), 
-                    React.createElement("div", {className: 
-                            "c-mainNav__link" + ' ' +
-                            "a-width-col-3"}, 
-                        React.createElement("div", null, "Organization Name That is really long")
+                            "c-mainNav__link__icon " + page.icon
+                        }
+                    );
+            }
+
+            nav_items.push(
+                React.createElement("div", {className: 
+                        "c-mainNav__link " +
+                        (   ( RS.route.page == page.link ||
+                                (
+                                    !RS.route.page
+                                    && !RS.route.page != ""
+                                    && page.link == nav_links[0].link
+                                )
+                            )
+                            ? "c-mainNav__link--selected " : ""), 
+                    
+                    onClick:  this.openOrgPage.bind( this , page.link) }, 
+                      icon_html, 
+                    React.createElement("div", {className: "c-mainNav__link_label"}, 
+                         page.name
                     )
+                )
+            );
+        }
+
+
+        return  React.createElement("div", {className: 
+                        'c-mainNav c-mainNav--manyLinks ' +
+                        ( ( RS.route.nav == "open")
+                                ? "c-mainNav--open" : "")
+                    }, 
+
+                    React.createElement("div", {className: "c-mainNav__logo"}), 
+
+                    React.createElement("div", {className: "c-mainNav__links"}, 
+                         nav_items 
+                    ), 
+
+                    React.createElement("div", {className: "c-mainNav__hamburger", 
+                        onClick:  this.toggleNavOpen})
+
                 );
     }
 
@@ -146,7 +354,7 @@ var Redox = React.createClass({displayName: "Redox",
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["page","tertiary"],
+    		["page","org_page","tertiary","nav"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -176,16 +384,44 @@ var Redox = React.createClass({displayName: "Redox",
     },
 
     render: function() {
+
+        var page;
+
+        switch ( RS.route.org_page ) {
+            case "connections" :
+                page = React.createElement(Connections, null);
+                break;
+            case "profile" :
+                page = React.createElement(Profile, null);
+                break;
+            default :
+                page = React.createElement(Profile, null);
+                break;
+        }
+
+        var secondaryNav = React.createElement(SecondaryNav, null);
+
+        switch ( RS.route.page ) {
+            case "gallery" :
+                secondaryNav = React.createElement(GalleryNav, null)
+                break;
+        }
+
+
         return  React.createElement("div", {className: "c-redox"}, 
-                    React.createElement("div", {className: "c-redox__mainNavContainer"}, 
+                    React.createElement("div", {className: 
+                            'c-redox__mainNavContainer ' +
+                            ( ( RS.route.nav == "open")
+                                    ? "c-redox__mainNavContainer--open" : "")
+                        }, 
                         React.createElement(MainNav, null)
                     ), 
                     React.createElement("div", {className: 
                             "c-redox__secondaryNavContainer"}, 
-                        React.createElement(SecondaryNav, null)
+                         secondaryNav 
                     ), 
                     React.createElement("div", {className: "c-redox__contentContainer"}, 
-                        React.createElement(Profile, null)
+                         page 
                     ), 
                     React.createElement("div", {className: "c-redox__footerContainer"}, 
                         React.createElement(Footer, null)
@@ -204,11 +440,10 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["page","tertiary_page"],
+    		["org_page","tertiary_page"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
-                me.update();
     		},
             "SecondaryNav"
     	);
@@ -219,13 +454,12 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
     },
 
     componentDidMount: function(){
-        this.update();
+
     },
 
-
-    changePage: function ( page ) {
+    changeOrgPage: function ( org_page ) {
         RS.merge({
-            page:page
+            org_page:org_page
         })
     },
 
@@ -235,46 +469,32 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
         })
     },
 
-    update: function ( page ) {
-        $(".c-secondaryNav__list__item").removeClass(
-                    "c-secondaryNav__list__item--selected" );
-        $(".page_" + RS.route.page ).addClass(
-                    "c-secondaryNav__list__item--selected" );
-
-        $(".c-tertiaryNav__item").removeClass(
-                    "c-tertiaryNav__item--selected" );
-        $(".tertiaryPage_" + RS.route.tertiary_page ).addClass(
-                    "c-tertiaryNav__item--selected" );
-    },
 
     render: function() {
 
         var nav_items = [],page;
-        var pages = [
-            {name:"Profile",icon:"ion-ios-browsers"},
-            {name:"Connections",icon:"ion-ios-browsers"},
-            {name:"Messages",icon:"ion-ios-browsers"},
-            {name:"Transmissions",icon:"ion-ios-browsers"},
-            {name:"Errors",icon:"ion-ios-browsers"},
-            {name:"Users",icon:"ion-ios-browsers"},
-            {name:"Transmissions",icon:"ion-ios-browsers"},
-            {name:"Errors",icon:"ion-ios-browsers"},
-            {name:"Users",icon:"ion-ios-browsers"},
-            {name:"Transmissions",icon:"ion-ios-browsers"},
-            {name:"Errors",icon:"ion-ios-browsers"},
-            {name:"Users",icon:"ion-ios-browsers"},
-            {name:"Errors",icon:"ion-ios-browsers"},
-            {name:"Users",icon:"ion-ios-browsers"},
-            {name:"Transmissions",icon:"ion-ios-browsers"},
-            {name:"Errors",icon:"ion-ios-browsers"},
-            {name:"Users",icon:"ion-ios-browsers"}
-        ];
+
+        var pages = RedoxModel.get( RedoxModel._root.app.organization_pages );
 
         for ( var p=0; p<pages.length; p++ ) {
             page = pages[p];
+
             nav_items.push(
-                React.createElement("div", {className:  "c-secondaryNav__list__item page_" + p, 
-                    onClick:  this.changePage.bind( this , p) }, 
+                React.createElement("div", {className: 
+                        "c-secondaryNav__list__item " +
+                        (
+                            (
+                                RS.route.org_page == page.link ||
+                                (
+                                    !RS.route.org_page 
+                                    && !RS.route.org_page != ""
+                                    && page.link == "profile"
+                                )
+                            )
+                                ?  "c-secondaryNav__list__item--selected" : ""
+                        ), 
+                    
+                    onClick:  this.changeOrgPage.bind( this , page.link) }, 
                     React.createElement("div", {className: 
                         'c-secondaryNav__list__item__icon ' + page.icon}
                     ), 
@@ -290,12 +510,15 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
             page = pages[p];
             extra_class = "";
             if ( p < 6 && p > 2 ) {
-                extra_class = "c-tertiaryNav__item--indented";
+                extra_class = "c-tertiaryNav__item--indented ";
             }
             tertiary_nav_items.push(
                 React.createElement("div", {className: 
-                        "c-tertiaryNav__item tertiaryPage_" + p
-                        + " " + extra_class, 
+                        "c-tertiaryNav__item " +
+                        extra_class +
+                        ( ( RS.route.tertiary_page == page.link )
+                            ?  "c-tertiaryNav__item--selected" : ""), 
+                    
                     onClick:  this.changeTertiaryPage.bind( this , p) }, 
                     React.createElement("div", {className: "c-tertiaryNav__item__label"}, 
                          page.name
@@ -303,7 +526,6 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
                 )
             );
         }
-
 
         return  React.createElement("div", {className: "c-secondaryNav"}, 
                     React.createElement("div", {className: "c-secondaryNav__list", 
@@ -315,82 +537,6 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
                              tertiary_nav_items 
                         )
                     )
-                );
-    }
-
-});
-
-
-
-
-
-
-
-var TertiaryNav = React.createClass({displayName: "TertiaryNav",
-
-
-    componentWillMount: function() {
-        var me = this;
-        RouteState.addDiffListeners(
-    		["page"],
-    		function ( route , prev_route ) {
-                // update
-                me.forceUpdate();
-
-                me.update();
-    		},
-            "TertiaryNav"
-    	);
-    },
-
-    componentWillUnmount: function(){
-        RouteState.removeDiffListenersViaClusterId( "TertiaryNav" );
-    },
-
-    componentDidMount: function(){
-        this.update();
-    },
-
-
-    changePage: function ( page ) {
-        RS.merge({
-            page:page
-        })
-    },
-
-    update: function ( page ) {
-        $(".c-tertiaryNav__item").removeClass("c-tertiaryNav__item--selected");
-        $(".page_" + RS.route.page ).addClass("c-tertiaryNav__item--selected");
-    },
-
-    render: function() {
-
-        var nav_items = [],page;
-        var pages = [
-            {name:"Profile",icon:"ion-ios-browsers"},
-            {name:"Connections",icon:"ion-ios-browsers"},
-            {name:"Messages",icon:"ion-ios-browsers"},
-            {name:"Transmissions",icon:"ion-ios-browsers"},
-            {name:"Errors",icon:"ion-ios-browsers"},
-            {name:"Users",icon:"ion-ios-browsers"},
-        ];
-
-        for ( var p=0; p<pages.length; p++ ) {
-            page = pages[p];
-            nav_items.push(
-                React.createElement("div", {className:  "c-tertiaryNav__item page_" + page.name, 
-                    onClick:  this.changePage.bind( this , page.name) }, 
-                    React.createElement("div", {className:  'c-tertiaryNav__item__icon ' + page.icon}), 
-                    React.createElement("div", null,  page.name)
-                )
-            );
-        }
-
-        var tertiary_nav = React.createElement("div", {className: "c-tertiaryNav__tertiaryNav"}, "hi")
-
-        return  React.createElement("div", {className: "c-tertiaryNav"}, 
-                     nav_items, 
-                     tertiary_nav 
                 );
     }
 

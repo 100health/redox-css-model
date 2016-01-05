@@ -1,0 +1,84 @@
+
+
+$mainNavHeight : $v-row-3;
+$mainNavHeightBreakpointSmall : $v-row-2;
+
+$footerHeight : $v-row-1-half;
+
+
+.c-redox {
+    /* -ctag-example: ...
+        { .c-redox__mainNavContainer }
+        { .c-redox__secondaryNavContainer }
+        { .c-redox__contentContainer }
+        ;*/
+    /* -ctag-status: prod;*/
+
+    @include a-fill-container;
+
+    @include breakpoint-sm-a-padding-top-row( $mainNavHeightBreakpointSmall );
+    @include breakpoint-sm-a-height-auto;
+
+    &__mainNavContainer {
+        /* -ctag-example: ...
+            { .c-mainNav };*/
+        @include a-width-100;
+        @include a-height-row( $mainNavHeight );
+        @include a-zindex-mainNav;
+
+        @include breakpoint-sm-a-position-fixed;
+        @include breakpoint-sm-a-top-left;
+        @include breakpoint-sm-a-height-row(
+                            $mainNavHeightBreakpointSmall );
+    }
+
+    &__secondaryNavContainer {
+        /* -ctag-example: ...
+            { .c-secondaryNav };*/
+        // @include a-height-minus-row( $mainNavHeight );
+        @include a-height-minus-row( $mainNavHeight + $footerHeight );
+        @include a-top-row( $mainNavHeight );
+        @include a-width-col-2;
+        @include a-position-absolute;
+        @include a-left;
+        @include a-zindex-secondaryNav;
+        @include a-transition-width;
+
+        @include breakpoint-sm-a-width-100;
+        @include breakpoint-sm-a-height-auto;
+        @include breakpoint-sm-a-top-row( $mainNavHeightBreakpointSmall );
+
+        &--small {
+            @include a-width-col-half;
+        }
+    }
+
+    &__contentContainer {
+        /* -ctag-example: ...;*/
+        @include a-width-col-10;
+        @include a-height-minus-row( $mainNavHeight + $footerHeight );
+        @include a-position-absolute;
+        @include a-right;
+        @include a-bottom-row( $footerHeight );
+        @include a-background-grey-10;
+        @include a-zindex-content;
+        @include a-transition-width;
+
+        @include breakpoint-sm-a-position-relative;
+        @include breakpoint-sm-a-width-auto;
+        @include breakpoint-sm-a-height-auto;
+    }
+
+    &__footerContainer {
+        /* -ctag-example: ...
+            { .c-footer };*/
+        @include a-width-100;
+        @include a-height-row( $footerHeight );
+        @include a-position-absolute;
+        @include a-bottom-left;
+        @include a-zindex-footer;
+
+        @include breakpoint-sm-a-position-static;
+    }
+
+}

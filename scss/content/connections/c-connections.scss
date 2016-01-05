@@ -1,0 +1,104 @@
+
+
+
+.c-connections {
+    /* -ctag-example: ...COnnections*/
+    @include a-fill-container;
+    @include a-overflow-y;
+
+
+    &__headerContainer {
+        // @include a-block-center;
+        @include a-width-col-8;
+        @include a-margin-left-col-1;
+        @include a-margin-top-row;
+
+        @include breakpoint-sm-a-width-col-11;
+        @include breakpoint-sm-a-margin-top-row-2;
+        @include breakpoint-sm-a-margin-left-col-half;
+
+        .c-connections__newButton {
+            @include a-width-col-1-half;
+            @include a-height-100;
+            @include a-float-right;
+            @include a-interactive-hover;
+            @include a-flex-center;
+
+            @include breakpoint-sm-a-width-col-3;
+
+            &__incoming, &__outgoing {
+                background-position: center;
+                width: 36px; height: 20px;
+                @include a-float-left;
+                @include a-margin-h-row-quarter;
+            }
+
+            &__incoming {
+                background-image: url( "_assets/images/incoming_icon.png");
+            }
+
+            &__outgoing {
+                background-image: url( "_assets/images/outgoing_icon.png");
+            }
+        }
+
+    }
+
+    &__listContainer {
+        // @include a-block-center;
+        @include a-width-col-8;
+        @include a-margin-left-col-1;
+
+        @include breakpoint-sm-a-width-col-11;
+        @include breakpoint-sm-a-margin-left-col-half;
+    }
+
+    &__emptyContainer {
+        @include a-width-col-8;
+        @include a-margin-left-col-1;
+        @include a-margin-top-row;
+
+        @include breakpoint-sm-a-width-col-11;
+        @include breakpoint-sm-a-margin-left-col-half;
+    }
+
+
+    &__titleCell {
+        @include a-width-100;
+        @include a-text-size;
+        @include a-interactive;
+        @include a-hover-text-color-grey-0;
+    }
+
+    &__outgoingCell, &__incomingCell {
+        @include a-width-col-1-quarter;
+        @include a-text-size-smaller;
+        @include a-text-color-grey-7;
+
+        padding-left: 36px;
+        background-position: left center;
+    }
+
+        &__outgoingCell {
+            background-image: url( "_assets/images/outgoing_icon.png");
+        }
+
+        &__incomingCell {
+            background-image: url( "_assets/images/incoming_icon.png");
+        }
+
+    &__enpointCell {
+        @include a-width-col-3;
+        @include a-text-size-smaller;
+        @include a-single-line;
+    }
+
+    &__actionCell {
+        @include a-width-col-1;
+        @include a-text-align-right;
+        @include a-text-color-grey-5;
+        @include a-hover-text-color-grey-0;
+        @include a-interactive;
+    }
+
+}

@@ -1,0 +1,35 @@
+
+
+
+.c-mainNav--manyLinks {
+    /* ... */
+
+
+    .c-mainNav {
+
+
+    	&__link {
+
+            @include a-width-col-1-half;
+
+    		&__icon {
+
+    		}
+
+    		&--selected {
+
+    		}
+
+    		&--organization {
+
+    		}
+
+    		&--user {
+
+    		}
+
+    	}
+
+    }
+
+}

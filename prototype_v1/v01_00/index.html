@@ -17,9 +17,9 @@
 			$(window).ready(function () {
 
 				$.ajax( "../../dist/protodata/redox_data.json" ).done(
-					function( trimble_data ) {
+					function( redox_data ) {
 
-						RedoxModel = trimble_data;
+						RedoxModel = redox_data;
 						console.log( RedoxModel );
 
 						RedoxModel.get = function ( obj_info ) {

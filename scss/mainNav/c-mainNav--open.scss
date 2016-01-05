@@ -1,0 +1,33 @@
+
+
+
+.c-mainNav--open {
+    /* need comment for state to show up in style guide... */
+
+
+    .c-mainNav {
+
+    	&__logo {
+
+    	}
+
+    	&__links {
+
+            @include breakpoint-sm-a-height-auto;
+
+    	}
+
+    	&__hamburger {
+
+    	}
+
+    	&__link {
+
+            @include breakpoint-sm-a-flex-justify-content-flex-start;
+            @include breakpoint-sm-a-padding-left-col-half;
+
+    	}
+
+    }
+
+}
