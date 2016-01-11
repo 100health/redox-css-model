@@ -11,7 +11,7 @@
     @include a-fill-container;
     @include a-overflow-y;
     @include a-background-secondaryNavBGColor;
-    @include a-text-color;
+    @include a-text-color-grey;
 
     &__title {
         /* -ctag-example: ...Gallery Filters;*/
@@ -75,7 +75,7 @@
                 @include a-text-color-grey-10;
 
                 @include a-hover-background-grey-10;
-                @include a-hover-text-color;
+                @include a-hover-text-color-grey;
             }
         }
 

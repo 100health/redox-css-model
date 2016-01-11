@@ -1,0 +1,23 @@
+
+
+
+
+.o-contentModal--wfooter {
+
+
+    .o-contentModal {
+        &__contentContainer {
+
+            @include a-height-minus-row-3;
+
+        }
+
+        &__footerContainer {
+
+            @include a-display-block;
+
+
+        }
+    }
+
+}

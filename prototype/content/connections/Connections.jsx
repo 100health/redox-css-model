@@ -5,112 +5,97 @@
 
 var Connections = React.createClass({
 
-    /*componentWillMount: function() {
-        var me = this;
-        RouteState.addDiffListeners(
-    		["org_page"],
-    		function ( route , prev_route ) {
-                // update
-                me.forceUpdate();
-    		},
-            "Connections"
-    	);
-    },
 
-    componentWillUnmount: function(){
-        RouteState.removeDiffListenersViaClusterId( "Connections" );
-    },*/
+    getInboundConnectionRow: function( connection ){
 
-    getConnectionList: function( index ){
-
-        var content_row =
-            <div className="o-list__row__rightCols">
-                <div className="o-list__row__cell
-                    c-connections__outgoingCell">
-                    outgoing
-                </div>
-                <div className="o-list__row__cell
-                    c-connections__enpointCell">
-                </div>
-                <div className="o-list__row__cell
-                    c-connections__actionCell">
-                    Key/Secret
-                </div>
-            </div>;
-
-        if ( Math.random() > .7 ) {
-            content_row =
-                <div className="o-list__row__rightCols">
-                    <div className="o-list__row__cell
-                        c-connections__incomingCell">
-                        incoming
-                    </div>
-                    <div className="o-list__row__cell
-                        c-connections__enpointCell">
-                        http://www.yoururl.com/path/folder/.../folder/edit.php
-                    </div>
-                    <div className="o-list__row__cell
-                        c-connections__actionCell">
-                        Verify
-                    </div>
-                </div>;
+        var link = "", end_point, end_point_class;
+        if ( connection.verified ) {
+            link = <a href="#" onClick={ function() { return false; } }>Edit</a>;
+            end_point = connection.end_point;
+            end_point_class = "c-connectionsTable__td--endPoint";
+        }else{
+            link = <a href="#" onClick={ function() { return false; } }>Verify</a>;
+            end_point = "End point verification needed!";
+            end_point_class = "c-connectionsTable__td--endPointUnverified";
         }
 
-        return <div className="o-list__row" key={ "service_" + index }>
+        return  <tr>
+                    <td className="c-connectionsTable__td--title o-table__td--expander">{ connection.title }</td>
+                    <td className={ end_point_class }>{ end_point }</td>
+                    <td className="c-connectionsTable__td--verify">
+                        { link }
+                    </td>
+                </tr>;
+    },
 
-            <div className="o-list__row__leftCols
-                a-hover-background-grey-9
-                a-interactive">
-                <div className="o-list__row__cell
-                    c-connections__titleCell">
-                    Title of the service
-                </div>
-                <div className="
-                    o-list__row__cell
-                    a-width-col-3 a-text-align-right">
-                    icon
-                </div>
-            </div>
-
-            { content_row }
-
-        </div>
+    getOutboundConnectionRow: function( connection ){
+        return  <tr>
+                    <td className="c-connectionsTable__td--title o-table__td--expander">{ connection.title }</td>
+                    <td className="c-connectionsTable__td--verify">
+                        <a href="#" onClick={ function() { return false; } }>API/Key</a>
+                    </td>
+                </tr>;
     },
 
     render: function() {
 
-        var connections_html = [];
-        for ( var i=0; i<5; i++ ) {
-            connections_html.push( this.getConnectionList( i ) );
+        var inbound = RedoxModel.app.focused_organization().inbound_connections();
+
+        var inbound_connections_html = [];
+        for ( var i=0; i<inbound.length; i++ ) {
+            inbound_connections_html.push( this.getInboundConnectionRow( inbound[i] ) );
         }
 
-        return  <div className="c-connections">
-                    <div className="c-connections__headerContainer">
-                        <div className="o-contentHeader">
-                            <div className="o-contentHeader__title">
-                                Connections
-                            </div>
-                            <div className="o-contentHeader__rightNav">
-                                <div className="c-connections__newButton">
-                                    <div>+</div>
-                                    <div className="c-connections__newButton__outgoing"></div>
-                                    <div>outgoing</div>
+
+        var outbound = RedoxModel.app.focused_organization().outbound_connections();
+
+        var outbound_connections_html = [];
+        for ( var i=0; i<outbound.length; i++ ) {
+            outbound_connections_html.push( this.getOutboundConnectionRow( outbound[i] ) );
+        }
+
+        return <div className="c-connections o-contentSimple">
+                    <div className="o-contentSimple__contentContainer">
+                        <div>
+                            <div className="o-contentHeader">
+                                <div className="o-contentHeader__titleContainer">
+                                    Connections
                                 </div>
-                                <div className="c-connections__newButton">
-                                    <div>+</div>
-                                    <div className="c-connections__newButton__incoming"></div>
-                                    <div>incoming</div>
+                                <div className="o-contentHeader__navContainer">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="c-connections__listContainer">
-                        <div className="o-list">
-                            { connections_html }
-                        </div>
-                    </div>
-                    <div className="c-connections__emptyContainer">
-                        <div className="c-connectionsEmptyState">
+
+                            <div className="c-connections__groupHeader">
+                                <div className="o-global__outgoingIcon">
+                                </div>
+                                <h1>
+                                    Outbound
+                                </h1>
+                                <div className="c-connections__addBtn">
+                                    Add Outgoing
+                                </div>
+                            </div>
+                            <table className="o-table">
+                              <tbody>
+                                { outbound_connections_html }
+                              </tbody>
+                            </table>
+
+                            <div className="c-connections__groupHeader">
+                                <div className="o-global__incomingIcon">
+                                </div>
+                                <h1>
+                                    Inbound
+                                </h1>
+                                <div className="c-connections__addBtn">
+                                    Add Incoming
+                                </div>
+                            </div>
+                            <table className="o-table">
+                              <tbody>
+                                { inbound_connections_html }
+                              </tbody>
+                            </table>
 
                         </div>
                     </div>

@@ -2,17 +2,135 @@
 
 
 .c-profile {
-    @include a-padding-v-row-1;
-    @include a-height-100;
-    @include a-overflow-y;
 
-    &__mockup {
-        background-image: url("_assets/mockups/profile.png");
-        height: 1300px;
+    &__content {
+        @include a-display-flex;
+        @include a-flex-justify-content-flex-start;
+
+        @include breakpoint-sm-a-display-block;
     }
 
-    &__document {
-        @include a-width-col-7-half;
-        @include a-block-center;
+
+    &__avatarCol {
+        flex-grow: 1;
+
+        @include breakpoint-sm-a-mobile-reset;
     }
+
+        &__avatar {
+            @include a-width-col-1-half;
+            // trick to get image square and relative to width
+            @include a-padding-bottom-row( $v-col-1-half );
+            @include a-margin-bottom-row-half;
+            @include a-shadow;
+
+            // background-image: url("...default?");
+            background-position: center;
+            background-size: cover;
+
+            @include breakpoint-sm-a-mobile-reset;
+            @include breakpoint-sm-a-padding-bottom-row-8;
+        }
+
+        &__btn {
+            @include a-width-col-1-half;
+            @include a-height-row-2;
+
+            @include a-text-size-small;
+            @include a-line-height-row-2;
+            @include a-text-align-center;
+
+            @include a-border-weakest;
+            @include a-text-color-grey-5;
+            @include a-border-radius;
+
+            @include a-margin-bottom-row-half;
+            @include a-interactive-hover;
+
+            @include breakpoint-sm-a-mobile-reset;
+        }
+
+    &__contentCol {
+        @include a-width-col-6;
+
+        @include breakpoint-sm-a-mobile-reset;
+    }
+
+    &__title {
+        h1 {
+            @include a-float-clear-left;
+        }
+
+        em {
+            @include a-position-absolute;
+            @include a-top-right;
+            @include a-text-size-larger;
+            @include a-text-color-grey-6;
+            @include a-line-height-row-2;
+        }
+    }
+
+    &__outsideLinks {
+        @include a-margin-bottom-row;
+        @include a-clear-fix;
+    }
+        &__outsideLink {
+            width: 50%;
+            @include a-float-left;
+            @include a-text-size-small-plus;
+            @include a-line-height-row-1;
+            @include a-text-color-grey-5;
+
+            &:nth-child( 2n ) {
+                @include a-text-align-right;
+            }
+        }
+
+    p {
+        @include a-text-size-plus;
+        @include a-margin-bottom-row;
+        @include a-text-align-justify;
+    }
+
+    &__categories {
+        @include a-width-100;
+        @include a-margin-top-row-half;
+        @include a-margin-bottom-row-1;
+        @include a-clear-fix;
+        @include a-float-clear-left;
+    }
+        &__category {
+            @include a-width-col-1;
+            @include a-height-row-5;
+            @include a-border-weaker;
+            @include a-float-left;
+
+            border-left: 0px;
+            &:nth-child( 6n + 1 ) {
+                @include a-border-left-weaker;
+            }
+
+            border-top: 0px;
+            &:nth-child( -n+6 ) {
+                @include a-border-top-weaker;
+            }
+
+            &__icon {
+                @include a-text-size-largest-plus;
+                @include a-text-align-center;
+                margin-top: 20px;
+                @include a-margin-bottom-row-quarter;
+                @include a-text-color-grey-5;
+            }
+            &__label {
+                @include a-text-size-smaller;
+                @include a-text-align-center;
+                @include a-text-color-grey-5;
+            }
+
+            @include breakpoint-sm-a-width-col-2;
+
+            // need media query to deal with nth-child stuff...
+        }
+
 }

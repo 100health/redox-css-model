@@ -1,0 +1,91 @@
+
+
+
+
+input {
+    /* Should only use these in .o-form */
+    @include a-misused;
+}
+
+
+.o-form {
+    @include a-margin-v-row;
+
+    input {
+        /* Should only use these in .o-form */
+        @include a-misused-off;
+    }
+
+    &__header {
+        @include a-width-100;
+        @include a-height-row-2;
+        @include a-text-size-large;
+        @include a-text-color-grey-5;
+        @include a-line-height-row-2;
+        @include a-clear-fix;
+        @include a-border-bottom;
+        @include a-margin-bottom-row;
+    }
+
+    &__section {
+        @include a-width-100;
+        @include a-clear-fix;
+    }
+
+    input, select {
+        @include a-width-100;
+        @include a-height-row-2;
+        @include a-float-left;
+        @include a-border;
+
+        @include a-text-size-plus;
+        @include a-text-color-grey-3;
+        @include a-padding-h-row-half;
+
+        border-radius: 0px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    &__element {
+        @include a-width-100;
+        @include a-float-left;
+        @include a-margin-bottom-row;
+
+        // @include breakpoint-sm-a-width-col-11;
+
+        label {
+            width: 33.33%;
+            @include a-float-left;
+            @include a-text-size;
+            @include a-text-color-grey-6;
+            @include a-border-bottom-weaker;
+            @include a-position-absolute;
+            @include a-bottom-left;
+        }
+
+        input, select {
+            width: 66.66%;
+            @include a-float-right;
+        }
+    }
+
+    input[type="submit"] {
+        // width: 33%;
+        @include a-width-col-2;
+        @include a-height-row-2;
+        @include a-background-redox-green;
+        @include a-float-right;
+
+        @include breakpoint-sm-a-width-col-4;
+    }
+
+    input[type="reset"] {
+        // width: 33%;
+        @include a-width-col-2;
+        @include a-height-row-2;
+        @include a-hover-background-grey-10;
+        @include a-float-right;
+
+    }
+}

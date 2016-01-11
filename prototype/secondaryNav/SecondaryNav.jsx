@@ -7,7 +7,7 @@ var SecondaryNav = React.createClass({
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["org_page","tertiary_page"],
+    		["page","detail_page"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -24,15 +24,15 @@ var SecondaryNav = React.createClass({
 
     },
 
-    changeOrgPage: function ( org_page ) {
+    changePage: function ( page ) {
         RS.merge({
-            org_page:org_page
+            page:page
         })
     },
 
-    changeTertiaryPage: function ( page ) {
+    changeDetailPage: function ( detail_page ) {
         RS.merge({
-            tertiary_page:page
+            detail_page:detail_page
         })
     },
 
@@ -41,7 +41,7 @@ var SecondaryNav = React.createClass({
 
         var nav_items = [],page;
 
-        var pages = RedoxModel.get( RedoxModel._root.app.organization_pages );
+        var pages = RedoxModel.app.organization_pages();
 
         for ( var p=0; p<pages.length; p++ ) {
             page = pages[p];
@@ -51,17 +51,17 @@ var SecondaryNav = React.createClass({
                         "c-secondaryNav__list__item " +
                         (
                             (
-                                RS.route.org_page == page.link ||
+                                RS.route.page == page.link ||
                                 (
-                                    !RS.route.org_page 
-                                    && !RS.route.org_page != ""
+                                    !RS.route.page
+                                    && !RS.route.page != ""
                                     && page.link == "profile"
                                 )
                             )
                                 ?  "c-secondaryNav__list__item--selected" : ""
                         )
                     }
-                    onClick={ this.changeOrgPage.bind( this , page.link ) }>
+                    onClick={ this.changePage.bind( this , page.link ) }>
                     <div className={
                         'c-secondaryNav__list__item__icon ' + page.icon }>
                     </div>
@@ -83,10 +83,10 @@ var SecondaryNav = React.createClass({
                 <div className={
                         "c-tertiaryNav__item " +
                         extra_class +
-                        ( ( RS.route.tertiary_page == page.link )
+                        ( ( RS.route.detail_page == page.link )
                             ?  "c-tertiaryNav__item--selected" : "" )
                     }
-                    onClick={ this.changeTertiaryPage.bind( this , p ) }>
+                    onClick={ this.changeDetailPage.bind( this , p ) }>
                     <div className="c-tertiaryNav__item__label">
                         { page.name }
                     </div>

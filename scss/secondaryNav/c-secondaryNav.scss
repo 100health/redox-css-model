@@ -48,7 +48,7 @@
             &__label {
                 /* -ctag-example: ...Secondary Nav;*/
 
-                @include a-text-color;
+                @include a-text-color-grey;
                 @include a-width-minus-col-three-quarters;
                 @include a-text-size;
                 @include a-single-line;

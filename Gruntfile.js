@@ -30,7 +30,8 @@ module.exports = function(grunt) {
                 'cssmodeling/systems/css_12_col_vw_quartered.json',
                 'cssmodeling/skins/css_redox_skin.json',
                 'cssmodeling/systems/css_simple.json',
-                'cssmodeling/css_states.json'
+                'cssmodeling/css_states.json'//,
+                //'cssmodeling/js/css_simple.js'
             ]
         },
         options: {
@@ -65,10 +66,9 @@ module.exports = function(grunt) {
             [
                 'dist/csscore/scss/_core_mixins.scss',
 
-                'scss/_shared/contentHeader/o-contentHeader.scss',
-                'scss/_shared/**/*.scss',
-                'scss/organziation/cropPlans/footerNav/**/*.scss',
-                'scss/**/*.scss'
+                'scss/**/*.scss',
+                '!scss/**/*--*.scss',
+                'scss/**/*--*.scss'
             ];
 
     configObj.sass = configObj.sass || {};
@@ -129,7 +129,8 @@ module.exports = function(grunt) {
     configObj.watch["protodata"] = {
         files:[
             'protodata/**/*.js',
-            'protodata/**/*.json'
+            'protodata/**/*.json',
+            'prototype/**/*.html'
         ],
         tasks: ["protodata:redox"]
     };

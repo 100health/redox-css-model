@@ -21,7 +21,7 @@ h1,h2,h3,h4,h5,h6,p,code {
 
     h1, h2, h3, h4, h5, h6 {
         @include a-single-line;
-        @include a-text-color-darker;
+        @include a-text-color-grey-darker;
         @include a-width-100;
     }
 

@@ -6,7 +6,7 @@ var Redox = React.createClass({
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["page","org_page","tertiary","nav"],
+    		["section","page","detail_page","modal"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -26,7 +26,7 @@ var Redox = React.createClass({
     },
 
     updateRoute: function () {
-        if ( RS.route.tertiary == "open") {
+        if ( RS.route.detail_page && RS.route.detail_page != "" ) {
             $(".c-redox").addClass("c-redox--tertiary");
             $(".c-secondaryNav").addClass("c-secondaryNav--tertiary");
         }else{
@@ -35,35 +35,55 @@ var Redox = React.createClass({
         }
     },
 
+    closeModal: function(){
+        RS.merge({
+            modal:""
+        });
+    },
+
     render: function() {
 
-        var page;
+        var show_footer = true;
 
-        switch ( RS.route.org_page ) {
+        var page;
+        switch ( RS.route.page ) {
             case "connections" :
                 page = <Connections />;
                 break;
             case "profile" :
                 page = <Profile />;
                 break;
+            case "logs" :
+                page = <Logs />;
+                show_footer = false;
+                break;
             default :
-                page = <Profile />;
+                page = <div>{ RS.route.section } | { RS.route.page }</div>;
                 break;
         }
 
         var secondaryNav = <SecondaryNav />;
-
-        switch ( RS.route.page ) {
+        switch ( RS.route.section ) {
             case "gallery" :
-                secondaryNav = <GalleryNav />
+                secondaryNav = <GalleryNav />;
                 break;
         }
 
+        var modalContent = false;
+        switch ( RS.route.modal ) {
+            case "profile_edit" :
+                modalContent = <ProfileEdit />;
+                break;
+            case "admin_profile_edit" :
+                modalContent = <ProfileAdminEdit />;
+                break;
+        }
 
-        return  <div className="c-redox">
+        return  <div className={ "c-redox " +
+                        (( show_footer ) ? "" : "c-redox--nofooter" )}>
                     <div className={
                             'c-redox__mainNavContainer ' +
-                            ( ( RS.route.nav == "open")
+                            ( ( RS.route.detail_page && RS.route.detail_page != "" )
                                     ? "c-redox__mainNavContainer--open" : "" )
                         }>
                         <MainNav />
@@ -78,6 +98,19 @@ var Redox = React.createClass({
                     <div className="c-redox__footerContainer">
                         <Footer />
                     </div>
+
+                    <div className={ "o-modal " +
+                            ( ( modalContent ) ? "o-modal--show" : "" )
+                        }>
+                        <div className="o-modal__bgCover"
+                            onClick={ this.closeModal }></div>
+                        <div className="o-modal__contentContainer">
+                            { modalContent }
+                        </div>
+                        <div className="o-modal__bgCover"
+                            onClick={ this.closeModal }></div>
+                    </div>
+
                 </div>;
     }
 

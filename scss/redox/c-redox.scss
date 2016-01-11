@@ -1,44 +1,40 @@
 
 
-$mainNavHeight : $v-row-3;
-$mainNavHeightBreakpointSmall : $v-row-2;
-
-$footerHeight : $v-row-1-half;
-
-
 .c-redox {
     /* -ctag-example: ...
         { .c-redox__mainNavContainer }
         { .c-redox__secondaryNavContainer }
         { .c-redox__contentContainer }
+        { .c-redox__footerContainer }
         ;*/
     /* -ctag-status: prod;*/
 
     @include a-fill-container;
 
-    @include breakpoint-sm-a-padding-top-row( $mainNavHeightBreakpointSmall );
+    @include breakpoint-sm-a-padding-top-row( $v-breakpoint-sm-mainNav_height );
     @include breakpoint-sm-a-height-auto;
 
     &__mainNavContainer {
         /* -ctag-example: ...
             { .c-mainNav };*/
+
         @include a-width-100;
-        @include a-height-row( $mainNavHeight );
+        @include a-height-row( $v-mainNav_height );
         @include a-zindex-mainNav;
 
         @include breakpoint-sm-a-position-fixed;
         @include breakpoint-sm-a-top-left;
         @include breakpoint-sm-a-height-row(
-                            $mainNavHeightBreakpointSmall );
+                            $v-breakpoint-sm-mainNav_height );
     }
 
     &__secondaryNavContainer {
         /* -ctag-example: ...
             { .c-secondaryNav };*/
-        // @include a-height-minus-row( $mainNavHeight );
-        @include a-height-minus-row( $mainNavHeight + $footerHeight );
-        @include a-top-row( $mainNavHeight );
-        @include a-width-col-2;
+
+        @include a-height-minus-row( $v-mainNav_height + $v-footer_height );
+        @include a-top-row( $v-mainNav_height );
+        @include a-width-col( $v-secondaryNav_width );
         @include a-position-absolute;
         @include a-left;
         @include a-zindex-secondaryNav;
@@ -46,7 +42,7 @@ $footerHeight : $v-row-1-half;
 
         @include breakpoint-sm-a-width-100;
         @include breakpoint-sm-a-height-auto;
-        @include breakpoint-sm-a-top-row( $mainNavHeightBreakpointSmall );
+        @include breakpoint-sm-a-top-row( $v-breakpoint-sm-mainNav_height );
 
         &--small {
             @include a-width-col-half;
@@ -55,11 +51,12 @@ $footerHeight : $v-row-1-half;
 
     &__contentContainer {
         /* -ctag-example: ...;*/
-        @include a-width-col-10;
-        @include a-height-minus-row( $mainNavHeight + $footerHeight );
+
+        @include a-width-col( $v-content_width );
+        @include a-height-minus-row( $v-mainNav_height + $v-footer_height );
         @include a-position-absolute;
         @include a-right;
-        @include a-bottom-row( $footerHeight );
+        @include a-bottom-row( $v-footer_height );
         @include a-background-grey-10;
         @include a-zindex-content;
         @include a-transition-width;
@@ -72,11 +69,14 @@ $footerHeight : $v-row-1-half;
     &__footerContainer {
         /* -ctag-example: ...
             { .c-footer };*/
+
         @include a-width-100;
-        @include a-height-row( $footerHeight );
+        @include a-height-row( $v-footer_height );
         @include a-position-absolute;
         @include a-bottom-left;
         @include a-zindex-footer;
+        @include a-transition-height;
+        @include a-overflow-hidden;
 
         @include breakpoint-sm-a-position-static;
     }

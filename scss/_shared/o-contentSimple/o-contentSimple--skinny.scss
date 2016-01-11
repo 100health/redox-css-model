@@ -1,0 +1,37 @@
+
+
+.o-contentSimple--skinny {
+    /*  touch  */
+
+    & > div { // container
+        @include a-width-100;
+        @include a-padding-left-col-half;
+
+        & > div { // content
+            @include a-width-col(  $v-content--tertiary_width - $v-col-1 );
+        }
+    }
+
+    .o-contentSimple {
+
+    	&__headerContainer {
+
+    	}
+
+    	&__contentContainer {
+
+    	}
+
+    	&__footerContainer {
+
+            @include a-left-col( $v-secondaryNav--tertiary_width );
+
+    	}
+
+    	&--wfooter {
+
+    	}
+
+    }
+
+}

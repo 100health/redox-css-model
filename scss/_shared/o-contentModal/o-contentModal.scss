@@ -1,0 +1,25 @@
+
+
+
+
+.o-contentModal {
+
+
+    @include a-fill-container;
+
+    &__contentContainer {
+
+        @include a-height-100;
+        @include a-padding-top-row-2;
+
+    }
+
+    &__footerContainer {
+
+        @include a-height-row-3;
+
+
+    }
+
+
+}

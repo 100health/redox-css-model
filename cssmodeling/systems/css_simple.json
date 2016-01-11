@@ -56,36 +56,32 @@
             "ignore_variable":true,
 			"atoms":[
 				{
-					"name":"binary-width",
 					"group":"simple",
                     "sub_group":"sizing",
 					"example":"<div ... style='height: 100px; background-color:#fff;'></div>",
 					"selector":".a-width@var_name_no_base",
-					"declaration_value":"width: @var_value;"
+					"declaration_value":"width: @var_value ;"
 				},
 				{
-					"name":"binary-height",
                     "group":"simple",
                     "sub_group":"sizing",
 					"example":"<div ... style='width: 100px; background-color:#fff;'></div>",
 					"selector":".a-height@var_name_no_base",
-					"declaration_value":"height: @var_value;"
+					"declaration_value":"height: @var_value ;"
 				},
 				{
-					"name":"binary-padding",
                     "group":"simple",
                     "sub_group":"spacing",
 					"example":"<div ... style='width: 100px; background-color:#fff;'>Text</div>",
 					"selector":".a-padding@var_name_no_base",
-					"declaration_value":"padding: @var_value;"
+					"declaration_value":"padding: @var_value ;"
 				},
 				{
-					"name":"binary-margin",
                     "group":"simple",
                     "sub_group":"spacing",
 					"example":"<div ... style='width: 100px; background-color:#fff;'>Text</div>",
 					"selector":".a-margin@var_name_no_base",
-					"declaration_value":"margin: @var_value;"
+					"declaration_value":"margin: @var_value ;"
 				}
 			]
 		},
@@ -133,7 +129,7 @@
                     "sub_group":"positioning",
 					"example":"<div ... style='width: 100px; height: 100px; background-color: #fff;'></div>",
 					"selector":".a-@var_name",
-					"declaration_value":"float: @var_value;"
+					"declaration_value":"float: @var_value ;"
 				}
 			]
 		},
@@ -155,7 +151,7 @@
                     "sub_group":"positioning",
 					"example":"<div ... style='width: 100px; height: 100px; background-color: #fff;'></div>",
 					"selector":".a-@var_name",
-					"declaration_value":"clear: @var_value;"
+					"declaration_value":"clear: @var_value ;"
 				}
 			]
 		},
@@ -177,7 +173,7 @@
                     "sub_group":"positioning",
 					"example":"<div ... style='width: 100px; height: 100px; background-color: #fff;'></div>",
 					"selector":".a-@var_name",
-					"declaration_value":"clear: @var_value; float: @var_value"
+					"declaration_value":"clear: @var_value ; float: @var_value "
 				}
 			]
 		},
@@ -199,7 +195,7 @@
                     "sub_group":"positioning",
 					"example":"<div ... style='width: 100px; height: 100px; background-color: #fff;'></div>",
 					"selector":".a-@var_name",
-					"declaration_value":"position : @var_value;"
+					"declaration_value":"position : @var_value ;"
 				}
 			]
 		},
@@ -208,10 +204,10 @@
 			"name":"text-align-values",
             "group":"simple",
 			"base":"text-align",
-            "shortcut":"<em>@base</em>-[ left, center, right ]",
-    		"scheme":["@base-left","@base-center","@base-right"],
+            "shortcut":"<em>@base</em>-[ left, center, right, justify ]",
+    		"scheme":["@base-left","@base-center","@base-right","@base-justify"],
 			"values":[
-				"left","center","right"
+				"left","center","right","justify"
 			],
             "ignore_variable":true,
 			"atoms":[
@@ -221,7 +217,7 @@
                     "sub_group":"typography",
 					"example":"...Font Align",
 					"selector":".a-@var_name",
-					"declaration_value":"text-align : @var_value;"
+					"declaration_value":"text-align : @var_value ;"
 				}
 			]
 		},
@@ -247,7 +243,7 @@
                     "sub_group":"misc",
 					"example":"<div ... style='width: 100px; height: 100px; background-color: #fff;'>Lots of text to trigger the overflow</div>",
 					"selector":".a-@var_name",
-					"declaration_value":"overflow : @var_value;"
+					"declaration_value":"overflow : @var_value ;"
 				},
                 {
 					"name":"overflow-x",
@@ -255,7 +251,7 @@
                     "sub_group":"misc",
 					"example":"<div ... style='width: 100px; height: 100px; background-color: #fff;'>Lots of text to trigger the overflow</div>",
 					"selector":".a-overflow-x@var_name_no_base",
-					"declaration_value":"overflow-x : @var_value;"
+					"declaration_value":"overflow-x : @var_value ;"
 				},
                 {
 					"name":"overflow-y",
@@ -263,7 +259,7 @@
                     "sub_group":"misc",
 					"example":"<div ... style='width: 100px; height: 100px; background-color: #fff;'>Lots of text to trigger the overflow</div>",
 					"selector":".a-overflow-y@var_name_no_base",
-					"declaration_value":"overflow-y : @var_value;"
+					"declaration_value":"overflow-y : @var_value ;"
 				}
 			]
 		},
@@ -285,7 +281,7 @@
                     "sub_group":"misc",
 					"example":"...Cursor",
 					"selector":".a-@var_name",
-					"declaration_value":"cursor : @var_value;"
+					"declaration_value":"cursor : @var_value ;"
 				}
 			]
 		},
@@ -315,14 +311,14 @@
 					"example":"<div ... style='position:absolute; width: 100px; height: 100px; background-color:#fff;'></div>",
 					"selector":".a@var_name",
 					"declaration_iteration_values":[
-						"top: @var_value; right: @var_value;",
-						"top: @var_value; left: @var_value;",
-						"top: @var_value;",
-						"bottom: @var_value;",
-						"bottom: @var_value; right: @var_value;",
-						"bottom: @var_value; left: @var_value;",
-						"left: @var_value;",
-						"right: @var_value;"
+						"top: @var_value ; right: @var_value ;",
+						"top: @var_value ; left: @var_value ;",
+						"top: @var_value ;",
+						"bottom: @var_value ;",
+						"bottom: @var_value ; right: @var_value ;",
+						"bottom: @var_value ; left: @var_value ;",
+						"left: @var_value ;",
+						"right: @var_value ;"
 					]
 				},
                 {
@@ -332,14 +328,14 @@
 					"example":"<div ... style='position:absolute; width: 100px; height: 100px; background-color:#fff;'></div>",
 					"selector":".a@var_name-fixed",
 					"declaration_iteration_values":[
-						"position: fixed; top: @var_value; right: @var_value;",
-						"position: fixed;top: @var_value; left: @var_value;",
-						"position: fixed;top: @var_value;",
-						"position: fixed;bottom: @var_value;",
-						"position: fixed;bottom: @var_value; right: @var_value;",
-						"position: fixed;bottom: @var_value; left: @var_value;",
-						"position: fixed;left: @var_value;",
-						"position: fixed;right: @var_value;"
+						"position: fixed; top: @var_value ; right: @var_value ;",
+						"position: fixed;top: @var_value ; left: @var_value ;",
+						"position: fixed;top: @var_value ;",
+						"position: fixed;bottom: @var_value ;",
+						"position: fixed;bottom: @var_value ; right: @var_value ;",
+						"position: fixed;bottom: @var_value ; left: @var_value ;",
+						"position: fixed;left: @var_value ;",
+						"position: fixed;right: @var_value ;"
 					]
 				}
 			]
@@ -362,7 +358,7 @@
                     "sub_group":"sizing",
 					"example":"<div ... style='width: 100%; background-color:#fff;'></div>",
 					"selector":".a-height@var_name",
-					"declaration_value":"height : @var_value;"
+					"declaration_value":"height : @var_value ;"
 				},
 				{
 					"name":"width-default-values",
@@ -370,7 +366,7 @@
                     "sub_group":"sizing",
 					"example":"<div ... style='width: 100%; background-color:#fff;'></div>",
 					"selector":".a-width@var_name",
-					"declaration_value":"width : @var_value;"
+					"declaration_value":"width : @var_value ;"
 				}
 			]
 		},
@@ -392,7 +388,7 @@
                     "sub_group":"positioning",
 					"example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 					"selector":".a-flex-justify-content@var_name",
-					"declaration_value":"justify-content : @var_value;"
+					"declaration_value":"justify-content : @var_value ;"
 				}
 			]
 		}

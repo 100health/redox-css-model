@@ -6,34 +6,45 @@
 		<link href='redox.css' type='text/css' rel='stylesheet'>
 		<link href='csscore/core.css' type='text/css' rel='stylesheet'>
 		<script src='redox.js'></script>
+		<script src='protodata/redox_data.json.js'></script>
 
 		<script>
 
 			var RedoxModel,RS;
 			$(window).ready(function () {
 
-				$.ajax( "protodata/redox_data.json" ).done(
-					function( redox_data ) {
+				RedoxModel = protoData;
+				console.log( RedoxModel );
 
-						RedoxModel = ProtoData.createModel( redox_data );
-						console.log( RedoxModel );
 
-						RouteState.listenToHash();
-						RS = RouteState;
-						React.render(
-							React.createElement(
-								Redox,{}
-							),
-							document.body
-						);
-					}
+				RouteState.config({
+					section:{
+						weight:10,
+						description:"Main nav's state"
+					},
+					page:{
+						weight:20,
+						dependency:"section",
+						description:"Secondary nav's state (and determine's content unless overriden by detail)"
+					},
+						detail_page:{
+							weight:21,
+							dependency:"page",
+							description:"Determines tiertiary nav state (and override's content state)"
+						}
+				});
+
+				RouteState.listenToHash();
+				RS = RouteState;
+				React.render(
+					React.createElement(
+						Redox,{}
+					),
+					document.body
 				);
 			});
 		</script>
 	</head>
 	<body>
-
-
-
     </body>
 </html>

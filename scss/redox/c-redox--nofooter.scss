@@ -1,0 +1,27 @@
+
+
+
+
+
+.c-redox--nofooter {
+    /*  */
+
+
+    .c-redox {
+
+        &__secondaryNavContainer {
+
+            @include a-height-minus-row( $v-mainNav_height );
+        }
+
+        &__contentContainer {
+            @include a-height-minus-row( $v-mainNav_height );
+            @include a-bottom;
+        }
+
+        &__footerContainer {
+
+            @include a-height-0;
+        }
+    }
+}

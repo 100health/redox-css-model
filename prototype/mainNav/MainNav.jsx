@@ -7,7 +7,7 @@ var MainNav = React.createClass({
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["page"],
+    		["section"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -23,17 +23,10 @@ var MainNav = React.createClass({
     updateModel: function () {
     },
 
-    toggleTertiary: function () {
-        RS.toggle(
-            {tertiary:"open"},
-            {tertiary:""}
-        );
-    },
-
-    openOrgPage: function ( page ) {
+    openSection: function ( section , secondary_page ) {
         RS.merge({
-            page:page,
-            nav:""
+            section:section,
+            page:secondary_page
         });
     },
 
@@ -46,8 +39,7 @@ var MainNav = React.createClass({
 
     render: function() {
 
-        // var nav_links = RedoxModel.get( RedoxModel._root.app.main_pages );
-        var nav_links = RedoxModel.get( RedoxModel._root.app.orig_main_pages );
+        var nav_links = RedoxModel.app.orig_main_pages();
 
         var nav_items = [],icon_html;
         for ( var p=nav_links.length-1; p>=0; p-- ) {
@@ -65,16 +57,16 @@ var MainNav = React.createClass({
             nav_items.push(
                 <div className={
                         "c-mainNav__link " +
-                        (   ( RS.route.page == page.link ||
+                        (   ( RS.route.section == page.link ||
                                 (
-                                    !RS.route.page
-                                    && !RS.route.page != ""
+                                    !RS.route.section
+                                    && !RS.route.section != ""
                                     && page.link == nav_links[0].link
                                 )
                             )
                             ? "c-mainNav__link--selected " : "" )
                     }
-                    onClick={ this.openOrgPage.bind( this , page.link ) }>
+                    onClick={ this.openSection.bind( this , page.link , page.secondary_page ) }>
                     {  icon_html }
                     <div className="c-mainNav__link_label">
                         { page.name }

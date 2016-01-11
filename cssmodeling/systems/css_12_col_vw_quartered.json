@@ -79,7 +79,7 @@
                     "sub_group":"sizing",
                     "example":"<div ... style='height: 100px; background-color: #fff;'></div>",
                     "selector":".a-width-@var_name",
-                    "declaration_value":"width: _@_@var_name;"
+                    "declaration_value":"width: _@_@var_name ;"
                 },
                 {
 					"name":"width-col-12-inv",
@@ -87,7 +87,7 @@
                     "sub_group":"sizing",
 					"example":"<div ... style='height: 100px; min-width: 50px; background-color:#fff; position: absolute;'></div>",
 					"selector":".a-width-minus-@var_name",
-					"declaration_value":"width: calc( 100% - _@_@var_name );"
+					"declaration_value":"width: calc( 100% - _@_@var_name  );"
 				},
 				{
 					"name":"left-col-12",
@@ -95,7 +95,7 @@
                     "sub_group":"positioning",
                     "example":"<div ... style='width: 100px; height: 100px; background-color: #fff; position: absolute;'></div>",
                     "selector":".a-left-@var_name",
-                    "declaration_value":"left: _@_@var_name;"
+                    "declaration_value":"left: _@_@var_name ;"
 				},
 				{
 					"name":"right-col-12",
@@ -103,7 +103,7 @@
                     "sub_group":"positioning",
                     "example":"<div ... style='width: 100px; height: 100px; background-color: #fff; position: absolute;'></div>",
                     "selector":".a-right-@var_name",
-                    "declaration_value":"right: _@_@var_name;"
+                    "declaration_value":"right: _@_@var_name ;"
 				},
 				{
 					"name":"margin-h-col",
@@ -112,7 +112,7 @@
 					"example":"<div ... style='width: 100px; height: 100px; background-color:#fff'>Some Text</div>",
 					"selector":".a-margin-h-@var_name",
 					"declaration_value":
-						"margin-left: _@_@var_name; margin-right: _@_@var_name;"
+						"margin-left: _@_@var_name ; margin-right: _@_@var_name ;"
 				},
                 {
 					"name":"margin-left-col",
@@ -121,7 +121,7 @@
 					"example":"<div ... style='width: 100px; height: 100px; background-color:#fff'>Some Text</div>",
 					"selector":".a-margin-left-@var_name",
 					"declaration_value":
-						"margin-left: _@_@var_name;"
+						"margin-left: _@_@var_name ;"
 				},
                 {
 					"name":"margin-right-col",
@@ -130,7 +130,7 @@
 					"example":"<div ... style='width: 100px; height: 100px; background-color:#fff'>Some Text</div>",
 					"selector":".a-margin-right-@var_name",
 					"declaration_value":
-						"margin-right: _@_@var_name;"
+						"margin-right: _@_@var_name ;"
 				},
 				{
 					"name":"padding-h-col",
@@ -139,7 +139,7 @@
 					"example":"<div ... style='display: inline-block; background-color:#fff'>Some Text</div>",
 					"selector":".a-padding-h-@var_name",
 					"declaration_value":
-                        "padding-left: _@_@var_name; padding-right: _@_@var_name;"
+                        "padding-left: _@_@var_name ; padding-right: _@_@var_name ;"
 				},
 				{
 					"name":"padding-left-col",
@@ -148,7 +148,7 @@
 					"example":"<div ... style='display: inline-block; background-color:#fff'>Some Text</div>",
 					"selector":".a-padding-left-@var_name",
 					"declaration_value":
-                        "padding-left: _@_@var_name;"
+                        "padding-left: _@_@var_name ;"
 				},
 				{
 					"name":"padding-right-col",
@@ -157,7 +157,7 @@
 					"example":"<div ... style='display: inline-block; background-color:#fff'>Some Text</div>",
 					"selector":".a-padding-right-@var_name",
 					"declaration_value":
-                        "padding-right: _@_@var_name;"
+                        "padding-right: _@_@var_name ;"
 				}
 			]
 		}

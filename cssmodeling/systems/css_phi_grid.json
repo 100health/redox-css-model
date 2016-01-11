@@ -37,7 +37,7 @@
 					"sub_group":"sizing",
 					"example":"<div ... style='height: 100px; background-color:#fff;'></div>",
 					"selector":".a-width-@var_name",
-					"declaration_value":"width: _@_@var_name;"
+					"declaration_value":"width: _@_@var_name ;"
 				},
 				{
 					"name":"phi-height",
@@ -45,7 +45,7 @@
 					"sub_group":"sizing",
 					"example":"<div ... style='width: 100px; background-color:#fff;'></div>",
 					"selector":".a-height-@var_name",
-					"declaration_value":"height: _@_@var_name;"
+					"declaration_value":"height: _@_@var_name ;"
 				},
 				{
 					"name":"phi-left",
@@ -53,7 +53,7 @@
 					"sub_group":"positioning",
 					"example":"<div ... style='width: 100px; height: 100px; background-color:#fff;'></div>",
 					"selector":".a-left-@var_name",
-					"declaration_value":"left: _@_@var_name;"
+					"declaration_value":"left: _@_@var_name ;"
 				},
 				{
 					"name":"phi-top",
@@ -61,7 +61,7 @@
 					"sub_group":"positioning",
 					"example":"<div ... style='width: 100px; height: 100px; background-color:#fff;'></div>",
 					"selector":".a-top-@var_name",
-					"declaration_value":"top: _@_@var_name;"
+					"declaration_value":"top: _@_@var_name ;"
 				},
 				{
 					"name":"phi-bottom",
@@ -69,7 +69,7 @@
 					"sub_group":"positioning",
 					"example":"<div ... style='width: 100px; height: 100px; background-color:#fff;'></div>",
 					"selector":".a-bottom-@var_name",
-					"declaration_value":"bottom: _@_@var_name;"
+					"declaration_value":"bottom: _@_@var_name ;"
 				},
 				{
 					"name":"phi-right",
@@ -77,7 +77,7 @@
 					"sub_group":"positioning",
 					"example":"<div ... style='width: 100px; height: 100px; background-color:#fff;'></div>",
 					"selector":".a-right-@var_name",
-					"declaration_value":"right: _@_@var_name;"
+					"declaration_value":"right: _@_@var_name ;"
 				}
 			]
 		}
