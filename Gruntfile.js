@@ -12,6 +12,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('cssmodeling');
     grunt.loadNpmTasks('protodata');
 
+    grunt.loadNpmTasks('grunt-contrib-compass');
+
     var configObj = {
         pkg: '<json:package.json>'
     };
@@ -57,27 +59,38 @@ module.exports = function(grunt) {
 
 
     /*==========================
-    SCSS
+    SCSS ( MIMIC ACTUAL COMPILE )
     ==========================*/
-    configObj.concat = configObj.concat || {};
-    configObj.concat["redox_scss"] = {files:{}};
-    configObj.concat["redox_scss"]
-        .files['dist/redox.scss'] =
-            [
-                'dist/csscore/scss/_core_mixins.scss',
+    configObj.compass = configObj.compass || {};
+    configObj.compass["redox"] = {
+      options: {
+        sassDir: 'scss',// files here referece files in RedoxEngine_repo
+        cssDir: 'dist/styles',
+        generatedImagesDir: 'RedoxEngine_repo/ng-app/.tmp/images/generated',
+        imagesDir: 'RedoxEngine_repo/ng-app/app/images',
+        javascriptsDir: 'RedoxEngine_repo/ng-app/app/scripts',
+        fontsDir: 'RedoxEngine_repo/ng-app/app/styles/fonts',
+        importPath: 'RedoxEngine_repo/bower_components',// still need to pull CSSModel in project for now...
+        httpImagesPath: '/images',
+        httpGeneratedImagesPath: '/images/generated',
+        httpFontsPath: '/styles/fonts',
+        relativeAssets: false,
+        assetCacheBuster: false,
+        raw: 'Sass::Script::Number.precision = 10\n'
+      },
+      dist: {
+        options: {
+          generatedImagesDir: 'assets/images/generated'
+        }
+      },
+      server: {
+        options: {
+          debugInfo: false
+        }
+      }
+    }
 
-                'scss/**/*.scss',
-                '!scss/**/*--*.scss',
-                'scss/**/*--*.scss'
-            ];
 
-    configObj.sass = configObj.sass || {};
-    configObj.sass["redox"] = {files:{}};
-    configObj.sass["redox"]
-        .files['dist/redox.css'] =
-            [
-                'dist/redox.scss'
-            ];
 
     /*==========================
     Prototype REACT
@@ -85,13 +98,13 @@ module.exports = function(grunt) {
     configObj.react = configObj.react || {};
     configObj.react["redox"] = {files:{}};
     configObj.react["redox"]
-        .files['dist/redox_jsx.js']
+        .files['dist/prototype/redox_jsx.js']
             = 'prototype/**/*.jsx';
 
     configObj.watch = configObj.watch || {};
     configObj.watch["redox"] = {
         files:[
-            'scss/**/*.scss',
+            'RedoxEngine_repo/ng-app/**/*.scss',
             'prototype/**/*.jsx',
             'prototype/**/*.js',
             'prototype/**/*.html'
@@ -101,14 +114,14 @@ module.exports = function(grunt) {
     configObj.concat = configObj.concat || {};
     configObj.concat["redox_js"] = {files:{}};
     configObj.concat["redox_js"]
-        .files['dist/redox.js']
+        .files['dist/prototype/redox.js']
             = [
                 'node_modules/jquery/dist/jquery.min.js',
         		'node_modules/react/dist/react.js',
         		'node_modules/routestate/RouteState.js',
                 'node_modules/protodata/client/protodata.js',
 
-                'dist/redox_jsx.js',
+                'dist/prototype/redox_jsx.js',
                 'prototype/**/*.js'
             ];
 
@@ -145,14 +158,14 @@ module.exports = function(grunt) {
         files: {
             'dist/csscore':
             [
-                'dist/redox.css'
+                'dist/styles/components.css'
             ]
         }
     };
     configObj.watch = configObj.watch || {};
     configObj.watch["cssmodeling_components"] = {
         files:[
-            'dist/redox.css'
+            'dist/styles/components.css'
         ],
         tasks: ["cssmodeling_components:redox"]
     };
@@ -172,17 +185,29 @@ module.exports = function(grunt) {
             expand: true
         },
         // compile images directly to dist...
-        {
+        /*{
             dest: 'dist/_assets',
             cwd: "scss/_assets",
-            src: ["**/*","!**/*.sketch"],
+            src: ["** /*","!** /*.sketch"],
             expand: true
-        },
+        },*/
         // don't forget the style guide as well...could be done via scss config too...
         {
             dest: 'dist/csscore/_assets',
             cwd: "scss/_assets",
             src: ["**/*","!**/*.sketch"],
+            expand: true
+        },
+        {
+            dest: 'dist/images/',
+            cwd: "RedoxEngine_repo/ng-app/app/images/",
+            src: ["**/*","!**/*.sketch"],
+            expand: true
+        },
+        {
+            dest: 'dist/fonts',
+            cwd: "RedoxEngine_repo/ng-app/app/fonts",
+            src: ["**/*"],
             expand: true
         }
     ]};
@@ -191,8 +216,7 @@ module.exports = function(grunt) {
 
     // 'build' was put together in processProjects
     grunt.registerTask( 'default' , [
-        'concat:redox_scss',
-        'sass:redox',
+        'compass',
         'react:redox',
         'concat:redox_js',
         'copy:redox'

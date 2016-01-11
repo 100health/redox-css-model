@@ -20,7 +20,7 @@
                     }
         },
         "misused":{
-            "shortcut":"<em>@base</em>-[ on, off ]",
+            "shortcut":"<em>@base</em>-[ on, off  ]",
 			"scheme":{"@base":[
 				"",
 				"-off"
@@ -142,7 +142,7 @@
 					"sub_group":"colors",
 					"example":"...Text Color",
 					"selector":".a-text-color-@var_name",
-					"declaration_value":"color : _@_@var_name ;"
+					"declaration_value":"color :  _@_@var_name ;"
 				},
 				{
                     "group":"skin",

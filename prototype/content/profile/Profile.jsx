@@ -35,9 +35,9 @@ var Profile = React.createClass({
     render: function() {
 
         var organization = RedoxModel.app.focused_organization();
-        console.log( organization );
-        console.log( organization.connections() );
-        console.log( organization.logs() );
+        // console.log( organization );
+        // console.log( organization.connections() );
+        // console.log( organization.logs() );
 
         return  <div className="c-profile o-contentSimple">
                     <div className="o-contentSimple__contentContainer">

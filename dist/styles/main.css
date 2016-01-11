@@ -1,0 +1,5901 @@
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav {
+  	/* -ctag-example: ...
+              { .c-mainNav__logo }
+              { .c-mainNav__links }
+              { .c-mainNav__hamburger };*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+  height: 100%;
+  background-color: #00b588;
+  position: relative;
+}
+/* line 13, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__logo {
+  /* -ctag-example: ...;*/
+  width: 100%;
+  height: 100%;
+  clear: left;
+  float: left;
+  display: flex;
+  margin-left: 22px;
+}
+/* line 3604, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-mainNav__logo > * {
+  align-self: center;
+}
+/* line 22, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__logo img {
+  width: 125px;
+}
+/* line 27, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__links {
+  		/* -ctag-example: ...
+              { .c-mainNav__link }
+              { .c-mainNav__link }
+              { .c-mainNav__link };*/
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #00b588;
+  height: 100%;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-mainNav__links:before, .c-mainNav__links:after {
+  content: " ";
+  display: table;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-mainNav__links:after {
+  clear: both;
+}
+@media (max-width: 768px) {
+  /* line 27, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__links {
+    position: relative  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 27, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__links {
+    clear: left  !important;
+    float: left;
+  }
+}
+@media (max-width: 768px) {
+  /* line 27, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__links {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 27, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__links {
+    height: auto  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 27, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__links {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 27, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__links {
+    height: 0  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 27, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__links {
+    overflow: hidden  !important;
+  }
+}
+/* line 48, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__hamburger {
+  /* -ctag-example: ...
+  		<div class="ion-navicon-round"></div>;*/
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 24.99999vw;
+  cursor: hand;
+  cursor: pointer;
+  margin-right: 4.166665vw;
+  display: none;
+  font-size: 27px;
+  line-height: 44px;
+  text-align: right;
+  color: #fff;
+}
+/* line 3146, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-mainNav__hamburger:hover {
+  color: #B7FFE0;
+}
+@media (max-width: 768px) {
+  /* line 48, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__hamburger {
+    display: block !important;
+  }
+}
+/* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link {
+  		/* -ctag-example: ...
+                  { .c-mainNav__link__icon }
+                  { .c-mainNav__link__label };*/
+  /* Workaround to override global link styles */
+  width: 16.66666vw;
+  height: 100%;
+  float: right;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  cursor: hand;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+  line-height: 22px;
+}
+/* line 73, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link > a {
+  color: inherit;
+}
+/* line 75, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link > a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+/* line 3602, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-mainNav__link > * {
+  align-self: center;
+}
+/* line 3146, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-mainNav__link:hover {
+  color: #B7FFE0;
+}
+/* line 96, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link__icon {
+  /* -ctag-example: <div class="c-mainNav__link__icon ion-clipboard"></div>;*/
+  padding-left: 11px;
+  padding-right: 11px;
+}
+/* line 102, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link__label {
+  /* -ctag-example: ...Nav Link;*/
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 108, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link--selected {
+  background-color: #00DFA7;
+  color: #008262;
+}
+/* line 3154, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-mainNav__link--selected:hover {
+  color: #008262;
+}
+/* line 115, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link--social-icon {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+/* line 118, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link--social-icon:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  background-color: inherit;
+}
+/* line 126, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link--organization {
+  width: 24.99999vw;
+}
+/* line 130, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+.c-mainNav__link--user {
+  text-align: center;
+  font-size: 13px;
+  line-height: 22px;
+  padding: 5.5px;
+}
+@media (max-width: 768px) {
+  /* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__link {
+    font-size: 16px !important;
+    line-height: 33px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__link {
+    clear: left  !important;
+    float: left;
+  }
+}
+@media (max-width: 768px) {
+  /* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__link {
+    height: 55px !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__link {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__link {
+    text-align: left  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav.scss */
+  .c-mainNav__link {
+    padding-left: 4.166665vw !important;
+  }
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav--open.scss */
+.c-mainNav--open {
+  /* touch */
+}
+@media (max-width: 768px) {
+  /* line 11, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav--open.scss */
+  .c-mainNav--open .c-mainNav__links {
+    height: auto  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 21, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav--open.scss */
+  .c-mainNav--open .c-mainNav__link {
+    justify-content: flex-start  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 21, ../../RedoxEngine_repo/ng-app/app/styles/components/mainNav/_c-mainNav--open.scss */
+  .c-mainNav--open .c-mainNav__link {
+    padding-left: 4.166665vw !important;
+  }
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+.c-redox {
+  /* -ctag-example: ...
+      { .c-redox__mainNavContainer }
+      { .c-redox__secondaryNavContainer }
+      { .c-redox__contentContainer }
+      { .c-redox__footerContainer }
+      ;*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  /* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox {
+    padding-top: 44px !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox {
+    height: auto  !important;
+  }
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+.c-redox__mainNavContainer {
+  /* -ctag-example: ...
+      { .c-mainNav };*/
+  width: 100%;
+  height: 66px;
+  z-index: 3000;
+}
+@media (max-width: 768px) {
+  /* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__mainNavContainer {
+    position: fixed  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__mainNavContainer {
+    top: 0px  !important;
+    left: 0px  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__mainNavContainer {
+    height: 44px !important;
+  }
+}
+/* line 34, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+.c-redox__secondaryNavContainer {
+  /* -ctag-example: ...
+      { .c-secondaryNav };*/
+  height: calc( 100% - 99px  );
+  top: 66px;
+  width: 16.66666vw;
+  position: absolute;
+  left: 0px;
+  z-index: 2000;
+  transition: width 0.3s;
+}
+@media (max-width: 768px) {
+  /* line 34, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__secondaryNavContainer {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 34, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__secondaryNavContainer {
+    height: auto  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 34, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__secondaryNavContainer {
+    top: 44px !important;
+  }
+}
+/* line 50, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+.c-redox__secondaryNavContainer--small {
+  width: 4.166665vw;
+}
+/* line 55, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+.c-redox__contentContainer {
+  /* -ctag-example: ...;*/
+  width: 83.33334vw;
+  height: calc( 100% - 99px  );
+  position: absolute;
+  right: 0px;
+  bottom: 33px;
+  background-color: #fff;
+  z-index: 1000;
+  transition: width 0.3s;
+  /* Eventually, move these to the o-document or whatever child component
+     we put inside the body? */
+}
+/* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+.c-redox__contentContainer--sidenav {
+  width: 83.3333vw;
+}
+@media (max-width: 768px) {
+  /* line 55, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__contentContainer {
+    position: relative  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 55, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__contentContainer {
+    width: auto  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 55, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__contentContainer {
+    height: auto  !important;
+  }
+}
+/* line 80, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+.c-redox__footerContainer {
+  /* -ctag-example: ...footer;*/
+  width: 100%;
+  height: 33px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 3500;
+  transition: height 0.3s;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  /* line 80, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox.scss */
+  .c-redox__footerContainer {
+    position: static  !important;
+  }
+}
+
+/* line 2, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox--tertiary.scss */
+.c-redox--tertiary {
+  /* touch */
+}
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox--tertiary.scss */
+.c-redox--tertiary .c-redox__secondaryNavContainer {
+  width: 27.0833225vw;
+}
+/* line 10, ../../RedoxEngine_repo/ng-app/app/styles/components/redox/_c-redox--tertiary.scss */
+.c-redox--tertiary .c-redox__contentContainer {
+  width: 72.9166775vw;
+}
+
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav {
+  /* -ctag-example: ...
+      { .c-secondaryNav__list }
+      { .c-secondaryNav__tertiaryNavContainer };*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+/* line 9, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav a {
+  color: inherit;
+}
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav a:hover, .c-secondaryNav a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  /* line 3, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+  .c-secondaryNav {
+    display: none !important;
+  }
+}
+/* line 22, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav__list {
+  /* -ctag-example: ...
+      { .c-secondaryNav__list__item }
+      { .c-secondaryNav__list__item }
+      { .c-secondaryNav__list__item }
+      { .c-secondaryNav__list__item }*/
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: width 0.3s;
+}
+/* line 33, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav__list__item {
+  /* -ctag-example: ...
+      { .c-secondaryNav__list__item__icon }
+      { .c-secondaryNav__list__item__label };*/
+  width: 100%;
+  height: 66px;
+  display: flex;
+  cursor: hand;
+  cursor: pointer;
+  transition: width 0.3s;
+}
+/* line 3604, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-secondaryNav__list__item > * {
+  align-self: center;
+}
+/* line 3016, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-secondaryNav__list__item:hover {
+  background-color: #fff;
+}
+/* line 45, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav__list__item__icon {
+  /* -ctag-example: <div class="c-secondaryNav__list__item__icon ion-soup-can"></div>;*/
+  width: 4.166665vw;
+  text-align: center;
+  transition: width 0.3s;
+}
+@media (max-width: 768px) {
+  /* line 45, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+  .c-secondaryNav__list__item__icon {
+    width: 12.499995vw !important;
+  }
+}
+/* line 55, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav__list__item__label {
+  /* -ctag-example: ...Secondary Nav;*/
+  color: #808080;
+  width: calc( 100% - 6.2499975vw  );
+  font-size: 14px;
+  line-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s;
+}
+/* line 65, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav__list__item--selected {
+  background-color: #fff;
+}
+/* line 71, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav.scss */
+.c-secondaryNav__tertiaryNavContainer {
+  /* -ctag-example: ...
+          { .c-tertiaryNav }*/
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transition: width 0.3s;
+  overflow: hidden;
+  box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2), -3px 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav--tertiary.scss */
+.c-secondaryNav--tertiary {
+  /* touch */
+}
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav--tertiary.scss */
+.c-secondaryNav--tertiary .c-secondaryNav__list {
+  width: 6.2499975vw;
+}
+/* line 8, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav--tertiary.scss */
+.c-secondaryNav--tertiary .c-secondaryNav__list__item {
+  width: 6.2499975vw;
+}
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav--tertiary.scss */
+.c-secondaryNav--tertiary .c-secondaryNav__list__item__icon {
+  width: 6.2499975vw;
+}
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav--tertiary.scss */
+.c-secondaryNav--tertiary .c-secondaryNav__list__item__label {
+  width: 0;
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-secondaryNav--tertiary.scss */
+.c-secondaryNav--tertiary .c-secondaryNav__tertiaryNavContainer {
+  width: calc( 100% - 6.2499975vw  );
+}
+
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-tertiaryNav.scss */
+.c-tertiaryNav {
+  /* -ctag-example: ...
+      { .c-tertiaryNav__item }
+      { .c-tertiaryNav__item }
+      { .c-tertiaryNav__item };*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: width 0.3s;
+}
+/* line 17, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-tertiaryNav.scss */
+.c-tertiaryNav__item {
+  /* -ctag-example: ...
+      { .c-tertiaryNav__item__label };*/
+  width: 100%;
+  height: 44px;
+  display: flex;
+  cursor: hand;
+  cursor: pointer;
+  padding-left: 2.0833325vw;
+  padding-right: 2.0833325vw;
+}
+/* line 3604, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-tertiaryNav__item > * {
+  align-self: center;
+}
+/* line 3014, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-tertiaryNav__item:hover {
+  background-color: #E6E6E6;
+}
+/* line 28, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-tertiaryNav.scss */
+.c-tertiaryNav__item__label {
+  /* -ctag-example: ...tertiary Nav;*/
+  color: #808080;
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 37, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-tertiaryNav.scss */
+.c-tertiaryNav__item--indented {
+  padding-left: 4.166665vw;
+}
+/* line 41, ../../RedoxEngine_repo/ng-app/app/styles/components/secondaryNav/_c-tertiaryNav.scss */
+.c-tertiaryNav__item--selected {
+  background-color: #E6E6E6;
+}
+
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections {
+  /* -ctag-example: <div class="c-connections o-contentSimple">
+          <div>
+              { .o-contentHeader }
+              { .c-connections__groupHeader }
+              { .c-connectionsTable }
+              { .c-connections__groupHeader }
+              { .c-connectionsTable }
+          </div>
+      </div>*/
+  /*<a href='../../#!/organization/connections/(section,page)' target="_new">prototype</a>;*/
+  /* -ctag-status: prod;*/
+  /* =============TABLES============ */
+}
+/* line 23, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections .o-table, .c-connections .o-tableSummary {
+  margin-bottom: 44px;
+  clear: both;
+}
+/* line 28, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections__groupHeader {
+  /* -ctag-example: ...
+          { .o-global__outgoingIcon }
+          <h1>
+              Outbound
+          </h1>
+          { .c-connections__addBtn }*/
+  padding-bottom: 11px;
+  margin-bottom: 11px;
+  display: flex;
+  justify-content: flex-start;
+}
+/* line 41, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections__groupHeader h1 {
+  border: initial;
+  border-bottom: none;
+  font-size: 22px;
+  line-height: 38.5px;
+  margin: 0;
+  padding: 0;
+  margin-left: 11px;
+  flex-grow: 1;
+}
+/* line 51, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections__groupHeader > * {
+  align-self: center;
+}
+/* line 56, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections__addBtn {
+  /* -ctag-example: ...Add Outgoing;*/
+  width: 16.66666vw;
+  height: 33px;
+  border-radius: 3px;
+  border: 1px solid #CCCCCC;
+  text-align: center;
+  font-size: 13px;
+  line-height: 16.5px;
+  line-height: 33px;
+  color: #666666;
+  cursor: hand;
+  cursor: pointer;
+}
+/* line 3614, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-connections__addBtn:hover {
+  background-color: #E6E6E6;
+}
+/* line 70, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections .c-connectionsTable {
+  /* -ctag-example: <table class="c-connectionsTable o-table">
+          <tr>
+              <td class="c-connectionsTable__td--title o-table__td--expander">title</td>
+              <td class="c-connectionsTable__td--endPoint">endpoint</td>
+              <td class="c-connectionsTable__td--verify">verify</td>
+          </tr>
+      </table>;*/
+}
+/* line 79, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections .c-connectionsTable__td--icon {
+  width: 4.166665vw;
+}
+/* line 86, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections .c-connectionsTable__td--endPoint, .c-connections .c-connectionsTable__td--endPointUnverified {
+  width: 33.33332vw;
+  font-size: 13px;
+  line-height: 16.5px;
+  color: #999999;
+}
+/* line 91, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections .c-connectionsTable__td--endPointUnverified {
+  color: #000;
+  color: #DE5978;
+  font-style: italic;
+}
+/* line 97, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connections.scss */
+.c-connections .c-connectionsTable__td--verify {
+  width: 8.33333vw;
+  text-align: right;
+}
+
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/components/content/connections/_c-connectionsEmptyState.scss */
+.c-connectionsEmptyState {
+  width: 100%;
+  height: 154px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  background-image: url("../images/app/connections_watermark.png");
+  background-position: 22px center;
+}
+
+/* line 7, ../../RedoxEngine_repo/ng-app/app/styles/components/content/logs/_c-logs.scss */
+.c-logs__navContainer {
+  width: 20.833325vw;
+}
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/components/content/logs/_c-logs.scss */
+.c-logs .c-logs__td--type {
+  width: 4.166665vw;
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/content/logs/_c-logs.scss */
+.c-logs .c-logs__td--status {
+  width: 8.33333vw;
+  text-align: center;
+}
+/* line 24, ../../RedoxEngine_repo/ng-app/app/styles/components/content/logs/_c-logs.scss */
+.c-logs .c-logs__td--model {
+  width: 8.33333vw;
+  text-align: center;
+}
+/* line 28, ../../RedoxEngine_repo/ng-app/app/styles/components/content/logs/_c-logs.scss */
+.c-logs .c-logs__td--environment {
+  width: 8.33333vw;
+  text-align: center;
+}
+/* line 32, ../../RedoxEngine_repo/ng-app/app/styles/components/content/logs/_c-logs.scss */
+.c-logs .c-logs__td--time {
+  width: 12.499995vw;
+  text-align: right;
+}
+/* line 39, ../../RedoxEngine_repo/ng-app/app/styles/components/content/logs/_c-logs.scss */
+.c-logs__footer {
+  height: 100%;
+  width: 100%;
+  padding-top: 11px;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  transition: height 0.3s;
+}
+/* line 50, ../../RedoxEngine_repo/ng-app/app/styles/components/content/logs/_c-logs.scss */
+.c-logs__filters {
+  width: 100%;
+  height: 132px;
+  margin-top: 11px;
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__content {
+  display: flex;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  /* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__content {
+    display: block !important;
+  }
+}
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__avatarCol {
+  flex-grow: 1;
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 14, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__avatarCol {
+    position: relative  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 14, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__avatarCol {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 14, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__avatarCol {
+    height: auto  !important;
+  }
+}
+
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__avatar {
+  width: 12.499995vw;
+  padding-bottom: 12.499995vw;
+  margin-bottom: 11px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__avatar {
+    position: relative  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__avatar {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__avatar {
+    height: auto  !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__avatar {
+    padding-bottom: 176px !important;
+  }
+}
+/* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__btn {
+  width: 12.499995vw;
+  height: 44px;
+  font-size: 13px;
+  line-height: 16.5px;
+  line-height: 44px;
+  text-align: center;
+  border: 1px solid #E6E6E6;
+  color: #808080;
+  border-radius: 3px;
+  margin-bottom: 11px;
+  cursor: hand;
+  cursor: pointer;
+}
+/* line 3614, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-profile__btn:hover {
+  background-color: #E6E6E6;
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__btn {
+    position: relative  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__btn {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__btn {
+    height: auto  !important;
+  }
+}
+
+/* line 53, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__contentCol {
+  width: 49.99998vw;
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 53, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__contentCol {
+    position: relative  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 53, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__contentCol {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 53, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__contentCol {
+    height: auto  !important;
+  }
+}
+
+/* line 60, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__title h1 {
+  clear: left;
+  float: left;
+}
+/* line 64, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__title em {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 19px;
+  line-height: 38.5px;
+  color: #999999;
+  line-height: 44px;
+}
+/* line 73, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__outsideLinks {
+  margin-bottom: 22px;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-profile__outsideLinks:before, .c-profile__outsideLinks:after {
+  content: " ";
+  display: table;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-profile__outsideLinks:after {
+  clear: both;
+}
+/* line 77, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__outsideLink {
+  width: 50%;
+  float: left;
+  font-size: 13.5px;
+  line-height: 16.5px;
+  line-height: 22px;
+  color: #808080;
+}
+/* line 84, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__outsideLink:nth-child(2n) {
+  text-align: right;
+}
+/* line 89, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+/* line 95, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__categories {
+  width: 100%;
+  margin-top: 11px;
+  margin-bottom: 22px;
+  clear: left;
+  float: left;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-profile__categories:before, .c-profile__categories:after {
+  content: " ";
+  display: table;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-profile__categories:after {
+  clear: both;
+}
+/* line 102, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__category {
+  width: 8.33333vw;
+  height: 110px;
+  border: 1px solid #CCCCCC;
+  float: left;
+  border-left: 0px;
+  border-top: 0px;
+}
+/* line 109, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__category:nth-child(6n + 1) {
+  border-left: 1px solid #CCCCCC;
+}
+/* line 114, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__category:nth-child(-n+6) {
+  border-top: 1px solid #CCCCCC;
+}
+/* line 118, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__category__icon {
+  font-size: 35px;
+  line-height: 44px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5.5px;
+  color: #808080;
+}
+/* line 125, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+.c-profile__category__label {
+  font-size: 12px;
+  line-height: 16.5px;
+  text-align: center;
+  color: #808080;
+}
+@media (max-width: 768px) {
+  /* line 102, ../../RedoxEngine_repo/ng-app/app/styles/components/content/profile/_c-profile.scss */
+  .c-profile__category {
+    width: 16.66666vw !important;
+  }
+}
+
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentModal/_o-contentModal.scss */
+.o-contentModal {
+  width: 100%;
+  height: 100%;
+}
+/* line 10, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentModal/_o-contentModal.scss */
+.o-contentModal__contentContainer {
+  height: 100%;
+  padding-top: 44px;
+}
+/* line 17, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentModal/_o-contentModal.scss */
+.o-contentModal__footerContainer {
+  height: 66px;
+}
+
+/* line 9, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentModal/_o-contentModal--wfooter.scss */
+.o-contentModal--wfooter .o-contentModal__contentContainer {
+  height: calc( 100% - 66px  );
+}
+/* line 15, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentModal/_o-contentModal--wfooter.scss */
+.o-contentModal--wfooter .o-contentModal__footerContainer {
+  display: block;
+}
+
+/* line 2, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+div {
+  box-sizing: border-box;
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+.o-contentSimple {
+  /* -ctag-example: ...
+      { .o-contentSimple__contentContainer }
+      { .o-contentSimple__footerContainer };*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 16, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+.o-contentSimple > div {
+  width: 100%;
+  padding-left: 8.33333vw;
+}
+@media (max-width: 768px) {
+  /* line 16, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+  .o-contentSimple > div {
+    padding-left: 4.166665vw !important;
+    padding-right: 4.166665vw !important;
+  }
+}
+/* line 22, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+.o-contentSimple > div > div, .o-contentSimple > div > table {
+  width: 66.66668vw;
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 22, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+  .o-contentSimple > div > div, .o-contentSimple > div > table {
+    position: relative  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 22, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+  .o-contentSimple > div > div, .o-contentSimple > div > table {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  /* line 22, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+  .o-contentSimple > div > div, .o-contentSimple > div > table {
+    height: auto  !important;
+  }
+}
+
+/* line 29, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+.o-contentSimple__contentContainer {
+  /* -ctag-example: <div ... style="overflow-y: scroll;">
+          <div style="border: 1px solid red;">
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+              content<br/>
+          </div>
+      </div>;*/
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  /* line 29, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+  .o-contentSimple__contentContainer {
+    padding-top: 44px !important;
+  }
+}
+/* line 66, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+.o-contentSimple__footerContainer {
+  /* -ctag-example: ...footer;*/
+  height: 66px;
+  box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.2);
+  transition: height 0.3s;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: none;
+}
+@media (max-width: 768px) {
+  /* line 66, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+  .o-contentSimple__footerContainer {
+    left: 0px  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 66, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+  .o-contentSimple__footerContainer {
+    position: fixed  !important;
+  }
+}
+/* line 81, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple.scss */
+.o-contentSimple__footerContainer--open {
+  height: 264px;
+}
+
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple--skinny.scss */
+.o-contentSimple--skinny {
+  /*  touch  */
+}
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple--skinny.scss */
+.o-contentSimple--skinny > div {
+  width: 100%;
+  padding-left: 4.166665vw;
+}
+/* line 10, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple--skinny.scss */
+.o-contentSimple--skinny > div > div {
+  width: 64.5833475vw;
+}
+/* line 25, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple--skinny.scss */
+.o-contentSimple--skinny .o-contentSimple__footerContainer {
+  left: 27.0833225vw;
+}
+
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple--wfooter.scss */
+.o-contentSimple--wfooter {
+  /* touch */
+}
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple--wfooter.scss */
+.o-contentSimple--wfooter .o-contentSimple__contentContainer {
+  height: calc( 100% - 66px  );
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentSimple--wfooter.scss */
+.o-contentSimple--wfooter .o-contentSimple__footerContainer {
+  display: block;
+}
+
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentHeader.scss */
+.o-contentHeader {
+  /* -ctag-example: ...
+      { .o-contentHeader__titleContainer }
+      { .o-contentHeader__navContainer }*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+  height: 88px;
+  background-color: #fff;
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 3604, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.o-contentHeader > * {
+  align-self: center;
+}
+/* line 16, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentHeader.scss */
+.o-contentHeader__titleContainer {
+  /* -ctag-example: ...Content Header Title*/
+  font-size: 22px;
+  line-height: 38.5px;
+  color: #999999;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 500;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+/* line 28, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-contentSimple/_o-contentHeader.scss */
+.o-contentHeader__navContainer {
+  /* -ctag-example: ...Right Nav*/
+  height: 100%;
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+h1, h2, h3, h4, h5, h6, p, code {
+  /* Should only use these in .o-document */
+  border: 2px solid red;
+}
+
+/* line 12, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document {
+    /* -ctag-example: ...
+        <h1>h1 title</h1>
+        <h2>h2 title</h2>
+
+        ;*/
+}
+/* line 19, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document h1, .o-document h2, .o-document h3, .o-document h4, .o-document h5, .o-document h6, .o-document p, .o-document code {
+  border: initial;
+}
+/* line 23, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document h1, .o-document h2, .o-document h3, .o-document h4, .o-document h5, .o-document h6 {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #4D4D4D;
+  width: 100%;
+  clear: left;
+  float: left;
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document h1 {
+  font-size: 22px;
+  line-height: 38.5px;
+  padding-bottom: 11px;
+  margin-bottom: 11px;
+  border-bottom: 1px solid #CCCCCC;
+}
+/* line 38, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document h2 {
+  font-size: 19px;
+  line-height: 38.5px;
+  padding-bottom: 5.5px;
+  margin-bottom: 5.5px;
+  border-bottom: 1px solid #CCCCCC;
+}
+/* line 44, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document h3 {
+  font-size: 17px;
+  line-height: 38.5px;
+  padding-bottom: 5.5px;
+  margin-bottom: 5.5px;
+  border-bottom: 1px solid #CCCCCC;
+}
+/* line 50, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document h4 {
+  font-size: 17px;
+  line-height: 33px;
+  padding-bottom: 5.5px;
+  margin-bottom: 5.5px;
+  border-bottom: 1px solid #CCCCCC;
+}
+/* line 56, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document h5 {
+  font-size: 19px;
+  line-height: 38.5px;
+  padding-bottom: 5.5px;
+  margin-bottom: 5.5px;
+  border-bottom: 1px solid #CCCCCC;
+}
+/* line 62, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document h6 {
+  font-size: 15px;
+  line-height: 33px;
+  padding-bottom: 5.5px;
+  margin-bottom: 5.5px;
+  border-bottom: 1px solid #CCCCCC;
+}
+/* line 69, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 5.5px;
+}
+/* line 74, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+.o-document__column {
+  float: left;
+  padding-right: 11px;
+}
+@media (max-width: 768px) {
+  /* line 74, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+  .o-document__column {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 74, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-document/_o-document.scss */
+  .o-document__column {
+    padding: 0  !important;
+  }
+}
+
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+input {
+  /* Should only use these in .o-form */
+  border: 2px solid red;
+}
+
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form input {
+  /* Should only use these in .o-form */
+  border: initial;
+}
+/* line 19, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form__header {
+  width: 100%;
+  height: 44px;
+  font-size: 16px;
+  line-height: 33px;
+  color: #808080;
+  line-height: 44px;
+  border-bottom: 1px solid #CCCCCC;
+  margin-bottom: 22px;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.o-form__header:before, .o-form__header:after {
+  content: " ";
+  display: table;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.o-form__header:after {
+  clear: both;
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form__section {
+  width: 100%;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.o-form__section:before, .o-form__section:after {
+  content: " ";
+  display: table;
+}
+/* line 3622, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.o-form__section:after {
+  clear: both;
+}
+/* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form input, .o-form select {
+  width: 100%;
+  height: 44px;
+  float: left;
+  border: 1px solid #CCCCCC;
+  font-size: 15px;
+  line-height: 22px;
+  color: #4D4D4D;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* line 50, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form__element {
+  width: 100%;
+  float: left;
+  margin-bottom: 22px;
+}
+/* line 57, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form__element label {
+  width: 33.33%;
+  float: left;
+  font-size: 14px;
+  line-height: 22px;
+  color: #999999;
+  border-bottom: 1px solid #CCCCCC;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+/* line 67, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form__element input, .o-form__element select {
+  width: 66.66%;
+  float: right;
+}
+/* line 73, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form input[type="submit"] {
+  width: 16.66666vw;
+  height: 44px;
+  background-color: #00b588;
+  float: right;
+}
+@media (max-width: 768px) {
+  /* line 73, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+  .o-form input[type="submit"] {
+    width: 33.33332vw !important;
+  }
+}
+/* line 83, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-form/_o-form.scss */
+.o-form input[type="reset"] {
+  width: 16.66666vw;
+  height: 44px;
+  float: right;
+}
+/* line 3016, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.o-form input[type="reset"]:hover {
+  background-color: #fff;
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+.o-modal {
+  /* -ctag-example: ...
+          { .o-modal__bgCover }
+          { .o-modal__contentContainer }
+          { .o-modal__bgCover };*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 5000;
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+.o-modal__bgCover {
+  /* -ctag-example: ...;*/
+  height: 100%;
+  width: 8.33333vw;
+  float: left;
+  cursor: hand;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  /* line 20, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+  .o-modal__bgCover {
+    display: none !important;
+  }
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+.o-modal__bgCover + .o-modal__contentContainer {
+  margin-left: 0;
+}
+/* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+.o-modal__contentContainer {
+  /* -ctag-example: ...;*/
+  width: 83.3333vw;
+  margin-left: 8.33333vw;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  float: left;
+}
+@media (max-width: 768px) {
+  /* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+  .o-modal__contentContainer {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+  .o-modal__contentContainer {
+    margin-left: 0 !important;
+  }
+}
+/* line 49, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+.o-modal__contentContainer > * {
+  width: 66.66664vw;
+  margin-left: 8.33333vw;
+}
+@media (max-width: 768px) {
+  /* line 49, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+  .o-modal__contentContainer > * {
+    width: 100%  !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 49, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+  .o-modal__contentContainer > * {
+    padding-left: 8.33333vw !important;
+    padding-right: 8.33333vw !important;
+  }
+}
+@media (max-width: 768px) {
+  /* line 49, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal.scss */
+  .o-modal__contentContainer > * {
+    margin-left: 0 !important;
+  }
+}
+
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-modal/_o-modal--show.scss */
+.o-modal--show {
+  /* */
+  display: block;
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-table.scss */
+.o-table, .o-tableSummary {
+  /* -ctag-example: <table ...>
+      <tr>
+          <th>content</th>
+          <th class="o-table__th--expander o-table__th--center">expando</th>
+          <th>content</th>
+      </tr>
+      <tr>
+          <td>content</td>
+          <td>expando</td>
+          <td><div>content</div></td>
+      </tr>
+  </table>;*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+}
+/* line 23, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-table.scss */
+.o-table tr, .o-tableSummary tr {
+  border-bottom: 1px solid #CCCCCC;
+  height: 44px;
+}
+/* line 28, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-table.scss */
+.o-table td, .o-tableSummary td, .o-table th, .o-tableSummary th {
+  width: 16.66666vw;
+  color: #808080;
+  font-size: 14px;
+  line-height: 22px;
+}
+/* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-table.scss */
+.o-table td.o-table__td--expander, .o-tableSummary td.o-table__td--expander, .o-table td.o-table__th--expander, .o-tableSummary td.o-table__th--expander, .o-table th.o-table__td--expander, .o-tableSummary th.o-table__td--expander, .o-table th.o-table__th--expander, .o-tableSummary th.o-table__th--expander {
+  width: auto;
+}
+/* line 39, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-table.scss */
+.o-table td.o-table__td--center, .o-tableSummary td.o-table__td--center, .o-table td.o-table__th--center, .o-tableSummary td.o-table__th--center, .o-table th.o-table__td--center, .o-tableSummary th.o-table__td--center, .o-table th.o-table__th--center, .o-tableSummary th.o-table__th--center {
+  text-align: center;
+}
+/* line 46, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-table.scss */
+.o-table th, .o-tableSummary th {
+  font-weight: normal;
+  color: #4D4D4D;
+  text-align: left;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-tableSummary.scss */
+.o-tableSummary {
+  /* -ctag-example: <table ...>
+      <tr>
+          <th>content</th>
+          <th class="o-table__th--expander o-table__th--center">expando</th>
+          <th>content</th>
+      </tr>
+      <tr>
+          <td>content</td>
+          <td>expando</td>
+          <td><div>content</div></td>
+      </tr>
+  </table>;*/
+  /* -ctag-status: prod;*/
+}
+/* line 22, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-tableSummary.scss */
+.o-tableSummary tr {
+  border-bottom: none;
+}
+/* line 26, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-tableSummary.scss */
+.o-tableSummary td, .o-tableSummary th {
+  border-left: 1px solid #CCCCCC;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-tableSummary.scss */
+.o-tableSummary td:nth-child(1), .o-tableSummary th:nth-child(1) {
+  border-left: none;
+  padding-left: 0;
+}
+/* line 35, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/o-table/_o-tableSummary.scss */
+.o-tableSummary td:last-child, .o-tableSummary th:last-child {
+  padding-right: 0;
+  text-align: right;
+}
+
+/* line 7, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+a {
+  text-decoration: none;
+  color: #666666;
+  font-weight: 400;
+}
+/* line 3018, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+a:hover {
+  color: #000;
+}
+
+/* line 18, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+.g-queryIcon, .g-incomingIcon, .g-outgoingIcon {
+  /* -ctag-example: ...;*/
+  width: 40px;
+  height: 30px;
+  background-position: left center;
+  background-size: contain;
+}
+/* line 26, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+.g-queryIcon {
+  /* -ctag-example: ...;*/
+  background-image: url("../images/app/query_icon.png");
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+.g-incomingIcon {
+  /* -ctag-example: ...;*/
+  background-image: url("../images/app/incoming_icon.png");
+}
+/* line 34, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+.g-outgoingIcon {
+  /* -ctag-example: ...;*/
+  background-image: url("../images/app/outgoing_icon.png");
+}
+
+/* line 43, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+.o-global__queryIcon, .o-global__incomingIcon, .o-global__outgoingIcon {
+  width: 40px;
+  height: 30px;
+  background-position: left center;
+  background-size: contain;
+}
+/* line 51, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+.o-global__queryIcon {
+  /* -ctag-example: ...;*/
+  background-image: url("../images/app/query_icon.png");
+}
+/* line 55, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+.o-global__incomingIcon {
+  /* -ctag-example: ...;*/
+  background-image: url("../images/app/incoming_icon.png");
+}
+/* line 59, ../../RedoxEngine_repo/ng-app/app/styles/components/_objects/_global.scss */
+.o-global__outgoingIcon {
+  /* -ctag-example: ...;*/
+  background-image: url("../images/app/outgoing_icon.png");
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+.accordion {
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+/* line 10, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel, accordion .panel-group .panel-default {
+  border-bottom-width: 0px;
+}
+/* line 12, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel a, accordion .panel-group .panel-default a {
+  color: #00b588;
+  font-weight: normal;
+  width: 100%;
+}
+/* line 16, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel a:hover, accordion .panel-group .panel-default a:hover {
+  color: #008262;
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel .panel-heading, accordion .panel-group .panel .panel-default, accordion .panel-group .panel-default .panel-heading, accordion .panel-group .panel-default .panel-default {
+  border-radius: 0px;
+  cursor: pointer;
+}
+/* line 25, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel:last-child, accordion .panel-group .panel-default:last-child {
+  border-bottom-width: 1px;
+}
+/* line 29, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .active > .panel-heading {
+  background-color: #e6e4e2;
+  /*2098ca;*/
+}
+/* line 33, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel + .panel {
+  margin-top: 0px;
+}
+/* line 37, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel {
+  border-radius: 0px;
+}
+/* line 45, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel .panel-body {
+  padding: 10px;
+}
+/* line 47, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel .panel-body .menu-item {
+  padding: 15px;
+  padding-left: 35px;
+  background-color: #F6F3F3;
+}
+/* line 52, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+accordion .panel-group .panel .panel-body .active {
+  background-color: #DFF2FA;
+}
+
+/* line 60, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+.nav-tabs.nav-justified > li > a {
+  border-bottom-width: 0px;
+}
+/* line 62, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+.nav-tabs.nav-justified > li > a:hover {
+  border-bottom-width: 1px;
+  border-bottom-color: #eee;
+}
+
+/* line 67, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+#postman-logo {
+  float: right;
+}
+/* line 69, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+#postman-logo img {
+  width: 80px;
+  height: 80px;
+}
+
+/* line 74, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+.copy-button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-color: #dbd9d6;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  background-color: #FFFFFF;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 14px;
+}
+/* line 88, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+.copy-button:hover {
+  background-color: #00b588;
+  color: #FFFFFF;
+}
+
+/* line 93, ../../RedoxEngine_repo/ng-app/app/styles/partials/_accordion.scss */
+.panel-body pre {
+  position: relative;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/partials/_modal.scss */
+.modal-backdrop.am-fade {
+  opacity: .5;
+  transition: opacity .15s linear;
+}
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/partials/_modal.scss */
+.modal-backdrop.am-fade.ng-enter {
+  opacity: 0;
+}
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/partials/_modal.scss */
+.modal-backdrop.am-fade.ng-enter.ng-enter-active {
+  opacity: .5;
+}
+/* line 10, ../../RedoxEngine_repo/ng-app/app/styles/partials/_modal.scss */
+.modal-backdrop.am-fade.ng-leave {
+  opacity: .5;
+}
+/* line 12, ../../RedoxEngine_repo/ng-app/app/styles/partials/_modal.scss */
+.modal-backdrop.am-fade.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/partials/_graph.scss */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/* line 8, ../../RedoxEngine_repo/ng-app/app/styles/partials/_graph.scss */
+.x.axis path {
+  display: none;
+}
+
+/* line 12, ../../RedoxEngine_repo/ng-app/app/styles/partials/_graph.scss */
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+/* line 18, ../../RedoxEngine_repo/ng-app/app/styles/partials/_graph.scss */
+.area {
+  fill: lightsteelblue;
+  stroke-width: 0;
+}
+
+/* line 24, ../../RedoxEngine_repo/ng-app/app/styles/partials/_graph.scss */
+.graph-wrapper h5 {
+  font-size: 20px;
+  text-align: center;
+}
+/* line 29, ../../RedoxEngine_repo/ng-app/app/styles/partials/_graph.scss */
+.graph-wrapper svg {
+  overflow: visible;
+}
+
+/* Parallax base styles
+  --------------------------------------------- */
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.parallax {
+  height: 500px;
+  /* fallback for older browsers */
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* line 15, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.parallax__group {
+  position: relative;
+  height: 500px;
+  /* fallback for older browsers */
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 23, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 31, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.parallax__layer--fore {
+  -webkit-transform: translateZ(90px) scale(0.7);
+  transform: translateZ(90px) scale(0.7);
+  z-index: 1;
+}
+
+/* line 37, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+/* line 43, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.parallax__layer--back {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
+}
+
+/* line 49, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+}
+
+/* Debugger styles - used to show the effect
+--------------------------------------------- */
+/* line 58, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.debug {
+  position: fixed;
+  top: 0;
+  left: .5em;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: .5em;
+  border-radius: 0 0 5px 5px;
+}
+
+/* line 68, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.debug-on .parallax__group {
+  -webkit-transform: translate3d(800px, 0, -800px) rotateY(30deg);
+  transform: translate3d(700px, 0, -800px) rotateY(30deg);
+}
+
+/* line 72, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.debug-on .parallax__layer {
+  box-shadow: 0 0 0 2px #000;
+  opacity: 0.9;
+}
+
+/* line 76, ../../RedoxEngine_repo/ng-app/app/styles/partials/_parallax.scss */
+.parallax__group {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn {
+  border-radius: 0px;
+  border-width: 1px;
+  padding: 6px 12px;
+  font-weight: bold;
+}
+/* line 8, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn:hover {
+  border-width: 1px;
+}
+
+/* line 13, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-default {
+  color: #000000;
+}
+/* line 15, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-default:hover {
+  color: #FFFFFF;
+  background-color: #00b588;
+  border-color: #00b588;
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-default[disabled]:hover {
+  color: #7c7c81;
+}
+/* line 23, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-default:focus {
+  color: #FFFFFF;
+  background-color: #00b588;
+  border-color: #00b588;
+}
+
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-primary {
+  background-color: #dc5034;
+  color: #dbd9d6;
+  border-color: #f49888;
+}
+/* line 34, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-primary:hover {
+  background-color: #f49888;
+  color: #dc5034;
+  border-color: #f49888;
+}
+/* line 39, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-primary:focus {
+  background-color: #f49888;
+  color: #dc5034;
+  border-color: #f49888;
+}
+/* line 44, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-primary:disabled {
+  background-color: #43434a;
+  color: #7c7c81;
+  border-color: #43434a;
+}
+
+/* line 51, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #7c7c81;
+  border-color: #dbd9d6;
+}
+/* line 55, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-secondary:hover {
+  color: #333338;
+  border-color: #43434a;
+}
+/* line 59, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-secondary:focus {
+  color: #43434a;
+  border-color: #43434a;
+}
+/* line 63, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-secondary:disabled {
+  color: #dbd9d6;
+  border-color: #7c7c81;
+}
+
+/* line 68, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-primary.btn-save {
+  background-color: #008262;
+  color: #FFFFFF;
+  border-color: #e6e4e2;
+}
+/* line 72, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-primary.btn-save:hover {
+  background-color: #00b588;
+  color: #FFFFFF;
+}
+/* line 76, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-primary.btn-save:focus {
+  background-color: #008262;
+  color: #FFFFFF;
+}
+/* line 80, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.btn-primary.btn-save:disabled {
+  background-color: #43434a;
+  color: #dbd9d6;
+}
+
+/* line 88, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-primary {
+  background-color: #008262;
+  color: #FFFFFF;
+  border-color: #e6e4e2;
+}
+/* line 92, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-primary:hover {
+  background-color: #00b588;
+  color: #FFFFFF;
+}
+/* line 96, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-primary:focus {
+  background-color: #008262;
+  color: #FFFFFF;
+}
+/* line 100, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-primary:disabled {
+  background-color: #43434a;
+  color: #dbd9d6;
+}
+/* line 105, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-primary + .btn-default {
+  background-color: #FFFFFF;
+  color: #7c7c81;
+  border-color: #dbd9d6;
+}
+/* line 110, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-primary + .btn-default:hover {
+  color: #333338;
+  border-color: #43434a;
+}
+/* line 114, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-primary + .btn-default:focus {
+  color: #43434a;
+  border-color: #43434a;
+}
+/* line 118, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-primary + .btn-default:disabled {
+  color: #dbd9d6;
+  border-color: #7c7c81;
+}
+/* line 123, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-secondary {
+  background-color: #7c7c81;
+  color: #FFFFFF;
+}
+/* line 126, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-secondary:hover {
+  background-color: #43434a;
+  color: #00b588;
+}
+/* line 130, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-secondary:focus {
+  background-color: #43434a;
+  color: #00b588;
+}
+/* line 134, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.editable-buttons .btn-secondary:disabled {
+  background-color: #43434a;
+  color: #000000;
+}
+
+/* line 142, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-primary {
+  background-color: #008262;
+  color: #FFFFFF;
+  border-color: #e6e4e2;
+}
+/* line 146, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-primary:hover {
+  background-color: #00b588;
+  color: #FFFFFF;
+}
+/* line 150, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-primary:focus {
+  background-color: #008262;
+  color: #FFFFFF;
+}
+/* line 154, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-primary:disabled {
+  background-color: #43434a;
+  color: #dbd9d6;
+}
+/* line 159, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-primary + .rui-btn-default {
+  background-color: #FFFFFF;
+  color: #7c7c81;
+  border-color: #dbd9d6;
+}
+/* line 164, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-primary + .rui-btn-default:hover {
+  color: #333338;
+  border-color: #43434a;
+}
+/* line 168, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-primary + .rui-btn-default:focus {
+  color: #43434a;
+  border-color: #43434a;
+}
+/* line 172, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-primary + .rui-btn-default:disabled {
+  color: #dbd9d6;
+  border-color: #7c7c81;
+}
+/* line 177, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-secondary {
+  background-color: #FFFFFF;
+  color: #7c7c81;
+  border-color: #dbd9d6;
+}
+/* line 181, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-secondary:hover {
+  color: #333338;
+  border-color: #43434a;
+}
+/* line 185, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-secondary:focus {
+  color: #43434a;
+  border-color: #43434a;
+}
+/* line 189, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.dashboard-form-row .rui-btn-secondary:disabled {
+  color: #dbd9d6;
+  border-color: #7c7c81;
+}
+
+/* line 197, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.help-button-link .btn-link {
+  color: #000000;
+}
+
+/* line 200, ../../RedoxEngine_repo/ng-app/app/styles/partials/_button.scss */
+.help-button-link .btn-link:hover {
+  color: #428bca;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.angle-box {
+  text-align: left;
+}
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.angle-box .cornered {
+  width: 100%;
+  height: 0px;
+  border-bottom: 40px solid rgba(130, 130, 130, 0.75);
+  border-right: 40px solid transparent;
+}
+/* line 12, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.angle-box .angle-box-text {
+  padding: 10px;
+  font-size: larger;
+  color: white;
+  background-color: rgba(130, 130, 130, 0.75);
+}
+
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.center-box,
+.solo-form-angle-box {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 20em;
+  max-width: 30em;
+  margin-top: calc(8% + 100px);
+}
+
+/* line 29, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-box {
+  height: 200px;
+  color: #7c7c81;
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  border-color: #43434a #dbd9d6 #dbd9d6 #dbd9d6;
+  border-width: 3px 1px 1px 1px;
+  border-style: solid;
+  background-color: #FFFFFF;
+  border-radius: 2px;
+}
+/* line 45, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-box:hover {
+  cursor: pointer;
+  color: #dc5034 !important;
+  border-color: #dc5034 #dbd9d6 #dbd9d6 #dbd9d6;
+  border-width: 3px 1px 1px 1px;
+}
+/* line 51, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-box .tile-box-text {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* line 61, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-box.tile-box-short {
+  height: 100px;
+}
+
+/* line 67, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-solo {
+  float: left;
+  width: 260px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* line 78, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-solo:hover {
+  color: #00b588 !important;
+}
+
+/* line 82, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-create {
+  float: left;
+  border-width: 3px;
+  border-radius: 2px;
+  border-style: dashed;
+  border-color: #7c7c81;
+  width: 220px;
+  height: 200px;
+  color: #7c7c81;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+
+/* line 94, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-create:hover {
+  color: #00b588;
+  border-color: #00b588;
+}
+
+/* line 98, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-create-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 103, ../../RedoxEngine_repo/ng-app/app/styles/partials/_angle-box.scss */
+.tile-create-icon {
+  width: 60px;
+  height: 60px;
+  font-size: 50px;
+  margin: 10px auto;
+}
+
+/* FOOTER STYLES */
+/* line 2, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#base-footer {
+  padding-top: 6px;
+  height: 33px;
+  width: 100%;
+  background-image: url("../images/Redox_Website_Footer_Bar_Pattern.png");
+  background-repeat: center repeat-x;
+  background-size: auto 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#base-footer-container {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* line 18, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#base-footer-container li, a {
+  color: #dbd9d6;
+}
+
+/* line 21, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#base-footer-container a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* line 25, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-menu-left {
+  float: left;
+  height: 20px;
+  margin-bottom: 10px;
+  margin-top: 3px;
+  width: 100%;
+}
+
+/* line 33, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-text-left {
+  float: left;
+  height: 20px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+/* line 39, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#base-footer-container-mobile {
+  margin-top: 2px;
+  font-size: 10px;
+  color: #dbd9d6;
+}
+
+/* line 44, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#base-footer-container-mobile ul {
+  list-style-type: none;
+  margin-top: 4px;
+}
+
+/* line 48, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#base-footer-container-mobile ul li a {
+  color: #dbd9d6;
+}
+
+/* INDEX FOOTER */
+/* line 54, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer {
+  height: 250px;
+  width: 100%;
+  background-color: #43434a;
+}
+
+/* line 59, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-menu-bar {
+  padding-top: 0px;
+  height: 40px;
+  width: 100%;
+  background-image: url("../images/Redox_Website_Footer_Bar_Pattern.png");
+  background-repeat: repeat-x;
+}
+
+/* line 66, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-menu-link-list {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: -130px;
+  margin-top: 2px;
+  float: left;
+}
+
+/* line 73, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-menu-link-list ul {
+  padding-top: 10px;
+}
+
+/* line 76, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-menu-link-list ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 80, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-menu-link-list a {
+  color: #dbd9d6;
+  font-weight: bold;
+}
+
+/* line 84, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-menu-link-list a:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* line 88, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-menu-mailing-list {
+  position: relative;
+  float: right;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 420px;
+}
+
+/* line 97, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#newsletter-label {
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
+/* line 101, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#newsletter-input {
+  height: 34px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 106, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#mc-embedded-subscribe {
+  margin-top: 2px;
+}
+
+/* line 109, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#mce-responses .response {
+  color: #dbd9d6;
+  margin-top: 8px;
+}
+
+/* line 115, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-bottom-text {
+  position: absolute;
+  width: 100%;
+  margin-top: 100px;
+  color: #dbd9d6;
+  font-weight: bold;
+  text-align: left;
+}
+/* line 122, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#footer-bottom-text.menu-link-list li {
+  padding-left: 25px;
+}
+
+@media (max-width: 940px) {
+  /* line 128, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+  #footer-bottom-text {
+    margin-top: 60px;
+  }
+}
+@media (min-width: 940px) {
+  /* line 134, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+  .footer-text {
+    width: 882px;
+  }
+}
+/* line 138, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.footer-text {
+  padding-left: 0px;
+  float: none;
+  margin: 0 auto;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+/* line 145, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.footer-text li {
+  float: none;
+  margin: 50px 20px 0;
+}
+
+/* line 149, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.footer-bottom-row {
+  width: 100%;
+}
+
+/* line 153, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+#aptible-badge {
+  width: 160px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+/* Custom page footer */
+/* line 162, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.legal-footer {
+  text-align: center;
+  margin: 0 auto;
+  list-style: none;
+}
+
+/* line 167, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.legal-footer li {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 171, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.base-footer {
+  text-align: center;
+  margin: 0 auto;
+  list-style: none;
+}
+
+/* line 176, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.base-footer li {
+  font-size: 13px;
+}
+
+/* line 180, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.current-status-indicator {
+  width: 12px;
+  height: 12px;
+  margin: 0 0 0 5px;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+/* line 187, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.current-status-indicator.small {
+  width: 8px;
+  height: 8px;
+  margin: 0 0 0 5px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* line 194, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.current-status-indicator.green, .current-status-indicator.green-gradient {
+  background: #27ae60;
+}
+
+/* line 197, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.current-status-indicator.yellow {
+  background: #ffa837;
+}
+
+/* line 200, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.current-status-indicator.red {
+  background: #c44031;
+}
+
+/* line 203, ../../RedoxEngine_repo/ng-app/app/styles/partials/_footer.scss */
+.current-status-indicator.blue {
+  background: #00aaf0;
+}
+
+/* Table styles */
+/* line 2, ../../RedoxEngine_repo/ng-app/app/styles/partials/_list-table.scss */
+.list-table {
+  width: 100%;
+  border: solid 1px #dbd9d6;
+}
+/* line 7, ../../RedoxEngine_repo/ng-app/app/styles/partials/_list-table.scss */
+.list-table thead tr {
+  background-color: #00b588;
+}
+/* line 9, ../../RedoxEngine_repo/ng-app/app/styles/partials/_list-table.scss */
+.list-table thead tr th {
+  padding: 10px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+/* line 19, ../../RedoxEngine_repo/ng-app/app/styles/partials/_list-table.scss */
+.list-table tbody tr td {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+/* line 27, ../../RedoxEngine_repo/ng-app/app/styles/partials/_list-table.scss */
+.list-table tbody tr:nth-child(even) {
+  background-color: #F9F8F7;
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/partials/_list-table.scss */
+.list-table tbody tr:nth-child(even) input[type=text] {
+  background: rgba(253, 253, 253, 0.75);
+}
+/* line 35, ../../RedoxEngine_repo/ng-app/app/styles/partials/_list-table.scss */
+.list-table tbody tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+/* line 38, ../../RedoxEngine_repo/ng-app/app/styles/partials/_list-table.scss */
+.list-table tbody tr:nth-child(odd) input[type=text] {
+  border: solid thin #7c7c81;
+}
+
+/* Animations */
+/* line 2, ../../RedoxEngine_repo/ng-app/app/styles/partials/_animations.scss */
+.ng-hide-add.ng-hide-add-active,
+.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+/* line 8, ../../RedoxEngine_repo/ng-app/app/styles/partials/_animations.scss */
+.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 9, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid-cell {
+  flex: 1;
+}
+
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--flexCells > .Grid-cell {
+  display: flex;
+}
+
+/* line 19, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--top {
+  align-items: flex-start;
+}
+
+/* line 23, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--bottom {
+  align-items: flex-end;
+}
+
+/* line 27, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--center {
+  align-items: center;
+}
+
+/* line 31, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid-cell--top {
+  align-self: flex-start;
+}
+
+/* line 35, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid-cell--bottom {
+  align-self: flex-end;
+}
+
+/* line 39, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid-cell--center {
+  align-self: center;
+}
+
+/* line 48, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--fit > .Grid-cell {
+  flex: 1;
+}
+
+/* line 51, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--full > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+/* line 54, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--1of2 > .Grid-cell {
+  flex: 0 0 50%;
+}
+
+/* line 57, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--1of3 > .Grid-cell {
+  flex: 0 0 33.3333%;
+}
+
+/* line 60, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--1of4 > .Grid-cell {
+  flex: 0 0 25%;
+}
+
+/* line 63, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--hide > .Grid-cell {
+  display: none;
+}
+
+@media (min-width: 24em) {
+  /* line 48, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  /* line 51, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  /* line 54, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  /* line 57, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%;
+  }
+
+  /* line 60, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+
+  /* line 63, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--hide > .Grid-cell {
+    display: none;
+  }
+}
+@media (min-width: 36em) {
+  /* line 48, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  /* line 51, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  /* line 54, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  /* line 57, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%;
+  }
+
+  /* line 60, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+
+  /* line 63, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--hide > .Grid-cell {
+    display: none;
+  }
+}
+@media (min-width: 48em) {
+  /* line 48, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+
+  /* line 51, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+
+  /* line 54, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+
+  /* line 57, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%;
+  }
+
+  /* line 60, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%;
+  }
+
+  /* line 63, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--hide > .Grid-cell {
+    display: none;
+  }
+}
+/* line 84, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--gutters {
+  margin-left: -1em;
+}
+/* line 86, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--gutters > .Grid-cell {
+  padding-left: 1em;
+}
+
+/* line 90, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--guttersLarge {
+  margin-left: -1.5em;
+}
+/* line 92, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--guttersLarge > .Grid-cell {
+  padding-left: 1.5em;
+}
+
+/* line 96, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--gutters2x {
+  margin-left: -2em;
+}
+/* line 98, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--gutters2x > .Grid-cell {
+  padding-left: 2em;
+}
+
+/* line 102, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--gutters3x {
+  margin-left: -3em;
+}
+/* line 104, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+.Grid--gutters3x > .Grid-cell {
+  padding-left: 3em;
+}
+
+@media (min-width: 24em) {
+  /* line 84, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--gutters {
+    margin-left: -1em;
+  }
+  /* line 86, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--gutters > .Grid-cell {
+    padding-left: 1em;
+  }
+
+  /* line 90, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--guttersLarge {
+    margin-left: -1.5em;
+  }
+  /* line 92, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--guttersLarge > .Grid-cell {
+    padding-left: 1.5em;
+  }
+
+  /* line 96, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--gutters2x {
+    margin-left: -2em;
+  }
+  /* line 98, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--gutters2x > .Grid-cell {
+    padding-left: 2em;
+  }
+
+  /* line 102, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--gutters3x {
+    margin-left: -3em;
+  }
+  /* line 104, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .small-Grid--gutters3x > .Grid-cell {
+    padding-left: 3em;
+  }
+}
+@media (min-width: 36em) {
+  /* line 84, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--gutters {
+    margin-left: -1em;
+  }
+  /* line 86, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--gutters > .Grid-cell {
+    padding-left: 1em;
+  }
+
+  /* line 90, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--guttersLarge {
+    margin-left: -1.5em;
+  }
+  /* line 92, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--guttersLarge > .Grid-cell {
+    padding-left: 1.5em;
+  }
+
+  /* line 96, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--gutters2x {
+    margin-left: -2em;
+  }
+  /* line 98, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--gutters2x > .Grid-cell {
+    padding-left: 2em;
+  }
+
+  /* line 102, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--gutters3x {
+    margin-left: -3em;
+  }
+  /* line 104, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .med-Grid--gutters3x > .Grid-cell {
+    padding-left: 3em;
+  }
+}
+@media (min-width: 48em) {
+  /* line 84, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--gutters {
+    margin-left: -1em;
+  }
+  /* line 86, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--gutters > .Grid-cell {
+    padding-left: 1em;
+  }
+
+  /* line 90, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--guttersLarge {
+    margin-left: -1.5em;
+  }
+  /* line 92, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--guttersLarge > .Grid-cell {
+    padding-left: 1.5em;
+  }
+
+  /* line 96, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--gutters2x {
+    margin-left: -2em;
+  }
+  /* line 98, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--gutters2x > .Grid-cell {
+    padding-left: 2em;
+  }
+
+  /* line 102, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--gutters3x {
+    margin-left: -3em;
+  }
+  /* line 104, ../../RedoxEngine_repo/ng-app/app/styles/partials/_grid.scss */
+  .large-Grid--gutters3x > .Grid-cell {
+    padding-left: 3em;
+  }
+}
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/partials/_hl7-display.scss */
+.display-hl7 {
+  background-color: white;
+  padding: 1em;
+  border: 0;
+  overflow-wrap: break-word;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/partials/_json-display.scss */
+.json-display-wrapper {
+  font-weight: normal;
+}
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/partials/_json-display.scss */
+.json-display-wrapper a#view-type-toggle {
+  float: right;
+  padding-right: 20px;
+  padding-top: 5px;
+  margin-left: -200px;
+}
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/partials/_json-display.scss */
+.json-display-wrapper .json-formatter-container {
+  padding: 5px;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#call-to-action-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/index/up_column.png");
+  background-repeat: repeat-x repeat-y;
+  width: 100%;
+  height: 680px;
+}
+
+/* line 7, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#call-to-action-block {
+  margin-top: 240px;
+  padding-right: 40px;
+  padding-left: 24px;
+  color: #dbd9d6;
+  line-height: 1.2;
+}
+
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#call-to-action-block h3 {
+  font-weight: bold;
+}
+
+/* line 17, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#schedule-demo-button {
+  width: 200px;
+  height: 44px;
+}
+
+/* line 21, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#schedule-demo-button:hover {
+  background-image: url("../images/index/Redox_Website_Button_ScheduleADemo_Rollover.png");
+  cursor: pointer;
+}
+
+/* line 25, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#video-embed {
+  margin-top: 260px;
+}
+/* line 27, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#video-embed img {
+  width: 100%;
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#video-embed .video-embed-play-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 30px);
+  padding-top: 21%;
+  height: 100%;
+  margin-left: 15px;
+  text-align: center;
+  font-size: 20px;
+  opacity: 0;
+}
+/* line 41, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#video-embed .video-embed-play-buttons:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  opacity: 1;
+}
+/* line 46, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#video-embed .video-embed-play-buttons a {
+  color: #FFFFFF;
+}
+/* line 48, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#video-embed .video-embed-play-buttons a i {
+  font-size: 60px;
+}
+/* line 52, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#video-embed .video-embed-play-buttons a:hover {
+  color: #FFFFFF;
+}
+/* line 55, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#video-embed .video-embed-play-buttons span {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+/* line 63, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#tagline-section {
+  background-image: url("../images/index/brr.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 80px;
+  width: 100%;
+}
+
+/* line 70, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#tagline-block {
+  margin-top: 300px;
+  color: #dbd9d6;
+  line-height: 1.2;
+}
+
+/* line 75, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#tagline-block h2 {
+  font-weight: bold;
+}
+
+/* line 78, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#the-family {
+  width: 100%;
+  padding-bottom: 60px;
+  background-color: #e6e4e2;
+  line-height: 1.2;
+  color: #7c7c81;
+}
+
+/* line 86, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#the-family-block {
+  margin-top: 80px;
+}
+
+/* line 89, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#the-family-block h2 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* line 93, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#view-gallery-button {
+  width: 200px;
+  height: 44px;
+  margin: 40px auto;
+  display: block;
+}
+
+/* line 99, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+#view-gallery-button:hover {
+  cursor: pointer;
+}
+
+/* line 103, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+.menu-link-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 108, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+.menu-link-list li {
+  display: inline;
+  margin-left: 4px;
+  margin-right: 4px;
+  text-align: right;
+}
+
+/* line 114, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+.menu-link-list a {
+  color: #dbd9d6;
+  font-weight: normal !important;
+}
+
+/* line 118, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+.menu-link-list a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* line 122, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+.menu-right {
+  float: right;
+}
+
+/* line 125, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 939px) {
+  /* line 133, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+  .footer-text {
+    padding-left: 2px;
+  }
+
+  /* line 136, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+  #footer-bottom-text {
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  /* line 141, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+  #footer-bottom-text ul li {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+@media (min-width: 940px) {
+  /* line 152, ../../RedoxEngine_repo/ng-app/app/styles/public/_home.scss */
+  #footer-bottom-text {
+    display: block;
+  }
+}
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/public/_faq.scss */
+#faq {
+  padding: 1em;
+  background-color: #7c7c81;
+  min-height: inherit;
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/public/_faq.scss */
+.faq-info {
+  padding: 20px 40px;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/public/_register.scss */
+#registration-container {
+  margin-top: 3em;
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/public/_register.scss */
+.overlay-message-wrapper {
+  padding: 5px;
+  font-size: larger;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/public/_404.scss */
+#not-found-container {
+  width: 100%;
+  min-height: inherit;
+  background-color: #dbd9d6;
+}
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/public/_404.scss */
+#not-found-container #not-found-message-wrapper {
+  text-align: center;
+  padding: 1em;
+}
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/public/_404.scss */
+#not-found-container #redox-not-found-image {
+  position: absolute;
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact {
+  height: 760px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #FFFFFF;
+}
+
+/* line 7, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-heading-block {
+  color: #7c7c81;
+  line-height: 1.2;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* line 13, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-heading-block h2 {
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* line 18, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-heading-block h4 {
+  height: 60px;
+}
+
+/* line 21, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#social-block {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* line 28, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+.social-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 23%;
+}
+
+/* line 33, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#social-block .social-icon img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+/* line 37, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#social-block .social-icon img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+/* line 41, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-form {
+  font-size: 22px;
+  color: #dbd9d6;
+}
+
+/* line 45, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-form form {
+  width: 100%;
+}
+
+/* line 48, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-form input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #dbd9d6;
+  margin-bottom: 20px;
+  color: #7c7c81;
+}
+
+/* line 55, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #dbd9d6;
+}
+
+/* line 58, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #dbd9d6;
+  opacity: 1;
+}
+
+/* line 62, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #dbd9d6;
+  opacity: 1;
+}
+
+/* line 66, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #dbd9d6;
+}
+
+/* line 70, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-form-submit-button {
+  width: 200px;
+  height: 44px;
+  float: right;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+/* line 79, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-form-submit-button img {
+  content: url("../images/index/Redox_Website_Button_SendUsANote.png");
+}
+
+/* line 82, ../../RedoxEngine_repo/ng-app/app/styles/public/_contact.scss */
+#contact-form-submit-button img:hover {
+  content: url("../images/index/Redox_Website_Button_SendUsANote_Rollover.png");
+}
+
+/* line 2, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#company-hero {
+  background-image: url("../images/team/team_capitol.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+/* line 9, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#company-header {
+  width: 100%;
+  text-align: center;
+  padding-top: 480px;
+  color: #fff;
+}
+
+/* line 15, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#company-header h1 {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+/* line 19, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#mission-section {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 40px;
+  margin-top: -10px;
+  width: 100%;
+  padding-bottom: 80px;
+  background-color: #00b588;
+  color: #fff;
+}
+
+/* line 29, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#mission-section-block {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 35, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#mission-section-block h4 {
+  margin-top: 50px;
+}
+
+/* line 39, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#team-section {
+  background-color: #FFFFFF;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* line 46, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#team-section h1 {
+  color: #43434a;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 51, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-row {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 58, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile {
+  padding: 20px;
+  text-align: center;
+}
+
+/* line 62, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 68, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile figure {
+  margin: 0 auto;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+
+/* line 76, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile figcaption h4 {
+  display: table-cell;
+  position: relative;
+  top: -40px;
+  width: 300px;
+  vertical-align: middle;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+/* line 88, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile:hover figcaption {
+  opacity: 1;
+}
+
+/* line 91, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile img {
+  display: block;
+  height: auto;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  max-width: 100%;
+}
+
+/* line 99, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile:hover img {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+/* line 104, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile:hover figcaption h4 {
+  -moz-transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+
+/* line 109, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-tile figcaption {
+  background: rgba(0, 181, 136, 0.8);
+  color: white;
+  display: table;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
+  z-index: 50;
+}
+
+@media (max-width: 460px) {
+  /* line 128, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+  #team-section {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  /* line 132, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+  #team-section img {
+    width: 94%;
+  }
+}
+/* line 136, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-social-icon {
+  font-size: 28px;
+  color: #FFFFFF;
+}
+
+/* line 140, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-social-icon:hover {
+  color: #dc5034;
+}
+
+/* line 143, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-company-link {
+  color: #e6e4e2;
+}
+
+/* line 147, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.team-company-link:hover {
+  color: #dc5034;
+  text-decoration: none;
+}
+
+/* line 153, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#partners-section {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 40px;
+  margin-top: -10px;
+  width: 100%;
+  padding-bottom: 250px;
+  background-color: #00b588;
+  color: #fff;
+}
+
+/* line 163, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#partners-section h1 {
+  color: #dbd9d6;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+/* line 169, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.partner-row {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 174, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.partner-link {
+  width: 215px;
+  float: left;
+  height: 80px;
+  margin: 15px;
+}
+
+/* line 180, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.partner-tile {
+  background-image: url("../images/logos/partners_sprite.png");
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  background-size: cover;
+  width: 100%;
+  height: 80px;
+}
+
+/* line 189, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+.partner-tile:hover {
+  opacity: 1;
+}
+
+/* line 192, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#partner-tile-tmcx {
+  background-position-y: 0px;
+}
+
+/* line 195, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#partner-tile-dreamit {
+  background-position-y: -207px;
+}
+
+/* line 198, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#partner-tile-madisonhealthtech {
+  background-position-y: -307px;
+}
+
+/* line 201, ../../RedoxEngine_repo/ng-app/app/styles/public/_company.scss */
+#partner-tile-healthx {
+  background-position-y: -107px;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info {
+  width: 100%;
+}
+/* line 4, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info h1, #healthsystem-info h2, #healthsystem-info h3 {
+  font-weight: bold;
+}
+/* line 8, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info h4 {
+  color: #dbd9d6;
+  font-style: italic;
+}
+/* line 13, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info p {
+  font-size: 22px;
+}
+/* line 17, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info .row {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+/* line 24, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #schedule-btn {
+  width: 220px;
+  height: 44px;
+  margin: 40px auto;
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-one {
+  background-image: url("../images/healthsysteminfo/hay.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding-bottom: 50px;
+  text-align: center;
+  padding-top: 480px;
+  color: #FFFFFF;
+}
+/* line 38, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-one h1 {
+  font-size: 60px;
+}
+/* line 43, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-two {
+  background-color: #00b588;
+  color: #FFFFFF;
+  text-align: center;
+}
+/* line 47, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-two a {
+  color: #FFFFFF;
+}
+/* line 50, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-two a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+/* line 56, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-three {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/index/up_column.png");
+  background-repeat: repeat-x repeat-y;
+  color: #dbd9d6;
+  text-align: center;
+  padding-bottom: 120px;
+}
+/* line 64, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-four {
+  background-color: #FFFFFF;
+  color: #7c7c81;
+  text-align: center;
+}
+/* line 68, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-four #EHR-logos {
+  padding: 0;
+}
+/* line 70, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-four #EHR-logos img {
+  max-width: 240px;
+  width: 32%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 79, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-five {
+  background-color: #e6e4e2;
+  color: #7c7c81;
+  text-align: center;
+}
+/* line 83, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-five #tools-icons {
+  padding: 0;
+  padding-top: 40px;
+}
+/* line 86, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-five #tools-icons img {
+  max-width: 50px;
+  width: 50%;
+  transition: all 300ms ease-in-out;
+}
+/* line 90, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-five #tools-icons img:hover {
+  transform: scale(1.1);
+}
+/* line 95, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-five #view-gallery-button {
+  margin-top: 50px;
+  display: inline-block;
+}
+/* line 101, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-six {
+  padding-right: 0;
+  padding-left: 0;
+  background-color: #FFFFFF;
+  color: #7c7c81;
+  text-align: center;
+}
+/* line 107, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-six .row {
+  padding: 0;
+}
+/* line 110, ../../RedoxEngine_repo/ng-app/app/styles/public/_healthsysteminfo.scss */
+#healthsystem-info #row-six h4 {
+  color: #7c7c81;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+.green-gradient {
+  background: linear-gradient(128deg, #00b588, #008262);
+  background-attachment: fixed;
+}
+
+/* line 7, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+#signup-fullpage {
+  width: 100vw;
+  height: 100vh;
+  min-height: 700px;
+  min-width: 400px;
+}
+
+/* line 13, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+#signup-container {
+  width: 366px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+/* line 21, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+#signup-container .logo {
+  width: 366px;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 15px;
+}
+
+/* line 28, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+#signup-form span {
+  color: #dbd9d6;
+}
+/* line 31, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+#signup-form a {
+  color: #FFFFFF;
+}
+/* line 34, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+#signup-form a:hover {
+  color: #FFFFFF;
+}
+/* line 37, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+#signup-form input {
+  width: 340px;
+}
+/* line 40, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+#signup-form .form-error {
+  color: #FFFFFF;
+}
+
+/* line 44, ../../RedoxEngine_repo/ng-app/app/styles/public/_signup.scss */
+.login-row {
+  margin-top: 20px;
+  text-align: center;
+  color: #dbd9d6;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#pricing-info {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  text-align: center;
+  background-image: url("../images/pricingBG3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#pricing-lead {
+  height: 180px;
+  color: #dbd9d6;
+  padding-top: 50px;
+}
+
+/* line 16, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#pricing-container {
+  color: #dbd9d6;
+  position: relative;
+  font-size: 0;
+  margin: 70px auto 0;
+  max-width: 1014px;
+  padding: 0 20px;
+  z-index: 50;
+}
+/* line 24, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#pricing-container .pricing-panel {
+  z-index: 100;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  width: 80vw;
+  max-width: 300px;
+}
+
+/* line 38, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#calculator-container {
+  color: #dbd9d6;
+  position: relative;
+  font-size: 0;
+  margin: 40px auto 100px;
+  max-width: 925px;
+  padding: 0 20px;
+  z-index: 50;
+  border-radius: 5px;
+}
+/* line 47, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#calculator-container .pricing-header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 51, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#calculator-container .calculator-panel {
+  background-color: #F9F8F7;
+  color: #43434a;
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+/* line 58, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#calculator-container .calculator-panel:not(:last-child) {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #dbd9d6;
+}
+
+/* line 71, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-header {
+  text-align: left;
+  background: #00b588 linear-gradient(135deg, #00b588, #008262);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+/* line 78, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-header span {
+  font-size: 20px;
+  width: 100%;
+}
+/* line 82, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-header .pricing-panel-icon {
+  float: right;
+}
+
+/* line 86, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-main {
+  background-color: #F9F8F7;
+}
+/* line 88, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-main ul {
+  margin-bottom: 0px !important;
+  padding-left: 0px;
+}
+/* line 91, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-main ul li {
+  color: #43434a;
+  font-size: 14px;
+  padding: 20px 10px;
+  border-bottom-color: #dbd9d6;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+/* line 101, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-cost {
+  background-color: #43434a;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 107, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-cost span {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 115, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator {
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: #F9F8F7;
+}
+/* line 119, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-dm-icons {
+  font-size: 13px;
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+}
+/* line 125, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator h5 {
+  color: #43434a;
+  font-size: 16px;
+  margin-top: 0px;
+}
+/* line 130, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* line 137, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations {
+  margin-left: 10px;
+  margin-right: 10px;
+  /*hide the outline behind the border*/
+}
+/* line 140, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations .org-count {
+  color: #7c7c81;
+}
+/* line 143, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range] {
+  /*removes default webkit styles*/
+  -webkit-appearance: none;
+  /*fix for FF unable to apply focus style bug */
+  border: 1px solid white;
+  /*required for proper track sizing in FF*/
+  cursor: pointer;
+}
+/* line 153, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+/* line 159, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #00b588;
+  margin-top: -4px;
+}
+/* line 168, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]:focus {
+  outline: none;
+}
+/* line 171, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+/* line 175, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]::-moz-range-track {
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+/* line 181, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]::-moz-range-thumb {
+  border: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #00b588;
+}
+/* line 190, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+/* line 195, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]::-ms-track {
+  height: 5px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 6px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+/* line 208, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]::-ms-fill-lower {
+  background: #777;
+  border-radius: 10px;
+}
+/* line 212, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 10px;
+}
+/* line 216, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]::-ms-thumb {
+  border: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #00b588;
+}
+/* line 223, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]:focus::-ms-fill-lower {
+  background: #888;
+}
+/* line 226, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-calculator .pricing-calculator-organizations input[type=range]:focus::-ms-fill-upper {
+  background: #ccc;
+}
+
+/* line 231, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-ruler {
+  list-style-type: none;
+  padding-left: 4px;
+  text-align: left;
+  margin-top: 4px;
+}
+/* line 236, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-ruler li {
+  display: inline-block;
+  width: 10.8%;
+  font-size: 10px;
+  color: #dbd9d6;
+  height: 12px;
+}
+/* line 242, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.pricing-ruler li.selected {
+  color: #7c7c81;
+}
+
+/* line 247, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+.rui-tooltip-show {
+  z-index: 100000;
+}
+
+/* line 250, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+dfn {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  /* line 258, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+  .subscription-option:nth-child(3n+1) {
+    clear: both;
+  }
+}
+@media (max-width: 768px) {
+  /* line 264, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+  .subscription-option:nth-child(2n+1) {
+    clear: both;
+  }
+}
+/* line 270, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option {
+  min-height: 50px;
+  padding: 4px;
+  float: left;
+  color: #43434a;
+  text-align: left;
+}
+/* line 276, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option.selected {
+  color: #00b588;
+}
+/* line 279, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option .subscription-icon {
+  font-size: 24px;
+}
+/* line 282, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option:hover {
+  -webkit-box-shadow: 0px 0px 3px 0px #00b588;
+  -moz-box-shadow: 0px 0px 3px 0px #00b588;
+  box-shadow: 0px 0px 3px 0px #00b588;
+  cursor: pointer;
+  color: #00b588;
+}
+/* line 289, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option:after {
+  clear: both;
+}
+/* line 292, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option .subscription-icon-container {
+  width: 28px;
+  float: left;
+  padding-top: 4px;
+  margin-right: 4px;
+}
+/* line 298, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option .subscription-description-container {
+  float: left;
+  padding-left: 6px;
+}
+/* line 302, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option .subscription-description-title {
+  font-size: 16px;
+}
+/* line 305, ../../RedoxEngine_repo/ng-app/app/styles/public/_pricing.scss */
+#subscription-options .subscription-option .subscription-description-text {
+  font-size: 12px;
+  padding-left: 32px;
+}
+
+/* line 14, ../../RedoxEngine_repo/ng-app/app/styles/public/_index.scss */
+#public-view-wrapper {
+  width: 100%;
+  min-height: calc(100vh - 33px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/index/up_column.png");
+  background-repeat: repeat-x repeat-y;
+}
+
+/* line 21, ../../RedoxEngine_repo/ng-app/app/styles/public/_index.scss */
+.public-form-wrapper {
+  text-align: center;
+  padding: 3em;
+}
+
+/* line 25, ../../RedoxEngine_repo/ng-app/app/styles/public/_index.scss */
+html, body {
+  overflow-x: hidden;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-object-wrapper:last-child {
+  margin-bottom: 100px;
+}
+
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+#hl7input {
+  min-height: 200px;
+  margin-top: 0px;
+}
+
+/* line 10, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-data-model-select {
+  float: left;
+  margin: 0px 10px 10px 0px;
+}
+
+/* line 19, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-select {
+  width: 200px;
+}
+
+/* line 23, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-test-data-select {
+  float: left;
+  margin: 0px 10px 10px 0px;
+}
+/* line 26, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-test-data-select h5 {
+  text-align: center;
+}
+
+/* line 31, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-alert-danger-wrapper {
+  margin-top: 20px;
+}
+
+/* line 36, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-actions-wrapper button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* line 42, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.dev-tools-spinner-wrapper {
+  text-align: center;
+}
+/* line 44, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.dev-tools-spinner-wrapper h5 {
+  text-align: left;
+}
+/* line 47, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.dev-tools-spinner-wrapper .ion-loading-a {
+  font-size: 30px;
+}
+
+/* line 52, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-json-editor {
+  min-height: 300px;
+}
+/* line 55, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-json-editor .ace_content {
+  min-height: 300px;
+}
+
+/* line 60, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+.devtools-help-link {
+  margin-top: 20px;
+}
+
+/* format json nicely */
+/* line 66, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+pre {
+  background-color: ghostwhite;
+  border: 1px solid silver;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+/* line 72, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+pre .json-key {
+  color: brown;
+}
+/* line 75, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+pre .json-value {
+  color: navy;
+}
+/* line 78, ../../RedoxEngine_repo/ng-app/app/styles/devtools/_index.scss */
+pre .json-string {
+  color: olive;
+}
+
+/* admin/_index.scss */
+/* admin/_errors.scss */
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/admin/_errors.scss */
+.admin-error-table-wrapper {
+  min-height: 420px;
+}
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/admin/_errors.scss */
+.admin-error-table-wrapper .admin-error-table {
+  width: 100%;
+}
+
+/* admin/_messages.scss */
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/admin/_messages.scss */
+.admin-message-table-wrapper {
+  min-height: 420px;
+}
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/admin/_messages.scss */
+.admin-message-table-wrapper .admin-message-table {
+  width: 100%;
+}
+
+/* admin/_configurations.scss */
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.wrap-text {
+  word-wrap: break-word;
+}
+
+/* line 7, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.inline-group > pre {
+  margin-top: 0;
+}
+
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.modal-dialog.configuration-modal {
+  min-height: 50px;
+}
+
+@media (min-width: 768px) {
+  /* line 16, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+  .modal-dialog.configuration-modal {
+    width: 80%;
+  }
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.modal-dialog.filter-modal {
+  margin-top: 100px;
+}
+/* line 22, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.modal-dialog.filter-modal .dashboard-form-panel {
+  margin-top: 30px;
+}
+
+/* Below are styles used for the old editor */
+/* line 29, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.create-configuration-button-wrapper {
+  margin-top: 30px;
+}
+
+/* line 33, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+span.remove-new-default-field:hover {
+  cursor: pointer;
+}
+
+/* line 37, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+span.remove-new-override-field:hover {
+  cursor: pointer;
+}
+
+/* line 41, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-wizard-select {
+  margin-bottom: 20px;
+}
+/* line 45, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-wizard-select button {
+  min-width: 200px;
+}
+
+/* line 50, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+#configuration-wizard-create {
+  margin-bottom: 20px;
+}
+
+/* line 54, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-table > tbody > tr > td > input {
+  width: 100%;
+}
+
+/* line 58, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-table > tbody > tr > td > input:disabled {
+  color: grey;
+  width: 100%;
+  background-color: inherit;
+}
+
+/* line 64, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-table > tbody > tr > td > span > input:disabled, .configuration-table > tbody > tr:nth-child(even) > td > span > input:disabled {
+  color: grey;
+  width: 100%;
+  background-color: inherit;
+}
+
+/* line 71, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-default-fields > thead > tr > td:nth-child(3),
+.configuration-default-fields > thead > tr > td:nth-child(5),
+.configuration-default-fields > thead > tr > td:nth-child(7),
+.configuration-default-fields > tbody > tr > td:nth-child(3),
+.configuration-default-fields > tbody > tr > td:nth-child(5),
+.configuration-default-fields > tbody > tr > td:nth-child(7) {
+  width: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/* line 82, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-override-fields > thead > tr > td:nth-child(4),
+.configuration-override-fields > thead > tr > td:nth-child(6),
+.configuration-override-fields > thead > tr > td:nth-child(8),
+.configuration-override-fields > tbody > tr > td:nth-child(4),
+.configuration-override-fields > tbody > tr > td:nth-child(6),
+.configuration-override-fields > tbody > tr > td:nth-child(8) {
+  width: 5px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/* line 93, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+#configuration-compiled-color-keys {
+  max-width: 600px;
+}
+
+/* line 97, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-table > tbody > tr > td.compiled-level-parent,
+.configuration-table > tbody > tr.compiled-level-parent {
+  background-color: #E3ADFD;
+}
+
+/* line 102, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-table > tbody > tr > td.compiled-level-self,
+.configuration-table > tbody > tr.compiled-level-self {
+  background-color: #f9f774;
+}
+
+/* line 107, ../../RedoxEngine_repo/ng-app/app/styles/admin/_configurations.scss */
+.configuration-import-export {
+  float: right;
+}
+
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/admin/_subscriptions.scss */
+.subscription-create-container .admin-subscription-form button {
+  width: 100%;
+}
+
+/* line 8, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.healthSystem-form-container {
+  margin-top: 30px;
+}
+
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+#timeZone {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* line 15, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.timezone-wrapper {
+  height: 34px;
+}
+
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.admin-summary-box {
+  min-height: 200px;
+}
+
+/* line 25, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.summary-header-text {
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.tiny-button-container {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* line 34, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.tiny-button-container a:hover {
+  text-decoration: none;
+}
+
+/* line 37, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.tiny-button {
+  background-color: #000000;
+  border: none;
+}
+
+/* line 42, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.tags-table,
+.tags-table > thead > tr > th,
+.tags-table > tbody > tr > th,
+.tags-table > tfoot > tr > th,
+.tags-table > thead > tr > td,
+.tags-table > tbody > tr > td,
+.tags-table > tfoot > tr > td {
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+/* line 53, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.admin-form-error {
+  border-color: red;
+}
+
+/* line 57, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.st-sort-ascent:before {
+  content: '\25B2';
+}
+
+/* line 61, ../../RedoxEngine_repo/ng-app/app/styles/admin/_index.scss */
+.st-sort-descent:before {
+  content: '\25BC';
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.docs-objects-wrapper {
+  padding-bottom: 40px;
+}
+
+/* line 4, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.docs-api-wrapper {
+  margin-top: -20px;
+}
+
+/* line 7, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.spacer {
+  height: 100px;
+  clear: both;
+}
+
+/* line 11, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.docs-api-section-header {
+  padding-top: 60px;
+}
+
+/* line 19, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.docs-event-type-notes {
+  margin-bottom: 20px;
+}
+
+/* line 23, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.docs-section-header {
+  color: #00b588;
+}
+
+/* line 26, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.check-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* line 30, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.check-list li:before {
+  content: "\2713";
+  margin-right: 6px;
+}
+
+/* line 34, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.check-list li {
+  margin-left: 10px;
+}
+
+/* line 37, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.callout-box {
+  padding: 20px;
+  border-width: 1px;
+  border-color: #333;
+  border-style: solid;
+  background-color: #FFF;
+}
+
+/* line 49, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+.list-table th {
+  min-width: 90px;
+}
+
+/* line 53, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+#Results\.New .list-table {
+  font-size: 12px;
+}
+/* line 55, ../../RedoxEngine_repo/ng-app/app/docs/_index.scss */
+#Results\.New .list-table p {
+  font-size: 12px;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/legal/_index.scss */
+.splash-text {
+  text-align: center;
+  width: 100%;
+}
+
+/* line 4, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+.c-galleryNav {
+  /* -ctag-example: ...
+          { .c-galleryNav__title }
+          { .c-galleryNav__group }
+          { .c-galleryNav__group--open }
+          { .c-galleryNav__group };*/
+  /* -ctag-status: prod;*/
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #eee;
+  color: #808080;
+}
+@media (max-width: 768px) {
+  /* line 17, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+  .c-galleryNav--open {
+    display: block !important;
+  }
+}
+/* line 21, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+.c-galleryNav__title {
+  /* -ctag-example: ...Gallery Filters;*/
+  width: 100%;
+  height: 44px;
+  padding-left: 16.5px;
+  padding-right: 16.5px;
+  font-size: 17px;
+  line-height: 38.5px;
+  line-height: 44px;
+}
+/* line 32, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+.c-galleryNav__group {
+  /* -ctag-example: ...
+          { .c-galleryNav__group__title }
+          { .c-galleryNav__group__item }
+          { .c-galleryNav__group__item }
+          <div class="
+                          c-galleryNav__group__item
+                          c-galleryNav__group__item--selected">Item Name</div>
+          { .c-galleryNav__group__item }
+          { .c-galleryNav__group__item };*/
+  width: 100%;
+}
+/* line 45, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+.c-galleryNav__group__title {
+  /* -ctag-example: ...Group Title;*/
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 15px;
+  line-height: 22px;
+  height: 33px;
+  line-height: 33px;
+  padding-left: 16.5px;
+  padding-right: 16.5px;
+  background-color: #E6E6E6;
+  cursor: hand;
+  cursor: pointer;
+  border-bottom: 1px solid #CCCCCC;
+}
+/* line 3016, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-galleryNav__group__title:hover {
+  background-color: #fff;
+}
+/* line 60, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+.c-galleryNav__group__item {
+  /* -ctag-example: ...Item Name;*/
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 22px;
+  height: 33px;
+  line-height: 33px;
+  padding-left: 27.5px;
+  padding-right: 27.5px;
+  cursor: hand;
+  cursor: pointer;
+  display: none;
+}
+/* line 3016, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-galleryNav__group__item:hover {
+  background-color: #fff;
+}
+/* line 73, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+.c-galleryNav__group__item--selected {
+  /* some sequence issue here...this state reference doesn't work. */
+  /* -ctag-example: <div class="
+                  c-galleryNav__group__item
+                  c-galleryNav__group__item--selected">Item Name</div>;*/
+  background-color: #00DFA7;
+  color: #fff;
+}
+/* line 3016, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-galleryNav__group__item--selected:hover {
+  background-color: #fff;
+}
+/* line 3086, ../../RedoxEngine_repo/bower_components/redox-css-model/dist/csscore/scss/_core_mixins.scss */
+.c-galleryNav__group__item--selected:hover {
+  color: #808080;
+}
+/* line 87, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+.c-galleryNav__group--open {
+  /* -ctag-example: ...
+          { .c-galleryNav__group__title }
+          { .c-galleryNav__group__item }
+          { .c-galleryNav__group__item }
+          <div class="
+                          c-galleryNav__group__item
+                          c-galleryNav__group__item--selected">Item Name</div>
+          { .c-galleryNav__group__item }
+          { .c-galleryNav__group__item };*/
+}
+/* line 98, ../../RedoxEngine_repo/ng-app/app/gallery/_c-galleryNav.scss */
+.c-galleryNav__group--open .c-galleryNav__group__item {
+  display: block;
+}
+
+/* line 12, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-hide {
+  display: none;
+}
+
+/* line 16, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+#galleryContainer, #galleryOuterContainer {
+  cursor: auto;
+}
+
+/* line 20, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-title {
+  max-width: 300px;
+  padding-top: 10px;
+}
+
+/* line 25, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-fade {
+  opacity: .2;
+}
+
+/* line 32, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-align,
+.table > thead > tr > th.gallery-align,
+.table > tbody > tr > th.gallery-align,
+.table > tfoot > tr > th.gallery-align,
+.table > thead > tr > td.gallery-align,
+.table > tbody > tr > td.gallery-align,
+.table > tfoot > tr > td.gallery-align {
+  vertical-align: middle;
+}
+
+/* line 42, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-toggle > i {
+  cursor: pointer;
+  position: absolute;
+  font-size: 15px;
+  font-style: normal;
+}
+
+/* line 49, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-fade-in {
+  transition: all linear 0.25s;
+  -moz-transition: all linear 0.25s;
+  -webkit-transition: all linear 0.25s;
+}
+
+/* line 55, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-fade-in.ng-enter,
+.gallery-fade-in.ng-move {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s;
+  -moz-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s;
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.75s;
+}
+
+/* line 62, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-fade-in.ng-enter,
+.gallery-fade-in.ng-leave.ng-leave-active,
+.gallery-fade-in.ng-move {
+  opacity: 0;
+}
+
+/* line 68, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-fade-in.ng-leave,
+.gallery-fade-in.ng-enter.ng-enter-active,
+.gallery-fade-in.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+/* line 86, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-grid > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 91, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile {
+  display: inline-block;
+  margin: 16px 16px 0 0;
+  width: 175px;
+  max-width: 175px;
+  height: 175px;
+  padding: 15px;
+  backface-visibility: hidden;
+}
+/* line 93, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile:hover {
+  color: #00b588;
+}
+
+/* line 98, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile-register {
+  display: inline-block;
+  margin: 16px 16px 0 0;
+  width: 175px;
+  max-width: 175px;
+  height: 175px;
+  padding: 15px;
+  backface-visibility: hidden;
+  margin-left: -4px;
+  border-color: #7c7c81;
+  border-style: dashed;
+  text-align: center;
+  text-decoration: none;
+  color: #7c7c81;
+  cursor: pointer;
+  position: relative;
+}
+/* line 108, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile-register > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  margin: 0px;
+}
+
+/* line 114, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile-register:hover {
+  color: #00b588;
+  border-color: #00b588;
+  text-decoration: none;
+}
+
+/* line 120, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile-icon {
+  width: auto;
+  max-height: 100px;
+  max-width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* line 127, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile-icon-container {
+  height: 115px;
+  width: 115px;
+  transition: all .2s;
+  margin: auto;
+  position: relative;
+}
+
+/* line 135, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile-title {
+  font-size: 15px;
+  padding: 5px;
+  transition: all .2s;
+  text-align: center;
+}
+
+/* line 142, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tile:hover {
+  cursor: pointer;
+}
+
+/* line 157, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-grid-link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 143px;
+  max-height: 143px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  /* works with row or column */
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  z-index: 1;
+  color: #00B588;
+  font-weight: bold;
+  font-size: 24px;
+  opacity: 0;
+  transition: all .2s;
+}
+
+/* line 179, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-grid-link-logo {
+  padding-bottom: 10px;
+}
+
+/* line 184, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 189, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+  .gallery-modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+/* line 197, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* line 208, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-tags {
+  padding-left: 10px;
+}
+
+/* line 212, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-list-row {
+  height: 40px;
+  overflow: hidden;
+}
+
+/* line 218, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.email-confirmation {
+  display: flex;
+  margin: 0 auto;
+}
+
+/* line 223, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-contact-message {
+  float: left;
+}
+
+/* line 227, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-form-error {
+  border-color: red;
+}
+
+/* line 231, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+.gallery-toggle {
+  width: 100px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 236, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+  .gallery-filters-button {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 242, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+  .layout-view-footer-wrapper {
+    width: auto;
+    margin-left: 0px;
+  }
+
+  /* line 247, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+  .gallery-toggle > button {
+    display: none;
+  }
+
+  /* line 251, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+  .gallery-close-sidenav {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    padding-right: 10px;
+    color: #dbd9d6;
+    background-color: transparent;
+  }
+
+  /* line 261, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+  .gallery-filters-button {
+    width: 105px;
+    cursor: pointer;
+    font-size: 15px;
+    float: right;
+    z-index: 2;
+    font-style: normal;
+  }
+
+  /* line 271, ../../RedoxEngine_repo/ng-app/app/gallery/index.scss */
+  .modal-footer {
+    padding-bottom: 50px;
+  }
+}
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_invitation.scss */
+.organization-invitation-form-wrapper {
+  margin-top: 30px;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.organization-form-container {
+  margin-top: 30px;
+}
+
+/* line 6, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement .well {
+  overflow-y: auto;
+}
+/* line 9, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement h3, .click-through-agreement h4 {
+  text-align: center;
+}
+/* line 12, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement h4, .click-through-agreement h5 {
+  text-decoration: underline;
+}
+/* line 15, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement ul {
+  list-style-type: disc;
+}
+/* line 18, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement ol {
+  list-style-type: decimal;
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement ol ol {
+  list-style-type: upper-roman;
+}
+/* line 22, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement ol ol ol {
+  list-style-type: lower-alpha;
+}
+/* line 24, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement ol ol ol ol {
+  list-style-type: lower-roman;
+}
+/* line 30, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.click-through-agreement button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* line 39, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+/* line 44, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.overview-label {
+  font-size: 16px;
+}
+
+/* line 48, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.border-bar-right {
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #eee;
+}
+
+/* line 54, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.dataModel-icon {
+  color: #D8D8D8;
+}
+
+/* line 59, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.dataModel-icon.active {
+  color: #00b588;
+}
+
+/* line 63, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_organization.scss */
+.data-models-selectable > .fa:hover {
+  cursor: pointer;
+  color: #00b588;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_subscriptions.scss */
+.subscription-organization-name {
+  font-weight: bold;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_profile.scss */
+.img-cropper-bkg {
+  background: #E4E4E4;
+  overflow: hidden;
+  width: 500px;
+  height: 350px;
+}
+
+/* line 9, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_profile.scss */
+.icon-thumb {
+  width: 100%;
+  max-width: 125px;
+}
+
+/* line 15, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_profile.scss */
+.icon-thumb-selectable {
+  cursor: pointer;
+  width: 100%;
+  max-width: 125px;
+}
+
+/* line 22, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_profile.scss */
+.center-button {
+  vertical-align: middle;
+  float: none;
+  padding-left: 5px;
+}
+
+/* line 29, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_profile.scss */
+.upload-status {
+  padding: 15px;
+}
+
+/* line 34, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_profile.scss */
+.profile-icon-crop {
+  width: 200px;
+}
+
+/* line 39, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_profile.scss */
+.inline-group.tags-dropdown button {
+  width: calc(100% - 130px);
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_sourceDestCreate.scss */
+.modal-body.rui-modal {
+  padding: 15px 30px;
+}
+
+/* line 5, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_sourceDestCreate.scss */
+input[type="radio"] {
+  margin: 4px;
+}
+
+/* line 9, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_sourceDestCreate.scss */
+.not-allowed {
+  color: #7c7c81;
+}
+
+/* line 13, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_sourceDestCreate.scss */
+.center-spinner svg {
+  display: block;
+  margin: 50px auto;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_billingFields.scss */
+.billing-form .form-control {
+  margin-bottom: 15px;
+  font-family: Courier, monospace;
+  font-weight: 300;
+}
+
+/* line 1, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_upgrade.scss */
+.highlight-container {
+  background-color: #00b588;
+  color: #FFFFFF;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* line 8, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_upgrade.scss */
+.highlight-container a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* line 13, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_upgrade.scss */
+.feature-list {
+  padding: 15px 0 0 10px;
+}
+
+/* line 17, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_upgrade.scss */
+.feature-list i {
+  margin-right: 10px;
+}
+
+/* line 21, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_upgrade.scss */
+.feature-list ul {
+  list-style: none;
+  font-size: 24px;
+  padding: 20px 10px;
+}
+
+/* line 27, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_upgrade.scss */
+.feature-list li {
+  margin-bottom: 20px;
+}
+
+/* line 31, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_upgrade.scss */
+.billing-form {
+  padding: 25px;
+  border-radius: 5px;
+}
+
+/* line 3, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-primary {
+  background-color: #008262;
+  color: #FFFFFF;
+  border-color: #e6e4e2;
+}
+/* line 7, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-primary:hover {
+  background-color: #00b588;
+  color: #FFFFFF;
+}
+/* line 11, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-primary:focus {
+  background-color: #008262;
+  color: #FFFFFF;
+}
+/* line 15, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-primary:disabled {
+  background-color: #43434a;
+  color: #dbd9d6;
+}
+/* line 20, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-primary + .rui-btn-default {
+  background-color: #FFFFFF;
+  color: #7c7c81;
+  border-color: #dbd9d6;
+}
+/* line 25, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-primary + .rui-btn-default:hover {
+  color: #333338;
+  border-color: #43434a;
+}
+/* line 29, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-primary + .rui-btn-default:focus {
+  color: #43434a;
+  border-color: #43434a;
+}
+/* line 33, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-primary + .rui-btn-default:disabled {
+  color: #dbd9d6;
+  border-color: #7c7c81;
+}
+/* line 38, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-secondary {
+  background-color: #FFFFFF;
+  color: #7c7c81;
+  border-color: #dbd9d6;
+}
+/* line 42, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-secondary:hover {
+  color: #333338;
+  border-color: #43434a;
+}
+/* line 46, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-secondary:focus {
+  color: #43434a;
+  border-color: #43434a;
+}
+/* line 50, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-wrapper .rui-btn-secondary:disabled {
+  color: #dbd9d6;
+  border-color: #7c7c81;
+}
+
+/* line 56, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-row {
+  padding: 5px 10px 5px 10px;
+}
+
+/* line 60, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_list.directive.scss */
+.list-item {
+  display: inline-block;
+  width: 90%;
+}
+
+/* line 10, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+#truenorth {
+  font-size: 24px;
+  height: 24px;
+  color: #22826A;
+  z-index: 1;
+  font-weight: bolder;
+}
+
+/* line 19, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-panel {
+  background-color: #FFFFFF;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: #dbd9d6;
+  border-width: 1px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 28, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-panel .dashboard-form-row:first-of-type {
+  background-color: #f9fffd;
+  color: #43434a;
+  font-weight: bold;
+  padding: 16px;
+  font-size: 18px;
+}
+/* line 34, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-panel .dashboard-form-row:first-of-type span {
+  /*float: left;*/
+  margin-top: 6px;
+}
+/* line 38, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-panel .dashboard-form-row:first-of-type i {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+/* line 43, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-panel .form-group {
+  margin-bottom: 0px;
+}
+/* line 46, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-panel .dashboard-form-row:last-of-type {
+  border-style: none;
+}
+/* line 49, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-panel::after {
+  clear: both;
+}
+
+/* line 54, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-row {
+  border-style: solid;
+  border-color: #dbd9d6;
+  border-width: 0px 0px 1px 0px;
+  padding: 16px;
+  min-height: 54px;
+}
+
+/* line 61, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-content-row {
+  border-style: solid;
+  border-color: #dbd9d6;
+  border-width: 0px 0px 1px 0px;
+  padding: 16px;
+  min-height: 54px;
+}
+
+/* line 68, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-row div:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 76, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-table-row {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 95%;
+}
+
+/* line 81, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-table:first-of-type {
+  margin-left: inherit;
+  margin-right: inherit;
+  width: inherit;
+}
+
+/* line 86, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-row label {
+  float: left;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* line 93, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-column-header {
+  margin-bottom: 0px;
+}
+/* line 95, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.dashboard-form-column-header label {
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/* line 100, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group {
+  margin-left: 40%;
+}
+/* line 102, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group input {
+  width: calc(100% - 130px);
+  float: left;
+  margin-right: 10px;
+}
+/* line 107, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group button {
+  float: right;
+  width: 120px;
+}
+/* line 112, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group .editable-buttons button {
+  width: 58px !important;
+}
+/* line 116, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group > span {
+  float: left;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+/* line 122, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group > span.with-button {
+  width: calc(100% - 130px);
+}
+/* line 125, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group .inline-edit-form input {
+  width: 80%;
+}
+/* line 128, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group .editable-input.editable-has-buttons {
+  font-size: 12px;
+  width: calc(60vw - 450px);
+}
+/* line 132, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group .editable-buttons {
+  float: right;
+}
+/* line 135, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group .form-inline, .inline-group .form-group {
+  width: 100%;
+}
+
+/* line 140, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+#verificationTokenForm div, form, input, span, button {
+  transition: all 0s ease !important;
+}
+
+/* line 143, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+#applicationEndpointForm div, form, input, span, button {
+  transition: all 0s ease !important;
+}
+
+/* line 147, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.no-animation {
+  /*CSS transitions*/
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+  /*CSS transforms*/
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+  /*CSS animations*/
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}
+
+/* line 170, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.slider-toggle,
+.dashboard-form-row .toggle {
+  margin: 3px 0;
+  vertical-align: top;
+  display: inline-block;
+  height: 24px;
+}
+/* line 177, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.slider-toggle input,
+.dashboard-form-row .toggle input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+/* line 184, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.slider-toggle input:checked + label,
+.dashboard-form-row .toggle input:checked + label {
+  background: #00b588;
+}
+/* line 187, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.slider-toggle input:checked + label:before,
+.dashboard-form-row .toggle input:checked + label:before {
+  -webkit-transform: translate(76px, 0);
+  transform: translate(76px, 0);
+}
+/* line 191, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.slider-toggle input:checked + label:after,
+.dashboard-form-row .toggle input:checked + label:after {
+  content: attr(data-on);
+  left: 0;
+  right: 16px;
+}
+/* line 196, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.slider-toggle label,
+.dashboard-form-row .toggle label {
+  display: inline-block;
+  width: 100px;
+  height: 24px;
+  border-radius: 12px;
+  background: #7c7c81;
+  position: relative;
+  cursor: pointer;
+  transition: background .2s;
+}
+/* line 206, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.slider-toggle label:before,
+.dashboard-form-row .toggle label:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  margin: 2px;
+  right: auto;
+  transition: all .2s;
+}
+/* line 217, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.slider-toggle label:after,
+.dashboard-form-row .toggle label:after {
+  content: attr(data-off);
+  color: #FFFFFF;
+  position: absolute;
+  top: 2px;
+  left: 16px;
+  right: 0;
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  transition: all .2s;
+}
+
+/* line 232, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.toggle[disabled=disabled] label {
+  cursor: not-allowed;
+}
+
+/* Chip UI */
+/* line 241, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.chip {
+  height: 30px;
+  width: auto;
+  border-radius: 4px;
+  float: left;
+  padding: 6px 6px 6px 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+/* line 249, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.chip span {
+  margin-right: 4px;
+}
+
+/* line 254, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.inline-group button.delete-tag {
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+  cursor: pointer;
+  width: auto;
+}
+
+/* line 267, ../../RedoxEngine_repo/ng-app/app/styles/dashboard/_index.scss */
+.content-json-display > pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: 0;
+  background-color: #FFFFFF;
+}
+
+/* UNIVERSAL STYLES */
+@font-face {
+  font-family: Nexa;
+  font-weight: normal;
+  src: url("../fonts/Nexa-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: Nexa;
+  font-weight: bold;
+  src: url("../fonts/Nexa-Bold.otf") format("opentype");
+}
+/* line 40, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+html {
+  background-color: #7c7c81;
+}
+
+/* line 44, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 50, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Nexa', 'sans-serif';
+  font-weight: normal;
+}
+
+/* line 54, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+h1 {
+  font-size: 48px;
+}
+
+/* line 57, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+h2 {
+  font-size: 36px;
+}
+
+/* line 60, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+h3 {
+  font-size: 32px;
+}
+
+/* line 63, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+h4 {
+  font-size: 28px;
+}
+
+/* line 66, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+h5 {
+  font-size: 24px;
+}
+
+/* line 69, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+p {
+  font-size: 14px;
+}
+
+/* line 72, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+a {
+  color: #00b588;
+}
+
+/* line 75, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+a:hover {
+  background-color: transparent;
+  color: #008262;
+}
+
+/* line 79, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+*[ng-click] {
+  cursor: pointer;
+}
+
+/* line 83, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 89, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.fullscreen {
+  height: calc(100vh - 85px);
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* line 94, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.fullscreen-spinner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 199999;
+  background-color: #e6e4e2;
+}
+
+/* line 101, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.underline {
+  text-decoration: underline;
+}
+
+/* line 104, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+#spinner-container {
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 300px;
+  text-align: center;
+}
+
+/* line 111, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+#spinner-div {
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 116, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+#spinner-text h3 {
+  color: #7c7c81 !important;
+}
+
+@media (max-width: 767px) {
+  /* line 121, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* line 124, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+  .mobile-only {
+    display: inline !important;
+  }
+}
+@media (min-width: 768px) {
+  /* line 129, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+  .desktop-only {
+    display: inline !important;
+  }
+
+  /* line 132, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+  .mobile-only {
+    display: none !important;
+  }
+}
+/* line 137, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.solo-form-wrapper {
+  padding: 3em;
+}
+
+/* line 141, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.solo-form {
+  padding: 10px 40px 20px 40px;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  background-color: rgba(130, 130, 130, 0.75);
+  color: #e6e4e2;
+}
+
+/* line 149, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.submit-button-container {
+  margin-top: 5px;
+}
+
+/* line 153, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.overlay-box-green {
+  text-align: center;
+  background-color: rgba(0, 181, 136, 0.65);
+  width: 100%;
+  min-height: 80px;
+  color: #ffffff;
+}
+/* line 160, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.overlay-box-green h2 {
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+/* line 168, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.login-container .overlay-box-green {
+  margin-left: -15px;
+}
+
+/* line 173, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.create-box-blue {
+  top: 200px;
+  float: left;
+  width: 40%;
+  left: 0;
+  position: fixed;
+  background-color: rgba(82, 200, 229, 0.75);
+  min-height: 80px;
+  margin: 30px -20px 0 0;
+  color: #FFFFFF;
+}
+/* line 183, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.create-box-blue h2 {
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: right;
+  margin-top: 15px;
+}
+
+/* line 192, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.dark-rule {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #555555;
+}
+
+/* line 199, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.error {
+  color: #ff7070;
+}
+
+/* line 203, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.grey-pic {
+  filter: grayscale(100%);
+  /* Current draft standard */
+  -webkit-filter: grayscale(100%);
+  /* New WebKit */
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  /* Not yet supported in Gecko, Opera or IE */
+  filter: url(resources.svg#desaturate);
+  /* Gecko */
+  filter: gray;
+  /* IE */
+  -webkit-filter: grayscale(1);
+  /* Old WebKit */
+  width: 100%;
+}
+
+/* line 215, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.user-list {
+  max-width: 50%;
+}
+/* line 217, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.user-list .user-list-rule {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: 0;
+  border-top: 1px solid #7c7c81;
+}
+
+/* line 224, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.user-list-username {
+  color: #008262;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 229, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.user-list-email {
+  color: #7c7c81;
+  font-size: 14px;
+}
+
+/* line 233, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.user-list-invite-form {
+  margin-bottom: 20px;
+}
+
+/* line 239, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.user-list-invite-input-group {
+  width: 42%;
+  min-width: 250px;
+}
+/* line 242, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.user-list-invite-input-group .input-group-addon {
+  width: 40px !important;
+}
+
+/* line 247, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.strike {
+  text-decoration: line-through;
+}
+
+/* line 251, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.powered-by {
+  text-align: right;
+}
+
+/* line 256, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.view-header {
+  font-weight: 400;
+  font-size: 30px;
+  padding-top: 0px;
+}
+
+/* line 262, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.start-hidden {
+  display: none;
+}
+
+/* line 266, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.fullscreen-broken-glass {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: rgba(142, 142, 142, 0.5);
+  background-image: url("../images/broken-glass.png");
+}
+
+/* line 279, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.field-not-set {
+  color: red;
+  font-style: italic;
+}
+
+/* line 284, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.hard-wrap {
+  word-wrap: break-word;
+}
+
+/* line 288, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+#changeSecretButtonRow {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+/* line 293, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.no-animate {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+/* line 298, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 304, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.green, .green-gradient {
+  background-color: #00b588;
+  color: #dbd9d6;
+}
+/* line 307, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.green a, .green-gradient a {
+  color: #FFFFFF;
+}
+/* line 310, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.green a:hover, .green-gradient a:hover {
+  text-decoration: underline;
+}
+/* line 313, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.green .form-error, .green-gradient .form-error {
+  color: #FFFFFF;
+}
+
+/* line 318, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.text-white {
+  color: #FFFFFF;
+}
+
+/* line 323, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+#signup-form .form-control:focus,
+.green .form-control:focus,
+.green-gradient .form-control:focus,
+.green .braintree-hosted-fields-focused,
+.green-gradient .braintree-hosted-fields-focused {
+  border-color: #66afe9;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ddd, 0 0 6px #53B3FF;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ddd, 0 0 6px #53B3FF;
+}
+
+/* line 331, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+#signup-form .form-control.ng-invalid.ng-touched,
+.green .form-control.ng-invalid.ng-touched,
+.green-gradient .form-control.ng-invalid.ng-touched,
+.green .braintree-hosted-fields-invalid,
+.green-gradient .braintree-hosted-fields-invalid {
+  border-color: #F37977;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ddd, 0 0 6px #FF0300;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #ddd, 0 0 6px #FF0300;
+}
+
+/* line 339, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.form-margin {
+  margin-bottom: 25px;
+}
+
+/* line 343, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 347, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.form-error {
+  margin-top: -20px;
+  margin-bottom: 3px;
+  margin-left: 4px;
+  font-size: 12px;
+}
+/* line 349, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.form-error:before {
+  line-height: 1;
+  font-family: "Ionicons";
+  content: "\f100";
+}
+
+/* line 360, ../../RedoxEngine_repo/ng-app/app/styles/main.scss */
+.redox-selectable {
+  cursor: pointer;
+}

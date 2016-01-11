@@ -2971,27 +2971,27 @@ $v-border-radius: 3px;
 @mixin a-background-grey-10 ( $v-grey-10 : $v-grey-10 ) {
  background-color : $v-grey-10 ; }
 @mixin a-text-color-grey-0 ( $v-grey-0 : $v-grey-0 ) {
- color : $v-grey-0 ; }
+ color :  $v-grey-0 ; }
 @mixin a-text-color-grey-1 ( $v-grey-1 : $v-grey-1 ) {
- color : $v-grey-1 ; }
+ color :  $v-grey-1 ; }
 @mixin a-text-color-grey-2 ( $v-grey-2 : $v-grey-2 ) {
- color : $v-grey-2 ; }
+ color :  $v-grey-2 ; }
 @mixin a-text-color-grey-3 ( $v-grey-3 : $v-grey-3 ) {
- color : $v-grey-3 ; }
+ color :  $v-grey-3 ; }
 @mixin a-text-color-grey-4 ( $v-grey-4 : $v-grey-4 ) {
- color : $v-grey-4 ; }
+ color :  $v-grey-4 ; }
 @mixin a-text-color-grey-5 ( $v-grey-5 : $v-grey-5 ) {
- color : $v-grey-5 ; }
+ color :  $v-grey-5 ; }
 @mixin a-text-color-grey-6 ( $v-grey-6 : $v-grey-6 ) {
- color : $v-grey-6 ; }
+ color :  $v-grey-6 ; }
 @mixin a-text-color-grey-7 ( $v-grey-7 : $v-grey-7 ) {
- color : $v-grey-7 ; }
+ color :  $v-grey-7 ; }
 @mixin a-text-color-grey-8 ( $v-grey-8 : $v-grey-8 ) {
- color : $v-grey-8 ; }
+ color :  $v-grey-8 ; }
 @mixin a-text-color-grey-9 ( $v-grey-9 : $v-grey-9 ) {
- color : $v-grey-9 ; }
+ color :  $v-grey-9 ; }
 @mixin a-text-color-grey-10 ( $v-grey-10 : $v-grey-10 ) {
- color : $v-grey-10 ; }
+ color :  $v-grey-10 ; }
 @mixin a-hover-background-grey-0 ( $v-grey-0 : $v-grey-0 ) {
  &:hover { background-color : $v-grey-0 ; } }
 @mixin a-hover-background-grey-1 ( $v-grey-1 : $v-grey-1 ) {
@@ -4972,17 +4972,17 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-background-grey-8 ( $v-grey-8 : $v-grey-8 ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-grey-8  !important;}}
 @mixin breakpoint-md-a-background-grey-9 ( $v-grey-9 : $v-grey-9 ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-grey-9  !important;}}
 @mixin breakpoint-md-a-background-grey-10 ( $v-grey-10 : $v-grey-10 ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-grey-10  !important;}}
-@mixin breakpoint-md-a-text-color-grey-0 ( $v-grey-0 : $v-grey-0 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-0  !important;}}
-@mixin breakpoint-md-a-text-color-grey-1 ( $v-grey-1 : $v-grey-1 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-1  !important;}}
-@mixin breakpoint-md-a-text-color-grey-2 ( $v-grey-2 : $v-grey-2 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-2  !important;}}
-@mixin breakpoint-md-a-text-color-grey-3 ( $v-grey-3 : $v-grey-3 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-3  !important;}}
-@mixin breakpoint-md-a-text-color-grey-4 ( $v-grey-4 : $v-grey-4 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-4  !important;}}
-@mixin breakpoint-md-a-text-color-grey-5 ( $v-grey-5 : $v-grey-5 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-5  !important;}}
-@mixin breakpoint-md-a-text-color-grey-6 ( $v-grey-6 : $v-grey-6 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-6  !important;}}
-@mixin breakpoint-md-a-text-color-grey-7 ( $v-grey-7 : $v-grey-7 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-7  !important;}}
-@mixin breakpoint-md-a-text-color-grey-8 ( $v-grey-8 : $v-grey-8 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-8  !important;}}
-@mixin breakpoint-md-a-text-color-grey-9 ( $v-grey-9 : $v-grey-9 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-9  !important;}}
-@mixin breakpoint-md-a-text-color-grey-10 ( $v-grey-10 : $v-grey-10 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color : $v-grey-10  !important;}}
+@mixin breakpoint-md-a-text-color-grey-0 ( $v-grey-0 : $v-grey-0 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-0  !important;}}
+@mixin breakpoint-md-a-text-color-grey-1 ( $v-grey-1 : $v-grey-1 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-1  !important;}}
+@mixin breakpoint-md-a-text-color-grey-2 ( $v-grey-2 : $v-grey-2 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-2  !important;}}
+@mixin breakpoint-md-a-text-color-grey-3 ( $v-grey-3 : $v-grey-3 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-3  !important;}}
+@mixin breakpoint-md-a-text-color-grey-4 ( $v-grey-4 : $v-grey-4 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-4  !important;}}
+@mixin breakpoint-md-a-text-color-grey-5 ( $v-grey-5 : $v-grey-5 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-5  !important;}}
+@mixin breakpoint-md-a-text-color-grey-6 ( $v-grey-6 : $v-grey-6 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-6  !important;}}
+@mixin breakpoint-md-a-text-color-grey-7 ( $v-grey-7 : $v-grey-7 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-7  !important;}}
+@mixin breakpoint-md-a-text-color-grey-8 ( $v-grey-8 : $v-grey-8 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-8  !important;}}
+@mixin breakpoint-md-a-text-color-grey-9 ( $v-grey-9 : $v-grey-9 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-9  !important;}}
+@mixin breakpoint-md-a-text-color-grey-10 ( $v-grey-10 : $v-grey-10 ) { @media ( max-width: $v-breakpoint-medium-min ) {  color :  $v-grey-10  !important;}}
 @mixin breakpoint-md-a-hover-background-grey-0 ( $v-grey-0 : $v-grey-0 ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-grey-0  !important; }}}
 @mixin breakpoint-md-a-hover-background-grey-1 ( $v-grey-1 : $v-grey-1 ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-grey-1  !important; }}}
 @mixin breakpoint-md-a-hover-background-grey-2 ( $v-grey-2 : $v-grey-2 ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-grey-2  !important; }}}
@@ -6646,17 +6646,17 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-background-grey-8 ( $v-grey-8 : $v-grey-8 ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-grey-8  !important;}}
 @mixin breakpoint-sm-a-background-grey-9 ( $v-grey-9 : $v-grey-9 ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-grey-9  !important;}}
 @mixin breakpoint-sm-a-background-grey-10 ( $v-grey-10 : $v-grey-10 ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-grey-10  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-0 ( $v-grey-0 : $v-grey-0 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-0  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-1 ( $v-grey-1 : $v-grey-1 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-1  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-2 ( $v-grey-2 : $v-grey-2 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-2  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-3 ( $v-grey-3 : $v-grey-3 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-3  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-4 ( $v-grey-4 : $v-grey-4 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-4  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-5 ( $v-grey-5 : $v-grey-5 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-5  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-6 ( $v-grey-6 : $v-grey-6 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-6  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-7 ( $v-grey-7 : $v-grey-7 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-7  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-8 ( $v-grey-8 : $v-grey-8 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-8  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-9 ( $v-grey-9 : $v-grey-9 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-9  !important;}}
-@mixin breakpoint-sm-a-text-color-grey-10 ( $v-grey-10 : $v-grey-10 ) { @media ( max-width: $v-breakpoint-small-min ) {  color : $v-grey-10  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-0 ( $v-grey-0 : $v-grey-0 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-0  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-1 ( $v-grey-1 : $v-grey-1 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-1  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-2 ( $v-grey-2 : $v-grey-2 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-2  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-3 ( $v-grey-3 : $v-grey-3 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-3  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-4 ( $v-grey-4 : $v-grey-4 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-4  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-5 ( $v-grey-5 : $v-grey-5 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-5  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-6 ( $v-grey-6 : $v-grey-6 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-6  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-7 ( $v-grey-7 : $v-grey-7 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-7  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-8 ( $v-grey-8 : $v-grey-8 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-8  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-9 ( $v-grey-9 : $v-grey-9 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-9  !important;}}
+@mixin breakpoint-sm-a-text-color-grey-10 ( $v-grey-10 : $v-grey-10 ) { @media ( max-width: $v-breakpoint-small-min ) {  color :  $v-grey-10  !important;}}
 @mixin breakpoint-sm-a-hover-background-grey-0 ( $v-grey-0 : $v-grey-0 ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-grey-0  !important; }}}
 @mixin breakpoint-sm-a-hover-background-grey-1 ( $v-grey-1 : $v-grey-1 ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-grey-1  !important; }}}
 @mixin breakpoint-sm-a-hover-background-grey-2 ( $v-grey-2 : $v-grey-2 ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-grey-2  !important; }}}
