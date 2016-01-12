@@ -61,7 +61,8 @@ module.exports = function(grunt) {
     /*==========================
     SCSS ( MIMIC ACTUAL COMPILE )
     ==========================*/
-    configObj.compass = configObj.compass || {};
+    // Just too slow...using libsass instead for prototyping
+    /*configObj.compass = configObj.compass || {};
     configObj.compass["redox"] = {
       options: {
         sassDir: 'scss',// files here referece files in RedoxEngine_repo
@@ -88,8 +89,62 @@ module.exports = function(grunt) {
           debugInfo: false
         }
       }
-    }
+    }*/
 
+    configObj.sass = configObj.sass || {};
+    configObj.sass["redox"] = {files:{}};
+    configObj.sass["redox"]
+        .files['dist/styles/main.css'] =
+            [
+                'scss/main.scss'
+            ];
+    configObj.sass['redox'].options = {
+        includePaths: ["RedoxEngine_repo/bower_components"],
+        precision: 10
+    };
+
+    // need a specific component css file for style guide....
+    configObj.sass = configObj.sass || {};
+    configObj.sass["redox_components"] = {files:{}};
+    configObj.sass["redox_components"]
+        .files['dist/styles/components.css'] =
+            [
+                'scss/components.scss'
+            ];
+    configObj.sass['redox_components'].options = {
+        includePaths: ["RedoxEngine_repo/bower_components"],
+        precision: 10
+    };
+
+    // pull together bower styles as well...
+    configObj.concat = configObj.concat || {};
+    configObj.concat["redox_bower"] = {files:{}};
+    configObj.concat["redox_bower"]
+        .files['dist/styles/vendor.css']
+            = [
+                "RedoxEngine_repo/bower_components/chosen/chosen.min.css",
+                "RedoxEngine_repo/bower_components/angular-motion/dist/angular-motion.css",
+                "RedoxEngine_repo/bower_components/perfect-scrollbar/src/perfect-scrollbar.css",
+                "RedoxEngine_repo/bower_components/spectrum/spectrum.css",
+                "RedoxEngine_repo/bower_components/sweetalert/dist/sweetalert.css",
+                "RedoxEngine_repo/bower_components/angular-xeditable/dist/css/xeditable.css",
+                "RedoxEngine_repo/bower_components/fontawesome/css/font-awesome.css",
+                "RedoxEngine_repo/bower_components/ionicons/css/ionicons.css",
+                "RedoxEngine_repo/bower_components/ng-cropper/dist/ngCropper.all.css",
+                "RedoxEngine_repo/bower_components/bootstrap/dist/css/bootstrap.css",
+                "RedoxEngine_repo/bower_components/rui-components/dst/styles/main.min.css",
+                "RedoxEngine_repo/bower_components/json-formatter/dist/json-formatter.css",
+            ];
+
+
+    configObj.watch = configObj.watch || {};
+    configObj.watch["redox_scss"] = {
+        files:[
+            'RedoxEngine_repo/ng-app/**/*.scss',
+            "sass/**.*.scss"
+        ],
+        tasks: ["sass"]
+    };
 
 
     /*==========================
@@ -101,16 +156,6 @@ module.exports = function(grunt) {
         .files['dist/prototype/redox_jsx.js']
             = 'prototype/**/*.jsx';
 
-    configObj.watch = configObj.watch || {};
-    configObj.watch["redox"] = {
-        files:[
-            'RedoxEngine_repo/ng-app/**/*.scss',
-            'prototype/**/*.jsx',
-            'prototype/**/*.js',
-            'prototype/**/*.html'
-        ],
-        tasks: ["default"]
-    };
     configObj.concat = configObj.concat || {};
     configObj.concat["redox_js"] = {files:{}};
     configObj.concat["redox_js"]
@@ -124,6 +169,16 @@ module.exports = function(grunt) {
                 'dist/prototype/redox_jsx.js',
                 'prototype/**/*.js'
             ];
+
+    configObj.watch = configObj.watch || {};
+    configObj.watch["redox"] = {
+        files:[
+            'prototype/**/*.jsx',
+            'prototype/**/*.js',
+            'prototype/**/*.html'
+        ],
+        tasks: ["default"]
+    };
 
     /*==========================
     ProtoData
@@ -184,20 +239,14 @@ module.exports = function(grunt) {
             src: "index.html",
             expand: true
         },
-        // compile images directly to dist...
+        // don't forget the style guide as well...could be done via scss config too...
+        // images happen to be reachable without redundant versions....
         /*{
-            dest: 'dist/_assets',
+            dest: 'dist/csscore/_assets',
             cwd: "scss/_assets",
             src: ["** /*","!** /*.sketch"],
             expand: true
         },*/
-        // don't forget the style guide as well...could be done via scss config too...
-        {
-            dest: 'dist/csscore/_assets',
-            cwd: "scss/_assets",
-            src: ["**/*","!**/*.sketch"],
-            expand: true
-        },
         {
             dest: 'dist/images/',
             cwd: "RedoxEngine_repo/ng-app/app/images/",
@@ -216,7 +265,7 @@ module.exports = function(grunt) {
 
     // 'build' was put together in processProjects
     grunt.registerTask( 'default' , [
-        'compass',
+        'sass',
         'react:redox',
         'concat:redox_js',
         'copy:redox'
@@ -225,6 +274,7 @@ module.exports = function(grunt) {
     grunt.registerTask( 'full' , [
         'cssmodeling:redox',
         'cssmodeling_components:redox',
+        'concat:redox_bower',
         'default',// doesn't seem to trigger when it is last...
         'protodata:redox'
     ]);
