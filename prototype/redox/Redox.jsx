@@ -57,6 +57,9 @@ var Redox = React.createClass({
                 page = <Logs />;
                 show_footer = false;
                 break;
+            case "test" :
+                page = <OverviewOrig />;
+                break;
             default :
                 page = <div>{ RS.route.section } | { RS.route.page }</div>;
                 break;

@@ -20,6 +20,8 @@ div {
     display: flex;
     margin-left: 2.0833325vw;
     margin-right: 2.0833325vw;
+    position: relative;
+    z-index: 200;
     background-image: url("../images/app/redox_logo@2x.png");
     background-size: contain;
     background-position: left center;
@@ -38,7 +40,8 @@ div {
     top: 0px;
     right: 0px;
     background-color: #00b588;
-    height: 100%; }
+    height: 100%;
+    z-index: 100; }
     .c-mainNav__links:before, .c-mainNav__links:after {
       content: " ";
       display: table; }
@@ -173,6 +176,15 @@ div {
     .c-mainNav--open .c-mainNav__link {
       padding-left: 4.166665vw !important; } }
 
+.c-mainNav--manyLinks {
+  /* touch */ }
+  .c-mainNav--manyLinks .c-mainNav__link {
+    width: 8.33333vw; }
+    .c-mainNav--manyLinks .c-mainNav__link--social-icon {
+      width: 4.166665vw; }
+    .c-mainNav--manyLinks .c-mainNav__link--long {
+      width: 12.499995vw; }
+
 .c-redox {
   /* -ctag-example: ...
         { .c-redox__mainNavContainer }
@@ -236,10 +248,14 @@ div {
     background-color: #fff;
     z-index: 1000;
     transition: width 0.3s;
+    overflow-y: auto;
+    overflow-x: hidden;
     /* Eventually, move these to the o-document or whatever child component
            we put inside the body? */ }
     .c-redox__contentContainer--sidenav {
       width: 83.3333vw; }
+    .c-redox__contentContainer > div:not(.o-contentSimple) {
+      margin: 44px; }
     @media (max-width: 768px) {
       .c-redox__contentContainer {
         position: relative  !important; } }
@@ -310,7 +326,7 @@ div {
       .c-secondaryNav__list__item > * {
         align-self: center; }
       .c-secondaryNav__list__item:hover {
-        background-color: #CCCCCC; }
+        background-color: #E6E6E6; }
       .c-secondaryNav__list__item__icon {
         /* -ctag-example: <div class="c-secondaryNav__list__item__icon ion-soup-can"></div>;*/
         width: 4.166665vw;
@@ -603,18 +619,19 @@ div {
   .c-profile__contentCol {
     height: auto  !important; } }
 
-.c-profile__title h1 {
-  clear: left;
-  float: left; }
-
-.c-profile__title em {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-size: 19px;
-  line-height: 38.5px;
-  color: #999999;
-  line-height: 44px; }
+.c-profile__title {
+  position: relative; }
+  .c-profile__title h1 {
+    clear: left;
+    float: left; }
+  .c-profile__title em {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 19px;
+    line-height: 38.5px;
+    color: #999999;
+    line-height: 44px; }
 
 .c-profile__outsideLinks {
   margin-bottom: 22px; }
@@ -726,30 +743,7 @@ div {
   .o-contentSimple__contentContainer {
     /* -ctag-example: <div ... style="overflow-y: scroll;">
                 <div style="border: 1px solid red;">
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
-                    content<br/>
+                    content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
                 </div>
             </div>;*/
     height: 100%;
@@ -822,8 +816,7 @@ div {
     height: 100%; }
 
 h1, h2, h3, h4, h5, h6, p, code {
-  /* Should only use these in .o-document */
-  border: 2px solid red; }
+  /* Should only use these in .o-document */ }
 
 .o-document {
   /* -ctag-example: ...
@@ -891,8 +884,7 @@ h1, h2, h3, h4, h5, h6, p, code {
         padding: 0  !important; } }
 
 input {
-  /* Should only use these in .o-form */
-  border: 2px solid red; }
+  /* Should only use these in .o-form */ }
 
 .o-form {
   margin-top: 22px;

@@ -261,6 +261,133 @@ var Logs = React.createClass({displayName: "Logs",
 
 });
 
+var OverviewOrig = React.createClass({displayName: "OverviewOrig",
+
+    
+  render: function() {
+    return (
+
+      React.createElement("div", {"ui-view": true, "ng-if": "!view", className: "ng-scope"}, 
+        React.createElement("div", {"ng-init": "dashboard.reset(); dashboard.loadOrganization(); dashboard.loadOrgTags();", className: "ng-scope"}), 
+        React.createElement("div", {className: "org-view-container view-container container ng-scope"}, 
+          React.createElement("div", {className: "dashboard-form-panel"}, 
+            React.createElement("div", {className: "dashboard-form-row"}, 
+              React.createElement("i", {className: "ion-ios7-photos"}), "   Organization Overview"
+            ), 
+            React.createElement("div", {className: "container"}, 
+              React.createElement("div", {className: "dashboard-form-content-row"}, 
+                React.createElement("div", {className: "row"}, 
+                  React.createElement("div", {className: "col-md-3 col-xs-12"}, 
+                    React.createElement("img", {className: "icon-thumb", "ng-src": "https://redox-icons.s3.amazonaws.com/d72b0951-0056-4b43-bb5e-a3ff363bb224", src: "https://redox-icons.s3.amazonaws.com/d72b0951-0056-4b43-bb5e-a3ff363bb224"})
+                  ), 
+                  React.createElement("div", {className: "col-md-3 col-xs-12"}, 
+                    React.createElement("h4", {className: "ng-binding"}, " Redox Engine "), 
+                    React.createElement("div", {className: "ng-binding"}
+                    ), 
+                    React.createElement("div", null, 
+                      React.createElement("a", {href: "mailto:", className: "ng-binding"})
+                    ), 
+                    React.createElement("div", {className: "ng-binding"}
+                    )
+                  ), 
+                  React.createElement("div", {className: "col-md-6 col-xs-12 hard-wrap ng-binding"}
+                  )
+                )
+              )
+            )
+          ), 
+          React.createElement("div", {"ng-show": "session.currentUser().admin"}, 
+            React.createElement("div", {className: "dashboard-form-panel"}, 
+              React.createElement("div", {className: "dashboard-form-row"}, 
+                React.createElement("i", {className: "ion-android-settings"}), "   Edit Redox Team Assignments (Admin Only)"
+              ), 
+              React.createElement("div", {className: "dashboard-form-row"}, 
+                React.createElement("div", {className: "row vertical-align"}, 
+                  React.createElement("div", {className: "col-md-6 overview-label"}, 
+                    "Implementation Lead"
+                  ), 
+                  React.createElement("div", {className: "col-md-6"}, 
+                    React.createElement("select", {"ng-change": "dashboard.updateOrgAdmin()", "bs-select": true, "bs-options": "admin.fullname for admin in dashboard.admins", "ng-model": "dashboard.organization.implementationLead", className: "btn btn-default ng-pristine ng-untouched ng-valid", type: "button", style: {display: 'none'}}
+                    ), React.createElement("button", {className: "btn btn-default", type: "button"}, "Choose among the following... ", React.createElement("span", {className: "caret"}))
+                  )
+                ), 
+                React.createElement("br", null), 
+                React.createElement("div", {className: "row vertical-align"}, 
+                  React.createElement("div", {className: "col-md-6 overview-label"}, 
+                    "Technical Lead"
+                  ), 
+                  React.createElement("div", {className: "col-md-6"}, 
+                    React.createElement("select", {"ng-change": "dashboard.updateOrgAdmin()", "bs-select": true, "bs-options": "admin.fullname for admin in dashboard.admins", "ng-model": "dashboard.organization.techLead", className: "btn btn-default context-button ng-pristine ng-untouched ng-valid", type: "button", style: {display: 'none'}}, "Action"
+                    ), React.createElement("button", {className: "btn btn-default", type: "button"}, "Choose among the following... ", React.createElement("span", {className: "caret"}))
+                  )
+                )
+              )
+            ), 
+            React.createElement("div", {className: "dashboard-form-panel"}, 
+              React.createElement("div", {className: "dashboard-form-row"}, 
+                React.createElement("i", {className: "ion-android-settings"}), "   Edit Organization Settings (Admin Only)"
+              ), 
+              React.createElement("div", {className: "dashboard-form-row"}, 
+                React.createElement("div", {className: "row"}, 
+                  React.createElement("div", {className: "col-md-6 overview-label"}, 
+                    "Data models"
+                  ), 
+                  React.createElement("div", {className: "col-md-6"}, 
+                    React.createElement("div", {className: "data-models data-models-selectable ng-isolate-scope", admin: "session.currentUser().admin", org: "dashboard.organization", "datamodel-icon": true}, React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-plus-circle", "rui-tooltip": "Clinical Summary"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-heartbeat", "rui-tooltip": "Device"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-money", "rui-tooltip": "Financial"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-bar-chart", "rui-tooltip": "Flowsheet"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-paperclip", "rui-tooltip": "Media"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-list-alt", "rui-tooltip": "Orders"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-street-view", "rui-tooltip": "Patient Admin"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-search-plus", "rui-tooltip": "Patient Search"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-flask", "rui-tooltip": "Results"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-calendar", "rui-tooltip": "Scheduling"}), "                 "), 
+                      React.createElement("span", {"ng-class": "{'data-models-selectable' : admin}", "ng-repeat": "model in dataModels", className: "ng-scope data-models-selectable"}, 
+                        React.createElement("i", {"ng-click": "toggleDataModel(model)", "ng-class": "{ 'active': model.active }", className: "dataModel-icon fa fa-2x fa-eyedropper", "rui-tooltip": "Vaccine"}), "                 ")
+                    )
+                  )
+                )
+              ), 
+              React.createElement("div", {className: "dashboard-form-row"}, 
+                React.createElement("div", {className: "row"}, 
+                  React.createElement("div", {className: "col-md-6 overview-label"}, 
+                    "Health System?"
+                  ), 
+                  React.createElement("div", {className: "col-md-6"}, 
+                    React.createElement("span", {className: "slider-toggle"}, 
+                      React.createElement("input", {type: "checkbox", "ng-change": "dashboard.updateOrgAdmin()", "ng-model": "dashboard.organization.isHealthSystem", name: "isHealthSystem", id: "isHealthSystem", className: "ng-pristine ng-untouched ng-valid"}), 
+                      React.createElement("label", {htmlFor: "isHealthSystem", "data-off": "No", "data-on": "Yes"})
+                    )
+                  )
+                )
+              ), 
+              React.createElement("div", {className: "dashboard-form-row"}, 
+                React.createElement("div", {className: "row"}, 
+                  React.createElement("div", {className: "col-md-6 overview-label"}, 
+                    "Default Time Zone"
+                  ), 
+                  React.createElement("div", {className: "col-md-6"}, 
+                    React.createElement("input", {type: "text", "data-limit": 50, "auto-select": "true", "bs-typeahead": true, "bs-options": "zone for zone in dashboard.zones", "ng-blur": "dashboard.updateOrgAdmin()", "ng-model": "dashboard.organization.timeZone", className: "form-control ng-pristine ng-untouched ng-valid", autoComplete: "off"})
+                  )
+                )
+              )
+            )
+          )))
+    );
+  }
+});
+
 
 
 
@@ -779,6 +906,9 @@ var Redox = React.createClass({displayName: "Redox",
             case "logs" :
                 page = React.createElement(Logs, null);
                 show_footer = false;
+                break;
+            case "test" :
+                page = React.createElement(OverviewOrig, null);
                 break;
             default :
                 page = React.createElement("div", null,  RS.route.section, " | ",  RS.route.page);

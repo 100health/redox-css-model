@@ -17,7 +17,7 @@ module.exports = {
             this.orig_main_pages = pd.generateArray( "orig_main_page" , 5 );
 
             this.organization_pages
-                = pd.generateArray( "organization_page" , 5 );
+                = pd.generateArray( "organization_page" , 6 );
 
 
             this.organizations = pd.generateArray( "organization" , 10 );
@@ -70,7 +70,8 @@ module.exports = {
             {name:"Errors",icon:"ion-alert-circled",link:"errors"},*/
             {name:"Logs",icon:"ion-clipboard",link:"logs"},
             {name:"Dev-Tools",icon:"ion-code",link:"dev_tools"},
-            {name:"Users",icon:"ion-ios-browsers",link:"users"}
+            {name:"Users",icon:"ion-ios-browsers",link:"users"},
+            {name:"TEST",icon:"ion-ios-browsers",link:"test"}
         ]
     },
     organization:{
