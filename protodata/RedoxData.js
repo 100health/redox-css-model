@@ -106,16 +106,20 @@ module.exports = {
 
             this.connection.logs.push( this );
 
+            this.success = ( Math.random() > .8 ) ? false : true;
+
+            //...data model and server...
+
         }
     },
     connection:{
         init:function ( pd ) {
             this.title = pd.db_random( "noun" ) + " " + pd.db_random( "noun" ) + " Connection";
 
-            if ( Math.random() > .5 ) {
+            if ( Math.random() > .6 ) {
                 this.type = "outbound";
                 this.organization.outbound_connections.push( this );
-            }else{
+            }else if ( Math.random() > .3 ){
                 this.type = "inbound";
                 this.organization.inbound_connections.push( this );
 
@@ -126,6 +130,8 @@ module.exports = {
                     this.end_point = "http://www.myorganization.com/api/endpoint";
                     this.verified = true;
                 }
+            }else{
+                this.type = "query";
             }
 
             this.logs = [];// populated via logs...

@@ -45,6 +45,16 @@ module.exports = function(grunt) {
         }
     };
 
+    configObj.copy = configObj.copy || {};
+    configObj.copy["cssmodeling"] = {files:[
+        // this fakes a bower update in the main repo....careful!
+        {
+            dest: 'RedoxEngine_repo/bower_components/redox-css-model/dist/csscore',
+            cwd: "dist/csscore",
+            src: ["**/*"],
+            expand: true
+        }
+    ]};
     configObj.watch = configObj.watch || {};
     configObj.watch["cssmodeling"] = {
         files:[
@@ -258,8 +268,16 @@ module.exports = function(grunt) {
             cwd: "RedoxEngine_repo/ng-app/app/fonts",
             src: ["**/*"],
             expand: true
+        },
+        // this fakes a bower update in the main repo....careful!
+        {
+            dest: 'RedoxEngine_repo/bower_components/redox-css-model/dist/csscore',
+            cwd: "dist/csscore",
+            src: ["**/*"],
+            expand: true
         }
     ]};
+
 
     grunt.initConfig( configObj );
 
@@ -275,6 +293,7 @@ module.exports = function(grunt) {
         'cssmodeling:redox',
         'cssmodeling_components:redox',
         'concat:redox_bower',
+        'copy:cssmodeling',
         'default',// doesn't seem to trigger when it is last...
         'protodata:redox'
     ]);

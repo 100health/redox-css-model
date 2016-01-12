@@ -23,41 +23,96 @@ var Logs = React.createClass({
 
     getLogRow: function( log ){
 
-        
+        var connection = log.connection();
 
-        return  <tr>
-                    <td className="c-logs__td--type">
-                        <div className="o-global__outgoingIcon"></div>
-                    </td>
-                    <td className="c-logs__td--title o-table__td--expander">Message</td>
-                    <td className="c-logs__td--model">Data Model</td>
-                    <td className="c-logs__td--status">Success</td>
-                    <td className="c-logs__td--environment">Production</td>
-                    <td className="c-logs__td--time">1/12 | 5:64:23pm</td>
-                </tr>;
+        var type_cls = "";
+        switch ( connection.type ) {
+            case "outbound" :
+                type_cls = "o-icon__outbound";
+                break;
+            case "inbound" :
+                type_cls = "o-icon__inbound";
+                break;
+            case "query" :
+                type_cls = "o-icon__query";
+                break;
+        }
+
+        var pass_cls = "";
+        switch ( log.success ) {
+            case true :
+                pass_cls = "o-icon__success";
+                break;
+            case false :
+                pass_cls = "o-icon__fail";
+                break;
+        }
+
+
+        return  <div className="o-listSimple__row">
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--type">
+                        <div className={ type_cls }></div>
+                    </div>
+                    <div className="
+                        o-listSimple__cell
+                        o-listSimple__cell--expander
+                        c-logs__cell--titler">{ log.title }</div>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--model">Data Model</div>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--status">
+                        <div className={ pass_cls }></div>
+                    </div>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--environment">Production</div>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--time">1/12 | 5:64:23pm</div>
+                </div>;
     },
 
     getSummaryRow: function( index ){
-        return  <tr>
-                    <td className="c-logs__td--type">Type</td>
-                    <td className="c-logs__td--title o-table__td--expander">Message</td>
-                    <td className="c-logs__td--model">Data Model</td>
-                    <td className="c-logs__td--status">Status</td>
-                    <td className="c-logs__td--environment">Environment</td>
-                    <td className="c-logs__td--time">Date/Time</td>
-                </tr>;
+        return  <div className="o-listSimple__row"
+                    onClick={ this.openFooter }>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--type">Type</div>
+                    <div className="o-listSimple__cell
+                        o-listSimple__cell--expander
+                        c-logs__cell--title ">Message</div>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--model">Data Model</div>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--status">Status</div>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--environment">Environment</div>
+                    <div className="
+                        o-listSimple__cell
+                        c-logs__cell--time">Date/Time</div>
+                </div>;
     },
 
     openFooter: function(){
         $(".o-contentSimple__footerContainer")
-            .toggleClass("a-height-row-12");
+            .toggleClass("c-logs__footer--open");
     },
 
     render: function() {
 
+        var logs = RedoxModel.app.focused_organization().logs();
+        console.log( RedoxModel.app.focused_organization() );
+
         var log_rows_html = [];
-        for ( var i=0; i<20; i++ ) {
-            log_rows_html.push( this.getLogRow( i ) );
+        for ( var i=0; i<logs.length; i++ ) {
+            log_rows_html.push( this.getLogRow( logs[i] ) );
         }
 
         return  <div className="c-logs o-contentSimple o-contentSimple--wfooter">
@@ -74,20 +129,15 @@ var Logs = React.createClass({
                                 </form>
                             </div>
                         </div>
-                        <table className="o-table">
-                          <tbody>
+                        <div className="o-listSimple">
                             { log_rows_html }
-                          </tbody>
-                        </table>
+                        </div>
                     </div>
                     <div className="o-contentSimple__footerContainer">
-                        <div className="c-logs__footer"
-                                onClick={ this.openFooter }>
-                            <table className="o-tableSummary">
-                                <tbody>
-                                    { this.getSummaryRow( i ) }
-                                </tbody>
-                            </table>
+                        <div className="c-logs__footer">
+                            <div className="o-listSimple o-listSimple--footer">
+                                { this.getSummaryRow( i ) }
+                            </div>
                             <div className="c-logs__filters">
                                 filters
                             </div>

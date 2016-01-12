@@ -46,7 +46,6 @@ var Connections = React.createClass({
             inbound_connections_html.push( this.getInboundConnectionRow( inbound[i] ) );
         }
 
-
         var outbound = RedoxModel.app.focused_organization().outbound_connections();
 
         var outbound_connections_html = [];
@@ -66,7 +65,7 @@ var Connections = React.createClass({
                             </div>
 
                             <div className="c-connections__groupHeader">
-                                <div className="o-global__outgoingIcon">
+                                <div className="o-icon__outbound">
                                 </div>
                                 <h1>
                                     Outbound
@@ -82,7 +81,7 @@ var Connections = React.createClass({
                             </table>
 
                             <div className="c-connections__groupHeader">
-                                <div className="o-global__incomingIcon">
+                                <div className="o-icon__inbound">
                                 </div>
                                 <h1>
                                     Inbound

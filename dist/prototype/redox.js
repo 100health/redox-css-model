@@ -20536,7 +20536,6 @@ var Connections = React.createClass({displayName: "Connections",
             inbound_connections_html.push( this.getInboundConnectionRow( inbound[i] ) );
         }
 
-
         var outbound = RedoxModel.app.focused_organization().outbound_connections();
 
         var outbound_connections_html = [];
@@ -20556,7 +20555,7 @@ var Connections = React.createClass({displayName: "Connections",
                             ), 
 
                             React.createElement("div", {className: "c-connections__groupHeader"}, 
-                                React.createElement("div", {className: "o-global__outgoingIcon"}
+                                React.createElement("div", {className: "o-icon__outbound"}
                                 ), 
                                 React.createElement("h1", null, 
                                     "Outbound"
@@ -20572,7 +20571,7 @@ var Connections = React.createClass({displayName: "Connections",
                             ), 
 
                             React.createElement("div", {className: "c-connections__groupHeader"}, 
-                                React.createElement("div", {className: "o-global__incomingIcon"}
+                                React.createElement("div", {className: "o-icon__inbound"}
                                 ), 
                                 React.createElement("h1", null, 
                                     "Inbound"
@@ -20676,41 +20675,96 @@ var Logs = React.createClass({displayName: "Logs",
 
     getLogRow: function( log ){
 
-        
+        var connection = log.connection();
 
-        return  React.createElement("tr", null, 
-                    React.createElement("td", {className: "c-logs__td--type"}, 
-                        React.createElement("div", {className: "o-global__outgoingIcon"})
+        var type_cls = "";
+        switch ( connection.type ) {
+            case "outbound" :
+                type_cls = "o-icon__outbound";
+                break;
+            case "inbound" :
+                type_cls = "o-icon__inbound";
+                break;
+            case "query" :
+                type_cls = "o-icon__query";
+                break;
+        }
+
+        var pass_cls = "";
+        switch ( log.success ) {
+            case true :
+                pass_cls = "o-icon__success";
+                break;
+            case false :
+                pass_cls = "o-icon__fail";
+                break;
+        }
+
+
+        return  React.createElement("div", {className: "o-listSimple__row"}, 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--type"}, 
+                        React.createElement("div", {className:  type_cls })
                     ), 
-                    React.createElement("td", {className: "c-logs__td--title o-table__td--expander"}, "Message"), 
-                    React.createElement("td", {className: "c-logs__td--model"}, "Data Model"), 
-                    React.createElement("td", {className: "c-logs__td--status"}, "Success"), 
-                    React.createElement("td", {className: "c-logs__td--environment"}, "Production"), 
-                    React.createElement("td", {className: "c-logs__td--time"}, "1/12 | 5:64:23pm")
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "o-listSimple__cell--expander" + ' ' +
+                        "c-logs__cell--titler"},  log.title), 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--model"}, "Data Model"), 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--status"}, 
+                        React.createElement("div", {className:  pass_cls })
+                    ), 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--environment"}, "Production"), 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--time"}, "1/12 | 5:64:23pm")
                 );
     },
 
     getSummaryRow: function( index ){
-        return  React.createElement("tr", null, 
-                    React.createElement("td", {className: "c-logs__td--type"}, "Type"), 
-                    React.createElement("td", {className: "c-logs__td--title o-table__td--expander"}, "Message"), 
-                    React.createElement("td", {className: "c-logs__td--model"}, "Data Model"), 
-                    React.createElement("td", {className: "c-logs__td--status"}, "Status"), 
-                    React.createElement("td", {className: "c-logs__td--environment"}, "Environment"), 
-                    React.createElement("td", {className: "c-logs__td--time"}, "Date/Time")
+        return  React.createElement("div", {className: "o-listSimple__row", 
+                    onClick:  this.openFooter}, 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--type"}, "Type"), 
+                    React.createElement("div", {className: "o-listSimple__cell" + ' ' +
+                        "o-listSimple__cell--expander" + ' ' +
+                        "c-logs__cell--title "}, "Message"), 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--model"}, "Data Model"), 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--status"}, "Status"), 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--environment"}, "Environment"), 
+                    React.createElement("div", {className: 
+                        "o-listSimple__cell" + ' ' +
+                        "c-logs__cell--time"}, "Date/Time")
                 );
     },
 
     openFooter: function(){
         $(".o-contentSimple__footerContainer")
-            .toggleClass("a-height-row-12");
+            .toggleClass("c-logs__footer--open");
     },
 
     render: function() {
 
+        var logs = RedoxModel.app.focused_organization().logs();
+        console.log( RedoxModel.app.focused_organization() );
+
         var log_rows_html = [];
-        for ( var i=0; i<20; i++ ) {
-            log_rows_html.push( this.getLogRow( i ) );
+        for ( var i=0; i<logs.length; i++ ) {
+            log_rows_html.push( this.getLogRow( logs[i] ) );
         }
 
         return  React.createElement("div", {className: "c-logs o-contentSimple o-contentSimple--wfooter"}, 
@@ -20727,19 +20781,14 @@ var Logs = React.createClass({displayName: "Logs",
                                 )
                             )
                         ), 
-                        React.createElement("table", {className: "o-table"}, 
-                          React.createElement("tbody", null, 
+                        React.createElement("div", {className: "o-listSimple"}, 
                              log_rows_html 
-                          )
                         )
                     ), 
                     React.createElement("div", {className: "o-contentSimple__footerContainer"}, 
-                        React.createElement("div", {className: "c-logs__footer", 
-                                onClick:  this.openFooter}, 
-                            React.createElement("table", {className: "o-tableSummary"}, 
-                                React.createElement("tbody", null, 
-                                     this.getSummaryRow( i) 
-                                )
+                        React.createElement("div", {className: "c-logs__footer"}, 
+                            React.createElement("div", {className: "o-listSimple o-listSimple--footer"}, 
+                                 this.getSummaryRow( i) 
                             ), 
                             React.createElement("div", {className: "c-logs__filters"}, 
                                 "filters"
