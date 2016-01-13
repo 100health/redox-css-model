@@ -12,16 +12,33 @@ module.exports = {
                                     this , "dog"
                                 );*/
 
-            this.main_pages = pd.generateArray( "main_page" , 3 );
+            this.main_pages = pd.generateArray(
+                                    "main_page" ,
+                                    pd.config.main_page.data.length
+                                );
 
-            this.orig_main_pages = pd.generateArray( "orig_main_page" , 5 );
+            this.orig_main_pages =  pd.generateArray(
+                                        "orig_main_page" ,
+                                        pd.config.orig_main_page.data.length
+                                    );
 
             this.organization_pages
                 = pd.generateArray( "organization_page" , 6 );
 
+            this.data_models =  pd.generateArray(
+                                    "data_model" ,
+                                    pd.config.data_model.data.length
+                                );
 
-            this.organizations = pd.generateArray( "organization" , 10 );
+
+            this.organizations = pd.generateArray(
+                                    "organization" , 10,
+                                    this, "app"
+
+                                );
             this.focused_organization = this.organizations[2];
+
+
 
         },
         root:true
@@ -34,9 +51,15 @@ module.exports = {
             this.icon = data_obj.icon;
         },
         data:[
-            {name:"Organization Name",icon:"ion-ios-browsers",link:"organization"},
+            /*{name:"Organization Name",icon:"ion-ios-browsers",link:"organization"},
             {name:"Documentation",icon:"ion-clipboard",link:"docs"},
-            {name:"user@username.com",icon:false,link:"user_profile"}
+            {name:"user@username.com",icon:false,link:"user_profile"}*/
+
+            {name:"Organization",icon:false,link:"organization",secondary_page:"profile"},
+            {name:"Gallery",icon:false,link:"gallery",secondary_page:""},
+            {name:"Documentation",icon:false,link:"docs",secondary_page:""},
+            {name:"Log In",icon:false,link:"login",secondary_page:""},
+            {name:"Sign Up",icon:false,link:"sign_up",secondary_page:""}
         ]
     },
     orig_main_page:{
@@ -47,10 +70,12 @@ module.exports = {
             this.icon = data_obj.icon;
             this.secondary_page = data_obj.secondary_page;
         },
+
         data:[
-            {name:"Dashboard",icon:false,link:"organization",secondary_page:"profile"},
+            {name:"Health Systems",icon:false,link:"health_systems",secondary_page:"profile"},
             {name:"Gallery",icon:false,link:"gallery",secondary_page:""},
-            {name:"Documentation",icon:false,link:"docs",secondary_page:""},
+            {name:"Pricing",icon:false,link:"pricing",secondary_page:""},
+            {name:"Dashboard",icon:false,link:"organization",secondary_page:"profile"},
             {name:"Log In",icon:false,link:"login",secondary_page:""},
             {name:"Sign Up",icon:false,link:"sign_up",secondary_page:""}
         ]
@@ -109,8 +134,30 @@ module.exports = {
             this.success = ( Math.random() > .8 ) ? false : true;
 
             //...data model and server...
-
+            this.data_model = pd.randomFromArray(
+                                this.organization.app.data_models
+                            );
         }
+    },
+    data_model:{
+        init:function ( pd , index , config_obj ) {
+            var data_obj = config_obj.data[ index ];
+            this.name = data_obj.name;
+            this.icon = data_obj.icon;
+        },
+        data:[
+            {name:"Clinical Survey",icon:"fa-plus-circle"},
+            {name:"Device",icon:"fa-heartbeat"},
+            {name:"Financial",icon:"fa-money"},
+            {name:"Flowsheet",icon:"fa-bar-chart"},
+            {name:"Media",icon:"fa-paperclip"},
+            {name:"Orders",icon:"fa-list-alt"},
+            {name:"Patient Admin",icon:"fa-street-view"},
+            {name:"Patient Search",icon:"fa-search-plus"},
+            {name:"Results",icon:"fa-flask"},
+            {name:"Scheduling",icon:"fa-calendar"},
+            {name:"Vaccine",icon:"fa-eyedropper"},
+        ]
     },
     connection:{
         init:function ( pd ) {

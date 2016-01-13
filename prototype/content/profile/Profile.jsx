@@ -52,7 +52,8 @@ var Profile = React.createClass({
                                 <div className="c-profile__avatarCol">
                                     <div className="c-profile__avatar"
                                         style={{"background-image":
-                                                "url('http://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg')"}}></div>
+                                                "url('http://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg')"}}>
+                                    </div>
                                     <div className="c-profile__btn"
                                         onClick={ this.openProfileEdit }>
                                         Edit Profile

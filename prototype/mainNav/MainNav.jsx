@@ -42,6 +42,16 @@ var MainNav = React.createClass({
         var nav_links = RedoxModel.app.orig_main_pages();
 
         var nav_items = [],icon_html;
+
+        nav_items.push(
+            <a href="http://community.redoxengine.com" target="_blank"
+                className="c-mainNav__link
+                    c-mainNav__link--social-icon">
+                <img src="images/logos/slack_hash.png"
+                    title="Join us on Slack!" />
+            </a>
+        );
+
         for ( var p=nav_links.length-1; p>=0; p-- ) {
             page = nav_links[p];
 
@@ -74,6 +84,7 @@ var MainNav = React.createClass({
                 </div>
             );
         }
+
 
 
         return  <div className={

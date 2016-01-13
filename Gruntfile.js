@@ -38,7 +38,7 @@ module.exports = function(grunt) {
         },
         options: {
             resets:[
-                'cssmodeling/_resets/**/*.css'
+                // 'cssmodeling/_resets/**/*.css'
             ],
             type:"scss",
             var_prefix:"v-"

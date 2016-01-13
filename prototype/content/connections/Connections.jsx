@@ -12,29 +12,40 @@ var Connections = React.createClass({
         if ( connection.verified ) {
             link = <a href="#" onClick={ function() { return false; } }>Edit</a>;
             end_point = connection.end_point;
-            end_point_class = "c-connectionsTable__td--endPoint";
+            end_point_class = "c-connections__cell--endPoint";
         }else{
             link = <a href="#" onClick={ function() { return false; } }>Verify</a>;
             end_point = "End point verification needed!";
-            end_point_class = "c-connectionsTable__td--endPointUnverified";
+            end_point_class = "c-connections__cell--endPointUnverified";
         }
 
-        return  <tr>
-                    <td className="c-connectionsTable__td--title o-table__td--expander">{ connection.title }</td>
-                    <td className={ end_point_class }>{ end_point }</td>
-                    <td className="c-connectionsTable__td--verify">
+        return  <div className="o-list__row">
+                    <div className="o-list__cell o-list__cell--expander
+                        c-connections__cell--title">{ connection.title }</div>
+                    <div className={ "o-list__cell " + end_point_class }>{ end_point }</div>
+                    <div className="o-list__cell o-list__cell--expander
+                        c-connections__cell--verify">
                         { link }
-                    </td>
-                </tr>;
+                    </div>
+                </div>;
+    },
+
+    alertExample: function () {
+        alertExample(
+            this.render(),
+            []
+        );
     },
 
     getOutboundConnectionRow: function( connection ){
-        return  <tr>
-                    <td className="c-connectionsTable__td--title o-table__td--expander">{ connection.title }</td>
-                    <td className="c-connectionsTable__td--verify">
+        return  <div className="o-list__row">
+                    <div className=" o-list__cell o-list__cell--expander
+                        c-connections__cell--title">{ connection.title }</div>
+                    <div className="o-list__cell
+                        c-connections__cell--verify">
                         <a href="#" onClick={ function() { return false; } }>API/Key</a>
-                    </td>
-                </tr>;
+                    </div>
+                </div>;
     },
 
     render: function() {
@@ -57,7 +68,8 @@ var Connections = React.createClass({
                     <div className="o-contentSimple__contentContainer">
                         <div>
                             <div className="o-contentHeader">
-                                <div className="o-contentHeader__titleContainer">
+                                <div className="o-contentHeader__titleContainer"
+                                    onClick={ this.alertExample }>
                                     Connections
                                 </div>
                                 <div className="o-contentHeader__navContainer">
@@ -74,11 +86,9 @@ var Connections = React.createClass({
                                     Add Outgoing
                                 </div>
                             </div>
-                            <table className="o-table">
-                              <tbody>
+                            <div className="o-list o-list--overview">
                                 { outbound_connections_html }
-                              </tbody>
-                            </table>
+                            </div>
 
                             <div className="c-connections__groupHeader">
                                 <div className="o-icon__inbound">
@@ -90,11 +100,9 @@ var Connections = React.createClass({
                                     Add Incoming
                                 </div>
                             </div>
-                            <table className="o-table">
-                              <tbody>
+                            <div className="o-list o-list--overview">
                                 { inbound_connections_html }
-                              </tbody>
-                            </table>
+                            </div>
 
                         </div>
                     </div>

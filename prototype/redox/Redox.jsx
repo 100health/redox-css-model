@@ -46,6 +46,7 @@ var Redox = React.createClass({
         var show_footer = true;
 
         var page;
+        var content_cls = "c-redox__contentContainer--sidenav";
         switch ( RS.route.page ) {
             case "connections" :
                 page = <Connections />;
@@ -63,6 +64,14 @@ var Redox = React.createClass({
             default :
                 page = <div>{ RS.route.section } | { RS.route.page }</div>;
                 break;
+        }
+
+        switch ( RS.route.detail_page ) {
+            case "log":
+                page = <LogDetail />;
+                break;
+            default:
+
         }
 
         var secondaryNav = <SecondaryNav />;
@@ -86,7 +95,8 @@ var Redox = React.createClass({
                         (( show_footer ) ? "" : "c-redox--nofooter" )}>
                     <div className={
                             'c-redox__mainNavContainer ' +
-                            ( ( RS.route.detail_page && RS.route.detail_page != "" )
+                            ( ( RS.route.detail_page
+                                && RS.route.detail_page != "" )
                                     ? "c-redox__mainNavContainer--open" : "" )
                         }>
                         <MainNav />
@@ -95,14 +105,17 @@ var Redox = React.createClass({
                             c-redox__secondaryNavContainer">
                         { secondaryNav }
                     </div>
-                    <div className="c-redox__contentContainer">
+                    <div className={
+                            "c-redox__contentContainer " + content_cls
+                        }>
                         { page }
                     </div>
                     <div className="c-redox__footerContainer">
                         <Footer />
                     </div>
 
-                    <div className={ "o-modal " +
+                    <div className={
+                            "o-modal " +
                             ( ( modalContent ) ? "o-modal--show" : "" )
                         }>
                         <div className="o-modal__bgCover"

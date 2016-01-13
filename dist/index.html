@@ -9,6 +9,9 @@
 		<link href='styles/vendor.css' type='text/css' rel='stylesheet'>
 		<link href='styles/main.css' type='text/css' rel='stylesheet'>
 
+		<!-- for prototyping only...keep it after the comps -->
+		<link href='csscore/core.css' type='text/css' rel='stylesheet'>
+
 		<script src='prototype/redox.js'></script>
 		<script src='protodata/redox_data.json.js'></script>
 
@@ -35,6 +38,10 @@
 							weight:21,
 							dependency:"page",
 							description:"Determines tiertiary nav state (and override's content state)"
+						},
+						log_id:{
+							weight:500,
+							dependency:"detail_page"
 						}
 				});
 
@@ -47,6 +54,24 @@
 					document.body
 				);
 			});
+
+			function alertExample ( html , div_remove_arr ) {
+				//var html = this.render();
+
+		        var div = document.createElement('div');
+		        React.render( html , div );
+
+		        $( div ).find( "*" ).removeAttr("data-reactid");
+				for ( var i=0; i<div_remove_arr.length; i++ ) {
+					$( div ).find( div_remove_arr[i] ).remove();
+				}
+
+		        var today = new Date();
+		        var time_taken = today.toLocaleFormat('%d-%b-%Y'); // 30-Dec-2011
+
+		        var note = "";//"<div style='font-size: 11px; color: #aaa; position: fixed; bottom: 10px; right: 10px;'>snapshot taken: " + time_taken + "</div>";
+		        alert( "/* -ctag-example: " + $(div).html() + note +";*/");
+			}
 		</script>
 	</head>
 	<body>

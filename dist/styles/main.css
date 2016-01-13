@@ -3,12 +3,23 @@ div {
 
 .o-contentModal {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   .o-contentModal__contentContainer {
     height: 100%;
-    padding-top: 44px; }
+    padding-top: 44px;
+    overflow-y: auto;
+    overflow-x: hidden; }
+    .o-contentModal__contentContainer > div {
+      width: 66.66664vw;
+      margin-left: 8.33333vw; }
   .o-contentModal__footerContainer {
-    height: 66px; }
+    height: 66px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff; }
 
 .o-contentModal--wfooter .o-contentModal__contentContainer {
   height: calc( 100% - 66px); }
@@ -24,27 +35,43 @@ div {
   width: 100%;
   height: 100%;
   position: relative; }
-  .o-contentSimple > div {
+  .o-contentSimple__contentContainer, .o-contentSimple__footerContainer {
+    /* -ctag-example: <div ... style="overflow-y: scroll;">
+                <div style="border: 1px solid red;">
+                    content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>content<br/>
+                </div>
+            </div>;*/
     width: 100%;
     padding-left: 8.33333vw; }
     @media (max-width: 768px) {
-      .o-contentSimple > div {
+      .o-contentSimple__contentContainer, .o-contentSimple__footerContainer {
         padding-left: 4.166665vw !important;
         padding-right: 4.166665vw !important; } }
-    .o-contentSimple > div > div, .o-contentSimple > div > table {
+    .o-contentSimple__contentContainer > div, .o-contentSimple__contentContainer > table, .o-contentSimple__footerContainer > div, .o-contentSimple__footerContainer > table {
       width: 66.66668vw; }
 
 @media (max-width: 768px) and (max-width: 768px) {
-  .o-contentSimple > div > div, .o-contentSimple > div > table {
+  .o-contentSimple__contentContainer > div, .o-contentSimple__contentContainer > table, .o-contentSimple__footerContainer > div, .o-contentSimple__footerContainer > table {
     position: relative  !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
-  .o-contentSimple > div > div, .o-contentSimple > div > table {
+  .o-contentSimple__contentContainer > div, .o-contentSimple__contentContainer > table, .o-contentSimple__footerContainer > div, .o-contentSimple__footerContainer > table {
     width: 100%  !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
-  .o-contentSimple > div > div, .o-contentSimple > div > table {
+  .o-contentSimple__contentContainer > div, .o-contentSimple__contentContainer > table, .o-contentSimple__footerContainer > div, .o-contentSimple__footerContainer > table {
     height: auto  !important; } }
+  .o-contentSimple__closeDetail {
+    width: 4.166665vw;
+    height: 88px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    cursor: hand;
+    cursor: pointer;
+    background-image: url("../images/app/forward_arrow_small.png");
+    background-position: center;
+    background-repeat: no-repeat; }
   .o-contentSimple__contentContainer {
     /* -ctag-example: <div ... style="overflow-y: scroll;">
                 <div style="border: 1px solid red;">
@@ -78,10 +105,12 @@ div {
 
 .o-contentSimple--skinny {
   /*  touch  */ }
-  .o-contentSimple--skinny > div {
+  .o-contentSimple--skinny .o-contentSimple__contentContainer,
+  .o-contentSimple--skinny .o-contentSimple__footerContainer {
     width: 100%;
     padding-left: 4.166665vw; }
-    .o-contentSimple--skinny > div > div {
+    .o-contentSimple--skinny .o-contentSimple__contentContainer > div,
+    .o-contentSimple--skinny .o-contentSimple__footerContainer > div {
       width: 64.5833475vw; }
   .o-contentSimple--skinny .o-contentSimple__footerContainer {
     left: 27.0833225vw; }
@@ -218,7 +247,7 @@ input {
       display: table; }
     .o-form__section:after {
       clear: both; }
-  .o-form input, .o-form select {
+  .o-form input, .o-form select, .o-form textarea, .o-form button {
     width: 100%;
     height: 44px;
     float: left;
@@ -228,26 +257,42 @@ input {
     color: #4D4D4D;
     padding-left: 11px;
     padding-right: 11px;
+    margin: 0;
     border-radius: 0px;
     -webkit-appearance: none;
-    -moz-appearance: none; }
+    -moz-appearance: none;
+    resize: none; }
+  .o-form button {
+    border-radius: 3px;
+    background-color: #fff; }
+  .o-form textarea {
+    height: 88px; }
+  .o-form input[type="checkbox"] {
+    width: 44px; }
   .o-form__element {
     width: 100%;
     float: left;
-    margin-bottom: 22px; }
+    margin-bottom: 22px;
+    position: relative; }
     .o-form__element label {
-      width: 33.33%;
+      width: 12.499995vw;
       float: left;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 13px;
+      line-height: 16.5px;
       color: #999999;
       border-bottom: 1px solid #CCCCCC;
       position: absolute;
       bottom: 0px;
-      left: 0px; }
-    .o-form__element input, .o-form__element select {
-      width: 66.66%;
-      float: right; }
+      left: 0px;
+      margin: 0;
+      padding: 0;
+      font-weight: 300;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-right: 5.5px; }
+      .o-form__element label + input, .o-form__element label + select, .o-form__element label + textarea, .o-form__element label + button {
+        width: calc( 100% - 12.499995vw);
+        float: right; }
   .o-form input[type="submit"] {
     width: 16.66666vw;
     height: 44px;
@@ -262,6 +307,79 @@ input {
     float: right; }
     .o-form input[type="reset"]:hover {
       background-color: #fff; }
+
+.o-formLayout__1-column {
+  width: 100%;
+  clear: both; }
+  .o-formLayout__1-column:before, .o-formLayout__1-column:after {
+    content: " ";
+    display: table; }
+  .o-formLayout__1-column:after {
+    clear: both; }
+  .o-formLayout__1-column .o-form__element {
+    width: 100%;
+    float: left; }
+
+.o-formLayout__2-column {
+  width: 100%;
+  clear: both; }
+  .o-formLayout__2-column:before, .o-formLayout__2-column:after {
+    content: " ";
+    display: table; }
+  .o-formLayout__2-column:after {
+    clear: both; }
+  .o-formLayout__2-column .o-form__element {
+    width: calc( 50% - 2.0833325vw);
+    float: left;
+    margin-right: 4.166665vw; }
+    .o-formLayout__2-column .o-form__element:nth-of-type(2n) {
+      margin-right: 0; }
+
+.o-formLayout__3-column {
+  width: 100%;
+  clear: both; }
+  .o-formLayout__3-column:before, .o-formLayout__3-column:after {
+    content: " ";
+    display: table; }
+  .o-formLayout__3-column:after {
+    clear: both; }
+  .o-formLayout__3-column .o-form__element {
+    width: calc( 33.3333% - 1.3888883333vw);
+    float: left;
+    margin-right: 2.0833325vw; }
+    .o-formLayout__3-column .o-form__element:nth-of-type(3n) {
+      margin-right: 0; }
+    .o-formLayout__3-column .o-form__element label {
+      width: 8.33333vw; }
+    .o-formLayout__3-column .o-form__element input, .o-formLayout__3-column .o-form__element select {
+      width: calc( 100% - 8.33333vw); }
+
+.c-dataModelSelector {
+  position: relative;
+  border-bottom: 1px solid #CCCCCC; }
+  .c-dataModelSelector label {
+    border: none; }
+  .c-dataModelSelector__itemsContainer {
+    width: calc( 100% - 12.499995vw);
+    float: right; }
+  .c-dataModelSelector__item {
+    width: 16.666%;
+    height: 88px;
+    background-color: #fff;
+    float: left;
+    justify-content: center;
+    display: flex;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16.5px;
+    flex-direction: column; }
+    .c-dataModelSelector__item > * {
+      align-self: center; }
+    .c-dataModelSelector__item > div {
+      margin-bottom: 5.5px; }
+    .c-dataModelSelector__item--selected {
+      background-color: #eee; }
 
 .o-modal {
   /* -ctag-example: ...
@@ -305,19 +423,16 @@ input {
     @media (max-width: 768px) {
       .o-modal__contentContainer {
         margin-left: 0 !important; } }
-    .o-modal__contentContainer > * {
-      width: 66.66664vw;
-      margin-left: 8.33333vw; }
-      @media (max-width: 768px) {
-        .o-modal__contentContainer > * {
-          width: 100%  !important; } }
-      @media (max-width: 768px) {
-        .o-modal__contentContainer > * {
-          padding-left: 8.33333vw !important;
-          padding-right: 8.33333vw !important; } }
-      @media (max-width: 768px) {
-        .o-modal__contentContainer > * {
-          margin-left: 0 !important; } }
+    @media (max-width: 768px) {
+      .o-modal__contentContainer > * {
+        width: 100%  !important; } }
+    @media (max-width: 768px) {
+      .o-modal__contentContainer > * {
+        padding-left: 8.33333vw !important;
+        padding-right: 8.33333vw !important; } }
+    @media (max-width: 768px) {
+      .o-modal__contentContainer > * {
+        margin-left: 0 !important; } }
 
 .o-modal--show {
   /* */
@@ -336,7 +451,7 @@ input {
             <td><div>content</div></td>
         </tr>
     </table>;*/
-  /* -ctag-status: prod;*/
+  /* -ctag-status: depracated;*/
   width: 100%; }
   .o-table tr, .o-tableSummary tr {
     border-bottom: 1px solid #CCCCCC;
@@ -370,7 +485,7 @@ input {
             <td><div>content</div></td>
         </tr>
     </table>;*/
-  /* -ctag-status: prod;*/ }
+  /* -ctag-status: depracated;*/ }
   .o-tableSummary tr {
     border-bottom: none; }
   .o-tableSummary td, .o-tableSummary th {
@@ -384,45 +499,35 @@ input {
       padding-right: 0;
       text-align: right; }
 
-.o-listSimple {
+.o-list {
   /* -ctag-example: ...;
-        { .o-listSimple__headerRow }
-        { .o-listSimple__row }
-        { .o-listSimple__row };*/
+        { .o-list__headerRow }
+        { .o-list__row }
+        { .o-list__row };*/
   /* -ctag-status: prod;*/ }
-  .o-listSimple__row {
+  .o-list__row {
     /* -ctag-example: ...
-            <div class='o-listSimple__cell
-                o-listSimple__cell--expander'>expander</div>
-            { .o-listSimple__cell }
-            { .o-listSimple__cell };*/
+            <div class='o-list__cell
+                o-list__cell--expander'>expander</div>
+            { .o-list__cell }
+            { .o-list__cell };*/
     height: 44px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    cursor: hand;
-    cursor: pointer; }
-    .o-listSimple__row > * {
-      align-self: center; }
-    .o-listSimple__row:hover {
-      background-color: rgba(0, 0, 0, 0.05); }
-    .o-listSimple__row--selected {
-      background-color: #eee; }
-  .o-listSimple--uninteractive .o-listSimple__row {
-    cursor: default; }
-    .o-listSimple--uninteractive .o-listSimple__row:hover {
-      background-color: transparent; }
-  .o-listSimple__headerRow {
-    /* -ctag-example: ...;
-            <div class='o-listSimple__headerCell
-                o-listSimple__cell--expander'>expander</div>
-            { .o-listSimple__headerCell }
-            { .o-listSimple__headerCell };*/
-    height: 44px;
-    border-bottom: 1px solid #eee;
     display: flex; }
-    .o-listSimple__headerRow > * {
+    .o-list__row > * {
       align-self: center; }
-  .o-listSimple__headerCell {
+    .o-list__row--selected {
+      background-color: #eee; }
+  .o-list__headerRow {
+    /* -ctag-example: ...;
+            <div class='o-list__headerCell
+                o-list__cell--expander'>expander</div>
+            { .o-list__headerCell }
+            { .o-list__headerCell };*/
+    height: 44px;
+    display: flex; }
+    .o-list__headerRow > * {
+      align-self: center; }
+  .o-list__headerCell {
     /* -ctag-example: ...header cell;*/
     width: 16.66666vw;
     font-weight: 400;
@@ -430,7 +535,7 @@ input {
     text-align: left;
     font-size: 14px;
     line-height: 22px; }
-  .o-listSimple__cell {
+  .o-list__cell {
     /* -ctag-example: ...cell;*/
     width: 16.66666vw;
     overflow: hidden;
@@ -439,28 +544,48 @@ input {
     font-size: 14px;
     line-height: 22px;
     display: flex; }
-    .o-listSimple__cell > * {
+    .o-list__cell > * {
       align-self: center; }
-    .o-listSimple__cell--expander {
+    .o-list__cell--expander {
       flex: 1; }
-    .o-listSimple__cell--center {
+    .o-list__cell--center {
       text-align: center; }
+    .o-list__cell--selected {
+      background-color: #eee; }
 
-.o-listSimple--footer {
+.o-list--overview {
+  /* -ctag-example: <div class="o-list o-list--overview">;
+            { .o-list__headerRow }
+            { .o-list__row }
+            { .o-list__row }
+        </div>;*/
+  /* -ctag-status: prod;*/ }
+  .o-list--overview .o-list__row {
+    border-bottom: 1px solid #eee;
+    cursor: hand;
+    cursor: pointer; }
+    .o-list--overview .o-list__row:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+  .o-list--overview .o-list--uninteractive {
+    /* touch */ }
+    .o-list--overview .o-list--uninteractive .o-list__row {
+      cursor: default; }
+      .o-list--overview .o-list--uninteractive .o-list__row:hover {
+        background-color: transparent; }
+  .o-list--overview .o-list__headerRow {
+    border-bottom: 1px solid #eee; }
+
+.o-list--footer {
   /* touch */ }
-  .o-listSimple--footer .o-listSimple__row {
-    border-bottom: none; }
-  .o-listSimple--footer .o-listSimple__headerRow {
-    border-bottom: none; }
-  .o-listSimple--footer .o-listSimple__headerCell {
+  .o-list--footer .o-list__headerCell {
     border-left: 1px solid #CCCCCC;
     justify-content: center; }
-    .o-listSimple--footer .o-listSimple__headerCell:first-of-type {
+    .o-list--footer .o-list__headerCell:first-of-type {
       border-left: none; }
-  .o-listSimple--footer .o-listSimple__cell {
+  .o-list--footer .o-list__cell {
     border-left: 1px solid #CCCCCC;
     justify-content: center; }
-    .o-listSimple--footer .o-listSimple__cell:first-of-type {
+    .o-list--footer .o-list__cell:first-of-type {
       border-left: none; }
 
 a {
@@ -544,9 +669,10 @@ a {
     background-repeat: no-repeat; }
     .c-mainNav__logo > * {
       align-self: center; }
-    .c-mainNav__logo img {
-      width: 125px;
-      display: none; }
+    .c-mainNav__logo__metric {
+      position: absolute;
+      right: 0px;
+      transform: translate(100%, 50%); }
   .c-mainNav__links {
     /* -ctag-example: ...
             { .c-mainNav__link }
@@ -695,7 +821,7 @@ a {
 .c-mainNav--manyLinks {
   /* touch */ }
   .c-mainNav--manyLinks .c-mainNav__link {
-    width: 8.33333vw; }
+    width: 12.499995vw; }
     .c-mainNav--manyLinks .c-mainNav__link--social-icon {
       width: 4.166665vw; }
     .c-mainNav--manyLinks .c-mainNav__link--long {
@@ -756,7 +882,7 @@ a {
       width: 4.166665vw; }
   .c-redox__contentContainer {
     /* -ctag-example: ...;*/
-    width: 83.33334vw;
+    width: 100%;
     height: calc( 100% - 99px);
     position: absolute;
     right: 0px;
@@ -769,7 +895,7 @@ a {
     /* Eventually, move these to the o-document or whatever child component
            we put inside the body? */ }
     .c-redox__contentContainer--sidenav {
-      width: 83.3333vw; }
+      width: 83.33334vw; }
     .c-redox__contentContainer > div:not(.o-contentSimple) {
       margin: 44px; }
     @media (max-width: 768px) {
@@ -903,6 +1029,7 @@ a {
 
 .c-tertiaryNav {
   /* -ctag-example: ...
+        { .c-tertiaryNav__title }
         { .c-tertiaryNav__item }
         { .c-tertiaryNav__item }
         { .c-tertiaryNav__item };*/
@@ -914,6 +1041,15 @@ a {
   height: 100%;
   overflow: auto;
   transition: width 0.3s; }
+  .c-tertiaryNav__title {
+    /* -ctag-example: ...Tertiary Title;*/
+    width: 100%;
+    padding-left: 2.0833325vw;
+    padding-right: 2.0833325vw;
+    font-size: 19px;
+    line-height: 38.5px;
+    color: #999999;
+    line-height: 55px; }
   .c-tertiaryNav__item {
     /* -ctag-example: ...
             { .c-tertiaryNav__item__label };*/
@@ -942,21 +1078,8 @@ a {
       background-color: #eee; }
 
 .c-connections {
-  /* -ctag-example: <div class="c-connections o-contentSimple">
-            <div>
-                { .o-contentHeader }
-                { .c-connections__groupHeader }
-                { .c-connectionsTable }
-                { .c-connections__groupHeader }
-                { .c-connectionsTable }
-            </div>
-        </div>*/
-  /*<a href='../../#!/organization/connections/(section,page)' target="_new">prototype</a>;*/
-  /* -ctag-status: prod;*/
-  /* =============TABLES============ */ }
-  .c-connections .o-table, .c-connections .o-tableSummary {
-    margin-bottom: 44px;
-    clear: both; }
+  /* -ctag-example: <div class="c-connections o-contentSimple"><div class="o-contentSimple__contentContainer"><div><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Connections</div><div class="o-contentHeader__navContainer"></div></div><div class="c-connections__groupHeader"><div class="o-icon__outbound"></div><h1>Outbound</h1><div class="c-connections__addBtn">Add Outgoing</div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class=" o-list__cell o-list__cell--expander c-connections__cell--title">Tulip Exit Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell o-list__cell--expander c-connections__cell--title">Tennis Calculator Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell o-list__cell--expander c-connections__cell--title">Lunch Smirk Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell o-list__cell--expander c-connections__cell--title">Armor Rat Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div></div><div class="c-connections__groupHeader"><div class="o-icon__inbound"></div><h1>Inbound</h1><div class="c-connections__addBtn">Add Incoming</div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class="o-list__cell o-list__cell--expander c-connections__cell--title">Hill Drive Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell o-list__cell--expander c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell o-list__cell--expander c-connections__cell--title">Calculator Rope Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell o-list__cell--expander c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell o-list__cell--expander c-connections__cell--title">Breakfast World Connection</div><div class="o-list__cell c-connections__cell--endPointUnverified">End point verification needed!</div><div class="o-list__cell o-list__cell--expander c-connections__cell--verify"><a href="#">Verify</a></div></div><div class="o-list__row"><div class="o-list__cell o-list__cell--expander c-connections__cell--title">Army Nexus Connection</div><div class="o-list__cell c-connections__cell--endPointUnverified">End point verification needed!</div><div class="o-list__cell o-list__cell--expander c-connections__cell--verify"><a href="#">Verify</a></div></div></div></div></div></div>;*/
+  /* -ctag-status: prod;*/ }
   .c-connections__groupHeader {
     /* -ctag-example: ...
                 { .o-icon__outbound }
@@ -994,28 +1117,22 @@ a {
     cursor: pointer; }
     .c-connections__addBtn:hover {
       background-color: #eee; }
-  .c-connections .c-connectionsTable {
-    /* -ctag-example: <table class="c-connectionsTable o-table">
-                <tr>
-                    <td class="c-connectionsTable__td--title o-table__td--expander">title</td>
-                    <td class="c-connectionsTable__td--endPoint">endpoint</td>
-                    <td class="c-connectionsTable__td--verify">verify</td>
-                </tr>
-            </table>;*/ }
-    .c-connections .c-connectionsTable__td--icon {
-      width: 4.166665vw; }
-    .c-connections .c-connectionsTable__td--endPoint, .c-connections .c-connectionsTable__td--endPointUnverified {
-      width: 33.33332vw;
-      font-size: 13px;
-      line-height: 16.5px;
-      color: #999999; }
-    .c-connections .c-connectionsTable__td--endPointUnverified {
-      color: #000;
-      color: #DE5978;
-      font-style: italic; }
-    .c-connections .c-connectionsTable__td--verify {
-      width: 8.33333vw;
-      text-align: right; }
+  .c-connections .o-list {
+    margin-bottom: 22px; }
+  .c-connections__cell--icon {
+    width: 4.166665vw; }
+  .c-connections__cell--endPoint, .c-connections__cell--endPointUnverified {
+    width: 33.33332vw;
+    font-size: 13px;
+    line-height: 16.5px;
+    color: #999999; }
+  .c-connections__cell--endPointUnverified {
+    color: #000;
+    color: #DE5978;
+    font-style: italic; }
+  .c-connections__cell--verify {
+    width: 8.33333vw;
+    justify-content: flex-end; }
 
 .c-connectionsEmptyState {
   width: 100%;
@@ -1024,45 +1141,126 @@ a {
   background-image: url("../images/app/connections_watermark.png");
   background-position: 22px center; }
 
-.c-logs__navContainer {
-  width: 20.833325vw; }
+.c-logs {
+  /* -ctag-example: <div class="c-logs o-contentSimple o-contentSimple--wfooter"><div class="o-contentSimple__contentContainer"><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Logs</div><div class="o-contentHeader__navContainer c-logs__navContainer"><form class="o-form"><input class="c-logs__search"></form><div class="c-logs__searchIcon"><i class="fa fa-search"></i></div></div></div><div class="o-listOverview"><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__inbound"></div></div><div class="o-list__cell o-list__cell--expander c-logs__cell--titler">Brick Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-eyedropper" title="Vaccine"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__success"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__query"></div></div><div class="o-list__cell o-list__cell--expander c-logs__cell--titler">Diamond Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-flask" title="Results"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__success"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__query"></div></div><div class="o-list__cell o-list__cell--expander c-logs__cell--titler">Rose Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-flask" title="Results"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__fail"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div></div></div><div class="o-contentSimple__footerContainer"><div class="c-logs__footer"><div class="o-listOverview o-listFooter"><div class="o-list__row"><div class="o-list__cell c-logs__cell--summaryType">Type</div><div class="o-list__cell o-list__cell--expander c-logs__cell--summaryTitle ">Message</div><div class="o-list__cell c-logs__cell--summaryModel">Data Model</div><div class="o-list__cell c-logs__cell--summaryStatus">Status</div><div class="o-list__cell c-logs__cell--summaryEnvironment">Environment</div><div class="o-list__cell c-logs__cell--summaryTime">Date/Time</div></div></div><div class="c-logs__filters">filters</div></div></div></div>;*/
+  /* -ctag-status: prod;*/ }
+  .c-logs__navContainer {
+    width: 20.833325vw;
+    position: relative; }
+  .c-logs__searchIcon {
+    /* -ctag-example: ...;*/
+    font-size: 19px;
+    line-height: 38.5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 100%;
+    display: flex; }
+    .c-logs__searchIcon > * {
+      align-self: center; }
+  .c-logs .c-logs__cell--summaryType, .c-logs .c-logs__cell--type {
+    width: 4.166665vw;
+    justify-content: flex-start; }
+  .c-logs .c-logs__cell--summaryStatus, .c-logs .c-logs__cell--status {
+    width: 8.33333vw;
+    justify-content: center; }
+  .c-logs .c-logs__cell--summaryModel, .c-logs .c-logs__cell--model {
+    width: 8.33333vw;
+    justify-content: center; }
+  .c-logs .c-logs__cell--summaryEnvironment, .c-logs .c-logs__cell--environment {
+    width: 8.33333vw;
+    justify-content: center; }
+  .c-logs .c-logs__cell--summaryTime, .c-logs .c-logs__cell--time {
+    width: 12.499995vw;
+    justify-content: flex-end; }
+  .c-logs .c-logs__cell--model {
+    font-size: 19px;
+    line-height: 38.5px; }
+  .c-logs .c-logs__cell--environment {
+    font-size: 13px;
+    line-height: 22px; }
+  .c-logs .c-logs__cell--summaryTitle {
+    justify-content: flex-start;
+    padding-left: 11px; }
+  .c-logs__filters {
+    width: 100%;
+    height: 132px;
+    margin-top: 11px; }
+    .c-logs__filters .c-logs__closeFilters {
+      width: 8.33333vw;
+      height: 66px;
+      background-image: url("../images/app/down_arrow_small.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      cursor: hand;
+      cursor: pointer;
+      display: none; }
+      .c-logs__filters .c-logs__closeFilters:hover {
+        background-color: #eee; }
+    .c-logs__filters .c-logs__cell--filterStatus {
+      width: 8.33333vw; }
+    .c-logs__filters .c-logs__cell--filterModel {
+      width: 24.99999vw;
+      padding-right: 22px;
+      justify-content: flex-start; }
+      .c-logs__filters .c-logs__cell--filterModel > div {
+        margin-left: 11px; }
+    .c-logs__filters .c-logs__cell--filterEnvironment {
+      width: 8.33333vw;
+      padding-left: 11px; }
+    .c-logs__filters .c-logs__cell--filterTime {
+      width: 12.499995vw;
+      justify-content: flex-end; }
+      .c-logs__filters .c-logs__cell--filterTime > input {
+        width: 8.33333vw; }
+  .c-logs__filter {
+    cursor: hand;
+    cursor: pointer; }
+    .c-logs__filter:hover {
+      color: #00b588; }
+    .c-logs__filter--selected:hover {
+      color: #000; }
+  .c-logs__footer {
+    height: 100%;
+    width: 100%;
+    padding-top: 11px;
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    transition: height 0.3s;
+    cursor: hand;
+    cursor: pointer; }
+    .c-logs__footer--open {
+      /* touch */
+      height: 264px; }
+      .c-logs__footer--open .c-logs__cell--summaryTitle {
+        visibility: hidden; }
+      .c-logs__footer--open .c-logs__cell--summaryModel {
+        width: 24.99999vw;
+        justify-content: flex-start;
+        padding-left: 11px; }
+      .c-logs__footer--open .c-logs__closeFilters {
+        display: block; }
 
-.c-logs .c-logs__cell--type {
-  width: 4.166665vw; }
+.c-logsSideNav__cell--type {
+  width: 2.0833325vw;
+  padding: 3px; }
 
-.c-logs .c-logs__cell--status {
-  width: 8.33333vw;
-  justify-content: center; }
+.c-logsSideNav__cell--title {
+  font-size: 13px;
+  line-height: 16.5px;
+  padding-left: 11px; }
 
-.c-logs .c-logs__cell--model {
-  width: 8.33333vw;
-  justify-content: center; }
-
-.c-logs .c-logs__cell--environment {
-  width: 8.33333vw;
-  justify-content: center; }
-
-.c-logs .c-logs__cell--time {
-  width: 12.499995vw;
-  justify-content: flex-end; }
-
-.c-logs__footer {
-  height: 100%;
-  width: 100%;
-  padding-top: 11px;
-  overflow: hidden;
-  top: 0px;
-  left: 0px;
-  background-color: #fff;
-  transition: height 0.3s; }
-
-.c-logs__filters {
-  width: 100%;
-  height: 132px;
-  margin-top: 11px; }
-
-.c-logs__footer--open {
-  height: 264px; }
+.c-logsSideNav__cell--status {
+  font-size: 13px;
+  line-height: 16.5px;
+  padding-left: 11px;
+  width: 2.0833325vw; }
 
 .c-profile__content {
   display: flex;
@@ -1179,8 +1377,7 @@ a {
   float: left;
   font-size: 13.5px;
   line-height: 16.5px;
-  line-height: 22px;
-  color: #808080; }
+  line-height: 22px; }
   .c-profile__outsideLink:nth-child(2n) {
     text-align: right; }
 
@@ -1228,6 +1425,18 @@ a {
   @media (max-width: 768px) {
     .c-profile__category {
       width: 16.66666vw !important; } }
+
+.c-profileFormLayout__avatarColumn {
+  width: 14.5833275vw;
+  float: left;
+  padding-left: 2.0833325vw; }
+
+.c-profileFormLayout__element--avatar {
+  height: 176px; }
+
+.c-profileFormLayout__avatarInverseColumn {
+  width: calc( 100% - 14.5833275vw);
+  float: left; }
 
 .accordion {
   margin-top: 30px;
@@ -2273,7 +2482,7 @@ accordion .panel-group .panel {
 #contact-form form {
   width: 100%; }
 
-#contact-form input, textarea {
+#contact-form input, #contact-form textarea {
   width: 100%;
   padding: 10px;
   border: 2px solid #dbd9d6;
@@ -3626,9 +3835,7 @@ input[type="radio"] {
 
 #truenorth {
   font-size: 24px;
-  height: 24px;
   color: #22826A;
-  z-index: 1;
   font-weight: bolder; }
 
 .dashboard-form-panel {

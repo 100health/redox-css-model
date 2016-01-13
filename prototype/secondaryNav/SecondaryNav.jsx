@@ -72,7 +72,14 @@ var SecondaryNav = React.createClass({
             );
         }
 
-        var tertiary_nav_items = [],extra_class;
+
+        var tertiaryNav = [];
+        tertiaryNav = <LogsSideNav />;
+
+        /*var tertiary_nav_items = [],extra_class;
+
+        // <div className="c-tertiaryNav">
+
         for ( var p=0; p<pages.length; p++ ) {
             page = pages[p];
             extra_class = "";
@@ -93,6 +100,9 @@ var SecondaryNav = React.createClass({
                 </div>
             );
         }
+        // </div>
+
+        */
 
         return  <div className="c-secondaryNav">
                     <div className="c-secondaryNav__list"
@@ -100,9 +110,7 @@ var SecondaryNav = React.createClass({
                         { nav_items }
                     </div>
                     <div className="c-secondaryNav__tertiaryNavContainer">
-                        <div className="c-tertiaryNav">
-                            { tertiary_nav_items }
-                        </div>
+                        { tertiaryNav }
                     </div>
                 </div>;
     }

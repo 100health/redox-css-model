@@ -3,6 +3,49 @@
 
 
 
+
+
+
+
+var DataModelSelector = React.createClass({displayName: "DataModelSelector",
+
+    selectItem: function ( id ) {
+        $(id).toggleClass("c-dataModelSelector__item--selected");
+    },
+
+    render: function() {
+
+        var data_models = RedoxModel.app.data_models();
+
+        var models_html = [],model;
+        for ( var i=0; i<data_models.length; i++ ) {
+            model = data_models[i];
+            models_html.push(
+                React.createElement("div", {className: "c-dataModelSelector__item", 
+                    id:  "model_" + model.guid, 
+                    key:  "dataModelSelector_" + model.guid, 
+                    onClick:  this.selectItem.bind( this , "#model_" + model.guid) }, 
+                    React.createElement("div", {className:  "fa fa-2x " + model.icon}), 
+                     model.name
+                )
+            );
+        }
+
+        return  React.createElement("div", {className: "c-dataModelSelector o-form__element"}, 
+                    React.createElement("label", null, "Data Models"), 
+                    React.createElement("div", {className: "c-dataModelSelector__itemsContainer"}, 
+                         models_html 
+                    )
+                );
+    }
+
+});
+
+
+
+
+
+
 var Connections = React.createClass({displayName: "Connections",
 
 
@@ -12,26 +55,37 @@ var Connections = React.createClass({displayName: "Connections",
         if ( connection.verified ) {
             link = React.createElement("a", {href: "#", onClick:  function() { return false; }}, "Edit");
             end_point = connection.end_point;
-            end_point_class = "c-connectionsTable__td--endPoint";
+            end_point_class = "c-connections__cell--endPoint";
         }else{
             link = React.createElement("a", {href: "#", onClick:  function() { return false; }}, "Verify");
             end_point = "End point verification needed!";
-            end_point_class = "c-connectionsTable__td--endPointUnverified";
+            end_point_class = "c-connections__cell--endPointUnverified";
         }
 
-        return  React.createElement("tr", null, 
-                    React.createElement("td", {className: "c-connectionsTable__td--title o-table__td--expander"},  connection.title), 
-                    React.createElement("td", {className:  end_point_class },  end_point ), 
-                    React.createElement("td", {className: "c-connectionsTable__td--verify"}, 
+        return  React.createElement("div", {className: "o-list__row"}, 
+                    React.createElement("div", {className: "o-list__cell o-list__cell--expander" + ' ' +
+                        "c-connections__cell--title"},  connection.title), 
+                    React.createElement("div", {className:  "o-list__cell " + end_point_class},  end_point ), 
+                    React.createElement("div", {className: "o-list__cell o-list__cell--expander" + ' ' +
+                        "c-connections__cell--verify"}, 
                          link 
                     )
                 );
     },
 
+    alertExample: function () {
+        alertExample(
+            this.render(),
+            []
+        );
+    },
+
     getOutboundConnectionRow: function( connection ){
-        return  React.createElement("tr", null, 
-                    React.createElement("td", {className: "c-connectionsTable__td--title o-table__td--expander"},  connection.title), 
-                    React.createElement("td", {className: "c-connectionsTable__td--verify"}, 
+        return  React.createElement("div", {className: "o-list__row"}, 
+                    React.createElement("div", {className: " o-list__cell o-list__cell--expander" + ' ' +
+                        "c-connections__cell--title"},  connection.title), 
+                    React.createElement("div", {className: "o-list__cell" + ' ' +
+                        "c-connections__cell--verify"}, 
                         React.createElement("a", {href: "#", onClick:  function() { return false; }}, "API/Key")
                     )
                 );
@@ -57,7 +111,8 @@ var Connections = React.createClass({displayName: "Connections",
                     React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
                         React.createElement("div", null, 
                             React.createElement("div", {className: "o-contentHeader"}, 
-                                React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
+                                React.createElement("div", {className: "o-contentHeader__titleContainer", 
+                                    onClick:  this.alertExample}, 
                                     "Connections"
                                 ), 
                                 React.createElement("div", {className: "o-contentHeader__navContainer"}
@@ -74,10 +129,8 @@ var Connections = React.createClass({displayName: "Connections",
                                     "Add Outgoing"
                                 )
                             ), 
-                            React.createElement("table", {className: "o-table"}, 
-                              React.createElement("tbody", null, 
+                            React.createElement("div", {className: "o-list o-list--overview"}, 
                                  outbound_connections_html 
-                              )
                             ), 
 
                             React.createElement("div", {className: "c-connections__groupHeader"}, 
@@ -90,10 +143,8 @@ var Connections = React.createClass({displayName: "Connections",
                                     "Add Incoming"
                                 )
                             ), 
-                            React.createElement("table", {className: "o-table"}, 
-                              React.createElement("tbody", null, 
+                            React.createElement("div", {className: "o-list o-list--overview"}, 
                                  inbound_connections_html 
-                              )
                             )
 
                         )
@@ -163,6 +214,72 @@ var GalleryNav = React.createClass({displayName: "GalleryNav",
 
 
 
+
+
+
+var LogDetail = React.createClass({displayName: "LogDetail",
+
+
+    componentWillMount: function() {
+        var me = this;
+        RouteState.addDiffListeners(
+    		["log_id"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "LogDetail"
+    	);
+    },
+
+    componentWillUnmount: function(){
+        RouteState.removeDiffListenersViaClusterId( "LogDetail" );
+    },
+
+    alertExample: function () {
+        alertExample(
+            this.render(),
+            ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
+        );
+    },
+
+    closeLog: function () {
+        RS.merge({
+            detail_page:""
+        })
+    },
+
+
+    render: function() {
+
+        var log = RedoxModel.get( RS.route.log_id );
+        console.log( log );
+
+        return  React.createElement("div", {className: 
+                    "o-contentSimple" + ' ' +
+                    "o-contentSimple--skinny" + ' ' +
+                    "c-logDetail"}, 
+                    React.createElement("div", {className: "o-contentSimple__closeDetail", 
+                        onClick:  this.closeLog}), 
+                    React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
+                        React.createElement("div", {className: "o-contentHeader"}, 
+                            React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
+                                 log.title
+                            ), 
+                            React.createElement("div", {className: "o-contentHeader__navContainer"}, 
+                                 log.success
+                            )
+                        ), 
+                        "log detail"
+                    )
+                );
+    }
+
+});
+
+
+
+
 var Logs = React.createClass({displayName: "Logs",
 
 
@@ -182,6 +299,20 @@ var Logs = React.createClass({displayName: "Logs",
         RouteState.removeDiffListenersViaClusterId( "Logs" );
     },
 
+    alertExample: function () {
+        alertExample(
+            this.render(),
+            ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
+        );
+    },
+
+
+    openLog: function ( log ) {
+        RS.merge({
+            detail_page:"log",
+            log_id:log.guid
+        })
+    },
 
     getLogRow: function( log ){
 
@@ -210,67 +341,64 @@ var Logs = React.createClass({displayName: "Logs",
                 break;
         }
 
-
-        return  React.createElement("div", {className: "o-listSimple__row"}, 
+        return  React.createElement("div", {className: "o-list__row", key:  log.guid, 
+                    onClick:  this.openLog.bind( this , log) }, 
                     React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
+                        "o-list__cell" + ' ' +
                         "c-logs__cell--type"}, 
                         React.createElement("div", {className:  type_cls })
                     ), 
                     React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
-                        "o-listSimple__cell--expander" + ' ' +
+                        "o-list__cell" + ' ' +
+                        "o-list__cell--expander" + ' ' +
                         "c-logs__cell--titler"},  log.title), 
                     React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
-                        "c-logs__cell--model"}, "Data Model"), 
+                            "o-list__cell c-logs__cell--model " +
+                            "fa fa-2x " + log.data_model().icon, 
+                        title:  log.data_model().name}), 
                     React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
+                        "o-list__cell" + ' ' +
                         "c-logs__cell--status"}, 
                         React.createElement("div", {className:  pass_cls })
                     ), 
                     React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
+                        "o-list__cell" + ' ' +
                         "c-logs__cell--environment"}, "Production"), 
                     React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
+                        "o-list__cell" + ' ' +
                         "c-logs__cell--time"}, "1/12 | 5:64:23pm")
                 );
     },
 
-    getSummaryRow: function( index ){
-        return  React.createElement("div", {className: "o-listSimple__row", 
-                    onClick:  this.openFooter}, 
-                    React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
-                        "c-logs__cell--type"}, "Type"), 
-                    React.createElement("div", {className: "o-listSimple__cell" + ' ' +
-                        "o-listSimple__cell--expander" + ' ' +
-                        "c-logs__cell--title "}, "Message"), 
-                    React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
-                        "c-logs__cell--model"}, "Data Model"), 
-                    React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
-                        "c-logs__cell--status"}, "Status"), 
-                    React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
-                        "c-logs__cell--environment"}, "Environment"), 
-                    React.createElement("div", {className: 
-                        "o-listSimple__cell" + ' ' +
-                        "c-logs__cell--time"}, "Date/Time")
-                );
-    },
-
-    openFooter: function(){
+    toggleFooter: function(){
         $(".o-contentSimple__footerContainer")
             .toggleClass("c-logs__footer--open");
     },
 
+    getModelThirdChunk: function ( third_index ) {
+        var html = [];
+        var data_model;
+        var row_count = 6;
+        var data_models = RedoxModel.app.data_models();
+        // var thirds = Math.floor( data_models.length/3 );
+        var start_index = ( third_index * row_count );
+        var end_index = Math.min( data_models.length , start_index + row_count );
+
+        for ( var i=start_index; i<end_index; i++ ) {
+            data_model = data_models[i];
+            html.push( React.createElement("div", {className: 
+                    "c-logs__filter fa fa-2x " + data_model.icon, 
+                title:  data_model.name}) );
+        }
+
+        return html;
+    },
+
+
     render: function() {
 
         var logs = RedoxModel.app.focused_organization().logs();
-        console.log( RedoxModel.app.focused_organization() );
+
 
         var log_rows_html = [];
         for ( var i=0; i<logs.length; i++ ) {
@@ -280,7 +408,8 @@ var Logs = React.createClass({displayName: "Logs",
         return  React.createElement("div", {className: "c-logs o-contentSimple o-contentSimple--wfooter"}, 
                     React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
                         React.createElement("div", {className: "o-contentHeader"}, 
-                            React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
+                            React.createElement("div", {className: "o-contentHeader__titleContainer", 
+                                onClick:  this.alertExample}, 
                                 "Logs"
                             ), 
                             React.createElement("div", {className: 
@@ -288,22 +417,255 @@ var Logs = React.createClass({displayName: "Logs",
                                     "c-logs__navContainer"}, 
                                 React.createElement("form", {className: "o-form"}, 
                                     React.createElement("input", {className: "c-logs__search"})
+                                ), 
+                                React.createElement("div", {className: "c-logs__searchIcon"}, 
+                                    React.createElement("i", {className: "fa fa-search"})
                                 )
                             )
                         ), 
-                        React.createElement("div", {className: "o-listSimple"}, 
+                        React.createElement("div", {className: "o-list o-list--overview"}, 
                              log_rows_html 
                         )
                     ), 
                     React.createElement("div", {className: "o-contentSimple__footerContainer"}, 
                         React.createElement("div", {className: "c-logs__footer"}, 
-                            React.createElement("div", {className: "o-listSimple o-listSimple--footer"}, 
-                                 this.getSummaryRow( i) 
+                            React.createElement("div", {className: 
+                                "o-list" + ' ' +
+                                "o-list--footer"}, 
+                                React.createElement("div", {className: "o-list__row", 
+                                    onClick:  this.toggleFooter}, 
+                                    React.createElement("div", {className: 
+                                        "o-list__cell" + ' ' +
+                                        "c-logs__cell--summaryType"}, "Type"), 
+                                    React.createElement("div", {className: "o-list__cell" + ' ' +
+                                        "o-list__cell--expander" + ' ' +
+                                        "c-logs__cell--summaryTitle "}, "Message"), 
+                                    React.createElement("div", {className: 
+                                        "o-list__cell" + ' ' +
+                                        "c-logs__cell--summaryModel"}, "Data Model"), 
+                                    React.createElement("div", {className: 
+                                        "o-list__cell" + ' ' +
+                                        "c-logs__cell--summaryStatus"}, "Status"), 
+                                    React.createElement("div", {className: 
+                                        "o-list__cell" + ' ' +
+                                        "c-logs__cell--summaryEnvironment"}, "Environment"), 
+                                    React.createElement("div", {className: 
+                                        "o-list__cell" + ' ' +
+                                        "c-logs__cell--summaryTime"}, "Date/Time")
+                                )
                             ), 
                             React.createElement("div", {className: "c-logs__filters"}, 
-                                "filters"
+                                React.createElement("div", {className: "c-logs__closeFilters", 
+                                    onClick:  this.toggleFooter}), 
+                                React.createElement("div", {className: "o-list"}, 
+                                    React.createElement("div", {className: "o-list__row"}, 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell o-list__cell--expander" + ' ' +
+                                            "c-logs__cell--filterType c-logs__filter", 
+                                            onClick:  function( a , b ) { console.log( a, b ); $(this).toggleClass("c-logs__filter--selected") }}, 
+                                            React.createElement("div", {className: "o-icon__inbound"}), 
+                                            "Inbound"
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterModel"}, 
+                                             this.getModelThirdChunk( 0) 
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterStatus c-logs__filter"}, 
+                                            React.createElement("div", {className: "o-icon__success"}), 
+                                            "Success"
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterEnvironment" + ' ' +
+                                            "c-logs__filter"}, 
+                                            "Production"
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterTime"}, 
+                                            React.createElement("input", null)
+                                        )
+                                    ), 
+                                    React.createElement("div", {className: "o-list__row"}, 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell o-list__cell--expander" + ' ' +
+                                            "c-logs__cell--filterType c-logs__filter"}, 
+                                            React.createElement("div", {className: "o-icon__outbound"}), 
+                                            "Outbound"
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterModel"}, 
+                                             this.getModelThirdChunk( 1) 
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterStatus c-logs__filter"}, 
+                                            React.createElement("div", {className: "o-icon__fail"}), 
+                                            "Fail"
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterEnvironment c-logs__filter"}, 
+                                            "Stage"
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterTime"}, 
+                                            React.createElement("input", null)
+                                        )
+                                    ), 
+                                    React.createElement("div", {className: "o-list__row"}, 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell o-list__cell--expander" + ' ' +
+                                            "c-logs__cell--filterType c-logs__filter"}, 
+                                            React.createElement("div", {className: "o-icon__query"}), 
+                                            "Query"
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterModel"}, 
+                                             this.getModelThirdChunk( 2) 
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterStatus"}), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterEnvironment c-logs__filter"}, 
+                                            "Development"
+                                        ), 
+                                        React.createElement("div", {className: 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterTime"})
+                                    )
+                                )
                             )
                         )
+                    )
+                );
+    }
+
+});
+
+
+
+
+
+
+
+var LogsSideNav = React.createClass({displayName: "LogsSideNav",
+
+
+    componentWillMount: function() {
+        var me = this;
+        RouteState.addDiffListeners(
+    		["log_id"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "LogsSideNav"
+    	);
+    },
+
+    componentWillUnmount: function(){
+        RouteState.removeDiffListenersViaClusterId( "LogsSideNav" );
+    },
+
+    alertExample: function () {
+        alertExample(
+            this.render(),
+            ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
+        );
+    },
+
+    openLog: function ( log ) {
+        RS.merge({
+            detail_page:"log",
+            log_id:log.guid
+        })
+    },
+
+    getLogRow: function( log ){
+
+        var connection = log.connection();
+
+        var type_cls = "";
+        switch ( connection.type ) {
+            case "outbound" :
+                type_cls = "o-icon__outbound";
+                break;
+            case "inbound" :
+                type_cls = "o-icon__inbound";
+                break;
+            case "query" :
+                type_cls = "o-icon__query";
+                break;
+        }
+
+        var pass_cls = "";
+        switch ( log.success ) {
+            case true :
+                pass_cls = "o-icon__success";
+                break;
+            case false :
+                pass_cls = "o-icon__fail";
+                break;
+        }
+
+        var selected_cls = "";
+        if ( log.guid == RS.route.log_id ) {
+            selected_cls = "c-tertiaryNav__item--selected";
+        }
+
+        return  React.createElement("div", {className: 
+                    "c-tertiaryNav__item o-list__row "
+                    + selected_cls, key:  log.guid, 
+                    onClick:  this.openLog.bind( this , log) }, 
+                    React.createElement("div", {className: 
+                        "o-list__cell" + ' ' +
+                        "c-logsSideNav__cell--type"}, 
+                        React.createElement("div", {className:  type_cls })
+                    ), 
+                    React.createElement("div", {className: 
+                        "o-list__cell" + ' ' +
+                        "o-list__cell--expander" + ' ' +
+                        "c-logsSideNav__cell--title"},  log.title), 
+                    /* <div className={
+                            "o-list__cell c-logs__cell--model " +
+                            "fa fa-2x " + log.data_model().icon
+                        } title={ log.data_model().name }></div> */ 
+                    React.createElement("div", {className: 
+                        "o-list__cell" + ' ' +
+                        "c-logsSideNav__cell--status"}, 
+                        React.createElement("div", {className:  pass_cls })
+                    )
+                    /*<div className="
+                        o-list__cell
+                        c-logs__cell--environment">Production</div>
+                    <div className="
+                        o-list__cell
+                        c-logs__cell--time">1/12 | 5:64:23pm</div> */ 
+                );
+    },
+
+    render: function() {
+
+        var logs = RedoxModel.app.focused_organization().logs();
+
+        var log_rows_html = [];
+        for ( var i=0; i<logs.length; i++ ) {
+            log_rows_html.push( this.getLogRow( logs[i] ) );
+        }
+
+        return  React.createElement("div", {className: "c-tertiaryNav c-logsSideNav"}, 
+                    React.createElement("div", {className: "c-tertiaryNav__title"}, "Logs"), 
+                    React.createElement("div", {className: "o-list"}, 
+                         log_rows_html 
                     )
                 );
     }
@@ -491,7 +853,8 @@ var Profile = React.createClass({displayName: "Profile",
                                 React.createElement("div", {className: "c-profile__avatarCol"}, 
                                     React.createElement("div", {className: "c-profile__avatar", 
                                         style: {"background-image":
-                                                "url('http://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg')"}}), 
+                                                "url('http://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg')"}}
+                                    ), 
                                     React.createElement("div", {className: "c-profile__btn", 
                                         onClick:  this.openProfileEdit}, 
                                         "Edit Profile"
@@ -747,15 +1110,58 @@ var ProfileEdit = React.createClass({displayName: "ProfileEdit",
                     React.createElement("div", {className: 
                         "o-contentModal__contentContainer" + ' ' +
                         "o-document"}, 
+                        React.createElement("div", null, 
+                            React.createElement("h1", null, "Profile Edit"), 
+                            React.createElement("form", {className: "o-form"}, 
+                                React.createElement("div", {className: "c-profileFormLayout__avatarInverseColumn"}, 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Title"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Email Address"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Public Website"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Phone Number"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Twitter"), 
+                                        React.createElement("input", null)
+                                    )
+                                ), 
+                                React.createElement("div", {className: "c-profileFormLayout__avatarColumn"}, 
+                                    React.createElement("div", {className: "o-form__element" + ' ' +
+                                        "c-profileFormLayout__element--avatar"}, 
+                                        React.createElement("div", {className: "c-profile__avatar", 
+                                            style: {"background-image":
+                                                    "url('http://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg')"}}
+                                        )
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("button", null, "Upload")
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "public"), 
+                                        React.createElement("input", {type: "checkbox"})
+                                    )
+                                ), 
 
-                        React.createElement("h1", null, "Profile Edit"), 
-                        React.createElement("div", {onClick:  this.close}, "close"), 
-                        React.createElement("form", {className: "o-form"}, 
-                            React.createElement("div", {className: "o-form__element"}, 
-                                React.createElement("label", null, "Test"), 
-                                React.createElement("input", {className: "c-logs__search"})
+                                React.createElement("div", {className: "o-formLayout__1-column"}, 
+                                    React.createElement("div", {className: "o-form__element" + ' ' +
+                                        "c-profileFormLayout__element--overview"}, 
+                                        React.createElement("label", null, "Overview"), 
+                                        React.createElement("textarea", null)
+                                    ), 
+                                    React.createElement(DataModelSelector, null)
+                                )
+
                             )
-
                         )
                     ), 
                     React.createElement("div", {className: "o-contentModal__footerContainer"}, 
@@ -843,6 +1249,16 @@ var MainNav = React.createClass({displayName: "MainNav",
         var nav_links = RedoxModel.app.orig_main_pages();
 
         var nav_items = [],icon_html;
+
+        nav_items.push(
+            React.createElement("a", {href: "http://community.redoxengine.com", target: "_blank", 
+                className: "c-mainNav__link" + ' ' +
+                    "c-mainNav__link--social-icon"}, 
+                React.createElement("img", {src: "images/logos/slack_hash.png", 
+                    title: "Join us on Slack!"})
+            )
+        );
+
         for ( var p=nav_links.length-1; p>=0; p-- ) {
             page = nav_links[p];
 
@@ -875,6 +1291,7 @@ var MainNav = React.createClass({displayName: "MainNav",
                 )
             );
         }
+
 
 
         return  React.createElement("div", {className: 
@@ -945,6 +1362,7 @@ var Redox = React.createClass({displayName: "Redox",
         var show_footer = true;
 
         var page;
+        var content_cls = "c-redox__contentContainer--sidenav";
         switch ( RS.route.page ) {
             case "connections" :
                 page = React.createElement(Connections, null);
@@ -962,6 +1380,14 @@ var Redox = React.createClass({displayName: "Redox",
             default :
                 page = React.createElement("div", null,  RS.route.section, " | ",  RS.route.page);
                 break;
+        }
+
+        switch ( RS.route.detail_page ) {
+            case "log":
+                page = React.createElement(LogDetail, null);
+                break;
+            default:
+
         }
 
         var secondaryNav = React.createElement(SecondaryNav, null);
@@ -985,7 +1411,8 @@ var Redox = React.createClass({displayName: "Redox",
                         (( show_footer ) ? "" : "c-redox--nofooter")}, 
                     React.createElement("div", {className: 
                             'c-redox__mainNavContainer ' +
-                            ( ( RS.route.detail_page && RS.route.detail_page != "" )
+                            ( ( RS.route.detail_page
+                                && RS.route.detail_page != "" )
                                     ? "c-redox__mainNavContainer--open" : "")
                         }, 
                         React.createElement(MainNav, null)
@@ -994,14 +1421,17 @@ var Redox = React.createClass({displayName: "Redox",
                             "c-redox__secondaryNavContainer"}, 
                          secondaryNav 
                     ), 
-                    React.createElement("div", {className: "c-redox__contentContainer"}, 
+                    React.createElement("div", {className: 
+                            "c-redox__contentContainer " + content_cls
+                        }, 
                          page 
                     ), 
                     React.createElement("div", {className: "c-redox__footerContainer"}, 
                         React.createElement(Footer, null)
                     ), 
 
-                    React.createElement("div", {className:  "o-modal " +
+                    React.createElement("div", {className: 
+                            "o-modal " +
                             ( ( modalContent ) ? "o-modal--show" : "")
                         }, 
                         React.createElement("div", {className: "o-modal__bgCover", 
@@ -1092,7 +1522,14 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
             );
         }
 
-        var tertiary_nav_items = [],extra_class;
+
+        var tertiaryNav = [];
+        tertiaryNav = React.createElement(LogsSideNav, null);
+
+        /*var tertiary_nav_items = [],extra_class;
+
+        // <div className="c-tertiaryNav">
+
         for ( var p=0; p<pages.length; p++ ) {
             page = pages[p];
             extra_class = "";
@@ -1100,19 +1537,22 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
                 extra_class = "c-tertiaryNav__item--indented ";
             }
             tertiary_nav_items.push(
-                React.createElement("div", {className: 
+                <div className={
                         "c-tertiaryNav__item " +
                         extra_class +
                         ( ( RS.route.detail_page == page.link )
-                            ?  "c-tertiaryNav__item--selected" : ""), 
-                    
-                    onClick:  this.changeDetailPage.bind( this , p) }, 
-                    React.createElement("div", {className: "c-tertiaryNav__item__label"}, 
-                         page.name
-                    )
-                )
+                            ?  "c-tertiaryNav__item--selected" : "" )
+                    }
+                    onClick={ this.changeDetailPage.bind( this , p ) }>
+                    <div className="c-tertiaryNav__item__label">
+                        { page.name }
+                    </div>
+                </div>
             );
         }
+        // </div>
+
+        */
 
         return  React.createElement("div", {className: "c-secondaryNav"}, 
                     React.createElement("div", {className: "c-secondaryNav__list", 
@@ -1120,9 +1560,7 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
                          nav_items 
                     ), 
                     React.createElement("div", {className: "c-secondaryNav__tertiaryNavContainer"}, 
-                        React.createElement("div", {className: "c-tertiaryNav"}, 
-                             tertiary_nav_items 
-                        )
+                         tertiaryNav 
                     )
                 );
     }
