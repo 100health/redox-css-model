@@ -1,12 +1,6 @@
 
 
 
-
-
-
-
-
-
 var ProfileAdminEdit = React.createClass({
 
 
@@ -30,6 +24,7 @@ var ProfileAdminEdit = React.createClass({
         RS.merge({
             modal:""
         });
+        return false;
     },
 
     render: function() {
@@ -37,14 +32,44 @@ var ProfileAdminEdit = React.createClass({
         return  <div className="c-profileEdit
                     o-contentModal o-contentModal--wfooter">
                     <div className="
-                        o-contentModal__contentContainer
-                        o-document">
+                        o-contentModal__contentContainer">
+                        <div>
+                            <div className="o-contentHeader">
+                                <div className="o-contentHeader__titleContainer">
+                                    Admin Profile Edit
+                                </div>
+                                <div className="o-contentHeader__navContainer">
+                                    <a href="#"
+                                        className="o-contentModal__closeBtn"
+                                        onClick={ this.close }>close</a>
+                                </div>
+                            </div>
 
-                        <h1>Admin Profile Edit</h1>
-                        <div onClick={ this.close }>close</div>
+                            <form className="o-form">
+                                <div className="o-formLayout__2-column">
+                                    <div className="o-form__element">
+                                        <label>Default Time Zone</label>
+                                        <input />
+                                    </div>
+                                    <div className="o-form__element">
+                                        <label>Health System</label>
+                                        <input />
+                                    </div>
+                                </div>
+                                <div className="o-formLayout__1-column">
+                                    <DataModelSelector />
+                                </div>
+                            </form>
+
+                        </div>
                     </div>
                     <div className="o-contentModal__footerContainer">
-                        footer
+                        <div>
+                            <div className="o-contentModal__footerSave"
+                                onClick={ this.close }>Save</div>
+                            <div className="o-contentModal__footerCancel"
+                                onClick={ this.close }>Cancel</div>
+                        </div>
                     </div>
                 </div>;
     }

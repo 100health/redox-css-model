@@ -1,10 +1,7 @@
 
 
+var ConnectionModal = React.createClass({
 
-
-
-
-var ProfileEdit = React.createClass({
 
     close: function(){
         RS.merge({
@@ -15,13 +12,14 @@ var ProfileEdit = React.createClass({
 
     render: function() {
 
-        return  <div className="c-profileEdit o-contentModal o-contentModal--wfooter">
-                    <div className="
-                        o-contentModal__contentContainer">
+        var connection = RedoxModel.get( RS.route.conn_id );
+
+        return  <div className="c-connection o-contentModal o-contentModal--wfooter">
+                    <div className="o-contentModal__contentContainer o-document">
                         <div>
                             <div className="o-contentHeader">
                                 <div className="o-contentHeader__titleContainer">
-                                    Profile Edit
+                                    { connection.title }
                                 </div>
                                 <div className="o-contentHeader__navContainer">
                                     <a href="#"
@@ -30,7 +28,7 @@ var ProfileEdit = React.createClass({
                                 </div>
                             </div>
                             <form className="o-form">
-                                <div className="c-profileFormLayout__avatarInverseColumn">
+                                <div className="c-profileFormLayout__2-column">
                                     <div className="o-form__element">
                                         <label>Title</label>
                                         <input />
@@ -52,32 +50,6 @@ var ProfileEdit = React.createClass({
                                         <input />
                                     </div>
                                 </div>
-                                <div className="c-profileFormLayout__avatarColumn">
-                                    <div className="o-form__element
-                                        c-profileFormLayout__element--avatar">
-                                        <div className="c-profile__avatar"
-                                            style={{"background-image":
-                                                    "url('http://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg')"}}>
-                                        </div>
-                                    </div>
-                                    <div className="o-form__element">
-                                        <button>Upload</button>
-                                    </div>
-                                    <div className="o-form__element">
-                                        <label>public</label>
-                                        <input type="checkbox" />
-                                    </div>
-                                </div>
-
-                                <div className="o-formLayout__1-column">
-                                    <div className="o-form__element
-                                        c-profileFormLayout__element--overview">
-                                        <label>Overview</label>
-                                        <textarea />
-                                    </div>
-                                    <DataModelSelector />
-                                </div>
-
                             </form>
                         </div>
                     </div>

@@ -136,12 +136,12 @@ var Logs = React.createClass({
                             <div className="
                                     o-contentHeader__navContainer
                                     c-logs__navContainer">
-                                <form className="o-form">
-                                    <input className="c-logs__search" />
-                                </form>
                                 <div className="c-logs__searchIcon">
                                     <i className="fa fa-search"></i>
                                 </div>
+                                <form className="o-form">
+                                    <input className="c-logs__search" />
+                                </form>
                             </div>
                         </div>
                         <div className="o-list o-list--overview">
@@ -153,7 +153,7 @@ var Logs = React.createClass({
                             <div className="
                                 o-list
                                 o-list--footer">
-                                <div className="o-list__row"
+                                <div className="o-list__row a-interactive"
                                     onClick={ this.toggleFooter }>
                                     <div className="
                                         o-list__cell
@@ -183,7 +183,7 @@ var Logs = React.createClass({
                                         <div className="
                                             o-list__cell o-list__cell--expander
                                             c-logs__cell--filterType c-logs__filter"
-                                            onClick={ function( a , b ) { console.log( a, b ); $(this).toggleClass("c-logs__filter--selected") } }>
+                                            onClick={ function( a , b ) { $(this).toggleClass("c-logs__filter--selected") } }>
                                             <div className="o-icon__inbound"></div>
                                             Inbound
                                         </div>

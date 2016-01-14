@@ -4441,11 +4441,14 @@
 .a-hover-text-color-none:hover {
   color: transparent; }
 
-.a-text-weight-normal {
+.a-text-weight-light {
   font-weight: 300; }
 
+.a-text-weight-normal {
+  font-weight: 500; }
+
 .a-text-weight-bold {
-  font-weight: 400; }
+  font-weight: 700; }
 
 .a-background-grey {
   background-color: #808080; }
@@ -4841,10 +4844,10 @@
   border: 8px solid #CCCCCC; }
 
 .a-border-weak {
-  border: 1px solid #B3B3B3; }
+  border: 1px solid #eee; }
 
 .a-border-weaker {
-  border: 1px solid #CCCCCC; }
+  border: 1px solid #eee; }
 
 .a-border-weakest {
   border: 1px solid #eee; }
@@ -4865,10 +4868,10 @@
   border-top: 8px solid #CCCCCC; }
 
 .a-border-top-weak {
-  border-top: 1px solid #B3B3B3; }
+  border-top: 1px solid #eee; }
 
 .a-border-top-weaker {
-  border-top: 1px solid #CCCCCC; }
+  border-top: 1px solid #eee; }
 
 .a-border-top-weakest {
   border-top: 1px solid #eee; }
@@ -4889,10 +4892,10 @@
   border-bottom: 8px solid #CCCCCC; }
 
 .a-border-bottom-weak {
-  border-bottom: 1px solid #B3B3B3; }
+  border-bottom: 1px solid #eee; }
 
 .a-border-bottom-weaker {
-  border-bottom: 1px solid #CCCCCC; }
+  border-bottom: 1px solid #eee; }
 
 .a-border-bottom-weakest {
   border-bottom: 1px solid #eee; }
@@ -4913,10 +4916,10 @@
   border-left: 8px solid #CCCCCC; }
 
 .a-border-left-weak {
-  border-left: 1px solid #B3B3B3; }
+  border-left: 1px solid #eee; }
 
 .a-border-left-weaker {
-  border-left: 1px solid #CCCCCC; }
+  border-left: 1px solid #eee; }
 
 .a-border-left-weakest {
   border-left: 1px solid #eee; }
@@ -4937,10 +4940,10 @@
   border-right: 8px solid #CCCCCC; }
 
 .a-border-right-weak {
-  border-right: 1px solid #B3B3B3; }
+  border-right: 1px solid #eee; }
 
 .a-border-right-weaker {
-  border-right: 1px solid #CCCCCC; }
+  border-right: 1px solid #eee; }
 
 .a-border-right-weakest {
   border-right: 1px solid #eee; }
@@ -4966,12 +4969,12 @@
   border-bottom: 8px solid #CCCCCC; }
 
 .a-border-v-weak {
-  border-top: 1px solid #B3B3B3;
-  border-bottom: 1px solid #B3B3B3; }
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
 
 .a-border-v-weaker {
-  border-top: 1px solid #CCCCCC;
-  border-bottom: 1px solid #CCCCCC; }
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
 
 .a-border-v-weakest {
   border-top: 1px solid #eee;
@@ -4998,12 +5001,12 @@
   border-right: 8px solid #CCCCCC; }
 
 .a-border-h-weak {
-  border-left: 1px solid #B3B3B3;
-  border-right: 1px solid #B3B3B3; }
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee; }
 
 .a-border-h-weaker {
-  border-left: 1px solid #CCCCCC;
-  border-right: 1px solid #CCCCCC; }
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee; }
 
 .a-border-h-weakest {
   border-left: 1px solid #eee;
@@ -11158,12 +11161,16 @@
     color: transparent !important; } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-text-weight-normal {
+  .breakpoint-sm-a-text-weight-light {
     font-weight: 300 !important; } }
 
 @media (max-width: 768px) {
+  .breakpoint-sm-a-text-weight-normal {
+    font-weight: 500 !important; } }
+
+@media (max-width: 768px) {
   .breakpoint-sm-a-text-weight-bold {
-    font-weight: 400 !important; } }
+    font-weight: 700 !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-background-grey {
@@ -11691,11 +11698,11 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-weak {
-    border: 1px solid #B3B3B3 !important; } }
+    border: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-weaker {
-    border: 1px solid #CCCCCC !important; } }
+    border: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-weakest {
@@ -11723,11 +11730,11 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-top-weak {
-    border-top: 1px solid #B3B3B3 !important; } }
+    border-top: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-top-weaker {
-    border-top: 1px solid #CCCCCC !important; } }
+    border-top: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-top-weakest {
@@ -11755,11 +11762,11 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-bottom-weak {
-    border-bottom: 1px solid #B3B3B3 !important; } }
+    border-bottom: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-bottom-weaker {
-    border-bottom: 1px solid #CCCCCC !important; } }
+    border-bottom: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-bottom-weakest {
@@ -11787,11 +11794,11 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-left-weak {
-    border-left: 1px solid #B3B3B3 !important; } }
+    border-left: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-left-weaker {
-    border-left: 1px solid #CCCCCC !important; } }
+    border-left: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-left-weakest {
@@ -11819,11 +11826,11 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-right-weak {
-    border-right: 1px solid #B3B3B3 !important; } }
+    border-right: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-right-weaker {
-    border-right: 1px solid #CCCCCC !important; } }
+    border-right: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-right-weakest {
@@ -11856,13 +11863,13 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-v-weak {
-    border-top: 1px solid #B3B3B3 !important;
-    border-bottom: 1px solid #B3B3B3 !important; } }
+    border-top: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-v-weaker {
-    border-top: 1px solid #CCCCCC !important;
-    border-bottom: 1px solid #CCCCCC !important; } }
+    border-top: 1px solid #eee !important;
+    border-bottom: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-v-weakest {
@@ -11896,13 +11903,13 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-h-weak {
-    border-left: 1px solid #B3B3B3 !important;
-    border-right: 1px solid #B3B3B3 !important; } }
+    border-left: 1px solid #eee !important;
+    border-right: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-h-weaker {
-    border-left: 1px solid #CCCCCC !important;
-    border-right: 1px solid #CCCCCC !important; } }
+    border-left: 1px solid #eee !important;
+    border-right: 1px solid #eee !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-border-h-weakest {

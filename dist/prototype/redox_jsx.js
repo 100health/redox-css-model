@@ -48,12 +48,26 @@ var DataModelSelector = React.createClass({displayName: "DataModelSelector",
 
 var Connections = React.createClass({displayName: "Connections",
 
+    alertExample: function () {
+        alertExample(
+            this.render(),
+            []
+        );
+    },
+
+    openConnection: function ( guid ) {
+        RS.merge({
+            modal:"connection",
+            conn_id:guid
+        })
+    },
+
 
     getInboundConnectionRow: function( connection ){
 
         var link = "", end_point, end_point_class;
         if ( connection.verified ) {
-            link = React.createElement("a", {href: "#", onClick:  function() { return false; }}, "Edit");
+            link = React.createElement("a", {href: "#", onClick:  this.openConnection.bind( this , connection.guid) }, "Edit");
             end_point = connection.end_point;
             end_point_class = "c-connections__cell--endPoint";
         }else{
@@ -62,7 +76,8 @@ var Connections = React.createClass({displayName: "Connections",
             end_point_class = "c-connections__cell--endPointUnverified";
         }
 
-        return  React.createElement("div", {className: "o-list__row"}, 
+        return  React.createElement("div", {className: "o-list__row", 
+                    onClick:  this.openConnection.bind( this , connection.guid) }, 
                     React.createElement("div", {className: "o-list__cell o-list__cell--expander" + ' ' +
                         "c-connections__cell--title"},  connection.title), 
                     React.createElement("div", {className:  "o-list__cell " + end_point_class},  end_point ), 
@@ -73,20 +88,16 @@ var Connections = React.createClass({displayName: "Connections",
                 );
     },
 
-    alertExample: function () {
-        alertExample(
-            this.render(),
-            []
-        );
-    },
+
 
     getOutboundConnectionRow: function( connection ){
-        return  React.createElement("div", {className: "o-list__row"}, 
+        return  React.createElement("div", {className: "o-list__row", 
+                    onClick:  this.openConnection.bind( this , connection.guid) }, 
                     React.createElement("div", {className: " o-list__cell o-list__cell--expander" + ' ' +
                         "c-connections__cell--title"},  connection.title), 
                     React.createElement("div", {className: "o-list__cell" + ' ' +
                         "c-connections__cell--verify"}, 
-                        React.createElement("a", {href: "#", onClick:  function() { return false; }}, "API/Key")
+                        React.createElement("a", {href: "#", onClick: this.openConnection.bind( this , connection.guid) }, "API/Key")
                     )
                 );
     },
@@ -253,7 +264,6 @@ var LogDetail = React.createClass({displayName: "LogDetail",
     render: function() {
 
         var log = RedoxModel.get( RS.route.log_id );
-        console.log( log );
 
         return  React.createElement("div", {className: 
                     "o-contentSimple" + ' ' +
@@ -415,11 +425,11 @@ var Logs = React.createClass({displayName: "Logs",
                             React.createElement("div", {className: 
                                     "o-contentHeader__navContainer" + ' ' +
                                     "c-logs__navContainer"}, 
-                                React.createElement("form", {className: "o-form"}, 
-                                    React.createElement("input", {className: "c-logs__search"})
-                                ), 
                                 React.createElement("div", {className: "c-logs__searchIcon"}, 
                                     React.createElement("i", {className: "fa fa-search"})
+                                ), 
+                                React.createElement("form", {className: "o-form"}, 
+                                    React.createElement("input", {className: "c-logs__search"})
                                 )
                             )
                         ), 
@@ -432,7 +442,7 @@ var Logs = React.createClass({displayName: "Logs",
                             React.createElement("div", {className: 
                                 "o-list" + ' ' +
                                 "o-list--footer"}, 
-                                React.createElement("div", {className: "o-list__row", 
+                                React.createElement("div", {className: "o-list__row a-interactive", 
                                     onClick:  this.toggleFooter}, 
                                     React.createElement("div", {className: 
                                         "o-list__cell" + ' ' +
@@ -462,7 +472,7 @@ var Logs = React.createClass({displayName: "Logs",
                                         React.createElement("div", {className: 
                                             "o-list__cell o-list__cell--expander" + ' ' +
                                             "c-logs__cell--filterType c-logs__filter", 
-                                            onClick:  function( a , b ) { console.log( a, b ); $(this).toggleClass("c-logs__filter--selected") }}, 
+                                            onClick:  function( a , b ) { $(this).toggleClass("c-logs__filter--selected") }}, 
                                             React.createElement("div", {className: "o-icon__inbound"}), 
                                             "Inbound"
                                         ), 
@@ -1021,9 +1031,71 @@ var Profile = React.createClass({displayName: "Profile",
 
 
 
+var ConnectionModal = React.createClass({displayName: "ConnectionModal",
 
 
+    close: function(){
+        RS.merge({
+            modal:""
+        });
+        return false;
+    },
 
+    render: function() {
+
+        var connection = RedoxModel.get( RS.route.conn_id );
+
+        return  React.createElement("div", {className: "c-connection o-contentModal o-contentModal--wfooter"}, 
+                    React.createElement("div", {className: "o-contentModal__contentContainer o-document"}, 
+                        React.createElement("div", null, 
+                            React.createElement("div", {className: "o-contentHeader"}, 
+                                React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
+                                     connection.title
+                                ), 
+                                React.createElement("div", {className: "o-contentHeader__navContainer"}, 
+                                    React.createElement("a", {href: "#", 
+                                        className: "o-contentModal__closeBtn", 
+                                        onClick:  this.close}, "close")
+                                )
+                            ), 
+                            React.createElement("form", {className: "o-form"}, 
+                                React.createElement("div", {className: "c-profileFormLayout__2-column"}, 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Title"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Email Address"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Public Website"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Phone Number"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Twitter"), 
+                                        React.createElement("input", null)
+                                    )
+                                )
+                            )
+                        )
+                    ), 
+                    React.createElement("div", {className: "o-contentModal__footerContainer"}, 
+                        React.createElement("div", null, 
+                            React.createElement("div", {className: "o-contentModal__footerSave", 
+                                onClick:  this.close}, "Save"), 
+                            React.createElement("div", {className: "o-contentModal__footerCancel", 
+                                onClick:  this.close}, "Cancel")
+                        )
+                    )
+                );
+    }
+
+});
 
 
 
@@ -1051,6 +1123,7 @@ var ProfileAdminEdit = React.createClass({displayName: "ProfileAdminEdit",
         RS.merge({
             modal:""
         });
+        return false;
     },
 
     render: function() {
@@ -1058,14 +1131,44 @@ var ProfileAdminEdit = React.createClass({displayName: "ProfileAdminEdit",
         return  React.createElement("div", {className: "c-profileEdit" + ' ' +
                     "o-contentModal o-contentModal--wfooter"}, 
                     React.createElement("div", {className: 
-                        "o-contentModal__contentContainer" + ' ' +
-                        "o-document"}, 
+                        "o-contentModal__contentContainer"}, 
+                        React.createElement("div", null, 
+                            React.createElement("div", {className: "o-contentHeader"}, 
+                                React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
+                                    "Admin Profile Edit"
+                                ), 
+                                React.createElement("div", {className: "o-contentHeader__navContainer"}, 
+                                    React.createElement("a", {href: "#", 
+                                        className: "o-contentModal__closeBtn", 
+                                        onClick:  this.close}, "close")
+                                )
+                            ), 
 
-                        React.createElement("h1", null, "Admin Profile Edit"), 
-                        React.createElement("div", {onClick:  this.close}, "close")
+                            React.createElement("form", {className: "o-form"}, 
+                                React.createElement("div", {className: "o-formLayout__2-column"}, 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Default Time Zone"), 
+                                        React.createElement("input", null)
+                                    ), 
+                                    React.createElement("div", {className: "o-form__element"}, 
+                                        React.createElement("label", null, "Health System"), 
+                                        React.createElement("input", null)
+                                    )
+                                ), 
+                                React.createElement("div", {className: "o-formLayout__1-column"}, 
+                                    React.createElement(DataModelSelector, null)
+                                )
+                            )
+
+                        )
                     ), 
                     React.createElement("div", {className: "o-contentModal__footerContainer"}, 
-                        "footer"
+                        React.createElement("div", null, 
+                            React.createElement("div", {className: "o-contentModal__footerSave", 
+                                onClick:  this.close}, "Save"), 
+                            React.createElement("div", {className: "o-contentModal__footerCancel", 
+                                onClick:  this.close}, "Cancel")
+                        )
                     )
                 );
     }
@@ -1080,38 +1183,29 @@ var ProfileAdminEdit = React.createClass({displayName: "ProfileAdminEdit",
 
 var ProfileEdit = React.createClass({displayName: "ProfileEdit",
 
-
-    /*componentWillMount: function() {
-        var me = this;
-        RouteState.addDiffListeners(
-    		["org_page"],
-    		function ( route , prev_route ) {
-                // update
-                me.forceUpdate();
-    		},
-            "ProfileEdit"
-    	);
-    },
-
-    componentWillUnmount: function(){
-        RouteState.removeDiffListenersViaClusterId( "ProfileEdit" );
-    },*/
-
     close: function(){
         RS.merge({
             modal:""
         });
+        return false;
     },
 
     render: function() {
 
-        return  React.createElement("div", {className: "c-profileEdit" + ' ' +
-                    "o-contentModal o-contentModal--wfooter"}, 
+        return  React.createElement("div", {className: "c-profileEdit o-contentModal o-contentModal--wfooter"}, 
                     React.createElement("div", {className: 
-                        "o-contentModal__contentContainer" + ' ' +
-                        "o-document"}, 
+                        "o-contentModal__contentContainer"}, 
                         React.createElement("div", null, 
-                            React.createElement("h1", null, "Profile Edit"), 
+                            React.createElement("div", {className: "o-contentHeader"}, 
+                                React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
+                                    "Profile Edit"
+                                ), 
+                                React.createElement("div", {className: "o-contentHeader__navContainer"}, 
+                                    React.createElement("a", {href: "#", 
+                                        className: "o-contentModal__closeBtn", 
+                                        onClick:  this.close}, "close")
+                                )
+                            ), 
                             React.createElement("form", {className: "o-form"}, 
                                 React.createElement("div", {className: "c-profileFormLayout__avatarInverseColumn"}, 
                                     React.createElement("div", {className: "o-form__element"}, 
@@ -1165,7 +1259,12 @@ var ProfileEdit = React.createClass({displayName: "ProfileEdit",
                         )
                     ), 
                     React.createElement("div", {className: "o-contentModal__footerContainer"}, 
-                        "footer"
+                        React.createElement("div", null, 
+                            React.createElement("div", {className: "o-contentModal__footerSave", 
+                                onClick:  this.close}, "Save"), 
+                            React.createElement("div", {className: "o-contentModal__footerCancel", 
+                                onClick:  this.close}, "Cancel")
+                        )
                     )
                 );
     }
@@ -1387,7 +1486,6 @@ var Redox = React.createClass({displayName: "Redox",
                 page = React.createElement(LogDetail, null);
                 break;
             default:
-
         }
 
         var secondaryNav = React.createElement(SecondaryNav, null);
@@ -1404,6 +1502,9 @@ var Redox = React.createClass({displayName: "Redox",
                 break;
             case "admin_profile_edit" :
                 modalContent = React.createElement(ProfileAdminEdit, null);
+                break;
+            case "connection" :
+                modalContent = React.createElement(ConnectionModal, null);
                 break;
         }
 
@@ -1476,7 +1577,8 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
 
     changePage: function ( page ) {
         RS.merge({
-            page:page
+            page:page,
+            detail_page:""
         })
     },
 

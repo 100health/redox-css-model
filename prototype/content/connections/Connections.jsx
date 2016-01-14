@@ -5,12 +5,26 @@
 
 var Connections = React.createClass({
 
+    alertExample: function () {
+        alertExample(
+            this.render(),
+            []
+        );
+    },
+
+    openConnection: function ( guid ) {
+        RS.merge({
+            modal:"connection",
+            conn_id:guid
+        })
+    },
+
 
     getInboundConnectionRow: function( connection ){
 
         var link = "", end_point, end_point_class;
         if ( connection.verified ) {
-            link = <a href="#" onClick={ function() { return false; } }>Edit</a>;
+            link = <a href="#" onClick={ this.openConnection.bind( this , connection.guid ) }>Edit</a>;
             end_point = connection.end_point;
             end_point_class = "c-connections__cell--endPoint";
         }else{
@@ -19,7 +33,8 @@ var Connections = React.createClass({
             end_point_class = "c-connections__cell--endPointUnverified";
         }
 
-        return  <div className="o-list__row">
+        return  <div className="o-list__row"
+                    onClick={ this.openConnection.bind( this , connection.guid ) }>
                     <div className="o-list__cell o-list__cell--expander
                         c-connections__cell--title">{ connection.title }</div>
                     <div className={ "o-list__cell " + end_point_class }>{ end_point }</div>
@@ -30,20 +45,16 @@ var Connections = React.createClass({
                 </div>;
     },
 
-    alertExample: function () {
-        alertExample(
-            this.render(),
-            []
-        );
-    },
+
 
     getOutboundConnectionRow: function( connection ){
-        return  <div className="o-list__row">
+        return  <div className="o-list__row"
+                    onClick={ this.openConnection.bind( this , connection.guid ) }>
                     <div className=" o-list__cell o-list__cell--expander
                         c-connections__cell--title">{ connection.title }</div>
                     <div className="o-list__cell
                         c-connections__cell--verify">
-                        <a href="#" onClick={ function() { return false; } }>API/Key</a>
+                        <a href="#" onClick={this.openConnection.bind( this , connection.guid ) }>API/Key</a>
                     </div>
                 </div>;
     },

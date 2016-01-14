@@ -71,7 +71,6 @@ var Redox = React.createClass({
                 page = <LogDetail />;
                 break;
             default:
-
         }
 
         var secondaryNav = <SecondaryNav />;
@@ -88,6 +87,9 @@ var Redox = React.createClass({
                 break;
             case "admin_profile_edit" :
                 modalContent = <ProfileAdminEdit />;
+                break;
+            case "connection" :
+                modalContent = <ConnectionModal />;
                 break;
         }
 

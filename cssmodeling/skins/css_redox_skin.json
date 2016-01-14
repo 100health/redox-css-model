@@ -172,12 +172,12 @@
 
         {
 			"name":"text-weight-values",
-            "group":"simple",
+            "group":"skin",
 			"base":"text-weight",
-            "shortcut":"<em>@base</em>-[ normal, bold ]",
-    		"scheme":["@base-normal","@base-bold"],
+            "shortcut":"<em>@base</em>-[ light, normal, bold ]",
+    		"scheme":["@base-light","@base-normal","@base-bold"],
 			"values":[
-				"300","400"
+				"300","500","700"
 			],
 			"atoms":[
 				{
@@ -429,7 +429,7 @@
 			"values":[
 				"1px solid _@_v-grey-8","none",
 				"2px solid _@_v-grey-8","4px solid _@_v-grey-8","8px solid _@_v-grey-8",
-				"1px solid _@_v-grey-7","1px solid _@_v-grey-8","1px solid _@_v-grey-9"
+				"1px solid _@_v-grey-9","1px solid _@_v-grey-9","1px solid _@_v-grey-9"
 			],
 			"atoms":[
 				{

@@ -178,8 +178,9 @@ $v-white: #fff;
 $v-none: rgba(0,0,0,0);
 
 
-$v-text-weight-normal: 300;
-$v-text-weight-bold: 400;
+$v-text-weight-light: 300;
+$v-text-weight-normal: 500;
+$v-text-weight-bold: 700;
 
 
 $v-grey: $v-grey-5;
@@ -253,56 +254,56 @@ $v-border-none: none;
 $v-border-strong: 2px solid $v-grey-8;
 $v-border-stronger: 4px solid $v-grey-8;
 $v-border-strongest: 8px solid $v-grey-8;
-$v-border-weak: 1px solid $v-grey-7;
-$v-border-weaker: 1px solid $v-grey-8;
+$v-border-weak: 1px solid $v-grey-9;
+$v-border-weaker: 1px solid $v-grey-9;
 $v-border-weakest: 1px solid $v-grey-9;
 $v-border-top: 1px solid $v-grey-8;
 $v-border-top-none: none;
 $v-border-top-strong: 2px solid $v-grey-8;
 $v-border-top-stronger: 4px solid $v-grey-8;
 $v-border-top-strongest: 8px solid $v-grey-8;
-$v-border-top-weak: 1px solid $v-grey-7;
-$v-border-top-weaker: 1px solid $v-grey-8;
+$v-border-top-weak: 1px solid $v-grey-9;
+$v-border-top-weaker: 1px solid $v-grey-9;
 $v-border-top-weakest: 1px solid $v-grey-9;
 $v-border-bottom: 1px solid $v-grey-8;
 $v-border-bottom-none: none;
 $v-border-bottom-strong: 2px solid $v-grey-8;
 $v-border-bottom-stronger: 4px solid $v-grey-8;
 $v-border-bottom-strongest: 8px solid $v-grey-8;
-$v-border-bottom-weak: 1px solid $v-grey-7;
-$v-border-bottom-weaker: 1px solid $v-grey-8;
+$v-border-bottom-weak: 1px solid $v-grey-9;
+$v-border-bottom-weaker: 1px solid $v-grey-9;
 $v-border-bottom-weakest: 1px solid $v-grey-9;
 $v-border-left: 1px solid $v-grey-8;
 $v-border-left-none: none;
 $v-border-left-strong: 2px solid $v-grey-8;
 $v-border-left-stronger: 4px solid $v-grey-8;
 $v-border-left-strongest: 8px solid $v-grey-8;
-$v-border-left-weak: 1px solid $v-grey-7;
-$v-border-left-weaker: 1px solid $v-grey-8;
+$v-border-left-weak: 1px solid $v-grey-9;
+$v-border-left-weaker: 1px solid $v-grey-9;
 $v-border-left-weakest: 1px solid $v-grey-9;
 $v-border-right: 1px solid $v-grey-8;
 $v-border-right-none: none;
 $v-border-right-strong: 2px solid $v-grey-8;
 $v-border-right-stronger: 4px solid $v-grey-8;
 $v-border-right-strongest: 8px solid $v-grey-8;
-$v-border-right-weak: 1px solid $v-grey-7;
-$v-border-right-weaker: 1px solid $v-grey-8;
+$v-border-right-weak: 1px solid $v-grey-9;
+$v-border-right-weaker: 1px solid $v-grey-9;
 $v-border-right-weakest: 1px solid $v-grey-9;
 $v-border-v: 1px solid $v-grey-8;
 $v-border-v-none: none;
 $v-border-v-strong: 2px solid $v-grey-8;
 $v-border-v-stronger: 4px solid $v-grey-8;
 $v-border-v-strongest: 8px solid $v-grey-8;
-$v-border-v-weak: 1px solid $v-grey-7;
-$v-border-v-weaker: 1px solid $v-grey-8;
+$v-border-v-weak: 1px solid $v-grey-9;
+$v-border-v-weaker: 1px solid $v-grey-9;
 $v-border-v-weakest: 1px solid $v-grey-9;
 $v-border-h: 1px solid $v-grey-8;
 $v-border-h-none: none;
 $v-border-h-strong: 2px solid $v-grey-8;
 $v-border-h-stronger: 4px solid $v-grey-8;
 $v-border-h-strongest: 8px solid $v-grey-8;
-$v-border-h-weak: 1px solid $v-grey-7;
-$v-border-h-weaker: 1px solid $v-grey-8;
+$v-border-h-weak: 1px solid $v-grey-9;
+$v-border-h-weaker: 1px solid $v-grey-9;
 $v-border-h-weakest: 1px solid $v-grey-9;
 
 
@@ -3076,6 +3077,8 @@ $v-border-radius: 3px;
  &:hover { color : $v-white ; } }
 @mixin a-hover-text-color-none ( $v-none : $v-none ) {
  &:hover { color : $v-none ; } }
+@mixin a-text-weight-light ( $v-text-weight-light : $v-text-weight-light ) {
+ font-weight : $v-text-weight-light ; }
 @mixin a-text-weight-normal ( $v-text-weight-normal : $v-text-weight-normal ) {
  font-weight : $v-text-weight-normal ; }
 @mixin a-text-weight-bold ( $v-text-weight-bold : $v-text-weight-bold ) {
@@ -5061,6 +5064,7 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-hover-text-color-black ( $v-black : $v-black ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-black  !important; }}}
 @mixin breakpoint-md-a-hover-text-color-white ( $v-white : $v-white ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-white  !important; }}}
 @mixin breakpoint-md-a-hover-text-color-none ( $v-none : $v-none ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-none  !important; }}}
+@mixin breakpoint-md-a-text-weight-light ( $v-text-weight-light : $v-text-weight-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  font-weight : $v-text-weight-light  !important;}}
 @mixin breakpoint-md-a-text-weight-normal ( $v-text-weight-normal : $v-text-weight-normal ) { @media ( max-width: $v-breakpoint-medium-min ) {  font-weight : $v-text-weight-normal  !important;}}
 @mixin breakpoint-md-a-text-weight-bold ( $v-text-weight-bold : $v-text-weight-bold ) { @media ( max-width: $v-breakpoint-medium-min ) {  font-weight : $v-text-weight-bold  !important;}}
 @mixin breakpoint-md-a-background-grey ( $v-grey : $v-grey ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-grey  !important;}}
@@ -6751,6 +6755,7 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-hover-text-color-black ( $v-black : $v-black ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-black  !important; }}}
 @mixin breakpoint-sm-a-hover-text-color-white ( $v-white : $v-white ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-white  !important; }}}
 @mixin breakpoint-sm-a-hover-text-color-none ( $v-none : $v-none ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-none  !important; }}}
+@mixin breakpoint-sm-a-text-weight-light ( $v-text-weight-light : $v-text-weight-light ) { @media ( max-width: $v-breakpoint-small-min ) {  font-weight : $v-text-weight-light  !important;}}
 @mixin breakpoint-sm-a-text-weight-normal ( $v-text-weight-normal : $v-text-weight-normal ) { @media ( max-width: $v-breakpoint-small-min ) {  font-weight : $v-text-weight-normal  !important;}}
 @mixin breakpoint-sm-a-text-weight-bold ( $v-text-weight-bold : $v-text-weight-bold ) { @media ( max-width: $v-breakpoint-small-min ) {  font-weight : $v-text-weight-bold  !important;}}
 @mixin breakpoint-sm-a-background-grey ( $v-grey : $v-grey ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-grey  !important;}}
@@ -8424,6 +8429,7 @@ $v-border-radius: 3px;
 .a-hover-text-color-black {  &:hover { color : $v-black ; } }
 .a-hover-text-color-white {  &:hover { color : $v-white ; } }
 .a-hover-text-color-none {  &:hover { color : $v-none ; } }
+.a-text-weight-light {  font-weight : $v-text-weight-light ; }
 .a-text-weight-normal {  font-weight : $v-text-weight-normal ; }
 .a-text-weight-bold {  font-weight : $v-text-weight-bold ; }
 .a-background-grey {  background-color: $v-grey ; }
@@ -10172,6 +10178,7 @@ $v-border-radius: 3px;
 .breakpoint-sm-a-hover-text-color-black { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-black  !important; }} } 
 .breakpoint-sm-a-hover-text-color-white { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-white  !important; }} } 
 .breakpoint-sm-a-hover-text-color-none { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-none  !important; }} } 
+.breakpoint-sm-a-text-weight-light { @media ( max-width: $v-breakpoint-small-min ) {  font-weight : $v-text-weight-light  !important;} } 
 .breakpoint-sm-a-text-weight-normal { @media ( max-width: $v-breakpoint-small-min ) {  font-weight : $v-text-weight-normal  !important;} } 
 .breakpoint-sm-a-text-weight-bold { @media ( max-width: $v-breakpoint-small-min ) {  font-weight : $v-text-weight-bold  !important;} } 
 .breakpoint-sm-a-background-grey { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-grey  !important;} } 

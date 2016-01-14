@@ -23,7 +23,9 @@ module.exports = {
                                     );
 
             this.organization_pages
-                = pd.generateArray( "organization_page" , 6 );
+                = pd.generateArray( "organization_page" ,
+                                    pd.config.organization_page.data.length
+                                );
 
             this.data_models =  pd.generateArray(
                                     "data_model" ,
@@ -88,15 +90,15 @@ module.exports = {
             this.icon = data_obj.icon;
         },
         data:[
-            {name:"Profile",icon:"ion-ios-browsers",link:"profile"},
+            {name:"Profile",icon:"ion-ios7-contact-outline",link:"profile"},
             {name:"Connections",icon:"ion-arrow-expand",link:"connections"},
             /*{name:"Messages",icon:"ion-clipboard",link:"messages"},
             {name:"Transmissions",icon:"ion-arrow-expand",link:"transmissions"},
             {name:"Errors",icon:"ion-alert-circled",link:"errors"},*/
             {name:"Logs",icon:"ion-clipboard",link:"logs"},
             {name:"Dev-Tools",icon:"ion-code",link:"dev_tools"},
-            {name:"Users",icon:"ion-ios-browsers",link:"users"},
-            {name:"TEST",icon:"ion-ios-browsers",link:"test"}
+            {name:"Users",icon:"ion-ios7-people",link:"users"}
+            // {name:"TEST",icon:"ion-ios-browsers",link:"test"}
         ]
     },
     organization:{

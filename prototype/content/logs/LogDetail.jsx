@@ -40,7 +40,6 @@ var LogDetail = React.createClass({
     render: function() {
 
         var log = RedoxModel.get( RS.route.log_id );
-        console.log( log );
 
         return  <div className="
                     o-contentSimple
