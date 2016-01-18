@@ -1,17 +1,25 @@
+.a-flex-v {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+
+.a-flex-h {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.a-flex-center {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
+
+.a-flex-item-fill {
+  flex: 1; }
+
 .a-single-line {
   overflow: hidden;
   white-space: nowrap; }
-
-.a-flex-center {
-  justify-content: center;
-  display: flex; }
-  .a-flex-center > * {
-    align-self: center; }
-
-.a-flex-vcenter {
-  display: flex; }
-  .a-flex-vcenter > * {
-    align-self: center; }
 
 .a-transform-center {
   top: 50%;
@@ -4255,6 +4263,48 @@
 .a-padding-right-col-12 {
   padding-right: 100vw; }
 
+.a-justify-content-flex-start {
+  justify-content: flex-start; }
+
+.a-justify-content-flex-end {
+  justify-content: flex-end; }
+
+.a-justify-content-center {
+  justify-content: center; }
+
+.a-justify-content-space-between {
+  justify-content: space-between; }
+
+.a-justify-content-space-around {
+  justify-content: space-around; }
+
+.a-align-items-flex-start {
+  align-items: flex-start; }
+
+.a-align-items-flex-end {
+  align-items: flex-end; }
+
+.a-align-items-center {
+  align-items: center; }
+
+.a-align-items-baseline {
+  align-items: baseline; }
+
+.a-align-items-stretch {
+  align-items: stretch; }
+
+.a-flex-direction-row {
+  flex-direction: row; }
+
+.a-flex-direction-row-reverse {
+  flex-direction: row-reverse; }
+
+.a-flex-direction-column {
+  flex-direction: column; }
+
+.a-flex-direction-column-reverse {
+  flex-direction: column-reverse; }
+
 .a-misused {
   border: 2px solid red; }
 
@@ -5303,42 +5353,33 @@
 .a-width-inherit {
   width: inherit; }
 
-.a-flex-justify-content-flex-start {
-  justify-content: flex-start; }
+@media (max-width: 768px) {
+  .breakpoint-sm-a-flex-v {
+    display: flex !important;
+    flex-flow: column nowrap !important;
+    align-items: center !important; } }
 
-.a-flex-justify-content-flex-end {
-  justify-content: flex-end; }
+@media (max-width: 768px) {
+  .breakpoint-sm-a-flex-h {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    align-items: center !important; } }
 
-.a-flex-justify-content-center {
-  justify-content: center; }
+@media (max-width: 768px) {
+  .breakpoint-sm-a-flex-center {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: center !important;
+    align-items: center !important; } }
 
-.a-flex-justify-content-space-between {
-  justify-content: space-between; }
-
-.a-flex-justify-content-space-around {
-  justify-content: space-around; }
+@media (max-width: 768px) {
+  .breakpoint-sm-a-flex-item-fill {
+    flex: 1 !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-single-line {
     overflow: hidden !important;
     white-space: nowrap !important; } }
-
-@media (max-width: 768px) {
-  .breakpoint-sm-a-flex-center {
-    justify-content: center !important; }
-    .breakpoint-sm-a-flex-center > * {
-      align-self: center !important; } }
-  @media (max-width: 768px) and (max-width: 768px) {
-    .breakpoint-sm-a-flex-center {
-      display: flex !important; } }
-
-@media (max-width: 768px) {
-  .breakpoint-sm-a-flex-vcenter > * {
-    align-self: center !important; } }
-
-@media (max-width: 768px) and (max-width: 768px) {
-  .breakpoint-sm-a-flex-vcenter {
-    display: flex !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-transform-center {
@@ -10913,6 +10954,62 @@
     padding-right: 100vw !important; } }
 
 @media (max-width: 768px) {
+  .breakpoint-sm-a-justify-content-flex-start {
+    justify-content: flex-start !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-justify-content-flex-end {
+    justify-content: flex-end !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-justify-content-center {
+    justify-content: center !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-justify-content-space-between {
+    justify-content: space-between !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-justify-content-space-around {
+    justify-content: space-around !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-align-items-flex-start {
+    align-items: flex-start !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-align-items-flex-end {
+    align-items: flex-end !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-align-items-center {
+    align-items: center !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-align-items-baseline {
+    align-items: baseline !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-align-items-stretch {
+    align-items: stretch !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-flex-direction-row {
+    flex-direction: row !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-flex-direction-row-reverse {
+    flex-direction: row-reverse !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-flex-direction-column {
+    flex-direction: column !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-flex-direction-column-reverse {
+    flex-direction: column-reverse !important; } }
+
+@media (max-width: 768px) {
   .breakpoint-sm-a-misused {
     border: 2px solid red !important; } }
 
@@ -12297,23 +12394,3 @@
 @media (max-width: 768px) {
   .breakpoint-sm-a-width-inherit {
     width: inherit  !important; } }
-
-@media (max-width: 768px) {
-  .breakpoint-sm-a-flex-justify-content-flex-start {
-    justify-content: flex-start  !important; } }
-
-@media (max-width: 768px) {
-  .breakpoint-sm-a-flex-justify-content-flex-end {
-    justify-content: flex-end  !important; } }
-
-@media (max-width: 768px) {
-  .breakpoint-sm-a-flex-justify-content-center {
-    justify-content: center  !important; } }
-
-@media (max-width: 768px) {
-  .breakpoint-sm-a-flex-justify-content-space-between {
-    justify-content: space-between  !important; } }
-
-@media (max-width: 768px) {
-  .breakpoint-sm-a-flex-justify-content-space-around {
-    justify-content: space-around  !important; } }

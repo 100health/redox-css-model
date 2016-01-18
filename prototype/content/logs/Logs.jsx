@@ -71,8 +71,7 @@ var Logs = React.createClass({
                     </div>
                     <div className="
                         o-list__cell
-                        o-list__cell--expander
-                        c-logs__cell--titler">{ log.title }</div>
+                        c-logs__cell--title">{ log.title }</div>
                     <div className={
                             "o-list__cell c-logs__cell--model " +
                             "fa fa-2x " + log.data_model().icon
@@ -130,7 +129,10 @@ var Logs = React.createClass({
                     <div className="o-contentSimple__contentContainer">
                         <div className="o-contentHeader">
                             <div className="o-contentHeader__titleContainer"
-                                onClick={ this.alertExample }>
+                                onClick={ alertHTML.bind(
+                                        this, ".c-logs",
+                                        ['.o-list__row:nth-of-type( n+3 )']
+                                ) }>
                                 Logs
                             </div>
                             <div className="
@@ -159,7 +161,7 @@ var Logs = React.createClass({
                                         o-list__cell
                                         c-logs__cell--summaryType">Type</div>
                                     <div className="o-list__cell
-                                        o-list__cell--expander
+                                        a-flex-item-fill
                                         c-logs__cell--summaryTitle ">Message</div>
                                     <div className="
                                         o-list__cell
@@ -181,8 +183,9 @@ var Logs = React.createClass({
                                 <div className="o-list">
                                     <div className="o-list__row">
                                         <div className="
-                                            o-list__cell o-list__cell--expander
-                                            c-logs__cell--filterType c-logs__filter"
+                                            o-list__cell
+                                            c-logs__cell--filterType
+                                            c-logs__filter"
                                             onClick={ function( a , b ) { $(this).toggleClass("c-logs__filter--selected") } }>
                                             <div className="o-icon__inbound"></div>
                                             Inbound
@@ -212,8 +215,9 @@ var Logs = React.createClass({
                                     </div>
                                     <div className="o-list__row">
                                         <div className="
-                                            o-list__cell o-list__cell--expander
-                                            c-logs__cell--filterType c-logs__filter">
+                                            o-list__cell
+                                            c-logs__cell--filterType
+                                            c-logs__filter">
                                             <div className="o-icon__outbound"></div>
                                             Outbound
                                         </div>
@@ -241,8 +245,9 @@ var Logs = React.createClass({
                                     </div>
                                     <div className="o-list__row">
                                         <div className="
-                                            o-list__cell o-list__cell--expander
-                                            c-logs__cell--filterType c-logs__filter">
+                                            o-list__cell
+                                            c-logs__cell--filterType
+                                            c-logs__filter">
                                             <div className="o-icon__query"></div>
                                             Query
                                         </div>

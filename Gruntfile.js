@@ -30,6 +30,7 @@ module.exports = function(grunt) {
                 'cssmodeling/css_schemes.json',
                 'cssmodeling/systems/css_rows_quartered.json',
                 'cssmodeling/systems/css_12_col_vw_quartered.json',
+                'cssmodeling/systems/css_layouts.json',
                 'cssmodeling/skins/css_redox_skin.json',
                 'cssmodeling/systems/css_simple.json',
                 'cssmodeling/css_states.json'//,

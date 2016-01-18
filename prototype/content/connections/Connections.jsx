@@ -35,10 +35,10 @@ var Connections = React.createClass({
 
         return  <div className="o-list__row"
                     onClick={ this.openConnection.bind( this , connection.guid ) }>
-                    <div className="o-list__cell o-list__cell--expander
+                    <div className="o-list__cell
                         c-connections__cell--title">{ connection.title }</div>
                     <div className={ "o-list__cell " + end_point_class }>{ end_point }</div>
-                    <div className="o-list__cell o-list__cell--expander
+                    <div className="o-list__cell a-flex-item-fill
                         c-connections__cell--verify">
                         { link }
                     </div>
@@ -50,7 +50,7 @@ var Connections = React.createClass({
     getOutboundConnectionRow: function( connection ){
         return  <div className="o-list__row"
                     onClick={ this.openConnection.bind( this , connection.guid ) }>
-                    <div className=" o-list__cell o-list__cell--expander
+                    <div className=" o-list__cell a-flex-item-fill
                         c-connections__cell--title">{ connection.title }</div>
                     <div className="o-list__cell
                         c-connections__cell--verify">

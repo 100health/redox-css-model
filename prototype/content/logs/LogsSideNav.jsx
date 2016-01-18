@@ -80,7 +80,6 @@ var LogsSideNav = React.createClass({
                     </div>
                     <div className="
                         o-list__cell
-                        o-list__cell--expander
                         c-logsSideNav__cell--title">{ log.title }</div>
                     { /* <div className={
                             "o-list__cell c-logs__cell--model " +

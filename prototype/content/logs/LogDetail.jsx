@@ -23,12 +23,6 @@ var LogDetail = React.createClass({
         RouteState.removeDiffListenersViaClusterId( "LogDetail" );
     },
 
-    alertExample: function () {
-        alertExample(
-            this.render(),
-            ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
-        );
-    },
 
     closeLog: function () {
         RS.merge({

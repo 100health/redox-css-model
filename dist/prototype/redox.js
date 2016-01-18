@@ -20568,10 +20568,10 @@ var Connections = React.createClass({displayName: "Connections",
 
         return  React.createElement("div", {className: "o-list__row", 
                     onClick:  this.openConnection.bind( this , connection.guid) }, 
-                    React.createElement("div", {className: "o-list__cell o-list__cell--expander" + ' ' +
+                    React.createElement("div", {className: "o-list__cell" + ' ' +
                         "c-connections__cell--title"},  connection.title), 
                     React.createElement("div", {className:  "o-list__cell " + end_point_class},  end_point ), 
-                    React.createElement("div", {className: "o-list__cell o-list__cell--expander" + ' ' +
+                    React.createElement("div", {className: "o-list__cell a-flex-item-fill" + ' ' +
                         "c-connections__cell--verify"}, 
                          link 
                     )
@@ -20583,7 +20583,7 @@ var Connections = React.createClass({displayName: "Connections",
     getOutboundConnectionRow: function( connection ){
         return  React.createElement("div", {className: "o-list__row", 
                     onClick:  this.openConnection.bind( this , connection.guid) }, 
-                    React.createElement("div", {className: " o-list__cell o-list__cell--expander" + ' ' +
+                    React.createElement("div", {className: " o-list__cell a-flex-item-fill" + ' ' +
                         "c-connections__cell--title"},  connection.title), 
                     React.createElement("div", {className: "o-list__cell" + ' ' +
                         "c-connections__cell--verify"}, 
@@ -20737,12 +20737,6 @@ var LogDetail = React.createClass({displayName: "LogDetail",
         RouteState.removeDiffListenersViaClusterId( "LogDetail" );
     },
 
-    alertExample: function () {
-        alertExample(
-            this.render(),
-            ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
-        );
-    },
 
     closeLog: function () {
         RS.merge({
@@ -20850,8 +20844,7 @@ var Logs = React.createClass({displayName: "Logs",
                     ), 
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
-                        "o-list__cell--expander" + ' ' +
-                        "c-logs__cell--titler"},  log.title), 
+                        "c-logs__cell--title"},  log.title), 
                     React.createElement("div", {className: 
                             "o-list__cell c-logs__cell--model " +
                             "fa fa-2x " + log.data_model().icon, 
@@ -20909,7 +20902,10 @@ var Logs = React.createClass({displayName: "Logs",
                     React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
                         React.createElement("div", {className: "o-contentHeader"}, 
                             React.createElement("div", {className: "o-contentHeader__titleContainer", 
-                                onClick:  this.alertExample}, 
+                                onClick:  alertHTML.bind(
+                                        this, ".c-logs",
+                                        ['.o-list__row:nth-of-type( n+3 )']
+                                ) }, 
                                 "Logs"
                             ), 
                             React.createElement("div", {className: 
@@ -20938,7 +20934,7 @@ var Logs = React.createClass({displayName: "Logs",
                                         "o-list__cell" + ' ' +
                                         "c-logs__cell--summaryType"}, "Type"), 
                                     React.createElement("div", {className: "o-list__cell" + ' ' +
-                                        "o-list__cell--expander" + ' ' +
+                                        "a-flex-item-fill" + ' ' +
                                         "c-logs__cell--summaryTitle "}, "Message"), 
                                     React.createElement("div", {className: 
                                         "o-list__cell" + ' ' +
@@ -20960,8 +20956,9 @@ var Logs = React.createClass({displayName: "Logs",
                                 React.createElement("div", {className: "o-list"}, 
                                     React.createElement("div", {className: "o-list__row"}, 
                                         React.createElement("div", {className: 
-                                            "o-list__cell o-list__cell--expander" + ' ' +
-                                            "c-logs__cell--filterType c-logs__filter", 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterType" + ' ' +
+                                            "c-logs__filter", 
                                             onClick:  function( a , b ) { $(this).toggleClass("c-logs__filter--selected") }}, 
                                             React.createElement("div", {className: "o-icon__inbound"}), 
                                             "Inbound"
@@ -20991,8 +20988,9 @@ var Logs = React.createClass({displayName: "Logs",
                                     ), 
                                     React.createElement("div", {className: "o-list__row"}, 
                                         React.createElement("div", {className: 
-                                            "o-list__cell o-list__cell--expander" + ' ' +
-                                            "c-logs__cell--filterType c-logs__filter"}, 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterType" + ' ' +
+                                            "c-logs__filter"}, 
                                             React.createElement("div", {className: "o-icon__outbound"}), 
                                             "Outbound"
                                         ), 
@@ -21020,8 +21018,9 @@ var Logs = React.createClass({displayName: "Logs",
                                     ), 
                                     React.createElement("div", {className: "o-list__row"}, 
                                         React.createElement("div", {className: 
-                                            "o-list__cell o-list__cell--expander" + ' ' +
-                                            "c-logs__cell--filterType c-logs__filter"}, 
+                                            "o-list__cell" + ' ' +
+                                            "c-logs__cell--filterType" + ' ' +
+                                            "c-logs__filter"}, 
                                             React.createElement("div", {className: "o-icon__query"}), 
                                             "Query"
                                         ), 
@@ -21133,7 +21132,6 @@ var LogsSideNav = React.createClass({displayName: "LogsSideNav",
                     ), 
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
-                        "o-list__cell--expander" + ' ' +
                         "c-logsSideNav__cell--title"},  log.title), 
                     /* <div className={
                             "o-list__cell c-logs__cell--model " +

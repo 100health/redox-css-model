@@ -181,9 +181,8 @@ div {
   background-color: #fff;
   display: flex;
   display: flex;
-  justify-content: space-between; }
-  .o-contentHeader > * {
-    align-self: center; }
+  flex-flow: row nowrap;
+  align-items: center; }
   .o-contentHeader__titleContainer {
     /* -ctag-example: ...Content Header Title*/
     font-size: 22px;
@@ -191,15 +190,17 @@ div {
     color: #999999;
     overflow: hidden;
     white-space: nowrap;
+    flex: 1;
     font-weight: 500;
     letter-spacing: .5px;
     text-transform: uppercase; }
   .o-contentHeader__navContainer {
     /* -ctag-example: ...Right Nav*/
     height: 100%;
-    display: flex; }
-    .o-contentHeader__navContainer > * {
-      align-self: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
 
 h1, h2, h3, h4, h5, h6, p, code {
   /* Should only use these in .o-document */ }
@@ -422,8 +423,10 @@ input {
     height: 88px;
     background-color: #fff;
     float: left;
-    justify-content: center;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     cursor: hand;
     cursor: pointer;
     color: #B3B3B3;
@@ -432,8 +435,6 @@ input {
     flex-direction: column;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee; }
-    .c-dataModelSelector__item > * {
-      align-self: center; }
     .c-dataModelSelector__item:hover {
       color: #4D4D4D; }
     .c-dataModelSelector__item > div {
@@ -586,25 +587,25 @@ input {
   .o-list__row {
     /* -ctag-example: ...
             <div class='o-list__cell
-                o-list__cell--expander'>expander</div>
+                a-flex-item-fill'>expander</div>
             { .o-list__cell }
             { .o-list__cell };*/
     height: 44px;
-    display: flex; }
-    .o-list__row > * {
-      align-self: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; }
     .o-list__row--selected {
       background-color: #eee; }
   .o-list__headerRow {
     /* -ctag-example: ...;
             <div class='o-list__headerCell
-                o-list__cell--expander'>expander</div>
+                a-flex-item-fill'>expander</div>
             { .o-list__headerCell }
             { .o-list__headerCell };*/
     height: 44px;
-    display: flex; }
-    .o-list__headerRow > * {
-      align-self: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; }
   .o-list__headerCell {
     /* -ctag-example: ...header cell;*/
     width: 16.66666vw;
@@ -621,11 +622,10 @@ input {
     color: #4D4D4D;
     font-size: 14px;
     line-height: 22px;
-    display: flex; }
-    .o-list__cell > * {
-      align-self: center; }
-    .o-list__cell--expander {
-      flex: 1; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
     .o-list__cell--center {
       text-align: center; }
     .o-list__cell--selected {
@@ -644,25 +644,32 @@ input {
     cursor: pointer; }
     .o-list--overview .o-list__row:hover {
       background-color: rgba(0, 0, 0, 0.05); }
-  .o-list--overview .o-list--uninteractive {
-    /* touch */ }
-    .o-list--overview .o-list--uninteractive .o-list__row {
-      cursor: default; }
-      .o-list--overview .o-list--uninteractive .o-list__row:hover {
-        background-color: transparent; }
   .o-list--overview .o-list__headerRow {
     border-bottom: 1px solid #eee; }
+
+.o-list--uninteractive {
+  /* touch */ }
+  .o-list--uninteractive .o-list__row {
+    cursor: default; }
+    .o-list--uninteractive .o-list__row:hover {
+      background-color: transparent; }
 
 .o-list--footer {
   /* touch */ }
   .o-list--footer .o-list__headerCell {
     border-left: 1px solid #eee;
-    justify-content: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
     .o-list--footer .o-list__headerCell:first-of-type {
       border-left: none; }
   .o-list--footer .o-list__cell {
     border-left: 1px solid #eee;
-    justify-content: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
     .o-list--footer .o-list__cell:first-of-type {
       border-left: none; }
 
@@ -737,6 +744,9 @@ a {
     clear: left;
     float: left;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     margin-left: 2.0833325vw;
     margin-right: 2.0833325vw;
     position: relative;
@@ -745,8 +755,6 @@ a {
     background-size: contain;
     background-position: left center;
     background-repeat: no-repeat; }
-    .c-mainNav__logo > * {
-      align-self: center; }
     .c-mainNav__logo__metric {
       position: absolute;
       right: 0px;
@@ -818,8 +826,10 @@ a {
     width: 16.66666vw;
     height: 100%;
     float: right;
-    justify-content: center;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     cursor: hand;
     cursor: pointer;
@@ -833,8 +843,6 @@ a {
       .c-mainNav__link > a:hover {
         color: inherit;
         text-decoration: none; }
-    .c-mainNav__link > * {
-      align-self: center; }
     .c-mainNav__link:hover {
       color: #B7FFE0; }
     .c-mainNav__link__icon {
@@ -891,8 +899,11 @@ a {
     .c-mainNav--open .c-mainNav__links {
       height: auto  !important; } }
   @media (max-width: 768px) {
-    .c-mainNav--open .c-mainNav__link {
-      justify-content: flex-start  !important; } }
+    .c-mainNav--open .c-mainNav__links {
+      justify-content: flex-start !important; } }
+  @media (max-width: 768px) {
+    .c-mainNav--open .c-mainNav__links {
+      flex-direction: column-reverse !important; } }
   @media (max-width: 768px) {
     .c-mainNav--open .c-mainNav__link {
       padding-left: 4.166665vw !important; } }
@@ -1051,11 +1062,12 @@ a {
       width: 100%;
       height: 66px;
       display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
       cursor: hand;
       cursor: pointer;
       transition: width 0.3s; }
-      .c-secondaryNav__list__item > * {
-        align-self: center; }
       .c-secondaryNav__list__item:hover {
         background-color: #ddd; }
       .c-secondaryNav__list__item:hover {
@@ -1138,12 +1150,13 @@ a {
     width: 100%;
     height: 44px;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     cursor: hand;
     cursor: pointer;
     padding-left: 2.0833325vw;
     padding-right: 2.0833325vw; }
-    .c-tertiaryNav__item > * {
-      align-self: center; }
     .c-tertiaryNav__item:hover {
       background-color: #eee; }
     .c-tertiaryNav__item__label {
@@ -1160,7 +1173,7 @@ a {
       background-color: #eee; }
 
 .c-connections {
-  /* -ctag-example: <div class="c-connections o-contentSimple"><div class="o-contentSimple__contentContainer"><div><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Connections</div><div class="o-contentHeader__navContainer"></div></div><div class="c-connections__groupHeader"><div class="o-icon__outbound"></div><h1>Outbound</h1><div class="c-connections__addBtn">Add Outgoing</div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class=" o-list__cell o-list__cell--expander c-connections__cell--title">Tulip Exit Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell o-list__cell--expander c-connections__cell--title">Tennis Calculator Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell o-list__cell--expander c-connections__cell--title">Lunch Smirk Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell o-list__cell--expander c-connections__cell--title">Armor Rat Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div></div><div class="c-connections__groupHeader"><div class="o-icon__inbound"></div><h1>Inbound</h1><div class="c-connections__addBtn">Add Incoming</div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class="o-list__cell o-list__cell--expander c-connections__cell--title">Hill Drive Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell o-list__cell--expander c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell o-list__cell--expander c-connections__cell--title">Calculator Rope Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell o-list__cell--expander c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell o-list__cell--expander c-connections__cell--title">Breakfast World Connection</div><div class="o-list__cell c-connections__cell--endPointUnverified">End point verification needed!</div><div class="o-list__cell o-list__cell--expander c-connections__cell--verify"><a href="#">Verify</a></div></div><div class="o-list__row"><div class="o-list__cell o-list__cell--expander c-connections__cell--title">Army Nexus Connection</div><div class="o-list__cell c-connections__cell--endPointUnverified">End point verification needed!</div><div class="o-list__cell o-list__cell--expander c-connections__cell--verify"><a href="#">Verify</a></div></div></div></div></div></div>;*/
+  /* -ctag-example: <div class="c-connections o-contentSimple"><div class="o-contentSimple__contentContainer"><div><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Connections</div><div class="o-contentHeader__navContainer"></div></div><div class="c-connections__groupHeader"><div class="o-icon__outbound"></div><h1>Outbound</h1><div class="c-connections__addBtn">Add Outgoing</div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Floor Solar Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Fork Clock Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Notepad Europe Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Blue Fall Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Computer Bus Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div></div><div class="c-connections__groupHeader"><div class="o-icon__inbound"></div><h1>Inbound</h1><div class="c-connections__addBtn">Add Incoming</div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class="o-list__cell c-connections__cell--title">Galaxy Grin Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell a-flex-item-fill c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell c-connections__cell--title">Closet Room Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell a-flex-item-fill c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell c-connections__cell--title">Cottage Purple Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell a-flex-item-fill c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell c-connections__cell--title">Biography Vein Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell a-flex-item-fill c-connections__cell--verify"><a href="#">Edit</a></div></div></div></div></div></div>;*/
   /* -ctag-status: prod;*/ }
   .c-connections__groupHeader {
     /* -ctag-example: ...
@@ -1172,7 +1185,8 @@ a {
     padding-bottom: 11px;
     margin-bottom: 11px;
     display: flex;
-    justify-content: flex-start; }
+    flex-flow: row nowrap;
+    align-items: center; }
     .c-connections__groupHeader h1 {
       border: initial;
       border-bottom: none;
@@ -1182,7 +1196,7 @@ a {
       margin: 0;
       padding: 0;
       margin-left: 11px;
-      flex-grow: 1; }
+      flex: 1; }
     .c-connections__groupHeader > * {
       align-self: center; }
   .c-connections__addBtn {
@@ -1204,6 +1218,9 @@ a {
     margin-bottom: 22px; }
   .c-connections__cell--icon {
     width: 4.166665vw; }
+  .c-connections__cell--title {
+    flex: 1;
+    justify-content: flex-start; }
   .c-connections__cell--endPoint, .c-connections__cell--endPointUnverified {
     width: 33.33332vw;
     font-size: 13px;
@@ -1225,7 +1242,7 @@ a {
   background-position: 22px center; }
 
 .c-logs {
-  /* -ctag-example: <div class="c-logs o-contentSimple o-contentSimple--wfooter"><div class="o-contentSimple__contentContainer"><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Logs</div><div class="o-contentHeader__navContainer c-logs__navContainer"><form class="o-form"><input class="c-logs__search"></form><div class="c-logs__searchIcon"><i class="fa fa-search"></i></div></div></div><div class="o-listOverview"><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__inbound"></div></div><div class="o-list__cell o-list__cell--expander c-logs__cell--titler">Brick Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-eyedropper" title="Vaccine"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__success"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__query"></div></div><div class="o-list__cell o-list__cell--expander c-logs__cell--titler">Diamond Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-flask" title="Results"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__success"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__query"></div></div><div class="o-list__cell o-list__cell--expander c-logs__cell--titler">Rose Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-flask" title="Results"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__fail"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div></div></div><div class="o-contentSimple__footerContainer"><div class="c-logs__footer"><div class="o-listOverview o-listFooter"><div class="o-list__row"><div class="o-list__cell c-logs__cell--summaryType">Type</div><div class="o-list__cell o-list__cell--expander c-logs__cell--summaryTitle ">Message</div><div class="o-list__cell c-logs__cell--summaryModel">Data Model</div><div class="o-list__cell c-logs__cell--summaryStatus">Status</div><div class="o-list__cell c-logs__cell--summaryEnvironment">Environment</div><div class="o-list__cell c-logs__cell--summaryTime">Date/Time</div></div></div><div class="c-logs__filters">filters</div></div></div></div>;*/
+  /* -ctag-example: <div class="c-logs o-contentSimple o-contentSimple--wfooter"><div class="o-contentSimple__contentContainer"><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Logs</div><div class="o-contentHeader__navContainer c-logs__navContainer"><div class="c-logs__searchIcon"><i class="fa fa-search"></i></div><form class="o-form"><input class="c-logs__search"></form></div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__inbound"></div></div><div class="o-list__cell c-logs__cell--title">Neck Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-search-plus" title="Patient Search"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__fail"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__query"></div></div><div class="o-list__cell c-logs__cell--title">Spring Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-street-view" title="Patient Admin"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__success"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div></div></div><div class="o-contentSimple__footerContainer"><div class="c-logs__footer"><div class="o-list o-list--footer"><div class="o-list__row a-interactive"><div class="o-list__cell c-logs__cell--summaryType">Type</div><div class="o-list__cell a-flex-item-fill c-logs__cell--summaryTitle ">Message</div><div class="o-list__cell c-logs__cell--summaryModel">Data Model</div><div class="o-list__cell c-logs__cell--summaryStatus">Status</div><div class="o-list__cell c-logs__cell--summaryEnvironment">Environment</div><div class="o-list__cell c-logs__cell--summaryTime">Date/Time</div></div></div><div class="c-logs__filters"><div class="c-logs__closeFilters"></div><div class="o-list"><div class="o-list__row"><div class="o-list__cell c-logs__cell--filterType c-logs__filter"><div class="o-icon__inbound"></div><span>Inbound</span></div><div class="o-list__cell c-logs__cell--filterModel"><div class="c-logs__filter fa fa-2x fa-plus-circle" title="Clinical Survey"></div><div class="c-logs__filter fa fa-2x fa-heartbeat" title="Device"></div><div class="c-logs__filter fa fa-2x fa-money" title="Financial"></div><div class="c-logs__filter fa fa-2x fa-bar-chart" title="Flowsheet"></div><div class="c-logs__filter fa fa-2x fa-paperclip" title="Media"></div><div class="c-logs__filter fa fa-2x fa-list-alt" title="Orders"></div></div><div class="o-list__cell c-logs__cell--filterStatus c-logs__filter"><div class="o-icon__success"></div><span>Success</span></div><div class="o-list__cell c-logs__cell--filterEnvironment c-logs__filter">Production</div><div class="o-list__cell c-logs__cell--filterTime"><input></div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--filterType c-logs__filter"><div class="o-icon__outbound"></div><span>Outbound</span></div><div class="o-list__cell c-logs__cell--filterModel"><div class="c-logs__filter fa fa-2x fa-street-view" title="Patient Admin"></div><div class="c-logs__filter fa fa-2x fa-search-plus" title="Patient Search"></div><div class="c-logs__filter fa fa-2x fa-flask" title="Results"></div><div class="c-logs__filter fa fa-2x fa-calendar" title="Scheduling"></div><div class="c-logs__filter fa fa-2x fa-eyedropper" title="Vaccine"></div></div><div class="o-list__cell c-logs__cell--filterStatus c-logs__filter"><div class="o-icon__fail"></div><span>Fail</span></div><div class="o-list__cell c-logs__cell--filterEnvironment c-logs__filter">Stage</div><div class="o-list__cell c-logs__cell--filterTime"><input></div></div></div></div></div></div></div>;*/
   /* -ctag-status: prod;*/ }
   .c-logs__navContainer {
     width: 20.833325vw;
@@ -1236,21 +1253,34 @@ a {
     line-height: 38.5px;
     width: 30px;
     height: 100%;
-    display: flex; }
-    .c-logs__searchIcon > * {
-      align-self: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
   .c-logs .c-logs__cell--summaryType, .c-logs .c-logs__cell--type {
     width: 4.166665vw;
     justify-content: flex-start; }
+  .c-logs .c-logs__cell--summaryTitle, .c-logs .c-logs__cell--title {
+    flex: 1;
+    justify-content: flex-start; }
   .c-logs .c-logs__cell--summaryStatus, .c-logs .c-logs__cell--status {
     width: 8.33333vw;
-    justify-content: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
   .c-logs .c-logs__cell--summaryModel, .c-logs .c-logs__cell--model {
     width: 8.33333vw;
-    justify-content: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
   .c-logs .c-logs__cell--summaryEnvironment, .c-logs .c-logs__cell--environment {
     width: 8.33333vw;
-    justify-content: center; }
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; }
   .c-logs .c-logs__cell--summaryTime, .c-logs .c-logs__cell--time {
     width: 12.499995vw;
     justify-content: flex-end; }
@@ -1281,8 +1311,12 @@ a {
       display: none; }
       .c-logs__filters .c-logs__closeFilters:hover {
         background-color: #eee; }
+    .c-logs__filters .c-logs__cell--filterType {
+      flex: 1;
+      justify-content: flex-start; }
     .c-logs__filters .c-logs__cell--filterStatus {
-      width: 8.33333vw; }
+      width: 8.33333vw;
+      justify-content: flex-start; }
     .c-logs__filters .c-logs__cell--filterModel {
       width: 24.99999vw;
       padding-right: 22px;
@@ -1291,7 +1325,8 @@ a {
         margin-left: 11px; }
     .c-logs__filters .c-logs__cell--filterEnvironment {
       width: 8.33333vw;
-      padding-left: 11px; }
+      padding-left: 11px;
+      justify-content: flex-start; }
     .c-logs__filters .c-logs__cell--filterTime {
       width: 12.499995vw;
       justify-content: flex-end; }
@@ -1332,7 +1367,9 @@ a {
 .c-logsSideNav__cell--title {
   font-size: 13px;
   line-height: 16.5px;
-  padding-left: 11px; }
+  padding-left: 11px;
+  flex: 1;
+  justify-content: flex-start; }
 
 .c-logsSideNav__cell--status {
   font-size: 13px;
@@ -1342,13 +1379,15 @@ a {
 
 .c-profile__content {
   display: flex;
-  justify-content: flex-start; }
+  flex-flow: row nowrap;
+  align-items: center;
+  align-items: flex-start; }
   @media (max-width: 768px) {
     .c-profile__content {
       display: block !important; } }
 
 .c-profile__avatarCol {
-  flex-grow: 1; }
+  flex: 1; }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__avatarCol {
