@@ -7,7 +7,7 @@ var MainNav = React.createClass({
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["section"],
+    		["section","nav"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -26,7 +26,8 @@ var MainNav = React.createClass({
     openSection: function ( section , secondary_page ) {
         RS.merge({
             section:section,
-            page:secondary_page
+            page:secondary_page,
+            nav:""
         });
     },
 
@@ -43,16 +44,7 @@ var MainNav = React.createClass({
 
         var nav_items = [],icon_html;
 
-        nav_items.push(
-            <a href="http://community.redoxengine.com" target="_blank"
-                className="c-mainNav__link
-                    c-mainNav__link--social-icon">
-                <img src="images/logos/slack_hash.png"
-                    title="Join us on Slack!" />
-            </a>
-        );
-
-        for ( var p=nav_links.length-1; p>=0; p-- ) {
+        for ( var p=0; p<nav_links.length; p++ ) {
             page = nav_links[p];
 
             icon_html = "";
@@ -85,6 +77,14 @@ var MainNav = React.createClass({
             );
         }
 
+        nav_items.push(
+            <a href="http://community.redoxengine.com" target="_blank"
+                className="c-mainNav__link
+                    c-mainNav__link--social-icon">
+                <img src="images/logos/slack_hash.png"
+                    title="Join us on Slack!" />
+            </a>
+        );
 
 
         return  <div className={
@@ -99,7 +99,7 @@ var MainNav = React.createClass({
                         { nav_items }
                     </div>
 
-                    <div className="c-mainNav__hamburger"
+                    <div className="c-mainNav__hamburger ion-navicon-round"
                         onClick={ this.toggleNavOpen }></div>
 
                 </div>;

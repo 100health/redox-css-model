@@ -743,22 +743,20 @@ a {
     height: 100%;
     clear: left;
     float: left;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     margin-left: 2.0833325vw;
     margin-right: 2.0833325vw;
     position: relative;
     z-index: 200;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
     background-image: url("../images/app/redox_logo@2x.png");
     background-size: contain;
     background-position: left center;
     background-repeat: no-repeat; }
     .c-mainNav__logo__metric {
-      position: absolute;
-      right: 0px;
-      transform: translate(100%, 50%); }
+      margin-right: -20px; }
   .c-mainNav__hamburger {
     /* -ctag-example: ...
 				<div class="ion-navicon-round"></div>;*/
@@ -790,6 +788,9 @@ a {
     right: 0px;
     background-color: #00b588;
     height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     z-index: 100; }
     .c-mainNav__links:before, .c-mainNav__links:after {
       content: " ";
@@ -818,6 +819,12 @@ a {
     @media (max-width: 768px) {
       .c-mainNav__links {
         overflow: hidden  !important; } }
+    @media (max-width: 768px) {
+      .c-mainNav__links {
+        flex-direction: column !important; } }
+    @media (max-width: 768px) {
+      .c-mainNav__links {
+        align-items: flex-start !important; } }
   .c-mainNav__link {
     /* -ctag-example: ...
 	                { .c-mainNav__link__icon }
@@ -845,6 +852,17 @@ a {
         text-decoration: none; }
     .c-mainNav__link:hover {
       color: #B7FFE0; }
+    @media (max-width: 768px) {
+      .c-mainNav__link {
+        text-align: left  !important; } }
+    @media (max-width: 768px) {
+      .c-mainNav__link {
+        display: flex !important;
+        flex-flow: row nowrap !important;
+        align-items: center !important; } }
+    @media (max-width: 768px) {
+      .c-mainNav__link {
+        justify-content: flex-start !important; } }
     .c-mainNav__link__icon {
       /* -ctag-example: <div class="c-mainNav__link__icon ion-clipboard"></div>;*/
       padding-left: 11px;
@@ -898,12 +916,6 @@ a {
   @media (max-width: 768px) {
     .c-mainNav--open .c-mainNav__links {
       height: auto  !important; } }
-  @media (max-width: 768px) {
-    .c-mainNav--open .c-mainNav__links {
-      justify-content: flex-start !important; } }
-  @media (max-width: 768px) {
-    .c-mainNav--open .c-mainNav__links {
-      flex-direction: column-reverse !important; } }
   @media (max-width: 768px) {
     .c-mainNav--open .c-mainNav__link {
       padding-left: 4.166665vw !important; } }

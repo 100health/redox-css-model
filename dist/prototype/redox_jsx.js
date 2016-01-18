@@ -1311,7 +1311,7 @@ var MainNav = React.createClass({displayName: "MainNav",
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["section"],
+    		["section","nav"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -1330,7 +1330,8 @@ var MainNav = React.createClass({displayName: "MainNav",
     openSection: function ( section , secondary_page ) {
         RS.merge({
             section:section,
-            page:secondary_page
+            page:secondary_page,
+            nav:""
         });
     },
 
@@ -1347,16 +1348,7 @@ var MainNav = React.createClass({displayName: "MainNav",
 
         var nav_items = [],icon_html;
 
-        nav_items.push(
-            React.createElement("a", {href: "http://community.redoxengine.com", target: "_blank", 
-                className: "c-mainNav__link" + ' ' +
-                    "c-mainNav__link--social-icon"}, 
-                React.createElement("img", {src: "images/logos/slack_hash.png", 
-                    title: "Join us on Slack!"})
-            )
-        );
-
-        for ( var p=nav_links.length-1; p>=0; p-- ) {
+        for ( var p=0; p<nav_links.length; p++ ) {
             page = nav_links[p];
 
             icon_html = "";
@@ -1389,6 +1381,14 @@ var MainNav = React.createClass({displayName: "MainNav",
             );
         }
 
+        nav_items.push(
+            React.createElement("a", {href: "http://community.redoxengine.com", target: "_blank", 
+                className: "c-mainNav__link" + ' ' +
+                    "c-mainNav__link--social-icon"}, 
+                React.createElement("img", {src: "images/logos/slack_hash.png", 
+                    title: "Join us on Slack!"})
+            )
+        );
 
 
         return  React.createElement("div", {className: 
@@ -1403,7 +1403,7 @@ var MainNav = React.createClass({displayName: "MainNav",
                          nav_items 
                     ), 
 
-                    React.createElement("div", {className: "c-mainNav__hamburger", 
+                    React.createElement("div", {className: "c-mainNav__hamburger ion-navicon-round", 
                         onClick:  this.toggleNavOpen})
 
                 );
