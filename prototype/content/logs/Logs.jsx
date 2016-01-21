@@ -193,6 +193,8 @@ var Logs = React.createClass({
                                             $(".c-logs__cell--summaryModel").html("<b>Scheduling</b>");
                                             $(".c-logs__cell--summaryEnvironment").html("<b>Stage</b>");
                                             $(".c-logs__cell--summaryType").html("<b>In</b>");
+                                            $(".c-logs__cell--summaryTitle").html("<b>Hospital B</b>");
+                                            $(".c-logs__cell--summaryStatus").html("<b>Fail</b>");
 
                                             $(".p-logs__filters").addClass("p-logs__filters--selected");
                                         }
@@ -203,6 +205,8 @@ var Logs = React.createClass({
                                             $(".c-logs__cell--summaryModel").html("Data Model");
                                             $(".c-logs__cell--summaryEnvironment").html("Environment");
                                             $(".c-logs__cell--summaryType").html("Type");
+                                            $(".c-logs__cell--summaryStatus").html("Status");
+                                            $(".c-logs__cell--summaryTitle").html("Message");
 
                                             $(".p-logs__filters").removeClass("p-logs__filters--selected");
                                         }

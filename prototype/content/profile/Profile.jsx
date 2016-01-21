@@ -117,9 +117,7 @@ var Profile = React.createClass({
 
                                     <div className="c-profile__categories">
                                         <div className="c-profile__category">
-                                            <div className="
-                                                c-profile__category__icon
-                                                ion-android-archive">
+                                            <div className="c-profile__category__icon ion-android-archive">
                                             </div>
                                             <div className="
                                                 c-profile__category__label">
@@ -134,9 +132,7 @@ var Profile = React.createClass({
 
                                     <div className="c-profile__categories">
                                         <div className="c-profile__category">
-                                            <div className="
-                                                c-profile__category__icon
-                                                ion-android-archive">
+                                            <div className="c-profile__category__icon ion-android-archive">
                                             </div>
                                             <div className="
                                                 c-profile__category__label">
@@ -208,6 +204,8 @@ var Profile = React.createClass({
                                     <h2>
                                         Redox Contacts
                                     </h2>
+
+                                    <div className="p-profile__contacts"></div>
 
                                 </div>
                             </div>

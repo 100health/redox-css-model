@@ -20626,8 +20626,9 @@ var Connections = React.createClass({displayName: "Connections",
                                 React.createElement("h1", null, 
                                     "Outbound"
                                 ), 
-                                React.createElement("div", {className: "c-connections__addBtn"}, 
-                                    "Add Outgoing"
+                                React.createElement("div", {className: "c-connections__addBtn", 
+                                    onClick: this.openConnection.bind( this , "new_outbound") }, 
+                                    "Add Outbound"
                                 )
                             ), 
                             React.createElement("div", {className: "o-list o-list--overview"}, 
@@ -20640,8 +20641,9 @@ var Connections = React.createClass({displayName: "Connections",
                                 React.createElement("h1", null, 
                                     "Inbound"
                                 ), 
-                                React.createElement("div", {className: "c-connections__addBtn"}, 
-                                    "Add Incoming"
+                                React.createElement("div", {className: "c-connections__addBtn", 
+                                    onClick: this.openConnection.bind( this , "new_inbound") }, 
+                                    "Add Inbound"
                                 )
                             ), 
                             React.createElement("div", {className: "o-list o-list--overview"}, 
@@ -20964,6 +20966,8 @@ var Logs = React.createClass({displayName: "Logs",
                                             $(".c-logs__cell--summaryModel").html("<b>Scheduling</b>");
                                             $(".c-logs__cell--summaryEnvironment").html("<b>Stage</b>");
                                             $(".c-logs__cell--summaryType").html("<b>In</b>");
+                                            $(".c-logs__cell--summaryTitle").html("<b>Hospital B</b>");
+                                            $(".c-logs__cell--summaryStatus").html("<b>Fail</b>");
 
                                             $(".p-logs__filters").addClass("p-logs__filters--selected");
                                         }
@@ -20974,6 +20978,8 @@ var Logs = React.createClass({displayName: "Logs",
                                             $(".c-logs__cell--summaryModel").html("Data Model");
                                             $(".c-logs__cell--summaryEnvironment").html("Environment");
                                             $(".c-logs__cell--summaryType").html("Type");
+                                            $(".c-logs__cell--summaryStatus").html("Status");
+                                            $(".c-logs__cell--summaryTitle").html("Message");
 
                                             $(".p-logs__filters").removeClass("p-logs__filters--selected");
                                         }
@@ -21064,12 +21070,12 @@ var LogsSideNav = React.createClass({displayName: "LogsSideNav",
                     "c-tertiaryNav__item o-list__row c-logsSideNav__row "
                     + selected_cls, key:  log.guid, 
                     onClick:  this.openLog.bind( this , log) }, 
+                    React.createElement("div", {className: 
+                        "o-list__cell" + ' ' +
+                        "c-logsSideNav__cell--type"}, 
+                        React.createElement("div", {className:  type_cls })
+                    ), 
                     /*<div className="
-                        o-list__cell
-                        c-logsSideNav__cell--type">
-                        <div className={ type_cls }></div>
-                    </div>
-                    <div className="
                         o-list__cell
                         c-logsSideNav__cell--title">{ log.title }</div> */
                     React.createElement("div", {className: 
@@ -21084,7 +21090,7 @@ var LogsSideNav = React.createClass({displayName: "LogsSideNav",
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
                         "c-logsSideNav__cell--status"}, 
-                        React.createElement("div", {className:  pass_cls })
+                        React.createElement("div", null)
                     )
                     /*<div className="
                         o-list__cell
@@ -21360,9 +21366,7 @@ var Profile = React.createClass({displayName: "Profile",
 
                                     React.createElement("div", {className: "c-profile__categories"}, 
                                         React.createElement("div", {className: "c-profile__category"}, 
-                                            React.createElement("div", {className: 
-                                                "c-profile__category__icon" + ' ' +
-                                                "ion-android-archive"}
+                                            React.createElement("div", {className: "c-profile__category__icon ion-android-archive"}
                                             ), 
                                             React.createElement("div", {className: 
                                                 "c-profile__category__label"}, 
@@ -21377,9 +21381,7 @@ var Profile = React.createClass({displayName: "Profile",
 
                                     React.createElement("div", {className: "c-profile__categories"}, 
                                         React.createElement("div", {className: "c-profile__category"}, 
-                                            React.createElement("div", {className: 
-                                                "c-profile__category__icon" + ' ' +
-                                                "ion-android-archive"}
+                                            React.createElement("div", {className: "c-profile__category__icon ion-android-archive"}
                                             ), 
                                             React.createElement("div", {className: 
                                                 "c-profile__category__label"}, 
@@ -21450,7 +21452,9 @@ var Profile = React.createClass({displayName: "Profile",
 
                                     React.createElement("h2", null, 
                                         "Redox Contacts"
-                                    )
+                                    ), 
+
+                                    React.createElement("div", {className: "p-profile__contacts"})
 
                                 )
                             )
@@ -21475,7 +21479,48 @@ var ConnectionModal = React.createClass({displayName: "ConnectionModal",
 
     render: function() {
 
-        var connection = RedoxModel.get( RS.route.conn_id );
+        var connection
+        if ( RS.route.conn_id == "new_outbound" ) {
+            connection = {title:"New Outbound Connection",type:"outbound"};
+        }else if ( RS.route.conn_id == "new_inbound" ) {
+            connection = {title:"New Inbound Connection",type:"inbound"};
+        }else{
+            connection = RedoxModel.get( RS.route.conn_id );
+        }
+
+        var content = "";
+        if ( connection.type == "outbound" ) {
+            content = React.createElement("div", {className: "p-connections__outgoingModalContent"});
+        }else{
+            content = React.createElement("div", {className: "p-connections__inboundModalContent", 
+                            onClick:  function () {
+
+                                if ( $( ".p-connections__inboundModalContent" )
+                                    .hasClass("p-connections__inboundModalContent--needsVerification") )
+                                {
+                                    $(".p-connections__inboundModalContent").removeClass(
+                                        "p-connections__inboundModalContent--needsVerification"
+                                    );
+                                    $(".p-connections__inboundModalContent").addClass(
+                                        "p-connections__inboundModalContent--error"
+                                    );
+                                }else if ( $( ".p-connections__inboundModalContent" )
+                                    .hasClass("p-connections__inboundModalContent--error") )
+                                {
+                                    $(".p-connections__inboundModalContent").removeClass(
+                                        "p-connections__inboundModalContent--needsVerification"
+                                    );
+                                    $(".p-connections__inboundModalContent").removeClass(
+                                        "p-connections__inboundModalContent--error"
+                                    );
+                                }else{
+                                    $(".p-connections__inboundModalContent").addClass(
+                                        "p-connections__inboundModalContent--needsVerification"
+                                    );
+                                }
+
+                            }});
+        }
 
         return  React.createElement("div", {className: "c-connection o-contentModal o-contentModal--wfooter"}, 
                     React.createElement("div", {className: "o-contentModal__contentContainer o-document"}, 
@@ -21490,30 +21535,7 @@ var ConnectionModal = React.createClass({displayName: "ConnectionModal",
                                         onClick:  this.close}, "close")
                                 )
                             ), 
-                            React.createElement("form", {className: "o-form"}, 
-                                React.createElement("div", {className: "c-profileFormLayout__2-column"}, 
-                                    React.createElement("div", {className: "o-form__element"}, 
-                                        React.createElement("label", null, "Title"), 
-                                        React.createElement("input", null)
-                                    ), 
-                                    React.createElement("div", {className: "o-form__element"}, 
-                                        React.createElement("label", null, "Email Address"), 
-                                        React.createElement("input", null)
-                                    ), 
-                                    React.createElement("div", {className: "o-form__element"}, 
-                                        React.createElement("label", null, "Public Website"), 
-                                        React.createElement("input", null)
-                                    ), 
-                                    React.createElement("div", {className: "o-form__element"}, 
-                                        React.createElement("label", null, "Phone Number"), 
-                                        React.createElement("input", null)
-                                    ), 
-                                    React.createElement("div", {className: "o-form__element"}, 
-                                        React.createElement("label", null, "Twitter"), 
-                                        React.createElement("input", null)
-                                    )
-                                )
-                            )
+                             content 
                         )
                     ), 
                     React.createElement("div", {className: "o-contentModal__footerContainer"}, 

@@ -12,7 +12,48 @@ var ConnectionModal = React.createClass({
 
     render: function() {
 
-        var connection = RedoxModel.get( RS.route.conn_id );
+        var connection
+        if ( RS.route.conn_id == "new_outbound" ) {
+            connection = {title:"New Outbound Connection",type:"outbound"};
+        }else if ( RS.route.conn_id == "new_inbound" ) {
+            connection = {title:"New Inbound Connection",type:"inbound"};
+        }else{
+            connection = RedoxModel.get( RS.route.conn_id );
+        }
+
+        var content = "";
+        if ( connection.type == "outbound" ) {
+            content = <div className="p-connections__outgoingModalContent"></div>;
+        }else{
+            content = <div className="p-connections__inboundModalContent"
+                            onClick={ function () {
+
+                                if ( $( ".p-connections__inboundModalContent" )
+                                    .hasClass("p-connections__inboundModalContent--needsVerification") )
+                                {
+                                    $(".p-connections__inboundModalContent").removeClass(
+                                        "p-connections__inboundModalContent--needsVerification"
+                                    );
+                                    $(".p-connections__inboundModalContent").addClass(
+                                        "p-connections__inboundModalContent--error"
+                                    );
+                                }else if ( $( ".p-connections__inboundModalContent" )
+                                    .hasClass("p-connections__inboundModalContent--error") )
+                                {
+                                    $(".p-connections__inboundModalContent").removeClass(
+                                        "p-connections__inboundModalContent--needsVerification"
+                                    );
+                                    $(".p-connections__inboundModalContent").removeClass(
+                                        "p-connections__inboundModalContent--error"
+                                    );
+                                }else{
+                                    $(".p-connections__inboundModalContent").addClass(
+                                        "p-connections__inboundModalContent--needsVerification"
+                                    );
+                                }
+
+                            }}></div>;
+        }
 
         return  <div className="c-connection o-contentModal o-contentModal--wfooter">
                     <div className="o-contentModal__contentContainer o-document">
@@ -27,30 +68,7 @@ var ConnectionModal = React.createClass({
                                         onClick={ this.close }>close</a>
                                 </div>
                             </div>
-                            <form className="o-form">
-                                <div className="c-profileFormLayout__2-column">
-                                    <div className="o-form__element">
-                                        <label>Title</label>
-                                        <input />
-                                    </div>
-                                    <div className="o-form__element">
-                                        <label>Email Address</label>
-                                        <input />
-                                    </div>
-                                    <div className="o-form__element">
-                                        <label>Public Website</label>
-                                        <input />
-                                    </div>
-                                    <div className="o-form__element">
-                                        <label>Phone Number</label>
-                                        <input />
-                                    </div>
-                                    <div className="o-form__element">
-                                        <label>Twitter</label>
-                                        <input />
-                                    </div>
-                                </div>
-                            </form>
+                            { content }
                         </div>
                     </div>
                     <div className="o-contentModal__footerContainer">

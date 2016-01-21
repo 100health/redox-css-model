@@ -8,7 +8,8 @@ div {
   /* -ctag-status: Prototyping;*/
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .o-contentModal__contentContainer {
     /* -ctag-example: ...<div>
                 { .o-contentHeader }
@@ -35,7 +36,7 @@ div {
             </div>*/
     height: 66px;
     width: 100%;
-    box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #eee;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -1186,7 +1187,9 @@ a {
     .c-tertiaryNav__item--indented {
       padding-left: 4.166665vw; }
     .c-tertiaryNav__item--selected {
-      background-color: #eee; }
+      background-color: #B7FFE0; }
+      .c-tertiaryNav__item--selected:hover {
+        background-color: #00DFA7; }
 
 .c-connections {
   /* -ctag-example: <div class="c-connections o-contentSimple"><div class="o-contentSimple__contentContainer"><div><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Connections</div><div class="o-contentHeader__navContainer"></div></div><div class="c-connections__groupHeader"><div class="o-icon__outbound"></div><h1>Outbound</h1><div class="c-connections__addBtn">Add Outgoing</div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Floor Solar Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Fork Clock Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Notepad Europe Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Blue Fall Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div><div class="o-list__row"><div class=" o-list__cell a-flex-item-fill c-connections__cell--title">Computer Bus Connection</div><div class="o-list__cell c-connections__cell--verify"><a href="#">API/Key</a></div></div></div><div class="c-connections__groupHeader"><div class="o-icon__inbound"></div><h1>Inbound</h1><div class="c-connections__addBtn">Add Incoming</div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class="o-list__cell c-connections__cell--title">Galaxy Grin Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell a-flex-item-fill c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell c-connections__cell--title">Closet Room Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell a-flex-item-fill c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell c-connections__cell--title">Cottage Purple Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell a-flex-item-fill c-connections__cell--verify"><a href="#">Edit</a></div></div><div class="o-list__row"><div class="o-list__cell c-connections__cell--title">Biography Vein Connection</div><div class="o-list__cell c-connections__cell--endPoint">http://www.myorganization.com/api/endpoint</div><div class="o-list__cell a-flex-item-fill c-connections__cell--verify"><a href="#">Edit</a></div></div></div></div></div></div>;*/
@@ -1249,6 +1252,23 @@ a {
   .c-connections__cell--verify {
     width: 8.33333vw;
     justify-content: flex-end; }
+
+.p-connections__outgoingModalContent {
+  width: 100%;
+  height: 402px;
+  background-image: url("../images/prototype/outgoingConnection.png"); }
+
+.p-connections__inboundModalContent {
+  width: 100%;
+  height: 402px;
+  cursor: hand;
+  cursor: pointer;
+  background-image: url("../images/prototype/incomingConnection.png");
+  background-repeat: no-repeat; }
+  .p-connections__inboundModalContent--needsVerification {
+    background-image: url("../images/prototype/incomingConnection--needsVerification.png"); }
+  .p-connections__inboundModalContent--error {
+    background-image: url("../images/prototype/incomingConnection--error.png"); }
 
 .c-connectionsEmptyState {
   width: 100%;
@@ -1347,7 +1367,7 @@ a {
     transition: height 0.3s; }
     .c-logs__footer--open {
       /* touch */
-      height: 220px; }
+      height: 286px; }
       .c-logs__footer--open .c-logs__cell--summaryType {
         width: 12.499995vw; }
       .c-logs__footer--open .c-logs__cell--summaryTitle {
@@ -1364,7 +1384,7 @@ a {
   .p-logs__filters {
     margin-top: 11px;
     width: 100%;
-    height: 132px;
+    height: 198px;
     cursor: hand;
     cursor: pointer;
     background-image: url("../images/prototype/logFilters.png"); }
@@ -1390,7 +1410,8 @@ a {
   display: block; }
 
 .c-logsSideNav__cell--type {
-  width: 20px; }
+  width: 20px;
+  margin-right: 3px; }
 
 .c-logsSideNav__cell--model {
   font-size: 13.5px;
@@ -1400,15 +1421,17 @@ a {
 .c-logsSideNav__cell--message {
   font-size: 13px;
   line-height: 16.5px;
-  padding-left: 11px;
+  padding-left: 5.5px;
   flex: 1;
   justify-content: flex-start; }
 
 .c-logsSideNav__cell--status {
-  font-size: 13px;
-  line-height: 16.5px;
-  padding-left: 11px;
-  width: 30px; }
+  width: 10px; }
+  .c-logsSideNav__cell--status > div {
+    border-radius: 50%;
+    background-color: #00b588;
+    height: 6px;
+    width: 6px; }
 
 .c-profile__content {
   display: flex;
@@ -1575,6 +1598,15 @@ a {
   @media (max-width: 768px) {
     .c-profile__category {
       width: 16.66666vw !important; } }
+
+.p-profile__contacts {
+  margin-top: 11px;
+  margin-bottom: 44px;
+  float: left;
+  width: 100%;
+  height: 152px;
+  clear: both;
+  background-image: url("../images/prototype/profileTechInfo.png"); }
 
 .c-profileFormLayout__avatarColumn {
   width: 14.5833275vw;

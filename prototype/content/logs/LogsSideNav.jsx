@@ -76,12 +76,12 @@ var LogsSideNav = React.createClass({
                     "c-tertiaryNav__item o-list__row c-logsSideNav__row "
                     + selected_cls } key={ log.guid }
                     onClick={ this.openLog.bind( this , log ) }>
-                    {/*<div className="
+                    <div className="
                         o-list__cell
                         c-logsSideNav__cell--type">
                         <div className={ type_cls }></div>
                     </div>
-                    <div className="
+                    {/*<div className="
                         o-list__cell
                         c-logsSideNav__cell--title">{ log.title }</div> */}
                     <div className={
@@ -96,7 +96,7 @@ var LogsSideNav = React.createClass({
                     <div className="
                         o-list__cell
                         c-logsSideNav__cell--status">
-                        <div className={ pass_cls }></div>
+                        <div></div>
                     </div>
                     { /*<div className="
                         o-list__cell

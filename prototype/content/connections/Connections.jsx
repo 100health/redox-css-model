@@ -93,8 +93,9 @@ var Connections = React.createClass({
                                 <h1>
                                     Outbound
                                 </h1>
-                                <div className="c-connections__addBtn">
-                                    Add Outgoing
+                                <div className="c-connections__addBtn"
+                                    onClick={this.openConnection.bind( this , "new_outbound" ) }>
+                                    Add Outbound
                                 </div>
                             </div>
                             <div className="o-list o-list--overview">
@@ -107,8 +108,9 @@ var Connections = React.createClass({
                                 <h1>
                                     Inbound
                                 </h1>
-                                <div className="c-connections__addBtn">
-                                    Add Incoming
+                                <div className="c-connections__addBtn"
+                                    onClick={this.openConnection.bind( this , "new_inbound" ) }>
+                                    Add Inbound
                                 </div>
                             </div>
                             <div className="o-list o-list--overview">

@@ -23,26 +23,6 @@
 				RedoxModel = protoData;
 				console.log( RedoxModel );
 
-
-				RouteState.config({
-					section:{
-						weight:10,
-						description:"Main nav's state"
-					},
-					page:{
-						weight:20,
-						dependency:"section"
-					},
-						detail_page:{
-							weight:21,
-							dependency:"page"
-						},
-						log_id:{
-							weight:500,
-							dependency:"detail_page"
-						}
-				});
-
 				RouteState.listenToHash();
 				RS = RouteState;
 				React.render(
