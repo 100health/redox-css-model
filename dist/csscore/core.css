@@ -5063,40 +5063,40 @@
   border-right: 1px solid #eee; }
 
 .a-shadow {
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-top-right {
-  box-shadow: 3px -3px 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 3px -3px 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-top-left {
-  box-shadow: -3px -3px 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: -3px -3px 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-top-bottom {
-  box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-top {
-  box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-bottom {
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-bottom-right {
-  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-bottom-left {
-  box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-left {
-  box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-left-right {
-  box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2), 3px 0 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.1), 3px 0 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-right {
-  box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-shadow-right-left {
-  box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2), -3px 0 3px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1), -3px 0 3px 0 rgba(0, 0, 0, 0.1); }
 
 .a-zindex-mainNav {
   z-index: 3000; }
@@ -12015,51 +12015,51 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow {
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-top-right {
-    box-shadow: 3px -3px 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: 3px -3px 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-top-left {
-    box-shadow: -3px -3px 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: -3px -3px 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-top-bottom {
-    box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-top {
-    box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: 0 -3px 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-bottom {
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-bottom-right {
-    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-bottom-left {
-    box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-left {
-    box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-left-right {
-    box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.2), 3px 0 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.1), 3px 0 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-right {
-    box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-shadow-right-left {
-    box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.2), -3px 0 3px 0 rgba(0, 0, 0, 0.2) !important; } }
+    box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1), -3px 0 3px 0 rgba(0, 0, 0, 0.1) !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-zindex-mainNav {

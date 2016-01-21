@@ -42,12 +42,14 @@ var LogsSideNav = React.createClass({
         var connection = log.connection();
 
         var type_cls = "";
+        var message = "<i>1/12 | 5:64:23pm</i>";
         switch ( connection.type ) {
             case "outbound" :
                 type_cls = "o-icon__outbound";
                 break;
             case "inbound" :
                 type_cls = "o-icon__inbound";
+                message = "Hospital B";
                 break;
             case "query" :
                 type_cls = "o-icon__query";
@@ -61,6 +63,7 @@ var LogsSideNav = React.createClass({
                 break;
             case false :
                 pass_cls = "o-icon__fail";
+                message = "Service failed at area b...";
                 break;
         }
 
@@ -70,21 +73,26 @@ var LogsSideNav = React.createClass({
         }
 
         return  <div className={
-                    "c-tertiaryNav__item o-list__row "
+                    "c-tertiaryNav__item o-list__row c-logsSideNav__row "
                     + selected_cls } key={ log.guid }
                     onClick={ this.openLog.bind( this , log ) }>
-                    <div className="
+                    {/*<div className="
                         o-list__cell
                         c-logsSideNav__cell--type">
                         <div className={ type_cls }></div>
                     </div>
                     <div className="
                         o-list__cell
-                        c-logsSideNav__cell--title">{ log.title }</div>
-                    { /* <div className={
-                            "o-list__cell c-logs__cell--model " +
+                        c-logsSideNav__cell--title">{ log.title }</div> */}
+                    <div className={
+                            "o-list__cell c-logsSideNav__cell--model " +
                             "fa fa-2x " + log.data_model().icon
-                        } title={ log.data_model().name }></div> */ }
+                        } title={ log.data_model().name }></div>
+                    <div className="
+                        o-list__cell
+                        c-logsSideNav__cell--message"
+                        dangerouslySetInnerHTML={{__html:message}}>
+                    </div>
                     <div className="
                         o-list__cell
                         c-logsSideNav__cell--status">

@@ -20749,22 +20749,20 @@ var LogDetail = React.createClass({displayName: "LogDetail",
 
         var log = RedoxModel.get( RS.route.log_id );
 
-        return  React.createElement("div", {className: 
-                    "o-contentSimple" + ' ' +
-                    "o-contentSimple--skinny" + ' ' +
-                    "c-logDetail"}, 
+        return  React.createElement("div", {className: "o-contentSimple o-contentSimple--skinny c-logDetail"}, 
                     React.createElement("div", {className: "o-contentSimple__closeDetail", 
                         onClick:  this.closeLog}), 
                     React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
-                        React.createElement("div", {className: "o-contentHeader"}, 
-                            React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
-                                 log.title
-                            ), 
-                            React.createElement("div", {className: "o-contentHeader__navContainer"}, 
-                                 log.success
-                            )
-                        ), 
-                        "log detail"
+                        /* <div className="o-contentHeader">
+                            <div className="o-contentHeader__titleContainer">
+                                { log.title }
+                            </div>
+                            <div className="o-contentHeader__navContainer">
+                                { log.success }
+                            </div>
+                        </div> */
+                        React.createElement("div", {className: "p-logs__logDetails"})
+
                     )
                 );
     }
@@ -20813,12 +20811,14 @@ var Logs = React.createClass({displayName: "Logs",
         var connection = log.connection();
 
         var type_cls = "";
+        var message = "";
         switch ( connection.type ) {
             case "outbound" :
                 type_cls = "o-icon__outbound";
                 break;
             case "inbound" :
                 type_cls = "o-icon__inbound";
+                message = "from Hospital B";
                 break;
             case "query" :
                 type_cls = "o-icon__query";
@@ -20832,6 +20832,7 @@ var Logs = React.createClass({displayName: "Logs",
                 break;
             case false :
                 pass_cls = "o-icon__fail";
+                message = "Service failed at area b...";
                 break;
         }
 
@@ -20842,13 +20843,16 @@ var Logs = React.createClass({displayName: "Logs",
                         "c-logs__cell--type"}, 
                         React.createElement("div", {className:  type_cls })
                     ), 
+
+                    React.createElement("div", {className: "o-list__cell c-logs__cell--model"}, 
+                        React.createElement("div", {className:  "c-logs__modelIcon fa fa-2x " + log.data_model().icon}), 
+                         log.data_model().name
+                    ), 
+
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
-                        "c-logs__cell--title"},  log.title), 
-                    React.createElement("div", {className: 
-                            "o-list__cell c-logs__cell--model " +
-                            "fa fa-2x " + log.data_model().icon, 
-                        title:  log.data_model().name}), 
+                        "c-logs__cell--title"},  message ), 
+
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
                         "c-logs__cell--status"}, 
@@ -20933,12 +20937,13 @@ var Logs = React.createClass({displayName: "Logs",
                                     React.createElement("div", {className: 
                                         "o-list__cell" + ' ' +
                                         "c-logs__cell--summaryType"}, "Type"), 
-                                    React.createElement("div", {className: "o-list__cell" + ' ' +
-                                        "a-flex-item-fill" + ' ' +
-                                        "c-logs__cell--summaryTitle "}, "Message"), 
                                     React.createElement("div", {className: 
                                         "o-list__cell" + ' ' +
                                         "c-logs__cell--summaryModel"}, "Data Model"), 
+                                    React.createElement("div", {className: "o-list__cell" + ' ' +
+                                        "a-flex-item-fill" + ' ' +
+                                        "c-logs__cell--summaryTitle"}, "Message"), 
+
                                     React.createElement("div", {className: 
                                         "o-list__cell" + ' ' +
                                         "c-logs__cell--summaryStatus"}, "Status"), 
@@ -20953,95 +20958,26 @@ var Logs = React.createClass({displayName: "Logs",
                             React.createElement("div", {className: "c-logs__filters"}, 
                                 React.createElement("div", {className: "c-logs__closeFilters", 
                                     onClick:  this.toggleFooter}), 
-                                React.createElement("div", {className: "o-list"}, 
-                                    React.createElement("div", {className: "o-list__row"}, 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterType" + ' ' +
-                                            "c-logs__filter", 
-                                            onClick:  function( a , b ) { $(this).toggleClass("c-logs__filter--selected") }}, 
-                                            React.createElement("div", {className: "o-icon__inbound"}), 
-                                            "Inbound"
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterModel"}, 
-                                             this.getModelThirdChunk( 0) 
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterStatus c-logs__filter"}, 
-                                            React.createElement("div", {className: "o-icon__success"}), 
-                                            "Success"
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterEnvironment" + ' ' +
-                                            "c-logs__filter"}, 
-                                            "Production"
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterTime"}, 
-                                            React.createElement("input", null)
-                                        )
-                                    ), 
-                                    React.createElement("div", {className: "o-list__row"}, 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterType" + ' ' +
-                                            "c-logs__filter"}, 
-                                            React.createElement("div", {className: "o-icon__outbound"}), 
-                                            "Outbound"
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterModel"}, 
-                                             this.getModelThirdChunk( 1) 
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterStatus c-logs__filter"}, 
-                                            React.createElement("div", {className: "o-icon__fail"}), 
-                                            "Fail"
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterEnvironment c-logs__filter"}, 
-                                            "Stage"
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterTime"}, 
-                                            React.createElement("input", null)
-                                        )
-                                    ), 
-                                    React.createElement("div", {className: "o-list__row"}, 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterType" + ' ' +
-                                            "c-logs__filter"}, 
-                                            React.createElement("div", {className: "o-icon__query"}), 
-                                            "Query"
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterModel"}, 
-                                             this.getModelThirdChunk( 2) 
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterStatus"}), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterEnvironment c-logs__filter"}, 
-                                            "Development"
-                                        ), 
-                                        React.createElement("div", {className: 
-                                            "o-list__cell" + ' ' +
-                                            "c-logs__cell--filterTime"})
-                                    )
-                                )
+                                React.createElement("div", {className: "p-logs__filters", 
+                                    onClick: 
+                                        function () {
+                                            $(".c-logs__cell--summaryModel").html("<b>Scheduling</b>");
+                                            $(".c-logs__cell--summaryEnvironment").html("<b>Stage</b>");
+                                            $(".c-logs__cell--summaryType").html("<b>In</b>");
+
+                                            $(".p-logs__filters").addClass("p-logs__filters--selected");
+                                        }
+                                    }), 
+                                React.createElement("div", {className: "p-logs__clearAll", 
+                                    onClick: 
+                                        function () {
+                                            $(".c-logs__cell--summaryModel").html("Data Model");
+                                            $(".c-logs__cell--summaryEnvironment").html("Environment");
+                                            $(".c-logs__cell--summaryType").html("Type");
+
+                                            $(".p-logs__filters").removeClass("p-logs__filters--selected");
+                                        }
+                                    })
                             )
                         )
                     )
@@ -21094,12 +21030,14 @@ var LogsSideNav = React.createClass({displayName: "LogsSideNav",
         var connection = log.connection();
 
         var type_cls = "";
+        var message = "<i>1/12 | 5:64:23pm</i>";
         switch ( connection.type ) {
             case "outbound" :
                 type_cls = "o-icon__outbound";
                 break;
             case "inbound" :
                 type_cls = "o-icon__inbound";
+                message = "Hospital B";
                 break;
             case "query" :
                 type_cls = "o-icon__query";
@@ -21113,6 +21051,7 @@ var LogsSideNav = React.createClass({displayName: "LogsSideNav",
                 break;
             case false :
                 pass_cls = "o-icon__fail";
+                message = "Service failed at area b...";
                 break;
         }
 
@@ -21122,21 +21061,26 @@ var LogsSideNav = React.createClass({displayName: "LogsSideNav",
         }
 
         return  React.createElement("div", {className: 
-                    "c-tertiaryNav__item o-list__row "
+                    "c-tertiaryNav__item o-list__row c-logsSideNav__row "
                     + selected_cls, key:  log.guid, 
                     onClick:  this.openLog.bind( this , log) }, 
+                    /*<div className="
+                        o-list__cell
+                        c-logsSideNav__cell--type">
+                        <div className={ type_cls }></div>
+                    </div>
+                    <div className="
+                        o-list__cell
+                        c-logsSideNav__cell--title">{ log.title }</div> */
+                    React.createElement("div", {className: 
+                            "o-list__cell c-logsSideNav__cell--model " +
+                            "fa fa-2x " + log.data_model().icon, 
+                        title:  log.data_model().name}), 
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
-                        "c-logsSideNav__cell--type"}, 
-                        React.createElement("div", {className:  type_cls })
+                        "c-logsSideNav__cell--message", 
+                        dangerouslySetInnerHTML: {__html:message}}
                     ), 
-                    React.createElement("div", {className: 
-                        "o-list__cell" + ' ' +
-                        "c-logsSideNav__cell--title"},  log.title), 
-                    /* <div className={
-                            "o-list__cell c-logs__cell--model " +
-                            "fa fa-2x " + log.data_model().icon
-                        } title={ log.data_model().name }></div> */ 
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
                         "c-logsSideNav__cell--status"}, 

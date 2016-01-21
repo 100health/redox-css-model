@@ -186,7 +186,8 @@ module.exports = function(grunt) {
         files:[
             'prototype/**/*.jsx',
             'prototype/**/*.js',
-            'prototype/**/*.html'
+            'prototype/**/*.html',
+            'prototype/_assets/prototype/**/*'
         ],
         tasks: ["default"]
     };
@@ -247,17 +248,15 @@ module.exports = function(grunt) {
         {
             dest: 'dist/',
             cwd: "prototype/",
-            src: "index.html",
+            src: "*.html",
             expand: true
         },
-        // don't forget the style guide as well...could be done via scss config too...
-        // images happen to be reachable without redundant versions....
-        /*{
-            dest: 'dist/csscore/_assets',
-            cwd: "scss/_assets",
-            src: ["** /*","!** /*.sketch"],
+        {
+            dest: 'dist/images/prototype/',
+            cwd: "prototype/_assets/prototype",
+            src: ["**/*","!**/*.sketch"],
             expand: true
-        },*/
+        },
         {
             dest: 'dist/images/',
             cwd: "RedoxEngine_repo/ng-app/app/images/",

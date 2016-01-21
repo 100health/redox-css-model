@@ -465,18 +465,18 @@
 			},
 			"base":"shadow",
 			"values":[
-                "0 0 4px 0 rgba( 0,0,0,.2)",
-				"3px -3px 3px 0 rgba( 0,0,0,.2)",
-				"-3px -3px 3px 0 rgba( 0,0,0,.2)",
-                "0 -3px 3px 0 rgba( 0,0,0,.2), 0 3px 3px 0 rgba( 0,0,0,.2)",
-				"0 -3px 3px 0 rgba( 0,0,0,.2)",
-				"0 3px 3px 0 rgba( 0,0,0,.2)",
-				"3px 3px 3px 0 rgba( 0,0,0,.2)",
-				"-3px 3px 3px 0 rgba( 0,0,0,.2)",
-				"-3px 0 3px 0 rgba( 0,0,0,.2)",
-                "-3px 0 3px 0 rgba( 0,0,0,.2), 3px 0 3px 0 rgba( 0,0,0,.2)",
-                "3px 0 3px 0 rgba( 0,0,0,.2)",
-				"3px 0 3px 0 rgba( 0,0,0,.2), -3px 0 3px 0 rgba( 0,0,0,.2)"
+                "0 0 4px 0 rgba( 0,0,0,.1)",
+				"3px -3px 3px 0 rgba( 0,0,0,.1)",
+				"-3px -3px 3px 0 rgba( 0,0,0,.1)",
+                "0 -3px 3px 0 rgba( 0,0,0,.1), 0 3px 3px 0 rgba( 0,0,0,.1)",
+				"0 -3px 3px 0 rgba( 0,0,0,.1)",
+				"0 3px 3px 0 rgba( 0,0,0,.1)",
+				"3px 3px 3px 0 rgba( 0,0,0,.1)",
+				"-3px 3px 3px 0 rgba( 0,0,0,.1)",
+				"-3px 0 3px 0 rgba( 0,0,0,.1)",
+                "-3px 0 3px 0 rgba( 0,0,0,.1), 3px 0 3px 0 rgba( 0,0,0,.1)",
+                "3px 0 3px 0 rgba( 0,0,0,.1)",
+				"3px 0 3px 0 rgba( 0,0,0,.1), -3px 0 3px 0 rgba( 0,0,0,.1)"
 			],
 			"atoms":[
 				{

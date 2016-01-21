@@ -310,18 +310,18 @@ $v-border-h-weaker: 1px solid $v-grey-9;
 $v-border-h-weakest: 1px solid $v-grey-9;
 
 
-$v-shadow: 0 0 4px 0 rgba( 0,0,0,.2);
-$v-shadow-top-right: 3px -3px 3px 0 rgba( 0,0,0,.2);
-$v-shadow-top-left: -3px -3px 3px 0 rgba( 0,0,0,.2);
-$v-shadow-top-bottom: 0 -3px 3px 0 rgba( 0,0,0,.2), 0 3px 3px 0 rgba( 0,0,0,.2);
-$v-shadow-top: 0 -3px 3px 0 rgba( 0,0,0,.2);
-$v-shadow-bottom: 0 3px 3px 0 rgba( 0,0,0,.2);
-$v-shadow-bottom-right: 3px 3px 3px 0 rgba( 0,0,0,.2);
-$v-shadow-bottom-left: -3px 3px 3px 0 rgba( 0,0,0,.2);
-$v-shadow-left: -3px 0 3px 0 rgba( 0,0,0,.2);
-$v-shadow-left-right: -3px 0 3px 0 rgba( 0,0,0,.2), 3px 0 3px 0 rgba( 0,0,0,.2);
-$v-shadow-right: 3px 0 3px 0 rgba( 0,0,0,.2);
-$v-shadow-right-left: 3px 0 3px 0 rgba( 0,0,0,.2), -3px 0 3px 0 rgba( 0,0,0,.2);
+$v-shadow: 0 0 4px 0 rgba( 0,0,0,.1);
+$v-shadow-top-right: 3px -3px 3px 0 rgba( 0,0,0,.1);
+$v-shadow-top-left: -3px -3px 3px 0 rgba( 0,0,0,.1);
+$v-shadow-top-bottom: 0 -3px 3px 0 rgba( 0,0,0,.1), 0 3px 3px 0 rgba( 0,0,0,.1);
+$v-shadow-top: 0 -3px 3px 0 rgba( 0,0,0,.1);
+$v-shadow-bottom: 0 3px 3px 0 rgba( 0,0,0,.1);
+$v-shadow-bottom-right: 3px 3px 3px 0 rgba( 0,0,0,.1);
+$v-shadow-bottom-left: -3px 3px 3px 0 rgba( 0,0,0,.1);
+$v-shadow-left: -3px 0 3px 0 rgba( 0,0,0,.1);
+$v-shadow-left-right: -3px 0 3px 0 rgba( 0,0,0,.1), 3px 0 3px 0 rgba( 0,0,0,.1);
+$v-shadow-right: 3px 0 3px 0 rgba( 0,0,0,.1);
+$v-shadow-right-left: 3px 0 3px 0 rgba( 0,0,0,.1), -3px 0 3px 0 rgba( 0,0,0,.1);
 
 
 $v-zindex-mainNav: 3000;

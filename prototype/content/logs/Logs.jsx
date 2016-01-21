@@ -40,12 +40,14 @@ var Logs = React.createClass({
         var connection = log.connection();
 
         var type_cls = "";
+        var message = "";
         switch ( connection.type ) {
             case "outbound" :
                 type_cls = "o-icon__outbound";
                 break;
             case "inbound" :
                 type_cls = "o-icon__inbound";
+                message = "from Hospital B";
                 break;
             case "query" :
                 type_cls = "o-icon__query";
@@ -59,6 +61,7 @@ var Logs = React.createClass({
                 break;
             case false :
                 pass_cls = "o-icon__fail";
+                message = "Service failed at area b...";
                 break;
         }
 
@@ -69,13 +72,16 @@ var Logs = React.createClass({
                         c-logs__cell--type">
                         <div className={ type_cls }></div>
                     </div>
+
+                    <div className="o-list__cell c-logs__cell--model">
+                        <div className={ "c-logs__modelIcon fa fa-2x " + log.data_model().icon }></div>
+                        { log.data_model().name }
+                    </div>
+
                     <div className="
                         o-list__cell
-                        c-logs__cell--title">{ log.title }</div>
-                    <div className={
-                            "o-list__cell c-logs__cell--model " +
-                            "fa fa-2x " + log.data_model().icon
-                        } title={ log.data_model().name }></div>
+                        c-logs__cell--title">{ message }</div>
+
                     <div className="
                         o-list__cell
                         c-logs__cell--status">
@@ -160,12 +166,13 @@ var Logs = React.createClass({
                                     <div className="
                                         o-list__cell
                                         c-logs__cell--summaryType">Type</div>
-                                    <div className="o-list__cell
-                                        a-flex-item-fill
-                                        c-logs__cell--summaryTitle ">Message</div>
                                     <div className="
                                         o-list__cell
                                         c-logs__cell--summaryModel">Data Model</div>
+                                    <div className="o-list__cell
+                                        a-flex-item-fill
+                                        c-logs__cell--summaryTitle">Message</div>
+
                                     <div className="
                                         o-list__cell
                                         c-logs__cell--summaryStatus">Status</div>
@@ -180,95 +187,26 @@ var Logs = React.createClass({
                             <div className="c-logs__filters">
                                 <div className="c-logs__closeFilters"
                                     onClick={ this.toggleFooter }></div>
-                                <div className="o-list">
-                                    <div className="o-list__row">
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterType
-                                            c-logs__filter"
-                                            onClick={ function( a , b ) { $(this).toggleClass("c-logs__filter--selected") } }>
-                                            <div className="o-icon__inbound"></div>
-                                            Inbound
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterModel">
-                                            { this.getModelThirdChunk( 0 ) }
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterStatus c-logs__filter">
-                                            <div className="o-icon__success"></div>
-                                            Success
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterEnvironment
-                                            c-logs__filter">
-                                            Production
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterTime">
-                                            <input />
-                                        </div>
-                                    </div>
-                                    <div className="o-list__row">
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterType
-                                            c-logs__filter">
-                                            <div className="o-icon__outbound"></div>
-                                            Outbound
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterModel">
-                                            { this.getModelThirdChunk( 1 ) }
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterStatus c-logs__filter">
-                                            <div className="o-icon__fail"></div>
-                                            Fail
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterEnvironment c-logs__filter">
-                                            Stage
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterTime">
-                                            <input />
-                                        </div>
-                                    </div>
-                                    <div className="o-list__row">
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterType
-                                            c-logs__filter">
-                                            <div className="o-icon__query"></div>
-                                            Query
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterModel">
-                                            { this.getModelThirdChunk( 2 ) }
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterStatus"></div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterEnvironment c-logs__filter">
-                                            Development
-                                        </div>
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__cell--filterTime"></div>
-                                    </div>
-                                </div>
+                                <div className="p-logs__filters"
+                                    onClick={
+                                        function () {
+                                            $(".c-logs__cell--summaryModel").html("<b>Scheduling</b>");
+                                            $(".c-logs__cell--summaryEnvironment").html("<b>Stage</b>");
+                                            $(".c-logs__cell--summaryType").html("<b>In</b>");
+
+                                            $(".p-logs__filters").addClass("p-logs__filters--selected");
+                                        }
+                                    }></div>
+                                <div className="p-logs__clearAll"
+                                    onClick={
+                                        function () {
+                                            $(".c-logs__cell--summaryModel").html("Data Model");
+                                            $(".c-logs__cell--summaryEnvironment").html("Environment");
+                                            $(".c-logs__cell--summaryType").html("Type");
+
+                                            $(".p-logs__filters").removeClass("p-logs__filters--selected");
+                                        }
+                                    }></div>
                             </div>
                         </div>
                     </div>
