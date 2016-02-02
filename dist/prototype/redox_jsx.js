@@ -167,11 +167,6 @@ var Connections = React.createClass({displayName: "Connections",
 
 });
 
-
-
-
-
-
 var DevTools = React.createClass({displayName: "DevTools",
 
     /*componentWillMount: function() {
@@ -189,21 +184,148 @@ var DevTools = React.createClass({displayName: "DevTools",
     componentWillUnmount: function(){
         RouteState.removeDiffListenersViaClusterId( "Profile" );
     },*/
-
-    render: function() {
-
-        return  React.createElement("div", {className: "c-devTools"}, 
-
-            React.createElement("div", {className: "c-devTools__content"}, 
-                React.createElement("div", {className: "a-flex-item-fill a-border"}, "2"), 
-                React.createElement("div", {className: "a-width-col-4 a-border"}, "d")
-            )
-
+    
+    alertExample: function () {
+        alertExample(
+            this.render(),
+            []
         );
+    },
+
+    openConnection: function ( guid ) {
+        RS.merge({
+            modal:"connection",
+            conn_id:guid
+        })
+    },
+
+
+    getInboundConnectionRow: function( connection ){
+
+        var link = "", end_point, end_point_class;
+        if ( connection.verified ) {
+            link = React.createElement("a", {href: "#", onClick:  this.openConnection.bind( this , connection.guid) }, "Edit");
+            end_point = connection.end_point;
+            end_point_class = "c-connections__cell--endPoint";
+        }
+        /*
+        else {
+            link = <a href="#" onClick={ function() { return false; } }>Verify</a>;
+            end_point = "End point verification needed!";
+            end_point_class = "c-connections__cell--endPointUnverified";
+        }
+        */
+
+        return  React.createElement("div", {className: "o-list__row", 
+                    onClick:  this.openConnection.bind( this , connection.guid) }, 
+                    React.createElement("div", {className: "o-list__cell" + ' ' +
+                        "c-connections__cell--title"},  connection.title)
+
+                );
+    },
+    /*
+      <div className={ "o-list__cell " + end_point_class }>{ end_point }</div>
+      <div className="o-list__cell a-flex-item-fill
+          c-connections__cell--verify">
+          { link }
+      </div>
+    */
+
+
+    getOutboundConnectionRow: function( connection ){
+        return  React.createElement("div", {className: "o-list__row", 
+                    onClick:  this.openConnection.bind( this , connection.guid) }, 
+                    React.createElement("div", {className: " o-list__cell a-flex-item-fill" + ' ' +
+                        "c-connections__cell--title"},  connection.title)
+                );
+    },
+    
+    
+    render: function() {
+      
+      
+        var inbound = RedoxModel.app.focused_organization().inbound_connections();
+
+        var inbound_connections_html = [];
+        for ( var i=0; i<inbound.length; i++ ) {
+            inbound_connections_html.push( this.getInboundConnectionRow( inbound[i] ) );
+        }
+
+        var outbound = RedoxModel.app.focused_organization().outbound_connections();
+
+        var outbound_connections_html = [];
+        for ( var i=0; i<outbound.length; i++ ) {
+            outbound_connections_html.push( this.getOutboundConnectionRow( outbound[i] ) );
+        }
+        
+        
+        
+
+        return  React.createElement("div", {className: "c-devTools o-contentSimple"}, 
+                  React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
+                                        
+                    
+                        
+                        
+                    React.createElement("div", {className: "c-devTools__content a-align-items-flex-start"}, 
+                    
+                      React.createElement("div", {className: "a-width-col-3-quarter"}, 
+
+                        React.createElement("div", {className: "o-contentHeader a-height-auto a-align-items-flex-end"}, 
+                          React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
+                            "Connection Dev-Tools"
+                          )
+                        ), 
+                      
+                        React.createElement("p", null, "The connection dev-tools allow you to mimic the requests to and from your application by quickly creating and sending sample JSON from a single page."), 
+                        React.createElement("p", null, "Start by selection one of the connections to the right and it will guide you through the process of generating a data object to send or receive.")
+                        
+                      ), 
+                      
+                      
+                      React.createElement("div", {className: "a-width-col-three-quarters"}), 
+                      
+                      React.createElement("div", {className: "a-width-col-3"}, 
+                      
+                          React.createElement("div", {className: "c-connections"}, 
+                              React.createElement("div", {className: ""}, 
+                                  React.createElement("div", null, 
+                                      React.createElement("div", {className: "c-connections__groupHeader"}, 
+                                          React.createElement("div", {className: "o-icon__outbound"}
+                                          ), 
+                                          React.createElement("h1", null, 
+                                              "Outbound"
+                                          )
+                                      ), 
+                                      React.createElement("div", {className: "o-list o-list--overview"}, 
+                                           outbound_connections_html 
+                                      ), 
+          
+                                      React.createElement("div", {className: "c-connections__groupHeader"}, 
+                                          React.createElement("div", {className: "o-icon__inbound"}
+                                          ), 
+                                          React.createElement("h1", null, 
+                                              "Inbound"
+                                          )
+                                      ), 
+                                      React.createElement("div", {className: "o-list o-list--overview"}, 
+                                           inbound_connections_html 
+                                      )
+          
+                                  )
+                              )
+                          )
+                            
+                      )
+                    
+                    )
+                    
+                    
+                  )
+                );
     }
 
 });
-
 
 
 
