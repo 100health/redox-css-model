@@ -61,6 +61,9 @@ var Redox = React.createClass({
             case "test" :
                 page = <OverviewOrig />;
                 break;
+            case "dev_tools" :
+                page = <DevTools />;
+                break;
             default :
                 page = <div>{ RS.route.section } | { RS.route.page }</div>;
                 break;

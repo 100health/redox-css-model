@@ -172,6 +172,43 @@ var Connections = React.createClass({displayName: "Connections",
 
 
 
+var DevTools = React.createClass({displayName: "DevTools",
+
+    /*componentWillMount: function() {
+        var me = this;
+        RouteState.addDiffListeners(
+    		["org_page"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "Profile"
+    	);
+    },
+
+    componentWillUnmount: function(){
+        RouteState.removeDiffListenersViaClusterId( "Profile" );
+    },*/
+
+    render: function() {
+
+        return  React.createElement("div", {className: "c-devTools"}, 
+
+            React.createElement("div", {className: "c-devTools__content"}, 
+                React.createElement("div", {className: "a-flex-item-fill a-border"}, "2"), 
+                React.createElement("div", {className: "a-width-col-4 a-border"}, "d")
+            )
+
+        );
+    }
+
+});
+
+
+
+
+
+
 var GalleryNav = React.createClass({displayName: "GalleryNav",
 
 
@@ -1439,6 +1476,9 @@ var Redox = React.createClass({displayName: "Redox",
                 break;
             case "test" :
                 page = React.createElement(OverviewOrig, null);
+                break;
+            case "dev_tools" :
+                page = React.createElement(DevTools, null);
                 break;
             default :
                 page = React.createElement("div", null,  RS.route.section, " | ",  RS.route.page);

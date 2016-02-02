@@ -18,8 +18,8 @@ module.exports = {
                                 );
 
             this.orig_main_pages =  pd.generateArray(
-                                        "orig_main_page" ,
-                                        pd.config.orig_main_page.data.length
+                                        "main_page" ,
+                                        pd.config.main_page.data.length
                                     );
 
             this.organization_pages
@@ -59,7 +59,7 @@ module.exports = {
 
             {name:"Organization",icon:false,link:"organization",secondary_page:"profile"},
             {name:"Gallery",icon:false,link:"gallery",secondary_page:""},
-            {name:"Documentation",icon:false,link:"docs",secondary_page:""},
+            {name:"Docs",icon:false,link:"docs",secondary_page:""},
             {name:"Log In",icon:false,link:"login",secondary_page:""},
             {name:"Sign Up",icon:false,link:"sign_up",secondary_page:""}
         ]

@@ -25,6 +25,18 @@
 
 				RouteState.listenToHash();
 				RS = RouteState;
+
+				if (
+					!RS.route.section ||
+					RS.route.section == ""
+				){
+					RS.replace({
+						section:"organization",
+						page:"profile"
+					})
+				}
+
+
 				React.render(
 					React.createElement(
 						Redox,{}
