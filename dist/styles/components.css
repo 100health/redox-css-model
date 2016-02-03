@@ -1405,6 +1405,33 @@ a {
   flex: 1;
   justify-content: flex-start; }
 
+.c-devToolsInbound__content {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-items: flex-start;
+  height: 100%; }
+
+.c-devToolsInbound__leftContainer {
+  width: 27.0833225vw;
+  height: 100%; }
+
+.c-devToolsInbound__leftContainer:first-child {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+
+.c-devToolsInbound__rightContainer {
+  flex: 1;
+  height: 100%; }
+
+.c-devToolsInbound__rightContainer:first-child {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+
 .c-logs {
   /* -ctag-example: <div class="c-logs o-contentSimple o-contentSimple--wfooter"><div class="o-contentSimple__contentContainer"><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Logs</div><div class="o-contentHeader__navContainer c-logs__navContainer"><div class="c-logs__searchIcon"><i class="fa fa-search"></i></div><form class="o-form"><input class="c-logs__search"></form></div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__inbound"></div></div><div class="o-list__cell c-logs__cell--title">Neck Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-search-plus" title="Patient Search"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__fail"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__query"></div></div><div class="o-list__cell c-logs__cell--title">Spring Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-street-view" title="Patient Admin"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__success"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div></div></div><div class="o-contentSimple__footerContainer"><div class="c-logs__footer"><div class="o-list o-list--footer"><div class="o-list__row a-interactive"><div class="o-list__cell c-logs__cell--summaryType">Type</div><div class="o-list__cell a-flex-item-fill c-logs__cell--summaryTitle ">Message</div><div class="o-list__cell c-logs__cell--summaryModel">Data Model</div><div class="o-list__cell c-logs__cell--summaryStatus">Status</div><div class="o-list__cell c-logs__cell--summaryEnvironment">Environment</div><div class="o-list__cell c-logs__cell--summaryTime">Date/Time</div></div></div><div class="c-logs__filters"><div class="c-logs__closeFilters"></div><div class="o-list"><div class="o-list__row"><div class="o-list__cell c-logs__cell--filterType c-logs__filter"><div class="o-icon__inbound"></div><span>Inbound</span></div><div class="o-list__cell c-logs__cell--filterModel"><div class="c-logs__filter fa fa-2x fa-plus-circle" title="Clinical Survey"></div><div class="c-logs__filter fa fa-2x fa-heartbeat" title="Device"></div><div class="c-logs__filter fa fa-2x fa-money" title="Financial"></div><div class="c-logs__filter fa fa-2x fa-bar-chart" title="Flowsheet"></div><div class="c-logs__filter fa fa-2x fa-paperclip" title="Media"></div><div class="c-logs__filter fa fa-2x fa-list-alt" title="Orders"></div></div><div class="o-list__cell c-logs__cell--filterStatus c-logs__filter"><div class="o-icon__success"></div><span>Success</span></div><div class="o-list__cell c-logs__cell--filterEnvironment c-logs__filter">Production</div><div class="o-list__cell c-logs__cell--filterTime"><input></div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--filterType c-logs__filter"><div class="o-icon__outbound"></div><span>Outbound</span></div><div class="o-list__cell c-logs__cell--filterModel"><div class="c-logs__filter fa fa-2x fa-street-view" title="Patient Admin"></div><div class="c-logs__filter fa fa-2x fa-search-plus" title="Patient Search"></div><div class="c-logs__filter fa fa-2x fa-flask" title="Results"></div><div class="c-logs__filter fa fa-2x fa-calendar" title="Scheduling"></div><div class="c-logs__filter fa fa-2x fa-eyedropper" title="Vaccine"></div></div><div class="o-list__cell c-logs__cell--filterStatus c-logs__filter"><div class="o-icon__fail"></div><span>Fail</span></div><div class="o-list__cell c-logs__cell--filterEnvironment c-logs__filter">Stage</div><div class="o-list__cell c-logs__cell--filterTime"><input></div></div></div></div></div></div></div>;*/
   /* -ctag-status: prod;*/ }

@@ -20792,38 +20792,71 @@ var DevTools = React.createClass({displayName: "DevTools",
                             ), 
 
                             React.createElement("div", {className: "c-devTools__connections"}, 
-                                  React.createElement("div", {className: "c-devTools__groupHeader"}, 
-                                      React.createElement("div", {className: "o-icon__outbound"}
-                                      ), 
-                                      React.createElement("h1", null, 
-                                          "Outbound"
-                                      )
-                                  ), 
-                                  React.createElement("div", {className: "o-list o-list--overview"}, 
-                                       outbound_connections_html 
-                                  ), 
-
-                                  React.createElement("div", {className: "c-devTools__groupHeader"}, 
-                                      React.createElement("div", {className: "o-icon__inbound"}
-                                      ), 
-                                      React.createElement("h1", null, 
-                                          "Inbound"
-                                      )
-                                  ), 
-
-                                  React.createElement("div", {className: "o-list o-list--overview"}, 
-                                       inbound_connections_html 
-                                  )
+                                React.createElement("div", {className: "c-devTools__groupHeader"}, 
+                                    React.createElement("div", {className: "o-icon__outbound"}
+                                    ), 
+                                    React.createElement("h1", null, 
+                                    "Outbound"
+                                    )
+                                ), 
+                                React.createElement("div", {className: "o-list o-list--overview"}, 
+                                 outbound_connections_html 
+                                ), 
+                                
+                                React.createElement("div", {className: "c-devTools__groupHeader"}, 
+                                    React.createElement("div", {className: "o-icon__inbound"}
+                                    ), 
+                                    React.createElement("h1", null, 
+                                    "Inbound"
+                                    )
+                                ), 
+                                
+                                React.createElement("div", {className: "o-list o-list--overview"}, 
+                                     inbound_connections_html 
+                                )
                             )
-
+                                
                         )
-
+                        
                     )
                 );
-    },
+    },  
 
     getInboundContent : function () {
-        return React.createElement("div", null, "inbound");
+        return  React.createElement("div", {className: "c-devToolsInbound o-contentSimple"}, 
+
+
+                        React.createElement("div", {className: "c-devToolsInbound__content"}, 
+                            
+                            React.createElement("div", {className: "c-devToolsInbound__leftContainer"}, 
+                                React.createElement("div", {className: "a-height-100 a-flex-v"}, 
+                                    React.createElement("div", {className: "a-flex-item-fill"}, 
+                                        "//"
+                                    ), 
+                                    React.createElement("div", {className: "a-height-row-2"}, 
+                                        "//"
+                                    )
+                                )
+                            ), 
+                            
+                            React.createElement("div", {className: "c-devToolsInbound__rightContainer"}, 
+                                React.createElement("div", {className: "a-height-100 a-flex-v"}, 
+                                    React.createElement("div", {className: "a-height-row-2-quarter"}, 
+                                        "//"
+                                    ), 
+                                    React.createElement("div", {className: "a-flex-item-fill"}, 
+                                        "//"
+                                    )
+                                )
+                            )
+                            
+                            
+                        )
+                        
+                        
+                )
+        
+        ;
     },
 
 
