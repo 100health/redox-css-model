@@ -1415,23 +1415,33 @@ a {
 
 .c-devToolsInbound__leftContainer {
   width: 27.0833225vw;
-  height: 100%; }
+  height: 100%;
+  padding: 22px; }
+  .c-devToolsInbound__leftContainer button {
+    float: right !important; }
 
-.c-devToolsInbound__leftContainer:first-child {
+.c-devToolsInbound__leftContainer > div {
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center; }
+  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start; }
 
 .c-devToolsInbound__rightContainer {
   flex: 1;
   height: 100%; }
 
-.c-devToolsInbound__rightContainer:first-child {
+.c-devToolsInbound__rightContainer > div {
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center; }
+  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start; }
+
+.c-devToolsInbound .o-form {
+  margin-top: 0; }
 
 .o-devToolsOutput {
   width: 100%;

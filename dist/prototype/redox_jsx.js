@@ -382,22 +382,74 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
     },
 
     render : function () {
-        return React.createElement("div", {className: "c-devToolsInbound o-contentSimple"}, 
-            React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
-                React.createElement("div", {className: "c-devToolsInbound__content"}, 
-                    React.createElement("div", {className: "c-devToolsInbound__leftContainer"}, 
-                        React.createElement("div", null, 
-                            "//"
-                        )
-                    ), 
-                    React.createElement("div", {className: "c-devToolsInbound__rightContainer"}, 
-                        React.createElement("div", {onClick:  function() { RS.merge({dev_tools_state:""}) }}, 
-                            "//"
+        return  React.createElement("div", {className: "c-devToolsInbound o-contentSimple"}, 
+                    React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
+                        React.createElement("div", {className: "c-devToolsInbound__content"}, 
+                            React.createElement("div", {className: "c-devToolsInbound__leftContainer"}, 
+                            
+                                React.createElement("div", null, 
+                                    React.createElement("div", {className: "a-flex-item-fill a-width-100"}, 
+                                    
+                                        React.createElement("div", {className: "o-form o-formLayout__1-column"}, 
+                                            React.createElement("div", {className: "o-form__section"}, 
+                                            
+                                                React.createElement("div", {className: "o-form__element"}, 
+                                                    React.createElement("label", null, "Connection"), 
+                                                    React.createElement("select", null, 
+                                                        React.createElement("option", {value: "A"}, "My Inbound Service"), 
+                                                        React.createElement("option", {value: "B"}, "Other Service"), 
+                                                        React.createElement("option", {value: "C"}, "Other Service")
+                                                    )
+                                                ), 
+                                                
+                                                React.createElement("div", {className: "o-form__element"}, 
+                                                    React.createElement("label", null, "Data Model"), 
+                                                    React.createElement("select", null, 
+                                                        React.createElement("option", {value: "A"}, "Financial"), 
+                                                        React.createElement("option", {value: "B"}, "Other"), 
+                                                        React.createElement("option", {value: "C"}, "Other")
+                                                    )
+                                                ), 
+                                                
+                                                React.createElement("div", {className: "o-form__element"}, 
+                                                    React.createElement("label", null, "Event Type"), 
+                                                    React.createElement("select", null, 
+                                                        React.createElement("option", {value: "A"}, "Type"), 
+                                                        React.createElement("option", {value: "B"}, "Type"), 
+                                                        React.createElement("option", {value: "C"}, "Type")
+                                                    )
+                                                )
+                                                
+                                            )
+                                        )
+                                        
+                                    ), 
+                                    
+                                    React.createElement("div", {className: "a-height-row-2-quarter a-width-100"}, 
+                                        React.createElement("div", {className: "o-form"}, 
+                                            React.createElement("button", {type: "button"}, "Send")
+                                        )
+                                    )
+                                )
+                                
+                            ), 
+                            
+                            React.createElement("div", {className: "c-devToolsInbound__rightContainer"}, 
+                                React.createElement("div", null, 
+                                    React.createElement("div", {className: "a-height-row-2-quarter", 
+                                    onClick:  function() { RS.merge({dev_tools_state:""}) }}, 
+                                        React.createElement("span", null, "SET HEIGHT")
+                                    ), 
+                                    
+                                    React.createElement("div", {className: "a-flex-item-fill"}, 
+                                        React.createElement("span", null, "FILL")
+                                    )
+                                )
+                            )
+                            
                         )
                     )
-                )
-            )
-        );
+                );
     },
 
 
