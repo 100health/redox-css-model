@@ -20826,7 +20826,44 @@ var DevTools = React.createClass({displayName: "DevTools",
                 );
     },
 
-    getInboundContent : function () {
+
+    render: function() {
+
+        var content_html = this.getLandingPageContent();
+
+        if ( RS.route.dev_tools_state == "connection" ) {
+            content_html = React.createElement(DevToolsInbound, null);
+        }
+
+        return content_html;
+
+    }
+
+});
+
+
+
+
+
+var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
+
+    componentWillMount: function() {
+        /*var me = this;
+        RouteState.addDiffListeners(
+    		["dev_tools_state"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "DevToolsInbound"
+    	);*/
+    },
+
+    componentWillUnmount: function(){
+        //RouteState.removeDiffListenersViaClusterId( "DevToolsInbound" );
+    },
+
+    render : function () {
         return React.createElement("div", {className: "c-devToolsInbound o-contentSimple"}, 
             React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
                 React.createElement("div", {className: "c-devToolsInbound__content"}, 
@@ -20834,10 +20871,9 @@ var DevTools = React.createClass({displayName: "DevTools",
                         React.createElement("div", null, 
                             "//"
                         )
-
                     ), 
                     React.createElement("div", {className: "c-devToolsInbound__rightContainer"}, 
-                        React.createElement("div", null, 
+                        React.createElement("div", {onClick:  function() { RS.merge({dev_tools_state:""}) }}, 
                             "//"
                         )
                     )
@@ -20846,18 +20882,6 @@ var DevTools = React.createClass({displayName: "DevTools",
         );
     },
 
-
-    render: function() {
-
-        var content_html = this.getLandingPageContent();
-
-        if ( RS.route.dev_tools_state == "connection" ) {
-            content_html = this.getInboundContent();
-        }
-
-        return content_html;
-
-    }
 
 });
 
