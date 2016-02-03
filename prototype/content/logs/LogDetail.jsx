@@ -35,7 +35,7 @@ var LogDetail = React.createClass({
 
         var log = RedoxModel.get( RS.route.log_id );
 
-        return  <div className="o-contentSimple o-contentSimple--skinny c-logDetail">
+        return  <div className="o-contentSimple c-logDetail">
                     <div className="o-contentSimple__closeDetail"
                         onClick={ this.closeLog }></div>
                     <div className="o-contentSimple__contentContainer">
@@ -47,7 +47,7 @@ var LogDetail = React.createClass({
                                 { log.success }
                             </div>
                         </div> */}
-                        <div className="p-logs__logDetails"></div>
+                        <div className="c-redox__contentPadded p-logs__logDetails"></div>
 
                     </div>
                 </div>;

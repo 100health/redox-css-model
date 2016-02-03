@@ -6,12 +6,10 @@ var Redox = React.createClass({
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["section","page","detail_page","modal"],
+    		["section","page","detail_page","modal","dev_tools_state"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
-
-                me.updateRoute();
     		},
             "Redox"
     	);
@@ -22,17 +20,6 @@ var Redox = React.createClass({
     },
 
     componentDidMount: function(){
-        this.updateRoute();
-    },
-
-    updateRoute: function () {
-        if ( RS.route.detail_page && RS.route.detail_page != "" ) {
-            $(".c-redox").addClass("c-redox--tertiary");
-            $(".c-secondaryNav").addClass("c-secondaryNav--tertiary");
-        }else{
-            $(".c-redox").removeClass("c-redox--tertiary");
-            $(".c-secondaryNav").removeClass("c-secondaryNav--tertiary");
-        }
     },
 
     closeModal: function(){
@@ -45,8 +32,16 @@ var Redox = React.createClass({
 
         var show_footer = true;
 
+        var redox_xcls = "";
+        var secondaryNav_xcls = "";
+
+        if ( RS.route.detail_page && RS.route.detail_page != "" ) {
+            redox_xcls += " c-redox--tertiary ";
+            secondaryNav_xcls += " c-secondaryNav--tertiary ";
+        }
+
         var page;
-        var content_cls = "c-redox__contentContainer--sidenav";
+        var content_cls = "";
         switch ( RS.route.page ) {
             case "connections" :
                 page = <Connections />;
@@ -63,6 +58,12 @@ var Redox = React.createClass({
                 break;
             case "dev_tools" :
                 page = <DevTools />;
+
+                // should be abstracted better long term...too specific
+                if ( RS.route.dev_tools_state && RS.route.dev_tools_state != "" ) {
+                    redox_xcls += " c-redox--iconNav ";
+                    secondaryNav_xcls += " c-secondaryNav--iconNav ";
+                }
                 break;
             default :
                 page = <div>{ RS.route.section } | { RS.route.page }</div>;
@@ -76,7 +77,8 @@ var Redox = React.createClass({
             default:
         }
 
-        var secondaryNav = <SecondaryNav />;
+
+        var secondaryNav = <SecondaryNav extra_classes={ secondaryNav_xcls } />;
         switch ( RS.route.section ) {
             case "gallery" :
                 secondaryNav = <GalleryNav />;
@@ -96,8 +98,9 @@ var Redox = React.createClass({
                 break;
         }
 
-        return  <div className={ "c-redox " +
-                        (( show_footer ) ? "" : "c-redox--nofooter" )}>
+
+        return  <div className={ "c-redox " + redox_xcls +
+                        (( show_footer ) ? "" : " c-redox--nofooter " )}>
                     <div className={
                             'c-redox__mainNavContainer ' +
                             ( ( RS.route.detail_page

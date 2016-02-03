@@ -41,7 +41,7 @@ var Profile = React.createClass({
 
         return  <div className="c-profile o-contentSimple">
                     <div className="o-contentSimple__contentContainer">
-                        <div>
+                        <div className="c-redox__contentPadded">
                             <div className="o-contentHeader">
                                 <div className="o-contentHeader__titleContainer">
                                     Profile

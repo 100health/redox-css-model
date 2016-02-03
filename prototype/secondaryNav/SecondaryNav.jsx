@@ -59,7 +59,7 @@ var SecondaryNav = React.createClass({
                                     && page.link == "profile"
                                 )
                             )
-                                ?  "c-secondaryNav__list__item--selected" : ""
+                                ?  " c-secondaryNav__list__item--selected " : ""
                         )
                     }
                     onClick={ this.changePage.bind( this , page.link ) }>
@@ -104,8 +104,8 @@ var SecondaryNav = React.createClass({
         // </div>
 
         */
-
-        return  <div className="c-secondaryNav">
+        console.log( this.props );
+        return  <div className={ "c-secondaryNav " + this.props.extra_classes }>
                     <div className="c-secondaryNav__list"
                         style={ {overflow:"hidden"} }>
                         { nav_items }

@@ -162,7 +162,7 @@ var Connections = React.createClass({displayName: "Connections",
 
         return React.createElement("div", {className: "c-connections o-contentSimple"}, 
                     React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
-                        React.createElement("div", null, 
+                        React.createElement("div", {className: "c-redox__contentPadded"}, 
                             React.createElement("div", {className: "o-contentHeader"}, 
                                 React.createElement("div", {className: "o-contentHeader__titleContainer", 
                                     onClick:  this.alertExample}, 
@@ -445,7 +445,7 @@ var LogDetail = React.createClass({displayName: "LogDetail",
 
         var log = RedoxModel.get( RS.route.log_id );
 
-        return  React.createElement("div", {className: "o-contentSimple o-contentSimple--skinny c-logDetail"}, 
+        return  React.createElement("div", {className: "o-contentSimple c-logDetail"}, 
                     React.createElement("div", {className: "o-contentSimple__closeDetail", 
                         onClick:  this.closeLog}), 
                     React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
@@ -457,7 +457,7 @@ var LogDetail = React.createClass({displayName: "LogDetail",
                                 { log.success }
                             </div>
                         </div> */
-                        React.createElement("div", {className: "p-logs__logDetails"})
+                        React.createElement("div", {className: "c-redox__contentPadded p-logs__logDetails"})
 
                     )
                 );
@@ -986,7 +986,7 @@ var Profile = React.createClass({displayName: "Profile",
 
         return  React.createElement("div", {className: "c-profile o-contentSimple"}, 
                     React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
-                        React.createElement("div", null, 
+                        React.createElement("div", {className: "c-redox__contentPadded"}, 
                             React.createElement("div", {className: "o-contentHeader"}, 
                                 React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
                                     "Profile"
@@ -1571,12 +1571,10 @@ var Redox = React.createClass({displayName: "Redox",
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["section","page","detail_page","modal"],
+    		["section","page","detail_page","modal","dev_tools_state"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
-
-                me.updateRoute();
     		},
             "Redox"
     	);
@@ -1587,17 +1585,6 @@ var Redox = React.createClass({displayName: "Redox",
     },
 
     componentDidMount: function(){
-        this.updateRoute();
-    },
-
-    updateRoute: function () {
-        if ( RS.route.detail_page && RS.route.detail_page != "" ) {
-            $(".c-redox").addClass("c-redox--tertiary");
-            $(".c-secondaryNav").addClass("c-secondaryNav--tertiary");
-        }else{
-            $(".c-redox").removeClass("c-redox--tertiary");
-            $(".c-secondaryNav").removeClass("c-secondaryNav--tertiary");
-        }
     },
 
     closeModal: function(){
@@ -1610,8 +1597,16 @@ var Redox = React.createClass({displayName: "Redox",
 
         var show_footer = true;
 
+        var redox_xcls = "";
+        var secondaryNav_xcls = "";
+
+        if ( RS.route.detail_page && RS.route.detail_page != "" ) {
+            redox_xcls += " c-redox--tertiary ";
+            secondaryNav_xcls += " c-secondaryNav--tertiary ";
+        }
+
         var page;
-        var content_cls = "c-redox__contentContainer--sidenav";
+        var content_cls = "";
         switch ( RS.route.page ) {
             case "connections" :
                 page = React.createElement(Connections, null);
@@ -1628,6 +1623,12 @@ var Redox = React.createClass({displayName: "Redox",
                 break;
             case "dev_tools" :
                 page = React.createElement(DevTools, null);
+
+                // should be abstracted better long term...too specific
+                if ( RS.route.dev_tools_state && RS.route.dev_tools_state != "" ) {
+                    redox_xcls += " c-redox--iconNav ";
+                    secondaryNav_xcls += " c-secondaryNav--iconNav ";
+                }
                 break;
             default :
                 page = React.createElement("div", null,  RS.route.section, " | ",  RS.route.page);
@@ -1641,7 +1642,8 @@ var Redox = React.createClass({displayName: "Redox",
             default:
         }
 
-        var secondaryNav = React.createElement(SecondaryNav, null);
+
+        var secondaryNav = React.createElement(SecondaryNav, {extra_classes:  secondaryNav_xcls });
         switch ( RS.route.section ) {
             case "gallery" :
                 secondaryNav = React.createElement(GalleryNav, null);
@@ -1661,8 +1663,9 @@ var Redox = React.createClass({displayName: "Redox",
                 break;
         }
 
-        return  React.createElement("div", {className:  "c-redox " +
-                        (( show_footer ) ? "" : "c-redox--nofooter")}, 
+
+        return  React.createElement("div", {className:  "c-redox " + redox_xcls +
+                        (( show_footer ) ? "" : " c-redox--nofooter ")}, 
                     React.createElement("div", {className: 
                             'c-redox__mainNavContainer ' +
                             ( ( RS.route.detail_page
@@ -1763,7 +1766,7 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
                                     && page.link == "profile"
                                 )
                             )
-                                ?  "c-secondaryNav__list__item--selected" : ""
+                                ?  " c-secondaryNav__list__item--selected " : ""
                         ), 
                     
                     onClick:  this.changePage.bind( this , page.link) }, 
@@ -1808,8 +1811,8 @@ var SecondaryNav = React.createClass({displayName: "SecondaryNav",
         // </div>
 
         */
-
-        return  React.createElement("div", {className: "c-secondaryNav"}, 
+        console.log( this.props );
+        return  React.createElement("div", {className:  "c-secondaryNav " + this.props.extra_classes}, 
                     React.createElement("div", {className: "c-secondaryNav__list", 
                         style:  {overflow:"hidden"} }, 
                          nav_items 
