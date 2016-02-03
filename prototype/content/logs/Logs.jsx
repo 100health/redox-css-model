@@ -133,31 +133,33 @@ var Logs = React.createClass({
 
         return  <div className="c-logs o-contentSimple o-contentSimple--wfooter">
                     <div className="o-contentSimple__contentContainer">
-                        <div className="o-contentHeader">
-                            <div className="o-contentHeader__titleContainer"
-                                onClick={ alertHTML.bind(
-                                        this, ".c-logs",
-                                        ['.o-list__row:nth-of-type( n+3 )']
-                                ) }>
-                                Logs
-                            </div>
-                            <div className="
-                                    o-contentHeader__navContainer
-                                    c-logs__navContainer">
-                                <div className="c-logs__searchIcon">
-                                    <i className="fa fa-search"></i>
+                        <div className="c-redox__contentPadded">
+                            <div className="o-contentHeader">
+                                <div className="o-contentHeader__titleContainer"
+                                    onClick={ alertHTML.bind(
+                                            this, ".c-logs",
+                                            ['.o-list__row:nth-of-type( n+3 )']
+                                    ) }>
+                                    Logs
                                 </div>
-                                <form className="o-form">
-                                    <input className="c-logs__search" />
-                                </form>
+                                <div className="
+                                        o-contentHeader__navContainer
+                                        c-logs__navContainer">
+                                    <div className="c-logs__searchIcon">
+                                        <i className="fa fa-search"></i>
+                                    </div>
+                                    <form className="o-form">
+                                        <input className="c-logs__search" />
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                        <div className="o-list o-list--overview">
-                            { log_rows_html }
+                            <div className="o-list o-list--overview">
+                                { log_rows_html }
+                            </div>
                         </div>
                     </div>
                     <div className="o-contentSimple__footerContainer">
-                        <div className="c-logs__footer">
+                        <div className="c-logs__footer c-redox__contentPadded">
                             <div className="
                                 o-list
                                 o-list--footer">

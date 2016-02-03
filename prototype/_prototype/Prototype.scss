@@ -1,0 +1,36 @@
+
+
+@import "../../dist/csscore/scss/_core_mixins.scss";
+
+body,html {
+    margin: 0px; padding: 0px;
+    overflow: hidden;
+    @include a-background-grey-4;
+}
+
+
+.c-prototype {
+
+    &__info {
+        @include a-position-absolute;
+        @include a-top-left;
+
+        width: 50px; height: 50px;
+        @include a-interactive;
+        @include a-hover-background-grey-5;
+
+        z-index: 100;
+    }
+
+    &__iframe {
+        z-index: 200;
+        position: absolute;
+        top: 2%;
+        left: 50%; margin-left: -605px;
+        width: 1211px;
+        border: none;
+        flex: 1;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    }
+
+}

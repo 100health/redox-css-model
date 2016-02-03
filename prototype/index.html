@@ -2,56 +2,45 @@
 <html lang="en">
 	<head>
 		<title>Prototype</title>
+
         <script src='prototype/redox.js'></script>
-        <script>
+		<link href='styles/prototype.css' type='text/css' rel='stylesheet'>
+
+		<script>
 			$(window).ready(function () {
 
 				RouteState.config({
 					section:{
 						weight:10,
-						description:"Main nav's state"
 					},
-					page:{
-						weight:20,
-						dependency:"section"
-					},
-						detail_page:{
-							weight:21,
-							dependency:"page"
+						page:{
+							weight:20,
+							dependency:"section"
 						},
-						log_id:{
-							weight:500,
-							dependency:"detail_page"
-						}
+							detail_page:{
+								weight:21,
+								dependency:"page"
+							},
+								log_id:{
+									weight:500,
+									dependency:"detail_page"
+								}
 				});
 
                 RouteState.listenToHash();// allows route to show here...
+
+				React.render(
+					React.createElement(
+						Prototype,{}
+					),
+					document.body
+				);
             });
+
         </script>
-
-        <style>
-
-            body,html {
-                margin: 0px; padding: 0px;
-                overflow: hidden;
-                background-color: #777;
-            }
-
-            iframe {
-                position: absolute;
-                top: 2%;
-                left: 50%; margin-left: -605px;
-                width: 1211px;
-                border: none;
-                flex: 1;
-				box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-            }
-        </style>
 	</head>
 	<body>
-		<script>
-			document.write( '<iframe src="prototype.html?'+Math.random()+'" height="96%"></iframe>' );
-		</script>
+
 
     </body>
 </html>

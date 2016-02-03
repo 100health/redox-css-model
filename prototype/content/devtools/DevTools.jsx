@@ -1,21 +1,23 @@
+
+
 var DevTools = React.createClass({
 
-    /*componentWillMount: function() {
+    componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["org_page"],
+    		["dev_tools_state"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
     		},
-            "Profile"
+            "DevTools"
     	);
     },
 
     componentWillUnmount: function(){
-        RouteState.removeDiffListenersViaClusterId( "Profile" );
-    },*/
-    
+        RouteState.removeDiffListenersViaClusterId( "DevTools" );
+    },
+
     alertExample: function () {
         alertExample(
             this.render(),
@@ -25,56 +27,34 @@ var DevTools = React.createClass({
 
     openConnection: function ( guid ) {
         RS.merge({
-            modal:"connection",
+            dev_tools_state:"connection",
             conn_id:guid
         })
     },
 
 
     getInboundConnectionRow: function( connection ){
-
-        var link = "", end_point, end_point_class;
-        if ( connection.verified ) {
-            link = <a href="#" onClick={ this.openConnection.bind( this , connection.guid ) }>Edit</a>;
-            end_point = connection.end_point;
-            end_point_class = "c-connections__cell--endPoint";
-        }
-        /*
-        else {
-            link = <a href="#" onClick={ function() { return false; } }>Verify</a>;
-            end_point = "End point verification needed!";
-            end_point_class = "c-connections__cell--endPointUnverified";
-        }
-        */
-
         return  <div className="o-list__row"
                     onClick={ this.openConnection.bind( this , connection.guid ) }>
-                    <div className="o-list__cell
-                        c-connections__cell--title">{ connection.title }</div>
+                    <div className="o-list__cell c-devTools__cell--title">
+                        { connection.title }
+                    </div>
 
                 </div>;
     },
-    /*
-      <div className={ "o-list__cell " + end_point_class }>{ end_point }</div>
-      <div className="o-list__cell a-flex-item-fill
-          c-connections__cell--verify">
-          { link }
-      </div>
-    */
 
 
     getOutboundConnectionRow: function( connection ){
         return  <div className="o-list__row"
                     onClick={ this.openConnection.bind( this , connection.guid ) }>
-                    <div className=" o-list__cell a-flex-item-fill
-                        c-connections__cell--title">{ connection.title }</div>
+                    <div className="o-list__cell c-devTools__cell--title">
+                        { connection.title }
+                    </div>
                 </div>;
     },
-    
-    
-    render: function() {
-      
-      
+
+
+    getLandingPageContent : function () {
         var inbound = RedoxModel.app.focused_organization().inbound_connections();
 
         var inbound_connections_html = [];
@@ -88,72 +68,74 @@ var DevTools = React.createClass({
         for ( var i=0; i<outbound.length; i++ ) {
             outbound_connections_html.push( this.getOutboundConnectionRow( outbound[i] ) );
         }
-        
-        
-        
+
 
         return  <div className="c-devTools o-contentSimple">
-                  <div className="o-contentSimple__contentContainer">
-                                        
-                    
-                        
-                        
-                    <div className="c-devTools__content a-align-items-flex-start">
-                    
-                      <div className="a-width-col-3-quarter">
+                    <div className="o-contentSimple__contentContainer">
 
-                        <div className="o-contentHeader a-height-auto a-align-items-flex-end">
-                          <div className="o-contentHeader__titleContainer">
-                            Connection Dev-Tools
-                          </div>
-                        </div>
-                      
-                        <p>The connection dev-tools allow you to mimic the requests to and from your application by quickly creating and sending sample JSON from a single page.</p>
-                        <p>Start by selection one of the connections to the right and it will guide you through the process of generating a data object to send or receive.</p>
-                        
-                      </div>
-                      
-                      
-                      <div className="a-width-col-three-quarters"></div>
-                      
-                      <div className="a-width-col-3">
-                      
-                          <div className="c-connections">
-                              <div className="">
-                                  <div>
-                                      <div className="c-connections__groupHeader">
-                                          <div className="o-icon__outbound">
-                                          </div>
-                                          <h1>
-                                              Outbound
-                                          </h1>
+                        <div className="c-devTools__content">
+
+                            <div className="c-devTools__overviewText">
+                                <div className="o-contentHeader a-height-auto">
+                                    <div className="o-contentHeader__titleContainer">
+                                        Connection Dev-Tools
+                                    </div>
+                                </div>
+
+                                <p>The connection dev-tools allow you to mimic the requests to
+                                    and from your application by quickly creating and sending
+                                    sample JSON from a single page.</p>
+                                <p>Start by selection one of the connections to the right and
+                                    it will guide you through the process of generating a data
+                                    object to send or receive.</p>
+                            </div>
+
+                            <div className="c-devTools__connections">
+                                  <div className="c-devTools__groupHeader">
+                                      <div className="o-icon__outbound">
                                       </div>
-                                      <div className="o-list o-list--overview">
-                                          { outbound_connections_html }
-                                      </div>
-          
-                                      <div className="c-connections__groupHeader">
-                                          <div className="o-icon__inbound">
-                                          </div>
-                                          <h1>
-                                              Inbound
-                                          </h1>
-                                      </div>
-                                      <div className="o-list o-list--overview">
-                                          { inbound_connections_html }
-                                      </div>
-          
+                                      <h1>
+                                          Outbound
+                                      </h1>
                                   </div>
-                              </div>
-                          </div>
-                            
-                      </div>
-                    
+                                  <div className="o-list o-list--overview">
+                                      { outbound_connections_html }
+                                  </div>
+
+                                  <div className="c-devTools__groupHeader">
+                                      <div className="o-icon__inbound">
+                                      </div>
+                                      <h1>
+                                          Inbound
+                                      </h1>
+                                  </div>
+
+                                  <div className="o-list o-list--overview">
+                                      { inbound_connections_html }
+                                  </div>
+                            </div>
+
+                        </div>
+
                     </div>
-                    
-                    
-                  </div>
                 </div>;
+    },
+
+    getInboundContent : function () {
+        return <div>inbound</div>;
+    },
+
+
+    render: function() {
+
+        var content_html = this.getLandingPageContent();
+
+        if ( RS.route.dev_tools_state == "connection" ) {
+            content_html = this.getInboundContent();
+        }
+
+        return content_html;
+
     }
 
 });

@@ -93,25 +93,11 @@ div {
                 </div>
             </div>;*/
     width: 100%;
-    padding-left: 8.33333vw; }
-    @media (max-width: 768px) {
-      .o-contentSimple__contentContainer, .o-contentSimple__footerContainer {
-        padding-left: 4.166665vw !important;
-        padding-right: 4.166665vw !important; } }
-    .o-contentSimple__contentContainer > div, .o-contentSimple__contentContainer > table, .o-contentSimple__footerContainer > div, .o-contentSimple__footerContainer > table {
-      width: 66.66668vw; }
+    /*& > div, & > table { // content
+            @include a-width-col(  $v-content-width - ( $v-col-2 ) );
 
-@media (max-width: 768px) and (max-width: 768px) {
-  .o-contentSimple__contentContainer > div, .o-contentSimple__contentContainer > table, .o-contentSimple__footerContainer > div, .o-contentSimple__footerContainer > table {
-    position: relative  !important; } }
-
-@media (max-width: 768px) and (max-width: 768px) {
-  .o-contentSimple__contentContainer > div, .o-contentSimple__contentContainer > table, .o-contentSimple__footerContainer > div, .o-contentSimple__footerContainer > table {
-    width: 100%  !important; } }
-
-@media (max-width: 768px) and (max-width: 768px) {
-  .o-contentSimple__contentContainer > div, .o-contentSimple__contentContainer > table, .o-contentSimple__footerContainer > div, .o-contentSimple__footerContainer > table {
-    height: auto  !important; } }
+            @include breakpoint-sm-a-mobile-reset;
+        }*/ }
   .o-contentSimple__closeDetail {
     width: 4.166665vw;
     height: 88px;
@@ -132,9 +118,6 @@ div {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden; }
-    @media (max-width: 768px) {
-      .o-contentSimple__contentContainer {
-        padding-top: 44px !important; } }
   .o-contentSimple__footerContainer {
     /* -ctag-example: ...footer;*/
     height: 66px;
@@ -160,11 +143,6 @@ div {
   .o-contentSimple--skinny .o-contentSimple__footerContainer {
     width: 100%;
     padding-left: 4.166665vw; }
-    .o-contentSimple--skinny .o-contentSimple__contentContainer > div,
-    .o-contentSimple--skinny .o-contentSimple__footerContainer > div {
-      width: 64.5833475vw; }
-  .o-contentSimple--skinny .o-contentSimple__footerContainer {
-    left: 27.0833225vw; }
 
 .o-contentSimple--wfooter {
   /* touch */ }
@@ -996,8 +974,7 @@ a {
     transition: width 0.3s;
     overflow-y: auto;
     overflow-x: hidden;
-    /* Eventually, move these to the o-document or whatever child component
-           we put inside the body? */ }
+    /* Legacy pages, new content uses c-redox__paddedContent */ }
     .c-redox__contentContainer--sidenav {
       width: 83.33334vw; }
     .c-redox__contentContainer > div:not(.o-contentSimple) {
@@ -1011,6 +988,25 @@ a {
     @media (max-width: 768px) {
       .c-redox__contentContainer {
         height: auto  !important; } }
+  .c-redox__contentPadded, .c-devTools__content {
+    padding-left: 8.33333vw;
+    width: 75.00001vw; }
+    @media (max-width: 768px) {
+      .c-redox__contentPadded, .c-devTools__content {
+        padding-left: 4.166665vw !important;
+        padding-right: 4.166665vw !important; } }
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .c-redox__contentPadded, .c-devTools__content {
+    position: relative  !important; } }
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .c-redox__contentPadded, .c-devTools__content {
+    width: 100%  !important; } }
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .c-redox__contentPadded, .c-devTools__content {
+    height: auto  !important; } }
   .c-redox__footerContainer {
     /* -ctag-example: ...footer;*/
     width: 100%;
@@ -1041,6 +1037,10 @@ a {
     width: 27.0833225vw; }
   .c-redox--tertiary .c-redox__contentContainer {
     width: 72.9166775vw; }
+  .c-redox--tertiary .c-redox__contentPadded, .c-redox--tertiary .c-devTools__content {
+    width: 18.7499925vw;
+    padding-left: 27.0833425vw;
+    padding-right: 27.0833425vw; }
 
 .c-secondaryNav {
   /* -ctag-example: ...
@@ -1277,12 +1277,39 @@ a {
   background-image: url("../images/app/connections_watermark.png");
   background-position: 22px center; }
 
-.c-devTools {
-  padding-top: 66px; }
-  .c-devTools__content {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center; }
+.c-devTools__content {
+  padding-top: 44px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-items: flex-start; }
+
+.c-devTools__overviewText {
+  width: 24.99999vw; }
+
+.c-devTools__connections {
+  flex: 1;
+  padding-left: 8.33333vw; }
+
+.c-devTools__groupHeader {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+  .c-devTools__groupHeader h1 {
+    border: initial;
+    border-bottom: none;
+    font-size: 22px;
+    line-height: 38.5px;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+    margin-left: 11px; }
+
+.c-devTools__cell--title {
+  flex: 1;
+  justify-content: flex-start; }
 
 .c-logs {
   /* -ctag-example: <div class="c-logs o-contentSimple o-contentSimple--wfooter"><div class="o-contentSimple__contentContainer"><div class="o-contentHeader"><div class="o-contentHeader__titleContainer">Logs</div><div class="o-contentHeader__navContainer c-logs__navContainer"><div class="c-logs__searchIcon"><i class="fa fa-search"></i></div><form class="o-form"><input class="c-logs__search"></form></div></div><div class="o-list o-list--overview"><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__inbound"></div></div><div class="o-list__cell c-logs__cell--title">Neck Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-search-plus" title="Patient Search"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__fail"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--type"><div class="o-icon__query"></div></div><div class="o-list__cell c-logs__cell--title">Spring Log Message</div><div class="o-list__cell c-logs__cell--model fa fa-2x fa-street-view" title="Patient Admin"></div><div class="o-list__cell c-logs__cell--status"><div class="o-icon__success"></div></div><div class="o-list__cell c-logs__cell--environment">Production</div><div class="o-list__cell c-logs__cell--time">1/12 | 5:64:23pm</div></div></div></div><div class="o-contentSimple__footerContainer"><div class="c-logs__footer"><div class="o-list o-list--footer"><div class="o-list__row a-interactive"><div class="o-list__cell c-logs__cell--summaryType">Type</div><div class="o-list__cell a-flex-item-fill c-logs__cell--summaryTitle ">Message</div><div class="o-list__cell c-logs__cell--summaryModel">Data Model</div><div class="o-list__cell c-logs__cell--summaryStatus">Status</div><div class="o-list__cell c-logs__cell--summaryEnvironment">Environment</div><div class="o-list__cell c-logs__cell--summaryTime">Date/Time</div></div></div><div class="c-logs__filters"><div class="c-logs__closeFilters"></div><div class="o-list"><div class="o-list__row"><div class="o-list__cell c-logs__cell--filterType c-logs__filter"><div class="o-icon__inbound"></div><span>Inbound</span></div><div class="o-list__cell c-logs__cell--filterModel"><div class="c-logs__filter fa fa-2x fa-plus-circle" title="Clinical Survey"></div><div class="c-logs__filter fa fa-2x fa-heartbeat" title="Device"></div><div class="c-logs__filter fa fa-2x fa-money" title="Financial"></div><div class="c-logs__filter fa fa-2x fa-bar-chart" title="Flowsheet"></div><div class="c-logs__filter fa fa-2x fa-paperclip" title="Media"></div><div class="c-logs__filter fa fa-2x fa-list-alt" title="Orders"></div></div><div class="o-list__cell c-logs__cell--filterStatus c-logs__filter"><div class="o-icon__success"></div><span>Success</span></div><div class="o-list__cell c-logs__cell--filterEnvironment c-logs__filter">Production</div><div class="o-list__cell c-logs__cell--filterTime"><input></div></div><div class="o-list__row"><div class="o-list__cell c-logs__cell--filterType c-logs__filter"><div class="o-icon__outbound"></div><span>Outbound</span></div><div class="o-list__cell c-logs__cell--filterModel"><div class="c-logs__filter fa fa-2x fa-street-view" title="Patient Admin"></div><div class="c-logs__filter fa fa-2x fa-search-plus" title="Patient Search"></div><div class="c-logs__filter fa fa-2x fa-flask" title="Results"></div><div class="c-logs__filter fa fa-2x fa-calendar" title="Scheduling"></div><div class="c-logs__filter fa fa-2x fa-eyedropper" title="Vaccine"></div></div><div class="o-list__cell c-logs__cell--filterStatus c-logs__filter"><div class="o-icon__fail"></div><span>Fail</span></div><div class="o-list__cell c-logs__cell--filterEnvironment c-logs__filter">Stage</div><div class="o-list__cell c-logs__cell--filterTime"><input></div></div></div></div></div></div></div>;*/
@@ -1365,11 +1392,8 @@ a {
       color: #000; }
   .c-logs__footer {
     height: 100%;
-    width: 100%;
     padding-top: 11px;
     overflow: hidden;
-    top: 0px;
-    left: 0px;
     background-color: #fff;
     transition: height 0.3s; }
     .c-logs__footer--open {

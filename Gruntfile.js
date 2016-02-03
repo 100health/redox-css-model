@@ -127,6 +127,14 @@ module.exports = function(grunt) {
         precision: 10
     };
 
+    configObj.sass = configObj.sass || {};
+    configObj.sass["prototype"] = {files:{}};
+    configObj.sass["prototype"]
+        .files['dist/styles/prototype.css'] =
+            [
+                'prototype/_prototype/**/*.scss'
+            ];
+
     // pull together bower styles as well...
     configObj.concat = configObj.concat || {};
     configObj.concat["redox_bower"] = {files:{}};
@@ -147,7 +155,6 @@ module.exports = function(grunt) {
                 "RedoxEngine_repo/bower_components/json-formatter/dist/json-formatter.css",
             ];
 
-
     configObj.watch = configObj.watch || {};
     configObj.watch["redox_scss"] = {
         files:[
@@ -155,6 +162,12 @@ module.exports = function(grunt) {
             "sass/**.*.scss"
         ],
         tasks: ["sass"]
+    };
+    configObj.watch["prototype"] = {
+        files:[
+            'prototype/_prototype/**/*.scss'
+        ],
+        tasks: ["sass:prototype"]
     };
 
 
@@ -191,6 +204,8 @@ module.exports = function(grunt) {
         ],
         tasks: ["default"]
     };
+
+
 
     /*==========================
     ProtoData
@@ -236,9 +251,8 @@ module.exports = function(grunt) {
         ],
         tasks: ["cssmodeling_components:redox"]
     };
-    /*==========================
-    END CSSMODELING
-    ==========================*/
+
+
 
     /*=============================
     COPY (push index into dist...make a compact portable whole)

@@ -328,15 +328,6 @@ $v-zindex-footer: 3500;
 $v-zindex-modal: 5000;
 
 
-$v-secondaryNav_width: $v-col-2;
-$v-secondaryNav--tertiary_width: $v-col-3-quarter;
-$v-content_width: 100vw - $v-secondaryNav_width;
-$v-content--tertiary_width: 100vw - $v-secondaryNav--tertiary_width;
-$v-mainNav_height: $v-row-3;
-$v-breakpoint-sm-mainNav_height: $v-row-2;
-$v-footer_height: $v-row-1-half;
-
-
 $v-border-radius: 3px;
 
 
@@ -3723,7 +3714,6 @@ $v-border-radius: 3px;
 
 
 
-
 @mixin breakpoint-md-a-height-row ( $v-row : $v-row ) { @media ( max-width: $v-breakpoint-medium-min ) {  height: $v-row  !important;}}
 @mixin breakpoint-md-a-height-row-quarter ( $v-row-quarter : $v-row-quarter ) { @media ( max-width: $v-breakpoint-medium-min ) {  height: $v-row-quarter  !important;}}
 @mixin breakpoint-md-a-height-row-half ( $v-row-half : $v-row-half ) { @media ( max-width: $v-breakpoint-medium-min ) {  height: $v-row-half  !important;}}
@@ -5393,7 +5383,6 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-fill-container (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width: 100% !important;  height: 100% !important; }}
 @mixin breakpoint-md-a-mobile-reset (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-relative;  @include breakpoint-md-a-width-100;  @include breakpoint-md-a-height-auto; }}
 @mixin breakpoint-md-a-mobile-nav-reset (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-fixed;  @include breakpoint-md-a-top-left; }}
-
 
 
 
