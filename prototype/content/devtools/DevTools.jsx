@@ -131,7 +131,15 @@ var DevTools = React.createClass({
         var content_html = this.getLandingPageContent();
 
         if ( RS.route.dev_tools_state == "connection" ) {
-            content_html = <DevToolsInbound />;
+
+            var connection = RedoxModel.get( RS.route.conn_id );
+            console.log( connection );
+            if ( connection.type == "outbound" ) {
+                content_html = <DevToolsOutbound />;
+            }else{
+                content_html = <DevToolsInbound />;
+            }
+
         }
 
         return content_html;

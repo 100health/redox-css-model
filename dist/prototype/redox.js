@@ -20832,7 +20832,15 @@ var DevTools = React.createClass({displayName: "DevTools",
         var content_html = this.getLandingPageContent();
 
         if ( RS.route.dev_tools_state == "connection" ) {
-            content_html = React.createElement(DevToolsInbound, null);
+
+            var connection = RedoxModel.get( RS.route.conn_id );
+            console.log( connection );
+            if ( connection.type == "outbound" ) {
+                content_html = React.createElement(DevToolsOutbound, null);
+            }else{
+                content_html = React.createElement(DevToolsInbound, null);
+            }
+
         }
 
         return content_html;
@@ -20875,6 +20883,102 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
                     React.createElement("div", {className: "c-devToolsInbound__rightContainer"}, 
                         React.createElement("div", {onClick:  function() { RS.merge({dev_tools_state:""}) }}, 
                             "//"
+                        )
+                    )
+                )
+            )
+        );
+    },
+
+
+});
+
+
+
+
+
+var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
+
+    componentWillMount: function() {
+        /*var me = this;
+        RouteState.addDiffListeners(
+    		["dev_tools_state"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "DevToolsOutbound"
+    	);*/
+    },
+
+    componentWillUnmount: function(){
+        //RouteState.removeDiffListenersViaClusterId( "DevToolsOutbound" );
+    },
+
+    changeTab: function ( index ) {
+        $(".o-devToolsOutput__navItem")
+            .removeClass("o-devToolsOutput__navItem--selected");
+        $( $(".o-devToolsOutput__navItem")[index] )
+            .addClass("o-devToolsOutput__navItem--selected");
+    },
+
+
+    render : function () {
+        return React.createElement("div", {className: "c-devToolsOutbound o-contentSimple"}, 
+            React.createElement("div", {className: "o-contentSimple__contentContainer a-padding-h-col-quarter a-padding-v-row-1"}, 
+                React.createElement("div", {className: "o-devToolsOutput"}, 
+                    React.createElement("div", {className: "o-devToolsOutput__content"}, 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null)
+                    ), 
+                    React.createElement("div", {className: "o-devToolsOutput__nav"}, 
+                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
+                            onClick:  this.changeTab.bind( this , 0) }, 
+                            "Data Model"
+                        ), 
+                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
+                            onClick:  this.changeTab.bind( this , 1) }, 
+                            "Filtered"
+                        ), 
+                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
+                            onClick:  this.changeTab.bind( this , 2) }, 
+                            "Config"
+                        ), 
+                        React.createElement("div", {className: "o-devToolsOutput__navItem o-devToolsOutput__navItem--selected", 
+                            onClick:  this.changeTab.bind( this , 3) }, 
+                            "Sent Request"
+                        ), 
+                        React.createElement("div", {className: "o-devToolsOutput__navFill"}), 
+                        React.createElement("div", {className: "o-devToolsOutput__navAction"}, 
+                            "Apply Filters/Config"
                         )
                     )
                 )
