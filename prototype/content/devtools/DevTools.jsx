@@ -91,38 +91,71 @@ var DevTools = React.createClass({
                             </div>
 
                             <div className="c-devTools__connections">
-                                  <div className="c-devTools__groupHeader">
-                                      <div className="o-icon__outbound">
-                                      </div>
-                                      <h1>
-                                          Outbound
-                                      </h1>
-                                  </div>
-                                  <div className="o-list o-list--overview">
-                                      { outbound_connections_html }
-                                  </div>
-
-                                  <div className="c-devTools__groupHeader">
-                                      <div className="o-icon__inbound">
-                                      </div>
-                                      <h1>
-                                          Inbound
-                                      </h1>
-                                  </div>
-
-                                  <div className="o-list o-list--overview">
-                                      { inbound_connections_html }
-                                  </div>
+                                <div className="c-devTools__groupHeader">
+                                    <div className="o-icon__outbound">
+                                    </div>
+                                    <h1>
+                                    Outbound
+                                    </h1>
+                                </div>
+                                <div className="o-list o-list--overview">
+                                { outbound_connections_html }
+                                </div>
+                                
+                                <div className="c-devTools__groupHeader">
+                                    <div className="o-icon__inbound">
+                                    </div>
+                                    <h1>
+                                    Inbound
+                                    </h1>
+                                </div>
+                                
+                                <div className="o-list o-list--overview">
+                                    { inbound_connections_html }
+                                </div>
                             </div>
-
+                                
                         </div>
-
+                        
                     </div>
                 </div>;
-    },
+    },  
 
     getInboundContent : function () {
-        return <div>inbound</div>;
+        return  <div className="c-devToolsInbound o-contentSimple">
+
+
+                        <div className="c-devToolsInbound__content">
+                            
+                            <div className="c-devToolsInbound__leftContainer">
+                                <div className="a-height-100 a-flex-v">
+                                    <div className="a-flex-item-fill">
+                                        //
+                                    </div>
+                                    <div className="a-height-row-2">
+                                        //
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="c-devToolsInbound__rightContainer">
+                                <div className="a-height-100 a-flex-v">
+                                    <div className="a-height-row-2-quarter">
+                                        //
+                                    </div>
+                                    <div className="a-flex-item-fill">
+                                        //
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        
+                </div>
+        
+        ;
     },
 
 
