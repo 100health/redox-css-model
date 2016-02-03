@@ -1062,24 +1062,24 @@ a {
     @media (max-width: 768px) {
       .c-redox__contentContainer {
         height: auto  !important; } }
-  .c-redox__contentPadded, .c-devTools__content {
+  .c-redox__contentPadded {
     width: 66.66668vw;
     margin-left: 8.33333vw; }
     @media (max-width: 768px) {
-      .c-redox__contentPadded, .c-devTools__content {
+      .c-redox__contentPadded {
         margin-left: 4.166665vw !important;
         margin-right: 4.166665vw !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
-  .c-redox__contentPadded, .c-devTools__content {
+  .c-redox__contentPadded {
     position: relative  !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
-  .c-redox__contentPadded, .c-devTools__content {
+  .c-redox__contentPadded {
     width: 100%  !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
-  .c-redox__contentPadded, .c-devTools__content {
+  .c-redox__contentPadded {
     height: auto  !important; } }
   .c-redox__footerContainer {
     /* -ctag-example: ...footer;*/
@@ -1111,7 +1111,7 @@ a {
     width: 27.0833225vw; }
   .c-redox--tertiary .c-redox__contentContainer {
     width: 72.9166775vw; }
-  .c-redox--tertiary .c-redox__contentPadded, .c-redox--tertiary .c-devTools__content {
+  .c-redox--tertiary .c-redox__contentPadded {
     width: 64.5833475vw;
     margin-left: 4.166665vw; }
 
@@ -1121,7 +1121,7 @@ a {
 .c-redox--iconNav .c-redox__contentContainer {
   width: 93.7500025vw; }
 
-.c-redox--iconNav .c-redox__contentPadded, .c-redox--iconNav .c-devTools__content {
+.c-redox--iconNav .c-redox__contentPadded {
   width: 77.0833425vw;
   margin-left: 8.33333vw; }
 
@@ -1372,21 +1372,22 @@ a {
   background-position: 22px center; }
 
 .c-devTools__content {
-  padding-top: 44px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   align-items: flex-start; }
 
 .c-devTools__overviewText {
-  width: 24.99999vw; }
+  width: 24.99999vw;
+  font-size: 14px;
+  line-height: 22px;
+  color: #999999; }
 
 .c-devTools__connections {
   flex: 1;
   padding-left: 8.33333vw; }
 
 .c-devTools__groupHeader {
-  padding-top: 11px;
   padding-bottom: 11px;
   display: flex;
   flex-flow: row nowrap;

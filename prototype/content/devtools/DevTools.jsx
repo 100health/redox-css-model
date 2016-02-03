@@ -73,46 +73,50 @@ var DevTools = React.createClass({
         return  <div className="c-devTools o-contentSimple">
                     <div className="o-contentSimple__contentContainer">
 
-                        <div className="c-devTools__content">
+                        <div className="c-redox__contentPadded">
 
-                            <div className="c-devTools__overviewText">
-                                <div className="o-contentHeader a-height-auto">
-                                    <div className="o-contentHeader__titleContainer">
-                                        Connection Dev-Tools
-                                    </div>
+                            <div className="o-contentHeader a-margin-top-row-1">
+                                <div className="o-contentHeader__titleContainer">
+                                    Connection Dev-Tools
                                 </div>
-
-                                <p>The connection dev-tools allow you to mimic the requests to
-                                    and from your application by quickly creating and sending
-                                    sample JSON from a single page.</p>
-                                <p>Start by selection one of the connections to the right and
-                                    it will guide you through the process of generating a data
-                                    object to send or receive.</p>
                             </div>
 
-                            <div className="c-devTools__connections">
-                                  <div className="c-devTools__groupHeader">
-                                      <div className="o-icon__outbound">
-                                      </div>
-                                      <h1>
-                                          Outbound
-                                      </h1>
-                                  </div>
-                                  <div className="o-list o-list--overview">
-                                      { outbound_connections_html }
-                                  </div>
+                            <div className="c-devTools__content">
+                                <div className="c-devTools__overviewText">
+                                    <p>The connection dev-tools allow you to mimic the requests to
+                                        and from your application by quickly creating and sending
+                                        sample JSON from a single page.</p>
+                                    <p>Start by selection one of the connections to the right and
+                                        it will guide you through the process of generating a data
+                                        object to send or receive.</p>
+                                </div>
 
-                                  <div className="c-devTools__groupHeader">
-                                      <div className="o-icon__inbound">
+                                <div className="c-devTools__connections">
+                                      <div className="c-devTools__groupHeader">
+                                          <div className="o-icon__outbound">
+                                          </div>
+                                          <h1>
+                                              Outbound
+                                          </h1>
                                       </div>
-                                      <h1>
-                                          Inbound
-                                      </h1>
-                                  </div>
+                                      <div className="o-list
+                                            o-list--overview
+                                            a-margin-bottom-row-half">
+                                          { outbound_connections_html }
+                                      </div>
 
-                                  <div className="o-list o-list--overview">
-                                      { inbound_connections_html }
-                                  </div>
+                                      <div className="c-devTools__groupHeader">
+                                          <div className="o-icon__inbound">
+                                          </div>
+                                          <h1>
+                                              Inbound
+                                          </h1>
+                                      </div>
+
+                                      <div className="o-list o-list--overview">
+                                          { inbound_connections_html }
+                                      </div>
+                                </div>
                             </div>
 
                         </div>

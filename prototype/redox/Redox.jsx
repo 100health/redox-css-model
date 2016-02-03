@@ -51,7 +51,7 @@ var Redox = React.createClass({
                 break;
             case "logs" :
                 page = <Logs />;
-                show_footer = false;
+                redox_xcls += " c-redox--nofooter ";
                 break;
             case "test" :
                 page = <OverviewOrig />;
@@ -62,9 +62,14 @@ var Redox = React.createClass({
                 // should be abstracted better long term...too specific
                 if ( RS.route.dev_tools_state && RS.route.dev_tools_state != "" ) {
                     redox_xcls += " c-redox--iconNav ";
+                    redox_xcls += " c-redox--nofooter ";
                     secondaryNav_xcls += " c-secondaryNav--iconNav ";
                 }
                 break;
+            case "users" :
+                page = <DevTools_dev />;//TEMPORARY!!!!
+                break;
+
             default :
                 page = <div>{ RS.route.section } | { RS.route.page }</div>;
                 break;
@@ -99,8 +104,7 @@ var Redox = React.createClass({
         }
 
 
-        return  <div className={ "c-redox " + redox_xcls +
-                        (( show_footer ) ? "" : " c-redox--nofooter " )}>
+        return  <div className={ "c-redox " + redox_xcls }>
                     <div className={
                             'c-redox__mainNavContainer ' +
                             ( ( RS.route.detail_page

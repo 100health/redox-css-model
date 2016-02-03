@@ -284,46 +284,50 @@ var DevTools = React.createClass({displayName: "DevTools",
         return  React.createElement("div", {className: "c-devTools o-contentSimple"}, 
                     React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
 
-                        React.createElement("div", {className: "c-devTools__content"}, 
+                        React.createElement("div", {className: "c-redox__contentPadded"}, 
 
-                            React.createElement("div", {className: "c-devTools__overviewText"}, 
-                                React.createElement("div", {className: "o-contentHeader a-height-auto"}, 
-                                    React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
-                                        "Connection Dev-Tools"
-                                    )
-                                ), 
-
-                                React.createElement("p", null, "The connection dev-tools allow you to mimic the requests to" + ' ' +
-                                    "and from your application by quickly creating and sending" + ' ' +
-                                    "sample JSON from a single page."), 
-                                React.createElement("p", null, "Start by selection one of the connections to the right and" + ' ' +
-                                    "it will guide you through the process of generating a data" + ' ' +
-                                    "object to send or receive.")
+                            React.createElement("div", {className: "o-contentHeader a-margin-top-row-1"}, 
+                                React.createElement("div", {className: "o-contentHeader__titleContainer"}, 
+                                    "Connection Dev-Tools"
+                                )
                             ), 
 
-                            React.createElement("div", {className: "c-devTools__connections"}, 
-                                  React.createElement("div", {className: "c-devTools__groupHeader"}, 
-                                      React.createElement("div", {className: "o-icon__outbound"}
-                                      ), 
-                                      React.createElement("h1", null, 
-                                          "Outbound"
-                                      )
-                                  ), 
-                                  React.createElement("div", {className: "o-list o-list--overview"}, 
-                                       outbound_connections_html 
-                                  ), 
+                            React.createElement("div", {className: "c-devTools__content"}, 
+                                React.createElement("div", {className: "c-devTools__overviewText"}, 
+                                    React.createElement("p", null, "The connection dev-tools allow you to mimic the requests to" + ' ' +
+                                        "and from your application by quickly creating and sending" + ' ' +
+                                        "sample JSON from a single page."), 
+                                    React.createElement("p", null, "Start by selection one of the connections to the right and" + ' ' +
+                                        "it will guide you through the process of generating a data" + ' ' +
+                                        "object to send or receive.")
+                                ), 
 
-                                  React.createElement("div", {className: "c-devTools__groupHeader"}, 
-                                      React.createElement("div", {className: "o-icon__inbound"}
+                                React.createElement("div", {className: "c-devTools__connections"}, 
+                                      React.createElement("div", {className: "c-devTools__groupHeader"}, 
+                                          React.createElement("div", {className: "o-icon__outbound"}
+                                          ), 
+                                          React.createElement("h1", null, 
+                                              "Outbound"
+                                          )
                                       ), 
-                                      React.createElement("h1", null, 
-                                          "Inbound"
-                                      )
-                                  ), 
+                                      React.createElement("div", {className: "o-list" + ' ' +
+                                            "o-list--overview" + ' ' +
+                                            "a-margin-bottom-row-half"}, 
+                                           outbound_connections_html 
+                                      ), 
 
-                                  React.createElement("div", {className: "o-list o-list--overview"}, 
-                                       inbound_connections_html 
-                                  )
+                                      React.createElement("div", {className: "c-devTools__groupHeader"}, 
+                                          React.createElement("div", {className: "o-icon__inbound"}
+                                          ), 
+                                          React.createElement("h1", null, 
+                                              "Inbound"
+                                          )
+                                      ), 
+
+                                      React.createElement("div", {className: "o-list o-list--overview"}, 
+                                           inbound_connections_html 
+                                      )
+                                )
                             )
 
                         )
@@ -346,6 +350,36 @@ var DevTools = React.createClass({displayName: "DevTools",
         }
 
         return content_html;
+
+    }
+
+});
+
+
+
+var DevTools_dev = React.createClass({displayName: "DevTools_dev",
+
+    componentWillMount: function() {
+        var me = this;
+        RouteState.addDiffListeners(
+    		["dev_tools_state"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "DevTools_dev"
+    	);
+    },
+
+    componentWillUnmount: function(){
+        RouteState.removeDiffListenersViaClusterId( "DevTools_dev" );
+    },
+
+
+    render: function() {
+
+
+        return React.createElement("div", null, "DevTools_dev");
 
     }
 
@@ -1616,7 +1650,7 @@ var Redox = React.createClass({displayName: "Redox",
                 break;
             case "logs" :
                 page = React.createElement(Logs, null);
-                show_footer = false;
+                redox_xcls += " c-redox--nofooter ";
                 break;
             case "test" :
                 page = React.createElement(OverviewOrig, null);
@@ -1627,9 +1661,14 @@ var Redox = React.createClass({displayName: "Redox",
                 // should be abstracted better long term...too specific
                 if ( RS.route.dev_tools_state && RS.route.dev_tools_state != "" ) {
                     redox_xcls += " c-redox--iconNav ";
+                    redox_xcls += " c-redox--nofooter ";
                     secondaryNav_xcls += " c-secondaryNav--iconNav ";
                 }
                 break;
+            case "users" :
+                page = React.createElement(DevTools_dev, null);//TEMPORARY!!!!
+                break;
+
             default :
                 page = React.createElement("div", null,  RS.route.section, " | ",  RS.route.page);
                 break;
@@ -1664,8 +1703,7 @@ var Redox = React.createClass({displayName: "Redox",
         }
 
 
-        return  React.createElement("div", {className:  "c-redox " + redox_xcls +
-                        (( show_footer ) ? "" : " c-redox--nofooter ")}, 
+        return  React.createElement("div", {className:  "c-redox " + redox_xcls}, 
                     React.createElement("div", {className: 
                             'c-redox__mainNavContainer ' +
                             ( ( RS.route.detail_page
