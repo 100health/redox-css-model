@@ -74,15 +74,13 @@ var DevToolsInbound = React.createClass({
                             </form>
 
                             <div className="c-devToolsInbound__rightContainer">
-                                <div>
-                                    <div className="a-height-row-2-quarter"
+                                <div className="a-height-row-2-quarter"
                                     onClick={ function() { RS.merge({dev_tools_state:""}) } }>
-                                        <span>SET HEIGHT</span>
-                                    </div>
+                                    <span>SET HEIGHT</span>
+                                </div>
 
-                                    <div className="a-flex-item-fill">
-                                        <span>FILL</span>
-                                    </div>
+                                <div className="a-flex-item-fill">
+                                    <span>FILL</span>
                                 </div>
                             </div>
 

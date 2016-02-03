@@ -94,6 +94,32 @@
 		},
 
         {
+			"name":"flex-v",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-v-fill",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: column nowrap;",
+            	"align-items: stretch;"
+			]
+		},
+
+        {
+			"name":"flex-v",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-v-stretch",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: column nowrap;",
+            	"align-items: stretch;"
+			]
+		},
+
+        {
 			"name":"flex-h",
             "group":"layouts",
             "sub_group":"positioning",
@@ -103,6 +129,32 @@
                 "display: flex;",
                 "flex-flow: row nowrap;",
             	"align-items: center;"
+			]
+		},
+
+        {
+			"name":"flex-h",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-h-fill",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: row nowrap;",
+            	"align-items: stretch;"
+			]
+		},
+
+        {
+			"name":"flex-h",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-h-stretch",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: row nowrap;",
+            	"align-items: stretch;"
 			]
 		},
 
@@ -119,6 +171,10 @@
             	"align-items: center;"
 			]
 		},
+
+
+
+
         {
 			"name":"flex-item-fill",
             "group":"layouts",
