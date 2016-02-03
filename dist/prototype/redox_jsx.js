@@ -337,7 +337,23 @@ var DevTools = React.createClass({displayName: "DevTools",
     },
 
     getInboundContent : function () {
-        return React.createElement("div", null, "inbound");
+        return React.createElement("div", {className: "c-devToolsInbound o-contentSimple"}, 
+            React.createElement("div", {className: "o-contentSimple__contentContainer"}, 
+                React.createElement("div", {className: "c-devToolsInbound__content"}, 
+                    React.createElement("div", {className: "c-devToolsInbound__leftContainer"}, 
+                        React.createElement("div", null, 
+                            "//"
+                        )
+
+                    ), 
+                    React.createElement("div", {className: "c-devToolsInbound__rightContainer"}, 
+                        React.createElement("div", null, 
+                            "//"
+                        )
+                    )
+                )
+            )
+        );
     },
 
 

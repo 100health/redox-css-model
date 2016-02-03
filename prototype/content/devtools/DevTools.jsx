@@ -126,7 +126,23 @@ var DevTools = React.createClass({
     },
 
     getInboundContent : function () {
-        return <div>inbound</div>;
+        return <div className="c-devToolsInbound o-contentSimple">
+            <div className="o-contentSimple__contentContainer">
+                <div className="c-devToolsInbound__content">
+                    <div className="c-devToolsInbound__leftContainer">
+                        <div>
+                            //
+                        </div>
+
+                    </div>
+                    <div className="c-devToolsInbound__rightContainer">
+                        <div>
+                            //
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>;
     },
 
 
