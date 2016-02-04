@@ -5,7 +5,7 @@ var DevTools = React.createClass({
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["dev_tools_state"],
+    		["dev_tools_state","conn_id"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -28,6 +28,7 @@ var DevTools = React.createClass({
     openConnection: function ( guid ) {
         RS.merge({
             dev_tools_state:"connection",
+            dev_tools_app_tab:"",
             conn_id:guid
         })
     },
@@ -55,6 +56,7 @@ var DevTools = React.createClass({
 
 
     getLandingPageContent : function () {
+
         var inbound = RedoxModel.app.focused_organization().inbound_connections();
 
         var inbound_connections_html = [];
@@ -101,7 +103,7 @@ var DevTools = React.createClass({
                                       </div>
                                       <div className="o-list
                                             o-list--overview
-                                            a-margin-bottom-row-half">
+                                            a-margin-bottom-row">
                                           { outbound_connections_html }
                                       </div>
 

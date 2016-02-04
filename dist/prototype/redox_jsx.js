@@ -216,7 +216,7 @@ var DevTools = React.createClass({displayName: "DevTools",
     componentWillMount: function() {
         var me = this;
         RouteState.addDiffListeners(
-    		["dev_tools_state"],
+    		["dev_tools_state","conn_id"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
@@ -239,6 +239,7 @@ var DevTools = React.createClass({displayName: "DevTools",
     openConnection: function ( guid ) {
         RS.merge({
             dev_tools_state:"connection",
+            dev_tools_app_tab:"",
             conn_id:guid
         })
     },
@@ -266,6 +267,7 @@ var DevTools = React.createClass({displayName: "DevTools",
 
 
     getLandingPageContent : function () {
+
         var inbound = RedoxModel.app.focused_organization().inbound_connections();
 
         var inbound_connections_html = [];
@@ -312,7 +314,7 @@ var DevTools = React.createClass({displayName: "DevTools",
                                       ), 
                                       React.createElement("div", {className: "o-list" + ' ' +
                                             "o-list--overview" + ' ' +
-                                            "a-margin-bottom-row-half"}, 
+                                            "a-margin-bottom-row"}, 
                                            outbound_connections_html 
                                       ), 
 
@@ -366,19 +368,19 @@ var DevTools = React.createClass({displayName: "DevTools",
 var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
 
     componentWillMount: function() {
-        /*var me = this;
+        var me = this;
         RouteState.addDiffListeners(
-    		["dev_tools_state"],
+    		["dev_tools_app_tab"],
     		function ( route , prev_route ) {
                 // update
                 me.forceUpdate();
     		},
             "DevToolsInbound"
-    	);*/
+    	);
     },
 
     componentWillUnmount: function(){
-        //RouteState.removeDiffListenersViaClusterId( "DevToolsInbound" );
+        RouteState.removeDiffListenersViaClusterId( "DevToolsInbound" );
     },
 
     changeTab: function ( index ) {
@@ -388,7 +390,15 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
             .addClass("o-devToolsOutput__navItem--selected");
     },
 
-    getOutput : function () {
+    connectionChanged: function () {
+        RS.merge({
+            dev_tools_state:"connection",
+            dev_tools_app_tab:"",
+            conn_id:$("#connection").val()
+        });
+    },
+
+    getRequestOutput : function () {
         return React.createElement("div", {className: "o-devToolsOutput"}, 
                     React.createElement("div", {className: "o-devToolsOutput__content"}, 
                         "asdkflj ", React.createElement("br", null), 
@@ -438,143 +448,33 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
                         "asdkflj ", React.createElement("br", null)
                     ), 
                     React.createElement("div", {className: "o-devToolsOutput__nav"}, 
-                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
+                        React.createElement("button", {className: "o-devToolsOutput__navItem" + ' ' +
+                            "o-devToolsOutput__navItem--selected", 
                             onClick:  this.changeTab.bind( this , 0) }, 
                             "Data Model"
                         ), 
-                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
+                        React.createElement("button", {className: "o-devToolsOutput__navItem", 
                             onClick:  this.changeTab.bind( this , 1) }, 
                             "Filtered"
                         ), 
-                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
+                        React.createElement("button", {className: "o-devToolsOutput__navItem", 
                             onClick:  this.changeTab.bind( this , 2) }, 
                             "Config"
                         ), 
-                        React.createElement("div", {className: "o-devToolsOutput__navItem o-devToolsOutput__navItem--selected", 
+                        React.createElement("button", {className: "o-devToolsOutput__navItem", 
                             onClick:  this.changeTab.bind( this , 3) }, 
                             "Sent Request"
                         ), 
                         React.createElement("div", {className: "o-devToolsOutput__navFill"}), 
-                        React.createElement("div", {className: "o-devToolsOutput__navAction"}, 
+                        React.createElement("button", {className: "o-devToolsOutput__navAction"}, 
                             "Refresh"
                         )
                     )
                 )
     },
 
-
-    render : function () {
-        return  React.createElement("div", {className: "c-devToolsInbound o-contentSimple"}, 
-                    React.createElement("div", {className: "o-contentSimple__contentContainer a-overflow-hidden"}, 
-                        React.createElement("div", {className: "c-devToolsInbound__content"}, 
-
-                            React.createElement("form", {className: "o-form c-devToolsInbound__leftContainer"}, 
-                                React.createElement("div", {className: "a-flex-item-fill"}, 
-                                    React.createElement("div", {className: "o-formLayout__1-column"}, 
-                                        React.createElement("div", {className: "o-form__section"}, 
-
-                                            React.createElement("div", {className: "o-form__element" + ' ' +
-                                                "o-form__element--skinny"}, 
-                                                React.createElement("label", null, "Connection"), 
-                                                React.createElement("select", null, 
-                                                    React.createElement("option", {value: "A"}, "My Inbound Service"), 
-                                                    React.createElement("option", {value: "B"}, "Other Service"), 
-                                                    React.createElement("option", {value: "C"}, "Other Service")
-                                                )
-                                            ), 
-
-                                            React.createElement("div", {className: "o-form__element" + ' ' +
-                                                "o-form__element--skinny"}, 
-                                                React.createElement("label", null, "Data Model"), 
-                                                React.createElement("select", null, 
-                                                    React.createElement("option", {value: "A"}, "Financial"), 
-                                                    React.createElement("option", {value: "B"}, "Other"), 
-                                                    React.createElement("option", {value: "C"}, "Other")
-                                                )
-                                            ), 
-
-                                            React.createElement("div", {className: "o-form__element"}, 
-                                                React.createElement("label", null, "Event Type"), 
-                                                React.createElement("select", {className: "a-width-minus-col-three-quarters"}, 
-                                                    React.createElement("option", {value: "A"}, "Type"), 
-                                                    React.createElement("option", {value: "B"}, "Type"), 
-                                                    React.createElement("option", {value: "C"}, "Type")
-                                                )
-                                            ), 
-
-                                            React.createElement("div", {className: "o-form__element" + ' ' +
-                                                "o-form__element--skinny"}, 
-                                                React.createElement("label", null, "Event Type"), 
-                                                React.createElement("input", null)
-                                            )
-
-                                        )
-                                    )
-
-                                ), 
-
-                                React.createElement("div", {className: "a-height-row-2-quarter"}, 
-                                    React.createElement("div", {className: "o-roundedButton"}, "Send")
-                                )
-                            ), 
-
-                            React.createElement("div", {className: "c-devToolsInbound__rightContainer"}, 
-                                React.createElement("div", {className: "c-devToolsInbound__rightNav", 
-                                    onClick:  function() { RS.merge({dev_tools_state:""}) }}, 
-                                    React.createElement("div", {className: "c-devToolsInbound__rightNavItem"}, "Inbound How-To"), 
-                                    React.createElement("div", {className: "a-flex-item-fill"}), 
-                                    React.createElement("div", {className: "c-devToolsInbound__rightNavItem" + ' ' +
-                                        "c-devToolsInbound__rightNavItem--selected"}, "Request"), 
-                                    React.createElement("div", {className: "c-devToolsInbound__rightNavItem"}, "Response")
-                                ), 
-                                React.createElement("div", {className: "c-devToolsInbound__rightContent"}, 
-                                     this.getOutput() 
-                                )
-                            )
-                        )
-
-
-                    )
-                );
-    },
-
-
-});
-
-
-
-
-
-var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
-
-    componentWillMount: function() {
-        /*var me = this;
-        RouteState.addDiffListeners(
-    		["dev_tools_state"],
-    		function ( route , prev_route ) {
-                // update
-                me.forceUpdate();
-    		},
-            "DevToolsOutbound"
-    	);*/
-    },
-
-    componentWillUnmount: function(){
-        //RouteState.removeDiffListenersViaClusterId( "DevToolsOutbound" );
-    },
-
-    changeTab: function ( index ) {
-        $(".o-devToolsOutput__navItem")
-            .removeClass("o-devToolsOutput__navItem--selected");
-        $( $(".o-devToolsOutput__navItem")[index] )
-            .addClass("o-devToolsOutput__navItem--selected");
-    },
-
-
-    render : function () {
-        return React.createElement("div", {className: "c-devToolsOutbound o-contentSimple"}, 
-            React.createElement("div", {className: "o-contentSimple__contentContainer a-padding-h-col-quarter a-padding-v-row-1"}, 
-                React.createElement("div", {className: "o-devToolsOutput"}, 
+    getResponseOutput : function () {
+        return React.createElement("div", {className: "o-devToolsOutput"}, 
                     React.createElement("div", {className: "o-devToolsOutput__content"}, 
                         "asdkflj ", React.createElement("br", null), 
                         "asdkflj ", React.createElement("br", null), 
@@ -605,33 +505,502 @@ var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
                         "asdkflj ", React.createElement("br", null), 
                         "asdkflj ", React.createElement("br", null), 
                         "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
+                        "asdkflj ", React.createElement("br", null), 
                         "asdkflj ", React.createElement("br", null)
-                    ), 
-                    React.createElement("div", {className: "o-devToolsOutput__nav"}, 
-                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
-                            onClick:  this.changeTab.bind( this , 0) }, 
-                            "Data Model"
-                        ), 
-                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
-                            onClick:  this.changeTab.bind( this , 1) }, 
-                            "Filtered"
-                        ), 
-                        React.createElement("div", {className: "o-devToolsOutput__navItem", 
-                            onClick:  this.changeTab.bind( this , 2) }, 
-                            "Config"
-                        ), 
-                        React.createElement("div", {className: "o-devToolsOutput__navItem o-devToolsOutput__navItem--selected", 
-                            onClick:  this.changeTab.bind( this , 3) }, 
-                            "Sent Request"
-                        ), 
-                        React.createElement("div", {className: "o-devToolsOutput__navFill"}), 
-                        React.createElement("div", {className: "o-devToolsOutput__navAction"}, 
-                            "Apply Filters/Config"
-                        )
                     )
                 )
+    },
+
+    getHowTo: function () {
+        return React.createElement("div", {className: "o-devToolsLanding"}, 
+            React.createElement("div", {className: "o-devToolsLanding__content"}, 
+                React.createElement("div", {className: "o-devToolsLanding__icon" + ' ' +
+                    "o-devToolsLanding__icon--inbound"}), 
+                React.createElement("div", {className: "o-devToolsLanding__description" + ' ' +
+                    "o-document"}, 
+                    React.createElement("h1", null, "Inbound Connection Dev-Tools"), 
+                    React.createElement("p", null, "The Inbound connection dev-tool allows you to" + ' ' +
+                    "quickly create and send sample JSON to your application."), 
+
+                    React.createElement("p", null, "You select your data model and event type and you will" + ' ' +
+                    "have access to a variety of testing objects that you can" + ' ' +
+                    "select, edit if you like, and send immediately.")
+                )
             )
-        );
+        )
+    },
+
+
+    render : function () {
+
+        var page_html = "";
+        if ( RS.route.dev_tools_app_tab == "request" ) {
+            page_html = this.getRequestOutput();
+        }else if ( RS.route.dev_tools_app_tab == "response" ) {
+            page_html = this.getResponseOutput();
+        }else{
+            page_html = this.getHowTo();;
+        }
+
+
+        var inbound = RedoxModel.app.focused_organization().inbound_connections();
+
+        var inbound_connections_options = [],select_html = false;
+        for ( var i=0; i<inbound.length; i++ ) {
+            if ( RS.route.conn_id == inbound[i].guid ) {
+                inbound_connections_options.push(
+                    React.createElement("option", {value:  inbound[i].guid, 
+                            key:  inbound[i].guid, selected: "true"},  inbound[i].title)
+                );
+            }else{
+                inbound_connections_options.push(
+                    React.createElement("option", {value:  inbound[i].guid, 
+                            key:  inbound[i].guid},  inbound[i].title)
+                );
+            }
+        }
+
+        var outbound = RedoxModel.app.focused_organization().outbound_connections();
+
+        var outbound_connections_options = [];
+        for ( var i=0; i<outbound.length; i++ ) {
+
+            if ( RS.route.conn_id == outbound[i].guid ) {
+                outbound_connections_options.push(
+                    React.createElement("option", {value:  outbound[i].guid, 
+                            key:  outbound[i].guid, selected: "true"},  outbound[i].title)
+                );
+            }else{
+                outbound_connections_options.push(
+                    React.createElement("option", {value:  outbound[i].guid, 
+                            key:  outbound[i].guid},  outbound[i].title)
+                );
+            }
+        }
+
+        return  React.createElement("div", {className: "o-devToolsApp o-contentSimple"}, 
+                    React.createElement("div", {className: "o-contentSimple__contentContainer a-overflow-hidden"}, 
+                        React.createElement("div", {className: "o-devToolsApp__content"}, 
+
+                            React.createElement("form", {className: "o-form o-devToolsApp__leftContainer"}, 
+                                React.createElement("div", {className: "o-devToolsApp__leftInputs"}, 
+                                    React.createElement("div", {className: "o-formLayout__1-column-skinny"}, 
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Connection"), 
+                                            React.createElement("select", {id: "connection", onChange:  this.connectionChanged}, 
+                                                React.createElement("optgroup", {label: "Outbound"}, 
+                                                     outbound_connections_options 
+                                                ), 
+                                                React.createElement("optgroup", {label: "Inbound"}, 
+                                                     inbound_connections_options 
+                                                )
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Data Model"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Financial"), 
+                                                React.createElement("option", {value: "B"}, "Other"), 
+                                                React.createElement("option", {value: "C"}, "Other")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Event Type"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Type"), 
+                                                React.createElement("option", {value: "B"}, "Type"), 
+                                                React.createElement("option", {value: "C"}, "Type")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__hr"}
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Patient"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Information"), 
+                                                React.createElement("option", {value: "B"}, "Information"), 
+                                                React.createElement("option", {value: "C"}, "Information")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Visit Provider"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Information"), 
+                                                React.createElement("option", {value: "B"}, "Information"), 
+                                                React.createElement("option", {value: "C"}, "Information")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Location"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Information"), 
+                                                React.createElement("option", {value: "B"}, "Information"), 
+                                                React.createElement("option", {value: "C"}, "Information")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Transaction"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Information"), 
+                                                React.createElement("option", {value: "B"}, "Information"), 
+                                                React.createElement("option", {value: "C"}, "Information")
+                                            )
+                                        ), 
+
+                                        React.createElement("button", {disabled: "true", className: "o-roundedButton" + ' ' +
+                                            "a-width-100 a-height-row-2" + ' ' +
+                                            "a-margin-bottom-row"}, 
+                                            "Set as Default"
+                                        )
+
+                                    )
+
+                                ), 
+
+                                React.createElement("div", {className: "o-devToolsApp__leftActions"}, 
+                                    React.createElement("div", {className: "a-flex-item-fill"}), 
+                                    React.createElement("button", {className: "o-roundedButton" + ' ' +
+                                        "o-roundedButton--redox-green" + ' ' +
+                                        "a-margin-right-col-quarter" + ' ' +
+                                        "a-width-col-1-half a-height-row-2"}, 
+                                        "Send"
+                                    )
+                                )
+                            ), 
+
+                            React.createElement("div", {className: "o-devToolsApp__rightContainer"}, 
+                                React.createElement("div", {className: "o-devToolsApp__rightNav"}, 
+                                    React.createElement("button", {className: 
+                                            "o-devToolsApp__rightNavItem " +
+                                            ( ( !RS.route.dev_tools_app_tab ) ?
+                                                " o-devToolsApp__rightNavItem--selected " : ""), 
+                                        
+                                        onClick:  function() { RS.merge({dev_tools_app_tab:""}) }}, 
+                                        "Inbound How-To"
+                                    ), 
+                                    React.createElement("div", {className: "a-flex-item-fill"}), 
+                                    React.createElement("button", {className: 
+                                            "o-devToolsApp__rightNavItem " +
+                                            ( ( RS.route.dev_tools_app_tab == "request" ) ?
+                                                " o-devToolsApp__rightNavItem--selected " : ""), 
+                                        
+                                        onClick:  function() { RS.merge({dev_tools_app_tab:"request"}) }}, 
+                                        "Request"
+                                    ), 
+                                    React.createElement("button", {className: 
+                                            "o-devToolsApp__rightNavItem " +
+                                            ( ( RS.route.dev_tools_app_tab == "response" ) ?
+                                                " o-devToolsApp__rightNavItem--selected " : ""), 
+                                        
+                                        onClick:  function() { RS.merge({dev_tools_app_tab:"response"}) }}, 
+                                        "Response"
+                                    )
+                                ), 
+                                React.createElement("div", {className: "o-devToolsApp__rightContent"}, 
+                                     page_html 
+                                )
+                            )
+                        )
+
+
+                    )
+                );
+    },
+
+
+});
+
+
+
+
+
+var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
+
+    componentWillMount: function() {
+        var me = this;
+        RouteState.addDiffListeners(
+    		["dev_tools_app_tab"],
+    		function ( route , prev_route ) {
+                // update
+                me.forceUpdate();
+    		},
+            "DevToolsInbound"
+    	);
+    },
+
+    componentWillUnmount: function(){
+        RouteState.removeDiffListenersViaClusterId( "DevToolsInbound" );
+    },
+
+    changeTab: function ( index ) {
+        $(".o-devToolsOutput__navItem")
+            .removeClass("o-devToolsOutput__navItem--selected");
+        $( $(".o-devToolsOutput__navItem")[index] )
+            .addClass("o-devToolsOutput__navItem--selected");
+    },
+
+    getAuthenticateOutput : function () {
+        return React.createElement("div", {className: "o-devToolsOutput"}, 
+                    React.createElement("div", {className: "o-devToolsOutput__content"}, 
+                        "curl --request GET 'http://www.somedomain.com/user/info/' \\", React.createElement("br", null), 
+                        "--header 'sessionid:1234567890987654321'"
+                    ), 
+                    React.createElement("button", {className: "o-devToolsOutput__copy"}, "Copy")
+                )
+    },
+
+    getServiceOutput : function () {
+        return React.createElement("div", {className: "o-devToolsOutput"}, 
+                    React.createElement("div", {className: "o-devToolsOutput__content"}, 
+                        "curl --request GET 'http://www.somedomain.com/user/info/' \\", React.createElement("br", null), 
+                        "--header 'sessionid:1234567890987654321'"
+                    ), 
+                    React.createElement("button", {className: "o-devToolsOutput__copy"}, "Copy")
+                )
+    },
+
+    getHowTo: function () {
+
+
+
+        return React.createElement("div", {className: "o-devToolsLanding"}, 
+            React.createElement("div", {className: "o-devToolsLanding__content"}, 
+                React.createElement("div", {className: "o-devToolsLanding__icon" + ' ' +
+                    "o-devToolsLanding__icon--outbound"}), 
+                React.createElement("div", {className: "o-devToolsLanding__description" + ' ' +
+                    "o-document"}, 
+                    React.createElement("h1", null, "Outbound Connection Dev-Tools"), 
+                    React.createElement("p", null, "The Outbound connection dev-tool allows you to mimic" + ' ' +
+                        "your application by quickly create and send sample JSON."), 
+
+                    React.createElement("p", null, "You can test services using either cURL or Postman" + ' ' +
+                        "(what we use in house). For Postman information click" + ' ' +
+                        "\"Use Postman\", to get cURL generated requests start" + ' ' +
+                        "with the \"Authentication\" tab."), 
+
+                    React.createElement("p", null, "After you authenticate and enter an access token you" + ' ' +
+                        "will have access to all the data models, event types" + ' ' +
+                        "and an array of fake data that you can send by simply" + ' ' +
+                        "clicking \"Call Service\".")
+                )
+            ), 
+            React.createElement("button", {className: "o-devToolsLanding__action"}, 
+                "Use Postman"
+            )
+        )
+    },
+
+    connectionChanged: function () {
+        RS.merge({
+            dev_tools_state:"connection",
+            dev_tools_app_tab:"",
+            conn_id:$("#connection").val()
+        });
+    },
+
+
+    render : function () {
+
+        var page_html = "";
+        if ( RS.route.dev_tools_app_tab == "authenticate" ) {
+            page_html = this.getAuthenticateOutput();
+        }else if ( RS.route.dev_tools_app_tab == "service" ) {
+            page_html = this.getServiceOutput();
+        }else{
+            page_html = this.getHowTo();
+        }
+
+        var inbound = RedoxModel.app.focused_organization().inbound_connections();
+
+        var inbound_connections_options = [],select_html = false;
+        for ( var i=0; i<inbound.length; i++ ) {
+            if ( RS.route.conn_id == inbound[i].guid ) {
+                inbound_connections_options.push(
+                    React.createElement("option", {value:  inbound[i].guid, 
+                            key:  inbound[i].guid, selected: "true"},  inbound[i].title)
+                );
+            }else{
+                inbound_connections_options.push(
+                    React.createElement("option", {value:  inbound[i].guid, 
+                            key:  inbound[i].guid},  inbound[i].title)
+                );
+            }
+        }
+
+        var outbound = RedoxModel.app.focused_organization().outbound_connections();
+
+        var outbound_connections_options = [];
+        for ( var i=0; i<outbound.length; i++ ) {
+
+            if ( RS.route.conn_id == outbound[i].guid ) {
+                outbound_connections_options.push(
+                    React.createElement("option", {value:  outbound[i].guid, 
+                            key:  outbound[i].guid, selected: "true"},  outbound[i].title)
+                );
+            }else{
+                outbound_connections_options.push(
+                    React.createElement("option", {value:  outbound[i].guid, 
+                            key:  outbound[i].guid},  outbound[i].title)
+                );
+            }
+        }
+
+        return  React.createElement("div", {className: "o-devToolsApp o-contentSimple"}, 
+                    React.createElement("div", {className: "o-contentSimple__contentContainer a-overflow-hidden"}, 
+                        React.createElement("div", {className: "o-devToolsApp__content"}, 
+
+                            React.createElement("form", {className: "o-form o-devToolsApp__leftContainer"}, 
+                                React.createElement("div", {className: "o-devToolsApp__leftInputs"}, 
+                                    React.createElement("div", {className: "o-formLayout__1-column-skinny"}, 
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Connection"), 
+                                            React.createElement("select", {id: "connection", onChange:  this.connectionChanged}, 
+                                                React.createElement("optgroup", {label: "Outbound"}, 
+                                                     outbound_connections_options 
+                                                ), 
+                                                React.createElement("optgroup", {label: "Inbound"}, 
+                                                     inbound_connections_options 
+                                                )
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Source Secret"), 
+                                            React.createElement("input", null)
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Access Token"), 
+                                            React.createElement("input", null)
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Data Model"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Financial"), 
+                                                React.createElement("option", {value: "B"}, "Other"), 
+                                                React.createElement("option", {value: "C"}, "Other")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Event Type"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Type"), 
+                                                React.createElement("option", {value: "B"}, "Type"), 
+                                                React.createElement("option", {value: "C"}, "Type")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__hr"}
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Patient"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Information"), 
+                                                React.createElement("option", {value: "B"}, "Information"), 
+                                                React.createElement("option", {value: "C"}, "Information")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Visit Provider"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Information"), 
+                                                React.createElement("option", {value: "B"}, "Information"), 
+                                                React.createElement("option", {value: "C"}, "Information")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Location"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Information"), 
+                                                React.createElement("option", {value: "B"}, "Information"), 
+                                                React.createElement("option", {value: "C"}, "Information")
+                                            )
+                                        ), 
+
+                                        React.createElement("div", {className: "o-form__element"}, 
+                                            React.createElement("label", null, "Transaction"), 
+                                            React.createElement("select", null, 
+                                                React.createElement("option", {value: "A"}, "Information"), 
+                                                React.createElement("option", {value: "B"}, "Information"), 
+                                                React.createElement("option", {value: "C"}, "Information")
+                                            )
+                                        ), 
+
+                                        React.createElement("button", {disabled: "true", 
+                                            className: "o-roundedButton" + ' ' +
+                                            "a-width-100 a-height-row-2" + ' ' +
+                                            "a-margin-bottom-row"}, 
+                                            "Set as Default"
+                                        )
+
+                                    )
+
+                                )
+                            ), 
+
+                            React.createElement("div", {className: "o-devToolsApp__rightContainer"}, 
+                                React.createElement("div", {className: "o-devToolsApp__rightNav"}, 
+                                    React.createElement("button", {className: 
+                                            "o-devToolsApp__rightNavItem " +
+                                            ( ( !RS.route.dev_tools_app_tab ) ?
+                                                " o-devToolsApp__rightNavItem--selected " : ""), 
+                                        
+                                        onClick:  function() { RS.merge({dev_tools_app_tab:""}) }}, 
+                                        "Outbound How-To"
+                                    ), 
+                                    React.createElement("div", {className: "a-flex-item-fill"}), 
+                                    React.createElement("button", {className: 
+                                            "o-devToolsApp__rightNavItem " +
+                                            ( ( RS.route.dev_tools_app_tab == "authenticate" ) ?
+                                                " o-devToolsApp__rightNavItem--selected " : ""), 
+                                        
+                                        onClick:  function() { RS.merge({dev_tools_app_tab:"authenticate"}) }}, 
+                                        "Authenticate"
+                                    ), 
+                                    React.createElement("button", {className: 
+                                            "o-devToolsApp__rightNavItem " +
+                                            ( ( RS.route.dev_tools_app_tab == "service" ) ?
+                                                " o-devToolsApp__rightNavItem--selected " : ""), 
+                                        
+                                        onClick:  function() { RS.merge({dev_tools_app_tab:"service"}) }}, 
+                                        "Service"
+                                    )
+                                ), 
+                                React.createElement("div", {className: "o-devToolsApp__rightContent"}, 
+                                     page_html 
+                                )
+                            )
+                        )
+
+
+                    )
+                );
     },
 
 
