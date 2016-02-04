@@ -29,6 +29,27 @@
             ]
         },
         {
+            "name":"align-self",
+            "group":"layouts",
+            "base":"",
+            "shortcut":"<em>@base</em>-[ flex-start, flex-end, center, space-between, space-around ]",
+            "scheme":["@base-flex-start","@base-flex-end","@base-center","@base-baseline","@base-stretch"],
+            "values":[
+                "flex-start","flex-end","center","baseline","stretch"
+            ],
+            "ignore_variable":true,
+            "atoms":[
+                {
+                    "name":"align-self",
+                    "group":"layouts",
+                    "sub_group":"positioning",
+                    "example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+                    "selector":".a-align-self@var_name",
+                    "declaration_value":"align-self : @var_value;"
+                }
+            ]
+        },
+        {
             "name":"flex-align-items",
             "group":"layouts",
             "base":"",

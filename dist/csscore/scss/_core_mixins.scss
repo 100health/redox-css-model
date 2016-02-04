@@ -148,6 +148,7 @@ $v-col-12: 100vw;
 
 
 
+
 $v-breakpoint-small-min: 768px;
 $v-breakpoint-small-max: 991px;
 $v-breakpoint-medium-min: 992px;
@@ -2952,6 +2953,16 @@ $v-border-radius: 3px;
  justify-content : space-between; }
 @mixin a-justify-content-space-around () {
  justify-content : space-around; }
+@mixin a-align-self-flex-start () {
+ align-self : flex-start; }
+@mixin a-align-self-flex-end () {
+ align-self : flex-end; }
+@mixin a-align-self-center () {
+ align-self : center; }
+@mixin a-align-self-baseline () {
+ align-self : baseline; }
+@mixin a-align-self-stretch () {
+ align-self : stretch; }
 @mixin a-align-items-flex-start () {
  align-items : flex-start; }
 @mixin a-align-items-flex-end () {
@@ -3648,8 +3659,16 @@ $v-border-radius: 3px;
  width : inherit ; }
 @mixin a-flex-v () {
  display: flex;  flex-flow: column nowrap;  align-items: center;  }
+@mixin a-flex-v-fill () {
+ display: flex;  flex-flow: column nowrap;  align-items: stretch;  }
+@mixin a-flex-v-stretch () {
+ display: flex;  flex-flow: column nowrap;  align-items: stretch;  }
 @mixin a-flex-h () {
  display: flex;  flex-flow: row nowrap;  align-items: center;  }
+@mixin a-flex-h-fill () {
+ display: flex;  flex-flow: row nowrap;  align-items: stretch;  }
+@mixin a-flex-h-stretch () {
+ display: flex;  flex-flow: row nowrap;  align-items: stretch;  }
 @mixin a-flex-center () {
  display: flex;  flex-flow: row nowrap;  justify-content: center;  align-items: center;  }
 @mixin a-flex-item-fill () {
@@ -3680,6 +3699,7 @@ $v-border-radius: 3px;
   @include a-position-relative;  @include a-width-100;  @include a-height-auto;  }
 @mixin a-mobile-nav-reset () {
   @include a-position-fixed;  @include a-top-left;  }
+
 
 
 
@@ -5019,6 +5039,11 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-justify-content-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content : center !important;}}
 @mixin breakpoint-md-a-justify-content-space-between (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content : space-between !important;}}
 @mixin breakpoint-md-a-justify-content-space-around (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  justify-content : space-around !important;}}
+@mixin breakpoint-md-a-align-self-flex-start (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  align-self : flex-start !important;}}
+@mixin breakpoint-md-a-align-self-flex-end (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  align-self : flex-end !important;}}
+@mixin breakpoint-md-a-align-self-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  align-self : center !important;}}
+@mixin breakpoint-md-a-align-self-baseline (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  align-self : baseline !important;}}
+@mixin breakpoint-md-a-align-self-stretch (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  align-self : stretch !important;}}
 @mixin breakpoint-md-a-align-items-flex-start (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  align-items : flex-start !important;}}
 @mixin breakpoint-md-a-align-items-flex-end (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  align-items : flex-end !important;}}
 @mixin breakpoint-md-a-align-items-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  align-items : center !important;}}
@@ -5367,7 +5392,11 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-width-initial (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width : initial  !important;}}
 @mixin breakpoint-md-a-width-inherit (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width : inherit  !important;}}
 @mixin breakpoint-md-a-flex-v (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: center !important; }}
+@mixin breakpoint-md-a-flex-v-fill (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: stretch !important; }}
+@mixin breakpoint-md-a-flex-v-stretch (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: stretch !important; }}
 @mixin breakpoint-md-a-flex-h (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: center !important; }}
+@mixin breakpoint-md-a-flex-h-fill (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
+@mixin breakpoint-md-a-flex-h-stretch (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
 @mixin breakpoint-md-a-flex-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important; }}
 @mixin breakpoint-md-a-flex-item-fill (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  flex: 1 !important; }}
 @mixin breakpoint-md-a-single-line (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  overflow: hidden !important;  white-space: nowrap !important; }}
@@ -5383,6 +5412,7 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-fill-container (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width: 100% !important;  height: 100% !important; }}
 @mixin breakpoint-md-a-mobile-reset (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-relative;  @include breakpoint-md-a-width-100;  @include breakpoint-md-a-height-auto; }}
 @mixin breakpoint-md-a-mobile-nav-reset (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-fixed;  @include breakpoint-md-a-top-left; }}
+
 
 
 
@@ -6722,6 +6752,11 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-justify-content-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content : center !important;}}
 @mixin breakpoint-sm-a-justify-content-space-between (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content : space-between !important;}}
 @mixin breakpoint-sm-a-justify-content-space-around (  ) { @media ( max-width: $v-breakpoint-small-min ) {  justify-content : space-around !important;}}
+@mixin breakpoint-sm-a-align-self-flex-start (  ) { @media ( max-width: $v-breakpoint-small-min ) {  align-self : flex-start !important;}}
+@mixin breakpoint-sm-a-align-self-flex-end (  ) { @media ( max-width: $v-breakpoint-small-min ) {  align-self : flex-end !important;}}
+@mixin breakpoint-sm-a-align-self-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  align-self : center !important;}}
+@mixin breakpoint-sm-a-align-self-baseline (  ) { @media ( max-width: $v-breakpoint-small-min ) {  align-self : baseline !important;}}
+@mixin breakpoint-sm-a-align-self-stretch (  ) { @media ( max-width: $v-breakpoint-small-min ) {  align-self : stretch !important;}}
 @mixin breakpoint-sm-a-align-items-flex-start (  ) { @media ( max-width: $v-breakpoint-small-min ) {  align-items : flex-start !important;}}
 @mixin breakpoint-sm-a-align-items-flex-end (  ) { @media ( max-width: $v-breakpoint-small-min ) {  align-items : flex-end !important;}}
 @mixin breakpoint-sm-a-align-items-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  align-items : center !important;}}
@@ -7070,7 +7105,11 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-width-initial (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width : initial  !important;}}
 @mixin breakpoint-sm-a-width-inherit (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width : inherit  !important;}}
 @mixin breakpoint-sm-a-flex-v (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: center !important; }}
+@mixin breakpoint-sm-a-flex-v-fill (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: stretch !important; }}
+@mixin breakpoint-sm-a-flex-v-stretch (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: stretch !important; }}
 @mixin breakpoint-sm-a-flex-h (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: center !important; }}
+@mixin breakpoint-sm-a-flex-h-fill (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
+@mixin breakpoint-sm-a-flex-h-stretch (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
 @mixin breakpoint-sm-a-flex-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important; }}
 @mixin breakpoint-sm-a-flex-item-fill (  ) { @media ( max-width: $v-breakpoint-small-min ) {  flex: 1 !important; }}
 @mixin breakpoint-sm-a-single-line (  ) { @media ( max-width: $v-breakpoint-small-min ) {  overflow: hidden !important;  white-space: nowrap !important; }}

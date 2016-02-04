@@ -27,7 +27,9 @@ var SecondaryNav = React.createClass({
     changePage: function ( page ) {
         RS.merge({
             page:page,
-            detail_page:""
+            detail_page:"",
+            conn_id:"",
+            dev_tools_state:""
         })
     },
 
