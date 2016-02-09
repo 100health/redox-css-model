@@ -155,6 +155,7 @@ div {
   display: flex;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
   align-items: center; }
   .o-contentHeader__titleContainer {
     /* -ctag-example: ...Content Header Title*/
@@ -331,13 +332,13 @@ input {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  justify-content: flex-start;
   align-items: stretch; }
   .o-form__element label {
     flex: 1;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    justify-content: flex-start;
     align-items: flex-end;
     font-size: 13px;
     line-height: 16.5px;
@@ -604,6 +605,7 @@ input {
     height: 44px;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center; }
     .o-list__row--selected {
       background-color: #eee; }
@@ -616,6 +618,7 @@ input {
     height: 44px;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center; }
   .o-list__headerCell {
     /* -ctag-example: ...header cell;*/
@@ -793,6 +796,7 @@ input {
   height: 100%;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
   align-items: center;
   cursor: hand;
   cursor: pointer; }
@@ -891,6 +895,7 @@ a {
     z-index: 200;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center;
     justify-content: flex-end;
     background-image: url("../images/app/redox_logo@2x.png");
@@ -932,6 +937,7 @@ a {
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center;
     z-index: 100; }
     .c-mainNav__links:before, .c-mainNav__links:after {
@@ -963,9 +969,9 @@ a {
         overflow: hidden  !important; } }
     @media (max-width: 768px) {
       .c-mainNav__links {
-        flex-direction: column !important; } }
-    @media (max-width: 768px) {
-      .c-mainNav__links {
+        display: flex !important;
+        flex-flow: column nowrap !important;
+        justify-content: flex-start !important;
         align-items: flex-start !important; } }
   .c-mainNav__link {
     /* -ctag-example: ...
@@ -1001,6 +1007,7 @@ a {
       .c-mainNav__link {
         display: flex !important;
         flex-flow: row nowrap !important;
+        justify-content: flex-start !important;
         align-items: center !important; } }
     @media (max-width: 768px) {
       .c-mainNav__link {
@@ -1386,6 +1393,7 @@ a {
     margin-bottom: 11px;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center; }
     .c-connections__groupHeader h1 {
       border: initial;
@@ -1461,7 +1469,7 @@ a {
 .c-devTools__content {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  justify-content: flex-start;
   align-items: flex-start; }
 
 .c-devTools__overviewText {
@@ -1478,6 +1486,7 @@ a {
   padding-bottom: 11px;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
   align-items: center; }
   .c-devTools__groupHeader h1 {
     border: initial;
@@ -1496,7 +1505,7 @@ a {
 .o-devToolsApp__content {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  justify-content: flex-start;
   align-items: flex-start;
   height: 100%; }
 
@@ -1505,6 +1514,7 @@ a {
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: flex-start;
   align-items: stretch;
   box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -1530,6 +1540,7 @@ a {
   border-top: 1px solid #eee;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
   align-items: center; }
 
 .o-devToolsApp__rightContainer {
@@ -1542,6 +1553,7 @@ a {
   background-color: #eee;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
   align-items: stretch; }
 
 .o-devToolsApp__rightNavItem {
@@ -1563,6 +1575,7 @@ a {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: flex-start;
   align-items: stretch; }
   .o-devToolsOutput__content {
     overflow-y: auto;
@@ -1585,6 +1598,7 @@ a {
     background-color: #333;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: stretch; }
   .o-devToolsOutput__navItem {
     width: 10.4166625vw;
@@ -1622,6 +1636,7 @@ a {
     width: 80%;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: center;
     padding-bottom: 66px; }
   .o-devToolsLanding__icon {
@@ -1664,7 +1679,10 @@ a {
     transition: width 0.3s; }
   .c-logs .c-logs__cell--summaryTitle, .c-logs .c-logs__cell--title {
     flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: flex-start;
+    align-items: center;
     font-style: italic; }
   .c-logs .c-logs__cell--summaryStatus, .c-logs .c-logs__cell--status {
     width: 8.33333vw;
@@ -1798,7 +1816,7 @@ a {
 .c-profile__content {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  justify-content: flex-start;
   align-items: flex-start; }
   @media (max-width: 768px) {
     .c-profile__content {

@@ -18,7 +18,7 @@ module.exports = {
 
 
             this.test_data = {};
-            this.test_data.people = ["Joan","John"];
+            this.test_data.people = ["Joan Smith","John Smith"];
             this.test_data.data_models = pd.config.data_model.data;
 
             this.main_pages = pd.generateArray(
