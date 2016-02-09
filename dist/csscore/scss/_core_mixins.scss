@@ -3658,17 +3658,21 @@ $v-border-radius: 3px;
 @mixin a-width-inherit () {
  width : inherit ; }
 @mixin a-flex-v () {
- display: flex;  flex-flow: column nowrap;  align-items: center;  }
-@mixin a-flex-v-fill () {
- display: flex;  flex-flow: column nowrap;  align-items: stretch;  }
+ display: flex;  flex-flow: column nowrap;  justify-content: flex-start;  align-items: center;  }
 @mixin a-flex-v-stretch () {
- display: flex;  flex-flow: column nowrap;  align-items: stretch;  }
+ display: flex;  flex-flow: column nowrap;  justify-content: flex-start;  align-items: stretch;  }
+@mixin a-flex-v-start () {
+ display: flex;  flex-flow: column nowrap;  justify-content: flex-start;  align-items: flex-start;  }
+@mixin a-flex-v-end () {
+ display: flex;  flex-flow: column nowrap;  justify-content: flex-start;  align-items: flex-end;  }
 @mixin a-flex-h () {
- display: flex;  flex-flow: row nowrap;  align-items: center;  }
-@mixin a-flex-h-fill () {
- display: flex;  flex-flow: row nowrap;  align-items: stretch;  }
+ display: flex;  flex-flow: row nowrap;  justify-content: flex-start;  align-items: center;  }
 @mixin a-flex-h-stretch () {
- display: flex;  flex-flow: row nowrap;  align-items: stretch;  }
+ display: flex;  flex-flow: row nowrap;  justify-content: flex-start;  align-items: stretch;  }
+@mixin a-flex-h-start () {
+ display: flex;  flex-flow: row nowrap;  justify-content: flex-start;  align-items: flex-start;  }
+@mixin a-flex-h-end () {
+ display: flex;  flex-flow: row nowrap;  justify-content: flex-start;  align-items: flex-end;  }
 @mixin a-flex-center () {
  display: flex;  flex-flow: row nowrap;  justify-content: center;  align-items: center;  .no-flexbox & {  }  }
 @mixin a-flex-item-fill () {
@@ -5391,12 +5395,14 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-width-auto (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width : auto  !important;}}
 @mixin breakpoint-md-a-width-initial (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width : initial  !important;}}
 @mixin breakpoint-md-a-width-inherit (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width : inherit  !important;}}
-@mixin breakpoint-md-a-flex-v (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: center !important; }}
-@mixin breakpoint-md-a-flex-v-fill (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: stretch !important; }}
-@mixin breakpoint-md-a-flex-v-stretch (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: stretch !important; }}
-@mixin breakpoint-md-a-flex-h (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: center !important; }}
-@mixin breakpoint-md-a-flex-h-fill (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
-@mixin breakpoint-md-a-flex-h-stretch (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
+@mixin breakpoint-md-a-flex-v (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: center !important; }}
+@mixin breakpoint-md-a-flex-v-stretch (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: stretch !important; }}
+@mixin breakpoint-md-a-flex-v-start (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: flex-start !important; }}
+@mixin breakpoint-md-a-flex-v-end (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: flex-end !important; }}
+@mixin breakpoint-md-a-flex-h (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: flex-start !important;  align-items: center !important; }}
+@mixin breakpoint-md-a-flex-h-stretch (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: flex-start !important;  align-items: stretch !important; }}
+@mixin breakpoint-md-a-flex-h-start (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: flex-start !important;  align-items: flex-start !important; }}
+@mixin breakpoint-md-a-flex-h-end (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: flex-start !important;  align-items: flex-end !important; }}
 @mixin breakpoint-md-a-flex-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important;  .no-flexbox & {  } }}
 @mixin breakpoint-md-a-flex-item-fill (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  flex: 1 !important; }}
 @mixin breakpoint-md-a-single-line (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  overflow: hidden !important;  white-space: nowrap !important; }}
@@ -7104,12 +7110,14 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-width-auto (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width : auto  !important;}}
 @mixin breakpoint-sm-a-width-initial (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width : initial  !important;}}
 @mixin breakpoint-sm-a-width-inherit (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width : inherit  !important;}}
-@mixin breakpoint-sm-a-flex-v (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: center !important; }}
-@mixin breakpoint-sm-a-flex-v-fill (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: stretch !important; }}
-@mixin breakpoint-sm-a-flex-v-stretch (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  align-items: stretch !important; }}
-@mixin breakpoint-sm-a-flex-h (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: center !important; }}
-@mixin breakpoint-sm-a-flex-h-fill (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
-@mixin breakpoint-sm-a-flex-h-stretch (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
+@mixin breakpoint-sm-a-flex-v (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: center !important; }}
+@mixin breakpoint-sm-a-flex-v-stretch (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: stretch !important; }}
+@mixin breakpoint-sm-a-flex-v-start (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: flex-start !important; }}
+@mixin breakpoint-sm-a-flex-v-end (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: flex-end !important; }}
+@mixin breakpoint-sm-a-flex-h (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: flex-start !important;  align-items: center !important; }}
+@mixin breakpoint-sm-a-flex-h-stretch (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: flex-start !important;  align-items: stretch !important; }}
+@mixin breakpoint-sm-a-flex-h-start (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: flex-start !important;  align-items: flex-start !important; }}
+@mixin breakpoint-sm-a-flex-h-end (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: flex-start !important;  align-items: flex-end !important; }}
 @mixin breakpoint-sm-a-flex-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important;  .no-flexbox & {  } }}
 @mixin breakpoint-sm-a-flex-item-fill (  ) { @media ( max-width: $v-breakpoint-small-min ) {  flex: 1 !important; }}
 @mixin breakpoint-sm-a-single-line (  ) { @media ( max-width: $v-breakpoint-small-min ) {  overflow: hidden !important;  white-space: nowrap !important; }}
