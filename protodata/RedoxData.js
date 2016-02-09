@@ -19,6 +19,7 @@ module.exports = {
 
             this.test_data = {};
             
+            this.test_data.people = ["Joan Smith","John Smith"];
             this.test_data.data_models = pd.config.data_model.data;
             
             this.test_data.event_types = ["Type 1","Type 2","Type 3"];

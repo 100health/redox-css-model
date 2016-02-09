@@ -215,7 +215,6 @@ var DevToolsInbound = React.createClass({
 
         var outbound_connections_options = [];
         for ( var i=0; i<outbound.length; i++ ) {
-
             if ( RS.route.conn_id == outbound[i].guid ) {
                 outbound_connections_options.push(
                     <option value={ outbound[i].guid }
