@@ -21670,7 +21670,7 @@ var LogDetail = React.createClass({displayName: "LogDetail",
                           ), 
                           
                           
-                          React.createElement("div", {className: "o-tabs"}, 
+                          React.createElement("div", {className: "o-tabs a-height-row-2-half a-border-h a-border-top"}, 
                               React.createElement("button", {className: "o-tabs__item"}, 
                                   "Incoming"
                               ), 
@@ -21680,11 +21680,11 @@ var LogDetail = React.createClass({displayName: "LogDetail",
                               ), 
                               
                               React.createElement("button", {className: "o-tabs__item"}, 
-                                  React.createElement("em", null, "Filter")
+                                  "Filter"
                               ), 
                               
                               React.createElement("button", {className: "o-tabs__item"}, 
-                                  React.createElement("em", null, "Response")
+                                  "Response"
                               )
                           ), 
                           

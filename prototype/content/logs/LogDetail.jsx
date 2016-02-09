@@ -84,7 +84,7 @@ var LogDetail = React.createClass({
                           </div>
                           
                           
-                          <div className="o-tabs">
+                          <div className="o-tabs a-height-row-2-half a-border-h a-border-top">
                               <button className="o-tabs__item">
                                   Incoming
                               </button>
@@ -94,11 +94,11 @@ var LogDetail = React.createClass({
                               </button>
                               
                               <button className="o-tabs__item">
-                                  <em>Filter</em>
+                                  Filter
                               </button>
                               
                               <button className="o-tabs__item">
-                                  <em>Response</em>
+                                  Response
                               </button>
                           </div>
                           
