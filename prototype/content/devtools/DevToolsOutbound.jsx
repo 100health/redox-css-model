@@ -133,79 +133,6 @@ var DevToolsOutbound = React.createClass({
             }
         }
         
-        
-        
-        // DATA MODELS
-        var data_models = RedoxModel.app.test_data.data_models;
-        var data_models_options = [];
-        for ( var i=0; i<data_models.length; i++ ) {
-          data_models_options.push(
-            <option value={ data_models[i].name }
-                key={ data_models[i].name }>{ data_models[i].name }</option>
-          );
-        }
-        
-        
-        // EVENT TYPES
-        var event_types = RedoxModel.app.test_data.event_types;
-        var event_types_options = [];
-        for ( var i=0; i<event_types.length; i++ ) {
-          event_types_options.push(
-            <option value={ event_types[i] }
-                key={ event_types[i] }>{ event_types[i] }</option>
-          );
-        }
-        
-        
-        // PEOPLE / PATIENTS
-        var people = RedoxModel.app.test_data.people;
-        var people_options = [];
-        for ( var i=0; i<people.length; i++ ) {
-          people_options.push(
-            <option value={ people[i] } key={ people[i] }>{ people[i] }</option>
-          );
-        }
-
-        
-        // VISIT PROVIDERS
-        var visit_providers = RedoxModel.app.test_data.visit_providers;
-        var visit_providers_options = [];
-        for ( var i=0; i<visit_providers.length; i++ ) {
-          visit_providers_options.push(
-            <option value={ visit_providers[i] } key={ visit_providers[i] }>{ visit_providers[i] }</option>
-          );
-        }
-        
-        
-        // VISIT PROVIDERS
-        var visit_providers = RedoxModel.app.test_data.visit_providers;
-        var visit_providers_options = [];
-        for ( var i=0; i<visit_providers.length; i++ ) {
-          visit_providers_options.push(
-            <option value={ visit_providers[i] } key={ visit_providers[i] }>{ visit_providers[i] }</option>
-          );
-        }
-        
-        
-        // LOCATIONS
-        var locations = RedoxModel.app.test_data.locations;
-        var locations_options = [];
-        for ( var i=0; i<locations.length; i++ ) {
-          locations_options.push(
-            <option value={ locations[i] } key={ locations[i] }>{ locations[i] }</option>
-          );
-        }
-        
-        
-        // TRANSACTIONS
-        var transactions = RedoxModel.app.test_data.transactions;
-        var transactions_options = [];
-        for ( var i=0; i<locations.length; i++ ) {
-          transactions_options.push(
-            <option value={ transactions[i] } key={ transactions[i] }>{ transactions[i] }</option>
-          );
-        }
-
 
         return  <div className="o-devToolsApp o-contentSimple">
                     <div className="o-contentSimple__contentContainer a-overflow-hidden">
@@ -239,14 +166,18 @@ var DevToolsOutbound = React.createClass({
                                         <div className="o-form__element">
                                             <label>Data Model</label>
                                             <select>
-                                                { data_models_options }
+                                                { RedoxModel.app.test_data.data_models.map(function(item) {
+                                                    return  <option value={ item.name } key={ item.name }>{ item.name }</option>;
+                                                }) }
                                             </select>
                                         </div>
 
                                         <div className="o-form__element">
                                             <label>Event Type</label>
                                             <select>
-                                                { event_types_options }
+                                                { RedoxModel.app.test_data.event_types.map(function(item) {
+                                                    return  <option value={ item } key={ item }>{ item }</option>;
+                                                }) }
                                             </select>
                                         </div>
 
@@ -256,28 +187,36 @@ var DevToolsOutbound = React.createClass({
                                         <div className="o-form__element">
                                             <label>Patient</label>
                                             <select>
-                                                { people_options }
+                                                { RedoxModel.app.test_data.people.map(function(item) {
+                                                    return  <option value={ item } key={ item }>{ item }</option>;
+                                                }) }
                                             </select>
                                         </div>
 
                                         <div className="o-form__element">
                                             <label>Visit Provider</label>
                                             <select>
-                                                { visit_providers_options }
+                                                { RedoxModel.app.test_data.visit_providers.map(function(item) {
+                                                    return  <option value={ item } key={ item }>{ item }</option>;
+                                                }) }
                                             </select>
                                         </div>
 
                                         <div className="o-form__element">
                                             <label>Location</label>
                                             <select>
-                                                { locations_options }
+                                                { RedoxModel.app.test_data.locations.map(function(item) {
+                                                    return  <option value={ item } key={ item }>{ item }</option>;
+                                                }) }
                                             </select>
                                         </div>
 
                                         <div className="o-form__element">
                                             <label>Transaction</label>
                                             <select>
-                                                { transactions_options }
+                                                { RedoxModel.app.test_data.transactions.map(function(item) {
+                                                    return  <option value={ item } key={ item }>{ item }</option>;
+                                                }) }
                                             </select>
                                         </div>
 
