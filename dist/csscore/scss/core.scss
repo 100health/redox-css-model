@@ -3674,7 +3674,7 @@ $v-border-radius: 3px;
 @mixin a-flex-h-stretch () {
  display: flex;  flex-flow: row nowrap;  align-items: stretch;  }
 @mixin a-flex-center () {
- display: flex;  flex-flow: row nowrap;  justify-content: center;  align-items: center;  }
+ display: flex;  flex-flow: row nowrap;  justify-content: center;  align-items: center;  .no-flexbox & {  }  }
 @mixin a-flex-item-fill () {
  flex: 1;  }
 @mixin a-single-line () {
@@ -5401,7 +5401,7 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-flex-h (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: center !important; }}
 @mixin breakpoint-md-a-flex-h-fill (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
 @mixin breakpoint-md-a-flex-h-stretch (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
-@mixin breakpoint-md-a-flex-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important; }}
+@mixin breakpoint-md-a-flex-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important;  .no-flexbox & {  } }}
 @mixin breakpoint-md-a-flex-item-fill (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  flex: 1 !important; }}
 @mixin breakpoint-md-a-single-line (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  overflow: hidden !important;  white-space: nowrap !important; }}
 @mixin breakpoint-md-a-transform-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  top: 50% !important;  left: 50% !important;  -ms-transform: translateY(-50%) translateX(-50%) !important;  transform: translateY(-50%) translateX(-50%) !important; }}
@@ -7114,7 +7114,7 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-flex-h (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: center !important; }}
 @mixin breakpoint-sm-a-flex-h-fill (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
 @mixin breakpoint-sm-a-flex-h-stretch (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; }}
-@mixin breakpoint-sm-a-flex-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important; }}
+@mixin breakpoint-sm-a-flex-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important;  .no-flexbox & {  } }}
 @mixin breakpoint-sm-a-flex-item-fill (  ) { @media ( max-width: $v-breakpoint-small-min ) {  flex: 1 !important; }}
 @mixin breakpoint-sm-a-single-line (  ) { @media ( max-width: $v-breakpoint-small-min ) {  overflow: hidden !important;  white-space: nowrap !important; }}
 @mixin breakpoint-sm-a-transform-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  top: 50% !important;  left: 50% !important;  -ms-transform: translateY(-50%) translateX(-50%) !important;  transform: translateY(-50%) translateX(-50%) !important; }}
@@ -7136,7 +7136,7 @@ $v-border-radius: 3px;
 .a-flex-h {  display: flex !important;  flex-flow: row nowrap !important;  align-items: center !important;  }
 .a-flex-h-fill {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important;  }
 .a-flex-h-stretch {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important;  }
-.a-flex-center {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important;  }
+.a-flex-center {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important;  .no-flexbox & {  }  }
 .a-flex-item-fill {  flex: 1 !important;  }
 .a-single-line {  overflow: hidden !important;  white-space: nowrap !important;  }
 .a-transform-center {  top: 50% !important;  left: 50% !important;  -ms-transform: translateY(-50%) translateX(-50%) !important;  transform: translateY(-50%) translateX(-50%) !important;  }
@@ -8914,7 +8914,7 @@ $v-border-radius: 3px;
 .breakpoint-sm-a-flex-h { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: center !important; } } 
 .breakpoint-sm-a-flex-h-fill { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; } } 
 .breakpoint-sm-a-flex-h-stretch { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  align-items: stretch !important; } } 
-.breakpoint-sm-a-flex-center { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important; } } 
+.breakpoint-sm-a-flex-center { @media ( max-width: $v-breakpoint-small-min ) {  display: flex !important;  flex-flow: row nowrap !important;  justify-content: center !important;  align-items: center !important;  .no-flexbox & {  } } } 
 .breakpoint-sm-a-flex-item-fill { @media ( max-width: $v-breakpoint-small-min ) {  flex: 1 !important; } } 
 .breakpoint-sm-a-single-line { @media ( max-width: $v-breakpoint-small-min ) {  overflow: hidden !important;  white-space: nowrap !important; } } 
 .breakpoint-sm-a-transform-center { @media ( max-width: $v-breakpoint-small-min ) {  top: 50% !important;  left: 50% !important;  -ms-transform: translateY(-50%) translateX(-50%) !important;  transform: translateY(-50%) translateX(-50%) !important; } } 

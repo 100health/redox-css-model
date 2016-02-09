@@ -115,7 +115,7 @@
 		},
 
         {
-			"name":"flex-v",
+			"name":"flex-v-fill",
             "group":"layouts",
             "sub_group":"positioning",
 			"selector":".a-flex-v-fill",
@@ -128,7 +128,7 @@
 		},
 
         {
-			"name":"flex-v",
+			"name":"flex-v-stretch",
             "group":"layouts",
             "sub_group":"positioning",
 			"selector":".a-flex-v-stretch",
@@ -189,7 +189,9 @@
                 "display: flex;",
                 "flex-flow: row nowrap;",
             	"justify-content: center;",
-            	"align-items: center;"
+            	"align-items: center;",
+                ".no-flexbox & {",
+                "}"
 			]
 		},
 

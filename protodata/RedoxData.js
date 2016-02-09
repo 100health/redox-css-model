@@ -4,13 +4,22 @@
 module.exports = {
     app:{
         init:function ( pd ) {
-            // this.name = pd.db_random( "firstName" );
-            // this.favorite_toy = pd.db_random( "noun" );
 
-            /*this.cats = 	pd.generateArray(
-                                    "cats" ,  pd.random( 7 , 13 ),
-                                    this , "dog"
-                                );*/
+            /*
+            pd is Protodata:
+
+            pd.config = this JSON formatted object
+
+            args to each init:
+            - pd = Protodata
+            - index = index in the overall array of these types of objects
+            - config_obj = just the JSON object for the object being created
+            */
+
+
+            this.test_data = {};
+            this.test_data.people = ["Joan","John"];
+            this.test_data.data_models = pd.config.data_model.data;
 
             this.main_pages = pd.generateArray(
                                     "main_page" ,
@@ -39,6 +48,8 @@ module.exports = {
 
                                 );
             this.focused_organization = this.organizations[2];
+
+
 
 
 
