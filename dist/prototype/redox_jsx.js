@@ -578,7 +578,6 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
 
         var outbound_connections_options = [];
         for ( var i=0; i<outbound.length; i++ ) {
-
             if ( RS.route.conn_id == outbound[i].guid ) {
                 outbound_connections_options.push(
                     React.createElement("option", {value:  outbound[i].guid, 
@@ -591,6 +590,79 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
                 );
             }
         }
+        
+        
+        // DATA MODELS
+        var data_models = RedoxModel.app.test_data.data_models;
+        var data_models_options = [];
+        for ( var i=0; i<data_models.length; i++ ) {
+          data_models_options.push(
+            React.createElement("option", {value:  data_models[i].name, 
+                key:  data_models[i].name},  data_models[i].name)
+          );
+        }
+        
+        
+        // EVENT TYPES
+        var event_types = RedoxModel.app.test_data.event_types;
+        var event_types_options = [];
+        for ( var i=0; i<event_types.length; i++ ) {
+          event_types_options.push(
+            React.createElement("option", {value:  event_types[i], 
+                key:  event_types[i] },  event_types[i] )
+          );
+        }
+        
+        
+        // PEOPLE / PATIENTS
+        var people = RedoxModel.app.test_data.people;
+        var people_options = [];
+        for ( var i=0; i<people.length; i++ ) {
+          people_options.push(
+            React.createElement("option", {value:  people[i], key:  people[i] },  people[i] )
+          );
+        }
+
+        
+        // VISIT PROVIDERS
+        var visit_providers = RedoxModel.app.test_data.visit_providers;
+        var visit_providers_options = [];
+        for ( var i=0; i<visit_providers.length; i++ ) {
+          visit_providers_options.push(
+            React.createElement("option", {value:  visit_providers[i], key:  visit_providers[i] },  visit_providers[i] )
+          );
+        }
+        
+        
+        // VISIT PROVIDERS
+        var visit_providers = RedoxModel.app.test_data.visit_providers;
+        var visit_providers_options = [];
+        for ( var i=0; i<visit_providers.length; i++ ) {
+          visit_providers_options.push(
+            React.createElement("option", {value:  visit_providers[i], key:  visit_providers[i] },  visit_providers[i] )
+          );
+        }
+        
+        
+        // LOCATIONS
+        var locations = RedoxModel.app.test_data.locations;
+        var locations_options = [];
+        for ( var i=0; i<locations.length; i++ ) {
+          locations_options.push(
+            React.createElement("option", {value:  locations[i], key:  locations[i] },  locations[i] )
+          );
+        }
+        
+        
+        // TRANSACTIONS
+        var transactions = RedoxModel.app.test_data.transactions;
+        var transactions_options = [];
+        for ( var i=0; i<locations.length; i++ ) {
+          transactions_options.push(
+            React.createElement("option", {value:  transactions[i], key:  transactions[i] },  transactions[i] )
+          );
+        }
+        
 
         return  React.createElement("div", {className: "o-devToolsApp o-contentSimple"}, 
                     React.createElement("div", {className: "o-contentSimple__contentContainer a-overflow-hidden"}, 
@@ -614,18 +686,14 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Data Model"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Financial"), 
-                                                React.createElement("option", {value: "B"}, "Other"), 
-                                                React.createElement("option", {value: "C"}, "Other")
+                                                 data_models_options 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Event Type"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Type"), 
-                                                React.createElement("option", {value: "B"}, "Type"), 
-                                                React.createElement("option", {value: "C"}, "Type")
+                                                 event_types_options 
                                             )
                                         ), 
 
@@ -635,36 +703,28 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Patient"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Information"), 
-                                                React.createElement("option", {value: "B"}, "Information"), 
-                                                React.createElement("option", {value: "C"}, "Information")
+                                                 people_options 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Visit Provider"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Information"), 
-                                                React.createElement("option", {value: "B"}, "Information"), 
-                                                React.createElement("option", {value: "C"}, "Information")
+                                                 visit_providers_options 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Location"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Information"), 
-                                                React.createElement("option", {value: "B"}, "Information"), 
-                                                React.createElement("option", {value: "C"}, "Information")
+                                                 locations_options 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Transaction"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Information"), 
-                                                React.createElement("option", {value: "B"}, "Information"), 
-                                                React.createElement("option", {value: "C"}, "Information")
+                                                 transactions_options 
                                             )
                                         ), 
 
@@ -865,6 +925,80 @@ var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
                 );
             }
         }
+        
+        
+        
+        // DATA MODELS
+        var data_models = RedoxModel.app.test_data.data_models;
+        var data_models_options = [];
+        for ( var i=0; i<data_models.length; i++ ) {
+          data_models_options.push(
+            React.createElement("option", {value:  data_models[i].name, 
+                key:  data_models[i].name},  data_models[i].name)
+          );
+        }
+        
+        
+        // EVENT TYPES
+        var event_types = RedoxModel.app.test_data.event_types;
+        var event_types_options = [];
+        for ( var i=0; i<event_types.length; i++ ) {
+          event_types_options.push(
+            React.createElement("option", {value:  event_types[i], 
+                key:  event_types[i] },  event_types[i] )
+          );
+        }
+        
+        
+        // PEOPLE / PATIENTS
+        var people = RedoxModel.app.test_data.people;
+        var people_options = [];
+        for ( var i=0; i<people.length; i++ ) {
+          people_options.push(
+            React.createElement("option", {value:  people[i], key:  people[i] },  people[i] )
+          );
+        }
+
+        
+        // VISIT PROVIDERS
+        var visit_providers = RedoxModel.app.test_data.visit_providers;
+        var visit_providers_options = [];
+        for ( var i=0; i<visit_providers.length; i++ ) {
+          visit_providers_options.push(
+            React.createElement("option", {value:  visit_providers[i], key:  visit_providers[i] },  visit_providers[i] )
+          );
+        }
+        
+        
+        // VISIT PROVIDERS
+        var visit_providers = RedoxModel.app.test_data.visit_providers;
+        var visit_providers_options = [];
+        for ( var i=0; i<visit_providers.length; i++ ) {
+          visit_providers_options.push(
+            React.createElement("option", {value:  visit_providers[i], key:  visit_providers[i] },  visit_providers[i] )
+          );
+        }
+        
+        
+        // LOCATIONS
+        var locations = RedoxModel.app.test_data.locations;
+        var locations_options = [];
+        for ( var i=0; i<locations.length; i++ ) {
+          locations_options.push(
+            React.createElement("option", {value:  locations[i], key:  locations[i] },  locations[i] )
+          );
+        }
+        
+        
+        // TRANSACTIONS
+        var transactions = RedoxModel.app.test_data.transactions;
+        var transactions_options = [];
+        for ( var i=0; i<locations.length; i++ ) {
+          transactions_options.push(
+            React.createElement("option", {value:  transactions[i], key:  transactions[i] },  transactions[i] )
+          );
+        }
+
 
         return  React.createElement("div", {className: "o-devToolsApp o-contentSimple"}, 
                     React.createElement("div", {className: "o-contentSimple__contentContainer a-overflow-hidden"}, 
@@ -898,18 +1032,14 @@ var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Data Model"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Financial"), 
-                                                React.createElement("option", {value: "B"}, "Other"), 
-                                                React.createElement("option", {value: "C"}, "Other")
+                                                 data_models_options 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Event Type"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Type"), 
-                                                React.createElement("option", {value: "B"}, "Type"), 
-                                                React.createElement("option", {value: "C"}, "Type")
+                                                 event_types_options 
                                             )
                                         ), 
 
@@ -919,36 +1049,28 @@ var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Patient"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Information"), 
-                                                React.createElement("option", {value: "B"}, "Information"), 
-                                                React.createElement("option", {value: "C"}, "Information")
+                                                 people_options 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Visit Provider"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Information"), 
-                                                React.createElement("option", {value: "B"}, "Information"), 
-                                                React.createElement("option", {value: "C"}, "Information")
+                                                 visit_providers_options 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Location"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Information"), 
-                                                React.createElement("option", {value: "B"}, "Information"), 
-                                                React.createElement("option", {value: "C"}, "Information")
+                                                 locations_options 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Transaction"), 
                                             React.createElement("select", null, 
-                                                React.createElement("option", {value: "A"}, "Information"), 
-                                                React.createElement("option", {value: "B"}, "Information"), 
-                                                React.createElement("option", {value: "C"}, "Information")
+                                                 transactions_options 
                                             )
                                         ), 
 
