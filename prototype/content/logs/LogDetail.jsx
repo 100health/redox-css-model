@@ -45,8 +45,9 @@ var LogDetail = React.createClass({
         var log = RedoxModel.get( RS.route.log_id );
 
 
+        var tab_content = "";
         if ( RS.route.log_detail_tab_index == "" ) {
-
+            tab_content = <div>hi</div>;
         }
 
         return  <div className="o-contentSimple c-logDetail">
@@ -114,7 +115,7 @@ var LogDetail = React.createClass({
                                   Response
                               </button>
                           </div>
-
+                          { tab_content }
 
 
 
