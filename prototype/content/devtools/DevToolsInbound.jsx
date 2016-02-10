@@ -227,7 +227,7 @@ var DevToolsInbound = React.createClass({
                 );
             }
         }
-        
+
 
         return  <div className="o-devToolsApp o-contentSimple">
                     <div className="o-contentSimple__contentContainer a-overflow-hidden">
@@ -278,7 +278,7 @@ var DevToolsInbound = React.createClass({
                                             </select>
                                         </div>
 
-                                        <div className="o-form__element">
+                                        <div className="o-form__element o-devToolsApp__element--visit">
                                             <label>Visit Provider</label>
                                             <select>
                                                 { RedoxModel.app.test_data.visit_providers.map(function(item) {

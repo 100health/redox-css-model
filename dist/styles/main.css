@@ -1839,6 +1839,9 @@ html:not(.no-flexbox) .c-devTools__content {
   .o-devToolsApp__leftInputs:hover {
     width: 29.166655vw; }
 
+.o-devToolsApp__element--visit {
+  background-color: #4D4D4D; }
+
 .o-devToolsApp__leftActions {
   height: 66px;
   border-top: 1px solid #eee; }
