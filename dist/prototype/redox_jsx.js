@@ -1165,7 +1165,7 @@ var LogDetail = React.createClass({displayName: "LogDetail",
                               "Schedule"
                             ), 
                             
-                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--status1 fail"}, 
+                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--status1"}, 
                               React.createElement("div", {className: "fa fa-minus"}), " fail"
                             ), 
                             
@@ -1460,10 +1460,15 @@ var Logs = React.createClass({displayName: "Logs",
                                         "c-logs__cell--summaryTime"}, "Date/Time")
                                 )
                             ), 
+                            
+                            
                             React.createElement("div", {className: "c-logs__filters"}, 
                                 React.createElement("div", {className: "c-logs__closeFilters", 
                                     onClick:  this.toggleFooter}), 
-                                React.createElement("div", {className: "p-logs__filters", 
+                                React.createElement("div", {className: 
+                                    "p-logs__filters" + ' ' +
+                                    "o-form" + ' ' +
+                                    "o-list", 
                                     onClick: 
                                         function () {
                                             $(".c-logs__cell--summaryModel").html("<b>Scheduling</b>");
@@ -1474,7 +1479,70 @@ var Logs = React.createClass({displayName: "Logs",
 
                                             $(".p-logs__filters").addClass("p-logs__filters--selected");
                                         }
-                                    }), 
+                                    }, 
+                                    
+                                    
+                                            React.createElement("div", {className: 
+                                                "o-list__cell" + ' ' +
+                                                "p-logs__filters--cell" + ' ' +
+                                                "p-logs__filters--summaryType"}, 
+                                                    React.createElement("div", {className: "o-form__element"}, 
+                                                        React.createElement("select", null, 
+                                                            React.createElement("option", {value: "type", key: "type"}, "Type")
+                                                        )
+                                                    )
+                                                ), 
+                                                
+                                            React.createElement("div", {className: 
+                                                "o-list__cell" + ' ' +
+                                                "p-logs__filters--cell" + ' ' +
+                                                "p-logs__filters--summaryModel"}, 
+                                                    React.createElement("div", {className: "o-form__element"}, 
+                                                        React.createElement("select", null, 
+                                                            React.createElement("option", {value: "data-model", key: "data-model"}, "Data Model")
+                                                        )
+                                                    )
+                                                    
+                                                ), 
+                                            
+                                            React.createElement("div", {className: 
+                                                "o-list__cell" + ' ' +
+                                                "p-logs__filters--cell" + ' ' +
+                                                "p-logs__filters--summaryStatus"}, 
+                                                    React.createElement("div", {className: "o-form__element"}, 
+                                                        React.createElement("select", null, 
+                                                            React.createElement("option", {value: "status", key: "status"}, "Status")
+                                                        )
+                                                    )
+                                                
+                                                ), 
+                                                
+                                            React.createElement("div", {className: 
+                                                "o-list__cell" + ' ' +
+                                                "p-logs__filters--cell" + ' ' +
+                                                "p-logs__filters--summaryEnvironment"}, 
+                                                    React.createElement("div", {className: "o-form__element"}, 
+                                                        React.createElement("select", null, 
+                                                            React.createElement("option", {value: "environment", key: "environment"}, "Environment")
+                                                        )
+                                                    )
+                                                
+                                                ), 
+                                            React.createElement("div", {className: 
+                                                "o-list__cell" + ' ' +
+                                                "p-logs__filters--cell" + ' ' +
+                                                "p-logs__filters--summaryTime" + ' ' +
+                                                "a-flex-item-fill"}, 
+                                                    React.createElement("div", {className: "o-form__element"}, 
+                                                        React.createElement("input", {className: "c-logs__search"})
+                                                    )
+                                                
+                                                )
+
+                                    
+                            
+                            
+                                ), 
                                 React.createElement("div", {className: "p-logs__clearAll", 
                                     onClick: 
                                         function () {
@@ -1488,6 +1556,9 @@ var Logs = React.createClass({displayName: "Logs",
                                         }
                                     })
                             )
+                            
+                            
+                            
                         )
                     )
                 );

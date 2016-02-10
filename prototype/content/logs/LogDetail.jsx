@@ -69,7 +69,7 @@ var LogDetail = React.createClass({
                               Schedule
                             </div>
                             
-                            <div className="p-logs__logHeader--cell p-logs__logHeader--status1 fail">
+                            <div className="p-logs__logHeader--cell p-logs__logHeader--status1">
                               <div className="fa fa-minus"></div>&nbsp;fail
                             </div>
                             

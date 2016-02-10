@@ -213,10 +213,15 @@ var Logs = React.createClass({
                                         c-logs__cell--summaryTime">Date/Time</div>
                                 </div>
                             </div>
+                            
+                            
                             <div className="c-logs__filters">
                                 <div className="c-logs__closeFilters"
                                     onClick={ this.toggleFooter }></div>
-                                <div className="p-logs__filters"
+                                <div className="
+                                    p-logs__filters
+                                    o-form
+                                    o-list"
                                     onClick={
                                         function () {
                                             $(".c-logs__cell--summaryModel").html("<b>Scheduling</b>");
@@ -227,7 +232,70 @@ var Logs = React.createClass({
 
                                             $(".p-logs__filters").addClass("p-logs__filters--selected");
                                         }
-                                    }></div>
+                                    }>
+                                    
+                                    
+                                            <div className="
+                                                o-list__cell
+                                                p-logs__filters--cell
+                                                p-logs__filters--summaryType">
+                                                    <div className="o-form__element">
+                                                        <select>
+                                                            <option value="type" key="type">Type</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                            <div className="
+                                                o-list__cell
+                                                p-logs__filters--cell
+                                                p-logs__filters--summaryModel">
+                                                    <div className="o-form__element">
+                                                        <select>
+                                                            <option value="data-model" key="data-model">Data Model</option>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                </div>
+                                            
+                                            <div className="
+                                                o-list__cell
+                                                p-logs__filters--cell
+                                                p-logs__filters--summaryStatus">
+                                                    <div className="o-form__element">
+                                                        <select>
+                                                            <option value="status" key="status">Status</option>
+                                                        </select>
+                                                    </div>
+                                                
+                                                </div>
+                                                
+                                            <div className="
+                                                o-list__cell
+                                                p-logs__filters--cell
+                                                p-logs__filters--summaryEnvironment">
+                                                    <div className="o-form__element">
+                                                        <select>
+                                                            <option value="environment" key="environment">Environment</option>
+                                                        </select>
+                                                    </div>
+                                                
+                                                </div>
+                                            <div className="
+                                                o-list__cell
+                                                p-logs__filters--cell
+                                                p-logs__filters--summaryTime
+                                                a-flex-item-fill">
+                                                    <div className="o-form__element">
+                                                        <input className="c-logs__search" />
+                                                    </div>
+                                                
+                                                </div>
+
+                                    
+                            
+                            
+                                </div>
                                 <div className="p-logs__clearAll"
                                     onClick={
                                         function () {
@@ -241,6 +309,9 @@ var Logs = React.createClass({
                                         }
                                     }></div>
                             </div>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>;

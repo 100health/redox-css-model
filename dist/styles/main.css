@@ -796,7 +796,7 @@ input {
     .o-list--footer .o-list__cell:first-of-type {
       border-left: none; }
 
-.o-button, .o-devToolsApp__rightNavItem, .o-devToolsOutput__navItem, .o-flatButton, .o-roundedButton, .o-devToolsOutput__copy, .o-devToolsOutput__navAction, .o-devToolsLanding__action {
+.o-button, .o-tabs__item, .o-devToolsApp__rightNavItem, .o-devToolsOutput__navItem, .p-logs__logNav--navItem, .o-flatButton, .o-roundedButton, .o-devToolsOutput__copy, .o-devToolsOutput__navAction, .o-devToolsLanding__action {
   /* -ctag-example: <button ...>Button</button>;*/
   /* -ctag-status: prod;*/
   width: 16.66666vw;
@@ -806,10 +806,15 @@ input {
   line-height: 22px;
   border: none;
   outline: none; }
-  .o-button:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .o-flatButton:hover, .o-roundedButton:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover {
+  .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-flatButton:hover, .o-roundedButton:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover {
     color: #1A1A1A; }
-  .o-button--disabled, .o-button:disabled, .o-devToolsApp__rightNavItem:disabled, .o-devToolsOutput__navItem:disabled, .o-flatButton--disabled, .o-flatButton:disabled, .o-roundedButton--disabled, .o-roundedButton:disabled, .o-devToolsOutput__copy:disabled, .o-devToolsOutput__navAction:disabled, .o-devToolsLanding__action:disabled {
+  .o-button--disabled, .o-button:disabled, .o-tabs__item:disabled, .o-devToolsApp__rightNavItem:disabled, .o-devToolsOutput__navItem:disabled, .p-logs__logNav--navItem:disabled, .o-flatButton--disabled, .o-flatButton:disabled, .o-roundedButton--disabled, .o-roundedButton:disabled, .o-devToolsOutput__copy:disabled, .o-devToolsOutput__navAction:disabled, .o-devToolsLanding__action:disabled {
     color: #B3B3B3; }
+  .o-button--blurred, .o-tabs__item:not(.o-tabs__item--selected), .o-flatButton--blurred, .o-roundedButton--blurred {
+    background-color: #eee;
+    color: #999999; }
+    .o-button--blurred:hover, .o-tabs__item:hover:not(.o-tabs__item--selected), .o-flatButton--blurred:hover, .o-roundedButton--blurred:hover {
+      background-color: #fff; }
   .o-button--redox-green, .o-flatButton--redox-green, .o-roundedButton--redox-green, .o-devToolsOutput__copy, .o-devToolsOutput__navAction {
     /* */
     background-color: #00b588;
@@ -819,7 +824,7 @@ input {
       background-color: #00DFA7; }
     .o-button--redox-green:hover, .o-flatButton--redox-green:hover, .o-roundedButton--redox-green:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover {
       color: #fff; }
-  .o-button:not(button), .o-devToolsApp__rightNavItem:not(button), .o-devToolsOutput__navItem:not(button), .o-flatButton:not(button), .o-roundedButton:not(button), .o-devToolsOutput__copy:not(button), .o-devToolsOutput__navAction:not(button), .o-devToolsLanding__action:not(button) {
+  .o-button:not(button), .o-tabs__item:not(button), .o-devToolsApp__rightNavItem:not(button), .o-devToolsOutput__navItem:not(button), .p-logs__logNav--navItem:not(button), .o-flatButton:not(button), .o-roundedButton:not(button), .o-devToolsOutput__copy:not(button), .o-devToolsOutput__navAction:not(button), .o-devToolsLanding__action:not(button) {
     outline: 5px dotted red; }
 
 .o-flatButton {
@@ -846,7 +851,7 @@ input {
   .o-link:hover {
     color: #1A1A1A; }
 
-.o-form .o-button, .o-form .o-devToolsApp__rightNavItem, .o-form .o-devToolsOutput__navItem, .o-form .o-flatButton, .o-form .o-roundedButton, .o-form .o-devToolsOutput__copy, .o-form .o-devToolsOutput__navAction, .o-form .o-devToolsLanding__action {
+.o-form .o-button, .o-form .o-tabs__item, .o-form .o-devToolsApp__rightNavItem, .o-form .o-devToolsOutput__navItem, .o-form .p-logs__logNav--navItem, .o-form .o-flatButton, .o-form .o-roundedButton, .o-form .o-devToolsOutput__copy, .o-form .o-devToolsOutput__navAction, .o-form .o-devToolsLanding__action {
   /* -ctag-example: <button ...>Button</button>;*/
   /* -ctag-status: prod;*/
   width: 16.66666vw;
@@ -856,10 +861,15 @@ input {
   line-height: 22px;
   border: none;
   outline: none; }
-  .o-form .o-button:hover, .o-form .o-devToolsApp__rightNavItem:hover, .o-form .o-devToolsOutput__navItem:hover, .o-form .o-flatButton:hover, .o-form .o-roundedButton:hover, .o-form .o-devToolsOutput__copy:hover, .o-form .o-devToolsOutput__navAction:hover, .o-form .o-devToolsLanding__action:hover {
+  .o-form .o-button:hover, .o-form .o-tabs__item:hover, .o-form .o-devToolsApp__rightNavItem:hover, .o-form .o-devToolsOutput__navItem:hover, .o-form .p-logs__logNav--navItem:hover, .o-form .o-flatButton:hover, .o-form .o-roundedButton:hover, .o-form .o-devToolsOutput__copy:hover, .o-form .o-devToolsOutput__navAction:hover, .o-form .o-devToolsLanding__action:hover {
     color: #1A1A1A; }
-  .o-form .o-button--disabled, .o-form .o-button:disabled, .o-form .o-devToolsApp__rightNavItem:disabled, .o-form .o-devToolsOutput__navItem:disabled, .o-form .o-flatButton--disabled, .o-form .o-flatButton:disabled, .o-form .o-roundedButton--disabled, .o-form .o-roundedButton:disabled, .o-form .o-devToolsOutput__copy:disabled, .o-form .o-devToolsOutput__navAction:disabled, .o-form .o-devToolsLanding__action:disabled {
+  .o-form .o-button--disabled, .o-form .o-button:disabled, .o-form .o-tabs__item:disabled, .o-form .o-devToolsApp__rightNavItem:disabled, .o-form .o-devToolsOutput__navItem:disabled, .o-form .p-logs__logNav--navItem:disabled, .o-form .o-flatButton--disabled, .o-form .o-flatButton:disabled, .o-form .o-roundedButton--disabled, .o-form .o-roundedButton:disabled, .o-form .o-devToolsOutput__copy:disabled, .o-form .o-devToolsOutput__navAction:disabled, .o-form .o-devToolsLanding__action:disabled {
     color: #B3B3B3; }
+  .o-form .o-button--blurred, .o-form .o-tabs__item:not(.o-tabs__item--selected), .o-form .o-flatButton--blurred, .o-form .o-roundedButton--blurred {
+    background-color: #eee;
+    color: #999999; }
+    .o-form .o-button--blurred:hover, .o-form .o-tabs__item:hover:not(.o-tabs__item--selected), .o-form .o-flatButton--blurred:hover, .o-form .o-roundedButton--blurred:hover {
+      background-color: #fff; }
   .o-form .o-button--redox-green, .o-form .o-flatButton--redox-green, .o-form .o-roundedButton--redox-green, .o-form .o-devToolsOutput__copy, .o-form .o-devToolsOutput__navAction {
     /* */
     background-color: #00b588;
@@ -869,7 +879,7 @@ input {
       background-color: #00DFA7; }
     .o-form .o-button--redox-green:hover, .o-form .o-flatButton--redox-green:hover, .o-form .o-roundedButton--redox-green:hover, .o-form .o-devToolsOutput__copy:hover, .o-form .o-devToolsOutput__navAction:hover {
       color: #fff; }
-  .o-form .o-button:not(button), .o-form .o-devToolsApp__rightNavItem:not(button), .o-form .o-devToolsOutput__navItem:not(button), .o-form .o-flatButton:not(button), .o-form .o-roundedButton:not(button), .o-form .o-devToolsOutput__copy:not(button), .o-form .o-devToolsOutput__navAction:not(button), .o-form .o-devToolsLanding__action:not(button) {
+  .o-form .o-button:not(button), .o-form .o-tabs__item:not(button), .o-form .o-devToolsApp__rightNavItem:not(button), .o-form .o-devToolsOutput__navItem:not(button), .o-form .p-logs__logNav--navItem:not(button), .o-form .o-flatButton:not(button), .o-form .o-roundedButton:not(button), .o-form .o-devToolsOutput__copy:not(button), .o-form .o-devToolsOutput__navAction:not(button), .o-form .o-devToolsLanding__action:not(button) {
     outline: 5px dotted red; }
 
 .o-form .o-flatButton {
@@ -952,6 +962,34 @@ input {
       flex: 1; }
     .no-flexbox .o-iconButton__label {
       /* gotta use an inverse calc() size for this to work... */ }
+
+.o-tabs {
+  /* -ctag-example: ...
+            { .o-tabs__item }
+            { .o-tabs__item }
+            <div class="o-tabs__item o-tabs__item--selected">Tab Label</div>
+            { .o-tabs__item };*/
+  /* -ctag-status: prod;*/ }
+  html:not(.no-flexbox) .o-tabs {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch; }
+  .no-flexbox .o-tabs {
+    position: relative; }
+    .no-flexbox .o-tabs > * {
+      float: left;
+      height: 100%;
+      min-width: 1px; }
+  .o-tabs__item {
+    /* -ctag-example: ...Tab Label*/
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC; }
+    .o-tabs__item:last-of-type {
+      border-right: none; }
+    .o-tabs__item--selected {
+      /* touch */
+      border-bottom: none; }
 
 a {
   text-decoration: none;
@@ -2138,6 +2176,181 @@ html:not(.no-flexbox) .c-devTools__content {
   .c-logs .c-logs__cell--summaryTitle {
     justify-content: flex-start;
     padding-left: 11px; }
+  html:not(.no-flexbox) .c-logs .p-logs__filters {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+  .no-flexbox .c-logs .p-logs__filters {
+    position: relative;
+    transform-style: preserve-3d; }
+    .no-flexbox .c-logs .p-logs__filters > * {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
+  html:not(.no-flexbox) .c-logs .p-logs__filters {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .no-flexbox .c-logs .p-logs__filters {
+    position: relative; }
+    .no-flexbox .c-logs .p-logs__filters > * {
+      float: left;
+      min-width: 1px; }
+  html:not(.no-flexbox) .c-logs .p-logs__filters--cell {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+  .no-flexbox .c-logs .p-logs__filters--cell {
+    position: relative;
+    transform-style: preserve-3d; }
+    .no-flexbox .c-logs .p-logs__filters--cell > * {
+      min-width: 1px;
+      /* using margin is probably better than transform, but  it requires an exact width...lets see where it takes us first*/
+      margin: 0 auto;
+      /*position: relative;  float: left;  clear: left;  left: 50%;  transform: translateX(-50%);  -ms-transform: translateX(-50%);*/ }
+  html:not(.no-flexbox) .c-logs .p-logs__filters--cell {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .no-flexbox .c-logs .p-logs__filters--cell {
+    position: relative; }
+    .no-flexbox .c-logs .p-logs__filters--cell > * {
+      float: left;
+      min-width: 1px; }
+  .c-logs .p-logs__filters--summaryType, .c-logs .p-logs__filters--type {
+    width: 12.499995vw; }
+    html:not(.no-flexbox) .c-logs .p-logs__filters--summaryType, html:not(.no-flexbox) .c-logs .p-logs__filters--type {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-logs .p-logs__filters--summaryType, .no-flexbox .c-logs .p-logs__filters--type {
+      position: relative; }
+      .no-flexbox .c-logs .p-logs__filters--summaryType > *, .no-flexbox .c-logs .p-logs__filters--type > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
+  .c-logs .p-logs__filters--summaryTitle, .c-logs .p-logs__filters--title {
+    font-style: italic;
+    display: none; }
+    html:not(.no-flexbox) .c-logs .p-logs__filters--summaryTitle, html:not(.no-flexbox) .c-logs .p-logs__filters--title {
+      flex: 1; }
+    .no-flexbox .c-logs .p-logs__filters--summaryTitle, .no-flexbox .c-logs .p-logs__filters--title {
+      /* gotta use an inverse calc() size for this to work... */ }
+    html:not(.no-flexbox) .c-logs .p-logs__filters--summaryTitle, html:not(.no-flexbox) .c-logs .p-logs__filters--title {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .c-logs .p-logs__filters--summaryTitle, .no-flexbox .c-logs .p-logs__filters--title {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .c-logs .p-logs__filters--summaryTitle > *, .no-flexbox .c-logs .p-logs__filters--title > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
+  .c-logs .p-logs__filters--summaryStatus, .c-logs .p-logs__filters--status {
+    width: 8.33333vw;
+    padding-left: 11px; }
+    html:not(.no-flexbox) .c-logs .p-logs__filters--summaryStatus, html:not(.no-flexbox) .c-logs .p-logs__filters--status {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-logs .p-logs__filters--summaryStatus, .no-flexbox .c-logs .p-logs__filters--status {
+      position: relative; }
+      .no-flexbox .c-logs .p-logs__filters--summaryStatus > *, .no-flexbox .c-logs .p-logs__filters--status > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
+  .c-logs .p-logs__filters--summaryModel, .c-logs .p-logs__filters--model {
+    width: 16.66666vw;
+    padding-left: 11px; }
+    html:not(.no-flexbox) .c-logs .p-logs__filters--summaryModel, html:not(.no-flexbox) .c-logs .p-logs__filters--model {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .c-logs .p-logs__filters--summaryModel, .no-flexbox .c-logs .p-logs__filters--model {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .c-logs .p-logs__filters--summaryModel > *, .no-flexbox .c-logs .p-logs__filters--model > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
+    .c-logs .p-logs__filters--summaryModel .c-logs__modelIcon, .c-logs .p-logs__filters--model .c-logs__modelIcon {
+      font-size: 15px;
+      line-height: 22px;
+      margin-right: 11px;
+      height: 44px; }
+  .c-logs .p-logs__filters--summaryEnvironment, .c-logs .p-logs__filters--environment {
+    width: 12.499995vw;
+    padding-left: 11px;
+    transition: width 0.3s; }
+    html:not(.no-flexbox) .c-logs .p-logs__filters--summaryEnvironment, html:not(.no-flexbox) .c-logs .p-logs__filters--environment {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-logs .p-logs__filters--summaryEnvironment, .no-flexbox .c-logs .p-logs__filters--environment {
+      position: relative; }
+      .no-flexbox .c-logs .p-logs__filters--summaryEnvironment > *, .no-flexbox .c-logs .p-logs__filters--environment > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
+  .c-logs .p-logs__filters--summaryTime, .c-logs .p-logs__filters--time {
+    width: 12.499995vw;
+    text-align: right;
+    justify-content: flex-end;
+    padding-left: 11px;
+    transition: width 0.3s; }
+    html:not(.no-flexbox) .c-logs .p-logs__filters--summaryTime, html:not(.no-flexbox) .c-logs .p-logs__filters--time {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-end; }
+    .no-flexbox .c-logs .p-logs__filters--summaryTime, .no-flexbox .c-logs .p-logs__filters--time {
+      position: relative; }
+      .no-flexbox .c-logs .p-logs__filters--summaryTime > *, .no-flexbox .c-logs .p-logs__filters--time > * {
+        float: right;
+        clear: right;
+        min-width: 1px; }
+  .c-logs .p-logs__filters--model {
+    font-size: 14px;
+    line-height: 22px; }
+  .c-logs .p-logs__filters--environment {
+    font-size: 13px;
+    line-height: 22px; }
+  .c-logs .p-logs__filters--time {
+    width: 16.66666vw; }
+  .c-logs .p-logs__filters--summaryTitle {
+    justify-content: flex-start;
+    padding-left: 11px; }
   .c-logs__closeFilters {
     width: 8.33333vw;
     height: 66px;
@@ -2186,10 +2399,7 @@ html:not(.no-flexbox) .c-devTools__content {
     width: 100%;
     height: 198px;
     cursor: hand;
-    cursor: pointer;
-    background-image: url("../images/prototype/logFilters.png"); }
-    .p-logs__filters--selected {
-      background-image: url("../images/prototype/logFilters--selected.png"); }
+    cursor: pointer; }
   .p-logs__clearAll {
     width: 6.2499975vw;
     height: 44px;
@@ -2201,10 +2411,136 @@ html:not(.no-flexbox) .c-devTools__content {
     display: none;
     background-image: url("../images/prototype/clearAll.png"); }
   .p-logs__logDetails {
-    background-image: url("../images/prototype/logDetail.png");
     width: 100%;
-    height: 1328px;
-    margin-bottom: 40px; }
+    /*
+        height: 1328px;
+        margin-bottom: 40px;
+        */ }
+  .p-logs__logHeader {
+    height: 88px;
+    color: #808080; }
+    html:not(.no-flexbox) .p-logs__logHeader {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .p-logs__logHeader {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .p-logs__logHeader > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
+  .p-logs__logHeader--cell {
+    font-size: 16px;
+    line-height: 33px;
+    color: #999999;
+    font-weight: 500; }
+    html:not(.no-flexbox) .p-logs__logHeader--cell {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .p-logs__logHeader--cell {
+      position: relative; }
+      .no-flexbox .p-logs__logHeader--cell > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
+    .p-logs__logHeader--cell .fa.fa-calendar {
+      color: #eee;
+      font-size: 27px;
+      line-height: 44px; }
+    .p-logs__logHeader--cell .fa.fa-minus {
+      font-size: 16px;
+      line-height: 33px;
+      font-weight: 500; }
+  .p-logs__logHeader--connectionIcon {
+    width: 4.166665vw; }
+    html:not(.no-flexbox) .p-logs__logHeader--connectionIcon {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start; }
+    .no-flexbox .p-logs__logHeader--connectionIcon {
+      position: relative; }
+      .no-flexbox .p-logs__logHeader--connectionIcon > * {
+        float: left;
+        min-width: 1px; }
+  .p-logs__logHeader--connectionType {
+    width: 8.33333vw; }
+  .p-logs__logHeader--scheduleIcon {
+    width: 4.166665vw; }
+  .p-logs__logHeader--scheduleText {
+    width: 8.33333vw; }
+  .p-logs__logHeader--status1 {
+    justify-content: flex-end; }
+    html:not(.no-flexbox) .p-logs__logHeader--status1 {
+      flex: 1; }
+    .no-flexbox .p-logs__logHeader--status1 {
+      /* gotta use an inverse calc() size for this to work... */ }
+    html:not(.no-flexbox) .p-logs__logHeader--status1 {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-end; }
+    .no-flexbox .p-logs__logHeader--status1 {
+      position: relative; }
+      .no-flexbox .p-logs__logHeader--status1 > * {
+        float: left;
+        min-width: 1px;
+        position: relative;
+        top: 100%;
+        transform: translateY(-100%);
+        -ms-transform: translateY(-100%); }
+  .p-logs__logHeader--status2 {
+    width: 12.499995vw; }
+  .p-logs__logHeader--time {
+    width: 12.499995vw;
+    justify-content: flex-end; }
+    html:not(.no-flexbox) .p-logs__logHeader--time {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-end; }
+    .no-flexbox .p-logs__logHeader--time {
+      position: relative; }
+      .no-flexbox .p-logs__logHeader--time > * {
+        float: left;
+        min-width: 1px;
+        position: relative;
+        top: 100%;
+        transform: translateY(-100%);
+        -ms-transform: translateY(-100%); }
+  .p-logs__logNav {
+    height: 55px;
+    border-left: 1px solid #CCCCCC; }
+    html:not(.no-flexbox) .p-logs__logNav {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: stretch; }
+    .no-flexbox .p-logs__logNav {
+      position: relative; }
+      .no-flexbox .p-logs__logNav > * {
+        float: left;
+        height: 100%;
+        min-width: 1px; }
+  .p-logs__logNav--navItem {
+    background-color: #eee;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC; }
+    .p-logs__logNav--navItem--selected {
+      background-color: #fff;
+      border-bottom: none; }
 
 .c-logs__footer--open .p-logs__clearAll {
   display: block; }
