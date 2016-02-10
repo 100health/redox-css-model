@@ -21081,78 +21081,6 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
             }
         }
         
-        
-        // DATA MODELS
-        var data_models = RedoxModel.app.test_data.data_models;
-        var data_models_options = [];
-        for ( var i=0; i<data_models.length; i++ ) {
-          data_models_options.push(
-            React.createElement("option", {value:  data_models[i].name, 
-                key:  data_models[i].name},  data_models[i].name)
-          );
-        }
-        
-        
-        // EVENT TYPES
-        var event_types = RedoxModel.app.test_data.event_types;
-        var event_types_options = [];
-        for ( var i=0; i<event_types.length; i++ ) {
-          event_types_options.push(
-            React.createElement("option", {value:  event_types[i], 
-                key:  event_types[i] },  event_types[i] )
-          );
-        }
-        
-        
-        // PEOPLE / PATIENTS
-        var people = RedoxModel.app.test_data.people;
-        var people_options = [];
-        for ( var i=0; i<people.length; i++ ) {
-          people_options.push(
-            React.createElement("option", {value:  people[i], key:  people[i] },  people[i] )
-          );
-        }
-
-        
-        // VISIT PROVIDERS
-        var visit_providers = RedoxModel.app.test_data.visit_providers;
-        var visit_providers_options = [];
-        for ( var i=0; i<visit_providers.length; i++ ) {
-          visit_providers_options.push(
-            React.createElement("option", {value:  visit_providers[i], key:  visit_providers[i] },  visit_providers[i] )
-          );
-        }
-        
-        
-        // VISIT PROVIDERS
-        var visit_providers = RedoxModel.app.test_data.visit_providers;
-        var visit_providers_options = [];
-        for ( var i=0; i<visit_providers.length; i++ ) {
-          visit_providers_options.push(
-            React.createElement("option", {value:  visit_providers[i], key:  visit_providers[i] },  visit_providers[i] )
-          );
-        }
-        
-        
-        // LOCATIONS
-        var locations = RedoxModel.app.test_data.locations;
-        var locations_options = [];
-        for ( var i=0; i<locations.length; i++ ) {
-          locations_options.push(
-            React.createElement("option", {value:  locations[i], key:  locations[i] },  locations[i] )
-          );
-        }
-        
-        
-        // TRANSACTIONS
-        var transactions = RedoxModel.app.test_data.transactions;
-        var transactions_options = [];
-        for ( var i=0; i<locations.length; i++ ) {
-          transactions_options.push(
-            React.createElement("option", {value:  transactions[i], key:  transactions[i] },  transactions[i] )
-          );
-        }
-        
 
         return  React.createElement("div", {className: "o-devToolsApp o-contentSimple"}, 
                     React.createElement("div", {className: "o-contentSimple__contentContainer a-overflow-hidden"}, 
@@ -21176,14 +21104,18 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Data Model"), 
                                             React.createElement("select", null, 
-                                                 data_models_options 
+                                                 RedoxModel.app.test_data.data_models.map(function(item) {
+                                                    return  React.createElement("option", {value:  item.name, key:  item.name},  item.name);
+                                                }) 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Event Type"), 
                                             React.createElement("select", null, 
-                                                 event_types_options 
+                                                 RedoxModel.app.test_data.event_types.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
@@ -21193,28 +21125,36 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Patient"), 
                                             React.createElement("select", null, 
-                                                 people_options 
+                                                 RedoxModel.app.test_data.people.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Visit Provider"), 
                                             React.createElement("select", null, 
-                                                 visit_providers_options 
+                                                 RedoxModel.app.test_data.visit_providers.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Location"), 
                                             React.createElement("select", null, 
-                                                 locations_options 
+                                                 RedoxModel.app.test_data.locations.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Transaction"), 
                                             React.createElement("select", null, 
-                                                 transactions_options 
+                                                 RedoxModel.app.test_data.transactions.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
@@ -21416,79 +21356,6 @@ var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
             }
         }
         
-        
-        
-        // DATA MODELS
-        var data_models = RedoxModel.app.test_data.data_models;
-        var data_models_options = [];
-        for ( var i=0; i<data_models.length; i++ ) {
-          data_models_options.push(
-            React.createElement("option", {value:  data_models[i].name, 
-                key:  data_models[i].name},  data_models[i].name)
-          );
-        }
-        
-        
-        // EVENT TYPES
-        var event_types = RedoxModel.app.test_data.event_types;
-        var event_types_options = [];
-        for ( var i=0; i<event_types.length; i++ ) {
-          event_types_options.push(
-            React.createElement("option", {value:  event_types[i], 
-                key:  event_types[i] },  event_types[i] )
-          );
-        }
-        
-        
-        // PEOPLE / PATIENTS
-        var people = RedoxModel.app.test_data.people;
-        var people_options = [];
-        for ( var i=0; i<people.length; i++ ) {
-          people_options.push(
-            React.createElement("option", {value:  people[i], key:  people[i] },  people[i] )
-          );
-        }
-
-        
-        // VISIT PROVIDERS
-        var visit_providers = RedoxModel.app.test_data.visit_providers;
-        var visit_providers_options = [];
-        for ( var i=0; i<visit_providers.length; i++ ) {
-          visit_providers_options.push(
-            React.createElement("option", {value:  visit_providers[i], key:  visit_providers[i] },  visit_providers[i] )
-          );
-        }
-        
-        
-        // VISIT PROVIDERS
-        var visit_providers = RedoxModel.app.test_data.visit_providers;
-        var visit_providers_options = [];
-        for ( var i=0; i<visit_providers.length; i++ ) {
-          visit_providers_options.push(
-            React.createElement("option", {value:  visit_providers[i], key:  visit_providers[i] },  visit_providers[i] )
-          );
-        }
-        
-        
-        // LOCATIONS
-        var locations = RedoxModel.app.test_data.locations;
-        var locations_options = [];
-        for ( var i=0; i<locations.length; i++ ) {
-          locations_options.push(
-            React.createElement("option", {value:  locations[i], key:  locations[i] },  locations[i] )
-          );
-        }
-        
-        
-        // TRANSACTIONS
-        var transactions = RedoxModel.app.test_data.transactions;
-        var transactions_options = [];
-        for ( var i=0; i<locations.length; i++ ) {
-          transactions_options.push(
-            React.createElement("option", {value:  transactions[i], key:  transactions[i] },  transactions[i] )
-          );
-        }
-
 
         return  React.createElement("div", {className: "o-devToolsApp o-contentSimple"}, 
                     React.createElement("div", {className: "o-contentSimple__contentContainer a-overflow-hidden"}, 
@@ -21522,14 +21389,18 @@ var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Data Model"), 
                                             React.createElement("select", null, 
-                                                 data_models_options 
+                                                 RedoxModel.app.test_data.data_models.map(function(item) {
+                                                    return  React.createElement("option", {value:  item.name, key:  item.name},  item.name);
+                                                }) 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Event Type"), 
                                             React.createElement("select", null, 
-                                                 event_types_options 
+                                                 RedoxModel.app.test_data.event_types.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
@@ -21539,28 +21410,36 @@ var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Patient"), 
                                             React.createElement("select", null, 
-                                                 people_options 
+                                                 RedoxModel.app.test_data.people.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Visit Provider"), 
                                             React.createElement("select", null, 
-                                                 visit_providers_options 
+                                                 RedoxModel.app.test_data.visit_providers.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Location"), 
                                             React.createElement("select", null, 
-                                                 locations_options 
+                                                 RedoxModel.app.test_data.locations.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
                                         React.createElement("div", {className: "o-form__element"}, 
                                             React.createElement("label", null, "Transaction"), 
                                             React.createElement("select", null, 
-                                                 transactions_options 
+                                                 RedoxModel.app.test_data.transactions.map(function(item) {
+                                                    return  React.createElement("option", {value:  item, key:  item },  item );
+                                                }) 
                                             )
                                         ), 
 
@@ -21736,7 +21615,9 @@ var LogDetail = React.createClass({displayName: "LogDetail",
             detail_page:""
         })
     },
-
+    
+    // a-padding-left-row-0
+    // p-logs__logNav
 
     render: function() {
 
@@ -21754,7 +21635,99 @@ var LogDetail = React.createClass({displayName: "LogDetail",
                                 { log.success }
                             </div>
                         </div> */
-                        React.createElement("div", {className: "c-redox__contentPadded p-logs__logDetails"})
+                        React.createElement("div", {className: "c-redox__contentPadded p-logs__logDetails"}, 
+                          
+                          React.createElement("div", {className: "p-logs__logHeader"}, 
+                          
+                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--connectionIcon"}, 
+                              React.createElement("div", {className: "o-icon__inbound"})
+                            ), 
+                            
+                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--connectionType"}, 
+                              "Inbound"
+                            ), 
+                            
+                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--scheduleIcon"}, 
+                              React.createElement("div", {className: "fa fa-calendar"})
+                            ), 
+                            
+                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--scheduleText"}, 
+                              "Schedule"
+                            ), 
+                            
+                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--status1 fail"}, 
+                              React.createElement("div", {className: "fa fa-minus"}), " fail"
+                            ), 
+                            
+                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--status2"}, 
+                              "stage"
+                            ), 
+                            
+                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--time"}, 
+                              "Jan 11 7:11:32p"
+                            )
+                            
+                          ), 
+                          
+                          
+                          React.createElement("div", {className: "o-tabs a-height-row-2-half a-border-h a-border-top"}, 
+                              React.createElement("button", {className: "o-tabs__item"}, 
+                                  "Incoming"
+                              ), 
+                              
+                              React.createElement("button", {className: "o-tabs__item"}, 
+                                  "Transformation"
+                              ), 
+                              
+                              React.createElement("button", {className: "o-tabs__item"}, 
+                                  "Filter"
+                              ), 
+                              
+                              React.createElement("button", {className: "o-tabs__item"}, 
+                                  "Response"
+                              )
+                          ), 
+                          
+                          
+                          
+                          
+                          React.createElement("br", null), 
+                          React.createElement("br", null), 
+                          React.createElement("br", null), 
+                          React.createElement("br", null), 
+                          
+                          
+                          React.createElement("div", {className: "p-logs__logMessage"}, 
+                            React.createElement("p", null, "Message failed when trying to go through part a of the b module. Please contact b for any questions, etc. Message failed when trying to go through part a. Please contact b for any questions, etc.")
+                          ), 
+                             
+                          React.createElement("div", {className: "p-logs__logNav"}, 
+                              React.createElement("button", {className: "p-logs__logNav--navItem p-logs__logNav--navItem--selected"}, 
+                                  "Incoming"
+                              ), 
+                              
+                              React.createElement("button", {className: "p-logs__logNav--navItem"}, 
+                                  "Transformation"
+                              ), 
+                              
+                              React.createElement("button", {className: "p-logs__logNav--navItem"}, 
+                                  React.createElement("em", null, "Filter")
+                              ), 
+                              
+                              React.createElement("button", {className: "p-logs__logNav--navItem"}, 
+                                  React.createElement("em", null, "Response")
+                              ), 
+                              
+                              React.createElement("div", {className: "a-flex-item-fill a-border-bottom"})
+                          ), 
+
+
+                          
+                          React.createElement("div", {className: "p-logs__logContent"}
+                          )
+                        
+                        
+                        )
 
                     )
                 );
