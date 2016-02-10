@@ -34,21 +34,45 @@ var LogDetail = React.createClass({
     changeTab: function ( tab_index ) {
         RS.merge({
             log_detail_tab_index:tab_index
-        })
+        });
+        
     },
 
-    // a-padding-left-row-0
-    // p-logs__logNav
 
     render: function() {
 
         var log = RedoxModel.get( RS.route.log_id );
-
-
+        
         var tab_content = "";
-        if ( RS.route.log_detail_tab_index == "" ) {
+        /*
+        if ( RS.route.log_detail_tab_index === "" ) {
             tab_content = <div>hi</div>;
         }
+        */
+        
+        switch ( RS.route.log_detail_tab_index ) {
+            case "transformation" :
+                tab_content = <div>Transformation</div>;
+                break;
+                
+            case "filter" :
+                tab_content = <div>Filter</div>;
+                break;
+                
+            case "response" :
+                tab_content = <div>Response</div>;
+                break;
+                
+            case "incoming" :
+                tab_content = <div>Incoming</div>;
+                break;
+                
+            case "" :
+                tab_content = <div>Init Incoming</div>;
+                break;
+        }
+        
+        console.log();
 
         return  <div className="o-contentSimple c-logDetail">
                     <div className="o-contentSimple__closeDetail"
@@ -62,96 +86,114 @@ var LogDetail = React.createClass({
                                 { log.success }
                             </div>
                         </div> */}
-                        <div className="c-redox__contentPadded p-logs__logDetails">
+                        
+                        <div className="c-redox__contentPadded">
 
-                          <div className="p-logs__logHeader">
+                          <div className="
+                                a-flex-h
+                                c-logDetail__logHeader">
 
-                            <div className="p-logs__logHeader--cell p-logs__logHeader--connectionIcon">
-                              <div className="o-icon__inbound"></div>
+                            <div className="
+                                c-logDetail__logHeader--connectionIcon">
+                              <div className={ "o-icon__" + log.connection().type }></div>
                             </div>
 
-                            <div className="p-logs__logHeader--cell p-logs__logHeader--connectionType">
-                              Inbound
+                            <div className="
+                                c-logDetail__logHeader--connectionType1">
+                                {(() => {
+                                    switch (log.connection().type) {
+                                        case "inbound":   return "Inbound";
+                                        case "outbound":  return "Outbound";
+                                        case "query":     return "Query";
+                                        default:          return "";
+                                    }
+                                })()}
                             </div>
 
-                            <div className="p-logs__logHeader--cell p-logs__logHeader--scheduleText">
+                            <div className="
+                                c-logDetail__logHeader--connectionType2
+                                a-flex-h">
                                 <div className={ "c-logs__modelIcon fa fa-2x " + log.data_model().icon }></div>
-                                { log.data_model().name }
+                                <div>{ log.data_model().name }</div>
                             </div>
 
-                            <div className="p-logs__logHeader--cell p-logs__logHeader--status1">
-                              <div className="fa fa-minus"></div>&nbsp;fail
+                            <div className="
+                                c-logDetail__logHeader--status1
+                                a-justify-content-center
+                                a-flex-center">
+                                {(() => {
+                                    switch (log.success) {
+                                        case true:   return "Success";
+                                        case false:  return "Fail";
+                                        default:     return "";
+                                    }
+                                })()}
                             </div>
 
-                            <div className="p-logs__logHeader--cell p-logs__logHeader--status2">
-                              stage
+                            <div className="
+                                c-logDetail__logHeader--status2
+                                a-justify-content-center
+                                a-flex-center">
+                                {(() => {
+                                    switch (log.connection().environment) {
+                                        case "production":   return "Production";
+                                        case "stage":        return "Stage";
+                                        default:             return "";
+                                    }
+                                })()}
                             </div>
 
-                            <div className="p-logs__logHeader--cell p-logs__logHeader--time">
-                              Jan 11 7:11:32p
+                            <div className="
+                                c-logDetail__logHeader--time                         
+                                a-text-align-right">
+                                Jan 11 7:11:32p
                             </div>
 
                           </div>
-
-
-                          <div className="o-tabs a-height-row-2-half a-border-h a-border-top">
-                              <button className={ "o-tabs__item "  }
-                                  onClick={ this.changeTab.bind( this , "" ) }>
-                                  Incoming
-                              </button>
-
-                              <button className="o-tabs__item"
-                                  onClick={ this.changeTab.bind( this , "transformation" ) }>
-                                  Transformation
-                              </button>
-
-                              <button className="o-tabs__item"
-                                  onClick={ this.changeTab.bind( this , "filter" ) }>
-                                  Filter
-                              </button>
-
-                              <button className="o-tabs__item"
-                                  onClick={ this.changeTab.bind( this , "response" ) }>
-                                  Response
-                              </button>
-                          </div>
-                          { tab_content }
-
-
-
-                          <br />
-                          <br />
-                          <br />
-                          <br />
 
 
                           <div className="p-logs__logMessage">
-                            <p>Message failed when trying to go through part a of the b module. Please contact b for any questions, etc. Message failed when trying to go through part a. Please contact b for any questions, etc.</p>
+                            <p> { log.title } </p>
                           </div>
-
-                          <div className="p-logs__logNav">
-                              <button className="p-logs__logNav--navItem p-logs__logNav--navItem--selected">
-                                  Incoming
+                          
+                          
+                          <div className="o-tabs a-height-row-2-half a-border-h a-border-top">
+                              <button className={"o-tabs__item " +
+                                            ( ( !RS.route.log_detail_tab_index || RS.route.log_detail_tab_index == "" )
+                                                ? " o-tabs__item--selected " : "" )
+                                        }
+                                    onClick={ this.changeTab.bind( this , "" ) }>
+                                    Incoming
                               </button>
 
-                              <button className="p-logs__logNav--navItem">
-                                  Transformation
+                              <button className={"o-tabs__item " +
+                                            ( ( RS.route.log_detail_tab_index == "transformation" )
+                                                ? " o-tabs__item--selected " : "" )
+                                        }
+                                    onClick={ this.changeTab.bind( this , "transformation" ) }>
+                                    Transformation
                               </button>
 
-                              <button className="p-logs__logNav--navItem">
-                                  <em>Filter</em>
+                              <button className={"o-tabs__item " +
+                                            ( ( RS.route.log_detail_tab_index == "filter" )
+                                                ? " o-tabs__item--selected " : "" )
+                                        }
+                                    onClick={ this.changeTab.bind( this , "filter" ) }>
+                                    Filter
                               </button>
 
-                              <button className="p-logs__logNav--navItem">
-                                  <em>Response</em>
+                              <button className={"o-tabs__item " +
+                                            ( ( RS.route.log_detail_tab_index == "response" )
+                                                ? " o-tabs__item--selected " : "" )
+                                        }
+                                    onClick={ this.changeTab.bind( this , "response" ) }>
+                                    Response
                               </button>
-
-                              <div className="a-flex-item-fill a-border-bottom"></div>
                           </div>
-
 
 
                           <div className="p-logs__logContent">
+                            { tab_content }
                           </div>
 
 

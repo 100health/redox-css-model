@@ -199,10 +199,12 @@ module.exports = {
                     this.end_point = "http://www.myorganization.com/api/endpoint";
                     this.verified = true;
                 }
-            }else{
+            } else{
                 this.type = "query";
             }
-
+            
+            this.environment = ( Math.random() > .5 ) ? "stage" : "production";
+            
             this.logs = [];// populated via logs...
 
         }

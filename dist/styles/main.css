@@ -2575,6 +2575,74 @@ html:not(.no-flexbox) .c-devTools__content {
     height: 6px;
     width: 6px; }
 
+.c-logDetail {
+  width: 100%; }
+  .c-logDetail .fa {
+    margin-right: 5px !important; }
+  .c-logDetail__logHeader {
+    height: 88px;
+    color: #808080;
+    color: #999999;
+    font-weight: 500; }
+    html:not(.no-flexbox) .c-logDetail__logHeader {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .c-logDetail__logHeader {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .c-logDetail__logHeader > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
+    html:not(.no-flexbox) .c-logDetail__logHeader {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-logDetail__logHeader {
+      position: relative; }
+      .no-flexbox .c-logDetail__logHeader > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
+  .c-logDetail__logHeader--connectionIcon {
+    width: 4.166665vw; }
+    html:not(.no-flexbox) .c-logDetail__logHeader--connectionIcon {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-start; }
+    .no-flexbox .c-logDetail__logHeader--connectionIcon {
+      position: relative; }
+      .no-flexbox .c-logDetail__logHeader--connectionIcon > * {
+        float: left;
+        min-width: 1px; }
+  .c-logDetail__logHeader--connectionType1 {
+    width: 8.33333vw; }
+  .c-logDetail__logHeader--connectionType2 {
+    width: 12.499995vw; }
+  .c-logDetail__logHeader--scheduleText {
+    width: 8.33333vw; }
+  html:not(.no-flexbox) .c-logDetail__logHeader--status1 {
+    flex: 1; }
+  .no-flexbox .c-logDetail__logHeader--status1 {
+    /* gotta use an inverse calc() size for this to work... */ }
+  .c-logDetail__logHeader--status2 {
+    width: 12.499995vw; }
+  .c-logDetail__logHeader--time {
+    width: 12.499995vw; }
+  .c-logDetail__logTab--error {
+    color: #DF0034; }
+
 html:not(.no-flexbox) .c-profile__content {
   display: flex;
   flex-flow: row nowrap;
