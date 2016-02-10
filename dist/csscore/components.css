@@ -152,11 +152,23 @@ div {
   width: 100%;
   height: 88px;
   background-color: #fff;
-  display: flex;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center; }
+  display: flex; }
+  html:not(.no-flexbox) .o-contentHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+  .no-flexbox .o-contentHeader {
+    position: relative;
+    transform-style: preserve-3d; }
+    .no-flexbox .o-contentHeader > * {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
   .o-contentHeader__titleContainer {
     /* -ctag-example: ...Content Header Title*/
     font-size: 22px;
@@ -164,17 +176,30 @@ div {
     color: #999999;
     overflow: hidden;
     white-space: nowrap;
-    flex: 1;
     font-weight: 500;
     letter-spacing: .5px;
     text-transform: uppercase; }
+    html:not(.no-flexbox) .o-contentHeader__titleContainer {
+      flex: 1; }
+    .no-flexbox .o-contentHeader__titleContainer {
+      /* gotta use an inverse calc() size for this to work... */ }
   .o-contentHeader__navContainer {
     /* -ctag-example: ...Right Nav*/
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center; }
+    height: 100%; }
+    html:not(.no-flexbox) .o-contentHeader__navContainer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .o-contentHeader__navContainer {
+      position: relative; }
+      .no-flexbox .o-contentHeader__navContainer > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
 
 h1, h2, h3, h4, h5, h6, p, code {
   /* Should only use these in .o-document */ }
@@ -186,7 +211,7 @@ h1, h2, h3, h4, h5, h6, p, code {
 
         ;*/ }
   .o-document h1, .o-document h2, .o-document h3, .o-document h4, .o-document h5, .o-document h6, .o-document p, .o-document code {
-    border: initial;
+    outline: none;
     margin: 0; }
   .o-document h1, .o-document h2, .o-document h3, .o-document h4, .o-document h5, .o-document h6 {
     overflow: hidden;
@@ -251,7 +276,7 @@ input {
 
 .o-form input {
   /* Should only use these in .o-form */
-  border: initial; }
+  outline: none; }
 
 .o-form__header {
   width: 100%;
@@ -329,17 +354,19 @@ input {
   width: 100%;
   float: left;
   margin-bottom: 22px;
-  position: relative;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch; }
-  .o-form__element label {
-    flex: 1;
+  position: relative; }
+  html:not(.no-flexbox) .o-form__element {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: stretch; }
+  .no-flexbox .o-form__element {
+    position: relative; }
+    .no-flexbox .o-form__element > * {
+      float: left;
+      height: 100%;
+      min-width: 1px; }
+  .o-form__element label {
     font-size: 13px;
     line-height: 16.5px;
     color: #999999;
@@ -351,6 +378,24 @@ input {
     overflow: hidden;
     white-space: nowrap;
     padding-right: 5.5px; }
+    html:not(.no-flexbox) .o-form__element label {
+      flex: 1; }
+    .no-flexbox .o-form__element label {
+      /* gotta use an inverse calc() size for this to work... */ }
+    html:not(.no-flexbox) .o-form__element label {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: flex-end; }
+    .no-flexbox .o-form__element label {
+      position: relative; }
+      .no-flexbox .o-form__element label > * {
+        float: left;
+        min-width: 1px;
+        position: relative;
+        top: 100%;
+        transform: translateY(-100%);
+        -ms-transform: translateY(-100%); }
     .o-form__element label + input, .o-form__element label + select, .o-form__element label + textarea, .o-form__element label + button {
       width: calc( 100% - 12.499995vw); }
 
@@ -435,10 +480,6 @@ input {
     height: 88px;
     background-color: #fff;
     float: left;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     cursor: hand;
     cursor: pointer;
     color: #B3B3B3;
@@ -447,6 +488,20 @@ input {
     flex-direction: column;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee; }
+    html:not(.no-flexbox) .c-dataModelSelector__item {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-dataModelSelector__item {
+      position: relative; }
+      .no-flexbox .c-dataModelSelector__item > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
     .c-dataModelSelector__item:hover {
       color: #4D4D4D; }
     .c-dataModelSelector__item > div {
@@ -602,11 +657,23 @@ input {
                 a-flex-item-fill'>expander</div>
             { .o-list__cell }
             { .o-list__cell };*/
-    height: 44px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center; }
+    height: 44px; }
+    html:not(.no-flexbox) .o-list__row {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .o-list__row {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .o-list__row > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
     .o-list__row--selected {
       background-color: #eee; }
   .o-list__headerRow {
@@ -615,11 +682,23 @@ input {
                 a-flex-item-fill'>expander</div>
             { .o-list__headerCell }
             { .o-list__headerCell };*/
-    height: 44px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center; }
+    height: 44px; }
+    html:not(.no-flexbox) .o-list__headerRow {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .o-list__headerRow {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .o-list__headerRow > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
   .o-list__headerCell {
     /* -ctag-example: ...header cell;*/
     width: 16.66666vw;
@@ -635,11 +714,21 @@ input {
     white-space: nowrap;
     color: #4D4D4D;
     font-size: 14px;
-    line-height: 22px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center; }
+    line-height: 22px; }
+    html:not(.no-flexbox) .o-list__cell {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .o-list__cell {
+      position: relative; }
+      .no-flexbox .o-list__cell > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
     .o-list__cell--center {
       text-align: center; }
     .o-list__cell--selected {
@@ -671,19 +760,39 @@ input {
 .o-list--footer {
   /* touch */ }
   .o-list--footer .o-list__headerCell {
-    border-left: 1px solid #eee;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center; }
+    border-left: 1px solid #eee; }
+    html:not(.no-flexbox) .o-list--footer .o-list__headerCell {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .o-list--footer .o-list__headerCell {
+      position: relative; }
+      .no-flexbox .o-list--footer .o-list__headerCell > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
     .o-list--footer .o-list__headerCell:first-of-type {
       border-left: none; }
   .o-list--footer .o-list__cell {
-    border-left: 1px solid #eee;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center; }
+    border-left: 1px solid #eee; }
+    html:not(.no-flexbox) .o-list--footer .o-list__cell {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .o-list--footer .o-list__cell {
+      position: relative; }
+      .no-flexbox .o-list--footer .o-list__cell > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
     .o-list--footer .o-list__cell:first-of-type {
       border-left: none; }
 
@@ -711,7 +820,7 @@ input {
     .o-button--redox-green:hover, .o-flatButton--redox-green:hover, .o-roundedButton--redox-green:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover {
       color: #fff; }
   .o-button:not(button), .o-devToolsApp__rightNavItem:not(button), .o-devToolsOutput__navItem:not(button), .o-flatButton:not(button), .o-roundedButton:not(button), .o-devToolsOutput__copy:not(button), .o-devToolsOutput__navAction:not(button), .o-devToolsLanding__action:not(button) {
-    border: 2px solid red; }
+    outline: 5px dotted red; }
 
 .o-flatButton {
   /* -ctag-example: <button ...>Button</button>;*/
@@ -761,7 +870,7 @@ input {
     .o-form .o-button--redox-green:hover, .o-form .o-flatButton--redox-green:hover, .o-form .o-roundedButton--redox-green:hover, .o-form .o-devToolsOutput__copy:hover, .o-form .o-devToolsOutput__navAction:hover {
       color: #fff; }
   .o-form .o-button:not(button), .o-form .o-devToolsApp__rightNavItem:not(button), .o-form .o-devToolsOutput__navItem:not(button), .o-form .o-flatButton:not(button), .o-form .o-roundedButton:not(button), .o-form .o-devToolsOutput__copy:not(button), .o-form .o-devToolsOutput__navAction:not(button), .o-form .o-devToolsLanding__action:not(button) {
-    border: 2px solid red; }
+    outline: 5px dotted red; }
 
 .o-form .o-flatButton {
   /* -ctag-example: <button ...>Button</button>;*/
@@ -794,30 +903,55 @@ input {
   /* -ctag-status: prod;*/
   width: 16.66666vw;
   height: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
   cursor: hand;
   cursor: pointer; }
+  html:not(.no-flexbox) .o-iconButton {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+  .no-flexbox .o-iconButton {
+    position: relative;
+    transform-style: preserve-3d; }
+    .no-flexbox .o-iconButton > * {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
   .o-iconButton:hover {
     background-color: #eee; }
   .o-iconButton__icon {
     /* -ctag-example: ...;*/
     width: 4.166665vw;
     height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     font-size: 19px;
     line-height: 38.5px; }
+    html:not(.no-flexbox) .o-iconButton__icon {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .o-iconButton__icon {
+      position: relative; }
+      .no-flexbox .o-iconButton__icon > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
   .o-iconButton__label {
     /* -ctag-example: ...Label;*/
     font-size: 14px;
     line-height: 22px;
-    color: #4D4D4D;
-    flex: 1; }
+    color: #4D4D4D; }
+    html:not(.no-flexbox) .o-iconButton__label {
+      flex: 1; }
+    .no-flexbox .o-iconButton__label {
+      /* gotta use an inverse calc() size for this to work... */ }
 
 a {
   text-decoration: none;
@@ -893,15 +1027,27 @@ a {
     margin-right: 2.0833325vw;
     position: relative;
     z-index: 200;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
     justify-content: flex-end;
     background-image: url("../images/app/redox_logo@2x.png");
     background-size: contain;
     background-position: left center;
     background-repeat: no-repeat; }
+    html:not(.no-flexbox) .c-mainNav__logo {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .c-mainNav__logo {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .c-mainNav__logo > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
     .c-mainNav__logo__metric {
       margin-right: -20px; }
   .c-mainNav__hamburger {
@@ -935,16 +1081,28 @@ a {
     right: 0px;
     background-color: #00b588;
     height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
     z-index: 100; }
     .c-mainNav__links:before, .c-mainNav__links:after {
       content: " ";
       display: table; }
     .c-mainNav__links:after {
       clear: both; }
+    html:not(.no-flexbox) .c-mainNav__links {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .c-mainNav__links {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .c-mainNav__links > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
     @media (max-width: 768px) {
       .c-mainNav__links {
         position: relative  !important; } }
@@ -968,11 +1126,18 @@ a {
       .c-mainNav__links {
         overflow: hidden  !important; } }
     @media (max-width: 768px) {
-      .c-mainNav__links {
+      html:not(.no-flexbox) .c-mainNav__links {
         display: flex !important;
         flex-flow: column nowrap !important;
         justify-content: flex-start !important;
-        align-items: flex-start !important; } }
+        align-items: flex-start !important; }
+      .no-flexbox .c-mainNav__links {
+        position: relative !important; }
+        .no-flexbox .c-mainNav__links > * {
+          float: left !important;
+          clear: left !important;
+          min-width: 1px !important;
+          min-height: 1px !important; } }
   .c-mainNav__link {
     /* -ctag-example: ...
 	                { .c-mainNav__link__icon }
@@ -981,10 +1146,6 @@ a {
     width: 16.66666vw;
     height: 100%;
     float: right;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     color: #fff;
     cursor: hand;
     cursor: pointer;
@@ -998,17 +1159,42 @@ a {
       .c-mainNav__link > a:hover {
         color: inherit;
         text-decoration: none; }
+    html:not(.no-flexbox) .c-mainNav__link {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-mainNav__link {
+      position: relative; }
+      .no-flexbox .c-mainNav__link > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
     .c-mainNav__link:hover {
       color: #B7FFE0; }
     @media (max-width: 768px) {
       .c-mainNav__link {
         text-align: left  !important; } }
     @media (max-width: 768px) {
-      .c-mainNav__link {
+      html:not(.no-flexbox) .c-mainNav__link {
         display: flex !important;
         flex-flow: row nowrap !important;
         justify-content: flex-start !important;
-        align-items: center !important; } }
+        align-items: center !important; }
+      .no-flexbox .c-mainNav__link {
+        position: relative !important;
+        transform-style: preserve-3d !important; }
+        .no-flexbox .c-mainNav__link > * {
+          float: left !important;
+          min-height: 1px !important;
+          position: relative !important;
+          top: 50% !important;
+          transform: translateY(-50%) !important;
+          -ms-transform: translateY(-50%) !important;
+          /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ } }
     @media (max-width: 768px) {
       .c-mainNav__link {
         justify-content: flex-start !important; } }
@@ -1251,13 +1437,25 @@ a {
                 { .c-secondaryNav__list__item__label };*/
       width: 100%;
       height: 66px;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      align-items: center;
       cursor: hand;
       cursor: pointer;
       transition: width 0.3s; }
+      html:not(.no-flexbox) .c-secondaryNav__list__item {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center; }
+      .no-flexbox .c-secondaryNav__list__item {
+        position: relative;
+        transform-style: preserve-3d; }
+        .no-flexbox .c-secondaryNav__list__item > * {
+          float: left;
+          min-height: 1px;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
       .c-secondaryNav__list__item:hover {
         background-color: #ddd; }
       .c-secondaryNav__list__item:hover {
@@ -1354,14 +1552,24 @@ a {
     width: 100%;
     width: 20.833325vw;
     height: 44px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     cursor: hand;
     cursor: pointer;
     padding-left: 2.0833325vw;
     padding-right: 2.0833325vw; }
+    html:not(.no-flexbox) .c-tertiaryNav__item {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-tertiaryNav__item {
+      position: relative; }
+      .no-flexbox .c-tertiaryNav__item > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
     .c-tertiaryNav__item:hover {
       background-color: #eee; }
     .c-tertiaryNav__item__label {
@@ -1390,21 +1598,36 @@ a {
                 </h1>
                 { .c-connections__addBtn }*/
     padding-bottom: 11px;
-    margin-bottom: 11px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center; }
+    margin-bottom: 11px; }
+    html:not(.no-flexbox) .c-connections__groupHeader {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .c-connections__groupHeader {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .c-connections__groupHeader > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
     .c-connections__groupHeader h1 {
-      border: initial;
+      outline: none;
       border-bottom: none;
       font-size: 22px;
       line-height: 38.5px;
       color: #666666;
       margin: 0;
       padding: 0;
-      margin-left: 11px;
-      flex: 1; }
+      margin-left: 11px; }
+      html:not(.no-flexbox) .c-connections__groupHeader h1 {
+        flex: 1; }
+      .no-flexbox .c-connections__groupHeader h1 {
+        /* gotta use an inverse calc() size for this to work... */ }
     .c-connections__groupHeader > * {
       align-self: center; }
   .c-connections__addBtn {
@@ -1427,8 +1650,11 @@ a {
   .c-connections__cell--icon {
     width: 4.166665vw; }
   .c-connections__cell--title {
-    flex: 1;
     justify-content: flex-start; }
+    html:not(.no-flexbox) .c-connections__cell--title {
+      flex: 1; }
+    .no-flexbox .c-connections__cell--title {
+      /* gotta use an inverse calc() size for this to work... */ }
   .c-connections__cell--endPoint, .c-connections__cell--endPointUnverified {
     width: 33.33332vw;
     font-size: 13px;
@@ -1466,11 +1692,17 @@ a {
   background-image: url("../images/app/connections_watermark.png");
   background-position: 22px center; }
 
-.c-devTools__content {
+html:not(.no-flexbox) .c-devTools__content {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start; }
+
+.no-flexbox .c-devTools__content {
+  position: relative; }
+  .no-flexbox .c-devTools__content > * {
+    float: left;
+    min-width: 1px; }
 
 .c-devTools__overviewText {
   width: 24.99999vw;
@@ -1479,17 +1711,32 @@ a {
   color: #999999; }
 
 .c-devTools__connections {
-  flex: 1;
   padding-left: 8.33333vw; }
+  html:not(.no-flexbox) .c-devTools__connections {
+    flex: 1; }
+  .no-flexbox .c-devTools__connections {
+    /* gotta use an inverse calc() size for this to work... */ }
 
 .c-devTools__groupHeader {
-  padding-bottom: 11px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center; }
+  padding-bottom: 11px; }
+  html:not(.no-flexbox) .c-devTools__groupHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+  .no-flexbox .c-devTools__groupHeader {
+    position: relative;
+    transform-style: preserve-3d; }
+    .no-flexbox .c-devTools__groupHeader > * {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
   .c-devTools__groupHeader h1 {
-    border: initial;
+    outline: none;
     border-bottom: none;
     font-size: 22px;
     line-height: 38.5px;
@@ -1499,29 +1746,44 @@ a {
     margin-left: 11px; }
 
 .c-devTools__cell--title {
-  flex: 1;
   justify-content: flex-start; }
+  html:not(.no-flexbox) .c-devTools__cell--title {
+    flex: 1; }
+  .no-flexbox .c-devTools__cell--title {
+    /* gotta use an inverse calc() size for this to work... */ }
 
 .o-devToolsApp__content {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
   height: 100%; }
+  html:not(.no-flexbox) .o-devToolsApp__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  .no-flexbox .o-devToolsApp__content {
+    position: relative; }
+    .no-flexbox .o-devToolsApp__content > * {
+      float: left;
+      min-width: 1px; }
 
 .o-devToolsApp__leftContainer {
   width: 29.166655vw;
   height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
   box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
   z-index: 200; }
+  html:not(.no-flexbox) .o-devToolsApp__leftContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch; }
+  .no-flexbox .o-devToolsApp__leftContainer {
+    position: relative; }
+    .no-flexbox .o-devToolsApp__leftContainer > * {
+      float: left;
+      min-width: 1px;
+      width: 100%; }
 
 .o-devToolsApp__leftInputs {
-  flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
   padding-left: 2.0833325vw;
@@ -1530,6 +1792,10 @@ a {
   padding-bottom: 22px;
   width: calc( 29.166655vw + 15px);
   transition: width 0.3s; }
+  html:not(.no-flexbox) .o-devToolsApp__leftInputs {
+    flex: 1; }
+  .no-flexbox .o-devToolsApp__leftInputs {
+    /* gotta use an inverse calc() size for this to work... */ }
   .o-devToolsApp__leftInputs > div {
     width: 24.99999vw; }
   .o-devToolsApp__leftInputs:hover {
@@ -1537,24 +1803,46 @@ a {
 
 .o-devToolsApp__leftActions {
   height: 66px;
-  border-top: 1px solid #eee;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center; }
+  border-top: 1px solid #eee; }
+  html:not(.no-flexbox) .o-devToolsApp__leftActions {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+  .no-flexbox .o-devToolsApp__leftActions {
+    position: relative;
+    transform-style: preserve-3d; }
+    .no-flexbox .o-devToolsApp__leftActions > * {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
 
 .o-devToolsApp__rightContainer {
-  flex: 1;
   height: 100%;
   z-index: 100; }
+  html:not(.no-flexbox) .o-devToolsApp__rightContainer {
+    flex: 1; }
+  .no-flexbox .o-devToolsApp__rightContainer {
+    /* gotta use an inverse calc() size for this to work... */ }
 
 .o-devToolsApp__rightNav {
   height: 55px;
-  background-color: #eee;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch; }
+  background-color: #eee; }
+  html:not(.no-flexbox) .o-devToolsApp__rightNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch; }
+  .no-flexbox .o-devToolsApp__rightNav {
+    position: relative; }
+    .no-flexbox .o-devToolsApp__rightNav > * {
+      float: left;
+      height: 100%;
+      min-width: 1px; }
 
 .o-devToolsApp__rightNavItem {
   background-color: #eee; }
@@ -1572,11 +1860,18 @@ a {
   width: 100%;
   height: 100%;
   background-color: #000;
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch; }
+  position: relative; }
+  html:not(.no-flexbox) .o-devToolsOutput {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch; }
+  .no-flexbox .o-devToolsOutput {
+    position: relative; }
+    .no-flexbox .o-devToolsOutput > * {
+      float: left;
+      min-width: 1px;
+      width: 100%; }
   .o-devToolsOutput__content {
     overflow-y: auto;
     overflow-x: hidden;
@@ -1584,8 +1879,11 @@ a {
     padding-left: 2.0833325vw;
     padding-right: 2.0833325vw;
     padding-top: 22px;
-    padding-bottom: 22px;
-    flex: 1; }
+    padding-bottom: 22px; }
+    html:not(.no-flexbox) .o-devToolsOutput__content {
+      flex: 1; }
+    .no-flexbox .o-devToolsOutput__content {
+      /* gotta use an inverse calc() size for this to work... */ }
   .o-devToolsOutput__copy {
     position: absolute;
     bottom: 0px;
@@ -1595,11 +1893,18 @@ a {
     margin: 11px; }
   .o-devToolsOutput__nav {
     height: 55px;
-    background-color: #333;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: stretch; }
+    background-color: #333; }
+    html:not(.no-flexbox) .o-devToolsOutput__nav {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: stretch; }
+    .no-flexbox .o-devToolsOutput__nav {
+      position: relative; }
+      .no-flexbox .o-devToolsOutput__nav > * {
+        float: left;
+        height: 100%;
+        min-width: 1px; }
   .o-devToolsOutput__navItem {
     width: 10.4166625vw;
     color: #B3B3B3;
@@ -1616,8 +1921,10 @@ a {
         background-color: #000; }
       .o-devToolsOutput__navItem--selected:hover {
         color: #fff; }
-  .o-devToolsOutput__navFill {
+  html:not(.no-flexbox) .o-devToolsOutput__navFill {
     flex: 1; }
+  .no-flexbox .o-devToolsOutput__navFill {
+    /* gotta use an inverse calc() size for this to work... */ }
   .o-devToolsOutput__navAction {
     width: 12.499995vw;
     height: 44px;
@@ -1627,18 +1934,40 @@ a {
 .o-devToolsLanding {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
   position: relative; }
-  .o-devToolsLanding__content {
-    width: 80%;
+  html:not(.no-flexbox) .o-devToolsLanding {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: center; }
+  .no-flexbox .o-devToolsLanding {
+    position: relative; }
+    .no-flexbox .o-devToolsLanding > * {
+      min-width: 1px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%); }
+  .o-devToolsLanding__content {
+    width: 80%;
     padding-bottom: 66px; }
+    html:not(.no-flexbox) .o-devToolsLanding__content {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .o-devToolsLanding__content {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .o-devToolsLanding__content > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
   .o-devToolsLanding__icon {
     width: 16.66666vw;
     height: 176px;
@@ -1649,8 +1978,11 @@ a {
     .o-devToolsLanding__icon--inbound {
       background-image: url("../images/app/inbound_icon.svg"); }
   .o-devToolsLanding__description {
-    flex: 1;
     padding-left: 4.166665vw; }
+    html:not(.no-flexbox) .o-devToolsLanding__description {
+      flex: 1; }
+    .no-flexbox .o-devToolsLanding__description {
+      /* gotta use an inverse calc() size for this to work... */ }
   .o-devToolsLanding__action {
     height: 44px;
     bottom: 0px;
@@ -1668,47 +2000,135 @@ a {
     font-size: 19px;
     line-height: 38.5px;
     width: 30px;
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center; }
+    height: 100%; }
+    html:not(.no-flexbox) .c-logs__searchIcon {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-logs__searchIcon {
+      position: relative; }
+      .no-flexbox .c-logs__searchIcon > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
   .c-logs .c-logs__cell--summaryType, .c-logs .c-logs__cell--type {
     width: 4.166665vw;
-    justify-content: flex-start;
-    transition: width 0.3s; }
+    transition: width 0.3s;
+    height: 44px; }
+    html:not(.no-flexbox) .c-logs .c-logs__cell--summaryType, html:not(.no-flexbox) .c-logs .c-logs__cell--type {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-logs .c-logs__cell--summaryType, .no-flexbox .c-logs .c-logs__cell--type {
+      position: relative; }
+      .no-flexbox .c-logs .c-logs__cell--summaryType > *, .no-flexbox .c-logs .c-logs__cell--type > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
   .c-logs .c-logs__cell--summaryTitle, .c-logs .c-logs__cell--title {
-    flex: 1;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
     font-style: italic; }
+    html:not(.no-flexbox) .c-logs .c-logs__cell--summaryTitle, html:not(.no-flexbox) .c-logs .c-logs__cell--title {
+      flex: 1; }
+    .no-flexbox .c-logs .c-logs__cell--summaryTitle, .no-flexbox .c-logs .c-logs__cell--title {
+      /* gotta use an inverse calc() size for this to work... */ }
+    html:not(.no-flexbox) .c-logs .c-logs__cell--summaryTitle, html:not(.no-flexbox) .c-logs .c-logs__cell--title {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .c-logs .c-logs__cell--summaryTitle, .no-flexbox .c-logs .c-logs__cell--title {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .c-logs .c-logs__cell--summaryTitle > *, .no-flexbox .c-logs .c-logs__cell--title > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
   .c-logs .c-logs__cell--summaryStatus, .c-logs .c-logs__cell--status {
     width: 8.33333vw;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center; }
+    height: 44px; }
+    html:not(.no-flexbox) .c-logs .c-logs__cell--summaryStatus, html:not(.no-flexbox) .c-logs .c-logs__cell--status {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-logs .c-logs__cell--summaryStatus, .no-flexbox .c-logs .c-logs__cell--status {
+      position: relative; }
+      .no-flexbox .c-logs .c-logs__cell--summaryStatus > *, .no-flexbox .c-logs .c-logs__cell--status > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
   .c-logs .c-logs__cell--summaryModel, .c-logs .c-logs__cell--model {
     width: 16.66666vw;
-    justify-content: flex-start;
-    padding-left: 11px; }
+    padding-left: 11px;
+    height: 22px; }
+    html:not(.no-flexbox) .c-logs .c-logs__cell--summaryModel, html:not(.no-flexbox) .c-logs .c-logs__cell--model {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+    .no-flexbox .c-logs .c-logs__cell--summaryModel, .no-flexbox .c-logs .c-logs__cell--model {
+      position: relative;
+      transform-style: preserve-3d; }
+      .no-flexbox .c-logs .c-logs__cell--summaryModel > *, .no-flexbox .c-logs .c-logs__cell--model > * {
+        float: left;
+        min-height: 1px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
     .c-logs .c-logs__cell--summaryModel .c-logs__modelIcon, .c-logs .c-logs__cell--model .c-logs__modelIcon {
       font-size: 15px;
       line-height: 22px;
-      margin-right: 11px; }
+      margin-right: 11px;
+      height: 44px; }
   .c-logs .c-logs__cell--summaryEnvironment, .c-logs .c-logs__cell--environment {
     width: 8.33333vw;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
     transition: width 0.3s; }
+    html:not(.no-flexbox) .c-logs .c-logs__cell--summaryEnvironment, html:not(.no-flexbox) .c-logs .c-logs__cell--environment {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center; }
+    .no-flexbox .c-logs .c-logs__cell--summaryEnvironment, .no-flexbox .c-logs .c-logs__cell--environment {
+      position: relative; }
+      .no-flexbox .c-logs .c-logs__cell--summaryEnvironment > *, .no-flexbox .c-logs .c-logs__cell--environment > * {
+        min-width: 1px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%); }
   .c-logs .c-logs__cell--summaryTime, .c-logs .c-logs__cell--time {
     width: 12.499995vw;
-    justify-content: flex-end;
+    text-align: right;
     transition: width 0.3s; }
+    html:not(.no-flexbox) .c-logs .c-logs__cell--summaryTime, html:not(.no-flexbox) .c-logs .c-logs__cell--time {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-end; }
+    .no-flexbox .c-logs .c-logs__cell--summaryTime, .no-flexbox .c-logs .c-logs__cell--time {
+      position: relative; }
+      .no-flexbox .c-logs .c-logs__cell--summaryTime > *, .no-flexbox .c-logs .c-logs__cell--time > * {
+        float: right;
+        clear: right;
+        min-width: 1px; }
   .c-logs .c-logs__cell--model {
     font-size: 14px;
     line-height: 22px; }
@@ -1802,8 +2222,11 @@ a {
   font-size: 13px;
   line-height: 16.5px;
   padding-left: 5.5px;
-  flex: 1;
   justify-content: flex-start; }
+  html:not(.no-flexbox) .c-logsSideNav__cell--message {
+    flex: 1; }
+  .no-flexbox .c-logsSideNav__cell--message {
+    /* gotta use an inverse calc() size for this to work... */ }
 
 .c-logsSideNav__cell--status {
   width: 10px; }
@@ -1813,17 +2236,27 @@ a {
     height: 6px;
     width: 6px; }
 
-.c-profile__content {
+html:not(.no-flexbox) .c-profile__content {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start; }
-  @media (max-width: 768px) {
-    .c-profile__content {
-      display: block !important; } }
 
-.c-profile__avatarCol {
+.no-flexbox .c-profile__content {
+  position: relative; }
+  .no-flexbox .c-profile__content > * {
+    float: left;
+    min-width: 1px; }
+
+@media (max-width: 768px) {
+  .c-profile__content {
+    display: block !important; } }
+
+html:not(.no-flexbox) .c-profile__avatarCol {
   flex: 1; }
+
+.no-flexbox .c-profile__avatarCol {
+  /* gotta use an inverse calc() size for this to work... */ }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__avatarCol {

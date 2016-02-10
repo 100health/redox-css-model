@@ -94,6 +94,25 @@ var Logs = React.createClass({
                         o-list__cell
                         c-logs__cell--time">1/12 | 5:64:23pm</div>
                 </div>;
+            /*return  <div className="a-stack-h a-height-row-2 a-border-bottom-weakest a-width-100" key={ log.guid }
+                        onClick={ this.openLog.bind( this , log ) }>
+                        <div className="a-width-col-half">
+                            <div className={ type_cls }></div>
+                        </div>
+
+                        <div className="a-width-col-2 c-logs__cell--model a-interactive-hover">
+                            <div className={ "c-logs__modelIcon fa fa-2x " + log.data_model().icon }></div>
+                            { log.data_model().name }
+                        </div>
+
+                        <div className="a-width-minus-col-5-half ">  { message }  </div>
+
+                        <div className="a-width-col-1">
+                            <div className={ pass_cls }></div>
+                        </div>
+                        <div className="a-width-col-1">Production</div>
+                        <div className="a-width-col-1">1/12 | 5:64:23pm</div>
+                    </div>;*/
     },
 
     toggleFooter: function(){
@@ -153,9 +172,17 @@ var Logs = React.createClass({
                                     </form>
                                 </div>
                             </div>
-                            <div className="o-list o-list--overview">
+                            <div className="o-list o-list--overview a-width-100">
                                 { log_rows_html }
                             </div>
+
+
+                            {/*<div className="a-stack-v a-width-100">
+                                <div className="a-height-row-2">hi</div>
+                                <div className="a-height-minus-row-2 a-width-100">
+                                    { log_rows_html }
+                                </div>
+                            </div>*/}
                         </div>
                     </div>
                     <div className="o-contentSimple__footerContainer">

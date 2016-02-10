@@ -138,8 +138,8 @@
 			"base":"misused",
 			"scheme":"misused",
 			"values":[
-				"2px solid red",
-				"initial"
+				"5px dotted red",
+				"none"
 			],
 			"atoms":[
 				{
@@ -148,7 +148,7 @@
 					"sub_group":"misc",
 					"example":"...misused",
 					"selector":".a-@var_name",
-					"declaration_value":"border: _@_@var_name ;"
+					"declaration_value":"outline: _@_@var_name ;"
 				}
 			]
 		},

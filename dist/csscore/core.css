@@ -1,59 +1,138 @@
-.a-flex-v {
+html:not(.no-flexbox) .a-flex-v {
   display: flex !important;
   flex-flow: column nowrap !important;
   justify-content: flex-start !important;
   align-items: center !important; }
 
-.a-flex-v-stretch {
+.no-flexbox .a-flex-v {
+  position: relative !important;
+  transform-style: preserve-3d !important; }
+  .no-flexbox .a-flex-v > * {
+    min-width: 1px !important;
+    /* using margin is probably better than transform, but  it requires an exact width...lets see where it takes us first*/
+    margin: 0 auto !important;
+    /*position: relative !important;  float: left !important;  clear: left !important;  left: 50% !important;  transform: translateX(-50%) !important;  -ms-transform: translateX(-50%) !important;*/ }
+
+html:not(.no-flexbox) .a-flex-v-stretch {
   display: flex !important;
   flex-flow: column nowrap !important;
   justify-content: flex-start !important;
   align-items: stretch !important; }
 
-.a-flex-v-start {
+.no-flexbox .a-flex-v-stretch {
+  position: relative !important; }
+  .no-flexbox .a-flex-v-stretch > * {
+    float: left !important;
+    min-width: 1px !important;
+    width: 100%; }
+
+html:not(.no-flexbox) .a-flex-v-start {
   display: flex !important;
   flex-flow: column nowrap !important;
   justify-content: flex-start !important;
   align-items: flex-start !important; }
 
-.a-flex-v-end {
+.no-flexbox .a-flex-v-start {
+  position: relative !important; }
+  .no-flexbox .a-flex-v-start > * {
+    float: left !important;
+    clear: left !important;
+    min-width: 1px !important;
+    min-height: 1px !important; }
+
+html:not(.no-flexbox) .a-flex-v-end {
   display: flex !important;
   flex-flow: column nowrap !important;
   justify-content: flex-start !important;
   align-items: flex-end !important; }
 
-.a-flex-h {
+.no-flexbox .a-flex-v-end {
+  position: relative !important; }
+  .no-flexbox .a-flex-v-end > * {
+    float: right !important;
+    clear: right !important;
+    min-width: 1px !important; }
+
+html:not(.no-flexbox) .a-flex-h {
   display: flex !important;
   flex-flow: row nowrap !important;
   justify-content: flex-start !important;
   align-items: center !important; }
 
-.a-flex-h-stretch {
+.no-flexbox .a-flex-h {
+  position: relative !important;
+  transform-style: preserve-3d !important; }
+  .no-flexbox .a-flex-h > * {
+    float: left !important;
+    min-height: 1px !important;
+    position: relative !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    -ms-transform: translateY(-50%) !important;
+    /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ }
+
+html:not(.no-flexbox) .a-flex-h-stretch {
   display: flex !important;
   flex-flow: row nowrap !important;
   justify-content: flex-start !important;
   align-items: stretch !important; }
 
-.a-flex-h-start {
+.no-flexbox .a-flex-h-stretch {
+  position: relative !important; }
+  .no-flexbox .a-flex-h-stretch > * {
+    float: left !important;
+    height: 100% !important;
+    min-width: 1px !important; }
+
+html:not(.no-flexbox) .a-flex-h-start {
   display: flex !important;
   flex-flow: row nowrap !important;
   justify-content: flex-start !important;
   align-items: flex-start !important; }
 
-.a-flex-h-end {
+.no-flexbox .a-flex-h-start {
+  position: relative !important; }
+  .no-flexbox .a-flex-h-start > * {
+    float: left !important;
+    min-width: 1px !important; }
+
+html:not(.no-flexbox) .a-flex-h-end {
   display: flex !important;
   flex-flow: row nowrap !important;
   justify-content: flex-start !important;
   align-items: flex-end !important; }
 
-.a-flex-center {
+.no-flexbox .a-flex-h-end {
+  position: relative !important; }
+  .no-flexbox .a-flex-h-end > * {
+    float: left !important;
+    min-width: 1px !important;
+    position: relative !important;
+    top: 100% !important;
+    transform: translateY(-100%) !important;
+    -ms-transform: translateY(-100%) !important; }
+
+html:not(.no-flexbox) .a-flex-center {
   display: flex !important;
   flex-flow: row nowrap !important;
   justify-content: center !important;
   align-items: center !important; }
 
-.a-flex-item-fill {
+.no-flexbox .a-flex-center {
+  position: relative !important; }
+  .no-flexbox .a-flex-center > * {
+    min-width: 1px !important;
+    position: relative !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important; }
+
+html:not(.no-flexbox) .a-flex-item-fill {
   flex: 1 !important; }
+
+.no-flexbox .a-flex-item-fill {
+  /* gotta use an inverse calc() size for this to work... */ }
 
 .a-single-line {
   overflow: hidden !important;
@@ -4359,10 +4438,10 @@
   flex-direction: column-reverse !important; }
 
 .a-misused {
-  border: 2px solid red !important; }
+  outline: 5px dotted red !important; }
 
 .a-misused-off {
-  border: initial !important; }
+  outline: none !important; }
 
 .a-background-grey {
   background-color: #808080 !important; }
@@ -5407,71 +5486,140 @@
   width: inherit  !important; }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-v {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-v {
     display: flex !important;
     flex-flow: column nowrap !important;
     justify-content: flex-start !important;
-    align-items: center !important; } }
+    align-items: center !important; }
+  .no-flexbox .breakpoint-sm-a-flex-v {
+    position: relative !important;
+    transform-style: preserve-3d !important; }
+    .no-flexbox .breakpoint-sm-a-flex-v > * {
+      min-width: 1px !important;
+      /* using margin is probably better than transform, but  it requires an exact width...lets see where it takes us first*/
+      margin: 0 auto !important;
+      /*position: relative !important;  float: left !important;  clear: left !important;  left: 50% !important;  transform: translateX(-50%) !important;  -ms-transform: translateX(-50%) !important;*/ } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-v-stretch {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-v-stretch {
     display: flex !important;
     flex-flow: column nowrap !important;
     justify-content: flex-start !important;
-    align-items: stretch !important; } }
+    align-items: stretch !important; }
+  .no-flexbox .breakpoint-sm-a-flex-v-stretch {
+    position: relative !important; }
+    .no-flexbox .breakpoint-sm-a-flex-v-stretch > * {
+      float: left !important;
+      min-width: 1px !important;
+      width: 100%; } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-v-start {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-v-start {
     display: flex !important;
     flex-flow: column nowrap !important;
     justify-content: flex-start !important;
-    align-items: flex-start !important; } }
+    align-items: flex-start !important; }
+  .no-flexbox .breakpoint-sm-a-flex-v-start {
+    position: relative !important; }
+    .no-flexbox .breakpoint-sm-a-flex-v-start > * {
+      float: left !important;
+      clear: left !important;
+      min-width: 1px !important;
+      min-height: 1px !important; } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-v-end {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-v-end {
     display: flex !important;
     flex-flow: column nowrap !important;
     justify-content: flex-start !important;
-    align-items: flex-end !important; } }
+    align-items: flex-end !important; }
+  .no-flexbox .breakpoint-sm-a-flex-v-end {
+    position: relative !important; }
+    .no-flexbox .breakpoint-sm-a-flex-v-end > * {
+      float: right !important;
+      clear: right !important;
+      min-width: 1px !important; } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-h {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-h {
     display: flex !important;
     flex-flow: row nowrap !important;
     justify-content: flex-start !important;
-    align-items: center !important; } }
+    align-items: center !important; }
+  .no-flexbox .breakpoint-sm-a-flex-h {
+    position: relative !important;
+    transform-style: preserve-3d !important; }
+    .no-flexbox .breakpoint-sm-a-flex-h > * {
+      float: left !important;
+      min-height: 1px !important;
+      position: relative !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      -ms-transform: translateY(-50%) !important;
+      /* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */ } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-h-stretch {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-h-stretch {
     display: flex !important;
     flex-flow: row nowrap !important;
     justify-content: flex-start !important;
-    align-items: stretch !important; } }
+    align-items: stretch !important; }
+  .no-flexbox .breakpoint-sm-a-flex-h-stretch {
+    position: relative !important; }
+    .no-flexbox .breakpoint-sm-a-flex-h-stretch > * {
+      float: left !important;
+      height: 100% !important;
+      min-width: 1px !important; } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-h-start {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-h-start {
     display: flex !important;
     flex-flow: row nowrap !important;
     justify-content: flex-start !important;
-    align-items: flex-start !important; } }
+    align-items: flex-start !important; }
+  .no-flexbox .breakpoint-sm-a-flex-h-start {
+    position: relative !important; }
+    .no-flexbox .breakpoint-sm-a-flex-h-start > * {
+      float: left !important;
+      min-width: 1px !important; } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-h-end {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-h-end {
     display: flex !important;
     flex-flow: row nowrap !important;
     justify-content: flex-start !important;
-    align-items: flex-end !important; } }
+    align-items: flex-end !important; }
+  .no-flexbox .breakpoint-sm-a-flex-h-end {
+    position: relative !important; }
+    .no-flexbox .breakpoint-sm-a-flex-h-end > * {
+      float: left !important;
+      min-width: 1px !important;
+      position: relative !important;
+      top: 100% !important;
+      transform: translateY(-100%) !important;
+      -ms-transform: translateY(-100%) !important; } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-center {
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-center {
     display: flex !important;
     flex-flow: row nowrap !important;
     justify-content: center !important;
-    align-items: center !important; } }
+    align-items: center !important; }
+  .no-flexbox .breakpoint-sm-a-flex-center {
+    position: relative !important; }
+    .no-flexbox .breakpoint-sm-a-flex-center > * {
+      min-width: 1px !important;
+      position: relative !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      -ms-transform: translate(-50%, -50%) !important; } }
 
 @media (max-width: 768px) {
-  .breakpoint-sm-a-flex-item-fill {
-    flex: 1 !important; } }
+  html:not(.no-flexbox) .breakpoint-sm-a-flex-item-fill {
+    flex: 1 !important; }
+  .no-flexbox .breakpoint-sm-a-flex-item-fill {
+    /* gotta use an inverse calc() size for this to work... */ } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-single-line {
@@ -11128,11 +11276,11 @@
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-misused {
-    border: 2px solid red !important; } }
+    outline: 5px dotted red !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-misused-off {
-    border: initial !important; } }
+    outline: none !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-background-grey {
