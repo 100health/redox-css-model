@@ -79,7 +79,19 @@
                     "sub_group":"sizing",
                     "example":"<div ... style='height: 100px; background-color: #fff;'></div>",
                     "selector":".a-width-@var_name",
-                    "declaration_value":"width: _@_@var_name ;"
+					"declaration_lines":[
+                        "width: _@_@var_name;",
+                        ".flexbox-grid .a-flex-v > & {",
+                            "left: calc( 50% - (( _@_@var_name / 2 )) );",
+                            "position: relative;",
+                            "outline: none;",
+                        "}",
+                        ".flexbox-grid .a-flex-v-end > & {",
+                            "left: calc( 100% -  _@_@var_name );",
+                            "position: relative;",
+                            "outline: none;",
+                        "}"
+                    ]
                 },
                 {
 					"name":"width-col-12-inv",

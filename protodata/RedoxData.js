@@ -18,16 +18,16 @@ module.exports = {
 
 
             this.test_data = {};
-            
+
             this.test_data.people = ["Joan Smith","John Smith"];
             this.test_data.data_models = pd.config.data_model.data;
-            
+
             this.test_data.event_types = ["Type 1","Type 2","Type 3"];
             this.test_data.people = ["Joan","John","Joe"];
             this.test_data.visit_providers = ["UW Health","Meriter","Unity Point Health"];
             this.test_data.locations = ["Madison","Milwaukee","Green Bay"];
             this.test_data.transactions = ["Transaction 1","Transaction 2","Transaction 3"];
-            
+
 
 
             this.main_pages = pd.generateArray(
@@ -79,7 +79,7 @@ module.exports = {
 
             {name:"Organization",icon:false,link:"organization",secondary_page:"profile"},
             {name:"Gallery",icon:false,link:"gallery",secondary_page:""},
-            {name:"Docs",icon:false,link:"docs",secondary_page:""},
+            {name:"Docs",icon:"ion-clipboard",link:"docs",secondary_page:""},
             {name:"Log In",icon:false,link:"login",secondary_page:""},
             {name:"Sign Up",icon:false,link:"sign_up",secondary_page:""}
         ]

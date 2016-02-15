@@ -1141,8 +1141,9 @@ var LogDetail = React.createClass({displayName: "LogDetail",
         var log = RedoxModel.get( RS.route.log_id );
 
 
+        var tab_content = "";
         if ( RS.route.log_detail_tab_index == "" ) {
-
+            tab_content = React.createElement("div", null, "hi");
         }
 
         return  React.createElement("div", {className: "o-contentSimple c-logDetail"}, 
@@ -1210,7 +1211,7 @@ var LogDetail = React.createClass({displayName: "LogDetail",
                                   "Response"
                               )
                           ), 
-
+                           tab_content, 
 
 
 
@@ -2405,7 +2406,7 @@ var MainNav = React.createClass({displayName: "MainNav",
 
             nav_items.push(
                 React.createElement("div", {className: 
-                        "c-mainNav__link " +
+                        "a-flex-center c-mainNav__link " +
                         (   ( RS.route.section == page.link ||
                                 (
                                     !RS.route.section
@@ -2416,10 +2417,8 @@ var MainNav = React.createClass({displayName: "MainNav",
                             ? "c-mainNav__link--selected " : ""), 
                     
                     onClick:  this.openSection.bind( this , page.link , page.secondary_page) }, 
-                      icon_html, 
-                    React.createElement("div", {className: "c-mainNav__link_label"}, 
-                         page.name
-                    )
+                     icon_html, 
+                    React.createElement("div", {className: "c-mainNav__link__label"},  page.name)
                 )
             );
         }
@@ -2442,7 +2441,7 @@ var MainNav = React.createClass({displayName: "MainNav",
 
                     React.createElement("div", {className: "c-mainNav__logo"}), 
 
-                    React.createElement("div", {className: "c-mainNav__links"}, 
+                    React.createElement("div", {className: "c-mainNav__links a-float-right a-flex-h-stretch"}, 
                          nav_items 
                     ), 
 

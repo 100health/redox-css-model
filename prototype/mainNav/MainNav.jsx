@@ -58,7 +58,7 @@ var MainNav = React.createClass({
 
             nav_items.push(
                 <div className={
-                        "c-mainNav__link " +
+                        "a-flex-center c-mainNav__link " +
                         (   ( RS.route.section == page.link ||
                                 (
                                     !RS.route.section
@@ -69,10 +69,8 @@ var MainNav = React.createClass({
                             ? "c-mainNav__link--selected " : "" )
                     }
                     onClick={ this.openSection.bind( this , page.link , page.secondary_page ) }>
-                    {  icon_html }
-                    <div className="c-mainNav__link_label">
-                        { page.name }
-                    </div>
+                    { icon_html }
+                    <div className="c-mainNav__link__label">{ page.name }</div>
                 </div>
             );
         }
@@ -95,7 +93,7 @@ var MainNav = React.createClass({
 
                     <div className="c-mainNav__logo"></div>
 
-                    <div className="c-mainNav__links">
+                    <div className="c-mainNav__links a-float-right a-flex-h-stretch">
                         { nav_items }
                     </div>
 

@@ -7,108 +7,55 @@
     },
 
     "cache":[
+        ".flexbox "
+    ],
+
+    "variables" : [
 
     ],
 
+    "atoms" : [
+        {
+            "name":"flex-width-col-12-inv",
+            "variable":"12col-col-12",
+            "group":"layouts",
+            "sub_group":"sizing",
+            "example":"<div ... style='height: 100px; min-width: 50px; background-color:#fff; position: absolute;'></div>",
+            "selector":".a-flex-h-fill-minus-@var_name",
+            "declaration_lines":[
+                ".flexbox  & {",
+                    "flex: 1;",
+                    "-ms-flex: 1 0 auto;",
+                "}",
 
-    "variables" : [
-        {
-            "name":"flex-justify-content",
-            "group":"layouts",
-            "base":"",
-            "shortcut":"<em>@base</em>-[ flex-start, flex-end, center, space-between, space-around ]",
-            "scheme":["@base-flex-start","@base-flex-end","@base-center","@base-space-between","@base-space-around"],
-            "values":[
-                "flex-start",
-                "flex-end",
-                "center",
-                "space-between",
-                "space-around"
-            ],
-            "ignore_variable":true,
-            "atoms":[
-                {
-                    "name":"flex-justify-content",
-                    "group":"layouts",
-                    "sub_group":"positioning",
-                    "example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
-                    "selector":".a-justify-content@var_name",
-                    "declaration_value":"justify-content : @var_value;"
-                }
-            ]
+                ".no-flexbox & {",
+                    "width: calc( 100% - _@_@var_name  );",
+                    "outline: none;",
+                "}"
+			]
         },
         {
-            "name":"align-self",
+            "name":"flex-row-height-quartered-inv",
+            "variable":"row-height-quartered-inv",
             "group":"layouts",
-            "base":"",
-            "shortcut":"<em>@base</em>-[ flex-start, flex-end, center, space-between, space-around ]",
-            "scheme":["@base-flex-start","@base-flex-end","@base-center","@base-baseline","@base-stretch"],
-            "values":[
-                "flex-start","flex-end","center","baseline","stretch"
-            ],
-            "ignore_variable":true,
-            "atoms":[
-                {
-                    "name":"align-self",
-                    "group":"layouts",
-                    "sub_group":"positioning",
-                    "example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
-                    "selector":".a-align-self@var_name",
-                    "declaration_value":"align-self : @var_value;"
-                }
-            ]
-        },
-        {
-            "name":"flex-align-items",
-            "group":"layouts",
-            "base":"",
-            "shortcut":"<em>@base</em>-[ flex-start, flex-end, center, baseline, stretch ]",
-            "scheme":{"@base":[
-                "-flex-start","-flex-end",
-                "-center","-baseline","-stretch"]
-            },
-            "values":[
-                "flex-start","flex-end","center","baseline","stretch"
-            ],
-            "ignore_variable":true,
-            "atoms":[
-                {
-                    "name":"flex-align-items",
-                    "group":"layouts",
-                    "sub_group":"positioning",
-                    "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 50px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
-                    "selector":".a-align-items@var_name",
-                    "declaration_value":"align-items : @var_value;"
-                }
-            ]
-        },
-        {
-            "name":"flex-direction",
-            "group":"layouts",
-            "base":"",
-            "shortcut":"<em>@base</em>-[ row, row-reverse, column, column-reverse ]",
-            "scheme":{"@base":[
-                "-row","-row-reverse","-column","-column-reverse"]
-            },
-            "values":[
-                "row","row-reverse","column","column-reverse"
-            ],
-            "ignore_variable":true,
-            "atoms":[
-                {
-                    "name":"flex-direction",
-                    "group":"layouts",
-                    "sub_group":"positioning",
-                    "example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'>1</div><div style='width: 100px; height: 100px; background-color:#aaa;'>2</div><div style='width: 100px; height: 100px; background-color:#fff;'>3</div></div>",
-                    "selector":".a-flex-direction@var_name",
-                    "declaration_value":"flex-direction : @var_value;"
-                }
-            ]
+            "sub_group":"sizing",
+            "example":"<div ... style='width: 100px; background-color:#fff; position: absolute;'></div>",
+            "selector":".a-flex-v-fill-minus-@var_name",
+            "declaration_lines":[
+                ".flexbox  & {",
+                    "flex: 1;",
+                    "-ms-flex: 1 0 auto;",
+                "}",
+
+                ".no-flexbox & {",
+                    "height: calc( 100% - _@_@var_name  );",
+                    "outline: none;",
+                "}"
+			]
         }
     ],
 
     "utilities":[
-
 
         {
 			"name":"stack-v",
@@ -118,11 +65,16 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: column nowrap;",
                     "justify-content: flex-start;",
                 	"align-items: center;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: column;",
+                    "-ms-flex-pack: start;",
+                	"-ms-flex-align: center;",
                 "}",
 
                 ".no-flexbox & {",
@@ -130,16 +82,33 @@
                     "transform-style: preserve-3d;",
                     "> * {",
                         "min-width: 1px;",
-                        "/* using margin is probably better than transform, but ",
-                        "it requires an exact width...lets see where it takes us first*/",
-                        "margin: 0 auto;",
-
-                        "/*position: relative;",
+                        "position: relative;",
                         "float: left;",
                         "clear: left;",
                         "left: 50%;",
                         "transform: translateX(-50%);",
-                        "-ms-transform: translateX(-50%);*/",
+                        "-ms-transform: translateX(-50%);",
+                    "}",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "> * {",
+                        "float: left;",
+                        "clear: left;",
+                        "min-height: 1px;",
+                        "/* need to define width */",
+                        "outline: 5px dotted red;",
+                    "}",
+                "}",
+
+                ".no-flexbox-table & {",
+                    "display: table;",
+                    "> * {",
+                        "display: table-row;",
+                        "vertical-align: middle;",
+                        "text-align: center;",
+                        "position: relative;",
                     "}",
                 "}"
 			]
@@ -153,11 +122,26 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'>100px wide</div><div style='height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: column nowrap;",
                     "justify-content: flex-start;",
                 	"align-items: stretch;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: column;",
+                    "-ms-flex-pack: start;",
+                	"-ms-flex-align: stretch;",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "> * {",
+                        "float: left;",
+                        "clear: left;",
+                        "min-width: 1px;",
+                        "width: 100%",
+                    "}",
                 "}",
 
                 ".no-flexbox & {",
@@ -180,11 +164,25 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: column nowrap;",
                     "justify-content: flex-start;",
                 	"align-items: flex-start;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: column;",
+                    "-ms-flex-pack: start;",
+                	"-ms-flex-align: start;",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "> * {",
+                        "float: left;",
+                        "clear: left;",
+                        "min-width: 1px;",
+                    "}",
                 "}",
 
                 ".no-flexbox & {",
@@ -207,11 +205,25 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: column nowrap;",
                     "justify-content: flex-start;",
                 	"align-items: flex-end;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: column;",
+                    "-ms-flex-pack: start;",
+                	"-ms-flex-align: end;",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "> * {",
+                        "float: right;",
+                        "clear: right;",
+                        "min-width: 1px;",
+                    "}",
                 "}",
 
                 ".no-flexbox & {",
@@ -233,11 +245,27 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-start;",
                 	"align-items: center;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: row;",
+                    "-ms-flex-pack: start;",
+                	"-ms-flex-align: center;",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "> * {",
+                        "float: left;",
+                        "min-height: 1px;",
+                        "position: relative;",
+                        "/* need to define height */",
+                        "outline: 5px dotted red;",
+                    "}",
                 "}",
 
                 ".no-flexbox & {",
@@ -250,9 +278,19 @@
                         "top: 50%;",
                         "transform: translateY(-50%);",
                         "-ms-transform: translateY(-50%);",
-                        "/* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */",
+                    "}",
+                "}",
+
+                ".no-flexbox-table & {",
+                    "display: table;",
+                    "> * {",
+                        "display: table-cell;",
+                        "vertical-align: middle;",
+                        "/*text-align: center;*/",
+                        "position: relative;",
                     "}",
                 "}"
+
 			]
 		},
 
@@ -264,11 +302,25 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'>100px height</div><div style='width: 100px; background-color:#fff;'></div></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-start;",
                 	"align-items: stretch;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: row;",
+                    "-ms-flex-pack: start;",
+                	"-ms-flex-align: stretch;",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "> * {",
+                        "float: left;",
+                        "min-height: 1px;",
+                        "height: 100%;",
+                    "}",
                 "}",
 
                 ".no-flexbox & {",
@@ -277,6 +329,16 @@
                         "float: left;",
                         "height: 100%;",
                         "min-width: 1px;",
+                    "}",
+                "}",
+
+                ".no-flexbox-table & {",
+                    "display: table;",
+                    "> * {",
+                        "display: table-cell;",
+                        "vertical-align: middle;",
+                        "text-align: center;",
+                        "position: relative;",
                     "}",
                 "}"
 			]
@@ -290,11 +352,24 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-start;",
                 	"align-items: flex-start;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: row;",
+                    "-ms-flex-pack: start;",
+                	"-ms-flex-align: start;",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "> * {",
+                        "float: left;",
+                        "min-height: 1px;",
+                    "}",
                 "}",
 
                 ".no-flexbox & {",
@@ -315,11 +390,24 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-start;",
                 	"align-items: flex-end;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: row;",
+                    "-ms-flex-pack: start;",
+                	"-ms-flex-align: end;",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "> * {",
+                        "float: left;",
+                        "min-height: 1px;",
+                    "}",
                 "}",
 
                 ".no-flexbox & {",
@@ -337,9 +425,6 @@
 			]
 		},
 
-
-
-
         {
 			"name":"stack-center",
             "group":"layouts",
@@ -348,26 +433,88 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'>Text That is Centered</div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: center;",
                 	"align-items: center;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: row;",
+                    "-ms-flex-pack: center;",
+                	"-ms-flex-align: center;",
+                "}",
+
+                ".flexbox-grid & {",
+                    "position: relative;",
+                    "text-align: center;",
+                    "> * {",
+                        "display: inline-block;",
+                        "/* need to define height */",
+                        "outline: 5px dotted red;",
+                    "}",
+                    "> *:nth-child( n+2 ) {",
+                        "/* don't put more than one item here */",
+                        "outline: 5px dotted red;",
+                    "}",
                 "}",
 
                 ".no-flexbox & {",
                     "position: relative;",
+                    "text-align: center;",
                     "> * {",
                         "min-width: 1px;",
                         "position: relative;",
-                        "top: 50%;","left: 50%;",
-                        "transform: translate(-50%,-50%);",
-                        "-ms-transform: translate(-50%,-50%);",
+                        "display: inline-block;",
+                        "top: 50%;",
+                        "transform: translateY( -50% );",
+                        "-ms-transform: translateY( -50% );",
                     "}",
                 "}"
 
 			]
 		},
+
+
+        {
+			"name":"stack-right",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-right",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'>Text That is Right aligned</div>",
+			"declaration_lines":[
+
+                ".flexbox  & {",
+                    "display: flex;",
+                    "flex-flow: row nowrap;",
+                    "justify-content: flex-end;",
+                    "align-items: center;",
+
+                    "display: -ms-flexbox;",
+                    "-ms-flex-direction: row;",
+                    "-ms-flex-pack: end;",
+                	"-ms-flex-align: center;",
+
+                    "> *:nth-child( n+2 ) {",
+                        "/* only one child */",
+                        "outline: 5px dotted red;",
+                    "}",
+                "}",
+
+                ".no-flexbox & {",
+                    "position: relative;",
+                    "text-align: right;",
+                    "> * {",
+                        "min-width: 1px;",
+                        "position: absolute;",
+                        "right: 0px;","top: 50%;",
+                        "transform: translateY(-50%);",
+                    "}",
+                "}"
+
+			]
+		},
+
 
         {
 			"name":"stack-item-fill",
@@ -377,13 +524,16 @@
             "example":"<div style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div ... style='width: 100px; height: 100px; background-color:#aaa;'>FILLING</div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                "html:not( .no-flexbox ) & {",
+                ".flexbox  & {",
                     "flex: 1;",
+                    "/*outline: 5px dotted red;*/",
                 "}",
 
                 ".no-flexbox & {",
                     "/* gotta use an inverse calc() size for this to work... */",
+                    "/*outline: 5px dotted red;*/",
                 "}"
+
 			]
 		}
 	]

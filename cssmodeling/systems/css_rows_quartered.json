@@ -115,7 +115,19 @@
                     "sub_group":"sizing",
 					"example":"<div ... style='width: 100px; background-color:#fff; position: absolute;'></div>",
 					"selector":".a-height-@var_name",
-					"declaration_value":"height: _@_@var_name ;"
+					"declaration_lines":[
+                        "height: _@_@var_name;",
+                        ".flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {",
+                            "top: calc( 50% - ( _@_@var_name / 2 ) );",
+                            "position: relative;",
+                            "outline: none;",
+                        "}",
+                        ".flexbox-grid .a-flex-h-end > & {",
+                            "top: calc( 100% -  _@_@var_name );",
+                            "position: relative;",
+                            "outline: none;",
+                        "}"
+                    ]
 				},
 				{
 					"name":"row-height-inv",
@@ -131,7 +143,19 @@
                     "sub_group":"typography",
 					"example":"...Font Sizes",
 					"selector":".a-line-height-@var_name",
-                    "declaration_value":"line-height: _@_@var_name ;"
+                    "declaration_lines":[
+                        "line-height: _@_@var_name;",
+                        ".flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {",
+                            "top: calc( 50% - (( _@_@var_name / 2 )) );",
+                            "position: relative;",
+                            "outline: none;",
+                        "}",
+                        ".flexbox-grid .a-flex-h-end > & {",
+                            "top: calc( 100% -  _@_@var_name );",
+                            "position: relative;",
+                            "outline: none;",
+                        "}"
+                    ]
 				},
 				{
 					"name":"row-top",
@@ -318,8 +342,21 @@
                     "sub_group":"typography",
 					"example":"<div ... style='background-color: #fff;'>Text Size</div>",
 					"selector":".a-text-size@var_name_no_base",
-					"declaration_value":"font-size: _@_@var_name ; line-height: _@_v-text-line-height@var_name_no_base"
-				}
+					"declaration_lines":[
+                        "font-size: _@_@var_name ;",
+                        "line-height: _@_v-text-line-height@var_name_no_base;",
+                        ".flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {",
+                            "top: calc( 50% - (( _@_v-text-line-height@var_name_no_base / 2 )) );",
+                            "position: relative;",
+                            "outline: none;",
+                        "}",
+                        ".flexbox-grid .a-flex-h-end > & {",
+                            "top: calc( 100% -  _@_v-text-line-height@var_name_no_base );",
+                            "position: relative;",
+                            "outline: none;",
+                        "}"
+                    ]
+                }
             ]
 		}
 

@@ -191,6 +191,7 @@ module.exports = function(grunt) {
         		'node_modules/routestate/RouteState.js',
                 'node_modules/protodata/client/protodata.js',
 
+
                 'dist/prototype/redox_jsx.js',
                 'prototype/**/*.js'
             ];
