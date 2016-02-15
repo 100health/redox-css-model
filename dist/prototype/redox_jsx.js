@@ -1130,21 +1130,45 @@ var LogDetail = React.createClass({displayName: "LogDetail",
     changeTab: function ( tab_index ) {
         RS.merge({
             log_detail_tab_index:tab_index
-        })
+        });
+        
     },
 
-    // a-padding-left-row-0
-    // p-logs__logNav
 
     render: function() {
 
         var log = RedoxModel.get( RS.route.log_id );
-
-
+        
         var tab_content = "";
-        if ( RS.route.log_detail_tab_index == "" ) {
-            tab_content = React.createElement("div", null, "hi");
+        /*
+        if ( RS.route.log_detail_tab_index === "" ) {
+            tab_content = <div>hi</div>;
         }
+        */
+        
+        switch ( RS.route.log_detail_tab_index ) {
+            case "transformation" :
+                tab_content = React.createElement("div", null, "Transformation");
+                break;
+                
+            case "filter" :
+                tab_content = React.createElement("div", null, "Filter");
+                break;
+                
+            case "response" :
+                tab_content = React.createElement("div", null, "Response");
+                break;
+                
+            case "incoming" :
+                tab_content = React.createElement("div", null, "Incoming");
+                break;
+                
+            case "" :
+                tab_content = React.createElement("div", null, "Init Incoming");
+                break;
+        }
+        
+        console.log();
 
         return  React.createElement("div", {className: "o-contentSimple c-logDetail"}, 
                     React.createElement("div", {className: "o-contentSimple__closeDetail", 
@@ -1158,96 +1182,114 @@ var LogDetail = React.createClass({displayName: "LogDetail",
                                 { log.success }
                             </div>
                         </div> */
-                        React.createElement("div", {className: "c-redox__contentPadded p-logs__logDetails"}, 
+                        
+                        React.createElement("div", {className: "c-redox__contentPadded"}, 
 
-                          React.createElement("div", {className: "p-logs__logHeader"}, 
+                          React.createElement("div", {className: 
+                                "a-flex-h" + ' ' +
+                                "c-logDetail__logHeader"}, 
 
-                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--connectionIcon"}, 
-                              React.createElement("div", {className: "o-icon__inbound"})
+                            React.createElement("div", {className: 
+                                "c-logDetail__logHeader--connectionIcon"}, 
+                              React.createElement("div", {className:  "o-icon__" + log.connection().type})
                             ), 
 
-                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--connectionType"}, 
-                              "Inbound"
+                            React.createElement("div", {className: 
+                                "c-logDetail__logHeader--connectionType1"}, 
+                                (() => {
+                                    switch (log.connection().type) {
+                                        case "inbound":   return "Inbound";
+                                        case "outbound":  return "Outbound";
+                                        case "query":     return "Query";
+                                        default:          return "";
+                                    }
+                                })()
                             ), 
 
-                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--scheduleText"}, 
+                            React.createElement("div", {className: 
+                                "c-logDetail__logHeader--connectionType2" + ' ' +
+                                "a-flex-h"}, 
                                 React.createElement("div", {className:  "c-logs__modelIcon fa fa-2x " + log.data_model().icon}), 
-                                 log.data_model().name
+                                React.createElement("div", null,  log.data_model().name)
                             ), 
 
-                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--status1"}, 
-                              React.createElement("div", {className: "fa fa-minus"}), " fail"
+                            React.createElement("div", {className: 
+                                "c-logDetail__logHeader--status1" + ' ' +
+                                "a-justify-content-center" + ' ' +
+                                "a-flex-center"}, 
+                                (() => {
+                                    switch (log.success) {
+                                        case true:   return "Success";
+                                        case false:  return "Fail";
+                                        default:     return "";
+                                    }
+                                })()
                             ), 
 
-                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--status2"}, 
-                              "stage"
+                            React.createElement("div", {className: 
+                                "c-logDetail__logHeader--status2" + ' ' +
+                                "a-justify-content-center" + ' ' +
+                                "a-flex-center"}, 
+                                (() => {
+                                    switch (log.connection().environment) {
+                                        case "production":   return "Production";
+                                        case "stage":        return "Stage";
+                                        default:             return "";
+                                    }
+                                })()
                             ), 
 
-                            React.createElement("div", {className: "p-logs__logHeader--cell p-logs__logHeader--time"}, 
-                              "Jan 11 7:11:32p"
+                            React.createElement("div", {className: 
+                                "c-logDetail__logHeader--time" + ' ' +                         
+                                "a-text-align-right"}, 
+                                "Jan 11 7:11:32p"
                             )
 
                           ), 
 
 
+                          React.createElement("div", {className: "p-logs__logMessage"}, 
+                            React.createElement("p", null, " ",  log.title, " ")
+                          ), 
+                          
+                          
                           React.createElement("div", {className: "o-tabs a-height-row-2-half a-border-h a-border-top"}, 
-                              React.createElement("button", {className:  "o-tabs__item ", 
-                                  onClick:  this.changeTab.bind( this , "") }, 
-                                  "Incoming"
+                              React.createElement("button", {className: "o-tabs__item " +
+                                            ( ( !RS.route.log_detail_tab_index || RS.route.log_detail_tab_index == "" )
+                                                ? " o-tabs__item--selected " : ""), 
+                                        
+                                    onClick:  this.changeTab.bind( this , "") }, 
+                                    "Incoming"
                               ), 
 
-                              React.createElement("button", {className: "o-tabs__item", 
-                                  onClick:  this.changeTab.bind( this , "transformation") }, 
-                                  "Transformation"
+                              React.createElement("button", {className: "o-tabs__item " +
+                                            ( ( RS.route.log_detail_tab_index == "transformation" )
+                                                ? " o-tabs__item--selected " : ""), 
+                                        
+                                    onClick:  this.changeTab.bind( this , "transformation") }, 
+                                    "Transformation"
                               ), 
 
-                              React.createElement("button", {className: "o-tabs__item", 
-                                  onClick:  this.changeTab.bind( this , "filter") }, 
-                                  "Filter"
+                              React.createElement("button", {className: "o-tabs__item " +
+                                            ( ( RS.route.log_detail_tab_index == "filter" )
+                                                ? " o-tabs__item--selected " : ""), 
+                                        
+                                    onClick:  this.changeTab.bind( this , "filter") }, 
+                                    "Filter"
                               ), 
 
-                              React.createElement("button", {className: "o-tabs__item", 
-                                  onClick:  this.changeTab.bind( this , "response") }, 
-                                  "Response"
+                              React.createElement("button", {className: "o-tabs__item " +
+                                            ( ( RS.route.log_detail_tab_index == "response" )
+                                                ? " o-tabs__item--selected " : ""), 
+                                        
+                                    onClick:  this.changeTab.bind( this , "response") }, 
+                                    "Response"
                               )
                           ), 
-                           tab_content, 
 
 
-
-                          React.createElement("br", null), 
-                          React.createElement("br", null), 
-                          React.createElement("br", null), 
-                          React.createElement("br", null), 
-
-
-                          React.createElement("div", {className: "p-logs__logMessage"}, 
-                            React.createElement("p", null, "Message failed when trying to go through part a of the b module. Please contact b for any questions, etc. Message failed when trying to go through part a. Please contact b for any questions, etc.")
-                          ), 
-
-                          React.createElement("div", {className: "p-logs__logNav"}, 
-                              React.createElement("button", {className: "p-logs__logNav--navItem p-logs__logNav--navItem--selected"}, 
-                                  "Incoming"
-                              ), 
-
-                              React.createElement("button", {className: "p-logs__logNav--navItem"}, 
-                                  "Transformation"
-                              ), 
-
-                              React.createElement("button", {className: "p-logs__logNav--navItem"}, 
-                                  React.createElement("em", null, "Filter")
-                              ), 
-
-                              React.createElement("button", {className: "p-logs__logNav--navItem"}, 
-                                  React.createElement("em", null, "Response")
-                              ), 
-
-                              React.createElement("div", {className: "a-flex-item-fill a-border-bottom"})
-                          ), 
-
-
-
-                          React.createElement("div", {className: "p-logs__logContent"}
+                          React.createElement("div", {className: "p-logs__logContent"}, 
+                             tab_content 
                           )
 
 
@@ -1325,6 +1367,17 @@ var Logs = React.createClass({displayName: "Logs",
                 message = "Service failed at area b...";
                 break;
         }
+        
+        var environment = "";
+        switch ( connection.environment ) {
+            case "production" :
+                environment = "Production";
+                break;
+            case "stage" :
+                environment = "Stage";
+                break;
+        }
+        
 
         return  React.createElement("div", {className: "o-list__row", key:  log.guid, 
                     onClick:  this.openLog.bind( this , log) }, 
@@ -1350,7 +1403,7 @@ var Logs = React.createClass({displayName: "Logs",
                     ), 
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
-                        "c-logs__cell--environment"}, "Production"), 
+                        "c-logs__cell--environment"},  environment ), 
                     React.createElement("div", {className: 
                         "o-list__cell" + ' ' +
                         "c-logs__cell--time"}, "1/12 | 5:64:23pm")

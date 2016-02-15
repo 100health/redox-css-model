@@ -64,6 +64,17 @@ var Logs = React.createClass({
                 message = "Service failed at area b...";
                 break;
         }
+        
+        var environment = "";
+        switch ( connection.environment ) {
+            case "production" :
+                environment = "Production";
+                break;
+            case "stage" :
+                environment = "Stage";
+                break;
+        }
+        
 
         return  <div className="o-list__row" key={ log.guid }
                     onClick={ this.openLog.bind( this , log ) }>
@@ -89,7 +100,7 @@ var Logs = React.createClass({
                     </div>
                     <div className="
                         o-list__cell
-                        c-logs__cell--environment">Production</div>
+                        c-logs__cell--environment">{ environment }</div>
                     <div className="
                         o-list__cell
                         c-logs__cell--time">1/12 | 5:64:23pm</div>
