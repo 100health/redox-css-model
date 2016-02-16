@@ -30,14 +30,14 @@ var Logs = React.createClass({
 
     openLog: function ( log ) {
         RS.merge({
-            detail_page:"log",
-            log_id:log.guid
+            'page:detail_page':"log",
+            'page:log_id':log.guid
         })
     },
 
     getLogRow: function( log ){
 
-        var connection = log.connection();
+        var connection = log.connection;
 
         var type_cls = "";
         var message = "";
@@ -64,7 +64,7 @@ var Logs = React.createClass({
                 message = "Service failed at area b...";
                 break;
         }
-        
+
         var environment = "";
         switch ( connection.environment ) {
             case "production" :
@@ -74,9 +74,9 @@ var Logs = React.createClass({
                 environment = "Stage";
                 break;
         }
-        
 
-        return  <div className="o-list__row" key={ log.guid }
+
+        return  <div className="o-list__row" key={ Math.random() }
                     onClick={ this.openLog.bind( this , log ) }>
                     <div className="
                         o-list__cell
@@ -85,8 +85,8 @@ var Logs = React.createClass({
                     </div>
 
                     <div className="o-list__cell c-logs__cell--model">
-                        <div className={ "c-logs__modelIcon fa fa-2x " + log.data_model().icon }></div>
-                        { log.data_model().name }
+                        <div className={ "c-logs__modelIcon fa fa-2x " + log.data_model.icon }></div>
+                        { log.data_model.name }
                     </div>
 
                     <div className="
@@ -112,8 +112,8 @@ var Logs = React.createClass({
                         </div>
 
                         <div className="a-width-col-2 c-logs__cell--model a-interactive-hover">
-                            <div className={ "c-logs__modelIcon fa fa-2x " + log.data_model().icon }></div>
-                            { log.data_model().name }
+                            <div className={ "c-logs__modelIcon fa fa-2x " + log.data_model.icon }></div>
+                            { log.data_model.name }
                         </div>
 
                         <div className="a-width-minus-col-5-half ">  { message }  </div>
@@ -135,7 +135,7 @@ var Logs = React.createClass({
         var html = [];
         var data_model;
         var row_count = 6;
-        var data_models = RedoxModel.app.data_models();
+        var data_models = RedoxModel.app.data_models;
         // var thirds = Math.floor( data_models.length/3 );
         var start_index = ( third_index * row_count );
         var end_index = Math.min( data_models.length , start_index + row_count );
@@ -153,7 +153,7 @@ var Logs = React.createClass({
 
     render: function() {
 
-        var logs = RedoxModel.app.focused_organization().logs();
+        var logs = RedoxModel.app.focused_organization.logs;
 
 
         var log_rows_html = [];
@@ -224,8 +224,8 @@ var Logs = React.createClass({
                                         c-logs__cell--summaryTime">Date/Time</div>
                                 </div>
                             </div>
-                            
-                            
+
+
                             <div className="c-logs__filters">
                                 <div className="c-logs__closeFilters"
                                     onClick={ this.toggleFooter }></div>
@@ -244,8 +244,8 @@ var Logs = React.createClass({
                                             $(".p-logs__filters").addClass("p-logs__filters--selected");
                                         }
                                     }>
-                                    
-                                    
+
+
                                             <div className="
                                                 o-list__cell
                                                 p-logs__filters--cell
@@ -256,7 +256,7 @@ var Logs = React.createClass({
                                                         </select>
                                                     </div>
                                                 </div>
-                                                
+
                                             <div className="
                                                 o-list__cell
                                                 p-logs__filters--cell
@@ -266,9 +266,9 @@ var Logs = React.createClass({
                                                             <option value="data-model" key="data-model">Data Model</option>
                                                         </select>
                                                     </div>
-                                                    
+
                                                 </div>
-                                            
+
                                             <div className="
                                                 o-list__cell
                                                 p-logs__filters--cell
@@ -278,9 +278,9 @@ var Logs = React.createClass({
                                                             <option value="status" key="status">Status</option>
                                                         </select>
                                                     </div>
-                                                
+
                                                 </div>
-                                                
+
                                             <div className="
                                                 o-list__cell
                                                 p-logs__filters--cell
@@ -290,7 +290,7 @@ var Logs = React.createClass({
                                                             <option value="environment" key="environment">Environment</option>
                                                         </select>
                                                     </div>
-                                                
+
                                                 </div>
                                             <div className="
                                                 o-list__cell
@@ -300,12 +300,12 @@ var Logs = React.createClass({
                                                     <div className="o-form__element">
                                                         <input className="c-logs__search" />
                                                     </div>
-                                                
+
                                                 </div>
 
-                                    
-                            
-                            
+
+
+
                                 </div>
                                 <div className="p-logs__clearAll"
                                     onClick={
@@ -320,9 +320,9 @@ var Logs = React.createClass({
                                         }
                                     }></div>
                             </div>
-                            
-                            
-                            
+
+
+
                         </div>
                     </div>
                 </div>;

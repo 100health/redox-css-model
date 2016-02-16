@@ -15,7 +15,7 @@ var DataModelSelector = React.createClass({
 
     render: function() {
 
-        var data_models = RedoxModel.app.data_models();
+        var data_models = RedoxModel.app.data_models;
 
         var models_html = [],model;
         for ( var i=0; i<data_models.length; i++ ) {

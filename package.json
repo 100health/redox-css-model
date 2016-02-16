@@ -21,8 +21,8 @@
     "jquery": "~1.11",
     "react" : "~0.13",
 
-    "routestate":"~0.3",
-    "protodata":"~0.1",
+    "routestate":"~0.4",
+    "protodata":"~0.2",
     "marked": "~0.3",
 
 

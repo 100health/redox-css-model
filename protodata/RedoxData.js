@@ -28,8 +28,6 @@ module.exports = {
             this.test_data.locations = ["Madison","Milwaukee","Green Bay"];
             this.test_data.transactions = ["Transaction 1","Transaction 2","Transaction 3"];
 
-
-
             this.main_pages = pd.generateArray(
                                     "main_page" ,
                                     pd.config.main_page.data.length
@@ -54,12 +52,9 @@ module.exports = {
             this.organizations = pd.generateArray(
                                     "organization" , 10,
                                     this, "app"
-
                                 );
-            this.focused_organization = this.organizations[2];
 
-
-
+            this.focused_organization = this.organizations[0];
 
 
         },
@@ -135,14 +130,23 @@ module.exports = {
 
             this.logs = pd.generateArray(
                             "log" ,
-                            pd.random( 20, 50 ),
+                            pd.random( 20, 100 ),
                             this, "organization"
                         );
 
             this.profile_public = pd.random( 0 , 1 );
         }
     },
+
+    subscriber_organization:{
+        init:function ( pd ) {
+            // circular to use organization....temp solution
+            this.name = pd.db_random( "firstName" ) + " Health Care";
+        }
+    },
+
     log:{
+        max:30,
         init:function ( pd ) {
             this.title = pd.db_random( "noun" ) + " Log Message";
 
@@ -185,26 +189,32 @@ module.exports = {
         init:function ( pd ) {
             this.title = pd.db_random( "noun" ) + " " + pd.db_random( "noun" ) + " Connection";
 
+            this.subscriptions = [];
+
             if ( Math.random() > .6 ) {
                 this.type = "outbound";
                 this.organization.outbound_connections.push( this );
+                this.subscriptions = pd.generateArray(
+                                        "subscriber_organization" ,
+                                        pd.random( 3 , 7 )
+                                    );;
+
             }else if ( Math.random() > .3 ){
                 this.type = "inbound";
                 this.organization.inbound_connections.push( this );
-
                 if ( Math.random() > .6 ) {
                     this.end_point = "";
                     this.verified = false;
                 }else{
-                    this.end_point = "http://www.myorganization.com/api/endpoint";
+                    this.end_point = "http://www." + pd.db_random( "noun" ).toLowerCase() + ".com/api/endpoint";
                     this.verified = true;
                 }
             } else{
                 this.type = "query";
             }
-            
+
             this.environment = ( Math.random() > .5 ) ? "stage" : "production";
-            
+
             this.logs = [];// populated via logs...
 
         }

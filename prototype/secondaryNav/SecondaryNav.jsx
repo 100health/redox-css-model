@@ -26,7 +26,7 @@ var SecondaryNav = React.createClass({
 
     changePage: function ( page ) {
         RS.merge({
-            page:page,
+            'section:page':page,
             detail_page:"",
             conn_id:"",
             dev_tools_state:""
@@ -44,7 +44,7 @@ var SecondaryNav = React.createClass({
 
         var nav_items = [],page;
 
-        var pages = RedoxModel.app.organization_pages();
+        var pages = RedoxModel.app.organization_pages;
 
         for ( var p=0; p<pages.length; p++ ) {
             page = pages[p];

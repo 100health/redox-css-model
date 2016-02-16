@@ -22,7 +22,7 @@ var ProfileAdminEdit = React.createClass({
 
     close: function(){
         RS.merge({
-            modal:""
+            'modal':false
         });
         return false;
     },

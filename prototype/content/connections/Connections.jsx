@@ -14,11 +14,10 @@ var Connections = React.createClass({
 
     openConnection: function ( guid ) {
         RS.merge({
-            modal:"connection",
-            conn_id:guid
+            'modal':"connection",
+            'modal:modal_conn_id':guid
         })
     },
-
 
     getInboundConnectionRow: function( connection ){
 
@@ -61,14 +60,14 @@ var Connections = React.createClass({
 
     render: function() {
 
-        var inbound = RedoxModel.app.focused_organization().inbound_connections();
+        var inbound = RedoxModel.app.focused_organization.inbound_connections;
 
         var inbound_connections_html = [];
         for ( var i=0; i<inbound.length; i++ ) {
             inbound_connections_html.push( this.getInboundConnectionRow( inbound[i] ) );
         }
 
-        var outbound = RedoxModel.app.focused_organization().outbound_connections();
+        var outbound = RedoxModel.app.focused_organization.outbound_connections;
 
         var outbound_connections_html = [];
         for ( var i=0; i<outbound.length; i++ ) {

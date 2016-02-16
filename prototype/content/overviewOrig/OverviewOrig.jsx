@@ -1,6 +1,6 @@
 var OverviewOrig = React.createClass({
 
-    
+
   render: function() {
     return (
 
@@ -33,7 +33,7 @@ var OverviewOrig = React.createClass({
               </div>
             </div>
           </div>
-          <div ng-show="session.currentUser().admin">
+          <div ng-show="session.currentUser.admin">
             <div className="dashboard-form-panel">
               <div className="dashboard-form-row">
                 <i className="ion-android-settings" />&nbsp;&nbsp;&nbsp;Edit Redox Team Assignments (Admin Only)

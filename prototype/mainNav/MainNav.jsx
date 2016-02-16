@@ -40,7 +40,7 @@ var MainNav = React.createClass({
 
     render: function() {
 
-        var nav_links = RedoxModel.app.orig_main_pages();
+        var nav_links = RedoxModel.app.orig_main_pages;
 
         var nav_items = [],icon_html;
 

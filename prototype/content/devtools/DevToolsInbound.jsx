@@ -194,7 +194,7 @@ var DevToolsInbound = React.createClass({
         }
 
 
-        var inbound = RedoxModel.app.focused_organization().inbound_connections();
+        var inbound = RedoxModel.app.focused_organization.inbound_connections;
 
         var inbound_connections_options = [],select_html = false;
         for ( var i=0; i<inbound.length; i++ ) {
@@ -211,7 +211,7 @@ var DevToolsInbound = React.createClass({
             }
         }
 
-        var outbound = RedoxModel.app.focused_organization().outbound_connections();
+        var outbound = RedoxModel.app.focused_organization.outbound_connections;
 
         var outbound_connections_options = [];
         for ( var i=0; i<outbound.length; i++ ) {

@@ -32,14 +32,14 @@ var LogsSideNav = React.createClass({
 
     openLog: function ( log ) {
         RS.merge({
-            detail_page:"log",
-            log_id:log.guid
+            'page:detail_page':"log",
+            'page:log_id':log.guid
         })
     },
 
     getLogRow: function( log ){
 
-        var connection = log.connection();
+        var connection = log.connection;
 
         var type_cls = "";
         var message = "<i>1/12 | 5:64:23pm</i>";
@@ -74,7 +74,7 @@ var LogsSideNav = React.createClass({
 
         return  <div className={
                     "c-tertiaryNav__item o-list__row c-logsSideNav__row "
-                    + selected_cls } key={ log.guid }
+                    + selected_cls } key={ Math.random() }
                     onClick={ this.openLog.bind( this , log ) }>
                     <div className="
                         o-list__cell
@@ -86,8 +86,8 @@ var LogsSideNav = React.createClass({
                         c-logsSideNav__cell--title">{ log.title }</div> */}
                     <div className={
                             "o-list__cell c-logsSideNav__cell--model " +
-                            "fa fa-2x " + log.data_model().icon
-                        } title={ log.data_model().name }></div>
+                            "fa fa-2x " + log.data_model.icon
+                        } title={ log.data_model.name }></div>
                     <div className="
                         o-list__cell
                         c-logsSideNav__cell--message"
@@ -109,7 +109,7 @@ var LogsSideNav = React.createClass({
 
     render: function() {
 
-        var logs = RedoxModel.app.focused_organization().logs();
+        var logs = RedoxModel.app.focused_organization.logs;
 
         var log_rows_html = [];
         for ( var i=0; i<logs.length; i++ ) {

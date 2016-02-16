@@ -17,6 +17,35 @@
 
 		<script>
 
+			var myObj = function () {
+				this._value = 4;
+			}
+
+			myObj.prototype = {
+				get value () {
+					return this._value + "S SFSDF";
+				},
+				set value ( val ) {
+					this._value = val;
+				}
+			};
+
+			var obj = new myObj();
+			//console.log( obj );
+			//console.log( obj.value );
+			obj.value = "dfdsaf";
+			//console.log( obj.value );
+
+			var obj2 = function () {};
+			obj2.prototype = obj;
+			var obj2 = new obj2();
+
+			var obj3 = new myObj();
+			console.log( obj );
+			console.log( obj2 );
+			console.log( obj3 );
+
+			//console.log( protoData );
 
 		</script>
 
