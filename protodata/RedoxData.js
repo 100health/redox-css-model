@@ -146,7 +146,6 @@ module.exports = {
     },
 
     log:{
-        max:30,
         init:function ( pd ) {
             this.title = pd.db_random( "noun" ) + " Log Message";
 
