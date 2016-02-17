@@ -47,35 +47,21 @@ var ConnectionModal = React.createClass({
 
     getVerifiedButton: function () {
         if ( !RS.route.verifying ) {
-            return <a className="o-roundedButton
-                o-roundedButton--redox-green
-                a-width-col-1 a-height-row-2
-                a-margin-left-col-quarter"
+            return <a className="c-connectionsModal__verifyBtn"
                 onClick={ this.gotoVerifingState.bind( this , 'loading') }>
                 Verify
             </a>;
         }else if ( RS.route.verifying == 'loading' ) {
-            return <div className="
-                a-flex-center
-                a-text-color-redox-green
-                a-width-col-1 a-height-row-2
-                a-margin-left-col-quarter">
+            return <div className="c-connectionsModal__verifying">
                 Verifying
             </div>;
         }else if ( RS.route.verifying == 'error' ) {
-            return <a className="o-roundedButton
-                o-roundedButton--redox-green
-                a-width-col-1 a-height-row-2
-                a-margin-left-col-quarter"
+            return <a className="c-connectionsModal__verifyBtn"
                 onClick={ this.gotoVerifingState.bind( this , 'loading') }>
                 Verify
             </a>;
         }else if ( RS.route.verifying == 'verified' ) {
-            return <div className="
-                a-flex-center
-                a-text-color-redox-green
-                a-width-col-1 a-height-row-2
-                a-margin-left-col-quarter">
+            return <div className="c-connectionsModal__verified">
                 Verified
             </div>;
         }

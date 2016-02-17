@@ -42,7 +42,6 @@ var LogDetail = React.createClass({
     render: function() {
 
         var log = RedoxModel.get( RS.route.log_id );
-
         var tab_content = "";
         /*
         if ( RS.route.log_detail_tab_index === "" ) {
@@ -64,12 +63,15 @@ var LogDetail = React.createClass({
                 break;
 
             case "incoming" :
-                tab_content = <div>Incoming</div>;
+                tab_content = <div><img src="images/prototype/logDetailInset.png" /></div>;
                 break;
 
             case "" :
-                tab_content = <div>Init Incoming</div>;
+                tab_content = <div><img src="images/prototype/logDetailInset.png" /></div>;
                 break;
+        }
+        if ( !RS.route.log_detail_tab_index ) {
+            tab_content = <div><img src="images/prototype/logDetailInset.png" /></div>;
         }
 
         return  <div className="o-contentSimple c-logDetail">
@@ -83,7 +85,7 @@ var LogDetail = React.createClass({
 
                                 <div className="
                                     c-logDetail__logHeader--connectionIcon">
-                                  <div className={ "o-icon__" + log.connection.type }></div>
+                                    <div className={ "o-icon__" + log.connection.type }></div>
                                 </div>
                                 <div className="
                                     c-logDetail__logHeader--dataModel">
@@ -116,49 +118,49 @@ var LogDetail = React.createClass({
                             </div>
 
 
-                          <div className="p-logs__logMessage">
-                            <p> { log.title } </p>
-                          </div>
+                            <div className="c-logDetail__logMessage">
+                                <p> { log.title } </p>
+                                </div>
 
-                          <div className="o-tabs a-height-row-2-half a-border-h a-border-top">
-                              <div className={"o-tabs__item " +
+                            <div className="o-tabs
+                                c-logDetail__tabNav">
+                                <div className={"o-tabs__item " +
                                             ( ( !RS.route.log_detail_tab_index || RS.route.log_detail_tab_index == "" )
                                                 ? " o-tabs__item--selected " : "" )
                                         }
                                     onClick={ this.changeTab.bind( this , "" ) }>
                                     Incoming
-                              </div>
+                                </div>
 
-                              <div className={"o-tabs__item " +
+                                <div className={"o-tabs__item o-tabs__item--error" +
                                             ( ( RS.route.log_detail_tab_index == "transformation" )
                                                 ? " o-tabs__item--selected " : "" )
                                         }
                                     onClick={ this.changeTab.bind( this , "transformation" ) }>
                                     Transformation
-                              </div>
+                                </div>
 
-                              <div className={"o-tabs__item " +
+                                <div className={"o-tabs__item o-tabs__item--emphasis" +
                                             ( ( RS.route.log_detail_tab_index == "filter" )
                                                 ? " o-tabs__item--selected " : "" )
                                         }
                                     onClick={ this.changeTab.bind( this , "filter" ) }>
                                     Filter
-                              </div>
+                                </div>
 
-                              <div className={"o-tabs__item " +
+                                <div className={"o-tabs__item o-tabs__item--emphasis" +
                                             ( ( RS.route.log_detail_tab_index == "response" )
                                                 ? " o-tabs__item--selected " : "" )
                                         }
                                     onClick={ this.changeTab.bind( this , "response" ) }>
                                     Response
-                              </div>
-                          </div>
+                                </div>
+                            </div>
 
 
-                          <div className="p-logs__logContent">
-                            { tab_content }
-                          </div>
-
+                            <div className="c-logDetail__logContent">
+                                { tab_content }
+                            </div>
 
                         </div>
 
