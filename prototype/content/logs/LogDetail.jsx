@@ -43,11 +43,6 @@ var LogDetail = React.createClass({
 
         var log = RedoxModel.get( RS.route.log_id );
         var tab_content = "";
-        /*
-        if ( RS.route.log_detail_tab_index === "" ) {
-            tab_content = <div>hi</div>;
-        }
-        */
 
         switch ( RS.route.log_detail_tab_index ) {
             case "transformation" :
@@ -60,14 +55,6 @@ var LogDetail = React.createClass({
 
             case "response" :
                 tab_content = <div>Response</div>;
-                break;
-
-            case "incoming" :
-                tab_content = <div><img src="images/prototype/logDetailInset.png" /></div>;
-                break;
-
-            case "" :
-                tab_content = <div><img src="images/prototype/logDetailInset.png" /></div>;
                 break;
         }
         if ( !RS.route.log_detail_tab_index ) {
