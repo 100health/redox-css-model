@@ -239,11 +239,9 @@ var DevToolsInbound = React.createClass({
                             
                             <form className="o-form o-devToolsApp__leftContainer">
                                 
-                                <div className="o-list--overview">
-                                    <div className="o-list__headerRow a-height-row-4">
-                                        <div className="o-contentSimple__closeDetail" onClick={ function () { RS.merge({ dev_tools_state:"" }); } }></div>
-                                        <div className="c-devTools__connectionName">{ connection_name }</div>
-                                    </div>
+                                <div className="c-devTools__connectionHeader">
+                                    <div className="c-devTools__closeDetail" onClick={ function () { RS.merge({ dev_tools_state:"" }); } }></div>
+                                    <div className="c-devTools__connectionName">{ connection_name }</div>
                                 </div>
                             
                                 <div className="o-devToolsApp__leftInputs">
@@ -320,9 +318,7 @@ var DevToolsInbound = React.createClass({
                                             </select>
                                         </div>
 
-                                        <div disabled="true" className="o-roundedButton
-                                            a-width-100 a-height-row-2
-                                            a-margin-bottom-row">
+                                        <div disabled="true" className="c-devTools__setDefaultBtn a-width-100">
                                             Set as Default
                                         </div>
 
@@ -332,11 +328,7 @@ var DevToolsInbound = React.createClass({
 
                                 <div className="o-devToolsApp__leftActions">
                                     <div className="a-flex-item-fill"></div>
-                                    <div className="o-roundedButton
-                                        o-roundedButton--redox-green
-                                        a-margin-right-col-quarter
-                                        a-width-col-1-half
-                                        a-height-row-2">
+                                    <div className="c-devTools__sendBtn a-width-col-1-half">
                                         Send
                                     </div>
                                 </div>
