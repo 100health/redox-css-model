@@ -119,7 +119,7 @@ var LogDetail = React.createClass({
                                     Incoming
                                 </div>
 
-                                <div className={"o-tabs__item o-tabs__item--error" +
+                                <div className={"o-tabs__item c-logDetail__tabItem--error" +
                                             ( ( RS.route.log_detail_tab_index == "transformation" )
                                                 ? " o-tabs__item--selected " : "" )
                                         }
@@ -127,7 +127,7 @@ var LogDetail = React.createClass({
                                     Transformation
                                 </div>
 
-                                <div className={"o-tabs__item o-tabs__item--emphasis" +
+                                <div className={"o-tabs__item c-logDetail__tabItem--emphasis" +
                                             ( ( RS.route.log_detail_tab_index == "filter" )
                                                 ? " o-tabs__item--selected " : "" )
                                         }
@@ -135,7 +135,7 @@ var LogDetail = React.createClass({
                                     Filter
                                 </div>
 
-                                <div className={"o-tabs__item o-tabs__item--emphasis" +
+                                <div className={"o-tabs__item c-logDetail__tabItem--emphasis" +
                                             ( ( RS.route.log_detail_tab_index == "response" )
                                                 ? " o-tabs__item--selected " : "" )
                                         }

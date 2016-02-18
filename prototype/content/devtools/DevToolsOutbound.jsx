@@ -33,7 +33,7 @@ var DevToolsOutbound = React.createClass({
                         curl --request GET 'http://www.somedomain.com/user/info/' \<br/>
                         --header 'sessionid:1234567890987654321'
                     </div>
-                    <button className="o-devToolsOutput__copy">Copy</button>
+                    <div className="o-devToolsOutput__copy">Copy</div>
                 </div>
     },
 
@@ -43,7 +43,7 @@ var DevToolsOutbound = React.createClass({
                         curl --request GET 'http://www.somedomain.com/user/info/' \<br/>
                         --header 'sessionid:1234567890987654321'
                     </div>
-                    <button className="o-devToolsOutput__copy">Copy</button>
+                    <div className="o-devToolsOutput__copy">Copy</div>
                 </div>
     },
 
@@ -72,9 +72,9 @@ var DevToolsOutbound = React.createClass({
                         clicking "Call Service".</p>
                 </div>
             </div>
-            <button className="o-devToolsLanding__action">
+            <div className="o-devToolsLanding__action">
                 Use Postman
-            </button>
+            </div>
         </div>
     },
 
@@ -97,6 +97,8 @@ var DevToolsOutbound = React.createClass({
         }else{
             page_html = this.getHowTo();
         }
+        
+        var connection_name = "";
 
         var inbound = RedoxModel.app.focused_organization.inbound_connections;
 
@@ -107,6 +109,8 @@ var DevToolsOutbound = React.createClass({
                     <option value={ inbound[i].guid }
                             key={ inbound[i].guid } selected="true">{ inbound[i].title }</option>
                 );
+                connection_name = inbound[i].title;
+                
             }else{
                 inbound_connections_options.push(
                     <option value={ inbound[i].guid }
@@ -125,11 +129,13 @@ var DevToolsOutbound = React.createClass({
                     <option value={ outbound[i].guid }
                             key={ outbound[i].guid } selected="true">{ outbound[i].title }</option>
                 );
+                connection_name = outbound[i].title;
             }else{
                 outbound_connections_options.push(
                     <option value={ outbound[i].guid }
                             key={ outbound[i].guid }>{ outbound[i].title }</option>
                 );
+                
             }
         }
 
@@ -139,8 +145,18 @@ var DevToolsOutbound = React.createClass({
                         <div className="o-devToolsApp__content">
 
                             <form className="o-form o-devToolsApp__leftContainer">
+                            
+                                <div className="o-list--overview">
+                                    <div className="o-list__headerRow a-height-row-4">
+                                        <div className="o-contentSimple__closeDetail" onClick={ function () { RS.merge({ dev_tools_state:"" }); } }></div>
+                                        <div className="c-devTools__connectionName">{ connection_name }</div>
+                                    </div>
+                                </div>
+                                
                                 <div className="o-devToolsApp__leftInputs">
                                     <div className="o-formLayout__1-column-skinny">
+                                        
+                                        {/*
                                         <div className="o-form__element">
                                             <label>Connection</label>
                                             <select id="connection" onChange={ this.connectionChanged }>
@@ -152,6 +168,7 @@ var DevToolsOutbound = React.createClass({
                                                 </optgroup>
                                             </select>
                                         </div>
+                                        */}
 
                                         <div className="o-form__element">
                                             <label>Source Secret</label>
@@ -220,12 +237,13 @@ var DevToolsOutbound = React.createClass({
                                             </select>
                                         </div>
 
-                                        <button disabled="true"
+                                        <div disabled="true"
                                             className="o-roundedButton
-                                            a-width-100 a-height-row-2
+                                            a-width-100
+                                            a-height-row-2
                                             a-margin-bottom-row">
                                             Set as Default
-                                        </button>
+                                        </div>
 
                                     </div>
 
@@ -234,31 +252,31 @@ var DevToolsOutbound = React.createClass({
 
                             <div className="o-devToolsApp__rightContainer">
                                 <div className="o-devToolsApp__rightNav">
-                                    <button className={
+                                    <div className={
                                             "o-devToolsApp__rightNavItem " +
                                             ( ( !RS.route.dev_tools_app_tab ) ?
                                                 " o-devToolsApp__rightNavItem--selected " : "" )
                                         }
                                         onClick={ function() { RS.merge({dev_tools_app_tab:""}) } }>
                                         Outbound How-To
-                                    </button>
+                                    </div>
                                     <div className="a-flex-item-fill"></div>
-                                    <button className={
+                                    <div className={
                                             "o-devToolsApp__rightNavItem " +
                                             ( ( RS.route.dev_tools_app_tab == "authenticate" ) ?
                                                 " o-devToolsApp__rightNavItem--selected " : "" )
                                         }
                                         onClick={ function() { RS.merge({dev_tools_app_tab:"authenticate"}) } }>
                                         Authenticate
-                                    </button>
-                                    <button className={
+                                    </div>
+                                    <div className={
                                             "o-devToolsApp__rightNavItem " +
                                             ( ( RS.route.dev_tools_app_tab == "service" ) ?
                                                 " o-devToolsApp__rightNavItem--selected " : "" )
                                         }
                                         onClick={ function() { RS.merge({dev_tools_app_tab:"service"}) } }>
                                         Service
-                                    </button>
+                                    </div>
                                 </div>
                                 <div className="o-devToolsApp__rightContent">
                                     { page_html }
