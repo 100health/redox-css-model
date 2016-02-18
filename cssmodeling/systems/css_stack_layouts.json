@@ -23,10 +23,9 @@
             "example":"<div ... style='height: 100px; min-width: 50px; background-color:#fff; position: absolute;'></div>",
             "selector":".a-flex-h-fill-minus-@var_name",
             "declaration_lines":[
-                ".flexbox  & {",
+
                     "flex: 1;",
                     "-ms-flex: 1 0 auto;",
-                "}",
 
                 ".no-flexbox & {",
                     "width: calc( 100% - _@_@var_name  );",
@@ -42,10 +41,9 @@
             "example":"<div ... style='width: 100px; background-color:#fff; position: absolute;'></div>",
             "selector":".a-flex-v-fill-minus-@var_name",
             "declaration_lines":[
-                ".flexbox  & {",
+
                     "flex: 1;",
                     "-ms-flex: 1 0 auto;",
-                "}",
 
                 ".no-flexbox & {",
                     "height: calc( 100% - _@_@var_name  );",
@@ -65,7 +63,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: column nowrap;",
                     "justify-content: flex-start;",
@@ -75,7 +72,6 @@
                     "-ms-flex-direction: column;",
                     "-ms-flex-pack: start;",
                 	"-ms-flex-align: center;",
-                "}",
 
                 ".no-flexbox & {",
                     "position: relative;",
@@ -122,7 +118,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'>100px wide</div><div style='height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: column nowrap;",
                     "justify-content: flex-start;",
@@ -132,7 +127,6 @@
                     "-ms-flex-direction: column;",
                     "-ms-flex-pack: start;",
                 	"-ms-flex-align: stretch;",
-                "}",
 
                 ".flexbox-grid & {",
                     "position: relative;",
@@ -164,7 +158,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: column nowrap;",
                     "justify-content: flex-start;",
@@ -174,7 +167,6 @@
                     "-ms-flex-direction: column;",
                     "-ms-flex-pack: start;",
                 	"-ms-flex-align: start;",
-                "}",
 
                 ".flexbox-grid & {",
                     "position: relative;",
@@ -205,7 +197,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: column nowrap;",
                     "justify-content: flex-start;",
@@ -215,7 +206,6 @@
                     "-ms-flex-direction: column;",
                     "-ms-flex-pack: start;",
                 	"-ms-flex-align: end;",
-                "}",
 
                 ".flexbox-grid & {",
                     "position: relative;",
@@ -245,7 +235,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-start;",
@@ -255,7 +244,6 @@
                     "-ms-flex-direction: row;",
                     "-ms-flex-pack: start;",
                 	"-ms-flex-align: center;",
-                "}",
 
                 ".flexbox-grid & {",
                     "position: relative;",
@@ -302,7 +290,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'>100px height</div><div style='width: 100px; background-color:#fff;'></div></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-start;",
@@ -312,7 +299,6 @@
                     "-ms-flex-direction: row;",
                     "-ms-flex-pack: start;",
                 	"-ms-flex-align: stretch;",
-                "}",
 
                 ".flexbox-grid & {",
                     "position: relative;",
@@ -352,7 +338,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-start;",
@@ -362,7 +347,6 @@
                     "-ms-flex-direction: row;",
                     "-ms-flex-pack: start;",
                 	"-ms-flex-align: start;",
-                "}",
 
                 ".flexbox-grid & {",
                     "position: relative;",
@@ -390,7 +374,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-start;",
@@ -400,7 +383,7 @@
                     "-ms-flex-direction: row;",
                     "-ms-flex-pack: start;",
                 	"-ms-flex-align: end;",
-                "}",
+
 
                 ".flexbox-grid & {",
                     "position: relative;",
@@ -433,7 +416,6 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'>Text That is Centered</div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: center;",
@@ -443,7 +425,6 @@
                     "-ms-flex-direction: row;",
                     "-ms-flex-pack: center;",
                 	"-ms-flex-align: center;",
-                "}",
 
                 ".flexbox-grid & {",
                     "position: relative;",
@@ -484,7 +465,7 @@
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'>Text That is Right aligned</div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
+
                     "display: flex;",
                     "flex-flow: row nowrap;",
                     "justify-content: flex-end;",
@@ -499,7 +480,6 @@
                         "/* only one child */",
                         "outline: 5px dotted red;",
                     "}",
-                "}",
 
                 ".no-flexbox & {",
                     "position: relative;",
@@ -524,10 +504,10 @@
             "example":"<div style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div ... style='width: 100px; height: 100px; background-color:#aaa;'>FILLING</div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
 
-                ".flexbox  & {",
+
                     "flex: 1;",
                     "/*outline: 5px dotted red;*/",
-                "}",
+
 
                 ".no-flexbox & {",
                     "/* gotta use an inverse calc() size for this to work... */",
