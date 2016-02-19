@@ -20,6 +20,14 @@ var Redox = React.createClass({
     },
 
     componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-redox',
+				filters:[
+					['.c-redox > * > *', 0 ]
+				]
+			}, document.location.origin
+		);
     },
 
     closeModal: function(){

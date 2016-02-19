@@ -23,6 +23,17 @@ var LogDetail = React.createClass({
         RouteState.removeDiffListenersViaClusterId( "LogDetail" );
     },
 
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-logDetail',
+				filters:[
+					// ['.c-logDetail .c-mainNav__link', 2 ]
+				]
+			}, document.location.origin
+		);
+    },
+
 
     closeLog: function () {
         RS.merge({
@@ -106,8 +117,8 @@ var LogDetail = React.createClass({
 
 
                             <div className="c-logDetail__logMessage">
-                                <p> { log.title } </p>
-                                </div>
+                                { log.title }
+                            </div>
 
                             <div className="o-tabs
                                 c-logDetail__tabNav">

@@ -1,46 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Prototype</title>
+		<title>Redox Prototype</title>
 
-        <script src='prototype/redox.js'></script>
-		<link href='styles/prototype.css' type='text/css' rel='stylesheet'>
+		<script src='../node_modules/cssreveal/dist/cssreveal.js?ss'></script>
+        <link href='../node_modules/cssreveal/dist/cssreveal.css' type='text/css' rel='stylesheet'>
 
 		<script>
-			$(window).ready(function () {
 
-				RouteState.config({
-					section:{
-						weight:10,
-					},
-						page:{
-							weight:20,
-							dependency:"section"
-						},
-							detail_page:{
-								weight:21,
-								dependency:"page"
-							},
-								log_id:{
-									weight:500,
-									dependency:"detail_page"
-								}
-				});
+            function ready(fn) {
+              if (document.readyState != 'loading'){
+                fn();
+              } else {
+                document.addEventListener('DOMContentLoaded', fn);
+              }
+            }
 
-                RouteState.listenToHash();// allows route to show here...
-
-				React.render(
-					React.createElement(
-						Prototype,{}
-					),
-					document.body
-				);
+            ready( function(event) {
+                CSSReveal.render( "body" , 'prototype.html' );
             });
 
-        </script>
-	</head>
-	<body>
-
-
+		</script>
     </body>
 </html>

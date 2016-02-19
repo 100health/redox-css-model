@@ -20,7 +20,15 @@ var MainNav = React.createClass({
         RouteState.removeDiffListenersViaClusterId( "MainNav" );
     },
 
-    updateModel: function () {
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-mainNav',
+				filters:[
+					['.c-mainNav .c-mainNav__link', 2 ]
+				]
+			}, document.location.origin
+		);
     },
 
     openSection: function ( section , secondary_page ) {
@@ -47,7 +55,7 @@ var MainNav = React.createClass({
         for ( var p=0; p<nav_links.length; p++ ) {
             page = nav_links[p];
 
-            icon_html = "";
+            icon_html = false;
             if ( page.icon ) {
                 icon_html =
                     <div className={
