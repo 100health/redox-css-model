@@ -26,7 +26,8 @@
 
     "cssmodeling":"~0.1",
     "routestate":"~0.4",
-    "protodata":"~0.2"
+    "protodata":"~0.2",
+    "cssreveal":"~0.0"
 
   }
 }

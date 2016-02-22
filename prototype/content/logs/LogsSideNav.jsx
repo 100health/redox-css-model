@@ -23,6 +23,17 @@ var LogsSideNav = React.createClass({
         RouteState.removeDiffListenersViaClusterId( "LogsSideNav" );
     },
 
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-logsSideNav',
+				filters:[
+					['.c-logsSideNav .c-logsSideNav__row', 2 ]
+				]
+			}, document.location.origin
+		);
+    },
+
     alertExample: function () {
         alertExample(
             this.render(),

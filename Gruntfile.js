@@ -233,28 +233,6 @@ module.exports = function(grunt) {
     };
 
 
-    /*==========================
-    CSSMODELING
-    ==========================*/
-    configObj.cssmodeling = configObj.cssmodeling || {};
-    configObj.cssmodeling_components = configObj.cssmodeling_components || {};
-    configObj.cssmodeling_components["redox"] = {
-        files: {
-            'dist/csscore':
-            [
-                'dist/styles/components.css'
-            ]
-        }
-    };
-    configObj.watch = configObj.watch || {};
-    configObj.watch["cssmodeling_components"] = {
-        files:[
-            'dist/styles/components.css'
-        ],
-        tasks: ["cssmodeling_components:redox"]
-    };
-
-
 
     /*=============================
     COPY (push index into dist...make a compact portable whole)
@@ -307,7 +285,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask( 'full' , [
         'cssmodeling:redox',
-        'cssmodeling_components:redox',
         'concat:redox_bower',
         'copy:cssmodeling',
         'default',// doesn't seem to trigger when it is last...

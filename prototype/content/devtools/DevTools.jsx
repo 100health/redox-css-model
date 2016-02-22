@@ -18,6 +18,19 @@ var DevTools = React.createClass({
         RouteState.removeDiffListenersViaClusterId( "DevTools" );
     },
 
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-devTools',
+				filters:[
+					['.c-devTools .c-devTools__overviewText > *', 0 ],
+                    ['.c-devTools .o-list > *', 2 ]
+				]
+			}, document.location.origin
+		);
+    },
+
+
     alertExample: function () {
         alertExample(
             this.render(),

@@ -115,7 +115,6 @@ var LogDetail = React.createClass({
 
                             </div>
 
-
                             <div className="c-logDetail__logMessage">
                                 { log.title }
                             </div>

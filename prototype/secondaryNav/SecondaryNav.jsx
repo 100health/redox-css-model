@@ -21,7 +21,15 @@ var SecondaryNav = React.createClass({
     },
 
     componentDidMount: function(){
-
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-secondaryNav',
+				filters:[
+					['.c-secondaryNav .c-secondaryNav__list__item', 2 ],
+                    ['.c-secondaryNav .c-secondaryNav__tertiaryNavContainer > *',0]
+				]
+			}, document.location.origin
+		);
     },
 
     changePage: function ( page ) {
@@ -38,7 +46,6 @@ var SecondaryNav = React.createClass({
             detail_page:detail_page
         })
     },
-
 
     render: function() {
 
@@ -79,37 +86,8 @@ var SecondaryNav = React.createClass({
         var tertiaryNav = [];
         tertiaryNav = <LogsSideNav />;
 
-        /*var tertiary_nav_items = [],extra_class;
-
-        // <div className="c-tertiaryNav">
-
-        for ( var p=0; p<pages.length; p++ ) {
-            page = pages[p];
-            extra_class = "";
-            if ( p < 6 && p > 2 ) {
-                extra_class = "c-tertiaryNav__item--indented ";
-            }
-            tertiary_nav_items.push(
-                <div className={
-                        "c-tertiaryNav__item " +
-                        extra_class +
-                        ( ( RS.route.detail_page == page.link )
-                            ?  "c-tertiaryNav__item--selected" : "" )
-                    }
-                    onClick={ this.changeDetailPage.bind( this , p ) }>
-                    <div className="c-tertiaryNav__item__label">
-                        { page.name }
-                    </div>
-                </div>
-            );
-        }
-        // </div>
-
-        */
-        console.log( this.props );
         return  <div className={ "c-secondaryNav " + this.props.extra_classes }>
-                    <div className="c-secondaryNav__list"
-                        style={ {overflow:"hidden"} }>
+                    <div className="c-secondaryNav__list">
                         { nav_items }
                     </div>
                     <div className="c-secondaryNav__tertiaryNavContainer">
