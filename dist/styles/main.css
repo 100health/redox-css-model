@@ -39,14 +39,6 @@ div {
     text-align: center;
     cursor: hand;
     cursor: pointer; }
-    .flexbox-grid .a-flex-center > .o-contentModal__closeBtn, .flexbox-grid .a-flex-h > .o-contentModal__closeBtn {
-      top: calc( 50% - (( 33px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-contentModal__closeBtn {
-      top: calc( 100% -  33px);
-      position: relative;
-      outline: none; }
   .o-contentModal__footerContainer {
     height: 66px;
     width: 100%;
@@ -91,14 +83,6 @@ div {
       position: relative;
       outline: none; }
     .flexbox-grid .a-flex-center > .o-contentModal__footerCancel, .flexbox-grid .a-flex-h > .o-contentModal__footerCancel {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-contentModal__footerCancel {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-center > .o-contentModal__footerCancel, .flexbox-grid .a-flex-h > .o-contentModal__footerCancel {
       top: calc( 50% - (( 66px / 2 )));
       position: relative;
       outline: none; }
@@ -130,14 +114,6 @@ div {
       outline: none; }
     .o-contentModal__footerSave:hover {
       background-color: #008262; }
-    .flexbox-grid .a-flex-center > .o-contentModal__footerSave, .flexbox-grid .a-flex-h > .o-contentModal__footerSave {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-contentModal__footerSave {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
     .flexbox-grid .a-flex-center > .o-contentModal__footerSave, .flexbox-grid .a-flex-h > .o-contentModal__footerSave {
       top: calc( 50% - (( 66px / 2 )));
       position: relative;
@@ -325,14 +301,6 @@ div {
     font-weight: 500;
     letter-spacing: .5px;
     text-transform: uppercase; }
-    .flexbox-grid .a-flex-center > .o-contentHeader__titleContainer, .flexbox-grid .a-flex-h > .o-contentHeader__titleContainer {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-contentHeader__titleContainer {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
     .no-flexbox .o-contentHeader__titleContainer {
       /* gotta use an inverse calc() size for this to work... */
       /*outline: 5px dotted red;*/ }
@@ -401,97 +369,41 @@ h1, h2, h3, h4, h5, h6, p, code {
     padding-bottom: 11px;
     margin-bottom: 11px;
     border-bottom: 1px solid #CCCCCC; }
-    .flexbox-grid .a-flex-center > .o-document h1, .flexbox-grid .a-flex-h > .o-document h1 {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-document h1 {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
   .o-document h2 {
     font-size: 19px;
     line-height: 38.5px;
     padding-bottom: 5.5px;
     margin-bottom: 5.5px;
     border-bottom: 1px solid #CCCCCC; }
-    .flexbox-grid .a-flex-center > .o-document h2, .flexbox-grid .a-flex-h > .o-document h2 {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-document h2 {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
   .o-document h3 {
     font-size: 17px;
     line-height: 38.5px;
     padding-bottom: 5.5px;
     margin-bottom: 5.5px;
     border-bottom: 1px solid #CCCCCC; }
-    .flexbox-grid .a-flex-center > .o-document h3, .flexbox-grid .a-flex-h > .o-document h3 {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-document h3 {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
   .o-document h4 {
     font-size: 17px;
     line-height: 33px;
     padding-bottom: 5.5px;
     margin-bottom: 5.5px;
     border-bottom: 1px solid #CCCCCC; }
-    .flexbox-grid .a-flex-center > .o-document h4, .flexbox-grid .a-flex-h > .o-document h4 {
-      top: calc( 50% - (( 33px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-document h4 {
-      top: calc( 100% -  33px);
-      position: relative;
-      outline: none; }
   .o-document h5 {
     font-size: 19px;
     line-height: 38.5px;
     padding-bottom: 5.5px;
     margin-bottom: 5.5px;
     border-bottom: 1px solid #CCCCCC; }
-    .flexbox-grid .a-flex-center > .o-document h5, .flexbox-grid .a-flex-h > .o-document h5 {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-document h5 {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
   .o-document h6 {
     font-size: 15px;
     line-height: 33px;
     padding-bottom: 5.5px;
     margin-bottom: 5.5px;
     border-bottom: 1px solid #CCCCCC; }
-    .flexbox-grid .a-flex-center > .o-document h6, .flexbox-grid .a-flex-h > .o-document h6 {
-      top: calc( 50% - (( 33px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-document h6 {
-      top: calc( 100% -  33px);
-      position: relative;
-      outline: none; }
   .o-document p {
     font-size: 14px;
     line-height: 22px;
     font-weight: 300;
     margin-bottom: 5.5px; }
-    .flexbox-grid .a-flex-center > .o-document p, .flexbox-grid .a-flex-h > .o-document p {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-document p {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
   .o-document__column {
     float: left;
     padding-right: 11px; }
@@ -532,14 +444,6 @@ input {
     outline: none; }
   .flexbox-grid .a-flex-h-end > .o-form__header {
     top: calc( 100% -  44px);
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-center > .o-form__header, .flexbox-grid .a-flex-h > .o-form__header {
-    top: calc( 50% - (( 33px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-form__header {
-    top: calc( 100% -  33px);
     position: relative;
     outline: none; }
   .flexbox-grid .a-flex-center > .o-form__header, .flexbox-grid .a-flex-h > .o-form__header {
@@ -686,14 +590,6 @@ input {
     top: calc( 100% -  44px);
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-center > .o-form input, .flexbox-grid .a-flex-h > .o-form input, .flexbox-grid .a-flex-center > .o-form select, .flexbox-grid .a-flex-h > .o-form select, .flexbox-grid .a-flex-center > .o-form textarea, .flexbox-grid .a-flex-h > .o-form textarea, .flexbox-grid .a-flex-center > .o-form button, .flexbox-grid .a-flex-h > .o-form button {
-    top: calc( 50% - (( 22px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-form input, .flexbox-grid .a-flex-h-end > .o-form select, .flexbox-grid .a-flex-h-end > .o-form textarea, .flexbox-grid .a-flex-h-end > .o-form button {
-    top: calc( 100% -  22px);
-    position: relative;
-    outline: none; }
   .o-form input:disabled, .o-form select:disabled, .o-form textarea:disabled, .o-form button:disabled {
     background-color: #eee;
     color: #999999; }
@@ -822,14 +718,6 @@ input {
       left: calc( 100% -  12.499995vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .o-form__element label, .flexbox-grid .a-flex-h > .o-form__element label, .flexbox-grid .a-flex-center > .o-form__element .o-form__label, .flexbox-grid .a-flex-h > .o-form__element .o-form__label {
-      top: calc( 50% - (( 16.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-form__element label, .flexbox-grid .a-flex-h-end > .o-form__element .o-form__label {
-      top: calc( 100% -  16.5px);
-      position: relative;
-      outline: none; }
     .o-form__element label + input, .o-form__element label + select, .o-form__element label + textarea, .o-form__element label + button,
     .o-form__element label + .o-form__readonly, .o-form__element label + .o-form__input, .o-form__element .o-form__label + input, .o-form__element .o-form__label + select, .o-form__element .o-form__label + textarea, .o-form__element .o-form__label + button,
     .o-form__element .o-form__label + .o-form__readonly, .o-form__element .o-form__label + .o-form__input {
@@ -915,14 +803,6 @@ input {
   font-size: 12px;
   line-height: 16.5px;
   width: 6.2499975vw; }
-  .flexbox-grid .a-flex-center > .o-formLayout__1-column-skinny .o-form__element label, .flexbox-grid .a-flex-h > .o-formLayout__1-column-skinny .o-form__element label, .flexbox-grid .a-flex-center > .o-formLayout__1-column-skinny .o-form__element .o-form__label, .flexbox-grid .a-flex-h > .o-formLayout__1-column-skinny .o-form__element .o-form__label {
-    top: calc( 50% - (( 16.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-formLayout__1-column-skinny .o-form__element label, .flexbox-grid .a-flex-h-end > .o-formLayout__1-column-skinny .o-form__element .o-form__label {
-    top: calc( 100% -  16.5px);
-    position: relative;
-    outline: none; }
   .flexbox-grid .a-flex-v > .o-formLayout__1-column-skinny .o-form__element label, .flexbox-grid .a-flex-v > .o-formLayout__1-column-skinny .o-form__element .o-form__label {
     left: calc( 50% - (( 6.2499975vw / 2 )));
     position: relative;
@@ -1044,14 +924,6 @@ input {
         -ms-transform: translateY(-50%); }
     .c-dataModelSelector__item:hover {
       color: #4D4D4D; }
-    .flexbox-grid .a-flex-center > .c-dataModelSelector__item, .flexbox-grid .a-flex-h > .c-dataModelSelector__item {
-      top: calc( 50% - (( 16.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-dataModelSelector__item {
-      top: calc( 100% -  16.5px);
-      position: relative;
-      outline: none; }
     .c-dataModelSelector__item > div {
       margin-bottom: 5.5px;
       text-align: center; }
@@ -1137,14 +1009,6 @@ input {
         -ms-transform: translateY(-50%); }
     .c-searchCategoriesSelector__item:hover {
       color: #4D4D4D; }
-    .flexbox-grid .a-flex-center > .c-searchCategoriesSelector__item, .flexbox-grid .a-flex-h > .c-searchCategoriesSelector__item {
-      top: calc( 50% - (( 16.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-searchCategoriesSelector__item {
-      top: calc( 100% -  16.5px);
-      position: relative;
-      outline: none; }
     .c-searchCategoriesSelector__item > div {
       margin-bottom: 5.5px;
       text-align: center; }
@@ -1305,14 +1169,6 @@ input {
       left: calc( 100% -  16.66666vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .o-table td, .flexbox-grid .a-flex-center > .o-tableSummary td, .flexbox-grid .a-flex-h > .o-table td, .flexbox-grid .a-flex-h > .o-tableSummary td, .flexbox-grid .a-flex-center > .o-table th, .flexbox-grid .a-flex-center > .o-tableSummary th, .flexbox-grid .a-flex-h > .o-table th, .flexbox-grid .a-flex-h > .o-tableSummary th {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-table td, .flexbox-grid .a-flex-h-end > .o-tableSummary td, .flexbox-grid .a-flex-h-end > .o-table th, .flexbox-grid .a-flex-h-end > .o-tableSummary th {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
     .o-table td.o-table__td--expander, .o-tableSummary td.o-table__td--expander, .o-table td.o-table__th--expander, .o-tableSummary td.o-table__th--expander, .o-table th.o-table__td--expander, .o-tableSummary th.o-table__td--expander, .o-table th.o-table__th--expander, .o-tableSummary th.o-table__th--expander {
       width: auto; }
     .o-table td.o-table__td--center, .o-tableSummary td.o-table__td--center, .o-table td.o-table__th--center, .o-tableSummary td.o-table__th--center, .o-table th.o-table__td--center, .o-tableSummary th.o-table__td--center, .o-table th.o-table__th--center, .o-tableSummary th.o-table__th--center {
@@ -1323,14 +1179,6 @@ input {
     text-align: left;
     font-size: 14px;
     line-height: 22px; }
-    .flexbox-grid .a-flex-center > .o-table th, .flexbox-grid .a-flex-center > .o-tableSummary th, .flexbox-grid .a-flex-h > .o-table th, .flexbox-grid .a-flex-h > .o-tableSummary th {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-table th, .flexbox-grid .a-flex-h-end > .o-tableSummary th {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
 
 .o-tableSummary {
   /* -ctag-example: <table ...>
@@ -1479,14 +1327,6 @@ input {
       left: calc( 100% -  16.66666vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .o-list__headerCell, .flexbox-grid .a-flex-h > .o-list__headerCell {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-list__headerCell {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
   .o-list__cell {
     /* -ctag-example: ...cell;*/
     width: 16.66666vw;
@@ -1509,14 +1349,6 @@ input {
       outline: none; }
     .flexbox-grid .a-flex-v-end > .o-list__cell {
       left: calc( 100% -  16.66666vw);
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-center > .o-list__cell, .flexbox-grid .a-flex-h > .o-list__cell {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-list__cell {
-      top: calc( 100% -  22px);
       position: relative;
       outline: none; }
     .flexbox-grid .o-list__cell {
@@ -1688,14 +1520,6 @@ input {
       top: 50%;
       transform: translateY(-50%);
       -ms-transform: translateY(-50%); }
-  .flexbox-grid .a-flex-center > .o-button, .flexbox-grid .a-flex-center > .o-tabs__item, .flexbox-grid .a-flex-center > .o-devToolsApp__rightNavItem, .flexbox-grid .a-flex-center > .o-devToolsOutput__navItem, .flexbox-grid .a-flex-center > .p-logs__logNav--navItem, .flexbox-grid .a-flex-h > .o-button, .flexbox-grid .a-flex-h > .o-tabs__item, .flexbox-grid .a-flex-h > .o-devToolsApp__rightNavItem, .flexbox-grid .a-flex-h > .o-devToolsOutput__navItem, .flexbox-grid .a-flex-h > .p-logs__logNav--navItem, .flexbox-grid .a-flex-center > .o-roundedButton, .flexbox-grid .a-flex-center > .c-connectionsModal__verifyBtn, .flexbox-grid .a-flex-center > .c-devTools__setDefaultBtn, .flexbox-grid .a-flex-center > .c-devTools__sendBtn, .flexbox-grid .a-flex-center > .o-devToolsOutput__copy, .flexbox-grid .a-flex-center > .o-devToolsOutput__navAction, .flexbox-grid .a-flex-center > .o-devToolsLanding__action, .flexbox-grid .a-flex-h > .o-roundedButton, .flexbox-grid .a-flex-h > .c-connectionsModal__verifyBtn, .flexbox-grid .a-flex-h > .c-devTools__setDefaultBtn, .flexbox-grid .a-flex-h > .c-devTools__sendBtn, .flexbox-grid .a-flex-h > .o-devToolsOutput__copy, .flexbox-grid .a-flex-h > .o-devToolsOutput__navAction, .flexbox-grid .a-flex-h > .o-devToolsLanding__action {
-    top: calc( 50% - (( 22px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-button, .flexbox-grid .a-flex-h-end > .o-tabs__item, .flexbox-grid .a-flex-h-end > .o-devToolsApp__rightNavItem, .flexbox-grid .a-flex-h-end > .o-devToolsOutput__navItem, .flexbox-grid .a-flex-h-end > .p-logs__logNav--navItem, .flexbox-grid .a-flex-h-end > .o-roundedButton, .flexbox-grid .a-flex-h-end > .c-connectionsModal__verifyBtn, .flexbox-grid .a-flex-h-end > .c-devTools__setDefaultBtn, .flexbox-grid .a-flex-h-end > .c-devTools__sendBtn, .flexbox-grid .a-flex-h-end > .o-devToolsOutput__copy, .flexbox-grid .a-flex-h-end > .o-devToolsOutput__navAction, .flexbox-grid .a-flex-h-end > .o-devToolsLanding__action {
-    top: calc( 100% -  22px);
-    position: relative;
-    outline: none; }
   .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-roundedButton:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__setDefaultBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover {
     text-decoration: none; }
   .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-roundedButton:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__setDefaultBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover {
@@ -1735,14 +1559,6 @@ button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button
   cursor: hand;
   cursor: pointer;
   color: #808080; }
-  .flexbox-grid .a-flex-center > .o-link, .flexbox-grid .a-flex-h > .o-link {
-    top: calc( 50% - (( 22px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-link {
-    top: calc( 100% -  22px);
-    position: relative;
-    outline: none; }
   .o-link:hover {
     color: #1A1A1A; }
 
@@ -1848,14 +1664,6 @@ button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button
         top: 50%;
         transform: translateY(-50%);
         -ms-transform: translateY(-50%); }
-    .flexbox-grid .a-flex-center > .o-iconButton__icon, .flexbox-grid .a-flex-h > .o-iconButton__icon {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-iconButton__icon {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
   .o-iconButton__label {
     /* -ctag-example: ...Label;*/
     font-size: 14px;
@@ -1863,14 +1671,6 @@ button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button
     color: #4D4D4D;
     flex: 1;
     /*outline: 5px dotted red;*/ }
-    .flexbox-grid .a-flex-center > .o-iconButton__label, .flexbox-grid .a-flex-h > .o-iconButton__label {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-iconButton__label {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
     .no-flexbox .o-iconButton__label {
       /* gotta use an inverse calc() size for this to work... */
       /*outline: 5px dotted red;*/ }
@@ -2042,14 +1842,6 @@ a {
       left: calc( 100% -  24.99999vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .c-mainNav__hamburger, .flexbox-grid .a-flex-h > .c-mainNav__hamburger {
-      top: calc( 50% - (( 44px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-mainNav__hamburger {
-      top: calc( 100% -  44px);
-      position: relative;
-      outline: none; }
     .c-mainNav__hamburger:hover {
       color: #B7FFE0; }
     @media (max-width: 768px) {
@@ -2217,14 +2009,6 @@ a {
       white-space: nowrap;
       font-size: 16px;
       line-height: 33px; }
-      .flexbox-grid .a-flex-center > .c-mainNav__link__label, .flexbox-grid .a-flex-h > .c-mainNav__link__label {
-        top: calc( 50% - (( 33px / 2 )));
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-h-end > .c-mainNav__link__label {
-        top: calc( 100% -  33px);
-        position: relative;
-        outline: none; }
     .c-mainNav__link--selected {
       background-color: #00DFA7;
       color: #008262; }
@@ -2280,26 +2064,10 @@ a {
       font-size: 13px;
       line-height: 22px;
       padding: 5.5px; }
-      .flexbox-grid .a-flex-center > .c-mainNav__link--user, .flexbox-grid .a-flex-h > .c-mainNav__link--user {
-        top: calc( 50% - (( 22px / 2 )));
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-h-end > .c-mainNav__link--user {
-        top: calc( 100% -  22px);
-        position: relative;
-        outline: none; }
     @media (max-width: 768px) {
       .c-mainNav__link {
         font-size: 16px !important;
-        line-height: 33px !important; }
-        .flexbox-grid .a-flex-center > .c-mainNav__link, .flexbox-grid .a-flex-h > .c-mainNav__link {
-          top: calc( 50% - (( 33px / 2 ))) !important;
-          position: relative !important;
-          outline: none !important; }
-        .flexbox-grid .a-flex-h-end > .c-mainNav__link {
-          top: calc( 100% -  33px) !important;
-          position: relative !important;
-          outline: none !important; } }
+        line-height: 33px !important; } }
     @media (max-width: 768px) {
       .c-mainNav__link {
         clear: left  !important;
@@ -2739,14 +2507,6 @@ a {
           left: calc( 100% -  4.166665vw);
           position: relative;
           outline: none; }
-        .flexbox-grid .a-flex-center > .c-secondaryNav__list__item__icon, .flexbox-grid .a-flex-h > .c-secondaryNav__list__item__icon {
-          top: calc( 50% - (( 38.5px / 2 )));
-          position: relative;
-          outline: none; }
-        .flexbox-grid .a-flex-h-end > .c-secondaryNav__list__item__icon {
-          top: calc( 100% -  38.5px);
-          position: relative;
-          outline: none; }
         @media (max-width: 768px) {
           .c-secondaryNav__list__item__icon {
             width: 12.499995vw !important; }
@@ -2768,14 +2528,6 @@ a {
         overflow: hidden;
         white-space: nowrap;
         transition: width 0.3s; }
-        .flexbox-grid .a-flex-center > .c-secondaryNav__list__item__label, .flexbox-grid .a-flex-h > .c-secondaryNav__list__item__label {
-          top: calc( 50% - (( 33px / 2 )));
-          position: relative;
-          outline: none; }
-        .flexbox-grid .a-flex-h-end > .c-secondaryNav__list__item__label {
-          top: calc( 100% -  33px);
-          position: relative;
-          outline: none; }
       .c-secondaryNav__list__item--selected {
         background-color: #fff; }
         .c-secondaryNav__list__item--selected:hover {
@@ -2919,14 +2671,6 @@ a {
       position: relative;
       outline: none; }
     .flexbox-grid .a-flex-center > .c-tertiaryNav__title, .flexbox-grid .a-flex-h > .c-tertiaryNav__title {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-tertiaryNav__title {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-center > .c-tertiaryNav__title, .flexbox-grid .a-flex-h > .c-tertiaryNav__title {
       top: calc( 50% - (( 55px / 2 )));
       position: relative;
       outline: none; }
@@ -3006,14 +2750,6 @@ a {
         outline: none; }
       .flexbox-grid .a-flex-v-end > .c-tertiaryNav__item__label {
         outline: none; }
-      .flexbox-grid .a-flex-center > .c-tertiaryNav__item__label, .flexbox-grid .a-flex-h > .c-tertiaryNav__item__label {
-        top: calc( 50% - (( 22px / 2 )));
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-h-end > .c-tertiaryNav__item__label {
-        top: calc( 100% -  22px);
-        position: relative;
-        outline: none; }
     .c-tertiaryNav__item--indented {
       padding-left: 4.166665vw; }
     .c-tertiaryNav__item--selected {
@@ -3068,14 +2804,6 @@ a {
     margin-left: 11px;
     flex: 1;
     /*outline: 5px dotted red;*/ }
-    .flexbox-grid .a-flex-center > .c-connections__groupHeader h1, .flexbox-grid .a-flex-h > .c-connections__groupHeader h1 {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-connections__groupHeader h1 {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
     .no-flexbox .c-connections__groupHeader h1 {
       /* gotta use an inverse calc() size for this to work... */
       /*outline: 5px dotted red;*/ }
@@ -3108,14 +2836,6 @@ a {
     outline: none; }
   .flexbox-grid .a-flex-h-end > .c-connections__addBtn {
     top: calc( 100% -  33px);
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-center > .c-connections__addBtn, .flexbox-grid .a-flex-h > .c-connections__addBtn {
-    top: calc( 50% - (( 16.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-connections__addBtn {
-    top: calc( 100% -  16.5px);
     position: relative;
     outline: none; }
   .flexbox-grid .a-flex-center > .c-connections__addBtn, .flexbox-grid .a-flex-h > .c-connections__addBtn {
@@ -3193,14 +2913,6 @@ a {
     outline: none; }
   .flexbox-grid .a-flex-v-end > .c-connections__cell--endPoint, .flexbox-grid .a-flex-v-end > .c-connections__cell--endPointUnverified {
     left: calc( 100% -  33.33332vw);
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-center > .c-connections__cell--endPoint, .flexbox-grid .a-flex-h > .c-connections__cell--endPoint, .flexbox-grid .a-flex-center > .c-connections__cell--endPointUnverified, .flexbox-grid .a-flex-h > .c-connections__cell--endPointUnverified {
-    top: calc( 50% - (( 16.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-connections__cell--endPoint, .flexbox-grid .a-flex-h-end > .c-connections__cell--endPointUnverified {
-    top: calc( 100% -  16.5px);
     position: relative;
     outline: none; }
 
@@ -3496,14 +3208,6 @@ a {
     left: calc( 100% -  24.99999vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-center > .c-devTools__overviewText, .flexbox-grid .a-flex-h > .c-devTools__overviewText {
-    top: calc( 50% - (( 22px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-devTools__overviewText {
-    top: calc( 100% -  22px);
-    position: relative;
-    outline: none; }
 
 .c-devTools__connections {
   flex: 1;
@@ -3557,14 +3261,6 @@ a {
     margin: 0;
     padding: 0;
     margin-left: 11px; }
-    .flexbox-grid .a-flex-center > .c-devTools__groupHeader h1, .flexbox-grid .a-flex-h > .c-devTools__groupHeader h1 {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-devTools__groupHeader h1 {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
 
 .c-devTools__cell--title {
   flex: 1;
@@ -3677,14 +3373,6 @@ a {
   font-size: 19px;
   line-height: 38.5px;
   color: #808080; }
-  .flexbox-grid .a-flex-center > .c-devTools__connectionName, .flexbox-grid .a-flex-h > .c-devTools__connectionName {
-    top: calc( 50% - (( 38.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-devTools__connectionName {
-    top: calc( 100% -  38.5px);
-    position: relative;
-    outline: none; }
 
 .c-devTools__setDefaultBtn {
   width: 100%;
@@ -4228,14 +3916,6 @@ a {
   -ms-flex-pack: center;
   -ms-flex-align: center; }
   .flexbox-grid .a-flex-center > .c-logs__searchIcon, .flexbox-grid .a-flex-h > .c-logs__searchIcon {
-    top: calc( 50% - (( 38.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logs__searchIcon {
-    top: calc( 100% -  38.5px);
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-center > .c-logs__searchIcon, .flexbox-grid .a-flex-h > .c-logs__searchIcon {
     outline: none; }
   .flexbox-grid .a-flex-h-end > .c-logs__searchIcon {
     outline: none; }
@@ -4457,14 +4137,6 @@ a {
     margin-right: 11px;
     height: 22px; }
     .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--model .c-logs__modelIcon, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--model .c-logs__modelIcon {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-logs .c-logs__cell--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-h-end > .c-logs .c-logs__cell--model .c-logs__modelIcon {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--model .c-logs__modelIcon, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--model .c-logs__modelIcon {
       top: calc( 50% - ( 22px / 2 ));
       position: relative;
       outline: none; }
@@ -4549,26 +4221,10 @@ a {
 .c-logs .c-logs__cell--model {
   font-size: 14px;
   line-height: 22px; }
-  .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--model, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--model {
-    top: calc( 50% - (( 22px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logs .c-logs__cell--model {
-    top: calc( 100% -  22px);
-    position: relative;
-    outline: none; }
 
 .c-logs .c-logs__cell--environment {
   font-size: 13px;
   line-height: 22px; }
-  .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--environment, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--environment {
-    top: calc( 50% - (( 22px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logs .c-logs__cell--environment {
-    top: calc( 100% -  22px);
-    position: relative;
-    outline: none; }
 
 .c-logs .c-logs__cell--summaryTitle {
   display: flex;
@@ -4844,14 +4500,6 @@ a {
       margin-right: 11px;
       height: 22px; }
       .flexbox-grid .a-flex-center > .c-logs__filters--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-h > .c-logs__filters--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-center > .c-logs__filters--model .c-logs__modelIcon, .flexbox-grid .a-flex-h > .c-logs__filters--model .c-logs__modelIcon {
-        top: calc( 50% - (( 22px / 2 )));
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-h-end > .c-logs__filters--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-h-end > .c-logs__filters--model .c-logs__modelIcon {
-        top: calc( 100% -  22px);
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-center > .c-logs__filters--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-h > .c-logs__filters--summaryModel .c-logs__modelIcon, .flexbox-grid .a-flex-center > .c-logs__filters--model .c-logs__modelIcon, .flexbox-grid .a-flex-h > .c-logs__filters--model .c-logs__modelIcon {
         top: calc( 50% - ( 22px / 2 ));
         position: relative;
         outline: none; }
@@ -4963,25 +4611,9 @@ a {
   .c-logs__filters--model {
     font-size: 14px;
     line-height: 22px; }
-    .flexbox-grid .a-flex-center > .c-logs__filters--model, .flexbox-grid .a-flex-h > .c-logs__filters--model {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-logs__filters--model {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
   .c-logs__filters--environment {
     font-size: 13px;
     line-height: 22px; }
-    .flexbox-grid .a-flex-center > .c-logs__filters--environment, .flexbox-grid .a-flex-h > .c-logs__filters--environment {
-      top: calc( 50% - (( 22px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-logs__filters--environment {
-      top: calc( 100% -  22px);
-      position: relative;
-      outline: none; }
   .c-logs__filters--time {
     width: 16.66666vw; }
     .flexbox-grid .a-flex-v > .c-logs__filters--time {
@@ -5080,14 +4712,6 @@ a {
     outline: none; }
   .flexbox-grid .a-flex-h-end > .c-logs__openFilters {
     top: calc( 100% -  66px);
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-center > .c-logs__openFilters, .flexbox-grid .a-flex-h > .c-logs__openFilters {
-    top: calc( 50% - (( 38.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logs__openFilters {
-    top: calc( 100% -  38.5px);
     position: relative;
     outline: none; }
   .c-logs__openFilters:hover {
@@ -5330,14 +4954,6 @@ a {
     -ms-flex-pack: center;
     -ms-flex-align: center;
     font-weight: 500; }
-    .flexbox-grid .a-flex-center > .p-logs__logHeader--cell, .flexbox-grid .a-flex-h > .p-logs__logHeader--cell {
-      top: calc( 50% - (( 33px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .p-logs__logHeader--cell {
-      top: calc( 100% -  33px);
-      position: relative;
-      outline: none; }
     .flexbox-grid .p-logs__logHeader--cell {
       position: relative;
       text-align: center; }
@@ -5362,26 +4978,10 @@ a {
       color: #eee;
       font-size: 27px;
       line-height: 44px; }
-      .flexbox-grid .a-flex-center > .p-logs__logHeader--cell .fa.fa-calendar, .flexbox-grid .a-flex-h > .p-logs__logHeader--cell .fa.fa-calendar {
-        top: calc( 50% - (( 44px / 2 )));
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-h-end > .p-logs__logHeader--cell .fa.fa-calendar {
-        top: calc( 100% -  44px);
-        position: relative;
-        outline: none; }
     .p-logs__logHeader--cell .fa.fa-minus {
       font-size: 16px;
       line-height: 33px;
       font-weight: 500; }
-      .flexbox-grid .a-flex-center > .p-logs__logHeader--cell .fa.fa-minus, .flexbox-grid .a-flex-h > .p-logs__logHeader--cell .fa.fa-minus {
-        top: calc( 50% - (( 33px / 2 )));
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-h-end > .p-logs__logHeader--cell .fa.fa-minus {
-        top: calc( 100% -  33px);
-        position: relative;
-        outline: none; }
   .p-logs__logHeader--connectionIcon {
     width: 4.166665vw;
     display: flex;
@@ -5564,14 +5164,6 @@ a {
   font-size: 13.5px;
   line-height: 16.5px;
   width: 20px; }
-  .flexbox-grid .a-flex-center > .c-logsSideNav__cell--model, .flexbox-grid .a-flex-h > .c-logsSideNav__cell--model {
-    top: calc( 50% - (( 16.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logsSideNav__cell--model {
-    top: calc( 100% -  16.5px);
-    position: relative;
-    outline: none; }
 
 .c-logsSideNav__cell--message {
   font-size: 13px;
@@ -5579,14 +5171,6 @@ a {
   padding-left: 5.5px;
   flex: 1;
   /*outline: 5px dotted red;*/ }
-  .flexbox-grid .a-flex-center > .c-logsSideNav__cell--message, .flexbox-grid .a-flex-h > .c-logsSideNav__cell--message {
-    top: calc( 50% - (( 16.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logsSideNav__cell--message {
-    top: calc( 100% -  16.5px);
-    position: relative;
-    outline: none; }
   .no-flexbox .c-logsSideNav__cell--message {
     /* gotta use an inverse calc() size for this to work... */
     /*outline: 5px dotted red;*/ }
@@ -5653,14 +5237,6 @@ a {
       top: calc( 100% -  88px);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .c-logDetail__logHeader, .flexbox-grid .a-flex-h > .c-logDetail__logHeader {
-      top: calc( 50% - (( 33px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-logDetail__logHeader {
-      top: calc( 100% -  33px);
-      position: relative;
-      outline: none; }
   .c-logDetail__logHeader--connectionIcon {
     width: 4.166665vw; }
     .flexbox-grid .a-flex-v > .c-logDetail__logHeader--connectionIcon {
@@ -5714,14 +5290,6 @@ a {
     font-size: 16px;
     line-height: 33px;
     width: 2.0833325vw; }
-    .flexbox-grid .a-flex-center > .c-logDetail__logHeader--dataModelIcon, .flexbox-grid .a-flex-h > .c-logDetail__logHeader--dataModelIcon {
-      top: calc( 50% - (( 33px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-logDetail__logHeader--dataModelIcon {
-      top: calc( 100% -  33px);
-      position: relative;
-      outline: none; }
     .flexbox-grid .a-flex-v > .c-logDetail__logHeader--dataModelIcon {
       left: calc( 50% - (( 2.0833325vw / 2 )));
       position: relative;
@@ -5977,14 +5545,6 @@ a {
     position: relative;
     outline: none; }
   .flexbox-grid .a-flex-center > .c-profile__btn, .flexbox-grid .a-flex-h > .c-profile__btn {
-    top: calc( 50% - (( 16.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-profile__btn {
-    top: calc( 100% -  16.5px);
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-center > .c-profile__btn, .flexbox-grid .a-flex-h > .c-profile__btn {
     top: calc( 50% - (( 44px / 2 )));
     position: relative;
     outline: none; }
@@ -6052,14 +5612,6 @@ a {
     color: #999999;
     line-height: 44px; }
     .flexbox-grid .a-flex-center > .c-profile__title em, .flexbox-grid .a-flex-h > .c-profile__title em {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-profile__title em {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-center > .c-profile__title em, .flexbox-grid .a-flex-h > .c-profile__title em {
       top: calc( 50% - (( 44px / 2 )));
       position: relative;
       outline: none; }
@@ -6083,14 +5635,6 @@ a {
   line-height: 16.5px;
   line-height: 22px; }
   .flexbox-grid .a-flex-center > .c-profile__outsideLink, .flexbox-grid .a-flex-h > .c-profile__outsideLink {
-    top: calc( 50% - (( 16.5px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-profile__outsideLink {
-    top: calc( 100% -  16.5px);
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-center > .c-profile__outsideLink, .flexbox-grid .a-flex-h > .c-profile__outsideLink {
     top: calc( 50% - (( 22px / 2 )));
     position: relative;
     outline: none; }
@@ -6106,14 +5650,6 @@ a {
   line-height: 22px;
   margin-bottom: 22px;
   text-align: justify; }
-  .flexbox-grid .a-flex-center > .c-profile p, .flexbox-grid .a-flex-h > .c-profile p {
-    top: calc( 50% - (( 22px / 2 )));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-profile p {
-    top: calc( 100% -  22px);
-    position: relative;
-    outline: none; }
 
 .c-profile__categories {
   width: 100%;
@@ -6166,28 +5702,12 @@ a {
     margin-bottom: 5.5px;
     color: #808080;
     display: block; }
-    .flexbox-grid .a-flex-center > .c-profile__category__icon, .flexbox-grid .a-flex-h > .c-profile__category__icon {
-      top: calc( 50% - (( 44px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-profile__category__icon {
-      top: calc( 100% -  44px);
-      position: relative;
-      outline: none; }
   .c-profile__category__label {
     font-size: 12px;
     line-height: 16.5px;
     text-align: center;
     color: #808080;
     padding: 0px 5px 0px 5px; }
-    .flexbox-grid .a-flex-center > .c-profile__category__label, .flexbox-grid .a-flex-h > .c-profile__category__label {
-      top: calc( 50% - (( 16.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-profile__category__label {
-      top: calc( 100% -  16.5px);
-      position: relative;
-      outline: none; }
   @media (max-width: 768px) {
     .c-profile__category {
       width: 16.66666vw !important; }
@@ -8226,14 +7746,6 @@ span.remove-new-override-field:hover {
       position: relative;
       outline: none; }
     .flexbox-grid .a-flex-center > .c-galleryNav__title, .flexbox-grid .a-flex-h > .c-galleryNav__title {
-      top: calc( 50% - (( 38.5px / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-galleryNav__title {
-      top: calc( 100% -  38.5px);
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-center > .c-galleryNav__title, .flexbox-grid .a-flex-h > .c-galleryNav__title {
       top: calc( 50% - (( 44px / 2 )));
       position: relative;
       outline: none; }
@@ -8276,14 +7788,6 @@ span.remove-new-override-field:hover {
       .flexbox-grid .a-flex-v-end > .c-galleryNav__group__title {
         outline: none; }
       .flexbox-grid .a-flex-center > .c-galleryNav__group__title, .flexbox-grid .a-flex-h > .c-galleryNav__group__title {
-        top: calc( 50% - (( 22px / 2 )));
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-h-end > .c-galleryNav__group__title {
-        top: calc( 100% -  22px);
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-center > .c-galleryNav__group__title, .flexbox-grid .a-flex-h > .c-galleryNav__group__title {
         top: calc( 50% - ( 33px / 2 ));
         position: relative;
         outline: none; }
@@ -8318,14 +7822,6 @@ span.remove-new-override-field:hover {
       .flexbox-grid .a-flex-v > .c-galleryNav__group__item {
         outline: none; }
       .flexbox-grid .a-flex-v-end > .c-galleryNav__group__item {
-        outline: none; }
-      .flexbox-grid .a-flex-center > .c-galleryNav__group__item, .flexbox-grid .a-flex-h > .c-galleryNav__group__item {
-        top: calc( 50% - (( 22px / 2 )));
-        position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-h-end > .c-galleryNav__group__item {
-        top: calc( 100% -  22px);
-        position: relative;
         outline: none; }
       .flexbox-grid .a-flex-center > .c-galleryNav__group__item, .flexbox-grid .a-flex-h > .c-galleryNav__group__item {
         top: calc( 50% - ( 33px / 2 ));
