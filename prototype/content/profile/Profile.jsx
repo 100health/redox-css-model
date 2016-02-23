@@ -33,6 +33,21 @@ var Profile = React.createClass({
     },
 
     render: function() {
+        
+        
+        var search_categories = RedoxModel.app.search_categories;
+        var search_categories_html = [], category;
+        
+        for ( var i=0; i<search_categories.length; i++ ) {
+            category = search_categories[i];
+            search_categories_html.push(
+                <div className="c-profile__category">
+                    <div className={ "c-profile__category__icon " + category.icon }></div>
+                    <div className="c-profile__category__label">{ category.name }</div>
+                </div>
+            );
+        }
+        
 
         var organization = RedoxModel.app.focused_organization;
         // console.log( organization );
@@ -52,7 +67,7 @@ var Profile = React.createClass({
                                 <div className="c-profile__avatarCol">
                                     <div className="c-profile__avatar"
                                         style={{"background-image":
-                                                "url('http://cdn.sheknows.com/articles/2013/06/25-random-cat-behaviors-finally-explained-01.jpg')"}}>
+                                                "url('/dist/images/prototype/aristaMd.jpg')"}}>
                                     </div>
                                     <div className="c-profile__btn"
                                         onClick={ this.openProfileEdit }>
@@ -131,74 +146,7 @@ var Profile = React.createClass({
                                     </h2>
 
                                     <div className="c-profile__categories">
-                                        <div className="c-profile__category">
-                                            <div className="c-profile__category__icon ion-android-archive">
-                                            </div>
-                                            <div className="
-                                                c-profile__category__label">
-                                                flowchart
-                                            </div>
-                                        </div>
-                                        <div className="c-profile__category">
-                                            <div className="
-                                                c-profile__category__icon
-                                                ion-android-archive">
-                                            </div>
-                                            <div className="
-                                                c-profile__category__label">
-                                                flowchart
-                                            </div>
-                                        </div>
-                                        <div className="c-profile__category">
-                                            <div className="
-                                                c-profile__category__icon
-                                                ion-android-archive">
-                                            </div>
-                                            <div className="
-                                                c-profile__category__label">
-                                                flowchart
-                                            </div>
-                                        </div>
-                                        <div className="c-profile__category">
-                                            <div className="
-                                                c-profile__category__icon
-                                                ion-android-archive">
-                                            </div>
-                                            <div className="
-                                                c-profile__category__label">
-                                                flowchart
-                                            </div>
-                                        </div>
-                                        <div className="c-profile__category">
-                                            <div className="
-                                                c-profile__category__icon
-                                                ion-android-archive">
-                                            </div>
-                                            <div className="
-                                                c-profile__category__label">
-                                                flowchart
-                                            </div>
-                                        </div>
-                                        <div className="c-profile__category">
-                                            <div className="
-                                                c-profile__category__icon
-                                                ion-android-archive">
-                                            </div>
-                                            <div className="
-                                                c-profile__category__label">
-                                                flowchart
-                                            </div>
-                                        </div>
-                                        <div className="c-profile__category">
-                                            <div className="
-                                                c-profile__category__icon
-                                                ion-android-archive">
-                                            </div>
-                                            <div className="
-                                                c-profile__category__label">
-                                                flowchart
-                                            </div>
-                                        </div>
+                                        { search_categories_html }
                                     </div>
 
                                     <h2>
