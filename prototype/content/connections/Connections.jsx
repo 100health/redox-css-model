@@ -21,13 +21,11 @@ var Connections = React.createClass({
 
     getInboundConnectionRow: function( connection ){
 
-        var link = "", end_point, end_point_class;
+        var end_point, end_point_class;
         if ( connection.verified ) {
-            link = <a href="#" onClick={ this.openConnection.bind( this , connection.guid ) }>Edit</a>;
             end_point = connection.end_point;
             end_point_class = "c-connections__cell--endPoint";
         }else{
-            link = <a href="#" onClick={ function() { return false; } }>Verify</a>;
             end_point = "End point verification needed!";
             end_point_class = "c-connections__cell--endPointUnverified";
         }
@@ -35,25 +33,39 @@ var Connections = React.createClass({
         return  <div className="o-list__row"
                     onClick={ this.openConnection.bind( this , connection.guid ) }>
                     <div className="o-list__cell
-                        c-connections__cell--title">{ connection.title }</div>
-                    <div className={ "o-list__cell " + end_point_class }>{ end_point }</div>
-                    <div className="o-list__cell a-flex-item-fill
-                        c-connections__cell--verify">
-                        { link }
+                        c-connections__cell--title">
+                        { connection.title }
+                    </div>
+                    <div className={ "o-list__cell " + end_point_class }>
+                        { end_point }
+                    </div>
+                    <div className="o-list__cell
+                        c-connections__cell--environment">
+                        { connection.environment }
                     </div>
                 </div>;
     },
 
 
-
-    getOutboundConnectionRow: function( connection ){
+    getOutboundConnectionRow: function( connection ) {
+        console.log( connection );
         return  <div className="o-list__row"
                     onClick={ this.openConnection.bind( this , connection.guid ) }>
-                    <div className=" o-list__cell a-flex-item-fill
-                        c-connections__cell--title">{ connection.title }</div>
-                    <div className="o-list__cell
+                    <div className=" o-list__cell
+                        c-connections__cell--title">
+                        { connection.title }
+                    </div>
+                    { /*}<div className="o-list__cell
                         c-connections__cell--verify">
                         <a href="#" onClick={this.openConnection.bind( this , connection.guid ) }>API/Key</a>
+                    </div> */ }
+                    <div className="o-list__cell
+                        c-connections__cell--subscriptions">
+                        { connection.subscriptions.length }
+                    </div>
+                    <div className="o-list__cell
+                        c-connections__cell--environment">
+                        { connection.environment }
                     </div>
                 </div>;
     },
@@ -98,6 +110,20 @@ var Connections = React.createClass({
                                 </div>
                             </div>
                             <div className="o-list o-list--overview">
+                                <div className="o-list__headerRow">
+                                    <div className=" o-list__headerCell
+                                        c-connections__cell--title">
+                                        Connection
+                                    </div>
+                                    <div className="o-list__headerCell
+                                        c-connections__cell--subscriptions">
+                                        Subscriptions
+                                    </div>
+                                    <div className="o-list__headerCell
+                                        c-connections__cell--environment">
+                                        Environment
+                                    </div>
+                                </div>
                                 { outbound_connections_html }
                             </div>
 
@@ -113,6 +139,20 @@ var Connections = React.createClass({
                                 </div>
                             </div>
                             <div className="o-list o-list--overview">
+                                <div className="o-list__headerRow">
+                                    <div className="o-list__headerCell
+                                        c-connections__cell--title">
+                                        Connection
+                                    </div>
+                                    <div className="o-list__headerCell
+                                        c-connections__cell--endPoint">
+                                        End Point
+                                    </div>
+                                    <div className="o-list__headerCell
+                                        c-connections__cell--environment">
+                                        Environment
+                                    </div>
+                                </div>
                                 { inbound_connections_html }
                             </div>
 

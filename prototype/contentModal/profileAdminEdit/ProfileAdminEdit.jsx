@@ -33,7 +33,7 @@ var ProfileAdminEdit = React.createClass({
                     o-contentModal o-contentModal--wfooter">
                     <div className="
                         o-contentModal__contentContainer">
-                        <div>
+                        <div className="o-contentModal__paddedContent">
                             <div className="o-contentHeader">
                                 <div className="o-contentHeader__titleContainer">
                                     Admin Profile Edit
@@ -64,7 +64,7 @@ var ProfileAdminEdit = React.createClass({
                         </div>
                     </div>
                     <div className="o-contentModal__footerContainer">
-                        <div>
+                        <div className="a-flex-h">
                             <div className="o-contentModal__footerSave"
                                 onClick={ this.close }>Save</div>
                             <div className="o-contentModal__footerCancel"

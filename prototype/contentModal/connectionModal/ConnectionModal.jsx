@@ -71,9 +71,9 @@ var ConnectionModal = React.createClass({
 
         var connection
         if ( RS.route.modal_conn_id == "new_outbound" ) {
-            connection = {title:"New Outbound Connection",type:"outbound"};
+            connection = {title:"New Outbound Connection",type:"outbound",subscriptions:[]};
         }else if ( RS.route.modal_conn_id == "new_inbound" ) {
-            connection = {title:"New Inbound Connection",type:"inbound"};
+            connection = {title:"New Inbound Connection",type:"inbound",subscriptions:[]};
         }else{
             connection = RedoxModel.get( RS.route.modal_conn_id );
         }
@@ -262,7 +262,7 @@ var ConnectionModal = React.createClass({
 
         return  <div className="c-connection o-contentModal o-contentModal--wfooter">
                     <div className="o-contentModal__contentContainer o-document">
-                        <div>
+                        <div className="o-contentModal__paddedContent">
                             <div className="o-contentHeader">
                                 <div className="o-contentHeader__titleContainer">
                                     { connection.title }
@@ -276,11 +276,17 @@ var ConnectionModal = React.createClass({
                         </div>
                     </div>
                     <div className="o-contentModal__footerContainer">
-                        <div>
-                            <div className="o-contentModal__footerSave"
-                                onClick={ this.close }>Save</div>
+                        <div className="a-flex-h">
+                            <div className="o-roundedButton
+                                a-height-row-2 a-text-size-large
+                                a-margin-left-col-quarter">
+                                View Logs
+                            </div>
+                            <div className="a-flex-item-fill"></div>
                             <div className="o-contentModal__footerCancel"
                                 onClick={ this.close }>Cancel</div>
+                            <div className="o-contentModal__footerSave"
+                                onClick={ this.close }>Save</div>
                         </div>
                     </div>
                 </div>;

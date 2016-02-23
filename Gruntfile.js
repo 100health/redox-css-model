@@ -269,6 +269,12 @@ module.exports = function(grunt) {
             cwd: "dist/csscore",
             src: ["**/*"],
             expand: true
+        },
+        {// import CSSReveal for more portable dist
+            dest: 'dist/cssreveal',
+            cwd: "node_modules/cssreveal/dist/",
+            src: ["**/*"],
+            expand: true
         }
     ]};
 

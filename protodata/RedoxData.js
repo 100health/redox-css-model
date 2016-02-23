@@ -73,10 +73,11 @@ module.exports = {
             {name:"user@username.com",icon:false,link:"user_profile"}*/
 
             {name:"Organization",icon:false,link:"organization",secondary_page:"profile"},
-            {name:"Gallery",icon:false,link:"gallery",secondary_page:""},
-            {name:"Docs",icon:"ion-clipboard",link:"docs",secondary_page:""},
-            {name:"Log In",icon:false,link:"login",secondary_page:""},
-            {name:"Sign Up",icon:false,link:"sign_up",secondary_page:""}
+            //{name:"Gallery",icon:false,link:"gallery",secondary_page:""},
+            {name:"Documentation",icon:false,link:"docs",secondary_page:""},
+            {name:"John Smith",icon:false,link:"logout",secondary_page:""},
+            /*{name:"Log In",icon:false,link:"login",secondary_page:""},
+            {name:"Sign Up",icon:false,link:"sign_up",secondary_page:""}*/
         ]
     },
     orig_main_page:{
