@@ -43,20 +43,20 @@
                     $.get(
                         "node_modules/cssmodeling/README.md?" + Math.random() ,
                         function( cssmod_result ) {
+	                        $(".readme").html(
+	                            marked( result + cssmod_result , {renderer:renderer} )
+	                        );
 
-                        $(".readme").html(
-                            marked( result + cssmod_result , {renderer:renderer} )
-                        );
-
-                        $(".readme_nav").html(
-                            headers.join("")
-                        );
-                    });
+	                        $(".readme_nav").html(
+	                            headers.join("")
+	                        );
+	                    }
+					);
                 });
 
-				$.get( "bower.json?" + Math.random() , function( result ) {
-					$(".npm_version").html( result.version );
-				});
+				//$.get( "bower.json?" + Math.random() , function( result ) {
+				//	$(".npm_version").html( result.version );
+				//});
 
 			});
 		</script>
@@ -308,13 +308,16 @@
 
 		<div class="shortcuts">
 			<div class="versions">
-				<h1>
+				<!--h1>
 					Version
-				</h1>
+				</h1-->
 				<div class="production_block">
 		            <div class="production npm_version"></div>
 					<a href="dist/" class="styleguide" target="_prototype">
 						Prototype
+					</a>
+					<a href="dist/prototype.html" class="styleguide" target="_prototype">
+						User Testing
 					</a>
 					<a href="dist/csscore/styleguide/"
 						class="styleguide right" target="_styleguide">

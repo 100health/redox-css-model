@@ -18,6 +18,17 @@ var ConnectionModal = React.createClass({
         RouteState.removeDiffListenersViaClusterId( "ConnectionModal" );
     },
 
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-connectionsModal',
+				filters:[
+					['.c-connectionsModal .o-list__row', 1 ]
+				]
+			}, document.location.origin
+		);
+    },
+
     close: function(){
         RS.merge({
             'modal':false
@@ -32,7 +43,6 @@ var ConnectionModal = React.createClass({
     },
 
     gotoVerifingState: function( state ){
-
         RS.merge({
             'modal:verifying':state
         });
@@ -119,7 +129,8 @@ var ConnectionModal = React.createClass({
                 <div className="o-document">
                     <h3>Subscriptions</h3>
                     <div className="o-list
-                        o-list--overview o-list--uninteractive
+                        o-list--overview
+                        o-list--uninteractive
                         a-clear-both">
                         <div className="o-list__headerRow">
                             <div className="o-list__headerCell
@@ -226,41 +237,10 @@ var ConnectionModal = React.createClass({
                         </div>
                     </div>
                 </form>
-
-
-                        { /*<div className="p-connections__inboundModalContent"
-                            onClick={ function () {
-
-                                if ( $( ".p-connections__inboundModalContent" )
-                                    .hasClass("p-connections__inboundModalContent--needsVerification") )
-                                {
-                                    $(".p-connections__inboundModalContent").removeClass(
-                                        "p-connections__inboundModalContent--needsVerification"
-                                    );
-                                    $(".p-connections__inboundModalContent").addClass(
-                                        "p-connections__inboundModalContent--error"
-                                    );
-                                }else if ( $( ".p-connections__inboundModalContent" )
-                                    .hasClass("p-connections__inboundModalContent--error") )
-                                {
-                                    $(".p-connections__inboundModalContent").removeClass(
-                                        "p-connections__inboundModalContent--needsVerification"
-                                    );
-                                    $(".p-connections__inboundModalContent").removeClass(
-                                        "p-connections__inboundModalContent--error"
-                                    );
-                                }else{
-                                    $(".p-connections__inboundModalContent").addClass(
-                                        "p-connections__inboundModalContent--needsVerification"
-                                    );
-                                }
-
-                            }}>
-                        </div>*/ }
             </div>;
         }
 
-        return  <div className="c-connection o-contentModal o-contentModal--wfooter">
+        return  <div className="c-connectionsModal o-contentModal o-contentModal--wfooter">
                     <div className="o-contentModal__contentContainer o-document">
                         <div className="o-contentModal__paddedContent">
                             <div className="o-contentHeader">
@@ -279,7 +259,8 @@ var ConnectionModal = React.createClass({
                         <div className="a-flex-h">
                             <div className="o-roundedButton
                                 a-height-row-2 a-text-size-large
-                                a-margin-left-col-quarter">
+                                a-margin-left-col-quarter"
+                                onClick={ this.gotoLogs }>
                                 View Logs
                             </div>
                             <div className="a-flex-item-fill"></div>

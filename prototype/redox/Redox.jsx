@@ -112,12 +112,12 @@ var Redox = React.createClass({
         }
 
 
-        return  <div className={ "c-redox " + redox_xcls }>
+        return  <div className={ "c-redox" + redox_xcls }>
                     <div className={
-                            'c-redox__mainNavContainer ' +
+                            'c-redox__mainNavContainer' +
                             ( ( RS.route.detail_page
                                 && RS.route.detail_page != "" )
-                                    ? "c-redox__mainNavContainer--open" : "" )
+                                    ? " c-redox__mainNavContainer--open" : "" )
                         }>
                         <MainNav />
                     </div>
@@ -126,7 +126,7 @@ var Redox = React.createClass({
                         { secondaryNav }
                     </div>
                     <div className={
-                            "c-redox__contentContainer " + content_cls
+                            "c-redox__contentContainer" + content_cls
                         }>
                         { page }
                     </div>
@@ -135,8 +135,8 @@ var Redox = React.createClass({
                     </div>
 
                     <div className={
-                            "o-modal " +
-                            ( ( modalContent ) ? "o-modal--show" : "" )
+                            "o-modal" +
+                            ( ( modalContent ) ? " o-modal--show" : "" )
                         }>
                         <div className="o-modal__bgCover"
                             onClick={ this.closeModal }></div>

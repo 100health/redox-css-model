@@ -74,7 +74,7 @@ var Logs = React.createClass({
                 environment = "Stage";
                 break;
         }
-    
+
         return  <div className="o-list__row" key={ Math.random() }
                     onClick={ this.openLog.bind( this , log ) }>
                     <div className="
@@ -153,7 +153,7 @@ var Logs = React.createClass({
     render: function() {
 
         var logs = RedoxModel.app.focused_organization.logs;
-
+        console.log( )
 
         var log_rows_html = [];
         for ( var i=0; i<logs.length; i++ ) {
@@ -175,24 +175,20 @@ var Logs = React.createClass({
                                         o-contentHeader__navContainer
                                         c-logs__navContainer">
                                     <div className="c-logs__searchIcon">
-                                        <i className="fa fa-search"></i>
+                                        <div className="fa fa-search"></div>
                                     </div>
-                                    <form className="o-form">
-                                        <input className="c-logs__search" />
+                                    <form className="o-form a-flex-item-fill">
+                                        <input className="c-logs__search"
+                                            onKeyUp={ function () {
+                                                        $('.c-logs__filters--search').val(
+                                                            $('.c-logs__search').val()
+                                                        ) } } />
                                     </form>
                                 </div>
                             </div>
                             <div className="o-list o-list--overview a-width-100">
                                 { log_rows_html }
                             </div>
-
-
-                            {/*<div className="a-stack-v a-width-100">
-                                <div className="a-height-row-2">hi</div>
-                                <div className="a-height-minus-row-2 a-width-100">
-                                    { log_rows_html }
-                                </div>
-                            </div>*/}
                         </div>
                     </div>
                     <div className="o-contentSimple__footerContainer">
@@ -204,14 +200,10 @@ var Logs = React.createClass({
                                     onClick={ this.toggleFooter }>
                                     <div className="
                                         o-list__cell
-                                        c-logs__cell--summaryType">Type</div>
-                                    <div className="
-                                        o-list__cell
-                                        c-logs__cell--summaryModel">Data Model</div>
+                                        c-logs__cell--summaryType">Type / Data Model</div>
                                     <div className="o-list__cell
                                         a-flex-item-fill
                                         c-logs__cell--summaryTitle">Message</div>
-
                                     <div className="
                                         o-list__cell
                                         c-logs__cell--summaryStatus">Status</div>
@@ -227,118 +219,121 @@ var Logs = React.createClass({
                             <div className="c-logs__openFilters
                                 ion-funnel"
                                 onClick={ this.toggleFooter }></div>
-                            
+
                             <div className="c-logs__closeFilters"
                                 onClick={ this.toggleFooter }></div>
-                                    
-                            
-                            
-                            
-                            <div className="
+
+                            <form className="
                                 c-logs__filters
                                 o-form
-                                o-list"
+                                o-list" id="filtersForm"
                                 onClick={
                                     function () {
                                         $(".c-logs__cell--summaryType").html( ($("select#type").val() ? "<b>"+$("select#type").val()+"</b>" : "Type") );
                                         $(".c-logs__cell--summaryModel").html( ($("select#data-model").val() ? "<b>"+$("select#data-model").val()+"</b>" : "Data Model") );
                                         $(".c-logs__cell--summaryStatus").html( ($("select#status").val() ? "<b>"+$("select#status").val()+"</b>" : "Status") );
                                         $(".c-logs__cell--summaryEnvironment").html( ($("select#environment").val() ? "<b>"+$("select#environment").val()+"</b>" : "Environment") );
-                                        
-                                        // $(".c-logs__cell--summaryModel").html("<b>Scheduling</b>");
-                                        // $(".c-logs__cell--summaryEnvironment").html("<b>Stage</b>");
-                                        // $(".c-logs__cell--summaryType").html("<b>In</b>");
-                                        // $(".c-logs__cell--summaryTitle").html("<b>Hospital B</b>");
-                                        // $(".c-logs__cell--summaryStatus").html("<b>Fail</b>");
-                                        
+
                                         $(".c-logs__filters").addClass("c-logs__filters--selected");
                                     }
                                 }>
 
                                         <div className="
                                             o-list__cell
-                                            c-logs__filters--summaryType">
-                                                <div className="o-form__element">
-                                                    <select id="type">
-                                                        <option value="">All</option>
-                                                        <option value="Inbound">Inbound</option>
-                                                        <option value="Outbound">Outbound</option>
-                                                    </select>
-                                                </div>
+                                            c-logs__filters--summaryType
+                                            a-flex-v">
+                                            <div className="o-form__element">
+                                                <select id="type">
+                                                    <option value="">Connection</option>
+                                                    { RedoxModel.app.focused_organization.connections.map(function( item ) {
+                                                            return  <option value={ item.title } key={ item.title }>{ item.title }</option>;
+                                                        }) }
+                                                </select>
                                             </div>
 
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__filters--summaryModel">
+                                            <div className="o-formLayout__2-column">
                                                 <div className="o-form__element">
                                                     <select id="data-model">
-                                                        <option value="">All</option>
+                                                        <option value="">Data Model</option>
                                                         <option value="Data Model 1">Data Model 1</option>
                                                         <option value="Data Model 2">Data Model 2</option>
                                                     </select>
                                                 </div>
-                                                
+
                                                 <div className="o-form__element">
                                                     <select id="event-type">
-                                                        <option value="">All</option>
+                                                        <option value="">Type</option>
                                                         <option value="Event Type 1">Event Type 1</option>
                                                         <option value="Event Type 2">Event Type 2</option>
                                                     </select>
                                                 </div>
-                                                
+                                            </div>
+
+                                            <div className="o-form__element">
+                                                <select id="organization">
+                                                    <option value="">Organization</option>
+                                                    <option value="Organization 1">Organizations 1</option>
+                                                    <option value="Organization 2">Organizations 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div className="a-width-col-4-half a-flex-v">
+                                            <div className="a-width-100 a-flex-h-start a-height-row-3">
+                                                <div className="
+                                                    o-list__cell
+                                                    c-logs__filters--summaryStatus">
+                                                    <div className="o-form__element">
+                                                        <select id="status">
+                                                            <option value="">Status</option>
+                                                            <option value="Fail">Fail</option>
+                                                            <option value="Success">Success</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div className="
+                                                    o-list__cell
+                                                    c-logs__filters--summaryEnvironment">
+                                                    <div className="o-form__element">
+                                                        <select id="environment">
+                                                            <option value="">Environment</option>
+                                                            <option value="Stage">Stage</option>
+                                                            <option value="Production">Production</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div className="
+                                                    o-list__cell
+                                                    c-logs__filters--summaryTime">
+                                                    <div className="o-form__element a-margin-bottom-row-quarter">
+                                                        <input className="c-logs__filters--timeSearch" />
+                                                    </div>
+                                                    <div className="c-logs__filters--helpText">
+                                                        <em>format: 1/2 12:01:22pm</em>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="
+                                                o-list__cell
+                                                c-logs__filters--summarySearch">
+                                                <div className="c-logs__searchIcon a-height-row-2">
+                                                    <div className="fa fa-search"></div>
+                                                </div>
                                                 <div className="o-form__element">
-                                                    <select id="organization">
-                                                        <option value="">All</option>
-                                                        <option value="Organization 1">Organizations 1</option>
-                                                        <option value="Organization 2">Organizations 2</option>
-                                                    </select>
+                                                    <input className="c-logs__filters--search"
+                                                        onKeyUp={ function () {
+                                                                    $('.c-logs__search').val(
+                                                                        $('.c-logs__filters--search').val()
+                                                                    ) } } />
                                                 </div>
-
                                             </div>
-
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__filters--summaryStatus">
-                                                <div className="o-form__element">
-                                                    <select id="status">
-                                                        <option value="">All</option>
-                                                        <option value="Fail">Fail</option>
-                                                        <option value="Success">Success</option>
-                                                    </select>
-                                                </div>
-
-                                            </div>
-
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__filters--summaryEnvironment">
-                                                <div className="o-form__element">
-                                                    <select id="environment">
-                                                        <option value="">All</option>
-                                                        <option value="Stage">Stage</option>
-                                                        <option value="Production">Production</option>
-                                                    </select>
-                                                </div>
-
-                                            </div>
-                                            
-                                        <div className="
-                                            o-list__cell
-                                            c-logs__filters--summaryTime">
-                                                <div className="o-form__element a-margin-bottom-row-quarter">
-                                                    <input className="c-logs__search" />
-                                                </div>
-                                                <div className="c-logs__filters--helpText">
-                                                    <em>Search help text</em>
-                                                </div>
-                                                
-                                            </div>
+                                        </div>
 
 
 
 
-                            </div>
-                            <div className="p-logs__clearAll"
+                            </form>
+                            <div className="c-logs__clearAll"
                                 onClick={
                                     function () {
                                         $(".c-logs__cell--summaryModel").html("Data Model");
@@ -347,12 +342,14 @@ var Logs = React.createClass({
                                         $(".c-logs__cell--summaryStatus").html("Status");
                                         $(".c-logs__cell--summaryTitle").html("Message");
 
+                                        $(".c-logs__filters--search").val("");
+                                        $(".c-logs__search").val("");
+
+                                        $("#filtersForm")[0].reset();
+
                                         $(".c-logs__filters").removeClass("c-logs__filters--selected");
                                     }
-                                }></div>
-
-
-
+                                }>Clear All</div>
 
                         </div>
                     </div>
