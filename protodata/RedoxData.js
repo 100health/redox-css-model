@@ -21,6 +21,7 @@ module.exports = {
 
             this.test_data.people = ["Joan Smith","John Smith"];
             this.test_data.data_models = pd.config.data_model.data;
+            this.test_data.search_categories = pd.config.search_category.data;
 
             this.test_data.event_types = ["Type 1","Type 2","Type 3"];
             this.test_data.people = ["Joan","John","Joe"];
@@ -38,14 +39,19 @@ module.exports = {
                                         pd.config.main_page.data.length
                                     );
 
-            this.organization_pages
-                = pd.generateArray( "organization_page" ,
+            this.organization_pages = pd.generateArray(
+                                    "organization_page" ,
                                     pd.config.organization_page.data.length
                                 );
 
             this.data_models =  pd.generateArray(
                                     "data_model" ,
                                     pd.config.data_model.data.length
+                                );
+                                
+            this.search_categories =  pd.generateArray(
+                                    "search_category" ,
+                                    pd.config.search_category.data.length
                                 );
 
 
@@ -185,6 +191,35 @@ module.exports = {
             {name:"Vaccine",icon:"fa-eyedropper"},
         ]
     },
+    
+    search_category:{
+        init:function ( pd , index , config_obj ) {
+            var data_obj = config_obj.data[ index ];
+            this.name = data_obj.name;
+            this.icon = data_obj.icon;
+        },
+        data:[
+            {name:"Care Access & Navigation",icon:"ion-key"},
+            {name:"Patient Engagement",icon:"fa fa-cogs"},
+            {name:"Workflow & Care Coordination",icon:"ion-shuffle"},
+            {name:"Case Management",icon:"ion-briefcase"},
+            {name:"Emergency",icon:"ion-medkit"},
+            {name:"General",icon:"ion-cube"},
+            {name:"Genetics",icon:"fa fa-child"},
+            {name:"Home Health",icon:"ion-home"},
+            {name:"Lab",icon:"fa fa-flask"},
+            {name:"Long Term Acute Care",icon:"fa fa-calendar"},
+            {name:"Oncology",icon:"fa fa-user-md"},
+            {name:"Orthopedics",icon:"ion-merge"},
+            {name:"Payments / Collections",icon:"ion-cash"},
+            {name:"Rehabilitation",icon:"ion-arrow-graph-up-right"},
+            {name:"Surgery",icon:"fa fa-gittip"},
+            {name:"Telemedicine",icon:"fa fa-phone"},
+            {name:"Transport",icon:"fa fa-bus"},
+            {name:"Wellness / Fitness",icon:"fa fa-heartbeat"},
+        ]
+    },
+    
     connection:{
         init:function ( pd ) {
             this.title = pd.db_random( "noun" ) + " " + pd.db_random( "noun" ) + " Connection";

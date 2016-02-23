@@ -76,6 +76,8 @@ var ProfileEdit = React.createClass({
                                         <textarea />
                                     </div>
                                     <DataModelSelector />
+                                    
+                                    <SearchCategoriesSelector />
                                 </div>
 
                             </form>
