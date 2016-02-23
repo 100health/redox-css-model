@@ -38,51 +38,7 @@ var DevToolsInbound = React.createClass({
     getRequestOutput : function () {
         return <div className="o-devToolsOutput">
                     <div className="o-devToolsOutput__content">
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
+                        <div className="p-devTools__tempContent"></div>
                     </div>
                     <div className="o-devToolsOutput__nav">
                         <div className="o-devToolsOutput__navItem
@@ -113,51 +69,7 @@ var DevToolsInbound = React.createClass({
     getResponseOutput : function () {
         return <div className="o-devToolsOutput">
                     <div className="o-devToolsOutput__content">
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
-                        asdkflj <br/>
+                        <div className="p-devTools__tempContent"></div>
                     </div>
                 </div>
     },
@@ -192,7 +104,7 @@ var DevToolsInbound = React.createClass({
         }else{
             page_html = this.getHowTo();;
         }
-        
+
         var connection_name = "";
 
         var inbound = RedoxModel.app.focused_organization.inbound_connections;
@@ -205,7 +117,7 @@ var DevToolsInbound = React.createClass({
                             key={ inbound[i].guid } selected="true">{ inbound[i].title }</option>
                 );
                 connection_name = inbound[i].title;
-                
+
             }else{
                 inbound_connections_options.push(
                     <option value={ inbound[i].guid }
@@ -236,17 +148,17 @@ var DevToolsInbound = React.createClass({
         return  <div className="o-devToolsApp o-contentSimple">
                     <div className="o-contentSimple__contentContainer a-overflow-hidden">
                         <div className="o-devToolsApp__content">
-                            
+
                             <form className="o-form o-devToolsApp__leftContainer">
-                                
+
                                 <div className="c-devTools__connectionHeader">
                                     <div className="c-devTools__closeDetail" onClick={ function () { RS.merge({ dev_tools_state:"" }); } }></div>
                                     <div className="c-devTools__connectionName">{ connection_name }</div>
                                 </div>
-                            
+
                                 <div className="o-devToolsApp__leftInputs">
                                     <div className="o-formLayout__1-column-skinny">
-                                        
+
                                         {/*
                                         <div className="o-form__element">
                                             <label>Connection</label>

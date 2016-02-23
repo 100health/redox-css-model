@@ -32,6 +32,7 @@
 						]
 					}
 		},
+
         "rows-size-values-w-minus-plus":{
 			"shortcut":"<em>@base</em>-[ large[ r, st ](plus, minus) , small[ er, est ](plus, minus) ]",
 			"scheme":{"@base":
@@ -50,24 +51,28 @@
 						]
 					}
 		},
+
+        "rows-quarters-plus-minus-scale":{
+			"shortcut":"<em>@base</em>-[ -quarter, -half, -three-quarters (plus, minus) ]",
+			"scheme":{"@base":
+						[
+                            {"":"scheme:rows-plus-minus"},
+                            {"-quarter":"scheme:rows-plus-minus"},
+                            {"-half":"scheme:rows-plus-minus"},
+                            {"-three-quarters":"scheme:rows-plus-minus"}
+                        ]
+					}
+		},
         "text-size-rows-plus-minus":{
 			"shortcut":"<em>@base</em>-[ 0,1,2,3...12[plus,minus]]",
 			"scheme":{"@base":
 						[
-							{"":"scheme:rows-plus-minus"},
+							{"":"scheme:rows-quarters-plus-minus-scale"},
 							{"-0":[""]},
-							{"-1":"scheme:rows-plus-minus"},
-							{"-2":"scheme:rows-plus-minus"},
-							{"-3":"scheme:rows-plus-minus"},
-							{"-4":"scheme:rows-plus-minus"},
-							{"-5":"scheme:rows-plus-minus"},
-							{"-6":"scheme:rows-plus-minus"},
-							{"-7":"scheme:rows-plus-minus"},
-							{"-8":"scheme:rows-plus-minus"},
-							"-9",
-							"-10",
-							"-11",
-							"-12"
+							{"-1":"scheme:rows-quarters-plus-minus-scale"},
+							{"-2":"scheme:rows-quarters-plus-minus-scale"},
+							{"-3":"scheme:rows-quarters-plus-minus-scale"},
+							{"-4":"scheme:rows-quarters-plus-minus-scale"}
 						]
 					}
 		},
@@ -365,17 +370,7 @@
 					"selector":".a-text-size@var_name_no_base",
 					"declaration_lines":[
                         "font-size: _@_@var_name ;",
-                        "line-height: _@_v-text-line-height@var_name_no_base;",
-                        ".flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {",
-                            "top: calc( 50% - (( _@_v-text-line-height@var_name_no_base / 2 )) );",
-                            "position: relative;",
-                            "outline: none;",
-                        "}",
-                        ".flexbox-grid .a-flex-h-end > & {",
-                            "top: calc( 100% -  _@_v-text-line-height@var_name_no_base );",
-                            "position: relative;",
-                            "outline: none;",
-                        "}"
+                        "line-height: _@_v-text-line-height@var_name_no_base;"
                     ]
                 }
             ]

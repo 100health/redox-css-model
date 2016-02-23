@@ -27,21 +27,108 @@ var DevToolsOutbound = React.createClass({
             .addClass("o-devToolsOutput__navItem--selected");
     },
 
+    updateSecret: function () {
+
+        if ( RS.route.dev_tools_app_tab != "authenticate" )
+            return;
+
+        var secret = $("#secret").val();
+        if ( !secret )
+            secret = "&lt;SECRET&gt;"
+
+        var content =   "curl \\<br/>";
+        content +=      "-X POST https://www.redoxengine.com/api/auth/authenticate \\<br/>";
+        content +=      "-H \"Content-Type: application/json\" \\<br/>";
+        content +=      "-d '{\"apiKey\": \"null\", \"secret\": \"" + secret + "\"}';<br/>";
+
+        $(".o-devToolsOutput__content").html( content );
+
+        return content;
+    },
+
+    updateService : function () {
+
+        if ( RS.route.dev_tools_app_tab != "service" )
+            return;
+
+        var access = $("#access").val();
+        if ( !access )
+            access = "&lt;TOKEN&gt;"
+
+        var content =   'curl \\<br/>';
+        content +=      '-X POST https://www.redoxengine.com/api/endpoint \\<br/>';
+        content +=      '-H "Content-Type: application/json" \\<br/>';
+        content +=      '-H "Authorization: Bearer '+access+'" \\<br/>';
+        content +=      '-d \'{<br/>';
+        content +=      '&nbsp;"Meta": {<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;"DataModel": "PatientSearch",<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;"EventType": "Query",<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;"EventDateTime": "2016-02-23T21:24:30.436Z",<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;"Test": true,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;"Destinations": [<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	{<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ID": "0f4bd1d1-451d-4351-8cfd-b767d1b488d6",<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Name": "Patient Search Endpoint"<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	}<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;]<br/>';
+        content +=      '},<br/>';
+        content +=      '"Patient": {<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;"Identifiers": [],<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;"Demographics": {<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"FirstName": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"LastName": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"DOB": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"SSN": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"Sex": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"Race": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"MaritalStatus": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"PhoneNumber": {<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Home": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Office": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Mobile": null<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	},<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"EmailAddresses": [],<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	"Address": {<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"StreetAddress": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"City": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"State": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ZIP": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"County": null,<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Country": null<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;	}<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;},<br/>';
+        content +=      '&nbsp;&nbsp;&nbsp;"Notes": []<br/>';
+        content +=      '}<br/>';
+
+        $(".o-devToolsOutput__content").html( content );
+
+        return content;
+    },
+
     getAuthenticateOutput : function () {
+
+        //var content =   "curl \\<br/>";
+        //content +=      "-X POST https://www.redoxengine.com/api/auth/authenticate \\<br/>";
+        //content +=      "-H \"Content-Type: application/json\" \\<br/>";
+        //content +=      "-d '{\"apiKey\": \"null\", \"secret\": \"&lt;SECRET&gt;\"}';<br/>";
+
+        var content = this.updateSecret();
+
         return <div className="o-devToolsOutput">
-                    <div className="o-devToolsOutput__content">
-                        curl --request GET 'http://www.somedomain.com/user/info/' \<br/>
-                        --header 'sessionid:1234567890987654321'
+                    <div className="o-devToolsOutput__content"
+                        dangerouslySetInnerHTML={ {__html:content} }>
                     </div>
                     <div className="o-devToolsOutput__copy">Copy</div>
                 </div>
     },
 
     getServiceOutput : function () {
+
+        var content = this.updateService();
+
         return <div className="o-devToolsOutput">
-                    <div className="o-devToolsOutput__content">
-                        curl --request GET 'http://www.somedomain.com/user/info/' \<br/>
-                        --header 'sessionid:1234567890987654321'
+                    <div className="o-devToolsOutput__content"
+                        dangerouslySetInnerHTML={ {__html:content} }>
                     </div>
                     <div className="o-devToolsOutput__copy">Copy</div>
                 </div>
@@ -97,7 +184,7 @@ var DevToolsOutbound = React.createClass({
         }else{
             page_html = this.getHowTo();
         }
-        
+
         var connection_name = "";
 
         var inbound = RedoxModel.app.focused_organization.inbound_connections;
@@ -110,7 +197,7 @@ var DevToolsOutbound = React.createClass({
                             key={ inbound[i].guid } selected="true">{ inbound[i].title }</option>
                 );
                 connection_name = inbound[i].title;
-                
+
             }else{
                 inbound_connections_options.push(
                     <option value={ inbound[i].guid }
@@ -135,7 +222,7 @@ var DevToolsOutbound = React.createClass({
                     <option value={ outbound[i].guid }
                             key={ outbound[i].guid }>{ outbound[i].title }</option>
                 );
-                
+
             }
         }
 
@@ -145,15 +232,15 @@ var DevToolsOutbound = React.createClass({
                         <div className="o-devToolsApp__content">
 
                             <form className="o-form o-devToolsApp__leftContainer">
-                            
+
                                 <div className="c-devTools__connectionHeader">
                                     <div className="c-devTools__closeDetail" onClick={ function () { RS.merge({ dev_tools_state:"" }); } }></div>
                                     <div className="c-devTools__connectionName">{ connection_name }</div>
                                 </div>
-                                
+
                                 <div className="o-devToolsApp__leftInputs">
                                     <div className="o-formLayout__1-column-skinny">
-                                        
+
                                         {/*
                                         <div className="o-form__element">
                                             <label>Connection</label>
@@ -170,12 +257,12 @@ var DevToolsOutbound = React.createClass({
 
                                         <div className="o-form__element">
                                             <label>Source Secret</label>
-                                            <input />
+                                            <input id="secret" onKeyUp={ this.updateSecret } />
                                         </div>
 
                                         <div className="o-form__element">
                                             <label>Access Token</label>
-                                            <input />
+                                            <input id="access" onKeyUp={ this.updateService } />
                                         </div>
 
                                         <div className="o-form__element">
@@ -262,7 +349,7 @@ var DevToolsOutbound = React.createClass({
                                                 " o-devToolsApp__rightNavItem--selected " : "" )
                                         }
                                         onClick={ function() { RS.merge({dev_tools_app_tab:"authenticate"}) } }>
-                                        Authenticate
+                                        Step 1: Authenticate
                                     </div>
                                     <div className={
                                             "o-devToolsApp__rightNavItem " +
@@ -270,7 +357,7 @@ var DevToolsOutbound = React.createClass({
                                                 " o-devToolsApp__rightNavItem--selected " : "" )
                                         }
                                         onClick={ function() { RS.merge({dev_tools_app_tab:"service"}) } }>
-                                        Service
+                                        Step 2: Service
                                     </div>
                                 </div>
                                 <div className="o-devToolsApp__rightContent">

@@ -55,10 +55,6 @@ var Connections = React.createClass({
                         c-connections__cell--title">
                         { connection.title }
                     </div>
-                    { /*}<div className="o-list__cell
-                        c-connections__cell--verify">
-                        <a href="#" onClick={this.openConnection.bind( this , connection.guid ) }>API/Key</a>
-                    </div> */ }
                     <div className="o-list__cell
                         c-connections__cell--subscriptions">
                         { connection.subscriptions.length }
