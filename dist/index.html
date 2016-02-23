@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Redox Prototype</title>
+
+		<script src='cssreveal/cssreveal.js'></script>
+        <link href='cssreveal/cssreveal.css' type='text/css' rel='stylesheet'>
+
+		<script>
+
+            function ready(fn) {
+              if (document.readyState != 'loading'){
+                fn();
+              } else {
+                document.addEventListener('DOMContentLoaded', fn);
+              }
+            }
+
+            ready( function(event) {
+                CSSReveal.render( "body" , 'prototype.html' );
+            });
+
+		</script>
+    </body>
+</html>

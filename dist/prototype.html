@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="flexbox">
+	<head>
+		<title>Redox Prototype</title>
+
+		<!--link href='redox.css' type='text/css' rel='stylesheet'>
+		<link href='csscore/core.css' type='text/css' rel='stylesheet'-->
+
+		<link href='styles/vendor.css' type='text/css' rel='stylesheet'>
+		<link href='styles/main.css' type='text/css' rel='stylesheet'>
+
+		<!-- for prototyping only...keep it after the comps -->
+		<link href='csscore/core.css' type='text/css' rel='stylesheet'>
+
+		<script src='prototype/redox.js'></script>
+		<script src='protodata/redox_data.json.js'></script>
+
+		<script>
+
+			var RedoxModel,RS;
+			$(window).ready(function () {
+
+				RedoxModel = protoData;
+				console.log( RedoxModel );
+
+				RouteState.listenToHash();
+				RS = RouteState;
+
+				if (
+					!RS.route.section ||
+					RS.route.section == ""
+				){
+					RS.replace({
+						section:"organization",
+						page:"profile"
+					})
+				}
+
+				React.render(
+					React.createElement(
+						Redox,{}
+					),
+					document.body
+				);
+			});
+
+			function alertExample ( html , div_remove_arr ) {
+				//var html = this.render();
+
+		        var div = document.createElement('div');
+		        React.render( html , div );
+
+		        $( div ).find( "*" ).removeAttr("data-reactid");
+				for ( var i=0; i<div_remove_arr.length; i++ ) {
+					$( div ).find( div_remove_arr[i] ).remove();
+				}
+
+		        var today = new Date();
+		        var time_taken = today.toLocaleFormat('%d-%b-%Y'); // 30-Dec-2011
+
+		        var note = "";//"<div style='font-size: 11px; color: #aaa; position: fixed; bottom: 10px; right: 10px;'>snapshot taken: " + time_taken + "</div>";
+		        alert( "/* -ctag-example: " + $(div).html() + note +";*/");
+			}
+
+			function alertHTML ( reference , div_remove_arr ) {
+				var div = $("<div />").append( $( reference ).clone() );
+
+		        div.find("*").removeAttr("data-reactid");
+				for ( var i=0; i<div_remove_arr.length; i++ ) {
+					$( div ).find( div_remove_arr[i] ).remove();
+				}
+
+				var today = new Date();
+		        var time_taken = today.toLocaleFormat('%d-%b-%Y'); // 30-Dec-2011
+
+				// add note after CSSModeling is updated to deal with semicolons.
+		        var note = "";//"<div style='font-size: 11px; color: #aaa; position: fixed; bottom: 10px; right: 10px;'>snapshot taken: " + time_taken + "</div>";
+		        alert( "/* -ctag-example: " + $(div).html() + note +";*/");
+			}
+		</script>
+	</head>
+	<body>
+    </body>
+</html>

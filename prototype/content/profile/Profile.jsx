@@ -153,7 +153,23 @@ var Profile = React.createClass({
                                         Redox Contacts
                                     </h2>
 
-                                    <div className="p-profile__contacts"></div>
+                                    <div className="c-profile__contacts">
+                                        
+                                        <div className="c-profile__contactsItem">
+                                            <div className="c-profile__contactsItemTitle">
+                                                Implementation Lead
+                                            </div>
+                                            <div className="a-flex-h">
+                                                <div className="c-profile__contactsItemAvatar">
+                                                    
+                                                </div>
+                                                <div className="c-profile__contactsItemInfo">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
 
                                 </div>
                             </div>
