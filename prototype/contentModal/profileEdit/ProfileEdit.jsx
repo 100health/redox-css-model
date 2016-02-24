@@ -57,7 +57,7 @@ var ProfileEdit = React.createClass({
                                         c-profileFormLayout__element--avatar">
                                         <div className="c-profile__avatar"
                                             style={{"background-image":
-                                                    "url('/dist/images/prototype/aristaMd.jpg')"}}>
+                                                    "url('images/prototype/aristaMd.jpg')"}}>
                                         </div>
                                     </div>
                                     <div className="o-form__element">

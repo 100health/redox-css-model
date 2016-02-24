@@ -2062,8 +2062,9 @@ var Profile = React.createClass({displayName: "Profile",
 
     render: function() {
         
-        
-        var search_categories = RedoxModel.app.search_categories;
+        // test_data.search_categories
+        var search_categories = RedoxModel.app.test_data.search_categories; 
+        // var search_categories = RedoxModel.app.search_categories; 
         var search_categories_html = [], category;
         
         for ( var i=0; i<search_categories.length; i++ ) {
@@ -2075,6 +2076,7 @@ var Profile = React.createClass({displayName: "Profile",
                 )
             );
         }
+    
         
 
         var organization = RedoxModel.app.focused_organization;
@@ -2095,7 +2097,7 @@ var Profile = React.createClass({displayName: "Profile",
                                 React.createElement("div", {className: "c-profile__avatarCol"}, 
                                     React.createElement("div", {className: "c-profile__avatar", 
                                         style: {"background-image":
-                                                "url('/dist/images/prototype/aristaMd.jpg')"}}
+                                                "url('images/prototype/aristaMd.jpg')"}}
                                     ), 
                                     React.createElement("div", {className: "c-profile__btn", 
                                         onClick:  this.openProfileEdit}, 
@@ -2190,7 +2192,7 @@ var Profile = React.createClass({displayName: "Profile",
                                             ), 
                                             React.createElement("div", {className: "c-profile__contactsItemAvatar", 
                                                 style: {"background-image":
-                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}
+                                                        "url('images/prototype/aristaMd.jpg')"}}
                                             ), 
                                             React.createElement("div", {className: "c-profile__contactsItemInfo"}, 
                                                 React.createElement("div", null, "Joe Redox"), 
@@ -2204,7 +2206,7 @@ var Profile = React.createClass({displayName: "Profile",
                                             ), 
                                             React.createElement("div", {className: "c-profile__contactsItemAvatar", 
                                                 style: {"background-image":
-                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}
+                                                        "url('images/prototype/aristaMd.jpg')"}}
                                             ), 
                                             React.createElement("div", {className: "c-profile__contactsItemInfo"}, 
                                                 React.createElement("div", null, "Jolenne Redox"), 
@@ -2218,7 +2220,7 @@ var Profile = React.createClass({displayName: "Profile",
                                             ), 
                                             React.createElement("div", {className: "c-profile__contactsItemAvatar", 
                                                 style: {"background-image":
-                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}
+                                                        "url('images/prototype/aristaMd.jpg')"}}
                                             ), 
                                             React.createElement("div", {className: "c-profile__contactsItemInfo"}, 
                                                 React.createElement("div", null, "Joe Redox"), 
@@ -2653,7 +2655,7 @@ var ProfileEdit = React.createClass({displayName: "ProfileEdit",
                                         "c-profileFormLayout__element--avatar"}, 
                                         React.createElement("div", {className: "c-profile__avatar", 
                                             style: {"background-image":
-                                                    "url('/dist/images/prototype/aristaMd.jpg')"}}
+                                                    "url('images/prototype/aristaMd.jpg')"}}
                                         )
                                     ), 
                                     React.createElement("div", {className: "o-form__element"}, 

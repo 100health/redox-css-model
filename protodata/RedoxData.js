@@ -21,7 +21,12 @@ module.exports = {
 
             this.test_data.people = ["Joan Smith","John Smith"];
             this.test_data.data_models = pd.config.data_model.data;
-            this.test_data.search_categories = pd.config.search_category.data;
+            // this.test_data.search_categories = pd.config.search_category.data;
+            
+            this.test_data.search_categories = pd.randomFromArray(
+                pd.config.search_category.data, 3         
+            );
+            
 
             this.test_data.event_types = ["Type 1","Type 2","Type 3"];
             this.test_data.people = ["Joan","John","Joe"];

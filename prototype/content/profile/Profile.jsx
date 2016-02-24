@@ -34,8 +34,9 @@ var Profile = React.createClass({
 
     render: function() {
         
-        
-        var search_categories = RedoxModel.app.search_categories;
+        // test_data.search_categories
+        var search_categories = RedoxModel.app.test_data.search_categories; 
+        // var search_categories = RedoxModel.app.search_categories; 
         var search_categories_html = [], category;
         
         for ( var i=0; i<search_categories.length; i++ ) {
@@ -47,6 +48,7 @@ var Profile = React.createClass({
                 </div>
             );
         }
+    
         
 
         var organization = RedoxModel.app.focused_organization;
@@ -67,7 +69,7 @@ var Profile = React.createClass({
                                 <div className="c-profile__avatarCol">
                                     <div className="c-profile__avatar"
                                         style={{"background-image":
-                                                "url('/dist/images/prototype/aristaMd.jpg')"}}>
+                                                "url('images/prototype/aristaMd.jpg')"}}>
                                     </div>
                                     <div className="c-profile__btn"
                                         onClick={ this.openProfileEdit }>
@@ -162,7 +164,7 @@ var Profile = React.createClass({
                                             </div>
                                             <div className="c-profile__contactsItemAvatar"
                                                 style={{"background-image":
-                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}>
+                                                        "url('images/prototype/aristaMd.jpg')"}}>
                                             </div>
                                             <div className="c-profile__contactsItemInfo">
                                                 <div>Joe Redox</div>
@@ -176,7 +178,7 @@ var Profile = React.createClass({
                                             </div>
                                             <div className="c-profile__contactsItemAvatar"
                                                 style={{"background-image":
-                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}>
+                                                        "url('images/prototype/aristaMd.jpg')"}}>
                                             </div>
                                             <div className="c-profile__contactsItemInfo">
                                                 <div>Jolenne Redox</div>
@@ -190,7 +192,7 @@ var Profile = React.createClass({
                                             </div>
                                             <div className="c-profile__contactsItemAvatar"
                                                 style={{"background-image":
-                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}>
+                                                        "url('images/prototype/aristaMd.jpg')"}}>
                                             </div>
                                             <div className="c-profile__contactsItemInfo">
                                                 <div>Joe Redox</div>
