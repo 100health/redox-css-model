@@ -5989,6 +5989,11 @@ a {
 .c-profileFormLayout__element--overview {
   height: auto; }
 
+.c-profileFormLayout__element--public input[type='checkbox']:checked {
+  background-image: url("../images/check.svg");
+  background-position: center;
+  background-size: cover; }
+
 .accordion {
   margin-top: 30px;
   border-radius: 4px; }

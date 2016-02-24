@@ -2659,7 +2659,8 @@ var ProfileEdit = React.createClass({displayName: "ProfileEdit",
                                     React.createElement("div", {className: "o-form__element"}, 
                                         React.createElement("button", null, "Upload")
                                     ), 
-                                    React.createElement("div", {className: "o-form__element"}, 
+                                    React.createElement("div", {className: "o-form__element" + ' ' +
+                                        "c-profileFormLayout__element--public"}, 
                                         React.createElement("label", null, "public"), 
                                         React.createElement("input", {type: "checkbox"})
                                     )
