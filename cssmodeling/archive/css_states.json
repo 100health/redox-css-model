@@ -1,0 +1,16 @@
+{
+	"states":{
+		"breakpoint-medium":{
+			"name":"breakpoint-md",
+			"wrapper":["@media ( max-width: _@_v-breakpoint-medium-min ) {","}"],
+			"important":true,
+			"mixins_only":true
+		},
+		"breakpoint-small":{
+			"name":"breakpoint-sm",
+			"wrapper":["@media ( max-width: _@_v-breakpoint-small-min ) {","}"],
+			"important":true,
+			"mixins_only":false
+		}
+    }
+}

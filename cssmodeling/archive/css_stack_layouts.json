@@ -6,6 +6,11 @@
 		}
     },
 
+    "dependencies":[
+        "css_col_12_quartered_viewport",
+        "css_rows_quartered"
+    ],
+
     "cache":[
         ".flexbox "
     ],
