@@ -6,11 +6,6 @@
 		}
     },
 
-    "cache":[
-
-    ],
-
-
     "variables" : [
         {
             "name":"flex-justify-content",
@@ -33,7 +28,10 @@
                     "sub_group":"positioning",
                     "example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
                     "selector":".a-justify-content@var_name",
-                    "declaration_value":"justify-content : @var_value;"
+                    "declaration_lines":[
+                        "justify-content : @var_value;",
+                        "/*  -ms-flex-pack: @var_value; */"
+        			]
                 }
             ]
         },
@@ -53,8 +51,11 @@
                     "group":"layouts",
                     "sub_group":"positioning",
                     "example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
-                    "selector":".a-align-self@var_name",
-                    "declaration_value":"align-self : @var_value;"
+                    "selector":".a-flex-item-align-self@var_name",
+                    "declaration_lines":[
+                        "align-self : @var_value;",
+                        "/* -ms-flex-pack: @var_value; */"
+        			]
                 }
             ]
         },
@@ -78,7 +79,10 @@
                     "sub_group":"positioning",
                     "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 50px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
                     "selector":".a-align-items@var_name",
-                    "declaration_value":"align-items : @var_value;"
+                    "declaration_lines":[
+                        "align-items : @var_value;",
+                        "/* -ms-flex-align: @var_value; */"
+        			]
                 }
             ]
         },
@@ -101,7 +105,10 @@
                     "sub_group":"positioning",
                     "example":"<div ... style='display: flex; width: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'>1</div><div style='width: 100px; height: 100px; background-color:#aaa;'>2</div><div style='width: 100px; height: 100px; background-color:#fff;'>3</div></div>",
                     "selector":".a-flex-direction@var_name",
-                    "declaration_value":"flex-direction : @var_value;"
+                    "declaration_lines":[
+                        "flex-direction : @var_value;",
+                        "-ms-flex-direction: @var_value;"
+        			]
                 }
             ]
         }
@@ -120,7 +127,12 @@
                 "display: flex;",
                 "flex-flow: column nowrap;",
                 "justify-content: flex-start;",
-            	"align-items: center;"
+            	"align-items: center;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: column;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: center;"
 			]
 		},
 
@@ -134,7 +146,12 @@
                 "display: flex;",
                 "flex-flow: column nowrap;",
                 "justify-content: flex-start;",
-            	"align-items: stretch;"
+            	"align-items: stretch;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: column;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: stretch;"
 			]
 		},
 
@@ -145,10 +162,52 @@
 			"selector":".a-flex-v-start",
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
+                "/*DEPRACATED*/",
                 "display: flex;",
                 "flex-flow: column nowrap;",
                 "justify-content: flex-start;",
-            	"align-items: flex-start;"
+            	"align-items: flex-start;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: column;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: start;"
+			]
+		},
+        {
+			"name":"flex-v-left",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-v-left",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: column nowrap;",
+                "justify-content: flex-start;",
+            	"align-items: flex-start;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: column;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: start;"
+			]
+		},
+        {
+			"name":"flex-v-left-bottom",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-v-left-bottom",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: column nowrap;",
+                "justify-content: flex-end;",
+            	"align-items: flex-start;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: column;",
+                "-ms-flex-pack: end;",
+                "-ms-flex-align: start;"
 			]
 		},
 
@@ -159,10 +218,52 @@
 			"selector":".a-flex-v-end",
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
+                "/*DEPRACATED*/",
                 "display: flex;",
                 "flex-flow: column nowrap;",
                 "justify-content: flex-start;",
-            	"align-items: flex-end;"
+            	"align-items: flex-end;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: column;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: end;"
+			]
+		},
+        {
+			"name":"flex-v-right",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-v-right",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: column nowrap;",
+                "justify-content: flex-start;",
+            	"align-items: flex-end;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: column;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: end;"
+			]
+		},
+        {
+			"name":"flex-v-right-bottom",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-v-right-bottom",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: column nowrap;",
+                "justify-content: flex-end;",
+            	"align-items: flex-end;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: column;",
+                "-ms-flex-pack: end;",
+                "-ms-flex-align: end;"
 			]
 		},
 
@@ -176,7 +277,12 @@
                 "display: flex;",
                 "flex-flow: row nowrap;",
                 "justify-content: flex-start;",
-            	"align-items: center;"
+            	"align-items: center;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: center;"
 			]
 		},
 
@@ -190,7 +296,12 @@
                 "display: flex;",
                 "flex-flow: row nowrap;",
                 "justify-content: flex-start;",
-            	"align-items: stretch;"
+            	"align-items: stretch;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: stretch;"
 			]
 		},
 
@@ -201,10 +312,52 @@
 			"selector":".a-flex-h-start",
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
+                "/*DEPRACATED*/",
                 "display: flex;",
                 "flex-flow: row nowrap;",
                 "justify-content: flex-start;",
-            	"align-items: flex-start;"
+            	"align-items: flex-start;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: start;"
+			]
+		},
+        {
+			"name":"flex-h-top",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-h-top",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: row nowrap;",
+                "justify-content: flex-start;",
+            	"align-items: flex-start;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: start;"
+			]
+		},
+        {
+			"name":"flex-h-top-right",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-h-top-right",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: row nowrap;",
+                "justify-content: flex-end;",
+            	"align-items: flex-start;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: end;",
+                "-ms-flex-align: start;"
 			]
 		},
 
@@ -215,10 +368,52 @@
 			"selector":".a-flex-h-end",
             "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
+                "/*DEPRACATED*/",
                 "display: flex;",
                 "flex-flow: row nowrap;",
                 "justify-content: flex-start;",
-            	"align-items: flex-end;"
+            	"align-items: flex-end;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: end;"
+			]
+		},
+        {
+			"name":"flex-h-bottom",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-h-bottom",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: row nowrap;",
+                "justify-content: flex-start;",
+            	"align-items: flex-end;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: start;",
+                "-ms-flex-align: end;"
+			]
+		},
+        {
+			"name":"flex-h-bottom-right",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-h-bottom-right",
+            "example":"<div ... style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; min-height: 100px; background-color:#fff;'></div><div style='width: 100px; height: 100px; background-color:#aaa;'></div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: row nowrap;",
+                "justify-content: flex-end;",
+            	"align-items: flex-end;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: end;",
+                "-ms-flex-align: end;"
 			]
 		},
 
@@ -227,17 +422,38 @@
             "group":"layouts",
             "sub_group":"positioning",
 			"selector":".a-flex-center",
-            "example":"<div ... style='display: flex; width: 100%; height: 100%;'>Text That is Centered</div>",
+            "example":"<div ... style='width: 100%; height: 100%;'><div style='background-color: #fff; width: 100px; height: 100px;'></div></div>",
 			"declaration_lines":[
                 "display: flex;",
                 "flex-flow: row nowrap;",
             	"justify-content: center;",
             	"align-items: center;",
-                ".no-flexbox & {",
-                "}"
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: center;",
+                "-ms-flex-align: center;"
 			]
 		},
 
+        {
+			"name":"flex-right",
+            "group":"layouts",
+            "sub_group":"positioning",
+			"selector":".a-flex-right",
+            "example":"<div ... style='width: 100%; height: 100%;'><div style='background-color: #fff; width: 100px; height: 100px;'></div></div>",
+			"declaration_lines":[
+                "display: flex;",
+                "flex-flow: row nowrap;",
+            	"justify-content: flex-end;",
+            	"align-items: center;",
+
+                "display: -ms-flexbox;",
+                "-ms-flex-direction: row;",
+                "-ms-flex-pack: right;",
+                "-ms-flex-align: center;"
+			]
+		},
 
 
 
@@ -248,7 +464,9 @@
 			"selector":".a-flex-item-fill",
             "example":"<div style='display: flex; width: 100%; height: 100%;'><div style='width: 100px; height: 100px; background-color:#fff;'></div><div ... style='width: 100px; height: 100px; background-color:#aaa;'>FILLING</div><div style='width: 100px; height: 100px; background-color:#fff;'></div></div>",
 			"declaration_lines":[
-                "flex: 1;"
+                "flex: 1;",
+
+                "-ms-flex: 1 0 auto;"
 			]
 		}
 	]

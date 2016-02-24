@@ -17,10 +17,6 @@ div {
             @include a-width-col-8;
             @include a-margin-left-col-1;
         }*/ }
-    .flexbox-grid .a-flex-center > .o-contentModal__contentContainer, .flexbox-grid .a-flex-h > .o-contentModal__contentContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-contentModal__contentContainer {
-      outline: none; }
   .o-contentModal__paddedContent {
     width: 66.66664vw;
     margin-left: 8.33333vw; }
@@ -59,10 +55,6 @@ div {
     .flexbox-grid .a-flex-h-end > .o-contentModal__footerContainer {
       top: calc( 100% -  66px);
       position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-v > .o-contentModal__footerContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .o-contentModal__footerContainer {
       outline: none; }
   .o-contentModal__footerCancel {
     color: #808080;
@@ -149,10 +141,6 @@ div {
 
             @include breakpoint-sm-a-mobile-reset;
         }*/ }
-    .flexbox-grid .a-flex-v > .o-contentSimple__contentContainer, .flexbox-grid .a-flex-v > .o-contentSimple__footerContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .o-contentSimple__contentContainer, .flexbox-grid .a-flex-v-end > .o-contentSimple__footerContainer {
-      outline: none; }
   .o-contentSimple__closeDetail {
     width: 4.166665vw;
     height: 88px;
@@ -189,10 +177,6 @@ div {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden; }
-    .flexbox-grid .a-flex-center > .o-contentSimple__contentContainer, .flexbox-grid .a-flex-h > .o-contentSimple__contentContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-contentSimple__contentContainer {
-      outline: none; }
   .o-contentSimple__footerContainer {
     /* -ctag-example: ...footer;*/
     height: 66px;
@@ -252,10 +236,6 @@ div {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: center; }
-  .flexbox-grid .a-flex-v > .o-contentHeader {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-contentHeader {
-    outline: none; }
   .flexbox-grid .a-flex-center > .o-contentHeader, .flexbox-grid .a-flex-h > .o-contentHeader {
     top: calc( 50% - ( 88px / 2 ));
     position: relative;
@@ -264,31 +244,6 @@ div {
     top: calc( 100% -  88px);
     position: relative;
     outline: none; }
-  .flexbox-grid .o-contentHeader {
-    position: relative; }
-    .flexbox-grid .o-contentHeader > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .o-contentHeader {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .o-contentHeader > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .o-contentHeader {
-    display: table; }
-    .no-flexbox-table .o-contentHeader > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
   .o-contentHeader__titleContainer {
     /* -ctag-example: ...Content Header Title*/
     font-size: 22px;
@@ -297,13 +252,10 @@ div {
     overflow: hidden;
     white-space: nowrap;
     flex: 1;
-    /*outline: 5px dotted red;*/
+    -ms-flex: 1 0 auto;
     font-weight: 500;
     letter-spacing: .5px;
     text-transform: uppercase; }
-    .no-flexbox .o-contentHeader__titleContainer {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
   .o-contentHeader__navContainer {
     /* -ctag-example: ...Right Nav*/
     height: 100%;
@@ -315,30 +267,6 @@ div {
     -ms-flex-direction: row;
     -ms-flex-pack: center;
     -ms-flex-align: center; }
-    .flexbox-grid .a-flex-center > .o-contentHeader__navContainer, .flexbox-grid .a-flex-h > .o-contentHeader__navContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-contentHeader__navContainer {
-      outline: none; }
-    .flexbox-grid .o-contentHeader__navContainer {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .o-contentHeader__navContainer > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .o-contentHeader__navContainer > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .o-contentHeader__navContainer {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .o-contentHeader__navContainer > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
 
 h1, h2, h3, h4, h5, h6, p, code {
   /* Should only use these in .o-document */ }
@@ -359,10 +287,6 @@ h1, h2, h3, h4, h5, h6, p, code {
     width: 100%;
     clear: left;
     float: left; }
-    .flexbox-grid .a-flex-v > .o-document h1, .flexbox-grid .a-flex-v > .o-document h2, .flexbox-grid .a-flex-v > .o-document h3, .flexbox-grid .a-flex-v > .o-document h4, .flexbox-grid .a-flex-v > .o-document h5, .flexbox-grid .a-flex-v > .o-document h6 {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .o-document h1, .flexbox-grid .a-flex-v-end > .o-document h2, .flexbox-grid .a-flex-v-end > .o-document h3, .flexbox-grid .a-flex-v-end > .o-document h4, .flexbox-grid .a-flex-v-end > .o-document h5, .flexbox-grid .a-flex-v-end > .o-document h6 {
-      outline: none; }
   .o-document h1 {
     font-size: 22px;
     line-height: 38.5px;
@@ -409,14 +333,10 @@ h1, h2, h3, h4, h5, h6, p, code {
     padding-right: 11px; }
     @media (max-width: 768px) {
       .o-document__column {
-        width: 100% !important; }
-        .flexbox-grid .a-flex-v > .o-document__column {
-          outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .o-document__column {
-          outline: none !important; } }
+        width: 100% !important; } }
     @media (max-width: 768px) {
       .o-document__column {
-        padding: 0  !important; } }
+        padding: 0 !important; } }
 
 input {
   /* Should only use these in .o-form */ }
@@ -434,10 +354,6 @@ input {
   line-height: 44px;
   border-bottom: 1px solid #CCCCCC;
   margin-bottom: 22px; }
-  .flexbox-grid .a-flex-v > .o-form__header {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-form__header {
-    outline: none; }
   .flexbox-grid .a-flex-center > .o-form__header, .flexbox-grid .a-flex-h > .o-form__header {
     top: calc( 50% - ( 44px / 2 ));
     position: relative;
@@ -462,10 +378,6 @@ input {
 
 .o-form__section {
   width: 100%; }
-  .flexbox-grid .a-flex-v > .o-form__section {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-form__section {
-    outline: none; }
   .o-form__section:before, .o-form__section:after {
     content: " ";
     display: table; }
@@ -476,10 +388,6 @@ input {
   width: 100%;
   border-bottom: 1px solid #CCCCCC;
   margin-bottom: 22px; }
-  .flexbox-grid .a-flex-v > .o-form__hr {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-form__hr {
-    outline: none; }
   .o-form__hr:before, .o-form__hr:after {
     content: " ";
     display: table; }
@@ -495,7 +403,7 @@ input {
   align-items: center;
   display: -ms-flexbox;
   -ms-flex-direction: row;
-  -ms-flex-pack: end;
+  -ms-flex-pack: right;
   -ms-flex-align: center;
   color: #999999; }
   .flexbox-grid .a-flex-center > .o-form__readonly, .flexbox-grid .a-flex-h > .o-form__readonly {
@@ -506,18 +414,6 @@ input {
     top: calc( 100% -  44px);
     position: relative;
     outline: none; }
-  .o-form__readonly > *:nth-child(n+2) {
-    /* only one child */
-    outline: 5px dotted red; }
-  .no-flexbox .o-form__readonly {
-    position: relative;
-    text-align: right; }
-    .no-flexbox .o-form__readonly > * {
-      min-width: 1px;
-      position: absolute;
-      right: 0px;
-      top: 50%;
-      transform: translateY(-50%); }
 
 .o-form__input {
   height: 44px;
@@ -537,31 +433,6 @@ input {
     top: calc( 100% -  44px);
     position: relative;
     outline: none; }
-  .flexbox-grid .o-form__input {
-    position: relative; }
-    .flexbox-grid .o-form__input > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .o-form__input {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .o-form__input > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .o-form__input {
-    display: table; }
-    .no-flexbox-table .o-form__input > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .o-form input, .o-form select, .o-form textarea, .o-form button {
   width: 100%;
@@ -578,10 +449,6 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   resize: none; }
-  .flexbox-grid .a-flex-v > .o-form input, .flexbox-grid .a-flex-v > .o-form select, .flexbox-grid .a-flex-v > .o-form textarea, .flexbox-grid .a-flex-v > .o-form button {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-form input, .flexbox-grid .a-flex-v-end > .o-form select, .flexbox-grid .a-flex-v-end > .o-form textarea, .flexbox-grid .a-flex-v-end > .o-form button {
-    outline: none; }
   .flexbox-grid .a-flex-center > .o-form input, .flexbox-grid .a-flex-h > .o-form input, .flexbox-grid .a-flex-center > .o-form select, .flexbox-grid .a-flex-h > .o-form select, .flexbox-grid .a-flex-center > .o-form textarea, .flexbox-grid .a-flex-h > .o-form textarea, .flexbox-grid .a-flex-center > .o-form button, .flexbox-grid .a-flex-h > .o-form button {
     top: calc( 50% - ( 44px / 2 ));
     position: relative;
@@ -644,10 +511,6 @@ input {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: stretch; }
-  .flexbox-grid .a-flex-v > .o-form__element {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-form__element {
-    outline: none; }
   .flexbox-grid .a-flex-center > .o-form__element, .flexbox-grid .a-flex-h > .o-form__element {
     top: calc( 50% - ( 44px / 2 ));
     position: relative;
@@ -656,26 +519,8 @@ input {
     top: calc( 100% -  44px);
     position: relative;
     outline: none; }
-  .flexbox-grid .o-form__element {
-    position: relative; }
-    .flexbox-grid .o-form__element > * {
-      float: left;
-      min-height: 1px;
-      height: 100%; }
-  .no-flexbox .o-form__element {
-    position: relative; }
-    .no-flexbox .o-form__element > * {
-      float: left;
-      height: 100%;
-      min-width: 1px; }
-  .no-flexbox-table .o-form__element {
-    display: table; }
-    .no-flexbox-table .o-form__element > * {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      position: relative; }
   .o-form__element label, .o-form__element .o-form__label {
+    /*DEPRACATED*/
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -696,20 +541,6 @@ input {
     overflow: hidden;
     white-space: nowrap;
     padding-right: 5.5px; }
-    .flexbox-grid .o-form__element label, .flexbox-grid .o-form__element .o-form__label {
-      position: relative; }
-      .flexbox-grid .o-form__element label > *, .flexbox-grid .o-form__element .o-form__label > * {
-        float: left;
-        min-height: 1px; }
-    .no-flexbox .o-form__element label, .no-flexbox .o-form__element .o-form__label {
-      position: relative; }
-      .no-flexbox .o-form__element label > *, .no-flexbox .o-form__element .o-form__label > * {
-        float: left;
-        min-width: 1px;
-        position: relative;
-        top: 100%;
-        transform: translateY(-100%);
-        -ms-transform: translateY(-100%); }
     .flexbox-grid .a-flex-v > .o-form__element label, .flexbox-grid .a-flex-v > .o-form__element .o-form__label {
       left: calc( 50% - (( 12.499995vw / 2 )));
       position: relative;
@@ -782,10 +613,6 @@ input {
 .o-formLayout__1-column, .o-formLayout__1-column-skinny {
   width: 100%;
   clear: both; }
-  .flexbox-grid .a-flex-v > .o-formLayout__1-column, .flexbox-grid .a-flex-v > .o-formLayout__1-column-skinny {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-formLayout__1-column, .flexbox-grid .a-flex-v-end > .o-formLayout__1-column-skinny {
-    outline: none; }
   .o-formLayout__1-column:before, .o-formLayout__1-column-skinny:before, .o-formLayout__1-column:after, .o-formLayout__1-column-skinny:after {
     content: " ";
     display: table; }
@@ -794,10 +621,6 @@ input {
   .o-formLayout__1-column .o-form__element, .o-formLayout__1-column-skinny .o-form__element {
     width: 100%;
     float: left; }
-    .flexbox-grid .a-flex-v > .o-formLayout__1-column .o-form__element, .flexbox-grid .a-flex-v > .o-formLayout__1-column-skinny .o-form__element {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .o-formLayout__1-column .o-form__element, .flexbox-grid .a-flex-v-end > .o-formLayout__1-column-skinny .o-form__element {
-      outline: none; }
 
 .o-formLayout__1-column-skinny .o-form__element label, .o-formLayout__1-column-skinny .o-form__element .o-form__label {
   font-size: 12px;
@@ -817,10 +640,6 @@ input {
 .o-formLayout__2-column {
   width: 100%;
   clear: both; }
-  .flexbox-grid .a-flex-v > .o-formLayout__2-column {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-formLayout__2-column {
-    outline: none; }
   .o-formLayout__2-column:before, .o-formLayout__2-column:after {
     content: " ";
     display: table; }
@@ -836,10 +655,6 @@ input {
 .o-formLayout__3-column {
   width: 100%;
   clear: both; }
-  .flexbox-grid .a-flex-v > .o-formLayout__3-column {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-formLayout__3-column {
-    outline: none; }
   .o-formLayout__3-column:before, .o-formLayout__3-column:after {
     content: " ";
     display: table; }
@@ -902,26 +717,6 @@ input {
       top: calc( 100% -  88px);
       position: relative;
       outline: none; }
-    .flexbox-grid .c-dataModelSelector__item {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .c-dataModelSelector__item > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .c-dataModelSelector__item > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .c-dataModelSelector__item {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .c-dataModelSelector__item > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
     .c-dataModelSelector__item:hover {
       color: #4D4D4D; }
     .c-dataModelSelector__item > div {
@@ -987,26 +782,6 @@ input {
       top: calc( 100% -  88px);
       position: relative;
       outline: none; }
-    .flexbox-grid .c-searchCategoriesSelector__item {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .c-searchCategoriesSelector__item > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .c-searchCategoriesSelector__item > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .c-searchCategoriesSelector__item {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .c-searchCategoriesSelector__item > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
     .c-searchCategoriesSelector__item:hover {
       color: #4D4D4D; }
     .c-searchCategoriesSelector__item > div {
@@ -1058,10 +833,6 @@ input {
     float: left;
     cursor: hand;
     cursor: pointer; }
-    .flexbox-grid .a-flex-center > .o-modal__bgCover, .flexbox-grid .a-flex-h > .o-modal__bgCover {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-modal__bgCover {
-      outline: none; }
     .flexbox-grid .a-flex-v > .o-modal__bgCover {
       left: calc( 50% - (( 8.33333vw / 2 )));
       position: relative;
@@ -1093,27 +864,15 @@ input {
       left: calc( 100% -  83.3333vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .o-modal__contentContainer, .flexbox-grid .a-flex-h > .o-modal__contentContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-modal__contentContainer {
-      outline: none; }
     @media (max-width: 768px) {
       .o-modal__contentContainer {
-        width: 100% !important; }
-        .flexbox-grid .a-flex-v > .o-modal__contentContainer {
-          outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .o-modal__contentContainer {
-          outline: none !important; } }
+        width: 100% !important; } }
     @media (max-width: 768px) {
       .o-modal__contentContainer {
         margin-left: 0 !important; } }
     @media (max-width: 768px) {
       .o-modal__contentContainer > * {
-        width: 100% !important; }
-        .flexbox-grid .a-flex-v > .o-modal__contentContainer > * {
-          outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .o-modal__contentContainer > * {
-          outline: none !important; } }
+        width: 100% !important; } }
     @media (max-width: 768px) {
       .o-modal__contentContainer > * {
         padding-left: 8.33333vw !important;
@@ -1141,10 +900,6 @@ input {
     </table>;*/
   /* -ctag-status: depracated;*/
   width: 100%; }
-  .flexbox-grid .a-flex-v > .o-table, .flexbox-grid .a-flex-v > .o-tableSummary {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-table, .flexbox-grid .a-flex-v-end > .o-tableSummary {
-    outline: none; }
   .o-table tr, .o-tableSummary tr {
     border-bottom: 1px solid #eee;
     height: 44px; }
@@ -1236,31 +991,6 @@ input {
       top: calc( 100% -  44px);
       position: relative;
       outline: none; }
-    .flexbox-grid .o-list__row {
-      position: relative; }
-      .flexbox-grid .o-list__row > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .o-list__row {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .o-list__row > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .o-list__row {
-      display: table; }
-      .no-flexbox-table .o-list__row > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
     .o-list__row--selected {
       background-color: #eee; }
   .o-list__headerRow {
@@ -1286,31 +1016,6 @@ input {
       top: calc( 100% -  44px);
       position: relative;
       outline: none; }
-    .flexbox-grid .o-list__headerRow {
-      position: relative; }
-      .flexbox-grid .o-list__headerRow > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .o-list__headerRow {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .o-list__headerRow > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .o-list__headerRow {
-      display: table; }
-      .no-flexbox-table .o-list__headerRow > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
   .o-list__headerCell {
     /* -ctag-example: ...header cell;*/
     width: 16.66666vw;
@@ -1351,31 +1056,6 @@ input {
       left: calc( 100% -  16.66666vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .o-list__cell {
-      position: relative; }
-      .flexbox-grid .o-list__cell > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .o-list__cell {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .o-list__cell > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .o-list__cell {
-      display: table; }
-      .no-flexbox-table .o-list__cell > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
     .o-list__cell--center {
       text-align: center; }
     .o-list__cell--selected {
@@ -1416,26 +1096,6 @@ input {
     -ms-flex-direction: row;
     -ms-flex-pack: center;
     -ms-flex-align: center; }
-    .flexbox-grid .o-list--footer .o-list__headerCell {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .o-list--footer .o-list__headerCell > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .o-list--footer .o-list__headerCell > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .o-list--footer .o-list__headerCell {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .o-list--footer .o-list__headerCell > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
     .o-list--footer .o-list__headerCell:first-of-type {
       border-left: none; }
   .o-list--footer .o-list__cell {
@@ -1448,26 +1108,6 @@ input {
     -ms-flex-direction: row;
     -ms-flex-pack: center;
     -ms-flex-align: center; }
-    .flexbox-grid .o-list--footer .o-list__cell {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .o-list--footer .o-list__cell > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .o-list--footer .o-list__cell > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .o-list--footer .o-list__cell {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .o-list--footer .o-list__cell > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
     .o-list--footer .o-list__cell:first-of-type {
       border-left: none; }
 
@@ -1500,26 +1140,6 @@ input {
     left: calc( 100% -  16.66666vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .o-button, .flexbox-grid .o-tabs__item, .flexbox-grid .o-devToolsApp__rightNavItem, .flexbox-grid .o-devToolsOutput__navItem, .flexbox-grid .p-logs__logNav--navItem, .flexbox-grid .o-roundedButton, .flexbox-grid .c-connectionsModal__verifyBtn, .flexbox-grid .c-devTools__setDefaultBtn, .flexbox-grid .c-devTools__sendBtn, .flexbox-grid .o-devToolsOutput__copy, .flexbox-grid .o-devToolsOutput__navAction, .flexbox-grid .o-devToolsLanding__action, .flexbox-grid .c-logs__footer .c-logs__clearAll, .c-logs__footer .flexbox-grid .c-logs__clearAll {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .o-button > *, .flexbox-grid .o-tabs__item > *, .flexbox-grid .o-devToolsApp__rightNavItem > *, .flexbox-grid .o-devToolsOutput__navItem > *, .flexbox-grid .p-logs__logNav--navItem > *, .flexbox-grid .o-roundedButton > *, .flexbox-grid .c-connectionsModal__verifyBtn > *, .flexbox-grid .c-devTools__setDefaultBtn > *, .flexbox-grid .c-devTools__sendBtn > *, .flexbox-grid .o-devToolsOutput__copy > *, .flexbox-grid .o-devToolsOutput__navAction > *, .flexbox-grid .o-devToolsLanding__action > *, .flexbox-grid .c-logs__footer .c-logs__clearAll > *, .c-logs__footer .flexbox-grid .c-logs__clearAll > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .o-button > *:nth-child(n+2), .flexbox-grid .o-tabs__item > *:nth-child(n+2), .flexbox-grid .o-devToolsApp__rightNavItem > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__navItem > *:nth-child(n+2), .flexbox-grid .p-logs__logNav--navItem > *:nth-child(n+2), .flexbox-grid .o-roundedButton > *:nth-child(n+2), .flexbox-grid .c-connectionsModal__verifyBtn > *:nth-child(n+2), .flexbox-grid .c-devTools__setDefaultBtn > *:nth-child(n+2), .flexbox-grid .c-devTools__sendBtn > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__copy > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__navAction > *:nth-child(n+2), .flexbox-grid .o-devToolsLanding__action > *:nth-child(n+2), .flexbox-grid .c-logs__footer .c-logs__clearAll > *:nth-child(n+2), .c-logs__footer .flexbox-grid .c-logs__clearAll > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .o-button, .no-flexbox .o-tabs__item, .no-flexbox .o-devToolsApp__rightNavItem, .no-flexbox .o-devToolsOutput__navItem, .no-flexbox .p-logs__logNav--navItem, .no-flexbox .o-roundedButton, .no-flexbox .c-connectionsModal__verifyBtn, .no-flexbox .c-devTools__setDefaultBtn, .no-flexbox .c-devTools__sendBtn, .no-flexbox .o-devToolsOutput__copy, .no-flexbox .o-devToolsOutput__navAction, .no-flexbox .o-devToolsLanding__action, .no-flexbox .c-logs__footer .c-logs__clearAll, .c-logs__footer .no-flexbox .c-logs__clearAll {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .o-button > *, .no-flexbox .o-tabs__item > *, .no-flexbox .o-devToolsApp__rightNavItem > *, .no-flexbox .o-devToolsOutput__navItem > *, .no-flexbox .p-logs__logNav--navItem > *, .no-flexbox .o-roundedButton > *, .no-flexbox .c-connectionsModal__verifyBtn > *, .no-flexbox .c-devTools__setDefaultBtn > *, .no-flexbox .c-devTools__sendBtn > *, .no-flexbox .o-devToolsOutput__copy > *, .no-flexbox .o-devToolsOutput__navAction > *, .no-flexbox .o-devToolsLanding__action > *, .no-flexbox .c-logs__footer .c-logs__clearAll > *, .c-logs__footer .no-flexbox .c-logs__clearAll > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
   .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-roundedButton:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__setDefaultBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover, .c-logs__footer .c-logs__clearAll:hover {
     text-decoration: none; }
   .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-roundedButton:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__setDefaultBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover, .c-logs__footer .c-logs__clearAll:hover {
@@ -1587,35 +1207,6 @@ button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button
     left: calc( 100% -  16.66666vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-center > .o-iconButton, .flexbox-grid .a-flex-h > .o-iconButton {
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-iconButton {
-    outline: none; }
-  .flexbox-grid .o-iconButton {
-    position: relative; }
-    .flexbox-grid .o-iconButton > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .o-iconButton {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .o-iconButton > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .o-iconButton {
-    display: table; }
-    .no-flexbox-table .o-iconButton > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
   .o-iconButton:hover {
     background-color: #eee; }
   .o-iconButton__icon {
@@ -1640,40 +1231,13 @@ button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button
       left: calc( 100% -  4.166665vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .o-iconButton__icon, .flexbox-grid .a-flex-h > .o-iconButton__icon {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-iconButton__icon {
-      outline: none; }
-    .flexbox-grid .o-iconButton__icon {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .o-iconButton__icon > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .o-iconButton__icon > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .o-iconButton__icon {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .o-iconButton__icon > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
   .o-iconButton__label {
     /* -ctag-example: ...Label;*/
     font-size: 14px;
     line-height: 22px;
     color: #4D4D4D;
     flex: 1;
-    /*outline: 5px dotted red;*/ }
-    .no-flexbox .o-iconButton__label {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
+    -ms-flex: 1 0 auto; }
 
 .o-tabs {
   /* -ctag-example: ...
@@ -1690,25 +1254,6 @@ button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: stretch; }
-  .flexbox-grid .o-tabs {
-    position: relative; }
-    .flexbox-grid .o-tabs > * {
-      float: left;
-      min-height: 1px;
-      height: 100%; }
-  .no-flexbox .o-tabs {
-    position: relative; }
-    .no-flexbox .o-tabs > * {
-      float: left;
-      height: 100%;
-      min-width: 1px; }
-  .no-flexbox-table .o-tabs {
-    display: table; }
-    .no-flexbox-table .o-tabs > * {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      position: relative; }
   .o-tabs__item {
     /* -ctag-example: ...Tab Label*/
     border-right: 1px solid #CCCCCC;
@@ -1808,10 +1353,6 @@ a {
       left: calc( 100% -  12.499995vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .c-mainNav__logo, .flexbox-grid .a-flex-h > .c-mainNav__logo {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-mainNav__logo {
-      outline: none; }
     .c-mainNav__logo__metric {
       margin-right: -20px; }
   .c-mainNav__hamburger {
@@ -1830,10 +1371,6 @@ a {
     line-height: 44px;
     text-align: right;
     color: #fff; }
-    .flexbox-grid .a-flex-center > .c-mainNav__hamburger, .flexbox-grid .a-flex-h > .c-mainNav__hamburger {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-mainNav__hamburger {
-      outline: none; }
     .flexbox-grid .a-flex-v > .c-mainNav__hamburger {
       left: calc( 50% - (( 24.99999vw / 2 )));
       position: relative;
@@ -1863,10 +1400,6 @@ a {
       display: table; }
     .c-mainNav__links:after {
       clear: both; }
-    .flexbox-grid .a-flex-center > .c-mainNav__links, .flexbox-grid .a-flex-h > .c-mainNav__links {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-mainNav__links {
-      outline: none; }
     @media (max-width: 768px) {
       .c-mainNav__links {
         position: relative  !important; } }
@@ -1876,11 +1409,7 @@ a {
         float: left; } }
     @media (max-width: 768px) {
       .c-mainNav__links {
-        width: 100% !important; }
-        .flexbox-grid .a-flex-v > .c-mainNav__links {
-          outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .c-mainNav__links {
-          outline: none !important; } }
+        width: 100% !important; } }
     @media (max-width: 768px) {
       .c-mainNav__links {
         height: auto  !important; } }
@@ -1889,16 +1418,13 @@ a {
         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1) !important; } }
     @media (max-width: 768px) {
       .c-mainNav__links {
-        height: 0 !important; }
-        .flexbox-grid .a-flex-center > .c-mainNav__links, .flexbox-grid .a-flex-h > .c-mainNav__links {
-          outline: none !important; }
-        .flexbox-grid .a-flex-h-end > .c-mainNav__links {
-          outline: none !important; } }
+        height: 0 !important; } }
     @media (max-width: 768px) {
       .c-mainNav__links {
         overflow: hidden  !important; } }
     @media (max-width: 768px) {
       .c-mainNav__links {
+        /*DEPRACATED*/
         display: flex !important;
         flex-flow: column nowrap !important;
         justify-content: flex-start !important;
@@ -1906,20 +1432,7 @@ a {
         display: -ms-flexbox !important;
         -ms-flex-direction: column !important;
         -ms-flex-pack: start !important;
-        -ms-flex-align: start !important; }
-        .flexbox-grid .c-mainNav__links {
-          position: relative !important; }
-          .flexbox-grid .c-mainNav__links > * {
-            float: left !important;
-            clear: left !important;
-            min-width: 1px !important; }
-        .no-flexbox .c-mainNav__links {
-          position: relative !important; }
-          .no-flexbox .c-mainNav__links > * {
-            float: left !important;
-            clear: left !important;
-            min-width: 1px !important;
-            min-height: 1px !important; } }
+        -ms-flex-align: start !important; } }
   .c-mainNav__link {
     /* -ctag-example: ...
 	                { .c-mainNav__link__icon }
@@ -1946,10 +1459,6 @@ a {
       left: calc( 100% -  16.66666vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-center > .c-mainNav__link, .flexbox-grid .a-flex-h > .c-mainNav__link {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-mainNav__link {
-      outline: none; }
     .c-mainNav__link:hover {
       color: #B7FFE0; }
     @media (max-width: 768px) {
@@ -1964,32 +1473,7 @@ a {
         display: -ms-flexbox !important;
         -ms-flex-direction: row !important;
         -ms-flex-pack: start !important;
-        -ms-flex-align: center !important; }
-        .flexbox-grid .c-mainNav__link {
-          position: relative !important; }
-          .flexbox-grid .c-mainNav__link > * {
-            float: left !important;
-            min-height: 1px !important;
-            position: relative !important;
-            /* need to define height */
-            outline: 5px dotted red !important; }
-        .no-flexbox .c-mainNav__link {
-          position: relative !important;
-          transform-style: preserve-3d !important; }
-          .no-flexbox .c-mainNav__link > * {
-            float: left !important;
-            min-height: 1px !important;
-            position: relative !important;
-            top: 50% !important;
-            transform: translateY(-50%) !important;
-            -ms-transform: translateY(-50%) !important; }
-        .no-flexbox-table .c-mainNav__link {
-          display: table !important; }
-          .no-flexbox-table .c-mainNav__link > * {
-            display: table-cell !important;
-            vertical-align: middle !important;
-            /*text-align: center !important;*/
-            position: relative !important; } }
+        -ms-flex-align: center !important; } }
     .c-mainNav__link__icon {
       /* -ctag-example: <div class="c-mainNav__link__icon ion-clipboard"></div>;*/
       padding-left: 11px;
@@ -2025,26 +1509,6 @@ a {
       -ms-flex-direction: row;
       -ms-flex-pack: center;
       -ms-flex-align: center; }
-      .flexbox-grid .c-mainNav__link--social-icon {
-        position: relative;
-        text-align: center; }
-        .flexbox-grid .c-mainNav__link--social-icon > * {
-          display: inline-block;
-          /* need to define height */
-          outline: 5px dotted red; }
-        .flexbox-grid .c-mainNav__link--social-icon > *:nth-child(n+2) {
-          /* don't put more than one item here */
-          outline: 5px dotted red; }
-      .no-flexbox .c-mainNav__link--social-icon {
-        position: relative;
-        text-align: center; }
-        .no-flexbox .c-mainNav__link--social-icon > * {
-          min-width: 1px;
-          position: relative;
-          display: inline-block;
-          top: 50%;
-          transform: translateY(-50%);
-          -ms-transform: translateY(-50%); }
       .c-mainNav__link--social-icon:hover {
         filter: grayscale(0);
         -webkit-filter: grayscale(0);
@@ -2085,11 +1549,7 @@ a {
           outline: none !important; } }
     @media (max-width: 768px) {
       .c-mainNav__link {
-        width: 100% !important; }
-        .flexbox-grid .a-flex-v > .c-mainNav__link {
-          outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .c-mainNav__link {
-          outline: none !important; } }
+        width: 100% !important; } }
     @media (max-width: 768px) {
       .c-mainNav__link {
         text-align: left  !important; } }
@@ -2161,10 +1621,6 @@ a {
     width: 100%;
     height: 66px;
     z-index: 3000; }
-    .flexbox-grid .a-flex-v > .c-redox__mainNavContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-redox__mainNavContainer {
-      outline: none; }
     .flexbox-grid .a-flex-center > .c-redox__mainNavContainer, .flexbox-grid .a-flex-h > .c-redox__mainNavContainer {
       top: calc( 50% - ( 66px / 2 ));
       position: relative;
@@ -2211,11 +1667,7 @@ a {
       outline: none; }
     @media (max-width: 768px) {
       .c-redox__secondaryNavContainer {
-        width: 100% !important; }
-        .flexbox-grid .a-flex-v > .c-redox__secondaryNavContainer {
-          outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .c-redox__secondaryNavContainer {
-          outline: none !important; } }
+        width: 100% !important; } }
     @media (max-width: 768px) {
       .c-redox__secondaryNavContainer {
         height: auto  !important; } }
@@ -2246,10 +1698,6 @@ a {
     overflow-x: hidden;
     width: 83.33334vw;
     /* Legacy pages, new content uses c-redox__paddedContent */ }
-    .flexbox-grid .a-flex-v > .c-redox__contentContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-redox__contentContainer {
-      outline: none; }
     .flexbox-grid .a-flex-v > .c-redox__contentContainer {
       left: calc( 50% - (( 83.33334vw / 2 )));
       position: relative;
@@ -2291,11 +1739,7 @@ a {
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-redox__contentPadded {
-    width: 100% !important; }
-    .flexbox-grid .a-flex-v > .c-redox__contentPadded {
-      outline: none !important; }
-    .flexbox-grid .a-flex-v-end > .c-redox__contentPadded {
-      outline: none !important; } }
+    width: 100% !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-redox__contentPadded {
@@ -2310,10 +1754,6 @@ a {
     z-index: 3500;
     transition: height 0.3s;
     overflow: hidden; }
-    .flexbox-grid .a-flex-v > .c-redox__footerContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-redox__footerContainer {
-      outline: none; }
     .flexbox-grid .a-flex-center > .c-redox__footerContainer, .flexbox-grid .a-flex-h > .c-redox__footerContainer {
       top: calc( 50% - ( 33px / 2 ));
       position: relative;
@@ -2335,10 +1775,6 @@ a {
     bottom: 0px; }
   .c-redox--nofooter .c-redox__footerContainer {
     height: 0; }
-    .flexbox-grid .a-flex-center > .c-redox--nofooter .c-redox__footerContainer, .flexbox-grid .a-flex-h > .c-redox--nofooter .c-redox__footerContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-redox--nofooter .c-redox__footerContainer {
-      outline: none; }
 
 .c-redox--tertiary {
   /* touch */ }
@@ -2451,10 +1887,6 @@ a {
       cursor: hand;
       cursor: pointer;
       transition: width 0.3s; }
-      .flexbox-grid .a-flex-v > .c-secondaryNav__list__item {
-        outline: none; }
-      .flexbox-grid .a-flex-v-end > .c-secondaryNav__list__item {
-        outline: none; }
       .flexbox-grid .a-flex-center > .c-secondaryNav__list__item, .flexbox-grid .a-flex-h > .c-secondaryNav__list__item {
         top: calc( 50% - ( 66px / 2 ));
         position: relative;
@@ -2463,31 +1895,6 @@ a {
         top: calc( 100% -  66px);
         position: relative;
         outline: none; }
-      .flexbox-grid .c-secondaryNav__list__item {
-        position: relative; }
-        .flexbox-grid .c-secondaryNav__list__item > * {
-          float: left;
-          min-height: 1px;
-          position: relative;
-          /* need to define height */
-          outline: 5px dotted red; }
-      .no-flexbox .c-secondaryNav__list__item {
-        position: relative;
-        transform-style: preserve-3d; }
-        .no-flexbox .c-secondaryNav__list__item > * {
-          float: left;
-          min-height: 1px;
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          -ms-transform: translateY(-50%); }
-      .no-flexbox-table .c-secondaryNav__list__item {
-        display: table; }
-        .no-flexbox-table .c-secondaryNav__list__item > * {
-          display: table-cell;
-          vertical-align: middle;
-          /*text-align: center;*/
-          position: relative; }
       .c-secondaryNav__list__item:hover {
         background-color: #ddd; }
       .c-secondaryNav__list__item:hover {
@@ -2543,14 +1950,6 @@ a {
     transition: width 0.3s;
     overflow: hidden;
     box-shadow: 3px 0 3px 0 rgba(0, 0, 0, 0.1), -3px 0 3px 0 rgba(0, 0, 0, 0.1); }
-    .flexbox-grid .a-flex-center > .c-secondaryNav__tertiaryNavContainer, .flexbox-grid .a-flex-h > .c-secondaryNav__tertiaryNavContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .c-secondaryNav__tertiaryNavContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-v > .c-secondaryNav__tertiaryNavContainer {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-secondaryNav__tertiaryNavContainer {
-      outline: none; }
 
 .c-secondaryNav--tertiary {
   /* touch */ }
@@ -2586,10 +1985,6 @@ a {
           outline: none; }
       .c-secondaryNav--tertiary .c-secondaryNav__list__item__label {
         width: 0; }
-        .flexbox-grid .a-flex-v > .c-secondaryNav--tertiary .c-secondaryNav__list__item__label {
-          outline: none; }
-        .flexbox-grid .a-flex-v-end > .c-secondaryNav--tertiary .c-secondaryNav__list__item__label {
-          outline: none; }
   .c-secondaryNav--tertiary .c-secondaryNav__tertiaryNavContainer {
     width: calc( 100% - 6.2499975vw); }
 
@@ -2627,10 +2022,6 @@ a {
           outline: none; }
       .c-secondaryNav--iconNav .c-secondaryNav__list__item__label {
         width: 0; }
-        .flexbox-grid .a-flex-v > .c-secondaryNav--iconNav .c-secondaryNav__list__item__label {
-          outline: none; }
-        .flexbox-grid .a-flex-v-end > .c-secondaryNav--iconNav .c-secondaryNav__list__item__label {
-          outline: none; }
 
 .c-tertiaryNav {
   /* -ctag-example: ...
@@ -2658,10 +2049,6 @@ a {
     line-height: 38.5px;
     color: #999999;
     line-height: 55px; }
-    .flexbox-grid .a-flex-v > .c-tertiaryNav__title {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-tertiaryNav__title {
-      outline: none; }
     .flexbox-grid .a-flex-v > .c-tertiaryNav__title {
       left: calc( 50% - (( 20.833325vw / 2 )));
       position: relative;
@@ -2697,10 +2084,6 @@ a {
     padding-left: 2.0833325vw;
     padding-right: 2.0833325vw; }
     .flexbox-grid .a-flex-v > .c-tertiaryNav__item {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-tertiaryNav__item {
-      outline: none; }
-    .flexbox-grid .a-flex-v > .c-tertiaryNav__item {
       left: calc( 50% - (( 20.833325vw / 2 )));
       position: relative;
       outline: none; }
@@ -2716,26 +2099,6 @@ a {
       top: calc( 100% -  44px);
       position: relative;
       outline: none; }
-    .flexbox-grid .c-tertiaryNav__item {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .c-tertiaryNav__item > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .c-tertiaryNav__item > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .c-tertiaryNav__item {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .c-tertiaryNav__item > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
     .c-tertiaryNav__item:hover {
       background-color: #eee; }
     .c-tertiaryNav__item__label {
@@ -2746,10 +2109,6 @@ a {
       line-height: 22px;
       overflow: hidden;
       white-space: nowrap; }
-      .flexbox-grid .a-flex-v > .c-tertiaryNav__item__label {
-        outline: none; }
-      .flexbox-grid .a-flex-v-end > .c-tertiaryNav__item__label {
-        outline: none; }
     .c-tertiaryNav__item--indented {
       padding-left: 4.166665vw; }
     .c-tertiaryNav__item--selected {
@@ -2768,31 +2127,6 @@ a {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: center; }
-  .flexbox-grid .c-connections__groupHeader {
-    position: relative; }
-    .flexbox-grid .c-connections__groupHeader > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-connections__groupHeader {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-connections__groupHeader > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-connections__groupHeader {
-    display: table; }
-    .no-flexbox-table .c-connections__groupHeader > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
   .c-connections__groupHeader h1 {
     outline: none;
     border-bottom: none;
@@ -2803,10 +2137,7 @@ a {
     padding: 0;
     margin-left: 11px;
     flex: 1;
-    /*outline: 5px dotted red;*/ }
-    .no-flexbox .c-connections__groupHeader h1 {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
+    -ms-flex: 1 0 auto; }
   .c-connections__groupHeader > * {
     align-self: center; }
 
@@ -2847,7 +2178,7 @@ a {
     position: relative;
     outline: none; }
   .c-connections__addBtn:hover {
-    background-color: #eee; }
+    background-color: rgba(0, 0, 0, 0.2); }
 
 .c-connections .o-list {
   margin-bottom: 22px; }
@@ -2865,7 +2196,7 @@ a {
 
 .c-connections__cell--title {
   flex: 1;
-  /*outline: 5px dotted red;*/
+  -ms-flex: 1 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -2874,34 +2205,6 @@ a {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: center; }
-  .no-flexbox .c-connections__cell--title {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
-  .flexbox-grid .c-connections__cell--title {
-    position: relative; }
-    .flexbox-grid .c-connections__cell--title > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-connections__cell--title {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-connections__cell--title > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-connections__cell--title {
-    display: table; }
-    .no-flexbox-table .c-connections__cell--title > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .c-connections__cell--endPoint, .c-connections__cell--endPointUnverified {
   width: 33.33332vw;
@@ -2929,7 +2232,7 @@ a {
   align-items: center;
   display: -ms-flexbox;
   -ms-flex-direction: row;
-  -ms-flex-pack: end;
+  -ms-flex-pack: right;
   -ms-flex-align: center; }
   .flexbox-grid .a-flex-v > .c-connections__cell--verify {
     left: calc( 50% - (( 8.33333vw / 2 )));
@@ -2939,18 +2242,6 @@ a {
     left: calc( 100% -  8.33333vw);
     position: relative;
     outline: none; }
-  .c-connections__cell--verify > *:nth-child(n+2) {
-    /* only one child */
-    outline: 5px dotted red; }
-  .no-flexbox .c-connections__cell--verify {
-    position: relative;
-    text-align: right; }
-    .no-flexbox .c-connections__cell--verify > * {
-      min-width: 1px;
-      position: absolute;
-      right: 0px;
-      top: 50%;
-      transform: translateY(-50%); }
 
 .c-connections__cell--environment {
   width: 8.33333vw;
@@ -2970,31 +2261,6 @@ a {
     left: calc( 100% -  8.33333vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .c-connections__cell--environment {
-    position: relative; }
-    .flexbox-grid .c-connections__cell--environment > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-connections__cell--environment {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-connections__cell--environment > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-connections__cell--environment {
-    display: table; }
-    .no-flexbox-table .c-connections__cell--environment > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .c-connections__cell--subscriptions {
   width: 12.499995vw;
@@ -3014,26 +2280,6 @@ a {
     left: calc( 100% -  12.499995vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .c-connections__cell--subscriptions {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .c-connections__cell--subscriptions > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .c-connections__cell--subscriptions > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .c-connections__cell--subscriptions {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .c-connections__cell--subscriptions > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
 
 .c-connectionsModal__verifyBtn {
   width: 8.33333vw;
@@ -3069,26 +2315,6 @@ a {
   width: 8.33333vw;
   height: 44px;
   margin-left: 2.0833325vw; }
-  .flexbox-grid .c-connectionsModal__verifying {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .c-connectionsModal__verifying > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .c-connectionsModal__verifying > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .c-connectionsModal__verifying {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .c-connectionsModal__verifying > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
   .flexbox-grid .a-flex-v > .c-connectionsModal__verifying {
     left: calc( 50% - (( 8.33333vw / 2 )));
     position: relative;
@@ -3119,26 +2345,6 @@ a {
   width: 8.33333vw;
   height: 44px;
   margin-left: 2.0833325vw; }
-  .flexbox-grid .c-connectionsModal__verified {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .c-connectionsModal__verified > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .c-connectionsModal__verified > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .c-connectionsModal__verified {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .c-connectionsModal__verified > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
   .flexbox-grid .a-flex-v > .c-connectionsModal__verified {
     left: calc( 50% - (( 8.33333vw / 2 )));
     position: relative;
@@ -3162,10 +2368,6 @@ a {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
   background-image: url("../images/app/connections_watermark.png");
   background-position: 22px center; }
-  .flexbox-grid .a-flex-v > .c-connectionsEmptyState {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .c-connectionsEmptyState {
-    outline: none; }
   .flexbox-grid .a-flex-center > .c-connectionsEmptyState, .flexbox-grid .a-flex-h > .c-connectionsEmptyState {
     top: calc( 50% - ( 154px / 2 ));
     position: relative;
@@ -3176,6 +2378,7 @@ a {
     outline: none; }
 
 .c-devTools__content {
+  /*DEPRACATED*/
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -3184,16 +2387,6 @@ a {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: start; }
-  .flexbox-grid .c-devTools__content {
-    position: relative; }
-    .flexbox-grid .c-devTools__content > * {
-      float: left;
-      min-height: 1px; }
-  .no-flexbox .c-devTools__content {
-    position: relative; }
-    .no-flexbox .c-devTools__content > * {
-      float: left;
-      min-width: 1px; }
 
 .c-devTools__overviewText {
   width: 24.99999vw;
@@ -3211,11 +2404,8 @@ a {
 
 .c-devTools__connections {
   flex: 1;
-  /*outline: 5px dotted red;*/
+  -ms-flex: 1 0 auto;
   padding-left: 8.33333vw; }
-  .no-flexbox .c-devTools__connections {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
 
 .c-devTools__groupHeader {
   padding-bottom: 11px;
@@ -3227,31 +2417,6 @@ a {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: center; }
-  .flexbox-grid .c-devTools__groupHeader {
-    position: relative; }
-    .flexbox-grid .c-devTools__groupHeader > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-devTools__groupHeader {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-devTools__groupHeader > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-devTools__groupHeader {
-    display: table; }
-    .no-flexbox-table .c-devTools__groupHeader > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
   .c-devTools__groupHeader h1 {
     outline: none;
     border-bottom: none;
@@ -3264,7 +2429,7 @@ a {
 
 .c-devTools__cell--title {
   flex: 1;
-  /*outline: 5px dotted red;*/
+  -ms-flex: 1 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -3273,34 +2438,6 @@ a {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: center; }
-  .no-flexbox .c-devTools__cell--title {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
-  .flexbox-grid .c-devTools__cell--title {
-    position: relative; }
-    .flexbox-grid .c-devTools__cell--title > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-devTools__cell--title {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-devTools__cell--title > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-devTools__cell--title {
-    display: table; }
-    .no-flexbox-table .c-devTools__cell--title > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .c-devTools__connectionHeader {
   display: flex;
@@ -3314,31 +2451,6 @@ a {
   position: relative;
   border-bottom: 1px solid #eee;
   height: 66px; }
-  .flexbox-grid .c-devTools__connectionHeader {
-    position: relative; }
-    .flexbox-grid .c-devTools__connectionHeader > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-devTools__connectionHeader {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-devTools__connectionHeader > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-devTools__connectionHeader {
-    display: table; }
-    .no-flexbox-table .c-devTools__connectionHeader > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
   .flexbox-grid .a-flex-center > .c-devTools__connectionHeader, .flexbox-grid .a-flex-h > .c-devTools__connectionHeader {
     top: calc( 50% - ( 66px / 2 ));
     position: relative;
@@ -3364,10 +2476,6 @@ a {
     left: calc( 100% -  4.166665vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-center > .c-devTools__closeDetail, .flexbox-grid .a-flex-h > .c-devTools__closeDetail {
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-devTools__closeDetail {
-    outline: none; }
 
 .c-devTools__connectionName {
   font-size: 19px;
@@ -3378,10 +2486,6 @@ a {
   width: 100%;
   height: 44px;
   margin-bottom: 22px; }
-  .flexbox-grid .a-flex-v > .c-devTools__setDefaultBtn {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .c-devTools__setDefaultBtn {
-    outline: none; }
   .flexbox-grid .a-flex-center > .c-devTools__setDefaultBtn, .flexbox-grid .a-flex-h > .c-devTools__setDefaultBtn {
     top: calc( 50% - ( 44px / 2 ));
     position: relative;
@@ -3413,6 +2517,7 @@ a {
     outline: none; }
 
 .o-devToolsApp__content {
+  /*DEPRACATED*/
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -3422,20 +2527,6 @@ a {
   -ms-flex-pack: start;
   -ms-flex-align: start;
   height: 100%; }
-  .flexbox-grid .o-devToolsApp__content {
-    position: relative; }
-    .flexbox-grid .o-devToolsApp__content > * {
-      float: left;
-      min-height: 1px; }
-  .no-flexbox .o-devToolsApp__content {
-    position: relative; }
-    .no-flexbox .o-devToolsApp__content > * {
-      float: left;
-      min-width: 1px; }
-  .flexbox-grid .a-flex-center > .o-devToolsApp__content, .flexbox-grid .a-flex-h > .o-devToolsApp__content {
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-devToolsApp__content {
-    outline: none; }
 
 .o-devToolsApp__leftContainer {
   width: 29.166655vw;
@@ -3459,27 +2550,10 @@ a {
     left: calc( 100% -  29.166655vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-center > .o-devToolsApp__leftContainer, .flexbox-grid .a-flex-h > .o-devToolsApp__leftContainer {
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-devToolsApp__leftContainer {
-    outline: none; }
-  .flexbox-grid .o-devToolsApp__leftContainer {
-    position: relative; }
-    .flexbox-grid .o-devToolsApp__leftContainer > * {
-      float: left;
-      clear: left;
-      min-width: 1px;
-      width: 100%; }
-  .no-flexbox .o-devToolsApp__leftContainer {
-    position: relative; }
-    .no-flexbox .o-devToolsApp__leftContainer > * {
-      float: left;
-      min-width: 1px;
-      width: 100%; }
 
 .o-devToolsApp__leftInputs {
   flex: 1;
-  /*outline: 5px dotted red;*/
+  -ms-flex: 1 0 auto;
   overflow-y: auto;
   overflow-x: hidden;
   padding-left: 2.0833325vw;
@@ -3488,9 +2562,6 @@ a {
   padding-bottom: 22px;
   width: calc( 29.166655vw + 15px);
   transition: width 0.3s; }
-  .no-flexbox .o-devToolsApp__leftInputs {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
   .o-devToolsApp__leftInputs > div {
     width: 24.99999vw; }
     .flexbox-grid .a-flex-v > .o-devToolsApp__leftInputs > div {
@@ -3523,44 +2594,12 @@ a {
     top: calc( 100% -  66px);
     position: relative;
     outline: none; }
-  .flexbox-grid .o-devToolsApp__leftActions {
-    position: relative; }
-    .flexbox-grid .o-devToolsApp__leftActions > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .o-devToolsApp__leftActions {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .o-devToolsApp__leftActions > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .o-devToolsApp__leftActions {
-    display: table; }
-    .no-flexbox-table .o-devToolsApp__leftActions > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .o-devToolsApp__rightContainer {
   flex: 1;
-  /*outline: 5px dotted red;*/
+  -ms-flex: 1 0 auto;
   height: 100%;
   z-index: 100; }
-  .no-flexbox .o-devToolsApp__rightContainer {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
-  .flexbox-grid .a-flex-center > .o-devToolsApp__rightContainer, .flexbox-grid .a-flex-h > .o-devToolsApp__rightContainer {
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-devToolsApp__rightContainer {
-    outline: none; }
 
 .o-devToolsApp__rightNav {
   height: 66px;
@@ -3581,25 +2620,6 @@ a {
     top: calc( 100% -  66px);
     position: relative;
     outline: none; }
-  .flexbox-grid .o-devToolsApp__rightNav {
-    position: relative; }
-    .flexbox-grid .o-devToolsApp__rightNav > * {
-      float: left;
-      min-height: 1px;
-      height: 100%; }
-  .no-flexbox .o-devToolsApp__rightNav {
-    position: relative; }
-    .no-flexbox .o-devToolsApp__rightNav > * {
-      float: left;
-      height: 100%;
-      min-width: 1px; }
-  .no-flexbox-table .o-devToolsApp__rightNav {
-    display: table; }
-    .no-flexbox-table .o-devToolsApp__rightNav > * {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      position: relative; }
 
 .o-devToolsApp__rightNavItem {
   background-color: #eee;
@@ -3628,19 +2648,6 @@ a {
   -ms-flex-direction: column;
   -ms-flex-pack: start;
   -ms-flex-align: stretch; }
-  .flexbox-grid .o-devToolsOutput {
-    position: relative; }
-    .flexbox-grid .o-devToolsOutput > * {
-      float: left;
-      clear: left;
-      min-width: 1px;
-      width: 100%; }
-  .no-flexbox .o-devToolsOutput {
-    position: relative; }
-    .no-flexbox .o-devToolsOutput > * {
-      float: left;
-      min-width: 1px;
-      width: 100%; }
   .o-devToolsOutput__content {
     overflow-y: auto;
     overflow-x: hidden;
@@ -3650,10 +2657,7 @@ a {
     padding-top: 22px;
     padding-bottom: 22px;
     flex: 1;
-    /*outline: 5px dotted red;*/ }
-    .no-flexbox .o-devToolsOutput__content {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
+    -ms-flex: 1 0 auto; }
   .o-devToolsOutput__copy {
     position: absolute;
     bottom: 0px;
@@ -3696,31 +2700,6 @@ a {
       top: calc( 100% -  55px);
       position: relative;
       outline: none; }
-    .flexbox-grid .o-devToolsOutput__nav {
-      position: relative; }
-      .flexbox-grid .o-devToolsOutput__nav > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .o-devToolsOutput__nav {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .o-devToolsOutput__nav > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .o-devToolsOutput__nav {
-      display: table; }
-      .no-flexbox-table .o-devToolsOutput__nav > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
   .o-devToolsOutput__navItem {
     width: 10.4166625vw;
     height: 100%;
@@ -3733,10 +2712,6 @@ a {
     .flexbox-grid .a-flex-v-end > .o-devToolsOutput__navItem {
       left: calc( 100% -  10.4166625vw);
       position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-center > .o-devToolsOutput__navItem, .flexbox-grid .a-flex-h > .o-devToolsOutput__navItem {
-      outline: none; }
-    .flexbox-grid .a-flex-h-end > .o-devToolsOutput__navItem {
       outline: none; }
     .o-devToolsOutput__navItem:hover {
       background-color: #4D4D4D; }
@@ -3752,10 +2727,7 @@ a {
         color: #fff; }
   .o-devToolsOutput__navFill {
     flex: 1;
-    /*outline: 5px dotted red;*/ }
-    .no-flexbox .o-devToolsOutput__navFill {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
+    -ms-flex: 1 0 auto; }
   .o-devToolsOutput__navAction {
     background-color: #000;
     border: none;
@@ -3794,26 +2766,6 @@ a {
   -ms-flex-pack: center;
   -ms-flex-align: center;
   position: relative; }
-  .flexbox-grid .o-devToolsLanding {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .o-devToolsLanding > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .o-devToolsLanding > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .o-devToolsLanding {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .o-devToolsLanding > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
   .o-devToolsLanding__content {
     width: 80%;
     display: flex;
@@ -3825,31 +2777,6 @@ a {
     -ms-flex-pack: start;
     -ms-flex-align: center;
     padding-bottom: 66px; }
-    .flexbox-grid .o-devToolsLanding__content {
-      position: relative; }
-      .flexbox-grid .o-devToolsLanding__content > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .o-devToolsLanding__content {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .o-devToolsLanding__content > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .o-devToolsLanding__content {
-      display: table; }
-      .no-flexbox-table .o-devToolsLanding__content > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
   .o-devToolsLanding__icon {
     width: 16.66666vw;
     height: 176px;
@@ -3877,11 +2804,8 @@ a {
       background-image: url("../images/app/inbound_icon.svg"); }
   .o-devToolsLanding__description {
     flex: 1;
-    /*outline: 5px dotted red;*/
+    -ms-flex: 1 0 auto;
     padding-left: 4.166665vw; }
-    .no-flexbox .o-devToolsLanding__description {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
   .o-devToolsLanding__action {
     height: 44px;
     bottom: 0px;
@@ -3901,10 +2825,6 @@ a {
   height: 2010px;
   background-image: url("../images/prototype/inboud_results.png");
   background-repeat: no-repeat; }
-  .flexbox-grid .a-flex-v > .p-devTools__tempContent {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .p-devTools__tempContent {
-    outline: none; }
 
 .c-logs__navContainer {
   width: 24.99999vw;
@@ -3940,30 +2860,6 @@ a {
     left: calc( 100% -  4.166665vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-center > .c-logs__searchIcon, .flexbox-grid .a-flex-h > .c-logs__searchIcon {
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logs__searchIcon {
-    outline: none; }
-  .flexbox-grid .c-logs__searchIcon {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .c-logs__searchIcon > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .c-logs__searchIcon > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs__searchIcon {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .c-logs__searchIcon > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
 
 .c-logs .c-logs__cell--type {
   width: 30px;
@@ -3983,35 +2879,10 @@ a {
     left: calc( 100% -  30px);
     position: relative;
     outline: none; }
-  .flexbox-grid .c-logs .c-logs__cell--type {
-    position: relative; }
-    .flexbox-grid .c-logs .c-logs__cell--type > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs .c-logs__cell--type {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-logs .c-logs__cell--type > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-logs .c-logs__cell--type {
-    display: table; }
-    .no-flexbox-table .c-logs .c-logs__cell--type > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .c-logs .c-logs__cell--summaryType {
   flex: 1;
-  /*outline: 5px dotted red;*/
+  -ms-flex: 1 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -4021,38 +2892,10 @@ a {
   -ms-flex-pack: start;
   -ms-flex-align: center;
   transition: width 0.3s; }
-  .no-flexbox .c-logs .c-logs__cell--summaryType {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
-  .flexbox-grid .c-logs .c-logs__cell--summaryType {
-    position: relative; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryType > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs .c-logs__cell--summaryType {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-logs .c-logs__cell--summaryType > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-logs .c-logs__cell--summaryType {
-    display: table; }
-    .no-flexbox-table .c-logs .c-logs__cell--summaryType > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .c-logs .c-logs__cell--summaryTitle, .c-logs .c-logs__cell--title {
   flex: 1;
-  /*outline: 5px dotted red;*/
+  -ms-flex: 1 0 auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -4062,34 +2905,6 @@ a {
   -ms-flex-pack: start;
   -ms-flex-align: center;
   font-style: italic; }
-  .no-flexbox .c-logs .c-logs__cell--summaryTitle, .no-flexbox .c-logs .c-logs__cell--title {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
-  .flexbox-grid .c-logs .c-logs__cell--summaryTitle, .flexbox-grid .c-logs .c-logs__cell--title {
-    position: relative; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryTitle > *, .flexbox-grid .c-logs .c-logs__cell--title > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs .c-logs__cell--summaryTitle, .no-flexbox .c-logs .c-logs__cell--title {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-logs .c-logs__cell--summaryTitle > *, .no-flexbox .c-logs .c-logs__cell--title > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-logs .c-logs__cell--summaryTitle, .no-flexbox-table .c-logs .c-logs__cell--title {
-    display: table; }
-    .no-flexbox-table .c-logs .c-logs__cell--summaryTitle > *, .no-flexbox-table .c-logs .c-logs__cell--title > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .c-logs .c-logs__cell--summaryStatus, .c-logs .c-logs__cell--status {
   width: 8.33333vw;
@@ -4109,26 +2924,6 @@ a {
     left: calc( 100% -  8.33333vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .c-logs .c-logs__cell--summaryStatus, .flexbox-grid .c-logs .c-logs__cell--status {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryStatus > *, .flexbox-grid .c-logs .c-logs__cell--status > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryStatus > *:nth-child(n+2), .flexbox-grid .c-logs .c-logs__cell--status > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs .c-logs__cell--summaryStatus, .no-flexbox .c-logs .c-logs__cell--status {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .c-logs .c-logs__cell--summaryStatus > *, .no-flexbox .c-logs .c-logs__cell--status > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
 
 .c-logs .c-logs__cell--summaryModel, .c-logs .c-logs__cell--model {
   width: 16.66666vw;
@@ -4150,31 +2945,6 @@ a {
     left: calc( 100% -  16.66666vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .c-logs .c-logs__cell--summaryModel, .flexbox-grid .c-logs .c-logs__cell--model {
-    position: relative; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryModel > *, .flexbox-grid .c-logs .c-logs__cell--model > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs .c-logs__cell--summaryModel, .no-flexbox .c-logs .c-logs__cell--model {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-logs .c-logs__cell--summaryModel > *, .no-flexbox .c-logs .c-logs__cell--model > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-logs .c-logs__cell--summaryModel, .no-flexbox-table .c-logs .c-logs__cell--model {
-    display: table; }
-    .no-flexbox-table .c-logs .c-logs__cell--summaryModel > *, .no-flexbox-table .c-logs .c-logs__cell--model > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
   .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--summaryModel, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--summaryModel, .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--model, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--model {
     top: calc( 50% - ( 22px / 2 ));
     position: relative;
@@ -4216,29 +2986,10 @@ a {
     left: calc( 100% -  8.33333vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .c-logs .c-logs__cell--summaryEnvironment, .flexbox-grid .c-logs .c-logs__cell--environment {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryEnvironment > *, .flexbox-grid .c-logs .c-logs__cell--environment > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryEnvironment > *:nth-child(n+2), .flexbox-grid .c-logs .c-logs__cell--environment > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs .c-logs__cell--summaryEnvironment, .no-flexbox .c-logs .c-logs__cell--environment {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .c-logs .c-logs__cell--summaryEnvironment > *, .no-flexbox .c-logs .c-logs__cell--environment > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
 
 .c-logs .c-logs__cell--summaryTime, .c-logs .c-logs__cell--time {
   width: 12.499995vw;
+  /*DEPRACATED*/
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -4257,18 +3008,6 @@ a {
     left: calc( 100% -  12.499995vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .c-logs .c-logs__cell--summaryTime, .flexbox-grid .c-logs .c-logs__cell--time {
-    position: relative; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryTime > *, .flexbox-grid .c-logs .c-logs__cell--time > * {
-      float: right;
-      clear: right;
-      min-width: 1px; }
-  .no-flexbox .c-logs .c-logs__cell--summaryTime, .no-flexbox .c-logs .c-logs__cell--time {
-    position: relative; }
-    .no-flexbox .c-logs .c-logs__cell--summaryTime > *, .no-flexbox .c-logs .c-logs__cell--time > * {
-      float: right;
-      clear: right;
-      min-width: 1px; }
 
 .c-logs .c-logs__cell--model {
   font-size: 14px;
@@ -4288,31 +3027,6 @@ a {
   -ms-flex-pack: start;
   -ms-flex-align: center;
   padding-left: 11px; }
-  .flexbox-grid .c-logs .c-logs__cell--summaryTitle {
-    position: relative; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryTitle > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs .c-logs__cell--summaryTitle {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-logs .c-logs__cell--summaryTitle > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-logs .c-logs__cell--summaryTitle {
-    display: table; }
-    .no-flexbox-table .c-logs .c-logs__cell--summaryTitle > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
 
 .c-logs__filters {
   display: flex;
@@ -4323,6 +3037,7 @@ a {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: center;
+  /*DEPRACATED*/
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -4336,45 +3051,6 @@ a {
   height: 198px;
   cursor: hand;
   cursor: pointer; }
-  .flexbox-grid .c-logs__filters {
-    position: relative; }
-    .flexbox-grid .c-logs__filters > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      /* need to define height */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs__filters {
-    position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-logs__filters > * {
-      float: left;
-      min-height: 1px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
-  .no-flexbox-table .c-logs__filters {
-    display: table; }
-    .no-flexbox-table .c-logs__filters > * {
-      display: table-cell;
-      vertical-align: middle;
-      /*text-align: center;*/
-      position: relative; }
-  .flexbox-grid .c-logs__filters {
-    position: relative; }
-    .flexbox-grid .c-logs__filters > * {
-      float: left;
-      min-height: 1px; }
-  .no-flexbox .c-logs__filters {
-    position: relative; }
-    .no-flexbox .c-logs__filters > * {
-      float: left;
-      min-width: 1px; }
-  .flexbox-grid .a-flex-v > .c-logs__filters {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .c-logs__filters {
-    outline: none; }
   .flexbox-grid .a-flex-center > .c-logs__filters, .flexbox-grid .a-flex-h > .c-logs__filters {
     top: calc( 50% - ( 198px / 2 ));
     position: relative;
@@ -4393,33 +3069,10 @@ a {
     -ms-flex-pack: center;
     -ms-flex-align: center;
     flex: 1;
-    /*outline: 5px dotted red;*/ }
-    .flexbox-grid .c-logs__filters--summaryType, .flexbox-grid .c-logs__filters--type {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .c-logs__filters--summaryType > *, .flexbox-grid .c-logs__filters--type > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .c-logs__filters--summaryType > *:nth-child(n+2), .flexbox-grid .c-logs__filters--type > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logs__filters--summaryType, .no-flexbox .c-logs__filters--type {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .c-logs__filters--summaryType > *, .no-flexbox .c-logs__filters--type > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox .c-logs__filters--summaryType, .no-flexbox .c-logs__filters--type {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
+    -ms-flex: 1 0 auto; }
   .c-logs__filters--summaryTitle, .c-logs__filters--title {
     flex: 1;
-    /*outline: 5px dotted red;*/
+    -ms-flex: 1 0 auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -4430,34 +3083,6 @@ a {
     -ms-flex-align: center;
     font-style: italic;
     display: none; }
-    .no-flexbox .c-logs__filters--summaryTitle, .no-flexbox .c-logs__filters--title {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
-    .flexbox-grid .c-logs__filters--summaryTitle, .flexbox-grid .c-logs__filters--title {
-      position: relative; }
-      .flexbox-grid .c-logs__filters--summaryTitle > *, .flexbox-grid .c-logs__filters--title > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logs__filters--summaryTitle, .no-flexbox .c-logs__filters--title {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .c-logs__filters--summaryTitle > *, .no-flexbox .c-logs__filters--title > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .c-logs__filters--summaryTitle, .no-flexbox-table .c-logs__filters--title {
-      display: table; }
-      .no-flexbox-table .c-logs__filters--summaryTitle > *, .no-flexbox-table .c-logs__filters--title > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
   .c-logs__filters--summaryStatus, .c-logs__filters--status {
     width: 8.33333vw;
     display: flex;
@@ -4477,26 +3102,6 @@ a {
       left: calc( 100% -  8.33333vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .c-logs__filters--summaryStatus, .flexbox-grid .c-logs__filters--status {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .c-logs__filters--summaryStatus > *, .flexbox-grid .c-logs__filters--status > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .c-logs__filters--summaryStatus > *:nth-child(n+2), .flexbox-grid .c-logs__filters--status > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logs__filters--summaryStatus, .no-flexbox .c-logs__filters--status {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .c-logs__filters--summaryStatus > *, .no-flexbox .c-logs__filters--status > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
   .c-logs__filters--summaryModel, .c-logs__filters--model {
     width: 16.66666vw;
     padding-left: 11px;
@@ -4516,32 +3121,6 @@ a {
       left: calc( 100% -  16.66666vw);
       position: relative;
       outline: none; }
-    .no-flexbox .c-logs__filters--summaryModel, .no-flexbox .c-logs__filters--model {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .c-logs__filters--summaryModel > *, .no-flexbox .c-logs__filters--model > * {
-        min-width: 1px;
-        position: relative;
-        float: left;
-        clear: left;
-        left: 50%;
-        transform: translateX(-50%);
-        -ms-transform: translateX(-50%); }
-    .flexbox-grid .c-logs__filters--summaryModel, .flexbox-grid .c-logs__filters--model {
-      position: relative; }
-      .flexbox-grid .c-logs__filters--summaryModel > *, .flexbox-grid .c-logs__filters--model > * {
-        float: left;
-        clear: left;
-        min-height: 1px;
-        /* need to define width */
-        outline: 5px dotted red; }
-    .no-flexbox-table .c-logs__filters--summaryModel, .no-flexbox-table .c-logs__filters--model {
-      display: table; }
-      .no-flexbox-table .c-logs__filters--summaryModel > *, .no-flexbox-table .c-logs__filters--model > * {
-        display: table-row;
-        vertical-align: middle;
-        text-align: center;
-        position: relative; }
     .c-logs__filters--summaryModel .c-logs__modelIcon, .c-logs__filters--model .c-logs__modelIcon {
       font-size: 15px;
       line-height: 22px;
@@ -4575,26 +3154,6 @@ a {
       left: calc( 100% -  12.499995vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .c-logs__filters--summaryEnvironment, .flexbox-grid .c-logs__filters--environment {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .c-logs__filters--summaryEnvironment > *, .flexbox-grid .c-logs__filters--environment > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .c-logs__filters--summaryEnvironment > *:nth-child(n+2), .flexbox-grid .c-logs__filters--environment > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logs__filters--summaryEnvironment, .no-flexbox .c-logs__filters--environment {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .c-logs__filters--summaryEnvironment > *, .no-flexbox .c-logs__filters--environment > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
   .c-logs__filters--summaryTime, .c-logs__filters--time {
     width: 16.66666vw;
     text-align: right;
@@ -4616,36 +3175,11 @@ a {
       left: calc( 100% -  16.66666vw);
       position: relative;
       outline: none; }
-    .no-flexbox .c-logs__filters--summaryTime, .no-flexbox .c-logs__filters--time {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .c-logs__filters--summaryTime > *, .no-flexbox .c-logs__filters--time > * {
-        min-width: 1px;
-        position: relative;
-        float: left;
-        clear: left;
-        left: 50%;
-        transform: translateX(-50%);
-        -ms-transform: translateX(-50%); }
-    .flexbox-grid .c-logs__filters--summaryTime, .flexbox-grid .c-logs__filters--time {
-      position: relative; }
-      .flexbox-grid .c-logs__filters--summaryTime > *, .flexbox-grid .c-logs__filters--time > * {
-        float: left;
-        clear: left;
-        min-height: 1px;
-        /* need to define width */
-        outline: 5px dotted red; }
-    .no-flexbox-table .c-logs__filters--summaryTime, .no-flexbox-table .c-logs__filters--time {
-      display: table; }
-      .no-flexbox-table .c-logs__filters--summaryTime > *, .no-flexbox-table .c-logs__filters--time > * {
-        display: table-row;
-        vertical-align: middle;
-        text-align: center;
-        position: relative; }
   .c-logs__filters--summarySearch {
     width: 100%;
     margin-top: 66px;
     padding-left: 11px;
+    /*DEPRACATED*/
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -4654,35 +3188,13 @@ a {
     -ms-flex-direction: row;
     -ms-flex-pack: start;
     -ms-flex-align: start; }
-    .flexbox-grid .a-flex-v > .c-logs__filters--summarySearch {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-logs__filters--summarySearch {
-      outline: none; }
-    .flexbox-grid .c-logs__filters--summarySearch {
-      position: relative; }
-      .flexbox-grid .c-logs__filters--summarySearch > * {
-        float: left;
-        min-height: 1px; }
-    .no-flexbox .c-logs__filters--summarySearch {
-      position: relative; }
-      .no-flexbox .c-logs__filters--summarySearch > * {
-        float: left;
-        min-width: 1px; }
   .c-logs__filters--search {
     width: 100%; }
-    .flexbox-grid .a-flex-v > .c-logs__filters--search {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-logs__filters--search {
-      outline: none; }
   .c-logs__filters--helpText {
     width: 100%;
     text-align: left;
     color: #808080;
     font-style: italic; }
-    .flexbox-grid .a-flex-v > .c-logs__filters--helpText {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-logs__filters--helpText {
-      outline: none; }
   .c-logs__filters--model {
     font-size: 14px;
     line-height: 22px; }
@@ -4709,31 +3221,6 @@ a {
     -ms-flex-pack: start;
     -ms-flex-align: center;
     padding-left: 11px; }
-    .flexbox-grid .c-logs__filters--summaryTitle {
-      position: relative; }
-      .flexbox-grid .c-logs__filters--summaryTitle > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logs__filters--summaryTitle {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .c-logs__filters--summaryTitle > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .c-logs__filters--summaryTitle {
-      display: table; }
-      .no-flexbox-table .c-logs__filters--summaryTitle > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
 
 .c-logs__openFilters {
   display: flex;
@@ -4753,26 +3240,6 @@ a {
   line-height: 38.5px;
   cursor: hand;
   cursor: pointer; }
-  .flexbox-grid .c-logs__openFilters {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .c-logs__openFilters > * {
-      display: inline-block;
-      /* need to define height */
-      outline: 5px dotted red; }
-    .flexbox-grid .c-logs__openFilters > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs__openFilters {
-    position: relative;
-    text-align: center; }
-    .no-flexbox .c-logs__openFilters > * {
-      min-width: 1px;
-      position: relative;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      -ms-transform: translateY(-50%); }
   .flexbox-grid .a-flex-v > .c-logs__openFilters {
     left: calc( 50% - (( 8.33333vw / 2 )));
     position: relative;
@@ -4790,7 +3257,7 @@ a {
     position: relative;
     outline: none; }
   .c-logs__openFilters:hover {
-    background-color: #eee; }
+    background-color: rgba(0, 0, 0, 0.2); }
 
 .c-logs__closeFilters {
   width: 8.33333vw;
@@ -4821,7 +3288,7 @@ a {
     position: relative;
     outline: none; }
   .c-logs__closeFilters:hover {
-    background-color: #eee; }
+    background-color: rgba(0, 0, 0, 0.2); }
 
 .c-logs__filter {
   cursor: hand;
@@ -4837,10 +3304,6 @@ a {
   overflow: hidden;
   background-color: #fff;
   transition: height 0.3s; }
-  .flexbox-grid .a-flex-center > .c-logs__footer, .flexbox-grid .a-flex-h > .c-logs__footer {
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logs__footer {
-    outline: none; }
   .c-logs__footer .c-logs__clearAll {
     height: 44px;
     width: 6.2499975vw;
@@ -4885,35 +3348,7 @@ a {
       -ms-flex-pack: start;
       -ms-flex-align: center;
       flex: 1;
-      /*outline: 5px dotted red;*/ }
-      .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryType {
-        position: relative; }
-        .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryType > * {
-          float: left;
-          min-height: 1px;
-          position: relative;
-          /* need to define height */
-          outline: 5px dotted red; }
-      .no-flexbox .c-logs__footer--open .c-logs__cell--summaryType {
-        position: relative;
-        transform-style: preserve-3d; }
-        .no-flexbox .c-logs__footer--open .c-logs__cell--summaryType > * {
-          float: left;
-          min-height: 1px;
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          -ms-transform: translateY(-50%); }
-      .no-flexbox-table .c-logs__footer--open .c-logs__cell--summaryType {
-        display: table; }
-        .no-flexbox-table .c-logs__footer--open .c-logs__cell--summaryType > * {
-          display: table-cell;
-          vertical-align: middle;
-          /*text-align: center;*/
-          position: relative; }
-      .no-flexbox .c-logs__footer--open .c-logs__cell--summaryType {
-        /* gotta use an inverse calc() size for this to work... */
-        /*outline: 5px dotted red;*/ }
+      -ms-flex: 1 0 auto; }
     .c-logs__footer--open .c-logs__cell--summaryTitle {
       display: none; }
     .c-logs__footer--open .c-logs__cell--summaryEnvironment {
@@ -4947,31 +3382,6 @@ a {
         left: calc( 100% -  16.66666vw);
         position: relative;
         outline: none; }
-      .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryTime {
-        position: relative; }
-        .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryTime > * {
-          float: left;
-          min-height: 1px;
-          position: relative;
-          /* need to define height */
-          outline: 5px dotted red; }
-      .no-flexbox .c-logs__footer--open .c-logs__cell--summaryTime {
-        position: relative;
-        transform-style: preserve-3d; }
-        .no-flexbox .c-logs__footer--open .c-logs__cell--summaryTime > * {
-          float: left;
-          min-height: 1px;
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
-          -ms-transform: translateY(-50%); }
-      .no-flexbox-table .c-logs__footer--open .c-logs__cell--summaryTime {
-        display: table; }
-        .no-flexbox-table .c-logs__footer--open .c-logs__cell--summaryTime > * {
-          display: table-cell;
-          vertical-align: middle;
-          /*text-align: center;*/
-          position: relative; }
     .c-logs__footer--open .c-logs__closeFilters {
       display: block; }
     .c-logs__footer--open .c-logs__clearAll {
@@ -4983,26 +3393,6 @@ a {
       -ms-flex-direction: row;
       -ms-flex-pack: center;
       -ms-flex-align: center; }
-      .flexbox-grid .c-logs__footer--open .c-logs__clearAll {
-        position: relative;
-        text-align: center; }
-        .flexbox-grid .c-logs__footer--open .c-logs__clearAll > * {
-          display: inline-block;
-          /* need to define height */
-          outline: 5px dotted red; }
-        .flexbox-grid .c-logs__footer--open .c-logs__clearAll > *:nth-child(n+2) {
-          /* don't put more than one item here */
-          outline: 5px dotted red; }
-      .no-flexbox .c-logs__footer--open .c-logs__clearAll {
-        position: relative;
-        text-align: center; }
-        .no-flexbox .c-logs__footer--open .c-logs__clearAll > * {
-          min-width: 1px;
-          position: relative;
-          display: inline-block;
-          top: 50%;
-          transform: translateY(-50%);
-          -ms-transform: translateY(-50%); }
 
 .p-logs {
   /* */ }
@@ -5012,10 +3402,6 @@ a {
     height: 198px;
     cursor: hand;
     cursor: pointer; }
-    .flexbox-grid .a-flex-v > .p-logs__filters {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .p-logs__filters {
-      outline: none; }
     .flexbox-grid .a-flex-center > .p-logs__filters, .flexbox-grid .a-flex-h > .p-logs__filters {
       top: calc( 50% - ( 198px / 2 ));
       position: relative;
@@ -5056,10 +3442,6 @@ a {
         height: 1328px;
         margin-bottom: 40px;
         */ }
-    .flexbox-grid .a-flex-v > .p-logs__logDetails {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .p-logs__logDetails {
-      outline: none; }
   .p-logs__logHeader {
     display: flex;
     flex-flow: row nowrap;
@@ -5071,31 +3453,6 @@ a {
     -ms-flex-align: center;
     height: 88px;
     color: #808080; }
-    .flexbox-grid .p-logs__logHeader {
-      position: relative; }
-      .flexbox-grid .p-logs__logHeader > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .p-logs__logHeader {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .p-logs__logHeader > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .p-logs__logHeader {
-      display: table; }
-      .no-flexbox-table .p-logs__logHeader > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
     .flexbox-grid .a-flex-center > .p-logs__logHeader, .flexbox-grid .a-flex-h > .p-logs__logHeader {
       top: calc( 50% - ( 88px / 2 ));
       position: relative;
@@ -5117,26 +3474,6 @@ a {
     -ms-flex-pack: center;
     -ms-flex-align: center;
     font-weight: 500; }
-    .flexbox-grid .p-logs__logHeader--cell {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .p-logs__logHeader--cell > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .p-logs__logHeader--cell > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .p-logs__logHeader--cell {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .p-logs__logHeader--cell > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
     .p-logs__logHeader--cell .fa.fa-calendar {
       color: #eee;
       font-size: 27px;
@@ -5147,6 +3484,7 @@ a {
       font-weight: 500; }
   .p-logs__logHeader--connectionIcon {
     width: 4.166665vw;
+    /*DEPRACATED*/
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -5163,16 +3501,6 @@ a {
       left: calc( 100% -  4.166665vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .p-logs__logHeader--connectionIcon {
-      position: relative; }
-      .flexbox-grid .p-logs__logHeader--connectionIcon > * {
-        float: left;
-        min-height: 1px; }
-    .no-flexbox .p-logs__logHeader--connectionIcon {
-      position: relative; }
-      .no-flexbox .p-logs__logHeader--connectionIcon > * {
-        float: left;
-        min-width: 1px; }
   .p-logs__logHeader--connectionType {
     width: 8.33333vw; }
     .flexbox-grid .a-flex-v > .p-logs__logHeader--connectionType {
@@ -5205,30 +3533,15 @@ a {
       outline: none; }
   .p-logs__logHeader--status1 {
     flex: 1;
-    /*outline: 5px dotted red;*/
+    -ms-flex: 1 0 auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
     display: -ms-flexbox;
     -ms-flex-direction: row;
-    -ms-flex-pack: end;
+    -ms-flex-pack: right;
     -ms-flex-align: center; }
-    .no-flexbox .p-logs__logHeader--status1 {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
-    .p-logs__logHeader--status1 > *:nth-child(n+2) {
-      /* only one child */
-      outline: 5px dotted red; }
-    .no-flexbox .p-logs__logHeader--status1 {
-      position: relative;
-      text-align: right; }
-      .no-flexbox .p-logs__logHeader--status1 > * {
-        min-width: 1px;
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        transform: translateY(-50%); }
   .p-logs__logHeader--status2 {
     width: 12.499995vw; }
     .flexbox-grid .a-flex-v > .p-logs__logHeader--status2 {
@@ -5247,7 +3560,7 @@ a {
     align-items: center;
     display: -ms-flexbox;
     -ms-flex-direction: row;
-    -ms-flex-pack: end;
+    -ms-flex-pack: right;
     -ms-flex-align: center; }
     .flexbox-grid .a-flex-v > .p-logs__logHeader--time {
       left: calc( 50% - (( 12.499995vw / 2 )));
@@ -5257,18 +3570,6 @@ a {
       left: calc( 100% -  12.499995vw);
       position: relative;
       outline: none; }
-    .p-logs__logHeader--time > *:nth-child(n+2) {
-      /* only one child */
-      outline: 5px dotted red; }
-    .no-flexbox .p-logs__logHeader--time {
-      position: relative;
-      text-align: right; }
-      .no-flexbox .p-logs__logHeader--time > * {
-        min-width: 1px;
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        transform: translateY(-50%); }
   .p-logs__logNav {
     height: 55px;
     display: flex;
@@ -5288,25 +3589,6 @@ a {
       top: calc( 100% -  55px);
       position: relative;
       outline: none; }
-    .flexbox-grid .p-logs__logNav {
-      position: relative; }
-      .flexbox-grid .p-logs__logNav > * {
-        float: left;
-        min-height: 1px;
-        height: 100%; }
-    .no-flexbox .p-logs__logNav {
-      position: relative; }
-      .no-flexbox .p-logs__logNav > * {
-        float: left;
-        height: 100%;
-        min-width: 1px; }
-    .no-flexbox-table .p-logs__logNav {
-      display: table; }
-      .no-flexbox-table .p-logs__logNav > * {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-        position: relative; }
   .p-logs__logNav--navItem {
     background-color: #eee;
     border-top: 1px solid #CCCCCC;
@@ -5333,10 +3615,7 @@ a {
   line-height: 16.5px;
   padding-left: 5.5px;
   flex: 1;
-  /*outline: 5px dotted red;*/ }
-  .no-flexbox .c-logsSideNav__cell--message {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
+  -ms-flex: 1 0 auto; }
 
 .c-logsSideNav__cell--status {
   width: 10px; }
@@ -5348,10 +3627,6 @@ a {
 
 .c-logDetail {
   width: 100%; }
-  .flexbox-grid .a-flex-v > .c-logDetail {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .c-logDetail {
-    outline: none; }
   .c-logDetail .fa {
     margin-right: 5px !important; }
   .c-logDetail__logHeader {
@@ -5367,31 +3642,6 @@ a {
     color: #666666;
     font-size: 16px;
     line-height: 33px; }
-    .flexbox-grid .c-logDetail__logHeader {
-      position: relative; }
-      .flexbox-grid .c-logDetail__logHeader > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logDetail__logHeader {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .c-logDetail__logHeader > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .c-logDetail__logHeader {
-      display: table; }
-      .no-flexbox-table .c-logDetail__logHeader > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
     .flexbox-grid .a-flex-center > .c-logDetail__logHeader, .flexbox-grid .a-flex-h > .c-logDetail__logHeader {
       top: calc( 50% - ( 88px / 2 ));
       position: relative;
@@ -5412,7 +3662,7 @@ a {
       outline: none; }
   .c-logDetail__logHeader--dataModel {
     flex: 1;
-    /*outline: 5px dotted red;*/
+    -ms-flex: 1 0 auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -5421,34 +3671,6 @@ a {
     -ms-flex-direction: row;
     -ms-flex-pack: start;
     -ms-flex-align: center; }
-    .no-flexbox .c-logDetail__logHeader--dataModel {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
-    .flexbox-grid .c-logDetail__logHeader--dataModel {
-      position: relative; }
-      .flexbox-grid .c-logDetail__logHeader--dataModel > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        /* need to define height */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logDetail__logHeader--dataModel {
-      position: relative;
-      transform-style: preserve-3d; }
-      .no-flexbox .c-logDetail__logHeader--dataModel > * {
-        float: left;
-        min-height: 1px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-    .no-flexbox-table .c-logDetail__logHeader--dataModel {
-      display: table; }
-      .no-flexbox-table .c-logDetail__logHeader--dataModel > * {
-        display: table-cell;
-        vertical-align: middle;
-        /*text-align: center;*/
-        position: relative; }
   .c-logDetail__logHeader--dataModelIcon {
     font-size: 16px;
     line-height: 33px;
@@ -5479,26 +3701,6 @@ a {
       left: calc( 100% -  4.166665vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .c-logDetail__logHeader--status {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .c-logDetail__logHeader--status > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .c-logDetail__logHeader--status > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logDetail__logHeader--status {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .c-logDetail__logHeader--status > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
   .c-logDetail__logHeader--environment {
     width: 10.4166625vw;
     display: flex;
@@ -5517,26 +3719,6 @@ a {
       left: calc( 100% -  10.4166625vw);
       position: relative;
       outline: none; }
-    .flexbox-grid .c-logDetail__logHeader--environment {
-      position: relative;
-      text-align: center; }
-      .flexbox-grid .c-logDetail__logHeader--environment > * {
-        display: inline-block;
-        /* need to define height */
-        outline: 5px dotted red; }
-      .flexbox-grid .c-logDetail__logHeader--environment > *:nth-child(n+2) {
-        /* don't put more than one item here */
-        outline: 5px dotted red; }
-    .no-flexbox .c-logDetail__logHeader--environment {
-      position: relative;
-      text-align: center; }
-      .no-flexbox .c-logDetail__logHeader--environment > * {
-        min-width: 1px;
-        position: relative;
-        display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
   .c-logDetail__logHeader--time {
     width: 10.4166625vw;
     display: flex;
@@ -5545,7 +3727,7 @@ a {
     align-items: center;
     display: -ms-flexbox;
     -ms-flex-direction: row;
-    -ms-flex-pack: end;
+    -ms-flex-pack: right;
     -ms-flex-align: center; }
     .flexbox-grid .a-flex-v > .c-logDetail__logHeader--time {
       left: calc( 50% - (( 10.4166625vw / 2 )));
@@ -5555,18 +3737,6 @@ a {
       left: calc( 100% -  10.4166625vw);
       position: relative;
       outline: none; }
-    .c-logDetail__logHeader--time > *:nth-child(n+2) {
-      /* only one child */
-      outline: 5px dotted red; }
-    .no-flexbox .c-logDetail__logHeader--time {
-      position: relative;
-      text-align: right; }
-      .no-flexbox .c-logDetail__logHeader--time > * {
-        min-width: 1px;
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        transform: translateY(-50%); }
   .c-logDetail__tabNav {
     height: 55px;
     border-left: 1px solid #CCCCCC;
@@ -5592,12 +3762,9 @@ a {
     border: 1px solid #CCCCCC;
     min-height: 176px;
     background: #EEE; }
-    .flexbox-grid .a-flex-v > .c-logDetail__logContent {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-logDetail__logContent {
-      outline: none; }
 
 .c-profile__content {
+  /*DEPRACATED*/
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -5606,26 +3773,13 @@ a {
   -ms-flex-direction: row;
   -ms-flex-pack: start;
   -ms-flex-align: start; }
-  .flexbox-grid .c-profile__content {
-    position: relative; }
-    .flexbox-grid .c-profile__content > * {
-      float: left;
-      min-height: 1px; }
-  .no-flexbox .c-profile__content {
-    position: relative; }
-    .no-flexbox .c-profile__content > * {
-      float: left;
-      min-width: 1px; }
   @media (max-width: 768px) {
     .c-profile__content {
       display: block !important; } }
 
 .c-profile__avatarCol {
   flex: 1;
-  /*outline: 5px dotted red;*/ }
-  .no-flexbox .c-profile__avatarCol {
-    /* gotta use an inverse calc() size for this to work... */
-    /*outline: 5px dotted red;*/ }
+  -ms-flex: 1 0 auto; }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__avatarCol {
@@ -5633,11 +3787,7 @@ a {
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__avatarCol {
-    width: 100% !important; }
-    .flexbox-grid .a-flex-v > .c-profile__avatarCol {
-      outline: none !important; }
-    .flexbox-grid .a-flex-v-end > .c-profile__avatarCol {
-      outline: none !important; } }
+    width: 100% !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__avatarCol {
@@ -5665,11 +3815,7 @@ a {
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__avatar {
-    width: 100% !important; }
-    .flexbox-grid .a-flex-v > .c-profile__avatar {
-      outline: none !important; }
-    .flexbox-grid .a-flex-v-end > .c-profile__avatar {
-      outline: none !important; } }
+    width: 100% !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__avatar {
@@ -5716,7 +3862,7 @@ a {
     position: relative;
     outline: none; }
   .c-profile__btn:hover {
-    background-color: #eee; }
+    background-color: rgba(0, 0, 0, 0.2); }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__btn {
@@ -5724,11 +3870,7 @@ a {
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__btn {
-    width: 100% !important; }
-    .flexbox-grid .a-flex-v > .c-profile__btn {
-      outline: none !important; }
-    .flexbox-grid .a-flex-v-end > .c-profile__btn {
-      outline: none !important; } }
+    width: 100% !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__btn {
@@ -5751,11 +3893,7 @@ a {
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__contentCol {
-    width: 100% !important; }
-    .flexbox-grid .a-flex-v > .c-profile__contentCol {
-      outline: none !important; }
-    .flexbox-grid .a-flex-v-end > .c-profile__contentCol {
-      outline: none !important; } }
+    width: 100% !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__contentCol {
@@ -5820,10 +3958,6 @@ a {
   margin-bottom: 22px;
   clear: left;
   float: left; }
-  .flexbox-grid .a-flex-v > .c-profile__categories {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .c-profile__categories {
-    outline: none; }
   .c-profile__categories:before, .c-profile__categories:after {
     content: " ";
     display: table; }
@@ -5889,10 +4023,6 @@ a {
   float: left;
   width: 100%;
   clear: both; }
-  .flexbox-grid .a-flex-v > .c-profile__contacts {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .c-profile__contacts {
-    outline: none; }
 
 .c-profile__contactsItem {
   width: 50%;
@@ -5928,11 +4058,7 @@ a {
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__contactsItemAvatar {
-    width: 100% !important; }
-    .flexbox-grid .a-flex-v > .c-profile__contactsItemAvatar {
-      outline: none !important; }
-    .flexbox-grid .a-flex-v-end > .c-profile__contactsItemAvatar {
-      outline: none !important; } }
+    width: 100% !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
   .c-profile__contactsItemAvatar {
@@ -5953,10 +4079,6 @@ a {
   height: 152px;
   clear: both;
   background-image: url("../images/prototype/profileTechInfo.png"); }
-  .flexbox-grid .a-flex-v > .p-profile__contacts {
-    outline: none; }
-  .flexbox-grid .a-flex-v-end > .p-profile__contacts {
-    outline: none; }
 
 .c-profileFormLayout__avatarColumn {
   width: 14.5833275vw;
@@ -7932,10 +6054,6 @@ span.remove-new-override-field:hover {
     font-size: 17px;
     line-height: 38.5px;
     line-height: 44px; }
-    .flexbox-grid .a-flex-v > .c-galleryNav__title {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-galleryNav__title {
-      outline: none; }
     .flexbox-grid .a-flex-center > .c-galleryNav__title, .flexbox-grid .a-flex-h > .c-galleryNav__title {
       top: calc( 50% - ( 44px / 2 ));
       position: relative;
@@ -7963,10 +6081,6 @@ span.remove-new-override-field:hover {
                 { .c-galleryNav__group__item }
                 { .c-galleryNav__group__item };*/
     width: 100%; }
-    .flexbox-grid .a-flex-v > .c-galleryNav__group {
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-galleryNav__group {
-      outline: none; }
     .c-galleryNav__group__title {
       /* -ctag-example: ...Group Title;*/
       width: 100%;
@@ -7982,10 +6096,6 @@ span.remove-new-override-field:hover {
       cursor: hand;
       cursor: pointer;
       border-bottom: 1px solid #CCCCCC; }
-      .flexbox-grid .a-flex-v > .c-galleryNav__group__title {
-        outline: none; }
-      .flexbox-grid .a-flex-v-end > .c-galleryNav__group__title {
-        outline: none; }
       .flexbox-grid .a-flex-center > .c-galleryNav__group__title, .flexbox-grid .a-flex-h > .c-galleryNav__group__title {
         top: calc( 50% - ( 33px / 2 ));
         position: relative;
@@ -8018,10 +6128,6 @@ span.remove-new-override-field:hover {
       cursor: hand;
       cursor: pointer;
       display: none; }
-      .flexbox-grid .a-flex-v > .c-galleryNav__group__item {
-        outline: none; }
-      .flexbox-grid .a-flex-v-end > .c-galleryNav__group__item {
-        outline: none; }
       .flexbox-grid .a-flex-center > .c-galleryNav__group__item, .flexbox-grid .a-flex-h > .c-galleryNav__group__item {
         top: calc( 50% - ( 33px / 2 ));
         position: relative;

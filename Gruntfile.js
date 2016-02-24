@@ -27,15 +27,12 @@ module.exports = function(grunt) {
         files: {
             'dist/csscore':
             [
-                'cssmodeling/css_schemes.json',
                 'cssmodeling/systems/css_rows_quartered.json',
-                'cssmodeling/systems/css_12_col_vw_quartered.json',
-                // 'cssmodeling/systems/css_flex_layouts.json',
-                'cssmodeling/systems/css_stack_layouts.json',
-                'cssmodeling/skins/css_redox_skin.json',
+                'cssmodeling/systems/css_col_12_quartered_viewport.json',
+                'cssmodeling/systems/css_flex_layouts.json',
                 'cssmodeling/systems/css_simple.json',
-                'cssmodeling/css_states.json'//,
-                //'cssmodeling/js/css_simple.js'
+
+                'cssmodeling/skins/css_redox_skin.json',
             ]
         },
         options: {

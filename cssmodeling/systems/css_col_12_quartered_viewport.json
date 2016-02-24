@@ -15,11 +15,18 @@
 						["","-quarter","-half","-three-quarters"]
 					}
 		},
+        "12col-eigths-scale":{
+			"shortcut":"<em>@base</em>-(-quarter, -half, -three-quarters)",
+			"scheme":{"@base":
+						["","-eighth","-quarter","-three-eighths","-half",
+                            "-five-eigths","-three-quarters","-seven-eigths"]
+					}
+		},
 		"12col-12-cols-quartered":{
 			"shortcut":"<em>@base</em>-[ 0,quarter,half,three-quarters,1,...,11-half,11-three-quarters,12]",
 			"scheme":{"@base":
 						[
-							{"":"scheme:12col-quarters-scale"},
+							{"":"scheme:12col-eigths-scale"},
 							{"-0":[""]},
 							{"-1":"scheme:12col-quarters-scale"},
 							{"-2":"scheme:12col-quarters-scale"},
@@ -57,7 +64,11 @@
             "base":"col",
             "scheme":"12col-12-cols-quartered",
             "values":[
-                "_@_v-col","_@_v-col * .25","_@_v-col* .5","_@_v-col* .75",
+                "_@_v-col",
+                    "_@_v-col * .125","_@_v-col * .25",
+                    "_@_v-col * .375","_@_v-col * .5",
+                    "_@_v-col * .625","_@_v-col * .75",
+                    "_@_v-col * .875",
                 "0",
                 "_@_v-col","_@_v-col * 1.25","_@_v-col * 1.5","_@_v-col * 1.75",
                 "_@_v-col * 2","_@_v-col * 2.25","_@_v-col * 2.5","_@_v-col * 2.75",

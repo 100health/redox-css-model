@@ -53,7 +53,7 @@ module.exports = {
                                     "data_model" ,
                                     pd.config.data_model.data.length
                                 );
-                                
+
             this.search_categories =  pd.generateArray(
                                     "search_category" ,
                                     pd.config.search_category.data.length
@@ -117,13 +117,13 @@ module.exports = {
             this.icon = data_obj.icon;
         },
         data:[
-            {name:"Profile",icon:"ion-ios7-contact-outline",link:"profile"},
             {name:"Connections",icon:"ion-arrow-expand",link:"connections"},
             /*{name:"Messages",icon:"ion-clipboard",link:"messages"},
             {name:"Transmissions",icon:"ion-arrow-expand",link:"transmissions"},
             {name:"Errors",icon:"ion-alert-circled",link:"errors"},*/
             {name:"Logs",icon:"ion-clipboard",link:"logs"},
             {name:"Dev-Tools",icon:"ion-code",link:"dev_tools"},
+            {name:"Profile",icon:"ion-ios7-contact-outline",link:"profile"},
             {name:"Users",icon:"ion-ios7-people",link:"users"}
             // {name:"TEST",icon:"ion-ios-browsers",link:"test"}
         ]
@@ -196,7 +196,7 @@ module.exports = {
             {name:"Vaccine",icon:"fa-eyedropper"},
         ]
     },
-    
+
     search_category:{
         init:function ( pd , index , config_obj ) {
             var data_obj = config_obj.data[ index ];
@@ -224,7 +224,7 @@ module.exports = {
             {name:"Wellness / Fitness",icon:"fa fa-heartbeat"},
         ]
     },
-    
+
     connection:{
         init:function ( pd ) {
             this.title = pd.db_random( "noun" ) + " " + pd.db_random( "noun" ) + " Connection";
