@@ -866,12 +866,12 @@ input {
 
 .c-dataModelSelector {
   position: relative;
-  border-bottom: 1px solid #eee;
   height: auto; }
   .c-dataModelSelector label {
     border: none; }
   .c-dataModelSelector__itemsContainer {
     width: calc( 100% - 12.499995vw);
+    border-bottom: 1px solid #CCCCCC;
     float: right; }
   .c-dataModelSelector__item {
     width: 16.666%;
@@ -950,12 +950,12 @@ input {
 
 .c-searchCategoriesSelector {
   position: relative;
-  border-bottom: 1px solid #eee;
   height: auto; }
   .c-searchCategoriesSelector label {
     border: none; }
   .c-searchCategoriesSelector__itemsContainer {
     width: calc( 100% - 12.499995vw);
+    border-bottom: 1px solid #CCCCCC;
     float: right; }
   .c-searchCategoriesSelector__item {
     width: 16.666%;
@@ -5988,6 +5988,11 @@ a {
 
 .c-profileFormLayout__element--overview {
   height: auto; }
+
+.c-profileFormLayout__element--public input[type='checkbox'] {
+  cursor: hand;
+  cursor: pointer;
+  color: transparent !important; }
 
 .c-profileFormLayout__element--public input[type='checkbox']:checked {
   background-image: url("../images/check.svg");
