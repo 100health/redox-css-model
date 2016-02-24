@@ -2183,20 +2183,50 @@ var Profile = React.createClass({displayName: "Profile",
 
                                     React.createElement("div", {className: "c-profile__contacts"}, 
                                         
+                                        
                                         React.createElement("div", {className: "c-profile__contactsItem"}, 
                                             React.createElement("div", {className: "c-profile__contactsItemTitle"}, 
                                                 "Implementation Lead"
                                             ), 
-                                            React.createElement("div", {className: "a-flex-h"}, 
-                                                React.createElement("div", {className: "c-profile__contactsItemAvatar"}
-                                                    
-                                                ), 
-                                                React.createElement("div", {className: "c-profile__contactsItemInfo"}
-                                                    
-                                                )
+                                            React.createElement("div", {className: "c-profile__contactsItemAvatar", 
+                                                style: {"background-image":
+                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}
+                                            ), 
+                                            React.createElement("div", {className: "c-profile__contactsItemInfo"}, 
+                                                React.createElement("div", null, "Joe Redox"), 
+                                                React.createElement("div", null, React.createElement("a", {href: "mailto:joe@redoxengine.com"}, "joe@redoxengine.com"))
+                                            )
+                                        ), 
+                                        
+                                        React.createElement("div", {className: "c-profile__contactsItem"}, 
+                                            React.createElement("div", {className: "c-profile__contactsItemTitle"}, 
+                                                "Technical Lead"
+                                            ), 
+                                            React.createElement("div", {className: "c-profile__contactsItemAvatar", 
+                                                style: {"background-image":
+                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}
+                                            ), 
+                                            React.createElement("div", {className: "c-profile__contactsItemInfo"}, 
+                                                React.createElement("div", null, "Jolenne Redox"), 
+                                                React.createElement("div", null, React.createElement("a", {href: "mailto:jolenne@redoxengine.com"}, "jolenne@redoxengine.com"))
+                                            )
+                                        ), 
+                                        
+                                        React.createElement("div", {className: "c-profile__contactsItem"}, 
+                                            React.createElement("div", {className: "c-profile__contactsItemTitle"}, 
+                                                "Implementation Lead"
+                                            ), 
+                                            React.createElement("div", {className: "c-profile__contactsItemAvatar", 
+                                                style: {"background-image":
+                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}
+                                            ), 
+                                            React.createElement("div", {className: "c-profile__contactsItemInfo"}, 
+                                                React.createElement("div", null, "Joe Redox"), 
+                                                React.createElement("div", null, React.createElement("a", {href: "mailto:joe@redoxengine.com"}, "joe@redoxengine.com"))
                                             )
                                         )
-                                        
+
+
                                     )
 
                                 )

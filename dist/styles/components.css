@@ -1471,7 +1471,7 @@ input {
     .o-list--footer .o-list__cell:first-of-type {
       border-left: none; }
 
-.o-button, .o-tabs__item, .o-devToolsApp__rightNavItem, .o-devToolsOutput__navItem, .p-logs__logNav--navItem, .o-roundedButton, .c-connectionsModal__verifyBtn, .c-devTools__setDefaultBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy, .o-devToolsOutput__navAction, .o-devToolsLanding__action {
+.o-button, .o-tabs__item, .o-devToolsApp__rightNavItem, .o-devToolsOutput__navItem, .p-logs__logNav--navItem, .o-roundedButton, .c-connectionsModal__verifyBtn, .c-devTools__setDefaultBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy, .o-devToolsOutput__navAction, .o-devToolsLanding__action, .c-logs__footer .c-logs__clearAll {
   /* -ctag-example: <button ...>Button</button>;*/
   /* -ctag-status: prod;*/
   width: 16.66666vw;
@@ -1492,64 +1492,64 @@ input {
   /*&:not(button) {// never do this to a div....
             @include a-misused;
         }*/ }
-  .flexbox-grid .a-flex-v > .o-button, .flexbox-grid .a-flex-v > .o-tabs__item, .flexbox-grid .a-flex-v > .o-devToolsApp__rightNavItem, .flexbox-grid .a-flex-v > .o-devToolsOutput__navItem, .flexbox-grid .a-flex-v > .p-logs__logNav--navItem, .flexbox-grid .a-flex-v > .o-roundedButton, .flexbox-grid .a-flex-v > .c-connectionsModal__verifyBtn, .flexbox-grid .a-flex-v > .c-devTools__setDefaultBtn, .flexbox-grid .a-flex-v > .c-devTools__sendBtn, .flexbox-grid .a-flex-v > .o-devToolsOutput__copy, .flexbox-grid .a-flex-v > .o-devToolsOutput__navAction, .flexbox-grid .a-flex-v > .o-devToolsLanding__action {
+  .flexbox-grid .a-flex-v > .o-button, .flexbox-grid .a-flex-v > .o-tabs__item, .flexbox-grid .a-flex-v > .o-devToolsApp__rightNavItem, .flexbox-grid .a-flex-v > .o-devToolsOutput__navItem, .flexbox-grid .a-flex-v > .p-logs__logNav--navItem, .flexbox-grid .a-flex-v > .o-roundedButton, .flexbox-grid .a-flex-v > .c-connectionsModal__verifyBtn, .flexbox-grid .a-flex-v > .c-devTools__setDefaultBtn, .flexbox-grid .a-flex-v > .c-devTools__sendBtn, .flexbox-grid .a-flex-v > .o-devToolsOutput__copy, .flexbox-grid .a-flex-v > .o-devToolsOutput__navAction, .flexbox-grid .a-flex-v > .o-devToolsLanding__action, .flexbox-grid .c-logs__footer .a-flex-v > .c-logs__clearAll, .c-logs__footer .flexbox-grid .a-flex-v > .c-logs__clearAll {
     left: calc( 50% - (( 16.66666vw / 2 )));
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-v-end > .o-button, .flexbox-grid .a-flex-v-end > .o-tabs__item, .flexbox-grid .a-flex-v-end > .o-devToolsApp__rightNavItem, .flexbox-grid .a-flex-v-end > .o-devToolsOutput__navItem, .flexbox-grid .a-flex-v-end > .p-logs__logNav--navItem, .flexbox-grid .a-flex-v-end > .o-roundedButton, .flexbox-grid .a-flex-v-end > .c-connectionsModal__verifyBtn, .flexbox-grid .a-flex-v-end > .c-devTools__setDefaultBtn, .flexbox-grid .a-flex-v-end > .c-devTools__sendBtn, .flexbox-grid .a-flex-v-end > .o-devToolsOutput__copy, .flexbox-grid .a-flex-v-end > .o-devToolsOutput__navAction, .flexbox-grid .a-flex-v-end > .o-devToolsLanding__action {
+  .flexbox-grid .a-flex-v-end > .o-button, .flexbox-grid .a-flex-v-end > .o-tabs__item, .flexbox-grid .a-flex-v-end > .o-devToolsApp__rightNavItem, .flexbox-grid .a-flex-v-end > .o-devToolsOutput__navItem, .flexbox-grid .a-flex-v-end > .p-logs__logNav--navItem, .flexbox-grid .a-flex-v-end > .o-roundedButton, .flexbox-grid .a-flex-v-end > .c-connectionsModal__verifyBtn, .flexbox-grid .a-flex-v-end > .c-devTools__setDefaultBtn, .flexbox-grid .a-flex-v-end > .c-devTools__sendBtn, .flexbox-grid .a-flex-v-end > .o-devToolsOutput__copy, .flexbox-grid .a-flex-v-end > .o-devToolsOutput__navAction, .flexbox-grid .a-flex-v-end > .o-devToolsLanding__action, .flexbox-grid .c-logs__footer .a-flex-v-end > .c-logs__clearAll, .c-logs__footer .flexbox-grid .a-flex-v-end > .c-logs__clearAll {
     left: calc( 100% -  16.66666vw);
     position: relative;
     outline: none; }
-  .flexbox-grid .o-button, .flexbox-grid .o-tabs__item, .flexbox-grid .o-devToolsApp__rightNavItem, .flexbox-grid .o-devToolsOutput__navItem, .flexbox-grid .p-logs__logNav--navItem, .flexbox-grid .o-roundedButton, .flexbox-grid .c-connectionsModal__verifyBtn, .flexbox-grid .c-devTools__setDefaultBtn, .flexbox-grid .c-devTools__sendBtn, .flexbox-grid .o-devToolsOutput__copy, .flexbox-grid .o-devToolsOutput__navAction, .flexbox-grid .o-devToolsLanding__action {
+  .flexbox-grid .o-button, .flexbox-grid .o-tabs__item, .flexbox-grid .o-devToolsApp__rightNavItem, .flexbox-grid .o-devToolsOutput__navItem, .flexbox-grid .p-logs__logNav--navItem, .flexbox-grid .o-roundedButton, .flexbox-grid .c-connectionsModal__verifyBtn, .flexbox-grid .c-devTools__setDefaultBtn, .flexbox-grid .c-devTools__sendBtn, .flexbox-grid .o-devToolsOutput__copy, .flexbox-grid .o-devToolsOutput__navAction, .flexbox-grid .o-devToolsLanding__action, .flexbox-grid .c-logs__footer .c-logs__clearAll, .c-logs__footer .flexbox-grid .c-logs__clearAll {
     position: relative;
     text-align: center; }
-    .flexbox-grid .o-button > *, .flexbox-grid .o-tabs__item > *, .flexbox-grid .o-devToolsApp__rightNavItem > *, .flexbox-grid .o-devToolsOutput__navItem > *, .flexbox-grid .p-logs__logNav--navItem > *, .flexbox-grid .o-roundedButton > *, .flexbox-grid .c-connectionsModal__verifyBtn > *, .flexbox-grid .c-devTools__setDefaultBtn > *, .flexbox-grid .c-devTools__sendBtn > *, .flexbox-grid .o-devToolsOutput__copy > *, .flexbox-grid .o-devToolsOutput__navAction > *, .flexbox-grid .o-devToolsLanding__action > * {
+    .flexbox-grid .o-button > *, .flexbox-grid .o-tabs__item > *, .flexbox-grid .o-devToolsApp__rightNavItem > *, .flexbox-grid .o-devToolsOutput__navItem > *, .flexbox-grid .p-logs__logNav--navItem > *, .flexbox-grid .o-roundedButton > *, .flexbox-grid .c-connectionsModal__verifyBtn > *, .flexbox-grid .c-devTools__setDefaultBtn > *, .flexbox-grid .c-devTools__sendBtn > *, .flexbox-grid .o-devToolsOutput__copy > *, .flexbox-grid .o-devToolsOutput__navAction > *, .flexbox-grid .o-devToolsLanding__action > *, .flexbox-grid .c-logs__footer .c-logs__clearAll > *, .c-logs__footer .flexbox-grid .c-logs__clearAll > * {
       display: inline-block;
       /* need to define height */
       outline: 5px dotted red; }
-    .flexbox-grid .o-button > *:nth-child(n+2), .flexbox-grid .o-tabs__item > *:nth-child(n+2), .flexbox-grid .o-devToolsApp__rightNavItem > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__navItem > *:nth-child(n+2), .flexbox-grid .p-logs__logNav--navItem > *:nth-child(n+2), .flexbox-grid .o-roundedButton > *:nth-child(n+2), .flexbox-grid .c-connectionsModal__verifyBtn > *:nth-child(n+2), .flexbox-grid .c-devTools__setDefaultBtn > *:nth-child(n+2), .flexbox-grid .c-devTools__sendBtn > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__copy > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__navAction > *:nth-child(n+2), .flexbox-grid .o-devToolsLanding__action > *:nth-child(n+2) {
+    .flexbox-grid .o-button > *:nth-child(n+2), .flexbox-grid .o-tabs__item > *:nth-child(n+2), .flexbox-grid .o-devToolsApp__rightNavItem > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__navItem > *:nth-child(n+2), .flexbox-grid .p-logs__logNav--navItem > *:nth-child(n+2), .flexbox-grid .o-roundedButton > *:nth-child(n+2), .flexbox-grid .c-connectionsModal__verifyBtn > *:nth-child(n+2), .flexbox-grid .c-devTools__setDefaultBtn > *:nth-child(n+2), .flexbox-grid .c-devTools__sendBtn > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__copy > *:nth-child(n+2), .flexbox-grid .o-devToolsOutput__navAction > *:nth-child(n+2), .flexbox-grid .o-devToolsLanding__action > *:nth-child(n+2), .flexbox-grid .c-logs__footer .c-logs__clearAll > *:nth-child(n+2), .c-logs__footer .flexbox-grid .c-logs__clearAll > *:nth-child(n+2) {
       /* don't put more than one item here */
       outline: 5px dotted red; }
-  .no-flexbox .o-button, .no-flexbox .o-tabs__item, .no-flexbox .o-devToolsApp__rightNavItem, .no-flexbox .o-devToolsOutput__navItem, .no-flexbox .p-logs__logNav--navItem, .no-flexbox .o-roundedButton, .no-flexbox .c-connectionsModal__verifyBtn, .no-flexbox .c-devTools__setDefaultBtn, .no-flexbox .c-devTools__sendBtn, .no-flexbox .o-devToolsOutput__copy, .no-flexbox .o-devToolsOutput__navAction, .no-flexbox .o-devToolsLanding__action {
+  .no-flexbox .o-button, .no-flexbox .o-tabs__item, .no-flexbox .o-devToolsApp__rightNavItem, .no-flexbox .o-devToolsOutput__navItem, .no-flexbox .p-logs__logNav--navItem, .no-flexbox .o-roundedButton, .no-flexbox .c-connectionsModal__verifyBtn, .no-flexbox .c-devTools__setDefaultBtn, .no-flexbox .c-devTools__sendBtn, .no-flexbox .o-devToolsOutput__copy, .no-flexbox .o-devToolsOutput__navAction, .no-flexbox .o-devToolsLanding__action, .no-flexbox .c-logs__footer .c-logs__clearAll, .c-logs__footer .no-flexbox .c-logs__clearAll {
     position: relative;
     text-align: center; }
-    .no-flexbox .o-button > *, .no-flexbox .o-tabs__item > *, .no-flexbox .o-devToolsApp__rightNavItem > *, .no-flexbox .o-devToolsOutput__navItem > *, .no-flexbox .p-logs__logNav--navItem > *, .no-flexbox .o-roundedButton > *, .no-flexbox .c-connectionsModal__verifyBtn > *, .no-flexbox .c-devTools__setDefaultBtn > *, .no-flexbox .c-devTools__sendBtn > *, .no-flexbox .o-devToolsOutput__copy > *, .no-flexbox .o-devToolsOutput__navAction > *, .no-flexbox .o-devToolsLanding__action > * {
+    .no-flexbox .o-button > *, .no-flexbox .o-tabs__item > *, .no-flexbox .o-devToolsApp__rightNavItem > *, .no-flexbox .o-devToolsOutput__navItem > *, .no-flexbox .p-logs__logNav--navItem > *, .no-flexbox .o-roundedButton > *, .no-flexbox .c-connectionsModal__verifyBtn > *, .no-flexbox .c-devTools__setDefaultBtn > *, .no-flexbox .c-devTools__sendBtn > *, .no-flexbox .o-devToolsOutput__copy > *, .no-flexbox .o-devToolsOutput__navAction > *, .no-flexbox .o-devToolsLanding__action > *, .no-flexbox .c-logs__footer .c-logs__clearAll > *, .c-logs__footer .no-flexbox .c-logs__clearAll > * {
       min-width: 1px;
       position: relative;
       display: inline-block;
       top: 50%;
       transform: translateY(-50%);
       -ms-transform: translateY(-50%); }
-  .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-roundedButton:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__setDefaultBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover {
+  .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-roundedButton:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__setDefaultBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover, .c-logs__footer .c-logs__clearAll:hover {
     text-decoration: none; }
-  .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-roundedButton:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__setDefaultBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover {
+  .o-button:hover, .o-tabs__item:hover, .o-devToolsApp__rightNavItem:hover, .o-devToolsOutput__navItem:hover, .p-logs__logNav--navItem:hover, .o-roundedButton:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__setDefaultBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover, .o-devToolsLanding__action:hover, .c-logs__footer .c-logs__clearAll:hover {
     color: #1A1A1A; }
-  .o-button--disabled, .o-button:disabled, .o-tabs__item:disabled, .o-devToolsApp__rightNavItem:disabled, .o-devToolsOutput__navItem:disabled, .p-logs__logNav--navItem:disabled, .o-roundedButton--disabled, .o-roundedButton:disabled, .c-connectionsModal__verifyBtn:disabled, .c-devTools__setDefaultBtn:disabled, .c-devTools__sendBtn:disabled, .o-devToolsOutput__copy:disabled, .o-devToolsOutput__navAction:disabled, .o-devToolsLanding__action:disabled {
+  .o-button--disabled, .o-button:disabled, .o-tabs__item:disabled, .o-devToolsApp__rightNavItem:disabled, .o-devToolsOutput__navItem:disabled, .p-logs__logNav--navItem:disabled, .o-roundedButton--disabled, .o-roundedButton:disabled, .c-connectionsModal__verifyBtn:disabled, .c-devTools__setDefaultBtn:disabled, .c-devTools__sendBtn:disabled, .o-devToolsOutput__copy:disabled, .o-devToolsOutput__navAction:disabled, .o-devToolsLanding__action:disabled, .c-logs__footer .c-logs__clearAll:disabled {
     color: #B3B3B3; }
   .o-button--blurred, .o-tabs__item:not(.o-tabs__item--selected), .o-roundedButton--blurred {
     background-color: #eee;
     color: #999999; }
     .o-button--blurred:hover, .o-tabs__item:hover:not(.o-tabs__item--selected), .o-roundedButton--blurred:hover {
       background-color: #fff; }
-  .o-button--redox-green, .o-roundedButton--redox-green, .c-connectionsModal__verifyBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy, .o-devToolsOutput__navAction {
+  .o-button--redox-green, .o-roundedButton--redox-green, .c-connectionsModal__verifyBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy {
     /* */
     background-color: #00b588;
     border: none;
     color: #fff; }
-    .o-button--redox-green:hover, .o-roundedButton--redox-green:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover {
+    .o-button--redox-green:hover, .o-roundedButton--redox-green:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover {
       background-color: #00DFA7; }
-    .o-button--redox-green:hover, .o-roundedButton--redox-green:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover, .o-devToolsOutput__navAction:hover {
+    .o-button--redox-green:hover, .o-roundedButton--redox-green:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover {
       color: #fff; }
 
-button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button.o-devToolsOutput__navItem, button.p-logs__logNav--navItem, button.o-roundedButton, button.c-connectionsModal__verifyBtn, button.c-devTools__setDefaultBtn, button.c-devTools__sendBtn, button.o-devToolsOutput__copy, button.o-devToolsOutput__navAction, button.o-devToolsLanding__action {
+button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button.o-devToolsOutput__navItem, button.p-logs__logNav--navItem, button.o-roundedButton, button.c-connectionsModal__verifyBtn, button.c-devTools__setDefaultBtn, button.c-devTools__sendBtn, button.o-devToolsOutput__copy, button.o-devToolsOutput__navAction, button.o-devToolsLanding__action, .c-logs__footer button.c-logs__clearAll {
   outline: 5px dotted red; }
 
-.o-roundedButton, .c-connectionsModal__verifyBtn, .c-devTools__setDefaultBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy, .o-devToolsOutput__navAction, .o-devToolsLanding__action {
+.o-roundedButton, .c-connectionsModal__verifyBtn, .c-devTools__setDefaultBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy, .o-devToolsOutput__navAction, .o-devToolsLanding__action, .c-logs__footer .c-logs__clearAll {
   /* -ctag-example: <button ...>Button</button>;*/
   /* -ctag-status: prod;*/
   border-radius: 3px;
   border: 1px solid #eee; }
-  .o-roundedButton--redox-green, .c-connectionsModal__verifyBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy, .o-devToolsOutput__navAction {
+  .o-roundedButton--redox-green, .c-connectionsModal__verifyBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy {
     /* */
     border: none; }
 
@@ -3563,7 +3563,7 @@ a {
     outline: none; }
 
 .o-devToolsApp__rightNav {
-  height: 55px;
+  height: 66px;
   background-color: #eee;
   display: flex;
   flex-flow: row nowrap;
@@ -3574,11 +3574,11 @@ a {
   -ms-flex-pack: start;
   -ms-flex-align: stretch; }
   .flexbox-grid .a-flex-center > .o-devToolsApp__rightNav, .flexbox-grid .a-flex-h > .o-devToolsApp__rightNav {
-    top: calc( 50% - ( 55px / 2 ));
+    top: calc( 50% - ( 66px / 2 ));
     position: relative;
     outline: none; }
   .flexbox-grid .a-flex-h-end > .o-devToolsApp__rightNav {
-    top: calc( 100% -  55px);
+    top: calc( 100% -  66px);
     position: relative;
     outline: none; }
   .flexbox-grid .o-devToolsApp__rightNav {
@@ -3602,12 +3602,14 @@ a {
       position: relative; }
 
 .o-devToolsApp__rightNavItem {
-  background-color: #eee; }
+  background-color: #eee;
+  font-size: 16px;
+  line-height: 33px; }
   .o-devToolsApp__rightNavItem--selected {
     background-color: #fff; }
 
 .o-devToolsApp__rightContent {
-  height: calc( 100% - 55px);
+  height: calc( 100% - 66px);
   padding-left: 2.0833325vw;
   padding-right: 2.0833325vw;
   padding-top: 22px;
@@ -3755,8 +3757,11 @@ a {
       /* gotta use an inverse calc() size for this to work... */
       /*outline: 5px dotted red;*/ }
   .o-devToolsOutput__navAction {
+    background-color: #000;
+    border: none;
     width: 12.499995vw;
     height: 44px;
+    color: #fff;
     margin-right: 5.5px; }
     .flexbox-grid .a-flex-v > .o-devToolsOutput__navAction {
       left: calc( 50% - (( 12.499995vw / 2 )));
@@ -3774,6 +3779,8 @@ a {
       top: calc( 100% -  44px);
       position: relative;
       outline: none; }
+    .o-devToolsOutput__navAction:hover {
+      color: #CCCCCC; }
 
 .o-devToolsLanding {
   width: 100%;
@@ -3889,15 +3896,25 @@ a {
       position: relative;
       outline: none; }
 
+.p-devTools__tempContent {
+  width: 100%;
+  height: 2010px;
+  background-image: url("../images/prototype/inboud_results.png");
+  background-repeat: no-repeat; }
+  .flexbox-grid .a-flex-v > .p-devTools__tempContent {
+    outline: none; }
+  .flexbox-grid .a-flex-v-end > .p-devTools__tempContent {
+    outline: none; }
+
 .c-logs__navContainer {
-  width: 20.833325vw;
+  width: 24.99999vw;
   position: relative; }
   .flexbox-grid .a-flex-v > .c-logs__navContainer {
-    left: calc( 50% - (( 20.833325vw / 2 )));
+    left: calc( 50% - (( 24.99999vw / 2 )));
     position: relative;
     outline: none; }
   .flexbox-grid .a-flex-v-end > .c-logs__navContainer {
-    left: calc( 100% -  20.833325vw);
+    left: calc( 100% -  24.99999vw);
     position: relative;
     outline: none; }
 
@@ -3905,7 +3922,7 @@ a {
   /* -ctag-example: ...;*/
   font-size: 19px;
   line-height: 38.5px;
-  width: 30px;
+  width: 4.166665vw;
   height: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -3915,6 +3932,14 @@ a {
   -ms-flex-direction: row;
   -ms-flex-pack: center;
   -ms-flex-align: center; }
+  .flexbox-grid .a-flex-v > .c-logs__searchIcon {
+    left: calc( 50% - (( 4.166665vw / 2 )));
+    position: relative;
+    outline: none; }
+  .flexbox-grid .a-flex-v-end > .c-logs__searchIcon {
+    left: calc( 100% -  4.166665vw);
+    position: relative;
+    outline: none; }
   .flexbox-grid .a-flex-center > .c-logs__searchIcon, .flexbox-grid .a-flex-h > .c-logs__searchIcon {
     outline: none; }
   .flexbox-grid .a-flex-h-end > .c-logs__searchIcon {
@@ -3940,54 +3965,90 @@ a {
       transform: translateY(-50%);
       -ms-transform: translateY(-50%); }
 
-.c-logs .c-logs__cell--summaryType, .c-logs .c-logs__cell--type {
-  width: 4.166665vw;
+.c-logs .c-logs__cell--type {
+  width: 30px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   display: -ms-flexbox;
   -ms-flex-direction: row;
-  -ms-flex-pack: center;
-  -ms-flex-align: center;
-  transition: width 0.3s;
-  height: 44px; }
-  .flexbox-grid .a-flex-v > .c-logs .c-logs__cell--summaryType, .flexbox-grid .a-flex-v > .c-logs .c-logs__cell--type {
-    left: calc( 50% - (( 4.166665vw / 2 )));
+  -ms-flex-pack: start;
+  -ms-flex-align: center; }
+  .flexbox-grid .a-flex-v > .c-logs .c-logs__cell--type {
+    left: calc( 50% - (( 30px / 2 )));
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-v-end > .c-logs .c-logs__cell--summaryType, .flexbox-grid .a-flex-v-end > .c-logs .c-logs__cell--type {
-    left: calc( 100% -  4.166665vw);
+  .flexbox-grid .a-flex-v-end > .c-logs .c-logs__cell--type {
+    left: calc( 100% -  30px);
     position: relative;
     outline: none; }
-  .flexbox-grid .c-logs .c-logs__cell--summaryType, .flexbox-grid .c-logs .c-logs__cell--type {
-    position: relative;
-    text-align: center; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryType > *, .flexbox-grid .c-logs .c-logs__cell--type > * {
-      display: inline-block;
+  .flexbox-grid .c-logs .c-logs__cell--type {
+    position: relative; }
+    .flexbox-grid .c-logs .c-logs__cell--type > * {
+      float: left;
+      min-height: 1px;
+      position: relative;
       /* need to define height */
       outline: 5px dotted red; }
-    .flexbox-grid .c-logs .c-logs__cell--summaryType > *:nth-child(n+2), .flexbox-grid .c-logs .c-logs__cell--type > *:nth-child(n+2) {
-      /* don't put more than one item here */
-      outline: 5px dotted red; }
-  .no-flexbox .c-logs .c-logs__cell--summaryType, .no-flexbox .c-logs .c-logs__cell--type {
+  .no-flexbox .c-logs .c-logs__cell--type {
     position: relative;
-    text-align: center; }
-    .no-flexbox .c-logs .c-logs__cell--summaryType > *, .no-flexbox .c-logs .c-logs__cell--type > * {
-      min-width: 1px;
+    transform-style: preserve-3d; }
+    .no-flexbox .c-logs .c-logs__cell--type > * {
+      float: left;
+      min-height: 1px;
       position: relative;
-      display: inline-block;
       top: 50%;
       transform: translateY(-50%);
       -ms-transform: translateY(-50%); }
-  .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--summaryType, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--summaryType, .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--type, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--type {
-    top: calc( 50% - ( 44px / 2 ));
+  .no-flexbox-table .c-logs .c-logs__cell--type {
+    display: table; }
+    .no-flexbox-table .c-logs .c-logs__cell--type > * {
+      display: table-cell;
+      vertical-align: middle;
+      /*text-align: center;*/
+      position: relative; }
+
+.c-logs .c-logs__cell--summaryType {
+  flex: 1;
+  /*outline: 5px dotted red;*/
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+  -ms-flex-pack: start;
+  -ms-flex-align: center;
+  transition: width 0.3s; }
+  .no-flexbox .c-logs .c-logs__cell--summaryType {
+    /* gotta use an inverse calc() size for this to work... */
+    /*outline: 5px dotted red;*/ }
+  .flexbox-grid .c-logs .c-logs__cell--summaryType {
+    position: relative; }
+    .flexbox-grid .c-logs .c-logs__cell--summaryType > * {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      /* need to define height */
+      outline: 5px dotted red; }
+  .no-flexbox .c-logs .c-logs__cell--summaryType {
     position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logs .c-logs__cell--summaryType, .flexbox-grid .a-flex-h-end > .c-logs .c-logs__cell--type {
-    top: calc( 100% -  44px);
-    position: relative;
-    outline: none; }
+    transform-style: preserve-3d; }
+    .no-flexbox .c-logs .c-logs__cell--summaryType > * {
+      float: left;
+      min-height: 1px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%); }
+  .no-flexbox-table .c-logs .c-logs__cell--summaryType {
+    display: table; }
+    .no-flexbox-table .c-logs .c-logs__cell--summaryType > * {
+      display: table-cell;
+      vertical-align: middle;
+      /*text-align: center;*/
+      position: relative; }
 
 .c-logs .c-logs__cell--summaryTitle, .c-logs .c-logs__cell--title {
   flex: 1;
@@ -4039,8 +4100,7 @@ a {
   display: -ms-flexbox;
   -ms-flex-direction: row;
   -ms-flex-pack: center;
-  -ms-flex-align: center;
-  height: 44px; }
+  -ms-flex-align: center; }
   .flexbox-grid .a-flex-v > .c-logs .c-logs__cell--summaryStatus, .flexbox-grid .a-flex-v > .c-logs .c-logs__cell--status {
     left: calc( 50% - (( 8.33333vw / 2 )));
     position: relative;
@@ -4069,14 +4129,6 @@ a {
       top: 50%;
       transform: translateY(-50%);
       -ms-transform: translateY(-50%); }
-  .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--summaryStatus, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--summaryStatus, .flexbox-grid .a-flex-center > .c-logs .c-logs__cell--status, .flexbox-grid .a-flex-h > .c-logs .c-logs__cell--status {
-    top: calc( 50% - ( 44px / 2 ));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .c-logs .c-logs__cell--summaryStatus, .flexbox-grid .a-flex-h-end > .c-logs .c-logs__cell--status {
-    top: calc( 100% -  44px);
-    position: relative;
-    outline: none; }
 
 .c-logs .c-logs__cell--summaryModel, .c-logs .c-logs__cell--model {
   width: 16.66666vw;
@@ -4332,7 +4384,6 @@ a {
     position: relative;
     outline: none; }
   .c-logs__filters--summaryType, .c-logs__filters--type {
-    width: 12.499995vw;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -4340,15 +4391,9 @@ a {
     display: -ms-flexbox;
     -ms-flex-direction: row;
     -ms-flex-pack: center;
-    -ms-flex-align: center; }
-    .flexbox-grid .a-flex-v > .c-logs__filters--summaryType, .flexbox-grid .a-flex-v > .c-logs__filters--type {
-      left: calc( 50% - (( 12.499995vw / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-logs__filters--summaryType, .flexbox-grid .a-flex-v-end > .c-logs__filters--type {
-      left: calc( 100% -  12.499995vw);
-      position: relative;
-      outline: none; }
+    -ms-flex-align: center;
+    flex: 1;
+    /*outline: 5px dotted red;*/ }
     .flexbox-grid .c-logs__filters--summaryType, .flexbox-grid .c-logs__filters--type {
       position: relative;
       text-align: center; }
@@ -4369,6 +4414,9 @@ a {
         top: 50%;
         transform: translateY(-50%);
         -ms-transform: translateY(-50%); }
+    .no-flexbox .c-logs__filters--summaryType, .no-flexbox .c-logs__filters--type {
+      /* gotta use an inverse calc() size for this to work... */
+      /*outline: 5px dotted red;*/ }
   .c-logs__filters--summaryTitle, .c-logs__filters--title {
     flex: 1;
     /*outline: 5px dotted red;*/
@@ -4548,7 +4596,7 @@ a {
         transform: translateY(-50%);
         -ms-transform: translateY(-50%); }
   .c-logs__filters--summaryTime, .c-logs__filters--time {
-    width: 12.499995vw;
+    width: 16.66666vw;
     text-align: right;
     padding-left: 11px;
     transition: width 0.3s;
@@ -4559,15 +4607,13 @@ a {
     display: -ms-flexbox;
     -ms-flex-direction: column;
     -ms-flex-pack: start;
-    -ms-flex-align: center;
-    flex: 1;
-    /*outline: 5px dotted red;*/ }
+    -ms-flex-align: center; }
     .flexbox-grid .a-flex-v > .c-logs__filters--summaryTime, .flexbox-grid .a-flex-v > .c-logs__filters--time {
-      left: calc( 50% - (( 12.499995vw / 2 )));
+      left: calc( 50% - (( 16.66666vw / 2 )));
       position: relative;
       outline: none; }
     .flexbox-grid .a-flex-v-end > .c-logs__filters--summaryTime, .flexbox-grid .a-flex-v-end > .c-logs__filters--time {
-      left: calc( 100% -  12.499995vw);
+      left: calc( 100% -  16.66666vw);
       position: relative;
       outline: none; }
     .no-flexbox .c-logs__filters--summaryTime, .no-flexbox .c-logs__filters--time {
@@ -4596,9 +4642,38 @@ a {
         vertical-align: middle;
         text-align: center;
         position: relative; }
-    .no-flexbox .c-logs__filters--summaryTime, .no-flexbox .c-logs__filters--time {
-      /* gotta use an inverse calc() size for this to work... */
-      /*outline: 5px dotted red;*/ }
+  .c-logs__filters--summarySearch {
+    width: 100%;
+    margin-top: 66px;
+    padding-left: 11px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-pack: start;
+    -ms-flex-align: start; }
+    .flexbox-grid .a-flex-v > .c-logs__filters--summarySearch {
+      outline: none; }
+    .flexbox-grid .a-flex-v-end > .c-logs__filters--summarySearch {
+      outline: none; }
+    .flexbox-grid .c-logs__filters--summarySearch {
+      position: relative; }
+      .flexbox-grid .c-logs__filters--summarySearch > * {
+        float: left;
+        min-height: 1px; }
+    .no-flexbox .c-logs__filters--summarySearch {
+      position: relative; }
+      .no-flexbox .c-logs__filters--summarySearch > * {
+        float: left;
+        min-width: 1px; }
+  .c-logs__filters--search {
+    width: 100%; }
+    .flexbox-grid .a-flex-v > .c-logs__filters--search {
+      outline: none; }
+    .flexbox-grid .a-flex-v-end > .c-logs__filters--search {
+      outline: none; }
   .c-logs__filters--helpText {
     width: 100%;
     text-align: left;
@@ -4766,8 +4841,31 @@ a {
     outline: none; }
   .flexbox-grid .a-flex-h-end > .c-logs__footer {
     outline: none; }
+  .c-logs__footer .c-logs__clearAll {
+    height: 44px;
+    width: 6.2499975vw;
+    margin: 11px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: none; }
+    .flexbox-grid .a-flex-center > .c-logs__footer .c-logs__clearAll, .flexbox-grid .a-flex-h > .c-logs__footer .c-logs__clearAll {
+      top: calc( 50% - ( 44px / 2 ));
+      position: relative;
+      outline: none; }
+    .flexbox-grid .a-flex-h-end > .c-logs__footer .c-logs__clearAll {
+      top: calc( 100% -  44px);
+      position: relative;
+      outline: none; }
+    .flexbox-grid .a-flex-v > .c-logs__footer .c-logs__clearAll {
+      left: calc( 50% - (( 6.2499975vw / 2 )));
+      position: relative;
+      outline: none; }
+    .flexbox-grid .a-flex-v-end > .c-logs__footer .c-logs__clearAll {
+      left: calc( 100% -  6.2499975vw);
+      position: relative;
+      outline: none; }
   .c-logs__footer--open {
-    /* touch */
     height: 286px; }
     .flexbox-grid .a-flex-center > .c-logs__footer--open, .flexbox-grid .a-flex-h > .c-logs__footer--open {
       top: calc( 50% - ( 286px / 2 ));
@@ -4778,15 +4876,44 @@ a {
       position: relative;
       outline: none; }
     .c-logs__footer--open .c-logs__cell--summaryType {
-      width: 12.499995vw; }
-      .flexbox-grid .a-flex-v > .c-logs__footer--open .c-logs__cell--summaryType {
-        left: calc( 50% - (( 12.499995vw / 2 )));
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      display: -ms-flexbox;
+      -ms-flex-direction: row;
+      -ms-flex-pack: start;
+      -ms-flex-align: center;
+      flex: 1;
+      /*outline: 5px dotted red;*/ }
+      .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryType {
+        position: relative; }
+        .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryType > * {
+          float: left;
+          min-height: 1px;
+          position: relative;
+          /* need to define height */
+          outline: 5px dotted red; }
+      .no-flexbox .c-logs__footer--open .c-logs__cell--summaryType {
         position: relative;
-        outline: none; }
-      .flexbox-grid .a-flex-v-end > .c-logs__footer--open .c-logs__cell--summaryType {
-        left: calc( 100% -  12.499995vw);
-        position: relative;
-        outline: none; }
+        transform-style: preserve-3d; }
+        .no-flexbox .c-logs__footer--open .c-logs__cell--summaryType > * {
+          float: left;
+          min-height: 1px;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          -ms-transform: translateY(-50%); }
+      .no-flexbox-table .c-logs__footer--open .c-logs__cell--summaryType {
+        display: table; }
+        .no-flexbox-table .c-logs__footer--open .c-logs__cell--summaryType > * {
+          display: table-cell;
+          vertical-align: middle;
+          /*text-align: center;*/
+          position: relative; }
+      .no-flexbox .c-logs__footer--open .c-logs__cell--summaryType {
+        /* gotta use an inverse calc() size for this to work... */
+        /*outline: 5px dotted red;*/ }
     .c-logs__footer--open .c-logs__cell--summaryTitle {
       display: none; }
     .c-logs__footer--open .c-logs__cell--summaryEnvironment {
@@ -4800,36 +4927,18 @@ a {
         position: relative;
         outline: none; }
     .c-logs__footer--open .c-logs__cell--summaryModel {
+      display: none; }
+    .c-logs__footer--open .c-logs__cell--summaryTime {
+      width: 16.66666vw;
+      padding-left: 2.0833325vw;
       display: flex;
       flex-flow: row nowrap;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       display: -ms-flexbox;
       -ms-flex-direction: row;
-      -ms-flex-pack: center;
+      -ms-flex-pack: start;
       -ms-flex-align: center; }
-      .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryModel {
-        position: relative;
-        text-align: center; }
-        .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryModel > * {
-          display: inline-block;
-          /* need to define height */
-          outline: 5px dotted red; }
-        .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryModel > *:nth-child(n+2) {
-          /* don't put more than one item here */
-          outline: 5px dotted red; }
-      .no-flexbox .c-logs__footer--open .c-logs__cell--summaryModel {
-        position: relative;
-        text-align: center; }
-        .no-flexbox .c-logs__footer--open .c-logs__cell--summaryModel > * {
-          min-width: 1px;
-          position: relative;
-          display: inline-block;
-          top: 50%;
-          transform: translateY(-50%);
-          -ms-transform: translateY(-50%); }
-    .c-logs__footer--open .c-logs__cell--summaryTime {
-      width: 16.66666vw; }
       .flexbox-grid .a-flex-v > .c-logs__footer--open .c-logs__cell--summaryTime {
         left: calc( 50% - (( 16.66666vw / 2 )));
         position: relative;
@@ -4838,8 +4947,62 @@ a {
         left: calc( 100% -  16.66666vw);
         position: relative;
         outline: none; }
+      .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryTime {
+        position: relative; }
+        .flexbox-grid .c-logs__footer--open .c-logs__cell--summaryTime > * {
+          float: left;
+          min-height: 1px;
+          position: relative;
+          /* need to define height */
+          outline: 5px dotted red; }
+      .no-flexbox .c-logs__footer--open .c-logs__cell--summaryTime {
+        position: relative;
+        transform-style: preserve-3d; }
+        .no-flexbox .c-logs__footer--open .c-logs__cell--summaryTime > * {
+          float: left;
+          min-height: 1px;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          -ms-transform: translateY(-50%); }
+      .no-flexbox-table .c-logs__footer--open .c-logs__cell--summaryTime {
+        display: table; }
+        .no-flexbox-table .c-logs__footer--open .c-logs__cell--summaryTime > * {
+          display: table-cell;
+          vertical-align: middle;
+          /*text-align: center;*/
+          position: relative; }
     .c-logs__footer--open .c-logs__closeFilters {
       display: block; }
+    .c-logs__footer--open .c-logs__clearAll {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      display: -ms-flexbox;
+      -ms-flex-direction: row;
+      -ms-flex-pack: center;
+      -ms-flex-align: center; }
+      .flexbox-grid .c-logs__footer--open .c-logs__clearAll {
+        position: relative;
+        text-align: center; }
+        .flexbox-grid .c-logs__footer--open .c-logs__clearAll > * {
+          display: inline-block;
+          /* need to define height */
+          outline: 5px dotted red; }
+        .flexbox-grid .c-logs__footer--open .c-logs__clearAll > *:nth-child(n+2) {
+          /* don't put more than one item here */
+          outline: 5px dotted red; }
+      .no-flexbox .c-logs__footer--open .c-logs__clearAll {
+        position: relative;
+        text-align: center; }
+        .no-flexbox .c-logs__footer--open .c-logs__clearAll > * {
+          min-width: 1px;
+          position: relative;
+          display: inline-block;
+          top: 50%;
+          transform: translateY(-50%);
+          -ms-transform: translateY(-50%); }
 
 .p-logs {
   /* */ }
@@ -5720,41 +5883,67 @@ a {
         position: relative !important;
         outline: none !important; } }
 
+.c-profile__contacts {
+  margin-top: 11px;
+  margin-bottom: 44px;
+  float: left;
+  width: 100%;
+  clear: both; }
+  .flexbox-grid .a-flex-v > .c-profile__contacts {
+    outline: none; }
+  .flexbox-grid .a-flex-v-end > .c-profile__contacts {
+    outline: none; }
+
 .c-profile__contactsItem {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  display: -ms-flexbox;
-  -ms-flex-direction: column;
-  -ms-flex-pack: start;
-  -ms-flex-align: center; }
-  .no-flexbox .c-profile__contactsItem {
+  width: 50%;
+  float: left;
+  margin-bottom: 22px; }
+
+.c-profile__contactsItemTitle {
+  margin-bottom: 11px;
+  font-size: 19px;
+  line-height: 38.5px; }
+
+.c-profile__contactsItemAvatar {
+  float: left;
+  width: 8.33333vw;
+  padding-bottom: 8.33333vw;
+  margin-bottom: 11px;
+  margin-right: 11px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  background-position: center;
+  background-size: cover; }
+  .flexbox-grid .a-flex-v > .c-profile__contactsItemAvatar {
+    left: calc( 50% - (( 8.33333vw / 2 )));
     position: relative;
-    transform-style: preserve-3d; }
-    .no-flexbox .c-profile__contactsItem > * {
-      min-width: 1px;
-      position: relative;
-      float: left;
-      clear: left;
-      left: 50%;
-      transform: translateX(-50%);
-      -ms-transform: translateX(-50%); }
-  .flexbox-grid .c-profile__contactsItem {
-    position: relative; }
-    .flexbox-grid .c-profile__contactsItem > * {
-      float: left;
-      clear: left;
-      min-height: 1px;
-      /* need to define width */
-      outline: 5px dotted red; }
-  .no-flexbox-table .c-profile__contactsItem {
-    display: table; }
-    .no-flexbox-table .c-profile__contactsItem > * {
-      display: table-row;
-      vertical-align: middle;
-      text-align: center;
-      position: relative; }
+    outline: none; }
+  .flexbox-grid .a-flex-v-end > .c-profile__contactsItemAvatar {
+    left: calc( 100% -  8.33333vw);
+    position: relative;
+    outline: none; }
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .c-profile__contactsItemAvatar {
+    position: relative  !important; } }
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .c-profile__contactsItemAvatar {
+    width: 100% !important; }
+    .flexbox-grid .a-flex-v > .c-profile__contactsItemAvatar {
+      outline: none !important; }
+    .flexbox-grid .a-flex-v-end > .c-profile__contactsItemAvatar {
+      outline: none !important; } }
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .c-profile__contactsItemAvatar {
+    height: auto  !important; } }
+  @media (max-width: 768px) {
+    .c-profile__contactsItemAvatar {
+      padding-bottom: 176px !important; } }
+
+.c-profile__contactsItemInfo {
+  font-size: 14px;
+  line-height: 22px; }
 
 .p-profile__contacts {
   margin-top: 11px;
