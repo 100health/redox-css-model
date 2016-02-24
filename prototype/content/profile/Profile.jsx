@@ -153,7 +153,53 @@ var Profile = React.createClass({
                                         Redox Contacts
                                     </h2>
 
-                                    <div className="p-profile__contacts"></div>
+                                    <div className="c-profile__contacts">
+                                        
+                                        
+                                        <div className="c-profile__contactsItem">
+                                            <div className="c-profile__contactsItemTitle">
+                                                Implementation Lead
+                                            </div>
+                                            <div className="c-profile__contactsItemAvatar"
+                                                style={{"background-image":
+                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}>
+                                            </div>
+                                            <div className="c-profile__contactsItemInfo">
+                                                <div>Joe Redox</div>
+                                                <div><a href="mailto:joe@redoxengine.com">joe@redoxengine.com</a></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="c-profile__contactsItem">
+                                            <div className="c-profile__contactsItemTitle">
+                                                Technical Lead
+                                            </div>
+                                            <div className="c-profile__contactsItemAvatar"
+                                                style={{"background-image":
+                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}>
+                                            </div>
+                                            <div className="c-profile__contactsItemInfo">
+                                                <div>Jolenne Redox</div>
+                                                <div><a href="mailto:jolenne@redoxengine.com">jolenne@redoxengine.com</a></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="c-profile__contactsItem">
+                                            <div className="c-profile__contactsItemTitle">
+                                                Implementation Lead
+                                            </div>
+                                            <div className="c-profile__contactsItemAvatar"
+                                                style={{"background-image":
+                                                        "url('/dist/images/prototype/aristaMd.jpg')"}}>
+                                            </div>
+                                            <div className="c-profile__contactsItemInfo">
+                                                <div>Joe Redox</div>
+                                                <div><a href="mailto:joe@redoxengine.com">joe@redoxengine.com</a></div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
 
                                 </div>
                             </div>

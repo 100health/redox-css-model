@@ -63,7 +63,8 @@ var ProfileEdit = React.createClass({
                                     <div className="o-form__element">
                                         <button>Upload</button>
                                     </div>
-                                    <div className="o-form__element">
+                                    <div className="o-form__element
+                                        c-profileFormLayout__element--public">
                                         <label>public</label>
                                         <input type="checkbox" />
                                     </div>
