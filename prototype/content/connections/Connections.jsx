@@ -4,19 +4,32 @@
 
 
 var Connections = React.createClass({
-
+    
+    /*
     alertExample: function () {
         alertExample(
             this.render(),
             []
         );
     },
-
+    */
+    
     openConnection: function ( guid ) {
         RS.merge({
             'modal':"connection",
             'modal:modal_conn_id':guid
         })
+    },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-connections',
+				filters:[
+					// ['.c-connections .o-list__row', 1 ]
+				]
+			}, document.location.origin
+		);
     },
 
     getInboundConnectionRow: function( connection ){

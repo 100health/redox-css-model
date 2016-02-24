@@ -15,10 +15,31 @@ var DevToolsInbound = React.createClass({
             "DevToolsInbound"
     	);
     },
-
+    
     componentWillUnmount: function(){
         RouteState.removeDiffListenersViaClusterId( "DevToolsInbound" );
     },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.o-devToolsOutput',
+				filters:[
+				]
+			}, document.location.origin
+		);
+    },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.o-devToolsApp',
+				filters:[
+				]
+			}, document.location.origin
+		);
+    },
+    
 
     changeTab: function ( index ) {
         $(".o-devToolsOutput__navItem")

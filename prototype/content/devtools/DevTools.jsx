@@ -29,14 +29,15 @@ var DevTools = React.createClass({
 			}, document.location.origin
 		);
     },
-
-
+    
+    /*
     alertExample: function () {
         alertExample(
             this.render(),
             []
         );
     },
+    */
 
     openConnection: function ( guid ) {
         RS.merge({

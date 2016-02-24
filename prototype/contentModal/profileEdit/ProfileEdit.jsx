@@ -12,6 +12,18 @@ var ProfileEdit = React.createClass({
         });
         return false;
     },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-profileEdit',
+				filters:[
+				    ['.c-profileEdit .c-dataModelSelector__item', 1 ],
+				    ['.c-profileEdit .c-searchCategoriesSelector__item', 1 ]
+				]
+			}, document.location.origin
+		);
+    },
 
     render: function() {
 

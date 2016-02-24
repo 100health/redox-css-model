@@ -33,13 +33,15 @@ var LogsSideNav = React.createClass({
 			}, document.location.origin
 		);
     },
-
+    
+    /*
     alertExample: function () {
         alertExample(
             this.render(),
             ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
         );
     },
+    */
 
     openLog: function ( log ) {
         RS.merge({

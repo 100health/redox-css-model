@@ -19,14 +19,27 @@ var Logs = React.createClass({
     componentWillUnmount: function(){
         RouteState.removeDiffListenersViaClusterId( "Logs" );
     },
-
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-logs',
+				filters:[
+                    ['.c-logs .o-list__row', 1],
+                    ['.c-logs .o-contentSimple__footerContainer', 1]
+				]
+			}, document.location.origin
+		);
+    },
+    
+    /*
     alertExample: function () {
         alertExample(
             this.render(),
             ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
         );
     },
-
+    */
 
     openLog: function ( log ) {
         RS.merge({

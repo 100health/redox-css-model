@@ -158,19 +158,32 @@ var SearchCategoriesSelector = React.createClass({displayName: "SearchCategories
 
 
 var Connections = React.createClass({displayName: "Connections",
-
+    
+    /*
     alertExample: function () {
         alertExample(
             this.render(),
             []
         );
     },
-
+    */
+    
     openConnection: function ( guid ) {
         RS.merge({
             'modal':"connection",
             'modal:modal_conn_id':guid
         })
+    },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-connections',
+				filters:[
+					// ['.c-connections .o-list__row', 1 ]
+				]
+			}, document.location.origin
+		);
     },
 
     getInboundConnectionRow: function( connection ){
@@ -344,14 +357,15 @@ var DevTools = React.createClass({displayName: "DevTools",
 			}, document.location.origin
 		);
     },
-
-
+    
+    /*
     alertExample: function () {
         alertExample(
             this.render(),
             []
         );
     },
+    */
 
     openConnection: function ( guid ) {
         RS.merge({
@@ -495,10 +509,31 @@ var DevToolsInbound = React.createClass({displayName: "DevToolsInbound",
             "DevToolsInbound"
     	);
     },
-
+    
     componentWillUnmount: function(){
         RouteState.removeDiffListenersViaClusterId( "DevToolsInbound" );
     },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.o-devToolsOutput',
+				filters:[
+				]
+			}, document.location.origin
+		);
+    },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.o-devToolsApp',
+				filters:[
+				]
+			}, document.location.origin
+		);
+    },
+    
 
     changeTab: function ( index ) {
         $(".o-devToolsOutput__navItem")
@@ -788,6 +823,26 @@ var DevToolsOutbound = React.createClass({displayName: "DevToolsOutbound",
 
     componentWillUnmount: function(){
         RouteState.removeDiffListenersViaClusterId( "DevToolsInbound" );
+    },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.o-devToolsOutput',
+				filters:[
+				]
+			}, document.location.origin
+		);
+    },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.o-devToolsApp',
+				filters:[
+				]
+			}, document.location.origin
+		);
     },
 
     changeTab: function ( index ) {
@@ -1421,14 +1476,27 @@ var Logs = React.createClass({displayName: "Logs",
     componentWillUnmount: function(){
         RouteState.removeDiffListenersViaClusterId( "Logs" );
     },
-
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-logs',
+				filters:[
+                    ['.c-logs .o-list__row', 1],
+                    ['.c-logs .o-contentSimple__footerContainer', 1]
+				]
+			}, document.location.origin
+		);
+    },
+    
+    /*
     alertExample: function () {
         alertExample(
             this.render(),
             ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
         );
     },
-
+    */
 
     openLog: function ( log ) {
         RS.merge({
@@ -1795,13 +1863,15 @@ var LogsSideNav = React.createClass({displayName: "LogsSideNav",
 			}, document.location.origin
 		);
     },
-
+    
+    /*
     alertExample: function () {
         alertExample(
             this.render(),
             ['.o-contentSimple__contentContainer .o-list__row:gt( 2 )']
         );
     },
+    */
 
     openLog: function ( log ) {
         RS.merge({
@@ -2046,6 +2116,17 @@ var Profile = React.createClass({displayName: "Profile",
 
     componentWillUnmount: function(){
         RouteState.removeDiffListenersViaClusterId( "Profile" );
+    },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-profile',
+				filters:[
+				    ['.c-profile .c-profile__contactsItem', 1 ]
+				]
+			}, document.location.origin
+		);
     },
 
     openProfileEdit: function(){
@@ -2609,6 +2690,18 @@ var ProfileEdit = React.createClass({displayName: "ProfileEdit",
             modal:""
         });
         return false;
+    },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-profileEdit',
+				filters:[
+				    ['.c-profileEdit .c-dataModelSelector__item', 1 ],
+				    ['.c-profileEdit .c-searchCategoriesSelector__item', 1 ]
+				]
+			}, document.location.origin
+		);
     },
 
     render: function() {

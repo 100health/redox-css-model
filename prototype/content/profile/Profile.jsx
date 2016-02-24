@@ -19,6 +19,17 @@ var Profile = React.createClass({
     componentWillUnmount: function(){
         RouteState.removeDiffListenersViaClusterId( "Profile" );
     },
+    
+    componentDidMount: function(){
+        parent.postMessage({
+				action:'cssreveal',
+				target:'.c-profile',
+				filters:[
+				    ['.c-profile .c-profile__contactsItem', 1 ]
+				]
+			}, document.location.origin
+		);
+    },
 
     openProfileEdit: function(){
         RS.merge({
