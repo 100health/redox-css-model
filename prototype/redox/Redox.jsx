@@ -112,7 +112,8 @@ var Redox = React.createClass({
         }
 
 
-        return  <div className={ "c-redox" + redox_xcls }>
+        return  <div className={ "c-redox" + redox_xcls +
+                    ( ( modalContent ) ? " c-redox--modal" : "" )}>
                     <div className={
                             'c-redox__mainNavContainer' +
                             ( ( RS.route.detail_page
@@ -134,10 +135,7 @@ var Redox = React.createClass({
                         <Footer />
                     </div>
 
-                    <div className={
-                            "o-modal" +
-                            ( ( modalContent ) ? " o-modal--show" : "" )
-                        }>
+                    <div className="o-modal">
                         <div className="o-modal__bgCover"
                             onClick={ this.closeModal }></div>
                         <div className="o-modal__contentContainer">

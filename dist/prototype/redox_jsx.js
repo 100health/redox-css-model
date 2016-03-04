@@ -2890,7 +2890,7 @@ var MainNav = React.createClass({displayName: "MainNav",
 
             nav_items.push(
                 React.createElement("div", {className: 
-                        "a-flex-center c-mainNav__link " +
+                        "c-mainNav__link " +
                         (   ( RS.route.section == page.link ||
                                 (
                                     !RS.route.section
@@ -2925,7 +2925,7 @@ var MainNav = React.createClass({displayName: "MainNav",
 
                     React.createElement("div", {className: "c-mainNav__logo"}), 
 
-                    React.createElement("div", {className: "c-mainNav__links a-float-right a-flex-h-stretch"}, 
+                    React.createElement("div", {className: "c-mainNav__links"}, 
                          nav_items 
                     ), 
 
@@ -3051,7 +3051,8 @@ var Redox = React.createClass({displayName: "Redox",
         }
 
 
-        return  React.createElement("div", {className:  "c-redox" + redox_xcls}, 
+        return  React.createElement("div", {className:  "c-redox" + redox_xcls +
+                    ( ( modalContent ) ? " c-redox--modal" : "")}, 
                     React.createElement("div", {className: 
                             'c-redox__mainNavContainer' +
                             ( ( RS.route.detail_page
@@ -3073,10 +3074,7 @@ var Redox = React.createClass({displayName: "Redox",
                         React.createElement(Footer, null)
                     ), 
 
-                    React.createElement("div", {className: 
-                            "o-modal" +
-                            ( ( modalContent ) ? " o-modal--show" : "")
-                        }, 
+                    React.createElement("div", {className: "o-modal"}, 
                         React.createElement("div", {className: "o-modal__bgCover", 
                             onClick:  this.closeModal}), 
                         React.createElement("div", {className: "o-modal__contentContainer"}, 

@@ -237,12 +237,14 @@
   width: 100% !important;
   height: 100% !important; }
 
-.a-mobile-reset {
+.a-mobile-resetOFF {
   position: relative;
-  width: 100%;
-  height: auto; }
+  /*@include a-width-col-11-half;*/
+  /*@include a-margin-left-col-quarter;*/
+  height: auto;
+  width: auto; }
 
-.a-mobile-nav-reset {
+.a-mobile-nav-resetOFF {
   position: fixed;
   top: 0px;
   left: 0px; }
@@ -7074,24 +7076,26 @@
     width: 100% !important;
     height: 100% !important; } }
 
-@media (max-width: 768px) and (max-width: 768px) {
-  .breakpoint-sm-a-mobile-reset {
-    position: relative  !important; } }
+@media (max-width: 768px) {
+  .breakpoint-sm-a-mobile-resetOFF {
+    /*@include breakpoint-sm-a-width-col-11-half;*/
+    /*@include breakpoint-sm-a-margin-left-col-quarter;*/ } }
+  @media (max-width: 768px) and (max-width: 768px) {
+    .breakpoint-sm-a-mobile-resetOFF {
+      position: relative  !important; } }
+  @media (max-width: 768px) and (max-width: 768px) {
+    .breakpoint-sm-a-mobile-resetOFF {
+      height: auto  !important; } }
+  @media (max-width: 768px) and (max-width: 768px) {
+    .breakpoint-sm-a-mobile-resetOFF {
+      width: auto  !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
-  .breakpoint-sm-a-mobile-reset {
-    width: 100% !important; } }
-
-@media (max-width: 768px) and (max-width: 768px) {
-  .breakpoint-sm-a-mobile-reset {
-    height: auto  !important; } }
-
-@media (max-width: 768px) and (max-width: 768px) {
-  .breakpoint-sm-a-mobile-nav-reset {
+  .breakpoint-sm-a-mobile-nav-resetOFF {
     position: fixed  !important; } }
 
 @media (max-width: 768px) and (max-width: 768px) {
-  .breakpoint-sm-a-mobile-nav-reset {
+  .breakpoint-sm-a-mobile-nav-resetOFF {
     top: 0px  !important;
     left: 0px  !important; } }
 

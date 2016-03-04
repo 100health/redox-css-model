@@ -3821,9 +3821,9 @@ $v-border-radius: 3px;
  &:before, &:after { content: " "; display: table; }  &:after { clear: both; }  }
 @mixin a-fill-container () {
  width: 100%;  height: 100%;  }
-@mixin a-mobile-reset () {
-  @include a-position-relative;  @include a-width-100;  @include a-height-auto;  }
-@mixin a-mobile-nav-reset () {
+@mixin a-mobile-resetOFF () {
+  @include a-position-relative;  /*@include a-width-col-11-half;*/  /*@include a-margin-left-col-quarter;*/  @include a-height-auto;  @include a-width-auto;  }
+@mixin a-mobile-nav-resetOFF () {
   @include a-position-fixed;  @include a-top-left;  }
 
 
@@ -5595,8 +5595,8 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-block-center (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  margin: 0px auto !important; }}
 @mixin breakpoint-md-a-clear-fix (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:before, &:after { content: " " !important; display: table !important; }  &:after { clear: both !important; } }}
 @mixin breakpoint-md-a-fill-container (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width: 100% !important;  height: 100% !important; }}
-@mixin breakpoint-md-a-mobile-reset (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-relative;  @include breakpoint-md-a-width-100;  @include breakpoint-md-a-height-auto; }}
-@mixin breakpoint-md-a-mobile-nav-reset (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-fixed;  @include breakpoint-md-a-top-left; }}
+@mixin breakpoint-md-a-mobile-resetOFF (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-relative;  /*@include breakpoint-md-a-width-col-11-half;*/  /*@include breakpoint-md-a-margin-left-col-quarter;*/  @include breakpoint-md-a-height-auto;  @include breakpoint-md-a-width-auto; }}
+@mixin breakpoint-md-a-mobile-nav-resetOFF (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-fixed;  @include breakpoint-md-a-top-left; }}
 
 
 
@@ -7367,8 +7367,8 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-block-center (  ) { @media ( max-width: $v-breakpoint-small-min ) {  margin: 0px auto !important; }}
 @mixin breakpoint-sm-a-clear-fix (  ) { @media ( max-width: $v-breakpoint-small-min ) {  &:before, &:after { content: " " !important; display: table !important; }  &:after { clear: both !important; } }}
 @mixin breakpoint-sm-a-fill-container (  ) { @media ( max-width: $v-breakpoint-small-min ) {  width: 100% !important;  height: 100% !important; }}
-@mixin breakpoint-sm-a-mobile-reset (  ) { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-relative;  @include breakpoint-sm-a-width-100;  @include breakpoint-sm-a-height-auto; }}
-@mixin breakpoint-sm-a-mobile-nav-reset (  ) { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-fixed;  @include breakpoint-sm-a-top-left; }}
+@mixin breakpoint-sm-a-mobile-resetOFF (  ) { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-relative;  /*@include breakpoint-sm-a-width-col-11-half;*/  /*@include breakpoint-sm-a-margin-left-col-quarter;*/  @include breakpoint-sm-a-height-auto;  @include breakpoint-sm-a-width-auto; }}
+@mixin breakpoint-sm-a-mobile-nav-resetOFF (  ) { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-fixed;  @include breakpoint-sm-a-top-left; }}
 
 .a-flex-v {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: center !important;  display: -ms-flexbox !important;  -ms-flex-direction: column !important;  -ms-flex-pack: start !important;  -ms-flex-align: center !important;  }
 .a-flex-v-stretch {  display: flex !important;  flex-flow: column nowrap !important;  justify-content: flex-start !important;  align-items: stretch !important;  display: -ms-flexbox !important;  -ms-flex-direction: column !important;  -ms-flex-pack: start !important;  -ms-flex-align: stretch !important;  }
@@ -7400,8 +7400,8 @@ $v-border-radius: 3px;
 .a-block-center {  margin: 0px auto !important;  }
 .a-clear-fix {  &:before, &:after { content: " " !important; display: table !important; }  &:after { clear: both !important; }  }
 .a-fill-container {  width: 100% !important;  height: 100% !important;  }
-.a-mobile-reset {   @include a-position-relative;  @include a-width-100;  @include a-height-auto;  }
-.a-mobile-nav-reset {   @include a-position-fixed;  @include a-top-left;  }
+.a-mobile-resetOFF {   @include a-position-relative;  /*@include a-width-col-11-half;*/  /*@include a-margin-left-col-quarter;*/  @include a-height-auto;  @include a-width-auto;  }
+.a-mobile-nav-resetOFF {   @include a-position-fixed;  @include a-top-left;  }
 .a-height-row {  height: $v-row !important;  .flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {  top: calc( 50% - ( #{$v-row} / 2 ) ) !important;  position: relative !important;  outline: none !important;  }  .flexbox-grid .a-flex-h-end > & {  top: calc( 100% -  #{$v-row} ) !important;  position: relative !important;  outline: none !important;  }  }
 .a-height-row-quarter {  height: $v-row-quarter !important;  .flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {  top: calc( 50% - ( #{$v-row-quarter} / 2 ) ) !important;  position: relative !important;  outline: none !important;  }  .flexbox-grid .a-flex-h-end > & {  top: calc( 100% -  #{$v-row-quarter} ) !important;  position: relative !important;  outline: none !important;  }  }
 .a-height-row-half {  height: $v-row-half !important;  .flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {  top: calc( 50% - ( #{$v-row-half} / 2 ) ) !important;  position: relative !important;  outline: none !important;  }  .flexbox-grid .a-flex-h-end > & {  top: calc( 100% -  #{$v-row-half} ) !important;  position: relative !important;  outline: none !important;  }  }
@@ -9248,8 +9248,8 @@ $v-border-radius: 3px;
 .breakpoint-sm-a-block-center { @media ( max-width: $v-breakpoint-small-min ) {  margin: 0px auto !important; } } 
 .breakpoint-sm-a-clear-fix { @media ( max-width: $v-breakpoint-small-min ) {  &:before, &:after { content: " " !important; display: table !important; }  &:after { clear: both !important; } } } 
 .breakpoint-sm-a-fill-container { @media ( max-width: $v-breakpoint-small-min ) {  width: 100% !important;  height: 100% !important; } } 
-.breakpoint-sm-a-mobile-reset { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-relative;  @include breakpoint-sm-a-width-100;  @include breakpoint-sm-a-height-auto; } } 
-.breakpoint-sm-a-mobile-nav-reset { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-fixed;  @include breakpoint-sm-a-top-left; } } 
+.breakpoint-sm-a-mobile-resetOFF { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-relative;  /*@include breakpoint-sm-a-width-col-11-half;*/  /*@include breakpoint-sm-a-margin-left-col-quarter;*/  @include breakpoint-sm-a-height-auto;  @include breakpoint-sm-a-width-auto; } } 
+.breakpoint-sm-a-mobile-nav-resetOFF { @media ( max-width: $v-breakpoint-small-min ) {   @include breakpoint-sm-a-position-fixed;  @include breakpoint-sm-a-top-left; } } 
 .breakpoint-sm-a-height-row { @media ( max-width: $v-breakpoint-small-min ) {  height: $v-row !important;  .flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {  top: calc( 50% - ( #{$v-row} / 2 ) ) !important;  position: relative !important;  outline: none !important;  }  .flexbox-grid .a-flex-h-end > & {  top: calc( 100% -  #{$v-row} ) !important;  position: relative !important;  outline: none !important;  } } } 
 .breakpoint-sm-a-height-row-quarter { @media ( max-width: $v-breakpoint-small-min ) {  height: $v-row-quarter !important;  .flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {  top: calc( 50% - ( #{$v-row-quarter} / 2 ) ) !important;  position: relative !important;  outline: none !important;  }  .flexbox-grid .a-flex-h-end > & {  top: calc( 100% -  #{$v-row-quarter} ) !important;  position: relative !important;  outline: none !important;  } } } 
 .breakpoint-sm-a-height-row-half { @media ( max-width: $v-breakpoint-small-min ) {  height: $v-row-half !important;  .flexbox-grid .a-flex-center > &, .flexbox-grid .a-flex-h > & {  top: calc( 50% - ( #{$v-row-half} / 2 ) ) !important;  position: relative !important;  outline: none !important;  }  .flexbox-grid .a-flex-h-end > & {  top: calc( 100% -  #{$v-row-half} ) !important;  position: relative !important;  outline: none !important;  } } } 

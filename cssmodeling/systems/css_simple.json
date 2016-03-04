@@ -509,23 +509,25 @@
 			]
 		},
         {
-			"name":"mobile-reset",
+			"name":"mobile-resetOFF",
             "group":"simple",
             "sub_group":"positioning",
             "example":"<div ... style='height: 100px; background-color:#fff;'></div>",
-			"selector":".a-mobile-reset",
+			"selector":".a-mobile-resetOFF",
 			"declaration_includes":[
 				"_inc_a-position-relative;",
-                "_inc_a-width-100;",
-                "_inc_a-height-auto;"
+                "/*_inc_a-width-col-11-half;*/",
+                "/*_inc_a-margin-left-col-quarter;*/",
+                "_inc_a-height-auto;",
+                "_inc_a-width-auto;"
 			]
 		},
         {
-			"name":"mobile-nav-reset",
+			"name":"mobile-nav-resetOFF",
             "group":"simple",
             "sub_group":"positioning",
             "example":"<div ... style='height: 100px; background-color:#fff;'></div>",
-			"selector":".a-mobile-nav-reset",
+			"selector":".a-mobile-nav-resetOFF",
 			"declaration_includes":[
 				"_inc_a-position-fixed;",
                 "_inc_a-top-left;"

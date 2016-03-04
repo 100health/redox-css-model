@@ -66,7 +66,7 @@ var MainNav = React.createClass({
 
             nav_items.push(
                 <div className={
-                        "a-flex-center c-mainNav__link " +
+                        "c-mainNav__link " +
                         (   ( RS.route.section == page.link ||
                                 (
                                     !RS.route.section
@@ -101,7 +101,7 @@ var MainNav = React.createClass({
 
                     <div className="c-mainNav__logo"></div>
 
-                    <div className="c-mainNav__links a-float-right a-flex-h-stretch">
+                    <div className="c-mainNav__links">
                         { nav_items }
                     </div>
 
