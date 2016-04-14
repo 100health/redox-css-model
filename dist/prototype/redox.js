@@ -19636,10 +19636,55 @@ RouteState.listenToHash = function ( funk )
 	// establish this as a singleton (across frames)
 	this.target_window = window;
 	this.target_document = document;
+
+	var is_topmost_window = true;
+
+	// need to walk up atainable parents...(at some point)
 	if (
 		window.top != window.self
-		&& window.top.document.domain
-			== window.self.document.domain
+	){
+		var parent_window = window.parent;
+		var current_window = window;
+		var prev_window,passes;
+
+		while ( parent_window != window.top ) {
+			try {
+				// will error out when it is in different domain...
+				passes = parent_window.document.domain;
+				prev_window = current_window;
+				current_window = parent_window;
+				parent_window = current_window.parent;
+			}catch (e){
+				current_window = prev_window;
+				break;
+			}
+		}
+
+		//loop doesn't catch this last condition...
+		if ( parent_window == window.top ) {
+			try {
+				// will error out when it is in different domain...
+				passes = parent_window.document.domain;
+				current_window = parent_window;
+			}catch (e){
+				current_window = current_window;
+			}
+		}
+
+
+		this.target_window = current_window;
+		this.target_document = current_window.document;
+
+		// if there is some race condition...
+		if ( !this.target_window.RouteState ) {
+			this.target_window.RouteState = this;
+			RouteState.DOMs.push( this.target_document );
+		}
+		window.RouteState = this.target_window.RouteState;
+	}
+
+	/*if (
+		!is_topmost_window
 	) {
 		this.target_window = window.top;
 		this.target_document = window.top.document;
@@ -19650,7 +19695,7 @@ RouteState.listenToHash = function ( funk )
 			RouteState.DOMs.push( this.target_document );
 		}
 		window.RouteState = this.target_window.RouteState;
-	}
+	}*/
 
 	RouteState.target_window = this.target_window;
 	RouteState.target_document = this.target_document;
@@ -20181,10 +20226,17 @@ RouteState.processObjectForDependencies = function ( overrides )
 		new_overrides[ state_obj.name ] = overrides[name];
 		switch ( state_obj.relation ) {
 			case 1:
-				RouteState.tieToProp( state_obj.name , state_obj.dependency );
+				RouteState.tieToProp(
+					state_obj.name,
+					state_obj.dependency
+				);
 				break;
 			case 2:
-				RouteState.tieToPropAndValue( state_obj.name , state_obj.dependency );
+				RouteState.tieToPropAndValue(
+					state_obj.name,
+					state_obj.dependency,
+					overrides
+				);
 				break;
 			default:
 				RouteState.removeTies( name );
@@ -20210,13 +20262,28 @@ RouteState.tieToProp = function ( source , target )
 	RouteState.config[source].dependency = target;
 };
 
-RouteState.tieToPropAndValue = function ( source , target )
+RouteState.tieToPropAndValue = function ( source, target, overrides )
 {
 	if ( !RouteState.config[source]) {
 		RouteState.config[source] = {};
 	}
-	if ( RouteState.route && RouteState.route[target] ) {
-		RouteState.config[source].dependency = target + ":" + RouteState.route[target];
+
+	if (
+		( RouteState.route && RouteState.route[ target ] )  ||
+		( overrides && overrides[ target ] )
+	) {
+		var target_value;
+		// overrides should take precedence...
+		// they are going to be a part of the new route.
+		if ( overrides[ target ] ) {
+			target_value = overrides[ target ];
+		}else{
+			target_value = RouteState.route[target];
+		}
+
+		RouteState.config[source].dependency =
+			target + ":" + target_value;
+
 	}else{
 		RouteState.tieToProp( source , target );
 	}
@@ -20632,6 +20699,11 @@ ProtoData.createModel = function( data ) {
     data.get = function ( obj_info ) {
         var obj,lookup_obj,guid;
 
+        // could be false (used in arrays for empty entry...)
+        if ( !obj_info ) {
+            return false;
+        }
+
         if ( typeof obj_info == "string" ) {
             guid = obj_info;
         }else if (
@@ -20645,22 +20717,53 @@ ProtoData.createModel = function( data ) {
         lookup_obj = this.lookup[ guid ];
 
         if ( !lookup_obj ) {
-            //lets create a random one!
+            // console.log( "COULDN'T FIND:" + guid );
+
+            //lets create an empty one!!!
             var guid_arr = guid.split("_");
-            var lookup_arr = this.obj_lookup[ guid_arr[0] ];
-            var arr_length = lookup_arr.length;
-            var random_index = Math.round( Math.random() * ( arr_length - 1 ) );
+            var guid_index = guid_arr[ guid_arr.length-1 ];
+            guid_arr.pop();
+            var guid_type = guid_arr.join("_");
 
-            var lookup_obj = this.lookup[ lookup_arr[random_index] ];
+            // just take the first one...
+            var ref_obj = this.lookup[ guid_type + "_0" ];
+            if (!ref_obj) {
+                // console.log( "COULDN'T FIND it again:" + guid );
+                return obj_info;// just reflect it back...;
+            }
 
-            obj = new lookup_obj();
-            obj.guid = guid;
+            var new_obj = {};
+            this.lookup[ guid ] = new_obj;
 
-            this.lookup[ guid ] = function () {};
-            this.lookup[ guid ].prototype = obj;
+            for ( var name in ref_obj ) {
+                if ( Object.prototype.toString.call( ref_obj[name] ) === '[object Array]' ) {
+                    new_obj[ name ] = [];
+                }else if ( Object.prototype.toString.call( ref_obj[name] ) === '[object Object]' ) {
+                    if ( ref_obj[name].guid ) {
+                        var obj_guid = ref_obj[name].guid;
+                        var obj_guid_arr = obj_guid.split("_");
+                        obj_guid_arr.pop();
+                        obj_guid = obj_guid_arr.join("_");
+                        new_obj[ name ] = this.get( obj_guid + "_" + guid_index );
+                    }else{
+                        var sub_obj = ref_obj[name];
+                        var new_sub_obj = {};
+                        for ( var sub_name in sub_obj ) {
+                            new_sub_obj[sub_name] = "";
+                        }
+                        new_obj[ name ] = new_sub_obj;
+                    }
+                }else{
+                    new_obj[ name ] = "";
+                }
+            }
+            new_obj.guid = guid;
+
+            obj = new_obj;
+
 
         }else{
-            obj = new lookup_obj();
+            obj = lookup_obj;//new lookup_obj();
         }
 
         if ( obj ) {
