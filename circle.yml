@@ -10,7 +10,7 @@ test:
     npm run build # no tests for CSS -- just build instead
 deployment:
   production:
-    branch: circle-deploy # change to 'master' when merged
+    branch: master
     commands:
       - rm -rf RedoxEngine_repo # don't deploy the RedoxEngine codebase!
-      - npm run deploy -- $DEPLOYMENT_URL
+      - npm run deploy -- $DEPLOY_URL
