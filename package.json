@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/100health/redox-css-model"
   },
+  "scripts": {
+    "build": "grunt full",
+    "deploy": "sh deploy.sh"
+  },
   "homepage": "https://github.com/100health/redox-css-model",
   "dependencies": {
     "cssreveal":"^0.0.1"

@@ -1,0 +1,16 @@
+general:
+  branches:
+    ignore:
+      - gh-pages # build commits to this branch
+checkout:
+  post:
+    git clone $ENGINE_REPO_URL RedoxEngine_repo
+test:
+  override:
+    npm run build # no tests for CSS -- just build instead
+deployment:
+  production:
+    branch: circle-deploy # change to 'master' when merged
+    commands:
+      - rm -rf RedoxEngine_repo # don't deploy the RedoxEngine codebase!
+      - npm run deploy -- $DEPLOYMENT_URL
