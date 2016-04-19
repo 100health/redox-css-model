@@ -21752,8 +21752,6 @@ var Detail = React.createClass({displayName: "Detail",
     		},
             "Detail"
     	);
-
-        this.session = Math.random();
     },
 
     componentWillUnmount: function(){
@@ -21855,18 +21853,17 @@ var Detail = React.createClass({displayName: "Detail",
             }
 
             // example += "<link rel='stylesheet' type='text/css' href='../core.css'>";
-            example += "<link rel='stylesheet' type='text/css' href='../core.css?"+ this.session +"'>";
+            example += "<link rel='stylesheet' type='text/css' href='../core.css?"+ Math.random() +"'>";
             example += "<script> \n \
                             function findCSS ( selector ) {\n \
                                 var styleSheet = document.styleSheets[0];\n \
-                                var rules = styleSheet.cssRules, rule, cssText;\n \
+                                var rules = styleSheet.cssRules, rule;\n \
                                 for (var r=0; r<rules.length; r++ ) {\n \
                                     rule = rules[r];\n \
-                                    cssText = rule.cssText;\n \
                                     if ( rule.selectorText == selector ) {\n \
                                         parent.postMessage({\n \
                             					action:'cssreveal',\n \
-                            					cssText:cssText\n \
+                            					cssText:rule.cssText\n \
                             				}, document.location.origin\n \
                             			);\n \
                                         return;\n \

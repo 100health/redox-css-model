@@ -21,14 +21,14 @@ body, html {
     .a-fill-container;
     .a-background-grey-5;
     .a-flex-h;
-}
-    .c-bootstrap__back {
+
+    &__back {
         .a-height-100;
         width: calc( 100% ~'-' 1212px );
         .a-interactive;
     }
 
-    .c-bootstrap iframe#cssreveal_target {
+    iframe#cssreveal_target {
         .a-position-relative;
         height: 96vh;
         // left: 50%; margin-left: -605px;
@@ -37,7 +37,7 @@ body, html {
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
         z-index: 50;
     }
-
+}
 
 .c-cssrevealapp {
     background-color: rgba( 0,0,0,.6);
@@ -50,63 +50,51 @@ body, html {
     .a-justify-content-center;
     .a-display-none;
     z-index: 100;
-}
 
-    body.s_app .c-cssrevealapp{
+    body.s_app & {
         .a-flex-h-stretch;
     }
 
-    .c-cssrevealapp__back {
+    &__back {
         .a-width-col-1;
     }
 
-    .c-cssrevealapp__content {
+    &__content {
         .a-width-col-10;
         .a-shadow-left-right;
         .a-flex-h-stretch;
         .a-background-white;
         .a-position-relative;
-
-        pre {
-            -moz-tab-size: 5;
-            tab-size: 5;
-        }
     }
 
-
-    .c-cssrevealapp__nav {
+    &__nav {
         .a-width-col-3;
     }
 
-    .c-cssrevealapp__viewer {
+    &__viewer {
         .a-flex-item-fill;
         .a-background-grey-9;
         .a-overflow-auto;
     }
 
-        .c-cssrevealapp__title {
-            .a-padding-row-1;
-            .a-padding-bottom-row-0;
-            .a-text-color-grey-5;
-            .a-text-size-larger-plus;
-        }
-
-    .c-cssrevealapp__close {
+    &__close {
         .a-position-absolute;
         .a-text-color-grey-9;
-        .a-text-size;
+        .a-text-size-small;
         .a-width-col-1;
         .a-height-row-3;
         .a-top-right;
         .a-interactive;
         .a-flex-center;
-        background-color: rgba( 0,0,0,.7);
+        background-color: rgba( 0,0,0,.4);
         //border-bottom: 1px solid #666;
         .a-shadow-bottom;
-    }
-        .c-cssrevealapp__close:hover {
+
+        &:hover {
             background-color: rgba( 0,0,0,.9);
         }
+    }
+}
 
 
 
@@ -131,24 +119,21 @@ body, html {
     .a-padding-h-col-quarter;
     .a-padding-v-row-1;
     .a-overflow-y;
-}
-    .c-cssreveallist__item {
+
+    &__item {
         .a-width-100;
         .a-height-row-2;
         .a-border-bottom-weaker;
         .a-flex-h;
         .a-text-color-grey-5;
         .a-interactive-hover;
-    }
-        .c-cssreveallist__item--selected {
+
+        &--selected {
             .a-text-color-green-light;
         }
-
-
-    .c-cssreveallist__item--noShortcut {
-        color: #ED6A20 !important;
     }
- 
+
+}
 
 
 

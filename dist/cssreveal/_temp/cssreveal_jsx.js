@@ -23,7 +23,7 @@ var Bootstrap = React.createClass({displayName: "Bootstrap",
             React.createElement("div", {className: "c-bootstrap__back", onClick:  this.openApp}), 
             React.createElement("iframe", {id: "cssreveal_target", src:  this.props.url + '?' + Math.random()}), 
             React.createElement("div", {className: "c-bootstrap__back", onClick:  this.openApp}), 
-            React.createElement(CSSRevealApp, {shortcuts:  this.props.shortcuts})
+            React.createElement(CSSRevealApp, null)
         );
     }
 
@@ -54,8 +54,14 @@ var CSSRevealApp = React.createClass({displayName: "CSSRevealApp",
 
         window.addEventListener( "message" , function(event) {
             if ( event.data.action == "cssreveal" ) {
-                event.data.html = me.getHTML( event.data );
+                //me.add( event.data.target , event.data.filters );
+                //if ( !CSSRevealModel.csscomps_lookup[ event.data.target ] ) {
+                    //event.data.cleanHTML = me.cleanHTML( event.data );
+                    event.data.html = me.getHTML( event.data );
+                //}
+                console.log( event.data );
                 CSSRevealModel.csscomps_lookup[ event.data.target ] = event.data;
+
                 me.forceUpdate();
             }
         }, false);
@@ -66,16 +72,12 @@ var CSSRevealApp = React.createClass({displayName: "CSSRevealApp",
     },
 
     componentDidUpdate: function () {
-        //document.querySelector(".prettyprint").classList.remove("prettyprinted");
-        //if ( PR ) { PR.prettyPrint(); }
+        document.querySelector(".prettyprint").classList.remove("prettyprinted");
+        if ( PR ) { PR.prettyPrint(); }
     },
 
     openCSSComp: function( csscomp ){
         RS.merge({'app.csscomp': encodeURIComponent( csscomp.target ) });
-    },
-
-    openShortcut: function( hash ){
-        document.location.hash = hash;
     },
 
     getHTML: function ( comp ) {
@@ -87,14 +89,11 @@ var CSSRevealApp = React.createClass({displayName: "CSSRevealApp",
 
         var div = iframe.contentWindow.document.querySelector( comp.target );
 
-        if ( div ){
-            return div.outerHTML;
-        }else{
-            return false;
-        }
+        return div.outerHTML;
     },
 
     cleanHTML: function ( comp ) {
+
         // trying to offload as much as possible to this function...
         var clone = document.createElement("div");
         clone.innerHTML = comp.html;
@@ -119,86 +118,21 @@ var CSSRevealApp = React.createClass({displayName: "CSSRevealApp",
         var formatted_html = this._formatHTMLElement( clone.childNodes[0] , 1 );
 
         return formatted_html;
+
+        // was missing a lot of elements, so I wrote my own....
+        /*return html_beautify( clone.innerHTML  , {
+                    'indent_inner_html': false,
+                    'indent_size': 2,
+                    'indent_char': ' ',
+                    'wrap_line_length': 50,
+                    'brace_style': 'expand',
+                    'preserve_newlines': false,
+                    'indent_handlebars': false,
+                    'extra_liners': ['/html']
+                });*/
     },
 
-
         _formatHTMLElement: function ( element , indents ) {
-            var html = "",innerText,nodeClasses;
-            var indent_str = Array( indents ).join("\t");
-            var to_ignore = ["OPTION","BR","B","META","LINK"];
-
-            if ( element.nodeType == 1 ) {// element node
-
-                if ( to_ignore.indexOf( element.nodeName ) != -1 ) {
-                    return "";//ignore these
-                }
-
-                // hint at text content...
-                //innerText = $(element).text().replace(/(\r\n|\n|\r|\t|\s\s)/gm,"").trim();
-
-                var childElement;
-                var innerText = "";
-                for ( var i=0; i< element.childNodes.length; i++ ) {
-                   childElement = element.childNodes[i];
-                   if ( childElement.nodeType == 3 ) {
-                       innerText += $(childElement).text().replace(/(\r\n|\n|\r|\t|\s\s)/gm,"").trim();
-                   }
-                }
-
-                if ( innerText.length > 0 ) {
-                    if ( innerText.length > 20 ) {
-                        innerText = "<i>" + innerText.substring( 0, 20 ) + "...</i>";
-                    }else{
-                        innerText = "<i>" + innerText + "</i>";
-                    }
-                }
-
-                var node_prefix = "&lt;";
-                var node_postfix = " class=\"";
-                html += "\n" + indent_str + "<span style='color: #000; weight: bold;'>" + node_prefix +
-                                        element.nodeName.toLowerCase() + "</span>" +
-                                        node_postfix;
-                                        //innerText + "\n";
-
-                nodeClasses = element.className.split(/\s+/);
-
-                if ( nodeClasses.length > 1 ) {
-                    html += "\n" + indent_str + "\t";
-                }
-
-                if ( nodeClasses.length > 0 && nodeClasses[0] != "" ) {
-                    html += "<span style='color: #4DB167'>" + nodeClasses.join( "\n" + indent_str + "\t" )+ "</span>";
-                }
-                html += "\"<span style='color: #000; weight: bold;'>&gt;</span>";
-
-
-                //html += "<div style='height: 8px;'></div>";
-
-                var childElement,has_elementChildren = false;
-                var childStrLength = 0,child_html;
-                for ( var i=0; i< element.childNodes.length; i++ ) {
-                   childElement = element.childNodes[i];
-                   child_html = this._formatHTMLElement( childElement , indents+1 );
-                   childStrLength += child_html.length;
-                   html += child_html;
-                }
-
-                if ( childStrLength > 0 ) {
-                    html += "\n" + indent_str;
-                }
-
-                html += innerText + "<span style='color: #000; weight: bold;'>" + "&lt;\\" +  element.nodeName.toLowerCase() +"&gt;" + "</span>";
-
-            }else if ( element.nodeType == 3 ) {// text node
-                //var text_content = element.textContent.replace(/(\r\n|\n|\r)/gm,"").trim();
-                //if ( text_content.length > 0 )
-                //    html += indent_str + text_content + "\n";
-            }
-
-            return html;
-        },
-
-        _formatHTMLElement_v1: function ( element , indents ) {
             var html = "";
             var indent_str = Array( indents ).join("\t");
             if ( element.nodeType == 1 ) {
@@ -286,40 +220,14 @@ var CSSRevealApp = React.createClass({displayName: "CSSRevealApp",
             focused_csscomp = CSSRevealModel.csscomps_lookup[ decodeURIComponent( RS.route.csscomp ) ];
         }
 
-        var comp_list = [];
-
-        //Create Shortcuts Lookup
-        var shortcut_lookup = {};
-        if ( this.props.shortcuts ) {
-            var shortcut;
-            for ( var i=0; i<this.props.shortcuts.length; i++ ) {
-                shortcut = this.props.shortcuts[i];
-                shortcut_lookup[shortcut.title] = true;
-                // avoid dups....
-                if ( !CSSRevealModel.csscomps_lookup[shortcut.title] ) {
-                    comp_list.push(
-                        React.createElement("div", {className:  "c-cssreveallist__item ", 
-                            key:  "shortcut_" + shortcut.title, 
-                            onClick: this.openShortcut.bind( this , shortcut.url)}, 
-                             shortcut.title + " *"
-                        )
-                    );
-                }
-            }
-        }
-
-
-
-        var csscomp,xcls;
+        var comp_list = [],csscomp,xcls;
         //for ( var i=CSSRevealModel.csscomps.length-1; i>=0; i-- ) {
         for ( var cssComp_name in CSSRevealModel.csscomps_lookup ) {
             csscomp = CSSRevealModel.csscomps_lookup[ cssComp_name ];//CSSRevealModel.csscomps[i];
             xcls = ( focused_csscomp === csscomp ) ? "c-cssreveallist__item--selected" : "";
+
             comp_list.push(
-                React.createElement("div", {className: 
-                        "c-cssreveallist__item " + xcls +
-                        ( ( shortcut_lookup[csscomp.target] === true ) ? "" : " c-cssreveallist__item--noShortcut"), 
-                    
+                React.createElement("div", {className:  "c-cssreveallist__item " + xcls, 
                     key:  csscomp.target, 
                     onClick:  this.openCSSComp.bind( this , csscomp) }, 
                      csscomp.target
@@ -327,16 +235,10 @@ var CSSRevealApp = React.createClass({displayName: "CSSRevealApp",
             );
         }
 
-
-
-
         var cleanHTML = false;
-        var focused_csscomp_title = "";
         if ( focused_csscomp ) {
             cleanHTML = this.cleanHTML( focused_csscomp );
-            focused_csscomp_title = focused_csscomp.target;
         }
-
 
         return React.createElement("div", {className: "c-cssrevealapp"}, 
             React.createElement("div", {className: "c-cssrevealapp__back", 
@@ -346,14 +248,14 @@ var CSSRevealApp = React.createClass({displayName: "CSSRevealApp",
                      comp_list 
                 ), 
                 React.createElement("div", {className: "c-cssrevealapp__viewer c-cssrevealhtml"}, 
-                    React.createElement("div", {className: "c-cssrevealapp__title"},  focused_csscomp_title ), 
-                    React.createElement("pre", {className: "prettyprint-OFF lang-html-OFF", 
-                        dangerouslySetInnerHTML: {__html:cleanHTML}}
+                    React.createElement("pre", {className: "prettyprint lang-html"}, 
+                         cleanHTML 
                     )
                 )
             ), 
             React.createElement("div", {className: "c-cssrevealapp__back", 
                 onClick:  function () { RS.merge({'app':false}) }}, 
+
                 React.createElement("div", {className: "c-cssrevealapp__close", 
                     onClick:  function () { RS.merge({'app':'','d':3}) }}, 
                     "close"
