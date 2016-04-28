@@ -235,14 +235,20 @@
                     line-height: 20px;
                 }
 
-                .readme code {
-                    width: 100%;
+                .readme code, .readme pre {
                     background-color: #eee;
-                    padding: 10px 20px;
                     color: #000;
-                    display: block;
                     font-size: 12px;
+                }
+                
+                .readme pre {
+                    width: 100%;
+                    padding: 10px 20px;
                     overflow: auto;
+                }
+
+                .readme code {
+                    padding: 2px 4px;
                 }
 
                 .readme li {
