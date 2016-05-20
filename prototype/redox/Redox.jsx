@@ -49,7 +49,7 @@ var Redox = React.createClass({
         }
 
         var page;
-        var content_cls = "";
+        var content_cls = "c-redox__contentContainer--sidenav ";
         switch (RS.route.page) {
             case "connections":
                 page = <Connections />;
@@ -122,7 +122,7 @@ var Redox = React.createClass({
             <div className="c-redox__secondaryNavContainer">
                 { secondaryNav }
             </div>
-            <div className={ "c-redox__contentContainer" + content_cls }>
+            <div className={ "c-redox__contentContainer " + content_cls }>
                 { page }
             </div>
             <div className="c-redox__footerContainer">
