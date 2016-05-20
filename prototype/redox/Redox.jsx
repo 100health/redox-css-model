@@ -111,7 +111,6 @@ var Redox = React.createClass({
                 break;
         }
 
-
         return <div className={ "c-redox " + redox_xcls + ((modalContent) ? " c-redox--modal" : "") }>
             <div className={
                 'c-redox__mainNavContainer' +
@@ -129,14 +128,18 @@ var Redox = React.createClass({
             <div className="c-redox__footerContainer">
                 <Footer />
             </div>
-            <div className="o-modal">
+            { modalContent ? makeModal(modalContent) : <div /> }
+        </div >;
+        
+        function makeModal(child) {
+            return <div className="o-modal">
                 <div className="o-modal__bgCover" onClick={ this.closeModal }></div>
                 <div className="o-modal__contentContainer">
-                    { modalContent }
+                    {child}
                 </div>
                 <div className="o-modal__bgCover" onClick={ this.closeModal }></div>
             </div>
-        </div >;
+        }
     }
 
 });
