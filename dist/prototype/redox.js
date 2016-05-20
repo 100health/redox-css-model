@@ -23744,87 +23744,87 @@ var MainNav = React.createClass({displayName: "MainNav",
 
 var Redox = React.createClass({displayName: "Redox",
 
-    componentWillMount: function() {
+    componentWillMount: function () {
         var me = this;
         RouteState.addDiffListeners(
-    		["section","page","detail_page","modal","dev_tools_state"],
-    		function ( route , prev_route ) {
+            ["section", "page", "detail_page", "modal", "dev_tools_state"],
+            function (route, prev_route) {
                 // update
                 me.forceUpdate();
-    		},
+            },
             "Redox"
-    	);
+        );
     },
 
-    componentWillUnmount: function(){
-        RouteState.removeDiffListenersViaClusterId( "Redox" );
+    componentWillUnmount: function () {
+        RouteState.removeDiffListenersViaClusterId("Redox");
     },
 
-    componentDidMount: function(){
+    componentDidMount: function () {
         parent.postMessage({
-				action:'cssreveal',
-				target:'.c-redox',
-				filters:[
-					['.c-redox > * > *', 0 ]
-				]
-			}, document.location.origin
-		);
+            action: 'cssreveal',
+            target: '.c-redox',
+            filters: [
+                ['.c-redox > * > *', 0]
+            ]
+        }, document.location.origin
+        );
     },
 
-    closeModal: function(){
+    closeModal: function () {
         RS.merge({
-            modal:""
+            modal: ""
         });
     },
 
-    render: function() {
+    render: function () {
 
         var show_footer = true;
 
         var redox_xcls = "";
         var secondaryNav_xcls = "";
 
-        if ( RS.route.detail_page && RS.route.detail_page != "" ) {
+        if (RS.route.detail_page && RS.route.detail_page != "") {
             redox_xcls += " c-redox--tertiary ";
             secondaryNav_xcls += " c-secondaryNav--tertiary ";
         }
 
         var page;
-        var content_cls = "";
-        switch ( RS.route.page ) {
-            case "connections" :
+        var content_cls = "c-redox__contentContainer--sidenav ";
+        switch (RS.route.page) {
+            case "connections":
                 page = React.createElement(Connections, null);
                 break;
-            case "profile" :
+            case "profile":
                 page = React.createElement(Profile, null);
                 break;
-            case "logs" :
+            case "logs":
                 page = React.createElement(Logs, null);
                 redox_xcls += " c-redox--nofooter ";
                 break;
-            case "test" :
+            case "test":
                 page = React.createElement(OverviewOrig, null);
                 break;
-            case "dev_tools" :
+            case "dev_tools":
                 page = React.createElement(DevTools, null);
 
                 // should be abstracted better long term...too specific
-                if ( RS.route.dev_tools_state && RS.route.dev_tools_state != "" ) {
+                if (RS.route.dev_tools_state && RS.route.dev_tools_state != "") {
                     redox_xcls += " c-redox--iconNav ";
                     redox_xcls += " c-redox--nofooter ";
                     secondaryNav_xcls += " c-secondaryNav--iconNav ";
                 }
                 break;
-            case "users" :
+            case "users":
                 page = React.createElement(DevTools_dev, null);//TEMPORARY!!!!
                 break;
 
-            default :
+            default:
                 page = React.createElement("div", null,  RS.route.section, " | ",  RS.route.page);
                 break;
         }
 
-        switch ( RS.route.detail_page ) {
+        switch (RS.route.detail_page) {
             case "log":
                 page = React.createElement(LogDetail, null);
                 break;
@@ -23833,60 +23833,54 @@ var Redox = React.createClass({displayName: "Redox",
 
 
         var secondaryNav = React.createElement(SecondaryNav, {extra_classes:  secondaryNav_xcls });
-        switch ( RS.route.section ) {
-            case "gallery" :
+        switch (RS.route.section) {
+            case "gallery":
                 secondaryNav = React.createElement(GalleryNav, null);
                 break;
         }
 
         var modalContent = false;
-        switch ( RS.route.modal ) {
-            case "profile_edit" :
+        switch (RS.route.modal) {
+            case "profile_edit":
                 modalContent = React.createElement(ProfileEdit, null);
                 break;
-            case "admin_profile_edit" :
+            case "admin_profile_edit":
                 modalContent = React.createElement(ProfileAdminEdit, null);
                 break;
-            case "connection" :
+            case "connection":
                 modalContent = React.createElement(ConnectionModal, null);
                 break;
         }
 
-
-        return  React.createElement("div", {className:  "c-redox" + redox_xcls +
-                    ( ( modalContent ) ? " c-redox--modal" : "")}, 
-                    React.createElement("div", {className: 
-                            'c-redox__mainNavContainer' +
-                            ( ( RS.route.detail_page
-                                && RS.route.detail_page != "" )
-                                    ? " c-redox__mainNavContainer--open" : "")
-                        }, 
-                        React.createElement(MainNav, null)
-                    ), 
-                    React.createElement("div", {className: 
-                            "c-redox__secondaryNavContainer"}, 
-                         secondaryNav 
-                    ), 
-                    React.createElement("div", {className: 
-                            "c-redox__contentContainer" + content_cls
-                        }, 
-                         page 
-                    ), 
-                    React.createElement("div", {className: "c-redox__footerContainer"}, 
-                        React.createElement(Footer, null)
-                    ), 
-
-                    React.createElement("div", {className: "o-modal"}, 
-                        React.createElement("div", {className: "o-modal__bgCover", 
-                            onClick:  this.closeModal}), 
-                        React.createElement("div", {className: "o-modal__contentContainer"}, 
-                             modalContent 
-                        ), 
-                        React.createElement("div", {className: "o-modal__bgCover", 
-                            onClick:  this.closeModal})
-                    )
-
-                );
+        return React.createElement("div", {className:  "c-redox " + redox_xcls + ((modalContent) ? " c-redox--modal" : "") }, 
+            React.createElement("div", {className: 
+                'c-redox__mainNavContainer' +
+                ((RS.route.detail_page
+                    && RS.route.detail_page != "")
+                    ? " c-redox__mainNavContainer--open" : "")}, 
+                React.createElement(MainNav, null)
+            ), 
+            React.createElement("div", {className: "c-redox__secondaryNavContainer"}, 
+                 secondaryNav 
+            ), 
+            React.createElement("div", {className:  "c-redox__contentContainer " + content_cls}, 
+                 page 
+            ), 
+            React.createElement("div", {className: "c-redox__footerContainer"}, 
+                React.createElement(Footer, null)
+            ), 
+             modalContent ? makeModal(modalContent) : React.createElement("div", null)
+        );
+        
+        function makeModal(child) {
+            return React.createElement("div", {className: "o-modal"}, 
+                React.createElement("div", {className: "o-modal__bgCover", onClick:  this.closeModal}), 
+                React.createElement("div", {className: "o-modal__contentContainer"}, 
+                    child
+                ), 
+                React.createElement("div", {className: "o-modal__bgCover", onClick:  this.closeModal})
+            )
+        }
     }
 
 });
