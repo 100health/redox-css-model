@@ -20733,6 +20733,7 @@ ProtoData.createModel = function( data ) {
             }
 
             var new_obj = {};
+            
             this.lookup[ guid ] = new_obj;
 
             for ( var name in ref_obj ) {
