@@ -208,6 +208,9 @@ h1, h2, h3, h4, h5, h6, p, code {
       .o-document__column {
         padding: 0 !important; } }
 
+input {
+  /* Should only use these in .o-form */ }
+
 .o-form input {
   /* Should only use these in .o-form */
   outline: none; }
@@ -301,7 +304,7 @@ h1, h2, h3, h4, h5, h6, p, code {
     position: relative;
     outline: none; }
 
-.o-form input, .o-form select, .o-form textarea, .o-form button, .o-form .o-form__labelButton {
+.o-form input, .o-form select, .o-form textarea, .o-form button {
   width: 100%;
   height: 44px;
   float: left;
@@ -316,34 +319,21 @@ h1, h2, h3, h4, h5, h6, p, code {
   -webkit-appearance: none;
   -moz-appearance: none;
   resize: none; }
-  .flexbox-grid .a-flex-center > .o-form input, .flexbox-grid .a-flex-h > .o-form input, .flexbox-grid .a-flex-center > .o-form select, .flexbox-grid .a-flex-h > .o-form select, .flexbox-grid .a-flex-center > .o-form textarea, .flexbox-grid .a-flex-h > .o-form textarea, .flexbox-grid .a-flex-center > .o-form button, .flexbox-grid .a-flex-center > .o-form .o-form__labelButton, .flexbox-grid .a-flex-h > .o-form button, .flexbox-grid .a-flex-h > .o-form .o-form__labelButton {
+  .flexbox-grid .a-flex-center > .o-form input, .flexbox-grid .a-flex-h > .o-form input, .flexbox-grid .a-flex-center > .o-form select, .flexbox-grid .a-flex-h > .o-form select, .flexbox-grid .a-flex-center > .o-form textarea, .flexbox-grid .a-flex-h > .o-form textarea, .flexbox-grid .a-flex-center > .o-form button, .flexbox-grid .a-flex-h > .o-form button {
     top: calc( 50% - ( 44px / 2 ));
     position: relative;
     outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-form input, .flexbox-grid .a-flex-h-end > .o-form select, .flexbox-grid .a-flex-h-end > .o-form textarea, .flexbox-grid .a-flex-h-end > .o-form button, .flexbox-grid .a-flex-h-end > .o-form .o-form__labelButton {
+  .flexbox-grid .a-flex-h-end > .o-form input, .flexbox-grid .a-flex-h-end > .o-form select, .flexbox-grid .a-flex-h-end > .o-form textarea, .flexbox-grid .a-flex-h-end > .o-form button {
     top: calc( 100% -  44px);
     position: relative;
     outline: none; }
-  .o-form input:disabled, .o-form select:disabled, .o-form textarea:disabled, .o-form button:disabled, .o-form .o-form__labelButton:disabled {
+  .o-form input:disabled, .o-form select:disabled, .o-form textarea:disabled, .o-form button:disabled {
     background-color: #eee;
     color: #999999; }
 
-.o-form button, .o-form .o-form__labelButton {
+.o-form button {
   border-radius: 3px;
   background-color: #fff; }
-
-.o-form .o-form__labelButton {
-  display: -ms-flexbox;
-  -ms-flex-direction: row;
-  -ms-flex-pack: center;
-  -ms-flex-align: center;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  font-weight: 300;
-  cursor: hand;
-  cursor: pointer; }
 
 .o-form textarea {
   height: 88px; }
@@ -356,11 +346,7 @@ h1, h2, h3, h4, h5, h6, p, code {
     position: relative;
     outline: none; }
 
-.o-form__textarea--large {
-  height: 132px !important; }
-
 .o-form input[type="checkbox"] {
-  flex-grow: 0;
   width: 44px; }
   .flexbox-grid .a-flex-v > .o-form input[type="checkbox"] {
     left: calc( 50% - (( 44px / 2 )));
@@ -403,7 +389,7 @@ h1, h2, h3, h4, h5, h6, p, code {
     top: calc( 100% -  44px);
     position: relative;
     outline: none; }
-  .o-form__element label:not(.o-form__labelButton), .o-form__element .o-form__label {
+  .o-form__element label, .o-form__element .o-form__label {
     display: -ms-flexbox;
     -ms-flex-direction: row;
     -ms-flex-pack: start;
@@ -424,27 +410,27 @@ h1, h2, h3, h4, h5, h6, p, code {
     overflow: hidden;
     white-space: nowrap;
     padding-right: 5.5px; }
-    .flexbox-grid .a-flex-v > .o-form__element label:not(.o-form__labelButton), .flexbox-grid .a-flex-v > .o-form__element .o-form__label {
+    .flexbox-grid .a-flex-v > .o-form__element label, .flexbox-grid .a-flex-v > .o-form__element .o-form__label {
       left: calc( 50% - (( 12.499995vw / 2 )));
       position: relative;
       outline: none; }
-    .flexbox-grid .a-flex-v-end > .o-form__element label:not(.o-form__labelButton), .flexbox-grid .a-flex-v-end > .o-form__element .o-form__label {
+    .flexbox-grid .a-flex-v-end > .o-form__element label, .flexbox-grid .a-flex-v-end > .o-form__element .o-form__label {
       left: calc( 100% -  12.499995vw);
       position: relative;
       outline: none; }
     @media (max-width: 768px) {
-      .o-form__element label:not(.o-form__labelButton), .o-form__element .o-form__label {
+      .o-form__element label, .o-form__element .o-form__label {
         width: 24.99999vw !important; }
-        .flexbox-grid .a-flex-v > .o-form__element label:not(.o-form__labelButton), .flexbox-grid .a-flex-v > .o-form__element .o-form__label {
+        .flexbox-grid .a-flex-v > .o-form__element label, .flexbox-grid .a-flex-v > .o-form__element .o-form__label {
           left: calc( 50% - (( 24.99999vw / 2 ))) !important;
           position: relative !important;
           outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .o-form__element label:not(.o-form__labelButton), .flexbox-grid .a-flex-v-end > .o-form__element .o-form__label {
+        .flexbox-grid .a-flex-v-end > .o-form__element label, .flexbox-grid .a-flex-v-end > .o-form__element .o-form__label {
           left: calc( 100% -  24.99999vw) !important;
           position: relative !important;
           outline: none !important; } }
-    .o-form__element label:not(.o-form__labelButton) + input:not([type="checkbox"]), .o-form__element label:not(.o-form__labelButton) + select, .o-form__element label:not(.o-form__labelButton) + textarea, .o-form__element label:not(.o-form__labelButton) + button, .o-form__element .o-form label:not(.o-form__labelButton) + .o-form__labelButton, .o-form .o-form__element label:not(.o-form__labelButton) + .o-form__labelButton,
-    .o-form__element label:not(.o-form__labelButton) + .o-form__readonly, .o-form__element label:not(.o-form__labelButton) + .o-form__input, .o-form__element .o-form__label + input:not([type="checkbox"]), .o-form__element .o-form__label + select, .o-form__element .o-form__label + textarea, .o-form__element .o-form__label + button, .o-form__element .o-form .o-form__label + .o-form__labelButton, .o-form .o-form__element .o-form__label + .o-form__labelButton,
+    .o-form__element label + input, .o-form__element label + select, .o-form__element label + textarea, .o-form__element label + button,
+    .o-form__element label + .o-form__readonly, .o-form__element label + .o-form__input, .o-form__element .o-form__label + input, .o-form__element .o-form__label + select, .o-form__element .o-form__label + textarea, .o-form__element .o-form__label + button,
     .o-form__element .o-form__label + .o-form__readonly, .o-form__element .o-form__label + .o-form__input {
       -ms-flex: 1;
       flex: 1;
@@ -456,30 +442,6 @@ h1, h2, h3, h4, h5, h6, p, code {
       /* webkit hack for height issues */
       /* & > .a-height-100 { outline: 1px solid red; height: auto; }*/
       /* is being overridden...*/ }
-  .o-form__element--invalid label:not(.o-form__labelButton), .o-form__element--invalid .o-form__label {
-    color: #c84b32;
-    border-color: #c84b32; }
-  .o-form__element--invalid input, .o-form__element--invalid select, .o-form__element--invalid textarea, .o-form__element--invalid button, .o-form__element--invalid .o-form .o-form__labelButton, .o-form .o-form__element--invalid .o-form__labelButton,
-  .o-form__element--invalid .o-form__readonly, .o-form__element--invalid .o-form__input {
-    border-color: #c84b32; }
-
-.o-form__subtext {
-  height: 22px;
-  float: left;
-  margin-left: 12.499995vw; }
-  .flexbox-grid .a-flex-center > .o-form__subtext, .flexbox-grid .a-flex-h > .o-form__subtext {
-    top: calc( 50% - ( 22px / 2 ));
-    position: relative;
-    outline: none; }
-  .flexbox-grid .a-flex-h-end > .o-form__subtext {
-    top: calc( 100% -  22px);
-    position: relative;
-    outline: none; }
-  .o-form__subtext--invalid {
-    color: #c84b32; }
-
-.o-form__element + .o-form__subtext {
-  margin-top: -22px; }
 
 .o-form input[type="submit"] {
   width: 16.66666vw;
@@ -537,9 +499,6 @@ h1, h2, h3, h4, h5, h6, p, code {
   .o-form input[type="reset"]:hover {
     background-color: #fff; }
 
-.o-form .rui-helptext-icon {
-  color: inherit; }
-
 .o-formLayout__1-column, .o-formLayout__1-column-skinny {
   width: 100%;
   clear: both; }
@@ -564,7 +523,7 @@ h1, h2, h3, h4, h5, h6, p, code {
     left: calc( 100% -  6.2499975vw);
     position: relative;
     outline: none; }
-  .o-formLayout__1-column-skinny .o-form__element label + input, .o-formLayout__1-column-skinny .o-form__element label + select, .o-formLayout__1-column-skinny .o-form__element label + textarea, .o-formLayout__1-column-skinny .o-form__element label + button, .o-formLayout__1-column-skinny .o-form__element .o-form label + .o-form__labelButton, .o-form .o-formLayout__1-column-skinny .o-form__element label + .o-form__labelButton, .o-formLayout__1-column-skinny .o-form__element .o-form__label + input, .o-formLayout__1-column-skinny .o-form__element .o-form__label + select, .o-formLayout__1-column-skinny .o-form__element .o-form__label + textarea, .o-formLayout__1-column-skinny .o-form__element .o-form__label + button, .o-formLayout__1-column-skinny .o-form__element .o-form .o-form__label + .o-form__labelButton, .o-form .o-formLayout__1-column-skinny .o-form__element .o-form__label + .o-form__labelButton {
+  .o-formLayout__1-column-skinny .o-form__element label + input, .o-formLayout__1-column-skinny .o-form__element label + select, .o-formLayout__1-column-skinny .o-form__element label + textarea, .o-formLayout__1-column-skinny .o-form__element label + button, .o-formLayout__1-column-skinny .o-form__element .o-form__label + input, .o-formLayout__1-column-skinny .o-form__element .o-form__label + select, .o-formLayout__1-column-skinny .o-form__element .o-form__label + textarea, .o-formLayout__1-column-skinny .o-form__element .o-form__label + button {
     width: calc( 100% - 6.2499975vw); }
 
 .o-formLayout__2-column {
@@ -613,8 +572,7 @@ h1, h2, h3, h4, h5, h6, p, code {
   position: relative;
   height: auto; }
   .c-dataModelSelector label {
-    border: none;
-    align-items: center !important; }
+    border: none; }
   .c-dataModelSelector__itemsContainer {
     width: calc( 100% - 12.499995vw);
     border-bottom: 1px solid #CCCCCC;
@@ -678,15 +636,14 @@ h1, h2, h3, h4, h5, h6, p, code {
   position: relative;
   height: auto; }
   .c-searchCategoriesSelector label {
-    border: none;
-    align-items: center !important; }
+    border: none; }
   .c-searchCategoriesSelector__itemsContainer {
     width: calc( 100% - 12.499995vw);
     border-bottom: 1px solid #CCCCCC;
     float: right; }
   .c-searchCategoriesSelector__item {
-    width: 33.333%;
-    height: 44px;
+    width: 16.666%;
+    height: 88px;
     background-color: #fff;
     float: left;
     display: -ms-flexbox;
@@ -700,18 +657,18 @@ h1, h2, h3, h4, h5, h6, p, code {
     cursor: hand;
     cursor: pointer;
     color: #B3B3B3;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 16.5px;
     flex-direction: column;
     padding: 5px;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee; }
     .flexbox-grid .a-flex-center > .c-searchCategoriesSelector__item, .flexbox-grid .a-flex-h > .c-searchCategoriesSelector__item {
-      top: calc( 50% - ( 44px / 2 ));
+      top: calc( 50% - ( 88px / 2 ));
       position: relative;
       outline: none; }
     .flexbox-grid .a-flex-h-end > .c-searchCategoriesSelector__item {
-      top: calc( 100% -  44px);
+      top: calc( 100% -  88px);
       position: relative;
       outline: none; }
     .c-searchCategoriesSelector__item:hover {
@@ -731,29 +688,28 @@ h1, h2, h3, h4, h5, h6, p, code {
       margin-bottom: 5.5px;
       text-align: center; }
     .c-searchCategoriesSelector__item--selected {
-      color: #00b588;
-      font-weight: 700; }
+      color: #00b588; }
       .c-searchCategoriesSelector__item--selected:hover {
         color: #008262; }
-    .c-searchCategoriesSelector__item:nth-of-type(n+4) {
-      border-bottom: none; }
-    .c-searchCategoriesSelector__item:nth-of-type(3n+0) {
-      border-right: none; }
-    .c-searchCategoriesSelector__item:nth-of-type(n+3) {
-      border-bottom: 1px solid #eee; }
     .c-searchCategoriesSelector__item:nth-of-type(n+7) {
+      border-bottom: none; }
+    .c-searchCategoriesSelector__item:nth-of-type(6n+0) {
+      border-right: none; }
+    .c-searchCategoriesSelector__item:nth-of-type(n+6) {
+      border-bottom: 1px solid #eee; }
+    .c-searchCategoriesSelector__item:nth-of-type(n+13) {
       border-bottom: none; }
   .c-searchCategoriesSelector--3-rows .c-dataModelSelector__item {
     border-bottom: 1px solid #eee; }
-    .c-searchCategoriesSelector--3-rows .c-dataModelSelector__item:nth-of-type(n+9) {
+    .c-searchCategoriesSelector--3-rows .c-dataModelSelector__item:nth-of-type(n+13) {
       border-bottom: none; }
   .c-searchCategoriesSelector--4-rows .c-dataModelSelector__item {
     border-bottom: 1px solid #eee; }
-    .c-searchCategoriesSelector--4-rows .c-dataModelSelector__item:nth-of-type(n+10) {
+    .c-searchCategoriesSelector--4-rows .c-dataModelSelector__item:nth-of-type(n+22) {
       border-bottom: none; }
   .c-searchCategoriesSelector--5-rows .c-dataModelSelector__item {
     border-bottom: 1px solid #eee; }
-    .c-searchCategoriesSelector--5-rows .c-dataModelSelector__item:nth-of-type(n+13) {
+    .c-searchCategoriesSelector--5-rows .c-dataModelSelector__item:nth-of-type(n+29) {
       border-bottom: none; }
 
 .o-modal {
@@ -768,6 +724,7 @@ h1, h2, h3, h4, h5, h6, p, code {
   top: 0px;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.4);
+  display: none;
   z-index: 5000; }
   .o-modal__bgCover {
     /* -ctag-example: ...;*/
@@ -943,10 +900,6 @@ h1, h2, h3, h4, h5, h6, p, code {
       top: calc( 100% -  66px);
       position: relative;
       outline: none; }
-    .o-contentModal__footerSave--disabled {
-      background-color: #B3B3B3; }
-      .o-contentModal__footerSave--disabled:hover {
-        background-color: #B3B3B3; }
 
 .o-contentModal--wfooter .o-contentModal__contentContainer {
   height: calc( 100% - 66px); }
@@ -1250,7 +1203,7 @@ h1, h2, h3, h4, h5, h6, p, code {
     .o-button--redox-green:hover, .o-roundedButton--redox-green:hover, .c-connectionsModal__verifyBtn:hover, .c-devTools__sendBtn:hover, .o-devToolsOutput__copy:hover {
       color: #fff; }
 
-button.o-button, .o-form .o-button.o-form__labelButton, .o-form .o-form__labelButton.o-tabs__item, .o-form .o-form__labelButton.o-devToolsApp__rightNavItem, .o-form .o-form__labelButton.o-devToolsOutput__navItem, .o-form .o-form__labelButton.p-logs__logNav--navItem, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button.o-devToolsOutput__navItem, button.p-logs__logNav--navItem, button.o-roundedButton, .o-form .o-roundedButton.o-form__labelButton, .o-form .o-form__labelButton.c-connectionsModal__verifyBtn, .o-form .o-form__labelButton.c-devTools__setDefaultBtn, .o-form .o-form__labelButton.c-devTools__sendBtn, .o-form .o-form__labelButton.o-devToolsOutput__copy, .o-form .o-form__labelButton.o-devToolsOutput__navAction, .o-form .o-form__labelButton.o-devToolsLanding__action, .o-form .c-logs__footer .o-form__labelButton.c-logs__clearAll, .c-logs__footer .o-form .o-form__labelButton.c-logs__clearAll, button.c-connectionsModal__verifyBtn, button.c-devTools__setDefaultBtn, button.c-devTools__sendBtn, button.o-devToolsOutput__copy, button.o-devToolsOutput__navAction, button.o-devToolsLanding__action, .c-logs__footer button.c-logs__clearAll {
+button.o-button, button.o-tabs__item, button.o-devToolsApp__rightNavItem, button.o-devToolsOutput__navItem, button.p-logs__logNav--navItem, button.o-roundedButton, button.c-connectionsModal__verifyBtn, button.c-devTools__setDefaultBtn, button.c-devTools__sendBtn, button.o-devToolsOutput__copy, button.o-devToolsOutput__navAction, button.o-devToolsLanding__action, .c-logs__footer button.c-logs__clearAll {
   outline: 5px dotted red; }
 
 .o-roundedButton, .c-connectionsModal__verifyBtn, .c-devTools__setDefaultBtn, .c-devTools__sendBtn, .o-devToolsOutput__copy, .o-devToolsOutput__navAction, .o-devToolsLanding__action, .c-logs__footer .c-logs__clearAll {
@@ -1871,8 +1824,6 @@ a {
     @media (max-width: 768px) {
       .c-redox__footerContainer {
         position: static  !important; } }
-  .c-redox__modalContainer {
-    display: none; }
 
 .c-redox--nofooter {
   /* touch */ }
@@ -1968,7 +1919,7 @@ a {
   .c-redox--modal .c-redox__footerContainer {
     display: none !important; } }
 
-.c-redox--modal .c-redox__modalContainer {
+.c-redox--modal .o-modal {
   display: block; }
 
 .c-secondaryNav {
@@ -4067,10 +4018,6 @@ a {
     left: calc( 100% -  12.499995vw);
     position: relative;
     outline: none; }
-  .c-profile__avatar--editing {
-    padding: 0; }
-    .c-profile__avatar--editing img {
-      max-width: 100%; }
 
 .c-profile__btn {
   width: 12.499995vw;
@@ -4169,52 +4116,6 @@ a {
     outline: none; }
   .c-profile__outsideLink:nth-child(2n) {
     text-align: right; }
-
-.c-profile__adminInfo {
-  clear: left;
-  float: left; }
-  .c-profile__adminInfo__label {
-    width: 10.4166625vw; }
-    .flexbox-grid .a-flex-v > .c-profile__adminInfo__label {
-      left: calc( 50% - (( 10.4166625vw / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-profile__adminInfo__label {
-      left: calc( 100% -  10.4166625vw);
-      position: relative;
-      outline: none; }
-    @media (max-width: 768px) {
-      .c-profile__adminInfo__label {
-        width: 20.833325vw !important; }
-        .flexbox-grid .a-flex-v > .c-profile__adminInfo__label {
-          left: calc( 50% - (( 20.833325vw / 2 ))) !important;
-          position: relative !important;
-          outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .c-profile__adminInfo__label {
-          left: calc( 100% -  20.833325vw) !important;
-          position: relative !important;
-          outline: none !important; } }
-  .c-profile__adminInfo__value {
-    width: 24.99999vw; }
-    .flexbox-grid .a-flex-v > .c-profile__adminInfo__value {
-      left: calc( 50% - (( 24.99999vw / 2 )));
-      position: relative;
-      outline: none; }
-    .flexbox-grid .a-flex-v-end > .c-profile__adminInfo__value {
-      left: calc( 100% -  24.99999vw);
-      position: relative;
-      outline: none; }
-    @media (max-width: 768px) {
-      .c-profile__adminInfo__value {
-        width: 49.99998vw !important; }
-        .flexbox-grid .a-flex-v > .c-profile__adminInfo__value {
-          left: calc( 50% - (( 49.99998vw / 2 ))) !important;
-          position: relative !important;
-          outline: none !important; }
-        .flexbox-grid .a-flex-v-end > .c-profile__adminInfo__value {
-          left: calc( 100% -  49.99998vw) !important;
-          position: relative !important;
-          outline: none !important; } }
 
 .c-profile p {
   font-size: 15px;
@@ -4375,18 +4276,6 @@ a {
   .c-profile__contentCol {
     width: 100% !important; } }
 
-@media (max-width: 768px) {
-  .c-profile__adminInfoLine div {
-    width: 24.99999vw !important; }
-    .flexbox-grid .a-flex-v > .c-profile__adminInfoLine div {
-      left: calc( 50% - (( 24.99999vw / 2 ))) !important;
-      position: relative !important;
-      outline: none !important; }
-    .flexbox-grid .a-flex-v-end > .c-profile__adminInfoLine div {
-      left: calc( 100% -  24.99999vw) !important;
-      position: relative !important;
-      outline: none !important; } }
-
 .c-profile__category {
   border-left: 0px;
   border-top: 0px; }
@@ -4420,9 +4309,15 @@ a {
     outline: none; }
 
 .c-profileFormLayout__element--avatar {
-  height: 12.499995vw; }
-  .c-profileFormLayout__element--avatar .cropper-container {
-    position: static; }
+  height: 176px; }
+  .flexbox-grid .a-flex-center > .c-profileFormLayout__element--avatar, .flexbox-grid .a-flex-h > .c-profileFormLayout__element--avatar {
+    top: calc( 50% - ( 176px / 2 ));
+    position: relative;
+    outline: none; }
+  .flexbox-grid .a-flex-h-end > .c-profileFormLayout__element--avatar {
+    top: calc( 100% -  176px);
+    position: relative;
+    outline: none; }
 
 .c-profileFormLayout__avatarInverseColumn {
   width: calc( 100% - 14.5833275vw);
@@ -4431,12 +4326,12 @@ a {
 .c-profileFormLayout__element--overview {
   height: auto; }
 
-.c-profileFormLayout__element--checkbox input[type='checkbox'] {
+.c-profileFormLayout__element--public input[type='checkbox'] {
   cursor: hand;
   cursor: pointer;
   color: transparent !important; }
 
-.c-profileFormLayout__element--checkbox input[type='checkbox']:checked {
+.c-profileFormLayout__element--public input[type='checkbox']:checked {
   background-image: url("../images/check.svg");
   background-position: center;
   background-size: cover; }
@@ -5333,14 +5228,14 @@ accordion .panel-group .panel {
 
 #main-buttons-container {
   margin-top: 50px; }
-  #main-buttons-container button, #main-buttons-container .o-form .o-form__labelButton, .o-form #main-buttons-container .o-form__labelButton {
+  #main-buttons-container button {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 12px;
     padding-bottom: 12px;
     margin-bottom: 20px;
     width: 160px; }
-    #main-buttons-container button span, #main-buttons-container .o-form .o-form__labelButton span, .o-form #main-buttons-container .o-form__labelButton span {
+    #main-buttons-container button span {
       font-size: 18px;
       font-weight: normal; }
   #main-buttons-container #front-page-sign-up {
@@ -6267,7 +6162,7 @@ html, body {
 .devtools-alert-danger-wrapper {
   margin-top: 20px; }
 
-.devtools-actions-wrapper button, .devtools-actions-wrapper .o-form .o-form__labelButton, .o-form .devtools-actions-wrapper .o-form__labelButton {
+.devtools-actions-wrapper button {
   width: 100%;
   margin-bottom: 10px; }
 
@@ -6343,7 +6238,7 @@ span.remove-new-override-field:hover {
 
 .configuration-wizard-select {
   margin-bottom: 20px; }
-  .configuration-wizard-select button, .configuration-wizard-select .o-form .o-form__labelButton, .o-form .configuration-wizard-select .o-form__labelButton {
+  .configuration-wizard-select button {
     min-width: 200px; }
 
 #configuration-wizard-create {
@@ -6396,7 +6291,7 @@ span.remove-new-override-field:hover {
 .configuration-import-export {
   float: right; }
 
-.subscription-create-container .admin-subscription-form button, .subscription-create-container .admin-subscription-form .o-form .o-form__labelButton, .o-form .subscription-create-container .admin-subscription-form .o-form__labelButton {
+.subscription-create-container .admin-subscription-form button {
   width: 100%; }
 
 .healthSystem-form-container {
@@ -6446,12 +6341,6 @@ span.remove-new-override-field:hover {
 
 .st-sort-descent:before {
   content: '\25BC'; }
-
-input.countries-input {
-  width: 100%; }
-
-#authy-token {
-  width: 100%; }
 
 .docs-objects-wrapper {
   padding-bottom: 40px; }
@@ -6837,7 +6726,7 @@ input.countries-input {
   .layout-view-footer-wrapper {
     width: auto;
     margin-left: 0px; }
-  .gallery-toggle > button, .o-form .gallery-toggle > .o-form__labelButton {
+  .gallery-toggle > button {
     display: none; }
   .gallery-close-sidenav {
     float: right;
@@ -6884,7 +6773,7 @@ input.countries-input {
       .click-through-agreement ol ol ol ol {
         list-style-type: lower-roman; }
 
-.click-through-agreement button, .click-through-agreement .o-form .o-form__labelButton, .o-form .click-through-agreement .o-form__labelButton {
+.click-through-agreement button {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -6945,7 +6834,7 @@ input.countries-input {
 .profile-icon-crop {
   width: 200px; }
 
-.inline-group.tags-dropdown button, .inline-group.tags-dropdown .o-form .o-form__labelButton, .o-form .inline-group.tags-dropdown .o-form__labelButton {
+.inline-group.tags-dropdown button {
   width: calc(100% - 130px);
   float: left;
   margin-right: 10px; }
@@ -7134,10 +7023,10 @@ input[type="radio"] {
     width: calc(100% - 130px);
     float: left;
     margin-right: 10px; }
-  .inline-group button, .inline-group .o-form .o-form__labelButton, .o-form .inline-group .o-form__labelButton {
+  .inline-group button {
     float: right;
     width: 120px; }
-  .inline-group .editable-buttons button, .inline-group .editable-buttons .o-form .o-form__labelButton, .o-form .inline-group .editable-buttons .o-form__labelButton {
+  .inline-group .editable-buttons button {
     width: 58px !important; }
   .inline-group > span {
     float: left;
@@ -7155,10 +7044,10 @@ input[type="radio"] {
   .inline-group .form-inline, .inline-group .form-group {
     width: 100%; }
 
-#verificationTokenForm div, form, input, span, button, .o-form .o-form__labelButton {
+#verificationTokenForm div, form, input, span, button {
   transition: all 0s ease !important; }
 
-#applicationEndpointForm div, form, input, span, button, .o-form .o-form__labelButton {
+#applicationEndpointForm div, form, input, span, button {
   transition: all 0s ease !important; }
 
 .no-animation {
@@ -7257,7 +7146,7 @@ input[type="radio"] {
   .chip span {
     margin-right: 4px; }
 
-.inline-group button.delete-tag, .inline-group .o-form .delete-tag.o-form__labelButton, .o-form .inline-group .delete-tag.o-form__labelButton {
+.inline-group button.delete-tag {
   float: right;
   font-size: 21px;
   font-weight: 700;
@@ -7279,7 +7168,7 @@ input[type="radio"] {
 .btn-fixed-width {
   width: 120px; }
 
-.cfl-modal-select button, .cfl-modal-select .o-form .o-form__labelButton, .o-form .cfl-modal-select .o-form__labelButton {
+.cfl-modal-select button {
   width: 230px;
   float: left;
   margin-right: 10px; }

@@ -225,6 +225,15 @@ $v-redox-red-darker: #80001E;
 $v-redox-red-darkest: #4D0012;
 
 
+$v-redox-orange: #FFAE5C;
+
+
+$v-error-red: #D9534F;
+
+
+$v-warning-yellow: #F0AD4E;
+
+
 $v-secondaryNavBGColor: #eee;
 
 
@@ -3523,6 +3532,26 @@ $v-border-radius: 3px;
  &:hover { color : $v-redox-red-darker ; } }
 @mixin a-hover-text-color-redox-red-darkest ( $v-redox-red-darkest : $v-redox-red-darkest ) {
  &:hover { color : $v-redox-red-darkest ; } }
+@mixin a-background-redox-orange ( $v-redox-orange : $v-redox-orange ) {
+ background-color: $v-redox-orange ; }
+@mixin a-text-color-redox-orange ( $v-redox-orange : $v-redox-orange ) {
+ color: $v-redox-orange ; }
+@mixin a-hover-background-redox-orange ( $v-redox-orange : $v-redox-orange ) {
+ &:hover { background-color : $v-redox-orange ; } }
+@mixin a-hover-text-color-redox-orange ( $v-redox-orange : $v-redox-orange ) {
+ &:hover { color : $v-redox-orange ; } }
+@mixin a-background-error-red ( $v-error-red : $v-error-red ) {
+ background-color: $v-error-red ; }
+@mixin a-text-color-error-red ( $v-error-red : $v-error-red ) {
+ color: $v-error-red ; }
+@mixin a-border-color-error-red ( $v-error-red : $v-error-red ) {
+ border-color : $v-error-red ; }
+@mixin a-background-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) {
+ background-color: $v-warning-yellow ; }
+@mixin a-text-color-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) {
+ color: $v-warning-yellow ; }
+@mixin a-border-color-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) {
+ border-color : $v-warning-yellow ; }
 @mixin a-background-secondaryNavBGColor ( $v-secondaryNavBGColor : $v-secondaryNavBGColor ) {
  background-color : $v-secondaryNavBGColor ; }
 @mixin a-alpha-0 ( $v-alpha-0 : $v-alpha-0 ) {
@@ -3823,6 +3852,9 @@ $v-border-radius: 3px;
   @include a-position-relative;  /*@include a-width-col-11-half;*/  /*@include a-margin-left-col-quarter;*/  @include a-height-auto;  @include a-width-auto;  }
 @mixin a-mobile-nav-resetOFF () {
   @include a-position-fixed;  @include a-top-left;  }
+
+
+
 
 
 
@@ -5446,6 +5478,16 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-hover-text-color-redox-red-dark ( $v-redox-red-dark : $v-redox-red-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-red-dark  !important; }}}
 @mixin breakpoint-md-a-hover-text-color-redox-red-darker ( $v-redox-red-darker : $v-redox-red-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-red-darker  !important; }}}
 @mixin breakpoint-md-a-hover-text-color-redox-red-darkest ( $v-redox-red-darkest : $v-redox-red-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-red-darkest  !important; }}}
+@mixin breakpoint-md-a-background-redox-orange ( $v-redox-orange : $v-redox-orange ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-orange  !important;}}
+@mixin breakpoint-md-a-text-color-redox-orange ( $v-redox-orange : $v-redox-orange ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-orange  !important;}}
+@mixin breakpoint-md-a-hover-background-redox-orange ( $v-redox-orange : $v-redox-orange ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-orange  !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-orange ( $v-redox-orange : $v-redox-orange ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-orange  !important; }}}
+@mixin breakpoint-md-a-background-error-red ( $v-error-red : $v-error-red ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-error-red  !important;}}
+@mixin breakpoint-md-a-text-color-error-red ( $v-error-red : $v-error-red ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-error-red  !important;}}
+@mixin breakpoint-md-a-border-color-error-red ( $v-error-red : $v-error-red ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-color : $v-error-red  !important;}}
+@mixin breakpoint-md-a-background-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-warning-yellow  !important;}}
+@mixin breakpoint-md-a-text-color-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-warning-yellow  !important;}}
+@mixin breakpoint-md-a-border-color-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) { @media ( max-width: $v-breakpoint-medium-min ) {  border-color : $v-warning-yellow  !important;}}
 @mixin breakpoint-md-a-background-secondaryNavBGColor ( $v-secondaryNavBGColor : $v-secondaryNavBGColor ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color : $v-secondaryNavBGColor  !important;}}
 @mixin breakpoint-md-a-alpha-0 ( $v-alpha-0 : $v-alpha-0 ) { @media ( max-width: $v-breakpoint-medium-min ) {  opacity : $v-alpha-0  !important;}}
 @mixin breakpoint-md-a-alpha-1 ( $v-alpha-1 : $v-alpha-1 ) { @media ( max-width: $v-breakpoint-medium-min ) {  opacity : $v-alpha-1  !important;}}
@@ -5596,6 +5638,9 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-fill-container (  ) { @media ( max-width: $v-breakpoint-medium-min ) {  width: 100% !important;  height: 100% !important; }}
 @mixin breakpoint-md-a-mobile-resetOFF (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-relative;  /*@include breakpoint-md-a-width-col-11-half;*/  /*@include breakpoint-md-a-margin-left-col-quarter;*/  @include breakpoint-md-a-height-auto;  @include breakpoint-md-a-width-auto; }}
 @mixin breakpoint-md-a-mobile-nav-resetOFF (  ) { @media ( max-width: $v-breakpoint-medium-min ) {   @include breakpoint-md-a-position-fixed;  @include breakpoint-md-a-top-left; }}
+
+
+
 
 
 
@@ -7219,6 +7264,16 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-hover-text-color-redox-red-dark ( $v-redox-red-dark : $v-redox-red-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-red-dark  !important; }}}
 @mixin breakpoint-sm-a-hover-text-color-redox-red-darker ( $v-redox-red-darker : $v-redox-red-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-red-darker  !important; }}}
 @mixin breakpoint-sm-a-hover-text-color-redox-red-darkest ( $v-redox-red-darkest : $v-redox-red-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-red-darkest  !important; }}}
+@mixin breakpoint-sm-a-background-redox-orange ( $v-redox-orange : $v-redox-orange ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-orange  !important;}}
+@mixin breakpoint-sm-a-text-color-redox-orange ( $v-redox-orange : $v-redox-orange ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-orange  !important;}}
+@mixin breakpoint-sm-a-hover-background-redox-orange ( $v-redox-orange : $v-redox-orange ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-orange  !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-orange ( $v-redox-orange : $v-redox-orange ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-orange  !important; }}}
+@mixin breakpoint-sm-a-background-error-red ( $v-error-red : $v-error-red ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-error-red  !important;}}
+@mixin breakpoint-sm-a-text-color-error-red ( $v-error-red : $v-error-red ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-error-red  !important;}}
+@mixin breakpoint-sm-a-border-color-error-red ( $v-error-red : $v-error-red ) { @media ( max-width: $v-breakpoint-small-min ) {  border-color : $v-error-red  !important;}}
+@mixin breakpoint-sm-a-background-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-warning-yellow  !important;}}
+@mixin breakpoint-sm-a-text-color-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-warning-yellow  !important;}}
+@mixin breakpoint-sm-a-border-color-warning-yellow ( $v-warning-yellow : $v-warning-yellow ) { @media ( max-width: $v-breakpoint-small-min ) {  border-color : $v-warning-yellow  !important;}}
 @mixin breakpoint-sm-a-background-secondaryNavBGColor ( $v-secondaryNavBGColor : $v-secondaryNavBGColor ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color : $v-secondaryNavBGColor  !important;}}
 @mixin breakpoint-sm-a-alpha-0 ( $v-alpha-0 : $v-alpha-0 ) { @media ( max-width: $v-breakpoint-small-min ) {  opacity : $v-alpha-0  !important;}}
 @mixin breakpoint-sm-a-alpha-1 ( $v-alpha-1 : $v-alpha-1 ) { @media ( max-width: $v-breakpoint-small-min ) {  opacity : $v-alpha-1  !important;}}

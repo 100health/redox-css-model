@@ -6446,6 +6446,36 @@
 .a-hover-text-color-redox-red-darkest:hover {
   color: #4D0012 !important; }
 
+.a-background-redox-orange {
+  background-color: #FFAE5C !important; }
+
+.a-text-color-redox-orange {
+  color: #FFAE5C !important; }
+
+.a-hover-background-redox-orange:hover {
+  background-color: #FFAE5C !important; }
+
+.a-hover-text-color-redox-orange:hover {
+  color: #FFAE5C !important; }
+
+.a-background-error-red {
+  background-color: #D9534F !important; }
+
+.a-text-color-error-red {
+  color: #D9534F !important; }
+
+.a-border-color-error-red {
+  border-color: #D9534F !important; }
+
+.a-background-warning-yellow {
+  background-color: #F0AD4E !important; }
+
+.a-text-color-warning-yellow {
+  color: #F0AD4E !important; }
+
+.a-border-color-warning-yellow {
+  border-color: #F0AD4E !important; }
+
 .a-background-secondaryNavBGColor {
   background-color: #eee !important; }
 
@@ -14899,6 +14929,46 @@
 @media (max-width: 768px) {
   .breakpoint-sm-a-hover-text-color-redox-red-darkest:hover {
     color: #4D0012 !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-background-redox-orange {
+    background-color: #FFAE5C !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-text-color-redox-orange {
+    color: #FFAE5C !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-hover-background-redox-orange:hover {
+    background-color: #FFAE5C !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-hover-text-color-redox-orange:hover {
+    color: #FFAE5C !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-background-error-red {
+    background-color: #D9534F !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-text-color-error-red {
+    color: #D9534F !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-border-color-error-red {
+    border-color: #D9534F !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-background-warning-yellow {
+    background-color: #F0AD4E !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-text-color-warning-yellow {
+    color: #F0AD4E !important; } }
+
+@media (max-width: 768px) {
+  .breakpoint-sm-a-border-color-warning-yellow {
+    border-color: #F0AD4E !important; } }
 
 @media (max-width: 768px) {
   .breakpoint-sm-a-background-secondaryNavBGColor {
