@@ -58,13 +58,13 @@ module.exports = {
 
         s_color_values.createVariable(
             {
-                "name":"redox-green",
+                "name":"redox-teal",
                 "group":"skin",
-    			"base":"redox-green",
+    			"base":"redox-teal",
     			"values":[
-                    "#00b588",
-    				"#00DFA7","#B7FFE0","#f9fffd",
-    				"#008262","#008262","#008262"
+                    "#054d55",
+    				"#2B686F","#508288","#82A6AA",
+    				"#043D44","#03343B","#01252A"
     			]
             }
         ).createAtoms(
@@ -77,9 +77,9 @@ module.exports = {
                 "group":"skin",
     			"base":"redox-red",
     			"values":[
-    				"#DF0034",
-    				"#DE2F57","#B7FFE0","#f9fffd",
-    				"#008262","#008262","#008262"
+    				"#dc5034",
+    				"#E16A52","#E78571","#EEA89A",
+    				"#D34027","#CE3721","#C52715"
     			]
             }
         ).createAtoms(

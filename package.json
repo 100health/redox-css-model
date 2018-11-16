@@ -2,7 +2,7 @@
   "name": "@redoxengine/redox-css-model",
   "author": "Luke Turner",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/100health/redox-css-model"

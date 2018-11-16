@@ -251,18 +251,18 @@
 		},
 
         {
-			"name":"redox-green",
+			"name":"redox-teal",
             "group":"skin",
-			"base":"redox-green",
+			"base":"redox-teal",
 			"scheme":"skin-color-values",
 			"values":[
-                "#00b588",
-				"#00DFA7","#B7FFE0","#f9fffd",
-				"#008262","#008262","#008262"
+                "#054d55",
+				"#2B686F","#508288","#043D44",
+				"#043D44","#03343B","#01252A"
 			],
             "atoms":[
 				{
-                    "name":"redox-green-background",
+                    "name":"redox-teal-background",
                     "group":"skin",
 					"sub_group":"colors",
 					"example":"<div ... style='width: 50px; height: 50px;'>Text</div>",
@@ -270,7 +270,7 @@
                     "declaration_value":"background-color: _@_@var_name ;"
 				},
                 {
-                    "name":"redox-green-text-color",
+                    "name":"redox-teal-text-color",
                     "group":"skin",
 					"sub_group":"colors",
 					"example":"<div ... style='width: 50px; height: 50px;'>Text</div>",
@@ -278,7 +278,7 @@
                     "declaration_value":"color: _@_@var_name ;"
 				},
                 {
-                    "name":"redox-green-hover-background",
+                    "name":"redox-teal-hover-background",
                     "group":"skin",
 					"sub_group":"colors",
 					"example":"<div ... style='width: 50px; height: 50px;'>Text</div>",
@@ -286,7 +286,7 @@
                     "declaration_value":"&:hover { background-color : _@_@var_name ; }"
 				},
                 {
-                    "name":"redox-green-hover-text-color",
+                    "name":"redox-teal-hover-text-color",
                     "group":"skin",
 					"sub_group":"colors",
 					"example":"<div ... style='width: 50px; height: 50px;'>Text</div>",
@@ -302,8 +302,8 @@
 			"base":"redox-red",
 			"scheme":"skin-color-values",
 			"values":[
-				"#DF0034",
-				"#DE2F57","#DE5978","#DEADB8",
+				"#dc5034",
+				"#E16A52","#DE5978","#DEADB8",
 				"#B8002B","#80001E","#4D0012"
 			],
             "atoms":[

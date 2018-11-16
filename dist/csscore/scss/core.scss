@@ -211,17 +211,17 @@ $v-grey-darker: $v-grey-3;
 $v-grey-darkest: $v-grey-0;
 
 
-$v-redox-green: #00b588;
-$v-redox-green-light: #00DFA7;
-$v-redox-green-lighter: #B7FFE0;
-$v-redox-green-lightest: #f9fffd;
-$v-redox-green-dark: #008262;
-$v-redox-green-darker: #008262;
-$v-redox-green-darkest: #008262;
+$v-redox-teal: #054d55;
+$v-redox-teal-light: #2B686F;
+$v-redox-teal-lighter: #508288;
+$v-redox-teal-lightest: #82A6AA;
+$v-redox-teal-dark: #043D44;
+$v-redox-teal-darker: #043D44;
+$v-redox-teal-darkest: #043D44;
 
 
-$v-redox-red: #DF0034;
-$v-redox-red-light: #DE2F57;
+$v-redox-red: #dc5034;
+$v-redox-red-light: #E16A52;
 $v-redox-red-lighter: #DE5978;
 $v-redox-red-lightest: #DEADB8;
 $v-redox-red-dark: #B8002B;
@@ -3424,62 +3424,62 @@ $v-border-radius: 3px;
  &:hover { color : $v-grey-darker ; } }
 @mixin a-hover-text-color-grey-darkest ( $v-grey-darkest : $v-grey-darkest ) {
  &:hover { color : $v-grey-darkest ; } }
-@mixin a-background-redox-green ( $v-redox-green : $v-redox-green ) {
- background-color: $v-redox-green ; }
-@mixin a-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
- background-color: $v-redox-green-light ; }
-@mixin a-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) {
- background-color: $v-redox-green-lighter ; }
-@mixin a-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) {
- background-color: $v-redox-green-lightest ; }
-@mixin a-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) {
- background-color: $v-redox-green-dark ; }
-@mixin a-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) {
- background-color: $v-redox-green-darker ; }
-@mixin a-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
- background-color: $v-redox-green-darkest ; }
-@mixin a-text-color-redox-green ( $v-redox-green : $v-redox-green ) {
- color: $v-redox-green ; }
-@mixin a-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
- color: $v-redox-green-light ; }
-@mixin a-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) {
- color: $v-redox-green-lighter ; }
-@mixin a-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) {
- color: $v-redox-green-lightest ; }
-@mixin a-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) {
- color: $v-redox-green-dark ; }
-@mixin a-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) {
- color: $v-redox-green-darker ; }
-@mixin a-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
- color: $v-redox-green-darkest ; }
-@mixin a-hover-background-redox-green ( $v-redox-green : $v-redox-green ) {
- &:hover { background-color : $v-redox-green ; } }
-@mixin a-hover-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
- &:hover { background-color : $v-redox-green-light ; } }
-@mixin a-hover-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) {
- &:hover { background-color : $v-redox-green-lighter ; } }
-@mixin a-hover-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) {
- &:hover { background-color : $v-redox-green-lightest ; } }
-@mixin a-hover-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) {
- &:hover { background-color : $v-redox-green-dark ; } }
-@mixin a-hover-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) {
- &:hover { background-color : $v-redox-green-darker ; } }
-@mixin a-hover-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
- &:hover { background-color : $v-redox-green-darkest ; } }
-@mixin a-hover-text-color-redox-green ( $v-redox-green : $v-redox-green ) {
- &:hover { color : $v-redox-green ; } }
-@mixin a-hover-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) {
- &:hover { color : $v-redox-green-light ; } }
-@mixin a-hover-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) {
- &:hover { color : $v-redox-green-lighter ; } }
-@mixin a-hover-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) {
- &:hover { color : $v-redox-green-lightest ; } }
-@mixin a-hover-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) {
- &:hover { color : $v-redox-green-dark ; } }
-@mixin a-hover-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) {
- &:hover { color : $v-redox-green-darker ; } }
-@mixin a-hover-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) {
- &:hover { color : $v-redox-green-darkest ; } }
+@mixin a-background-redox-teal ( $v-redox-teal : $v-redox-teal ) {
+ background-color: $v-redox-teal ; }
+@mixin a-background-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) {
+ background-color: $v-redox-teal-light ; }
+@mixin a-background-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) {
+ background-color: $v-redox-teal-lighter ; }
+@mixin a-background-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) {
+ background-color: $v-redox-teal-lightest ; }
+@mixin a-background-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) {
+ background-color: $v-redox-teal-dark ; }
+@mixin a-background-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) {
+ background-color: $v-redox-teal-darker ; }
+@mixin a-background-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) {
+ background-color: $v-redox-teal-darkest ; }
+@mixin a-text-color-redox-teal ( $v-redox-teal : $v-redox-teal ) {
+ color: $v-redox-teal ; }
+@mixin a-text-color-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) {
+ color: $v-redox-teal-light ; }
+@mixin a-text-color-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) {
+ color: $v-redox-teal-lighter ; }
+@mixin a-text-color-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) {
+ color: $v-redox-teal-lightest ; }
+@mixin a-text-color-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) {
+ color: $v-redox-teal-dark ; }
+@mixin a-text-color-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) {
+ color: $v-redox-teal-darker ; }
+@mixin a-text-color-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) {
+ color: $v-redox-teal-darkest ; }
+@mixin a-hover-background-redox-teal ( $v-redox-teal : $v-redox-teal ) {
+ &:hover { background-color : $v-redox-teal ; } }
+@mixin a-hover-background-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) {
+ &:hover { background-color : $v-redox-teal-light ; } }
+@mixin a-hover-background-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) {
+ &:hover { background-color : $v-redox-teal-lighter ; } }
+@mixin a-hover-background-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) {
+ &:hover { background-color : $v-redox-teal-lightest ; } }
+@mixin a-hover-background-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) {
+ &:hover { background-color : $v-redox-teal-dark ; } }
+@mixin a-hover-background-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) {
+ &:hover { background-color : $v-redox-teal-darker ; } }
+@mixin a-hover-background-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) {
+ &:hover { background-color : $v-redox-teal-darkest ; } }
+@mixin a-hover-text-color-redox-teal ( $v-redox-teal : $v-redox-teal ) {
+ &:hover { color : $v-redox-teal ; } }
+@mixin a-hover-text-color-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) {
+ &:hover { color : $v-redox-teal-light ; } }
+@mixin a-hover-text-color-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) {
+ &:hover { color : $v-redox-teal-lighter ; } }
+@mixin a-hover-text-color-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) {
+ &:hover { color : $v-redox-teal-lightest ; } }
+@mixin a-hover-text-color-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) {
+ &:hover { color : $v-redox-teal-dark ; } }
+@mixin a-hover-text-color-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) {
+ &:hover { color : $v-redox-teal-darker ; } }
+@mixin a-hover-text-color-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) {
+ &:hover { color : $v-redox-teal-darkest ; } }
 @mixin a-background-redox-red ( $v-redox-red : $v-redox-red ) {
  background-color: $v-redox-red ; }
 @mixin a-background-redox-red-light ( $v-redox-red-light : $v-redox-red-light ) {
@@ -5426,34 +5426,34 @@ $v-border-radius: 3px;
 @mixin breakpoint-md-a-hover-text-color-grey-dark ( $v-grey-dark : $v-grey-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-grey-dark  !important; }}}
 @mixin breakpoint-md-a-hover-text-color-grey-darker ( $v-grey-darker : $v-grey-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-grey-darker  !important; }}}
 @mixin breakpoint-md-a-hover-text-color-grey-darkest ( $v-grey-darkest : $v-grey-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-grey-darkest  !important; }}}
-@mixin breakpoint-md-a-background-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-green  !important;}}
-@mixin breakpoint-md-a-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-green-light  !important;}}
-@mixin breakpoint-md-a-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-green-lighter  !important;}}
-@mixin breakpoint-md-a-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-green-lightest  !important;}}
-@mixin breakpoint-md-a-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-green-dark  !important;}}
-@mixin breakpoint-md-a-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-green-darker  !important;}}
-@mixin breakpoint-md-a-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-green-darkest  !important;}}
-@mixin breakpoint-md-a-text-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-green  !important;}}
-@mixin breakpoint-md-a-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-green-light  !important;}}
-@mixin breakpoint-md-a-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-green-lighter  !important;}}
-@mixin breakpoint-md-a-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-green-lightest  !important;}}
-@mixin breakpoint-md-a-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-green-dark  !important;}}
-@mixin breakpoint-md-a-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-green-darker  !important;}}
-@mixin breakpoint-md-a-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-green-darkest  !important;}}
-@mixin breakpoint-md-a-hover-background-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green  !important; }}}
-@mixin breakpoint-md-a-hover-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-light  !important; }}}
-@mixin breakpoint-md-a-hover-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-lighter  !important; }}}
-@mixin breakpoint-md-a-hover-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-lightest  !important; }}}
-@mixin breakpoint-md-a-hover-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-dark  !important; }}}
-@mixin breakpoint-md-a-hover-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-darker  !important; }}}
-@mixin breakpoint-md-a-hover-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-green-darkest  !important; }}}
-@mixin breakpoint-md-a-hover-text-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green  !important; }}}
-@mixin breakpoint-md-a-hover-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-light  !important; }}}
-@mixin breakpoint-md-a-hover-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-lighter  !important; }}}
-@mixin breakpoint-md-a-hover-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-lightest  !important; }}}
-@mixin breakpoint-md-a-hover-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-dark  !important; }}}
-@mixin breakpoint-md-a-hover-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-darker  !important; }}}
-@mixin breakpoint-md-a-hover-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-green-darkest  !important; }}}
+@mixin breakpoint-md-a-background-redox-teal ( $v-redox-teal : $v-redox-teal ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-teal  !important;}}
+@mixin breakpoint-md-a-background-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-teal-light  !important;}}
+@mixin breakpoint-md-a-background-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-teal-lighter  !important;}}
+@mixin breakpoint-md-a-background-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-teal-lightest  !important;}}
+@mixin breakpoint-md-a-background-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-teal-dark  !important;}}
+@mixin breakpoint-md-a-background-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-teal-darker  !important;}}
+@mixin breakpoint-md-a-background-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-teal-darkest  !important;}}
+@mixin breakpoint-md-a-text-color-redox-teal ( $v-redox-teal : $v-redox-teal ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-teal  !important;}}
+@mixin breakpoint-md-a-text-color-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-teal-light  !important;}}
+@mixin breakpoint-md-a-text-color-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-teal-lighter  !important;}}
+@mixin breakpoint-md-a-text-color-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-teal-lightest  !important;}}
+@mixin breakpoint-md-a-text-color-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-teal-dark  !important;}}
+@mixin breakpoint-md-a-text-color-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-teal-darker  !important;}}
+@mixin breakpoint-md-a-text-color-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  color: $v-redox-teal-darkest  !important;}}
+@mixin breakpoint-md-a-hover-background-redox-teal ( $v-redox-teal : $v-redox-teal ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-teal  !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-teal-light  !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-teal-lighter  !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-teal-lightest  !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-teal-dark  !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-teal-darker  !important; }}}
+@mixin breakpoint-md-a-hover-background-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { background-color : $v-redox-teal-darkest  !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-teal ( $v-redox-teal : $v-redox-teal ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-teal  !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-teal-light  !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-teal-lighter  !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-teal-lightest  !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-teal-dark  !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-teal-darker  !important; }}}
+@mixin breakpoint-md-a-hover-text-color-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) { @media ( max-width: $v-breakpoint-medium-min ) {  &:hover { color : $v-redox-teal-darkest  !important; }}}
 @mixin breakpoint-md-a-background-redox-red ( $v-redox-red : $v-redox-red ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-red  !important;}}
 @mixin breakpoint-md-a-background-redox-red-light ( $v-redox-red-light : $v-redox-red-light ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-red-light  !important;}}
 @mixin breakpoint-md-a-background-redox-red-lighter ( $v-redox-red-lighter : $v-redox-red-lighter ) { @media ( max-width: $v-breakpoint-medium-min ) {  background-color: $v-redox-red-lighter  !important;}}
@@ -7212,34 +7212,34 @@ $v-border-radius: 3px;
 @mixin breakpoint-sm-a-hover-text-color-grey-dark ( $v-grey-dark : $v-grey-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-grey-dark  !important; }}}
 @mixin breakpoint-sm-a-hover-text-color-grey-darker ( $v-grey-darker : $v-grey-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-grey-darker  !important; }}}
 @mixin breakpoint-sm-a-hover-text-color-grey-darkest ( $v-grey-darkest : $v-grey-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-grey-darkest  !important; }}}
-@mixin breakpoint-sm-a-background-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green  !important;}}
-@mixin breakpoint-sm-a-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-light  !important;}}
-@mixin breakpoint-sm-a-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-lighter  !important;}}
-@mixin breakpoint-sm-a-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-lightest  !important;}}
-@mixin breakpoint-sm-a-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-dark  !important;}}
-@mixin breakpoint-sm-a-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-darker  !important;}}
-@mixin breakpoint-sm-a-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-darkest  !important;}}
-@mixin breakpoint-sm-a-text-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green  !important;}}
-@mixin breakpoint-sm-a-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-light  !important;}}
-@mixin breakpoint-sm-a-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-lighter  !important;}}
-@mixin breakpoint-sm-a-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-lightest  !important;}}
-@mixin breakpoint-sm-a-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-dark  !important;}}
-@mixin breakpoint-sm-a-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-darker  !important;}}
-@mixin breakpoint-sm-a-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-darkest  !important;}}
-@mixin breakpoint-sm-a-hover-background-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green  !important; }}}
-@mixin breakpoint-sm-a-hover-background-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-light  !important; }}}
-@mixin breakpoint-sm-a-hover-background-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-lighter  !important; }}}
-@mixin breakpoint-sm-a-hover-background-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-lightest  !important; }}}
-@mixin breakpoint-sm-a-hover-background-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-dark  !important; }}}
-@mixin breakpoint-sm-a-hover-background-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-darker  !important; }}}
-@mixin breakpoint-sm-a-hover-background-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-darkest  !important; }}}
-@mixin breakpoint-sm-a-hover-text-color-redox-green ( $v-redox-green : $v-redox-green ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green  !important; }}}
-@mixin breakpoint-sm-a-hover-text-color-redox-green-light ( $v-redox-green-light : $v-redox-green-light ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-light  !important; }}}
-@mixin breakpoint-sm-a-hover-text-color-redox-green-lighter ( $v-redox-green-lighter : $v-redox-green-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-lighter  !important; }}}
-@mixin breakpoint-sm-a-hover-text-color-redox-green-lightest ( $v-redox-green-lightest : $v-redox-green-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-lightest  !important; }}}
-@mixin breakpoint-sm-a-hover-text-color-redox-green-dark ( $v-redox-green-dark : $v-redox-green-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-dark  !important; }}}
-@mixin breakpoint-sm-a-hover-text-color-redox-green-darker ( $v-redox-green-darker : $v-redox-green-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-darker  !important; }}}
-@mixin breakpoint-sm-a-hover-text-color-redox-green-darkest ( $v-redox-green-darkest : $v-redox-green-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-darkest  !important; }}}
+@mixin breakpoint-sm-a-background-redox-teal ( $v-redox-teal : $v-redox-teal ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal  !important;}}
+@mixin breakpoint-sm-a-background-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-light  !important;}}
+@mixin breakpoint-sm-a-background-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-lighter  !important;}}
+@mixin breakpoint-sm-a-background-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-lightest  !important;}}
+@mixin breakpoint-sm-a-background-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-dark  !important;}}
+@mixin breakpoint-sm-a-background-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-darker  !important;}}
+@mixin breakpoint-sm-a-background-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-darkest  !important;}}
+@mixin breakpoint-sm-a-text-color-redox-teal ( $v-redox-teal : $v-redox-teal ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal  !important;}}
+@mixin breakpoint-sm-a-text-color-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-light  !important;}}
+@mixin breakpoint-sm-a-text-color-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-lighter  !important;}}
+@mixin breakpoint-sm-a-text-color-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-lightest  !important;}}
+@mixin breakpoint-sm-a-text-color-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-dark  !important;}}
+@mixin breakpoint-sm-a-text-color-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-darker  !important;}}
+@mixin breakpoint-sm-a-text-color-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-darkest  !important;}}
+@mixin breakpoint-sm-a-hover-background-redox-teal ( $v-redox-teal : $v-redox-teal ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal  !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-light  !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-lighter  !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-lightest  !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-dark  !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-darker  !important; }}}
+@mixin breakpoint-sm-a-hover-background-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-darkest  !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-teal ( $v-redox-teal : $v-redox-teal ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal  !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-teal-light ( $v-redox-teal-light : $v-redox-teal-light ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-light  !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-teal-lighter ( $v-redox-teal-lighter : $v-redox-teal-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-lighter  !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-teal-lightest ( $v-redox-teal-lightest : $v-redox-teal-lightest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-lightest  !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-teal-dark ( $v-redox-teal-dark : $v-redox-teal-dark ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-dark  !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-teal-darker ( $v-redox-teal-darker : $v-redox-teal-darker ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-darker  !important; }}}
+@mixin breakpoint-sm-a-hover-text-color-redox-teal-darkest ( $v-redox-teal-darkest : $v-redox-teal-darkest ) { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-darkest  !important; }}}
 @mixin breakpoint-sm-a-background-redox-red ( $v-redox-red : $v-redox-red ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-red  !important;}}
 @mixin breakpoint-sm-a-background-redox-red-light ( $v-redox-red-light : $v-redox-red-light ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-red-light  !important;}}
 @mixin breakpoint-sm-a-background-redox-red-lighter ( $v-redox-red-lighter : $v-redox-red-lighter ) { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-red-lighter  !important;}}
@@ -8994,34 +8994,34 @@ $v-border-radius: 3px;
 .a-hover-text-color-grey-dark {  &:hover { color : $v-grey-dark  !important; } }
 .a-hover-text-color-grey-darker {  &:hover { color : $v-grey-darker  !important; } }
 .a-hover-text-color-grey-darkest {  &:hover { color : $v-grey-darkest  !important; } }
-.a-background-redox-green {  background-color: $v-redox-green  !important; }
-.a-background-redox-green-light {  background-color: $v-redox-green-light  !important; }
-.a-background-redox-green-lighter {  background-color: $v-redox-green-lighter  !important; }
-.a-background-redox-green-lightest {  background-color: $v-redox-green-lightest  !important; }
-.a-background-redox-green-dark {  background-color: $v-redox-green-dark  !important; }
-.a-background-redox-green-darker {  background-color: $v-redox-green-darker  !important; }
-.a-background-redox-green-darkest {  background-color: $v-redox-green-darkest  !important; }
-.a-text-color-redox-green {  color: $v-redox-green  !important; }
-.a-text-color-redox-green-light {  color: $v-redox-green-light  !important; }
-.a-text-color-redox-green-lighter {  color: $v-redox-green-lighter  !important; }
-.a-text-color-redox-green-lightest {  color: $v-redox-green-lightest  !important; }
-.a-text-color-redox-green-dark {  color: $v-redox-green-dark  !important; }
-.a-text-color-redox-green-darker {  color: $v-redox-green-darker  !important; }
-.a-text-color-redox-green-darkest {  color: $v-redox-green-darkest  !important; }
-.a-hover-background-redox-green {  &:hover { background-color : $v-redox-green  !important; } }
-.a-hover-background-redox-green-light {  &:hover { background-color : $v-redox-green-light  !important; } }
-.a-hover-background-redox-green-lighter {  &:hover { background-color : $v-redox-green-lighter  !important; } }
-.a-hover-background-redox-green-lightest {  &:hover { background-color : $v-redox-green-lightest  !important; } }
-.a-hover-background-redox-green-dark {  &:hover { background-color : $v-redox-green-dark  !important; } }
-.a-hover-background-redox-green-darker {  &:hover { background-color : $v-redox-green-darker  !important; } }
-.a-hover-background-redox-green-darkest {  &:hover { background-color : $v-redox-green-darkest  !important; } }
-.a-hover-text-color-redox-green {  &:hover { color : $v-redox-green  !important; } }
-.a-hover-text-color-redox-green-light {  &:hover { color : $v-redox-green-light  !important; } }
-.a-hover-text-color-redox-green-lighter {  &:hover { color : $v-redox-green-lighter  !important; } }
-.a-hover-text-color-redox-green-lightest {  &:hover { color : $v-redox-green-lightest  !important; } }
-.a-hover-text-color-redox-green-dark {  &:hover { color : $v-redox-green-dark  !important; } }
-.a-hover-text-color-redox-green-darker {  &:hover { color : $v-redox-green-darker  !important; } }
-.a-hover-text-color-redox-green-darkest {  &:hover { color : $v-redox-green-darkest  !important; } }
+.a-background-redox-teal {  background-color: $v-redox-teal  !important; }
+.a-background-redox-teal-light {  background-color: $v-redox-teal-light  !important; }
+.a-background-redox-teal-lighter {  background-color: $v-redox-teal-lighter  !important; }
+.a-background-redox-teal-lightest {  background-color: $v-redox-teal-lightest  !important; }
+.a-background-redox-teal-dark {  background-color: $v-redox-teal-dark  !important; }
+.a-background-redox-teal-darker {  background-color: $v-redox-teal-darker  !important; }
+.a-background-redox-teal-darkest {  background-color: $v-redox-teal-darkest  !important; }
+.a-text-color-redox-teal {  color: $v-redox-teal  !important; }
+.a-text-color-redox-teal-light {  color: $v-redox-teal-light  !important; }
+.a-text-color-redox-teal-lighter {  color: $v-redox-teal-lighter  !important; }
+.a-text-color-redox-teal-lightest {  color: $v-redox-teal-lightest  !important; }
+.a-text-color-redox-teal-dark {  color: $v-redox-teal-dark  !important; }
+.a-text-color-redox-teal-darker {  color: $v-redox-teal-darker  !important; }
+.a-text-color-redox-teal-darkest {  color: $v-redox-teal-darkest  !important; }
+.a-hover-background-redox-teal {  &:hover { background-color : $v-redox-teal  !important; } }
+.a-hover-background-redox-teal-light {  &:hover { background-color : $v-redox-teal-light  !important; } }
+.a-hover-background-redox-teal-lighter {  &:hover { background-color : $v-redox-teal-lighter  !important; } }
+.a-hover-background-redox-teal-lightest {  &:hover { background-color : $v-redox-teal-lightest  !important; } }
+.a-hover-background-redox-teal-dark {  &:hover { background-color : $v-redox-teal-dark  !important; } }
+.a-hover-background-redox-teal-darker {  &:hover { background-color : $v-redox-teal-darker  !important; } }
+.a-hover-background-redox-teal-darkest {  &:hover { background-color : $v-redox-teal-darkest  !important; } }
+.a-hover-text-color-redox-teal {  &:hover { color : $v-redox-teal  !important; } }
+.a-hover-text-color-redox-teal-light {  &:hover { color : $v-redox-teal-light  !important; } }
+.a-hover-text-color-redox-teal-lighter {  &:hover { color : $v-redox-teal-lighter  !important; } }
+.a-hover-text-color-redox-teal-lightest {  &:hover { color : $v-redox-teal-lightest  !important; } }
+.a-hover-text-color-redox-teal-dark {  &:hover { color : $v-redox-teal-dark  !important; } }
+.a-hover-text-color-redox-teal-darker {  &:hover { color : $v-redox-teal-darker  !important; } }
+.a-hover-text-color-redox-teal-darkest {  &:hover { color : $v-redox-teal-darkest  !important; } }
 .a-background-redox-red {  background-color: $v-redox-red  !important; }
 .a-background-redox-red-light {  background-color: $v-redox-red-light  !important; }
 .a-background-redox-red-lighter {  background-color: $v-redox-red-lighter  !important; }
@@ -10864,34 +10864,34 @@ $v-border-radius: 3px;
 .breakpoint-sm-a-hover-text-color-grey-dark { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-grey-dark  !important; }} } 
 .breakpoint-sm-a-hover-text-color-grey-darker { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-grey-darker  !important; }} } 
 .breakpoint-sm-a-hover-text-color-grey-darkest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-grey-darkest  !important; }} } 
-.breakpoint-sm-a-background-redox-green { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green  !important;} } 
-.breakpoint-sm-a-background-redox-green-light { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-light  !important;} } 
-.breakpoint-sm-a-background-redox-green-lighter { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-lighter  !important;} } 
-.breakpoint-sm-a-background-redox-green-lightest { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-lightest  !important;} } 
-.breakpoint-sm-a-background-redox-green-dark { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-dark  !important;} } 
-.breakpoint-sm-a-background-redox-green-darker { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-darker  !important;} } 
-.breakpoint-sm-a-background-redox-green-darkest { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-green-darkest  !important;} } 
-.breakpoint-sm-a-text-color-redox-green { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green  !important;} } 
-.breakpoint-sm-a-text-color-redox-green-light { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-light  !important;} } 
-.breakpoint-sm-a-text-color-redox-green-lighter { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-lighter  !important;} } 
-.breakpoint-sm-a-text-color-redox-green-lightest { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-lightest  !important;} } 
-.breakpoint-sm-a-text-color-redox-green-dark { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-dark  !important;} } 
-.breakpoint-sm-a-text-color-redox-green-darker { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-darker  !important;} } 
-.breakpoint-sm-a-text-color-redox-green-darkest { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-green-darkest  !important;} } 
-.breakpoint-sm-a-hover-background-redox-green { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green  !important; }} } 
-.breakpoint-sm-a-hover-background-redox-green-light { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-light  !important; }} } 
-.breakpoint-sm-a-hover-background-redox-green-lighter { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-lighter  !important; }} } 
-.breakpoint-sm-a-hover-background-redox-green-lightest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-lightest  !important; }} } 
-.breakpoint-sm-a-hover-background-redox-green-dark { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-dark  !important; }} } 
-.breakpoint-sm-a-hover-background-redox-green-darker { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-darker  !important; }} } 
-.breakpoint-sm-a-hover-background-redox-green-darkest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-green-darkest  !important; }} } 
-.breakpoint-sm-a-hover-text-color-redox-green { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green  !important; }} } 
-.breakpoint-sm-a-hover-text-color-redox-green-light { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-light  !important; }} } 
-.breakpoint-sm-a-hover-text-color-redox-green-lighter { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-lighter  !important; }} } 
-.breakpoint-sm-a-hover-text-color-redox-green-lightest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-lightest  !important; }} } 
-.breakpoint-sm-a-hover-text-color-redox-green-dark { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-dark  !important; }} } 
-.breakpoint-sm-a-hover-text-color-redox-green-darker { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-darker  !important; }} } 
-.breakpoint-sm-a-hover-text-color-redox-green-darkest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-green-darkest  !important; }} } 
+.breakpoint-sm-a-background-redox-teal { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal  !important;} } 
+.breakpoint-sm-a-background-redox-teal-light { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-light  !important;} } 
+.breakpoint-sm-a-background-redox-teal-lighter { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-lighter  !important;} } 
+.breakpoint-sm-a-background-redox-teal-lightest { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-lightest  !important;} } 
+.breakpoint-sm-a-background-redox-teal-dark { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-dark  !important;} } 
+.breakpoint-sm-a-background-redox-teal-darker { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-darker  !important;} } 
+.breakpoint-sm-a-background-redox-teal-darkest { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-teal-darkest  !important;} } 
+.breakpoint-sm-a-text-color-redox-teal { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal  !important;} } 
+.breakpoint-sm-a-text-color-redox-teal-light { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-light  !important;} } 
+.breakpoint-sm-a-text-color-redox-teal-lighter { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-lighter  !important;} } 
+.breakpoint-sm-a-text-color-redox-teal-lightest { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-lightest  !important;} } 
+.breakpoint-sm-a-text-color-redox-teal-dark { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-dark  !important;} } 
+.breakpoint-sm-a-text-color-redox-teal-darker { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-darker  !important;} } 
+.breakpoint-sm-a-text-color-redox-teal-darkest { @media ( max-width: $v-breakpoint-small-min ) {  color: $v-redox-teal-darkest  !important;} } 
+.breakpoint-sm-a-hover-background-redox-teal { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal  !important; }} } 
+.breakpoint-sm-a-hover-background-redox-teal-light { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-light  !important; }} } 
+.breakpoint-sm-a-hover-background-redox-teal-lighter { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-lighter  !important; }} } 
+.breakpoint-sm-a-hover-background-redox-teal-lightest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-lightest  !important; }} } 
+.breakpoint-sm-a-hover-background-redox-teal-dark { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-dark  !important; }} } 
+.breakpoint-sm-a-hover-background-redox-teal-darker { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-darker  !important; }} } 
+.breakpoint-sm-a-hover-background-redox-teal-darkest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { background-color : $v-redox-teal-darkest  !important; }} } 
+.breakpoint-sm-a-hover-text-color-redox-teal { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal  !important; }} } 
+.breakpoint-sm-a-hover-text-color-redox-teal-light { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-light  !important; }} } 
+.breakpoint-sm-a-hover-text-color-redox-teal-lighter { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-lighter  !important; }} } 
+.breakpoint-sm-a-hover-text-color-redox-teal-lightest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-lightest  !important; }} } 
+.breakpoint-sm-a-hover-text-color-redox-teal-dark { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-dark  !important; }} } 
+.breakpoint-sm-a-hover-text-color-redox-teal-darker { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-darker  !important; }} } 
+.breakpoint-sm-a-hover-text-color-redox-teal-darkest { @media ( max-width: $v-breakpoint-small-min ) {  &:hover { color : $v-redox-teal-darkest  !important; }} } 
 .breakpoint-sm-a-background-redox-red { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-red  !important;} } 
 .breakpoint-sm-a-background-redox-red-light { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-red-light  !important;} } 
 .breakpoint-sm-a-background-redox-red-lighter { @media ( max-width: $v-breakpoint-small-min ) {  background-color: $v-redox-red-lighter  !important;} } 
