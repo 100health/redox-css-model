@@ -1,3 +1,7 @@
+# DEPRECATED.
+
+Further dashboard updates can be done directly in the dashboard repository: https://github.com/100health/dashboard
+
 # Redox's atomic (S)CSS model
 
 This repository contains a set of *atoms* defined using the [cssmodeler](https://github.com/srouse/cssmodeler) library and used on https://www.redoxengine.com. Atoms are basic, descriptive classes (or Sass mixins) like `.a-margin-row-1`, `.a-float-left`, and `.a-centered`.
