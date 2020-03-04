@@ -1,4 +1,8 @@
+
+
 # Redox's atomic (S)CSS model
+
+# This project is no longer actively maintained. And will be archived. 
 
 This repository contains a set of *atoms* defined using the [cssmodeler](https://github.com/srouse/cssmodeler) library and used on https://www.redoxengine.com. Atoms are basic, descriptive classes (or Sass mixins) like `.a-margin-row-1`, `.a-float-left`, and `.a-centered`.
 
